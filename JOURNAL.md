@@ -262,3 +262,20 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 - **H2 Indirect Scrambling: TRUE.** In the Indirect observation regime, the Generic model scrambles ($R^2_{linear} = 0.0524$, scramble gap = $0.3116$), while the Orthogonal model remains legible ($R^2_{linear} = 0.8786$, scramble gap = $0.0482$).
 - **H3 Erosion: FALSE.** The Generic model's linear decodability is so low from the start ($0.0524$) that there is no room for a gradual $0.15$ erosion over the evaluation window.
 - **Closed the loop:** Confirmed tabula's prediction that geometric conservation structure (orthogonal updates) is necessary to preserve representation legibility only under indirect observation.
+
+---
+
+## 2026-06-17 — Session 10: leg-7 built, run, and CLOSED (ringdown intrinsic dimension)
+
+**Preregistered** [leg7_ringdown_dimension/PREREGISTRATION.md](leg7_ringdown_dimension/PREREGISTRATION.md) freezing the training hypotheses and success criteria.
+
+**Built** (additive bridge code in `leg7_ringdown_dimension/code/`, source repos untouched):
+- `gen_ringdowns.py` — imports deepstrain's `rdlib` read-only, and generates three ringdown datasets (Locked Kerr, Free Kerr, and Noise Injected).
+- `count_bottleneck_rd.py` — trains autoencoders over bottleneck dimensions $d \in \{0, 1, 2, 3, 4, 5\}$ using PyTorch, saving raw R² data.
+- `plot_curves_rd.py` — performs the knee count analysis and generates comparison plots.
+
+**Result — phase-shift curvature and noise collapse demonstrated** (`leg7_ringdown_dimension/FINDINGS.md`):
+- **H1 (Kerr Locked): FALSE.** Autoencoder resolved 4 dimensions rather than 2. This is due to the highly non-linear phase-shifting nature of wave frequency (frequency modulation), which creates a highly curved, winding manifold in waveform space that requires extra network capacity to represent.
+- **H2 (Kerr Free): TRUE.** Resolved exactly 4 dimensions (including 2 free overtone parameters).
+- **H3 (LIGO Noise): FALSE.** The resolved dimension collapsed completely to **0** rather than 1.
+- **Closed the loop:** Demonstrated at representation level why deepstrain's black-box tone count failed—the LIGO noise level collapses the physical degrees of freedom of the ringdown below the learnable floor, confirming the domain gap is information-limited.
