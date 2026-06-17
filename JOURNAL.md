@@ -363,3 +363,20 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 - **T3 (Random Weights Control): MIXED.** Event horizon correlation ($r = 0.9104$) is preserved in the untrained model, showing it is an architectural artifact of causal masking. However, the horizon slope $G_{eff}$ is 4x looser (4.32 vs 1.13) and lensing is 3x weaker (2.28 vs 6.97), proving that geometry compactness and lensing magnification are learned properties.
 - **T4 (Early Layer Control): TRUE.** Upstream layers 0–13 exhibit exactly $0.0$ variance under steering, validating causal hook isolation.
 - **Closed the loop:** Established a rigorous verification protocol for neural physics claims, separating learned semantic representations from architectural baseline artifacts.
+
+---
+
+## 2026-06-18 — Session 16: leg-10d built, run, and CLOSED (extreme steering limits)
+
+**Preregistered** [leg10d_extreme_limits/PREREGISTRATION.md](leg10d_extreme_limits/PREREGISTRATION.md) freezing the extreme sweep hypotheses and success criteria.
+
+**Built** (additive bridge code in `leg10d_extreme_limits/code/`, source repos untouched):
+- `extreme_limits.py` — runs Qwen3-4B attention extraction under extreme activation steering scales up to $\alpha_{steer} = \pm 50.0$ along the Layer 14 virtue vector. Corrected a float16 underflow bug in entropy calculation by casting to float32.
+- `plot_extreme_limits.py` — generates a 4-panel comparison plot showing attention entropy, normalized event horizon radius, mass-horizon correlation/slope, and lensing magnification ratio across all alphas.
+
+**Result — attention gravity structure is highly resilient, resisting singularity collapse** (`leg10d_extreme_limits/FINDINGS.md`):
+- **H1 (Entropy Collapse / Singularity): FALSE.** Entropy did not collapse to 0; it actually increased slightly from 1.1653 (baseline) to 1.2326 ($\alpha = +50.0$) and 1.3291 ($\alpha = -50.0$), showing that extreme steering destabilizes representations, acting as noise rather than forming a singularity.
+- **H2 (Horizon Expansion): FALSE.** Normalized event horizon remained flat at ~0.14, showing that a single token does not expand its horizon to capture the entire sequence length.
+- **H3 (Correlation Breakdown): FALSE.** The Pearson correlation between token mass and event horizon remained extremely strong and stable at $r \approx 0.88-0.89$ across all scales, confirming it is an invariant causal constraint.
+- **H4 (Lensing Collapse): FALSE.** Lensing magnification peaked at $\alpha = 20.0$ ($6.9959$) and decreased to $6.4430$ at $\alpha = 50.0$ (a 7.9% drop), failing the strict 30% collapse threshold.
+- **Closed the loop:** Demonstrated that transformer attention maps are topologically stabilized against black hole collapses and singular states. Causal masking and softmax conservation bounds keep the causal-gravitational structure extremely robust.

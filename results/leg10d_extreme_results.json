@@ -1,0 +1,65 @@
+{
+  "-50.0": {
+    "entropy": 1.3290889305727822,
+    "normalized_horizon": 0.1630501122347723,
+    "horizon_correlation": 0.8916768574271517,
+    "horizon_slope": 1.2652226661535604,
+    "lensing_ratio": 5.497269112723214
+  },
+  "-20.0": {
+    "entropy": 1.1987424394914081,
+    "normalized_horizon": 0.14654847692627412,
+    "horizon_correlation": 0.8838424730620437,
+    "horizon_slope": 1.1555081444585353,
+    "lensing_ratio": 6.217085687546503
+  },
+  "-10.0": {
+    "entropy": 1.1764116985173452,
+    "normalized_horizon": 0.14434979269840906,
+    "horizon_correlation": 0.8809335825524209,
+    "horizon_slope": 1.143102661149298,
+    "lensing_ratio": 6.507489580426897
+  },
+  "-5.0": {
+    "entropy": 1.1696354073286057,
+    "normalized_horizon": 0.1438845210202258,
+    "horizon_correlation": 0.879195268327489,
+    "horizon_slope": 1.1393622804359504,
+    "lensing_ratio": 6.686277509416852
+  },
+  "0.0": {
+    "entropy": 1.1653272185439154,
+    "normalized_horizon": 0.14365302437538682,
+    "horizon_correlation": 0.8780662451197289,
+    "horizon_slope": 1.1368089721640626,
+    "lensing_ratio": 6.872666248139881
+  },
+  "5.0": {
+    "entropy": 1.1633138686986197,
+    "normalized_horizon": 0.14394672652367918,
+    "horizon_correlation": 0.8757323197658266,
+    "horizon_slope": 1.1352273164026936,
+    "lensing_ratio": 6.909134797595796
+  },
+  "10.0": {
+    "entropy": 1.1636485823846998,
+    "normalized_horizon": 0.1434229152625022,
+    "horizon_correlation": 0.8759741901454954,
+    "horizon_slope": 1.1359619286448879,
+    "lensing_ratio": 6.916578761509487
+  },
+  "20.0": {
+    "entropy": 1.1703945129542124,
+    "normalized_horizon": 0.14280237551214986,
+    "horizon_correlation": 0.8768204798970753,
+    "horizon_slope": 1.1402586797350298,
+    "lensing_ratio": 6.995853111630394
+  },
+  "50.0": {
+    "entropy": 1.2325935994159607,
+    "normalized_horizon": 0.14340773820786015,
+    "horizon_correlation": 0.8870655863649676,
+    "horizon_slope": 1.1753642109699936,
+    "lensing_ratio": 6.442963721865699
+  }
+}
