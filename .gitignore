@@ -1,0 +1,9 @@
+# Regenerable intermediate data (produced by the leg scripts; not source of truth).
+# JSON results and figures ARE committed; the bulk arrays are not.
+*.npz
+
+# OS / Python cruft
+.DS_Store
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,57 @@
+{
+ "rows": {
+  "11_tonecount": {
+   "T_real": 0.57626025,
+   "T_sim": 0.595865,
+   "L_inv_sim": 0.6077935,
+   "L_inv_real": 0.5958852499999999,
+   "N_inv_real": 0.5657415000000001,
+   "L_inv_cross": 0.586049,
+   "N_inv_cross": 0.5872360000000001,
+   "L_loud_real": 0.6113547682762146,
+   "L_loud_cross": 0.4354768991470337,
+   "scramble_gap": -0.020307499999999923
+  },
+  "11_tonecount_norm": {
+   "T_real": 0.61761775,
+   "T_sim": 0.648429,
+   "L_inv_sim": 0.63844,
+   "L_inv_real": 0.6273022500000001,
+   "N_inv_real": 0.610013125,
+   "L_inv_cross": 0.6125985,
+   "N_inv_cross": 0.6032196249999999,
+   "L_loud_real": 0.8432033061981201,
+   "L_loud_cross": 0.5781910419464111,
+   "scramble_gap": -0.002585375000000001
+  },
+  "11_tonecount_realnoise": {
+   "T_real": 0.63798675,
+   "T_sim": 0.65255425,
+   "L_inv_sim": 0.633609,
+   "L_inv_real": 0.64053275,
+   "N_inv_real": 0.622598125,
+   "L_inv_cross": 0.6436025000000001,
+   "N_inv_cross": 0.61997375,
+   "L_loud_real": 0.8218091130256653,
+   "L_loud_cross": 0.5529758334159851,
+   "scramble_gap": -0.021004375000000075
+  },
+  "11_tonecount_matched": {
+   "T_real": 0.61768375,
+   "T_sim": 0.638082375,
+   "L_inv_sim": 0.644822,
+   "L_inv_real": 0.622788875,
+   "N_inv_real": 0.613008875,
+   "L_inv_cross": 0.62885375,
+   "N_inv_cross": 0.5994891250000001,
+   "L_loud_real": 0.615023672580719,
+   "L_loud_cross": 0.4158257246017456,
+   "scramble_gap": -0.01584487499999998
+  }
+ },
+ "P1": false,
+ "P2": false,
+ "P3": 1.0,
+ "P4": false,
+ "rho_Lcross_Treal": 1.0
+}

@@ -1,0 +1,34 @@
+{
+ "delta_median": -0.1620241105556488,
+ "delta_90": [
+  -0.45987184941768644,
+  0.3343527778983116
+ ],
+ "sigma_delta": 0.24142714412466987,
+ "coverage_heldout_mean": 0.9108333333333333,
+ "kerr_inside_90": true,
+ "delta0_in_90": true,
+ "savage_dickey_BF_M2_over_M3": {
+  "U[-1,1]": 2.6384774584885484,
+  "U[-0.5,0.5]": 1.3192387292442742
+ },
+ "C1_consistent_with_DOF2": true,
+ "C2_triangle_closes": true,
+ "triangle": {
+  "ansatz (proved moduli dim)": {
+   "count": 2,
+   "kind": "exact / proved",
+   "note": "Kerr 2-param; scalar no-hair proved (32/33); charge=1 number, e\u2261m (34)"
+  },
+  "tabula (inferred, leg 1)": {
+   "count": 2,
+   "kind": "neural intrinsic dim",
+   "note": "RN observable manifold = 2 (dyonic degeneracy: observable<algebraic)"
+  },
+  "deepstrain (measured, this leg)": {
+   "count": 2,
+   "kind": "no-hair \u03b4 consistent with 0",
+   "note": "GW250114 \u03b4=-0.162 [-0.460,+0.334] 90%, \u03c3(\u03b4)\u22480.241"
+  }
+ }
+}
