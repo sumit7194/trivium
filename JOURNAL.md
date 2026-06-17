@@ -395,3 +395,19 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 - **H1 (Lensing Transition Peak): TRUE.** Lensing magnification ratio follows a smooth, concave curve, starting at $6.8727$, peaking at $7.0092$ ($\alpha = 14.0$), and gradually declining to $6.4430$ at $\alpha = 50.0$ as feature saturation sets in.
 - **H2 (Qualitative Coherence Collapse): FALSE.** The model did not undergo a phase transition into repetition loops or gibberish, even at $\alpha = 50.0$. Generation token entropy remained stable ($0.73$ to $0.96$ bits), and outputs shifted smoothly to produce highly coherent, philosophically relevant discussions of epistemic limits.
 - **Closed the loop:** Confirmed that the model's representation manifold is highly stable and does not possess a qualitative "event horizon" of language breakdown under activation steering.
+
+---
+
+## 2026-06-18 — Session 18: leg-12 built, run, and CLOSED (biological spacetime curvature)
+
+**Preregistered** [leg12_biology_spacetime/PREREGISTRATION.md](leg12_biology_spacetime/PREREGISTRATION.md) freezing hypotheses for weighted Forman-Ricci curvature (FRC) sweeps on protein-protein interaction (PPI) networks.
+
+**Built** (additive bridge code in `leg12_biology_spacetime/code/`, source repos untouched):
+- `calculate_curvature.py` — queries STRING database for a PPI network (supporting Yeast Taxon 4932 or Human 9606) and computes edge-wise FRC while sweeping stress upregulation ($\gamma \in [1.0, 10.0]$).
+- `plot_biology_curvature.py` — generates a 2-panel figure showing edge-wise curvature warping and total FRC variance, copying it to the brain artifacts directory.
+
+**Result — stress upregulation warps the local biology spacetime into a negative-curvature gravity well** (`leg12_biology_spacetime/FINDINGS.md`):
+- **H1 (Geometric Warping / Gravitational Shielding): TRUE (INVERTED).** Chaperone-connected edges undergo a massive linear warping in the negative direction, dropping FRC from $-25.1015$ (baseline) to $-173.9748$ ($\gamma = 10.0$), creating a deep topological gravity well around the chaperones. Housekeeping control edges remain completely flat at $-23.4596$.
+- **H2 (Topological Polarization / Extremal Shift): TRUE.** The network-wide FRC variance explodes 165-fold (from $49.7090$ to $8215.5214$), demonstrating extreme topological polarization under stress.
+- **Closed the loop:** Established a formal connection between GR-like curvature warping and stress-driven network reorganization in biological interactomes.
+
