@@ -279,3 +279,21 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 - **H2 (Kerr Free): TRUE.** Resolved exactly 4 dimensions (including 2 free overtone parameters).
 - **H3 (LIGO Noise): FALSE.** The resolved dimension collapsed completely to **0** rather than 1.
 - **Closed the loop:** Demonstrated at representation level why deepstrain's black-box tone count failed—the LIGO noise level collapses the physical degrees of freedom of the ringdown below the learnable floor, confirming the domain gap is information-limited.
+
+---
+
+## 2026-06-17 — Session 11: leg-8 built, run, and CLOSED (exact echo spacing)
+
+**Preregistered** [leg8_echo_spacing/PREREGISTRATION.md](leg8_echo_spacing/PREREGISTRATION.md) freezing the training hypotheses and success criteria.
+
+**Built** (additive bridge code in `leg8_echo_spacing/code/`, source repos untouched):
+- `solve_echo_spacing.py` — verifies the photon sphere $r_{ph}$ symbolically with SymPy, and computes exact radial null travel time $\Delta t(\lambda)$ using a highly stable regularized variable substitution and its exact analytical antiderivative.
+- `run_physical_search.py` — runs the coherent network comb statistic on real GW150914 strain data at the exact spacings corresponding to the physical $\lambda$ grids for both static and rotating wormholes.
+- `plot_physical_search.py` — generates comparison plots of physical spacing and empirical p-values vs. $\log_{10}(\lambda)$.
+
+**Result — physical parameter search yields look-elsewhere null** (`leg8_echo_spacing/FINDINGS.md`):
+- **H1 (SymPy Verification): TRUE.** SymPy successfully verified the photon sphere orbit at $r_{ph} = \frac{3M}{1+\lambda^2}$.
+- **H2 (Logarithmic scaling): TRUE.** Exact calculations verified the logarithmic scaling $\Delta t \approx -8M \ln(\lambda) + C(\epsilon)$.
+- **H3 (Physical Search Null): TRUE.** The empirical p-value dipped to $0.00625$ at $\lambda = 10^{-17}$ (spacing $0.1267$ s) for the rotating Planckian model. However, correcting for the trials factor ($N_{trials} = 41$) yields $p_{trials} \approx 22.7\%$, which is statistically consistent with noise (a standard null result).
+- **Closed the loop:** Bridged exact wormhole metrics with empirical search pipelines to constrain horizon-scale quantum corrections directly in terms of physical deviation parameters ($\lambda$).
+
