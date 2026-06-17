@@ -297,3 +297,20 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 - **H3 (Physical Search Null): TRUE.** The empirical p-value dipped to $0.00625$ at $\lambda = 10^{-17}$ (spacing $0.1267$ s) for the rotating Planckian model. However, correcting for the trials factor ($N_{trials} = 41$) yields $p_{trials} \approx 22.7\%$, which is statistically consistent with noise (a standard null result).
 - **Closed the loop:** Bridged exact wormhole metrics with empirical search pipelines to constrain horizon-scale quantum corrections directly in terms of physical deviation parameters ($\lambda$).
 
+---
+
+## 2026-06-18 — Session 12: leg-9 built, run, and CLOSED (representation horizon)
+
+**Preregistered** [leg9_representation_horizon/PREREGISTRATION.md](leg9_representation_horizon/PREREGISTRATION.md) freezing the training hypotheses and success criteria.
+
+**Built** (additive bridge code in `leg9_representation_horizon/code/`, source repos untouched):
+- `representation_horizon.py` — generates a synthetic feature dataset, trains a 6-layer MLP, and runs linear (Ridge) vs. non-linear (kNN) probes across all layers for the target and non-target features.
+- `plot_penrose.py` — generates decodability curves and draws the network's Information-Theoretic Penrose Causal Diagram.
+
+**Result — event horizons mapped in neural representation space** (`leg9_representation_horizon/FINDINGS.md`):
+- **H1 (Target Escape): TRUE.** The target feature $y$ escapes the horizon, achieving $R^2 \approx 0.99$ at the final output layer ($l=6$).
+- **H2 (Nontarget Horizon): TRUE.** The continuous irrelevant invariant $z_{inv}$ crosses the representation horizon ($R^2 < 0.05$) at Layer 2 and remains trapped.
+- **H3 (Shortcut Decay): TRUE.** The high-frequency shortcut $z_{noise}$ is trapped immediately at Layer 0 due to input-space illegibility.
+- **Closed the loop:** Established a mathematically precise mapping between General Relativity causal structures (horizons, singularities, null infinity) and neural representation decay, visualizing information flow as causal geodesics.
+
+
