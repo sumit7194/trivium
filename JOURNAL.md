@@ -380,3 +380,18 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 - **H3 (Correlation Breakdown): FALSE.** The Pearson correlation between token mass and event horizon remained extremely strong and stable at $r \approx 0.88-0.89$ across all scales, confirming it is an invariant causal constraint.
 - **H4 (Lensing Collapse): FALSE.** Lensing magnification peaked at $\alpha = 20.0$ ($6.9959$) and decreased to $6.4430$ at $\alpha = 50.0$ (a 7.9% drop), failing the strict 30% collapse threshold.
 - **Closed the loop:** Demonstrated that transformer attention maps are topologically stabilized against black hole collapses and singular states. Causal masking and softmax conservation bounds keep the causal-gravitational structure extremely robust.
+
+---
+
+## 2026-06-18 — Session 17: leg-11 built, run, and CLOSED (steering dynamics and collapse sweeps)
+
+**Preregistered** [leg11_steering_dynamics/PREREGISTRATION.md](leg11_steering_dynamics/PREREGISTRATION.md) freezing hypotheses for fine-grained lensing sweeps and qualitative output collapse tests.
+
+**Built** (additive bridge code in `leg11_steering_dynamics/code/`, source repos untouched):
+- `lensing_and_collapse.py` — runs Qwen3-4B under layer 14 virtue steering with a fine-grained lensing sweep ($\alpha \in [0.0, 50.0]$ in steps of $2.0$) and a generation coherence test ($\alpha \in [0.0, 50.0]$) monitoring token-wise generation entropy.
+- `plot_lensing_collapse.py` — generates a 2-panel figure showing the continuous lensing ratio curve and average generation entropy, copying it to the brain artifacts directory.
+
+**Result — lensing peaks at moderate scales, and generation remains topologically resilient to collapse** (`leg11_steering_dynamics/FINDINGS.md`):
+- **H1 (Lensing Transition Peak): TRUE.** Lensing magnification ratio follows a smooth, concave curve, starting at $6.8727$, peaking at $7.0092$ ($\alpha = 14.0$), and gradually declining to $6.4430$ at $\alpha = 50.0$ as feature saturation sets in.
+- **H2 (Qualitative Coherence Collapse): FALSE.** The model did not undergo a phase transition into repetition loops or gibberish, even at $\alpha = 50.0$. Generation token entropy remained stable ($0.73$ to $0.96$ bits), and outputs shifted smoothly to produce highly coherent, philosophically relevant discussions of epistemic limits.
+- **Closed the loop:** Confirmed that the model's representation manifold is highly stable and does not possess a qualitative "event horizon" of language breakdown under activation steering.
