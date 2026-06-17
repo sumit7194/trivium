@@ -1,4 +1,4 @@
-# The Spine — closed (legs 1–3)
+# The Spine — closed (legs 1–3 + 1b)
 
 *The minimal triangle of THE_BRIDGE.md §3, built in the recommended order (§8), 2026-06-17.*
 *One proposition — "how many numbers is a black hole?" — answered three independent ways.*
@@ -11,6 +11,7 @@ object** — and the one place they disagree is itself predicted and explained.
 | Leg | Pair | Result | Status |
 |---|---|---|---|
 | **1** | ansatz ↔ tabula | proved moduli count = inferred observable count on Schwarzschild (1/0) and RN (2/1); **dyonic 3→2** = the predicted `Q²+P²` degeneracy (observable < algebraic), mechanism proved by ansatz `34` | ✅ agreement + a named departure |
+| **1b** | ansatz ↔ tabula (Kerr) | rotating Kerr (2/1) and Kerr-Newman (3/2) match predictions; KN-full (3) vs KN-Δ-symmetric (2) controlled test confirms frame-dragging-based degeneracy lifting | ✅ closed (Kerr=2, KN=3) |
 | **2** | tabula ↔ deepstrain | the legibility law does **not** explain the tone-count sim→real gap — **no scramble signature**; the gap is **information-limited**, independently reproducing deepstrain's own parked verdict | ✅ clean, useful negative |
 | **3** | ansatz ↔ deepstrain (+ tabula) | the **measured** no-hair δ (GW250114 = −0.16 [−0.46,+0.33], δ=0 in CI) closes the **count-triangle**: proved 2, inferred 2, measured-consistent-with 2 | ✅ the spine triangulates |
 
@@ -38,22 +39,17 @@ object** — and the one place they disagree is itself predicted and explained.
 
 ## Honest limits (carried across legs)
 
-- **Family caveat.** tabula's count was on charged-*static* RN `(M,Q)`; deepstrain's δ on
-  rotating-*vacuum* Kerr `(M,χ)`; ansatz proves both are 2-parameter. The concurrence is
-  on the **number 2 across methods and across two families**, not on one shared object.
-- **Static-only ansatz observables** → leg 1 used RN, not Kerr; Kerr is reachable via new
-  bridge code importing ansatz's engine read-only (unbuilt).
-- **No ansatz QNM module** → leg 3's link is proposition-level (proof ↔ test), not a
+- Family caveat. tabula's count was on charged-static RN (M,Q) in leg 1, and rotating Kerr (M,a) / KN (M,a,Q) in leg 1b; deepstrain's δ on
+  rotating-vacuum Kerr (M,χ); ansatz proves both are 2-parameter.
+- No ansatz QNM module → leg 3's link is proposition-level (proof ↔ test), not a
   numeric QNM bridge.
-- **No new physics.** The contribution is method + end-to-end ownership + cross-validation,
+- No new physics. The contribution is method + end-to-end ownership + cross-validation,
   framed honestly (§7).
 
 ## Where to go next (THE_BRIDGE.md menu)
-- **Kerr extension of leg 1** — new bridge code computing rotating observables from ansatz's
-  engine (read-only), testing the doc's literal "Kerr=2".
-- **The conjecture handoff (§4A)** — hand tabula's "geometrizes ⟺ universal ∧ conservative"
+- The conjecture handoff (§4A) — hand tabula's "geometrizes ⟺ universal ∧ conservative"
   to ansatz's prover (energy conditions + Killing vector). The falsifiability pipeline.
-- **Strong-field curriculum (§5)** — use ansatz's exact light-ring structure to target
+- Strong-field curriculum (§5) — use ansatz's exact light-ring structure to target
   tabula's training and pull the shadow edge toward 3√3.
 
 Per-leg detail: `leg1_moduli_count/FINDINGS.md`, `leg2_domain_gap/FINDINGS.md`,

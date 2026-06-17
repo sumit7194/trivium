@@ -215,3 +215,22 @@ leg 1's dyonic case where no observable could lift the Q²+P² degeneracy.
 **Through-line:** the resolvable count is measured, not assumed. Both directions now
 demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy that can
 (leg 1b KN via frame-dragging).
+
+---
+
+## 2026-06-17 — Session 7: leg-4 built, run, and CLOSED (conjecture handoff)
+
+**Reflected** on the accomplishments across legs 1, 1b, 2, and 3. Discussed the duality of degeneracies (dyonic vs. rotating KN), the information-limited domain gap in leg 2, and the 2-parameter black hole triangulation in leg 3.
+
+**Built** (additive bridge code in `leg4_conjecture_handoff/code/`, source repos untouched):
+- `prove_geometrization.py` — uses SymPy to prove the necessity of universality and conservativeness for force geometrization.
+
+**Preregistered** [leg4_conjecture_handoff/PREREGISTRATION.md](leg4_conjecture_handoff/PREREGISTRATION.md) freezing the symbolic verification criteria.
+
+**Result — both parts of the conjecture are symbolically proven** (`leg4_conjecture_handoff/FINDINGS.md`):
+- **Universality necessity (C1):** Verified that a species-dependent force law $F(x,v,\lambda)$ requires species-dependent Christoffel symbols $\Gamma(\lambda)$, which is incompatible with a universal background metric.
+- **Conservativeness necessity (C2):** Verified that the geodesic equation of a general stationary 1+1D metric cannot represent a time-reversal-breaking linear velocity drag force (friction) without forcing the friction term to zero or breaking stationarity.
+- **Closed the loop:** Verified tabula's neural heuristic with exact symbolic proof, demonstrating the end-to-end falsifiability pipeline.
+
+**Updated** `SPINE_SUMMARY.md` to incorporate the closed Leg 1b results.
+
