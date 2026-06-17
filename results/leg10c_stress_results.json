@@ -1,0 +1,1355 @@
+{
+  "humility_steering": {
+    "-3.0": {
+      "decay_exponent": -0.5161890927497012,
+      "horizon_correlation": 0.8904227498071503,
+      "horizon_slope": 1.1403615961150675,
+      "lensing_ratio": 6.942357085697234,
+      "epistemic_mass_ratio": 1.832422650049603
+    },
+    "-1.0": {
+      "decay_exponent": -0.5168226391050135,
+      "horizon_correlation": 0.8902890446291716,
+      "horizon_slope": 1.1397343145383318,
+      "lensing_ratio": 6.973596852620442,
+      "epistemic_mass_ratio": 1.844344204695767
+    },
+    "0.0": {
+      "decay_exponent": -0.5171104566344292,
+      "horizon_correlation": 0.8902822889132794,
+      "horizon_slope": 1.1394248587310825,
+      "lensing_ratio": 6.979873613630024,
+      "epistemic_mass_ratio": 1.8491404699900793
+    },
+    "1.0": {
+      "decay_exponent": -0.5173541340047433,
+      "horizon_correlation": 0.8903572575598204,
+      "horizon_slope": 1.1392369796637514,
+      "lensing_ratio": 6.984969327411953,
+      "epistemic_mass_ratio": 1.8542144613921958
+    },
+    "3.0": {
+      "decay_exponent": -0.5177262113402347,
+      "horizon_correlation": 0.8899691342921575,
+      "horizon_slope": 1.1389348561587704,
+      "lensing_ratio": 6.991168966141959,
+      "epistemic_mass_ratio": 1.8635279741236772
+    }
+  },
+  "early_vs_late_raw": {
+    "-3.0": {
+      "0": {
+        "decay_exponent": 0.8322130126093348,
+        "horizon_correlation": 0.8066766889348251,
+        "horizon_slope": 4.040208164186799,
+        "lensing_ratio": 1.4554996744791666,
+        "epistemic_mass_ratio": 1.3855794270833333
+      },
+      "1": {
+        "decay_exponent": 0.43462415251606257,
+        "horizon_correlation": 0.890315482433588,
+        "horizon_slope": 2.8353210828569333,
+        "lensing_ratio": 2.3061214192708333,
+        "epistemic_mass_ratio": 2.3211805555555554
+      },
+      "2": {
+        "decay_exponent": 0.015915235956185478,
+        "horizon_correlation": 0.7958127218654419,
+        "horizon_slope": 1.7235847964297455,
+        "lensing_ratio": 3.290869140625,
+        "epistemic_mass_ratio": 3.1549479166666665
+      },
+      "3": {
+        "decay_exponent": 0.034221164798307294,
+        "horizon_correlation": 0.9276485487953248,
+        "horizon_slope": 1.634172481079753,
+        "lensing_ratio": 4.066781005859375,
+        "epistemic_mass_ratio": 2.6181640625
+      },
+      "4": {
+        "decay_exponent": 0.0949154938358983,
+        "horizon_correlation": 0.8609090031042622,
+        "horizon_slope": 1.6521103403802417,
+        "lensing_ratio": 3.4019820149739584,
+        "epistemic_mass_ratio": 2.6133897569444446
+      },
+      "5": {
+        "decay_exponent": 0.10265026981457775,
+        "horizon_correlation": 0.8245908597576823,
+        "horizon_slope": 1.7506727516488798,
+        "lensing_ratio": 3.031213785807292,
+        "epistemic_mass_ratio": 3.0008680555555554
+      },
+      "6": {
+        "decay_exponent": 0.3296926815540159,
+        "horizon_correlation": 0.8148627227991831,
+        "horizon_slope": 2.274956939848069,
+        "lensing_ratio": 2.0833553059895835,
+        "epistemic_mass_ratio": 2.0477430555555554
+      },
+      "7": {
+        "decay_exponent": -0.5171076544608796,
+        "horizon_correlation": 0.8840128493744599,
+        "horizon_slope": 1.0848220179967292,
+        "lensing_ratio": 4.258149210611979,
+        "epistemic_mass_ratio": 3.54296875
+      },
+      "8": {
+        "decay_exponent": -0.510761808100128,
+        "horizon_correlation": 0.7779129845847382,
+        "horizon_slope": 1.1165237650490532,
+        "lensing_ratio": 5.47237548828125,
+        "epistemic_mass_ratio": 1.9185112847222223
+      },
+      "9": {
+        "decay_exponent": -0.5575014242376706,
+        "horizon_correlation": 0.8210656290771368,
+        "horizon_slope": 1.108701779339785,
+        "lensing_ratio": 5.382433878580729,
+        "epistemic_mass_ratio": 2.0654839409722223
+      },
+      "10": {
+        "decay_exponent": -0.5119698897158809,
+        "horizon_correlation": 0.8861253270893692,
+        "horizon_slope": 1.1699377863515636,
+        "lensing_ratio": 4.882841389973958,
+        "epistemic_mass_ratio": 1.9767252604166667
+      },
+      "11": {
+        "decay_exponent": -0.4433594366781972,
+        "horizon_correlation": 0.7476490537618901,
+        "horizon_slope": 1.1761013583061364,
+        "lensing_ratio": 4.125735270182291,
+        "epistemic_mass_ratio": 1.8311089409722223
+      },
+      "12": {
+        "decay_exponent": -0.4254776039049461,
+        "horizon_correlation": 0.8354385557384554,
+        "horizon_slope": 1.227138267293984,
+        "lensing_ratio": 4.3681343587239585,
+        "epistemic_mass_ratio": 1.8109809027777777
+      },
+      "13": {
+        "decay_exponent": -0.5179511415172129,
+        "horizon_correlation": 0.8168892560906375,
+        "horizon_slope": 1.1115556104194955,
+        "lensing_ratio": 4.395153198242188,
+        "epistemic_mass_ratio": 3.1246202256944446
+      },
+      "14": {
+        "decay_exponent": -0.28889656014722626,
+        "horizon_correlation": 0.7322256879911214,
+        "horizon_slope": 1.2929279481288538,
+        "lensing_ratio": 3.39347900390625,
+        "epistemic_mass_ratio": 1.9156358506944444
+      },
+      "15": {
+        "decay_exponent": -0.341062265794533,
+        "horizon_correlation": 0.736836994142511,
+        "horizon_slope": 1.2650557007029666,
+        "lensing_ratio": 3.9219535319010417,
+        "epistemic_mass_ratio": 2.5894097222222223
+      },
+      "16": {
+        "decay_exponent": -0.4008708716235656,
+        "horizon_correlation": 0.7606641448839142,
+        "horizon_slope": 1.2247087771601053,
+        "lensing_ratio": 4.565120035807292,
+        "epistemic_mass_ratio": 1.7080078125
+      },
+      "17": {
+        "decay_exponent": -0.37056787924220963,
+        "horizon_correlation": 0.7328926473836107,
+        "horizon_slope": 1.2380531973886635,
+        "lensing_ratio": 4.132109375,
+        "epistemic_mass_ratio": 2.1842447916666665
+      },
+      "18": {
+        "decay_exponent": -0.2773029946299812,
+        "horizon_correlation": 0.709035116560658,
+        "horizon_slope": 1.3220311700097913,
+        "lensing_ratio": 3.828455403645833,
+        "epistemic_mass_ratio": 2.272922092013889
+      },
+      "19": {
+        "decay_exponent": -0.3533857626334857,
+        "horizon_correlation": 0.8328542315119886,
+        "horizon_slope": 1.1821381613928206,
+        "lensing_ratio": 3.999534098307292,
+        "epistemic_mass_ratio": 1.6845703125
+      },
+      "20": {
+        "decay_exponent": -0.44401826054522286,
+        "horizon_correlation": 0.7342230155849822,
+        "horizon_slope": 1.1235269558308467,
+        "lensing_ratio": 5.014383951822917,
+        "epistemic_mass_ratio": 1.7350802951388888
+      },
+      "21": {
+        "decay_exponent": -0.3824047246346507,
+        "horizon_correlation": 0.84317292768359,
+        "horizon_slope": 1.153796173160487,
+        "lensing_ratio": 3.71741943359375,
+        "epistemic_mass_ratio": 1.8532443576388888
+      },
+      "22": {
+        "decay_exponent": -0.3753629798117355,
+        "horizon_correlation": 0.8244038249606837,
+        "horizon_slope": 1.2668264458471494,
+        "lensing_ratio": 3.8231591796875,
+        "epistemic_mass_ratio": 1.8168402777777777
+      },
+      "23": {
+        "decay_exponent": -0.35323979109361914,
+        "horizon_correlation": 0.7609383277741233,
+        "horizon_slope": 1.2578617934729697,
+        "lensing_ratio": 3.604728190104167,
+        "epistemic_mass_ratio": 2.2979600694444446
+      },
+      "24": {
+        "decay_exponent": -0.5904904806412412,
+        "horizon_correlation": 0.94832079143808,
+        "horizon_slope": 1.1438953297778196,
+        "lensing_ratio": 7.006157023111979,
+        "epistemic_mass_ratio": 1.0978190104166667
+      },
+      "25": {
+        "decay_exponent": -0.5225201742056466,
+        "horizon_correlation": 0.956150572742628,
+        "horizon_slope": 1.0816746882925017,
+        "lensing_ratio": 4.426008707682292,
+        "epistemic_mass_ratio": 2.2129991319444446
+      },
+      "26": {
+        "decay_exponent": -0.6091337654426094,
+        "horizon_correlation": 0.946782949011607,
+        "horizon_slope": 1.0590619517859927,
+        "lensing_ratio": 5.837051595052083,
+        "epistemic_mass_ratio": 1.5058051215277777
+      },
+      "27": {
+        "decay_exponent": -0.6250184297336486,
+        "horizon_correlation": 0.9900932580633757,
+        "horizon_slope": 1.0624189927307641,
+        "lensing_ratio": 6.393015950520834,
+        "epistemic_mass_ratio": 2.5125868055555554
+      },
+      "28": {
+        "decay_exponent": -0.5551540481290776,
+        "horizon_correlation": 0.9643177737822062,
+        "horizon_slope": 1.0947590303758463,
+        "lensing_ratio": 5.446773274739583,
+        "epistemic_mass_ratio": 1.7067057291666667
+      },
+      "29": {
+        "decay_exponent": -0.7346648185085831,
+        "horizon_correlation": 0.9975302708054941,
+        "horizon_slope": 0.9927461819592925,
+        "lensing_ratio": 17.407420959472656,
+        "epistemic_mass_ratio": 1.5186089409722223
+      },
+      "30": {
+        "decay_exponent": -0.6334493921941028,
+        "horizon_correlation": 0.991704625811451,
+        "horizon_slope": 1.0678383961778153,
+        "lensing_ratio": 6.096256510416667,
+        "epistemic_mass_ratio": 2.1051432291666665
+      },
+      "31": {
+        "decay_exponent": -0.6899989268925757,
+        "horizon_correlation": 0.9989988678426278,
+        "horizon_slope": 1.027769183692218,
+        "lensing_ratio": 12.391765848795574,
+        "epistemic_mass_ratio": 1.6986219618055556
+      },
+      "32": {
+        "decay_exponent": -0.6775085613237308,
+        "horizon_correlation": 0.998966077438358,
+        "horizon_slope": 1.0278372888665304,
+        "lensing_ratio": 11.886535135904948,
+        "epistemic_mass_ratio": 1.4370659722222223
+      },
+      "33": {
+        "decay_exponent": -0.727260425342671,
+        "horizon_correlation": 0.9909910169336634,
+        "horizon_slope": 0.9929127988943705,
+        "lensing_ratio": 19.38458740234375,
+        "epistemic_mass_ratio": 1.6064995659722223
+      },
+      "34": {
+        "decay_exponent": -0.6304356133589256,
+        "horizon_correlation": 0.9942977210782504,
+        "horizon_slope": 1.0941890221214032,
+        "lensing_ratio": 8.017313842773438,
+        "epistemic_mass_ratio": 1.3682183159722223
+      },
+      "35": {
+        "decay_exponent": -0.54612078196191,
+        "horizon_correlation": 0.9857025905163554,
+        "horizon_slope": 1.2684922787760642,
+        "lensing_ratio": 4.8897493489583335,
+        "epistemic_mass_ratio": 1.5685221354166667
+      }
+    },
+    "-1.0": {
+      "0": {
+        "decay_exponent": 0.8322130126093348,
+        "horizon_correlation": 0.8066766889348251,
+        "horizon_slope": 4.040208164186799,
+        "lensing_ratio": 1.4554996744791666,
+        "epistemic_mass_ratio": 1.3855794270833333
+      },
+      "1": {
+        "decay_exponent": 0.43462415251606257,
+        "horizon_correlation": 0.890315482433588,
+        "horizon_slope": 2.8353210828569333,
+        "lensing_ratio": 2.3061214192708333,
+        "epistemic_mass_ratio": 2.3211805555555554
+      },
+      "2": {
+        "decay_exponent": 0.015915235956185478,
+        "horizon_correlation": 0.7958127218654419,
+        "horizon_slope": 1.7235847964297455,
+        "lensing_ratio": 3.290869140625,
+        "epistemic_mass_ratio": 3.1549479166666665
+      },
+      "3": {
+        "decay_exponent": 0.034221164798307294,
+        "horizon_correlation": 0.9276485487953248,
+        "horizon_slope": 1.634172481079753,
+        "lensing_ratio": 4.066781005859375,
+        "epistemic_mass_ratio": 2.6181640625
+      },
+      "4": {
+        "decay_exponent": 0.0949154938358983,
+        "horizon_correlation": 0.8609090031042622,
+        "horizon_slope": 1.6521103403802417,
+        "lensing_ratio": 3.4019820149739584,
+        "epistemic_mass_ratio": 2.6133897569444446
+      },
+      "5": {
+        "decay_exponent": 0.10265026981457775,
+        "horizon_correlation": 0.8245908597576823,
+        "horizon_slope": 1.7506727516488798,
+        "lensing_ratio": 3.031213785807292,
+        "epistemic_mass_ratio": 3.0008680555555554
+      },
+      "6": {
+        "decay_exponent": 0.3296926815540159,
+        "horizon_correlation": 0.8148627227991831,
+        "horizon_slope": 2.274956939848069,
+        "lensing_ratio": 2.0833553059895835,
+        "epistemic_mass_ratio": 2.0477430555555554
+      },
+      "7": {
+        "decay_exponent": -0.5171076544608796,
+        "horizon_correlation": 0.8840128493744599,
+        "horizon_slope": 1.0848220179967292,
+        "lensing_ratio": 4.258149210611979,
+        "epistemic_mass_ratio": 3.54296875
+      },
+      "8": {
+        "decay_exponent": -0.510761808100128,
+        "horizon_correlation": 0.7779129845847382,
+        "horizon_slope": 1.1165237650490532,
+        "lensing_ratio": 5.47237548828125,
+        "epistemic_mass_ratio": 1.9185112847222223
+      },
+      "9": {
+        "decay_exponent": -0.5575014242376706,
+        "horizon_correlation": 0.8210656290771368,
+        "horizon_slope": 1.108701779339785,
+        "lensing_ratio": 5.382433878580729,
+        "epistemic_mass_ratio": 2.0654839409722223
+      },
+      "10": {
+        "decay_exponent": -0.5119698897158809,
+        "horizon_correlation": 0.8861253270893692,
+        "horizon_slope": 1.1699377863515636,
+        "lensing_ratio": 4.882841389973958,
+        "epistemic_mass_ratio": 1.9767252604166667
+      },
+      "11": {
+        "decay_exponent": -0.4433594366781972,
+        "horizon_correlation": 0.7476490537618901,
+        "horizon_slope": 1.1761013583061364,
+        "lensing_ratio": 4.125735270182291,
+        "epistemic_mass_ratio": 1.8311089409722223
+      },
+      "12": {
+        "decay_exponent": -0.4254776039049461,
+        "horizon_correlation": 0.8354385557384554,
+        "horizon_slope": 1.227138267293984,
+        "lensing_ratio": 4.3681343587239585,
+        "epistemic_mass_ratio": 1.8109809027777777
+      },
+      "13": {
+        "decay_exponent": -0.5179511415172129,
+        "horizon_correlation": 0.8168892560906375,
+        "horizon_slope": 1.1115556104194955,
+        "lensing_ratio": 4.395153198242188,
+        "epistemic_mass_ratio": 3.1246202256944446
+      },
+      "14": {
+        "decay_exponent": -0.28889656014722626,
+        "horizon_correlation": 0.7322256879911214,
+        "horizon_slope": 1.2929279481288538,
+        "lensing_ratio": 3.39347900390625,
+        "epistemic_mass_ratio": 1.9156358506944444
+      },
+      "15": {
+        "decay_exponent": -0.3526458389768508,
+        "horizon_correlation": 0.7433690378814091,
+        "horizon_slope": 1.2530201483092716,
+        "lensing_ratio": 4.010060628255208,
+        "epistemic_mass_ratio": 2.5399848090277777
+      },
+      "16": {
+        "decay_exponent": -0.4017974529486576,
+        "horizon_correlation": 0.7593040306673776,
+        "horizon_slope": 1.2236393061816857,
+        "lensing_ratio": 4.567095947265625,
+        "epistemic_mass_ratio": 1.72509765625
+      },
+      "17": {
+        "decay_exponent": -0.3720092580630754,
+        "horizon_correlation": 0.73532714300267,
+        "horizon_slope": 1.234517695836422,
+        "lensing_ratio": 4.076546223958333,
+        "epistemic_mass_ratio": 2.1884223090277777
+      },
+      "18": {
+        "decay_exponent": -0.27762492152440954,
+        "horizon_correlation": 0.7099198245691463,
+        "horizon_slope": 1.324230269228923,
+        "lensing_ratio": 3.79161376953125,
+        "epistemic_mass_ratio": 2.2747938368055554
+      },
+      "19": {
+        "decay_exponent": -0.35225639985397206,
+        "horizon_correlation": 0.8274732277386555,
+        "horizon_slope": 1.1826913646824992,
+        "lensing_ratio": 3.9791349283854167,
+        "epistemic_mass_ratio": 1.6860894097222223
+      },
+      "20": {
+        "decay_exponent": -0.4440518874490139,
+        "horizon_correlation": 0.7339818985735864,
+        "horizon_slope": 1.1249394772388344,
+        "lensing_ratio": 5.059855143229167,
+        "epistemic_mass_ratio": 1.7261827256944444
+      },
+      "21": {
+        "decay_exponent": -0.3810986193262803,
+        "horizon_correlation": 0.8369704971233104,
+        "horizon_slope": 1.1547675241493214,
+        "lensing_ratio": 3.733948974609375,
+        "epistemic_mass_ratio": 1.8712022569444444
+      },
+      "22": {
+        "decay_exponent": -0.3753858059189714,
+        "horizon_correlation": 0.8210395382596093,
+        "horizon_slope": 1.2667258986018044,
+        "lensing_ratio": 3.8289676920572915,
+        "epistemic_mass_ratio": 1.8301323784722223
+      },
+      "23": {
+        "decay_exponent": -0.35403894002742853,
+        "horizon_correlation": 0.762080589068878,
+        "horizon_slope": 1.2576469571062057,
+        "lensing_ratio": 3.612198893229167,
+        "epistemic_mass_ratio": 2.3301866319444446
+      },
+      "24": {
+        "decay_exponent": -0.5913203727214438,
+        "horizon_correlation": 0.950554312472431,
+        "horizon_slope": 1.1431933034674575,
+        "lensing_ratio": 7.039822591145834,
+        "epistemic_mass_ratio": 1.1128472222222223
+      },
+      "25": {
+        "decay_exponent": -0.5220484416171655,
+        "horizon_correlation": 0.9554206312269506,
+        "horizon_slope": 1.0813804391764998,
+        "lensing_ratio": 4.427711385091146,
+        "epistemic_mass_ratio": 2.2457682291666665
+      },
+      "26": {
+        "decay_exponent": -0.6094835007055428,
+        "horizon_correlation": 0.9468828046860396,
+        "horizon_slope": 1.0588686781538224,
+        "lensing_ratio": 5.851751912434896,
+        "epistemic_mass_ratio": 1.5310329861111112
+      },
+      "27": {
+        "decay_exponent": -0.6256416101862095,
+        "horizon_correlation": 0.9891749870731572,
+        "horizon_slope": 1.0616968444454975,
+        "lensing_ratio": 6.430550537109375,
+        "epistemic_mass_ratio": 2.5655381944444446
+      },
+      "28": {
+        "decay_exponent": -0.5550584557365219,
+        "horizon_correlation": 0.9664720265128024,
+        "horizon_slope": 1.0950002373882426,
+        "lensing_ratio": 5.469577026367188,
+        "epistemic_mass_ratio": 1.7288953993055556
+      },
+      "29": {
+        "decay_exponent": -0.735059241570289,
+        "horizon_correlation": 0.9984846067428259,
+        "horizon_slope": 0.9926791210470285,
+        "lensing_ratio": 17.679901682535807,
+        "epistemic_mass_ratio": 1.5436197916666667
+      },
+      "30": {
+        "decay_exponent": -0.6331734539687708,
+        "horizon_correlation": 0.9908995241943372,
+        "horizon_slope": 1.0676698661901347,
+        "lensing_ratio": 6.019032389322916,
+        "epistemic_mass_ratio": 2.112087673611111
+      },
+      "31": {
+        "decay_exponent": -0.689953150648239,
+        "horizon_correlation": 0.9988302375077523,
+        "horizon_slope": 1.0276499331673565,
+        "lensing_ratio": 12.435501810709635,
+        "epistemic_mass_ratio": 1.7077907986111112
+      },
+      "32": {
+        "decay_exponent": -0.677119612225647,
+        "horizon_correlation": 0.9989450104967291,
+        "horizon_slope": 1.0281009199027829,
+        "lensing_ratio": 11.832773742675782,
+        "epistemic_mass_ratio": 1.4449327256944444
+      },
+      "33": {
+        "decay_exponent": -0.7274154855205802,
+        "horizon_correlation": 0.9909885851761845,
+        "horizon_slope": 0.9928480807247115,
+        "lensing_ratio": 19.61909434000651,
+        "epistemic_mass_ratio": 1.6191948784722223
+      },
+      "34": {
+        "decay_exponent": -0.629974425983051,
+        "horizon_correlation": 0.9942906693963827,
+        "horizon_slope": 1.0948186693558841,
+        "lensing_ratio": 8.040945231119792,
+        "epistemic_mass_ratio": 1.375
+      },
+      "35": {
+        "decay_exponent": -0.5461185462331613,
+        "horizon_correlation": 0.9856607548423678,
+        "horizon_slope": 1.2683358709505823,
+        "lensing_ratio": 4.939449055989583,
+        "epistemic_mass_ratio": 1.5724283854166667
+      }
+    },
+    "0.0": {
+      "0": {
+        "decay_exponent": 0.8322130126093348,
+        "horizon_correlation": 0.8066766889348251,
+        "horizon_slope": 4.040208164186799,
+        "lensing_ratio": 1.4554996744791666,
+        "epistemic_mass_ratio": 1.3855794270833333
+      },
+      "1": {
+        "decay_exponent": 0.43462415251606257,
+        "horizon_correlation": 0.890315482433588,
+        "horizon_slope": 2.8353210828569333,
+        "lensing_ratio": 2.3061214192708333,
+        "epistemic_mass_ratio": 2.3211805555555554
+      },
+      "2": {
+        "decay_exponent": 0.015915235956185478,
+        "horizon_correlation": 0.7958127218654419,
+        "horizon_slope": 1.7235847964297455,
+        "lensing_ratio": 3.290869140625,
+        "epistemic_mass_ratio": 3.1549479166666665
+      },
+      "3": {
+        "decay_exponent": 0.034221164798307294,
+        "horizon_correlation": 0.9276485487953248,
+        "horizon_slope": 1.634172481079753,
+        "lensing_ratio": 4.066781005859375,
+        "epistemic_mass_ratio": 2.6181640625
+      },
+      "4": {
+        "decay_exponent": 0.0949154938358983,
+        "horizon_correlation": 0.8609090031042622,
+        "horizon_slope": 1.6521103403802417,
+        "lensing_ratio": 3.4019820149739584,
+        "epistemic_mass_ratio": 2.6133897569444446
+      },
+      "5": {
+        "decay_exponent": 0.10265026981457775,
+        "horizon_correlation": 0.8245908597576823,
+        "horizon_slope": 1.7506727516488798,
+        "lensing_ratio": 3.031213785807292,
+        "epistemic_mass_ratio": 3.0008680555555554
+      },
+      "6": {
+        "decay_exponent": 0.3296926815540159,
+        "horizon_correlation": 0.8148627227991831,
+        "horizon_slope": 2.274956939848069,
+        "lensing_ratio": 2.0833553059895835,
+        "epistemic_mass_ratio": 2.0477430555555554
+      },
+      "7": {
+        "decay_exponent": -0.5171076544608796,
+        "horizon_correlation": 0.8840128493744599,
+        "horizon_slope": 1.0848220179967292,
+        "lensing_ratio": 4.258149210611979,
+        "epistemic_mass_ratio": 3.54296875
+      },
+      "8": {
+        "decay_exponent": -0.510761808100128,
+        "horizon_correlation": 0.7779129845847382,
+        "horizon_slope": 1.1165237650490532,
+        "lensing_ratio": 5.47237548828125,
+        "epistemic_mass_ratio": 1.9185112847222223
+      },
+      "9": {
+        "decay_exponent": -0.5575014242376706,
+        "horizon_correlation": 0.8210656290771368,
+        "horizon_slope": 1.108701779339785,
+        "lensing_ratio": 5.382433878580729,
+        "epistemic_mass_ratio": 2.0654839409722223
+      },
+      "10": {
+        "decay_exponent": -0.5119698897158809,
+        "horizon_correlation": 0.8861253270893692,
+        "horizon_slope": 1.1699377863515636,
+        "lensing_ratio": 4.882841389973958,
+        "epistemic_mass_ratio": 1.9767252604166667
+      },
+      "11": {
+        "decay_exponent": -0.4433594366781972,
+        "horizon_correlation": 0.7476490537618901,
+        "horizon_slope": 1.1761013583061364,
+        "lensing_ratio": 4.125735270182291,
+        "epistemic_mass_ratio": 1.8311089409722223
+      },
+      "12": {
+        "decay_exponent": -0.4254776039049461,
+        "horizon_correlation": 0.8354385557384554,
+        "horizon_slope": 1.227138267293984,
+        "lensing_ratio": 4.3681343587239585,
+        "epistemic_mass_ratio": 1.8109809027777777
+      },
+      "13": {
+        "decay_exponent": -0.5179511415172129,
+        "horizon_correlation": 0.8168892560906375,
+        "horizon_slope": 1.1115556104194955,
+        "lensing_ratio": 4.395153198242188,
+        "epistemic_mass_ratio": 3.1246202256944446
+      },
+      "14": {
+        "decay_exponent": -0.28889656014722626,
+        "horizon_correlation": 0.7322256879911214,
+        "horizon_slope": 1.2929279481288538,
+        "lensing_ratio": 3.39347900390625,
+        "epistemic_mass_ratio": 1.9156358506944444
+      },
+      "15": {
+        "decay_exponent": -0.3582032769855221,
+        "horizon_correlation": 0.7455898802086883,
+        "horizon_slope": 1.2478365017939979,
+        "lensing_ratio": 4.048347981770833,
+        "epistemic_mass_ratio": 2.5155164930555554
+      },
+      "16": {
+        "decay_exponent": -0.40217245009189745,
+        "horizon_correlation": 0.758401976062097,
+        "horizon_slope": 1.2235863831890774,
+        "lensing_ratio": 4.56219970703125,
+        "epistemic_mass_ratio": 1.7348090277777777
+      },
+      "17": {
+        "decay_exponent": -0.372780327462619,
+        "horizon_correlation": 0.7356993918420158,
+        "horizon_slope": 1.231824685410478,
+        "lensing_ratio": 4.056369222005208,
+        "epistemic_mass_ratio": 2.1907552083333335
+      },
+      "18": {
+        "decay_exponent": -0.27783583906905707,
+        "horizon_correlation": 0.7102780011794494,
+        "horizon_slope": 1.3249970688007586,
+        "lensing_ratio": 3.800093587239583,
+        "epistemic_mass_ratio": 2.2772623697916665
+      },
+      "19": {
+        "decay_exponent": -0.3516808883349422,
+        "horizon_correlation": 0.8258420901586058,
+        "horizon_slope": 1.1822502504585504,
+        "lensing_ratio": 3.9778853352864583,
+        "epistemic_mass_ratio": 1.68701171875
+      },
+      "20": {
+        "decay_exponent": -0.4440001637417611,
+        "horizon_correlation": 0.7331716559629873,
+        "horizon_slope": 1.1253594288644286,
+        "lensing_ratio": 5.051896565755208,
+        "epistemic_mass_ratio": 1.72265625
+      },
+      "21": {
+        "decay_exponent": -0.3804446160098305,
+        "horizon_correlation": 0.8351242924380815,
+        "horizon_slope": 1.155146856094315,
+        "lensing_ratio": 3.728646240234375,
+        "epistemic_mass_ratio": 1.8783094618055556
+      },
+      "22": {
+        "decay_exponent": -0.37534891140259014,
+        "horizon_correlation": 0.8200421142889763,
+        "horizon_slope": 1.2668016052289688,
+        "lensing_ratio": 3.828344319661458,
+        "epistemic_mass_ratio": 1.8353949652777777
+      },
+      "23": {
+        "decay_exponent": -0.35438412556325605,
+        "horizon_correlation": 0.7625551786058163,
+        "horizon_slope": 1.257764950136568,
+        "lensing_ratio": 3.620302734375,
+        "epistemic_mass_ratio": 2.341037326388889
+      },
+      "24": {
+        "decay_exponent": -0.5917299870540927,
+        "horizon_correlation": 0.9511532835649326,
+        "horizon_slope": 1.1428804705570257,
+        "lensing_ratio": 7.088192952473959,
+        "epistemic_mass_ratio": 1.1206597222222223
+      },
+      "25": {
+        "decay_exponent": -0.5217148810459986,
+        "horizon_correlation": 0.955396607105042,
+        "horizon_slope": 1.0815713019118403,
+        "lensing_ratio": 4.400484619140625,
+        "epistemic_mass_ratio": 2.261935763888889
+      },
+      "26": {
+        "decay_exponent": -0.6096696649522422,
+        "horizon_correlation": 0.9475830819219205,
+        "horizon_slope": 1.058964752137362,
+        "lensing_ratio": 5.909408772786458,
+        "epistemic_mass_ratio": 1.5435112847222223
+      },
+      "27": {
+        "decay_exponent": -0.6259119964754354,
+        "horizon_correlation": 0.9890257356414692,
+        "horizon_slope": 1.0613522485341975,
+        "lensing_ratio": 6.429027099609375,
+        "epistemic_mass_ratio": 2.58642578125
+      },
+      "28": {
+        "decay_exponent": -0.5550359308959578,
+        "horizon_correlation": 0.9672458097751558,
+        "horizon_slope": 1.095035279636037,
+        "lensing_ratio": 5.476857503255208,
+        "epistemic_mass_ratio": 1.7375759548611112
+      },
+      "29": {
+        "decay_exponent": -0.7352126988806672,
+        "horizon_correlation": 0.9993054257316851,
+        "horizon_slope": 0.9927918580895205,
+        "lensing_ratio": 17.720982462565104,
+        "epistemic_mass_ratio": 1.5541449652777777
+      },
+      "30": {
+        "decay_exponent": -0.6329978932033118,
+        "horizon_correlation": 0.9908630943314788,
+        "horizon_slope": 1.0677640729197209,
+        "lensing_ratio": 6.015868631998698,
+        "epistemic_mass_ratio": 2.11376953125
+      },
+      "31": {
+        "decay_exponent": -0.6899094804365777,
+        "horizon_correlation": 0.9988302971202027,
+        "horizon_slope": 1.0277006641846014,
+        "lensing_ratio": 12.46931121826172,
+        "epistemic_mass_ratio": 1.7103407118055556
+      },
+      "32": {
+        "decay_exponent": -0.6769652725081519,
+        "horizon_correlation": 0.9989852170586736,
+        "horizon_slope": 1.028311755117639,
+        "lensing_ratio": 11.814373982747396,
+        "epistemic_mass_ratio": 1.4480794270833333
+      },
+      "33": {
+        "decay_exponent": -0.7275112034172228,
+        "horizon_correlation": 0.9909800554298499,
+        "horizon_slope": 0.9928107133000682,
+        "lensing_ratio": 19.580318501790366,
+        "epistemic_mass_ratio": 1.6232096354166667
+      },
+      "34": {
+        "decay_exponent": -0.6297264221589416,
+        "horizon_correlation": 0.9942068697693575,
+        "horizon_slope": 1.095024252809137,
+        "lensing_ratio": 8.008828125,
+        "epistemic_mass_ratio": 1.3761935763888888
+      },
+      "35": {
+        "decay_exponent": -0.5460835596329374,
+        "horizon_correlation": 0.9856480089823856,
+        "horizon_slope": 1.2681469341784495,
+        "lensing_ratio": 4.989606323242188,
+        "epistemic_mass_ratio": 1.5733506944444444
+      }
+    },
+    "1.0": {
+      "0": {
+        "decay_exponent": 0.8322130126093348,
+        "horizon_correlation": 0.8066766889348251,
+        "horizon_slope": 4.040208164186799,
+        "lensing_ratio": 1.4554996744791666,
+        "epistemic_mass_ratio": 1.3855794270833333
+      },
+      "1": {
+        "decay_exponent": 0.43462415251606257,
+        "horizon_correlation": 0.890315482433588,
+        "horizon_slope": 2.8353210828569333,
+        "lensing_ratio": 2.3061214192708333,
+        "epistemic_mass_ratio": 2.3211805555555554
+      },
+      "2": {
+        "decay_exponent": 0.015915235956185478,
+        "horizon_correlation": 0.7958127218654419,
+        "horizon_slope": 1.7235847964297455,
+        "lensing_ratio": 3.290869140625,
+        "epistemic_mass_ratio": 3.1549479166666665
+      },
+      "3": {
+        "decay_exponent": 0.034221164798307294,
+        "horizon_correlation": 0.9276485487953248,
+        "horizon_slope": 1.634172481079753,
+        "lensing_ratio": 4.066781005859375,
+        "epistemic_mass_ratio": 2.6181640625
+      },
+      "4": {
+        "decay_exponent": 0.0949154938358983,
+        "horizon_correlation": 0.8609090031042622,
+        "horizon_slope": 1.6521103403802417,
+        "lensing_ratio": 3.4019820149739584,
+        "epistemic_mass_ratio": 2.6133897569444446
+      },
+      "5": {
+        "decay_exponent": 0.10265026981457775,
+        "horizon_correlation": 0.8245908597576823,
+        "horizon_slope": 1.7506727516488798,
+        "lensing_ratio": 3.031213785807292,
+        "epistemic_mass_ratio": 3.0008680555555554
+      },
+      "6": {
+        "decay_exponent": 0.3296926815540159,
+        "horizon_correlation": 0.8148627227991831,
+        "horizon_slope": 2.274956939848069,
+        "lensing_ratio": 2.0833553059895835,
+        "epistemic_mass_ratio": 2.0477430555555554
+      },
+      "7": {
+        "decay_exponent": -0.5171076544608796,
+        "horizon_correlation": 0.8840128493744599,
+        "horizon_slope": 1.0848220179967292,
+        "lensing_ratio": 4.258149210611979,
+        "epistemic_mass_ratio": 3.54296875
+      },
+      "8": {
+        "decay_exponent": -0.510761808100128,
+        "horizon_correlation": 0.7779129845847382,
+        "horizon_slope": 1.1165237650490532,
+        "lensing_ratio": 5.47237548828125,
+        "epistemic_mass_ratio": 1.9185112847222223
+      },
+      "9": {
+        "decay_exponent": -0.5575014242376706,
+        "horizon_correlation": 0.8210656290771368,
+        "horizon_slope": 1.108701779339785,
+        "lensing_ratio": 5.382433878580729,
+        "epistemic_mass_ratio": 2.0654839409722223
+      },
+      "10": {
+        "decay_exponent": -0.5119698897158809,
+        "horizon_correlation": 0.8861253270893692,
+        "horizon_slope": 1.1699377863515636,
+        "lensing_ratio": 4.882841389973958,
+        "epistemic_mass_ratio": 1.9767252604166667
+      },
+      "11": {
+        "decay_exponent": -0.4433594366781972,
+        "horizon_correlation": 0.7476490537618901,
+        "horizon_slope": 1.1761013583061364,
+        "lensing_ratio": 4.125735270182291,
+        "epistemic_mass_ratio": 1.8311089409722223
+      },
+      "12": {
+        "decay_exponent": -0.4254776039049461,
+        "horizon_correlation": 0.8354385557384554,
+        "horizon_slope": 1.227138267293984,
+        "lensing_ratio": 4.3681343587239585,
+        "epistemic_mass_ratio": 1.8109809027777777
+      },
+      "13": {
+        "decay_exponent": -0.5179511415172129,
+        "horizon_correlation": 0.8168892560906375,
+        "horizon_slope": 1.1115556104194955,
+        "lensing_ratio": 4.395153198242188,
+        "epistemic_mass_ratio": 3.1246202256944446
+      },
+      "14": {
+        "decay_exponent": -0.28889656014722626,
+        "horizon_correlation": 0.7322256879911214,
+        "horizon_slope": 1.2929279481288538,
+        "lensing_ratio": 3.39347900390625,
+        "epistemic_mass_ratio": 1.9156358506944444
+      },
+      "15": {
+        "decay_exponent": -0.36356943148211146,
+        "horizon_correlation": 0.7505218020792841,
+        "horizon_slope": 1.2437070457143549,
+        "lensing_ratio": 4.089171142578125,
+        "epistemic_mass_ratio": 2.4905598958333335
+      },
+      "16": {
+        "decay_exponent": -0.4024420547962413,
+        "horizon_correlation": 0.7578948429165354,
+        "horizon_slope": 1.2237558437880287,
+        "lensing_ratio": 4.575580647786459,
+        "epistemic_mass_ratio": 1.7419704861111112
+      },
+      "17": {
+        "decay_exponent": -0.37354086054844765,
+        "horizon_correlation": 0.7368041687817514,
+        "horizon_slope": 1.2301779495513336,
+        "lensing_ratio": 4.063046468098959,
+        "epistemic_mass_ratio": 2.1915690104166665
+      },
+      "18": {
+        "decay_exponent": -0.27814298542906435,
+        "horizon_correlation": 0.7110216071517343,
+        "horizon_slope": 1.325053341288995,
+        "lensing_ratio": 3.8083675130208334,
+        "epistemic_mass_ratio": 2.2765028211805554
+      },
+      "19": {
+        "decay_exponent": -0.35108417902485806,
+        "horizon_correlation": 0.8228085073632201,
+        "horizon_slope": 1.1821647339115722,
+        "lensing_ratio": 3.984779052734375,
+        "epistemic_mass_ratio": 1.6854926215277777
+      },
+      "20": {
+        "decay_exponent": -0.4438137142507607,
+        "horizon_correlation": 0.7334552111882299,
+        "horizon_slope": 1.1257454029322862,
+        "lensing_ratio": 5.094031575520833,
+        "epistemic_mass_ratio": 1.7173394097222223
+      },
+      "21": {
+        "decay_exponent": -0.37971335706115156,
+        "horizon_correlation": 0.8332212854513963,
+        "horizon_slope": 1.1560209890448274,
+        "lensing_ratio": 3.7052762858072916,
+        "epistemic_mass_ratio": 1.8828125
+      },
+      "22": {
+        "decay_exponent": -0.3753286695044043,
+        "horizon_correlation": 0.816223949876003,
+        "horizon_slope": 1.266548079890496,
+        "lensing_ratio": 3.8308723958333335,
+        "epistemic_mass_ratio": 1.8411458333333333
+      },
+      "23": {
+        "decay_exponent": -0.35471569548743587,
+        "horizon_correlation": 0.7651032788248425,
+        "horizon_slope": 1.2588922446193804,
+        "lensing_ratio": 3.6169482421875,
+        "epistemic_mass_ratio": 2.356228298611111
+      },
+      "24": {
+        "decay_exponent": -0.5920709196357096,
+        "horizon_correlation": 0.9513324967496442,
+        "horizon_slope": 1.142737350749642,
+        "lensing_ratio": 7.093906860351563,
+        "epistemic_mass_ratio": 1.1265190972222223
+      },
+      "25": {
+        "decay_exponent": -0.5213915628752661,
+        "horizon_correlation": 0.9548500022448171,
+        "horizon_slope": 1.0814900477345957,
+        "lensing_ratio": 4.397577514648438,
+        "epistemic_mass_ratio": 2.2736002604166665
+      },
+      "26": {
+        "decay_exponent": -0.6098232006980724,
+        "horizon_correlation": 0.9470798923485457,
+        "horizon_slope": 1.0585454349357721,
+        "lensing_ratio": 5.904365437825521,
+        "epistemic_mass_ratio": 1.5557183159722223
+      },
+      "27": {
+        "decay_exponent": -0.6261380608077319,
+        "horizon_correlation": 0.989008363416263,
+        "horizon_slope": 1.0612291960776596,
+        "lensing_ratio": 6.451541544596354,
+        "epistemic_mass_ratio": 2.6087239583333335
+      },
+      "28": {
+        "decay_exponent": -0.5549415499588678,
+        "horizon_correlation": 0.9695162241093768,
+        "horizon_slope": 1.0951946323389783,
+        "lensing_ratio": 5.494695434570312,
+        "epistemic_mass_ratio": 1.7485894097222223
+      },
+      "29": {
+        "decay_exponent": -0.7353691930118574,
+        "horizon_correlation": 0.9993054184549564,
+        "horizon_slope": 0.9927253272578537,
+        "lensing_ratio": 17.82615488688151,
+        "epistemic_mass_ratio": 1.5663519965277777
+      },
+      "30": {
+        "decay_exponent": -0.6327860205659084,
+        "horizon_correlation": 0.9908155819972198,
+        "horizon_slope": 1.067751597155165,
+        "lensing_ratio": 6.053196309407552,
+        "epistemic_mass_ratio": 2.1188151041666665
+      },
+      "31": {
+        "decay_exponent": -0.6897854745709018,
+        "horizon_correlation": 0.998830174783515,
+        "horizon_slope": 1.0277066453628005,
+        "lensing_ratio": 12.412967936197917,
+        "epistemic_mass_ratio": 1.7151150173611112
+      },
+      "32": {
+        "decay_exponent": -0.6767661292837229,
+        "horizon_correlation": 0.9989849799097668,
+        "horizon_slope": 1.0285173240814596,
+        "lensing_ratio": 11.886425577799479,
+        "epistemic_mass_ratio": 1.453125
+      },
+      "33": {
+        "decay_exponent": -0.7275672401607817,
+        "horizon_correlation": 0.9909795335365518,
+        "horizon_slope": 0.9927536146748992,
+        "lensing_ratio": 19.304008585611978,
+        "epistemic_mass_ratio": 1.6328125
+      },
+      "34": {
+        "decay_exponent": -0.6294246624112335,
+        "horizon_correlation": 0.994119107619521,
+        "horizon_slope": 1.0951970922033112,
+        "lensing_ratio": 8.05203837076823,
+        "epistemic_mass_ratio": 1.3793402777777777
+      },
+      "35": {
+        "decay_exponent": -0.5460218525350808,
+        "horizon_correlation": 0.985625979953054,
+        "horizon_slope": 1.2680626796253676,
+        "lensing_ratio": 5.039404093424479,
+        "epistemic_mass_ratio": 1.576171875
+      }
+    },
+    "3.0": {
+      "0": {
+        "decay_exponent": 0.8322130126093348,
+        "horizon_correlation": 0.8066766889348251,
+        "horizon_slope": 4.040208164186799,
+        "lensing_ratio": 1.4554996744791666,
+        "epistemic_mass_ratio": 1.3855794270833333
+      },
+      "1": {
+        "decay_exponent": 0.43462415251606257,
+        "horizon_correlation": 0.890315482433588,
+        "horizon_slope": 2.8353210828569333,
+        "lensing_ratio": 2.3061214192708333,
+        "epistemic_mass_ratio": 2.3211805555555554
+      },
+      "2": {
+        "decay_exponent": 0.015915235956185478,
+        "horizon_correlation": 0.7958127218654419,
+        "horizon_slope": 1.7235847964297455,
+        "lensing_ratio": 3.290869140625,
+        "epistemic_mass_ratio": 3.1549479166666665
+      },
+      "3": {
+        "decay_exponent": 0.034221164798307294,
+        "horizon_correlation": 0.9276485487953248,
+        "horizon_slope": 1.634172481079753,
+        "lensing_ratio": 4.066781005859375,
+        "epistemic_mass_ratio": 2.6181640625
+      },
+      "4": {
+        "decay_exponent": 0.0949154938358983,
+        "horizon_correlation": 0.8609090031042622,
+        "horizon_slope": 1.6521103403802417,
+        "lensing_ratio": 3.4019820149739584,
+        "epistemic_mass_ratio": 2.6133897569444446
+      },
+      "5": {
+        "decay_exponent": 0.10265026981457775,
+        "horizon_correlation": 0.8245908597576823,
+        "horizon_slope": 1.7506727516488798,
+        "lensing_ratio": 3.031213785807292,
+        "epistemic_mass_ratio": 3.0008680555555554
+      },
+      "6": {
+        "decay_exponent": 0.3296926815540159,
+        "horizon_correlation": 0.8148627227991831,
+        "horizon_slope": 2.274956939848069,
+        "lensing_ratio": 2.0833553059895835,
+        "epistemic_mass_ratio": 2.0477430555555554
+      },
+      "7": {
+        "decay_exponent": -0.5171076544608796,
+        "horizon_correlation": 0.8840128493744599,
+        "horizon_slope": 1.0848220179967292,
+        "lensing_ratio": 4.258149210611979,
+        "epistemic_mass_ratio": 3.54296875
+      },
+      "8": {
+        "decay_exponent": -0.510761808100128,
+        "horizon_correlation": 0.7779129845847382,
+        "horizon_slope": 1.1165237650490532,
+        "lensing_ratio": 5.47237548828125,
+        "epistemic_mass_ratio": 1.9185112847222223
+      },
+      "9": {
+        "decay_exponent": -0.5575014242376706,
+        "horizon_correlation": 0.8210656290771368,
+        "horizon_slope": 1.108701779339785,
+        "lensing_ratio": 5.382433878580729,
+        "epistemic_mass_ratio": 2.0654839409722223
+      },
+      "10": {
+        "decay_exponent": -0.5119698897158809,
+        "horizon_correlation": 0.8861253270893692,
+        "horizon_slope": 1.1699377863515636,
+        "lensing_ratio": 4.882841389973958,
+        "epistemic_mass_ratio": 1.9767252604166667
+      },
+      "11": {
+        "decay_exponent": -0.4433594366781972,
+        "horizon_correlation": 0.7476490537618901,
+        "horizon_slope": 1.1761013583061364,
+        "lensing_ratio": 4.125735270182291,
+        "epistemic_mass_ratio": 1.8311089409722223
+      },
+      "12": {
+        "decay_exponent": -0.4254776039049461,
+        "horizon_correlation": 0.8354385557384554,
+        "horizon_slope": 1.227138267293984,
+        "lensing_ratio": 4.3681343587239585,
+        "epistemic_mass_ratio": 1.8109809027777777
+      },
+      "13": {
+        "decay_exponent": -0.5179511415172129,
+        "horizon_correlation": 0.8168892560906375,
+        "horizon_slope": 1.1115556104194955,
+        "lensing_ratio": 4.395153198242188,
+        "epistemic_mass_ratio": 3.1246202256944446
+      },
+      "14": {
+        "decay_exponent": -0.28889656014722626,
+        "horizon_correlation": 0.7322256879911214,
+        "horizon_slope": 1.2929279481288538,
+        "lensing_ratio": 3.39347900390625,
+        "epistemic_mass_ratio": 1.9156358506944444
+      },
+      "15": {
+        "decay_exponent": -0.3735679798585239,
+        "horizon_correlation": 0.7573208775970628,
+        "horizon_slope": 1.236681904526818,
+        "lensing_ratio": 4.175988362630208,
+        "epistemic_mass_ratio": 2.4381510416666665
+      },
+      "16": {
+        "decay_exponent": -0.4025786980498069,
+        "horizon_correlation": 0.756136560621342,
+        "horizon_slope": 1.223799063721711,
+        "lensing_ratio": 4.604252115885417,
+        "epistemic_mass_ratio": 1.7624240451388888
+      },
+      "17": {
+        "decay_exponent": -0.3750024954219874,
+        "horizon_correlation": 0.7381165683049642,
+        "horizon_slope": 1.2263121621674422,
+        "lensing_ratio": 4.0482470703125,
+        "epistemic_mass_ratio": 2.19482421875
+      },
+      "18": {
+        "decay_exponent": -0.27904438709112944,
+        "horizon_correlation": 0.7116347864436379,
+        "horizon_slope": 1.326958079964215,
+        "lensing_ratio": 3.8100992838541665,
+        "epistemic_mass_ratio": 2.282253689236111
+      },
+      "19": {
+        "decay_exponent": -0.34971881514748965,
+        "horizon_correlation": 0.8191490002783741,
+        "horizon_slope": 1.1830283284881482,
+        "lensing_ratio": 3.9710738118489584,
+        "epistemic_mass_ratio": 1.6856553819444444
+      },
+      "20": {
+        "decay_exponent": -0.44306472235273814,
+        "horizon_correlation": 0.7314770908285292,
+        "horizon_slope": 1.1261400887583077,
+        "lensing_ratio": 5.096920979817709,
+        "epistemic_mass_ratio": 1.7117513020833333
+      },
+      "21": {
+        "decay_exponent": -0.37801523052565866,
+        "horizon_correlation": 0.827660000631668,
+        "horizon_slope": 1.1580854294394831,
+        "lensing_ratio": 3.7155224609375,
+        "epistemic_mass_ratio": 1.892578125
+      },
+      "22": {
+        "decay_exponent": -0.3752643943704173,
+        "horizon_correlation": 0.8134936422093417,
+        "horizon_slope": 1.2669820202099742,
+        "lensing_ratio": 3.8285835774739585,
+        "epistemic_mass_ratio": 1.85205078125
+      },
+      "23": {
+        "decay_exponent": -0.35517065762702077,
+        "horizon_correlation": 0.7645971422471555,
+        "horizon_slope": 1.2589636730172802,
+        "lensing_ratio": 3.616158040364583,
+        "epistemic_mass_ratio": 2.3817274305555554
+      },
+      "24": {
+        "decay_exponent": -0.5927864240323031,
+        "horizon_correlation": 0.9523260532747881,
+        "horizon_slope": 1.1419326906133274,
+        "lensing_ratio": 7.1612107340494795,
+        "epistemic_mass_ratio": 1.1430121527777777
+      },
+      "25": {
+        "decay_exponent": -0.520611534093678,
+        "horizon_correlation": 0.9540746665999997,
+        "horizon_slope": 1.0812364814837612,
+        "lensing_ratio": 4.396422322591146,
+        "epistemic_mass_ratio": 2.3030598958333335
+      },
+      "26": {
+        "decay_exponent": -0.610016358642571,
+        "horizon_correlation": 0.9465515216395848,
+        "horizon_slope": 1.0580317127314915,
+        "lensing_ratio": 5.892302449544271,
+        "epistemic_mass_ratio": 1.5807834201388888
+      },
+      "27": {
+        "decay_exponent": -0.6265269965681316,
+        "horizon_correlation": 0.988576787686125,
+        "horizon_slope": 1.060747462152841,
+        "lensing_ratio": 6.464614054361979,
+        "epistemic_mass_ratio": 2.6512586805555554
+      },
+      "28": {
+        "decay_exponent": -0.55470788799585,
+        "horizon_correlation": 0.9695699711403233,
+        "horizon_slope": 1.0950340573912107,
+        "lensing_ratio": 5.525363566080729,
+        "epistemic_mass_ratio": 1.7660047743055556
+      },
+      "29": {
+        "decay_exponent": -0.7356588287320664,
+        "horizon_correlation": 0.9993055735820853,
+        "horizon_slope": 0.9925745984705165,
+        "lensing_ratio": 17.832309926350913,
+        "epistemic_mass_ratio": 1.5841471354166667
+      },
+      "30": {
+        "decay_exponent": -0.6322747037482096,
+        "horizon_correlation": 0.9907013880773153,
+        "horizon_slope": 1.0679751764723577,
+        "lensing_ratio": 5.984388326009115,
+        "epistemic_mass_ratio": 2.1209309895833335
+      },
+      "31": {
+        "decay_exponent": -0.6895764963588265,
+        "horizon_correlation": 0.998973894767748,
+        "horizon_slope": 1.0279085269321404,
+        "lensing_ratio": 12.378886006673177,
+        "epistemic_mass_ratio": 1.7178819444444444
+      },
+      "32": {
+        "decay_exponent": -0.6763463439405996,
+        "horizon_correlation": 0.9989673086777939,
+        "horizon_slope": 1.0287496841999382,
+        "lensing_ratio": 11.88243916829427,
+        "epistemic_mass_ratio": 1.4603949652777777
+      },
+      "33": {
+        "decay_exponent": -0.7276463907290588,
+        "horizon_correlation": 0.9909771806298331,
+        "horizon_slope": 0.9926931238418634,
+        "lensing_ratio": 19.3208984375,
+        "epistemic_mass_ratio": 1.6392686631944444
+      },
+      "34": {
+        "decay_exponent": -0.6287680177210132,
+        "horizon_correlation": 0.9941451254303424,
+        "horizon_slope": 1.0959588603200798,
+        "lensing_ratio": 8.073606567382813,
+        "epistemic_mass_ratio": 1.3861219618055556
+      },
+      "35": {
+        "decay_exponent": -0.545903075137849,
+        "horizon_correlation": 0.985596679467291,
+        "horizon_slope": 1.2678388544312729,
+        "lensing_ratio": 5.035261027018229,
+        "epistemic_mass_ratio": 1.5798068576388888
+      }
+    }
+  },
+  "random_vector_steering": {
+    "-3.0": {
+      "decay_exponent": -0.5160098974962972,
+      "horizon_correlation": 0.8915754638864997,
+      "horizon_slope": 1.1408379323242925,
+      "lensing_ratio": 6.921531931559246,
+      "epistemic_mass_ratio": 1.8470775462962963
+    },
+    "-1.0": {
+      "decay_exponent": -0.5167376148290291,
+      "horizon_correlation": 0.8907590219740273,
+      "horizon_slope": 1.139773567520648,
+      "lensing_ratio": 6.95172401549324,
+      "epistemic_mass_ratio": 1.8478629298941802
+    },
+    "0.0": {
+      "decay_exponent": -0.5171104566344292,
+      "horizon_correlation": 0.8902822889132794,
+      "horizon_slope": 1.1394248587310825,
+      "lensing_ratio": 6.979873613630024,
+      "epistemic_mass_ratio": 1.8491404699900793
+    },
+    "1.0": {
+      "decay_exponent": -0.5174637592445543,
+      "horizon_correlation": 0.8898303613901396,
+      "horizon_slope": 1.139053846243299,
+      "lensing_ratio": 6.997168976314485,
+      "epistemic_mass_ratio": 1.8505768952546295
+    },
+    "3.0": {
+      "decay_exponent": -0.5181211006397677,
+      "horizon_correlation": 0.888565291508808,
+      "horizon_slope": 1.1382567880117276,
+      "lensing_ratio": 6.996939130510602,
+      "epistemic_mass_ratio": 1.854828042328042
+    }
+  },
+  "random_model_baseline": {
+    "decay_exponent": 0.34831434547027446,
+    "horizon_correlation": 0.9104318169029119,
+    "horizon_slope": 4.3220480327948545,
+    "lensing_ratio": 2.2867578125,
+    "epistemic_mass_ratio": 1.6755022321428572
+  }
+}
