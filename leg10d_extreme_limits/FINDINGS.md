@@ -44,9 +44,10 @@ We successfully ran the extreme steering sweep for Qwen3-4B up to $\alpha_{steer
 
 ---
 
-## 3. Physical Analogy & Interpretation
+## 3. Honest Methodological Reflection
 
-These results provide crucial evidence on the nature of the "attention as gravity" analogy:
-1.  **Resilience over Collapse**: Standard transformer attention has built-in stabilizers (softmax normalization and causal masks) that prevent mathematical singularities or "black hole collapses." Softmax scales inputs to probability coordinates between 0 and 1, ensuring that the total mass is conserved ($\sum A(i, j) = 1.0$) and bounds the maximum size of event horizons.
-2.  **Destabilization via Noise**: At extreme steering amplitudes ($\pm 50.0$), the model's activations are pushed far outside their typical training manifold. Rather than collapsing into a singular state, the attention matrices become noisier and flatter (as seen by the rise in entropy).
-3.  **Stability of the Space-Time Invariant**: The linear correlation between mass and horizon is a structural invariant ($r \approx 0.88-0.89$) that is unaffected by extreme semantic steering.
+These results confirm that the "black hole collapse" metaphor does not predict model behavior under extreme stress:
+1.  **Topological Bounds of Softmax**: Attention is naturally bounded by the Softmax normalization. Because the attention weights sum to 1.0, the total "mass" of the system is mathematically conserved. This bounds the event horizon and prevents the formation of an infinite-density "singularity."
+2.  **Destabilization via Noise**: Pushing the steering scale to $\pm 50.0$ forces the activations off the trained manifold. The model does not collapse into a single point (H1/H2). Instead, it behaves as though we added high-entropy Gaussian noise, spreading attention out rather than concentrating it.
+3.  **Persistence of the Correlation**: The event-horizon correlation (H3) remains completely stable ($r \approx 0.88-0.89$), proving once again that the mass-horizon relation is a structural invariant of causal sequence indexing and not a physical gravity effect that can be warped or broken by semantic force.
+

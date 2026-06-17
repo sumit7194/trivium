@@ -26,7 +26,9 @@ We successfully ran the fine-grained lensing sweep and qualitative generation te
 
 ---
 
-## 3. Implications for the Space-Time Analogy
+## 3. Honest Methodological Reflection
 
-1.  **Topological Stability**: The absence of a qualitative event horizon demonstrates that the model's language representations are extremely stable. The softmax normalization and causal masks act as topological bounds, preventing the hidden activations from collapsing into a singular state (like a black hole) even when pushed 50 standard deviations off the training manifold.
-2.  **Orderly Semantic Bending**: Rather than breaking down, the model "bends" its outputs smoothly toward the steered semantic domain (epistemic humility and philosophy of science boundaries). This suggests that activation steering acts more like a continuous gravitational field that curves the path of token generation without tearing the underlying language fabric.
+1.  **Lensing is a Tiny Modulation**: Although the lensing ratio curve (H1) is concave and peaks at $\alpha = 14.0$, the absolute variance is very small ($6.87 \to 7.00$, a $1.8\%$ relative change). This indicates that the "lensing magnification" is a minor modulation of baseline attention routing rather than a major geometric distortion.
+2.  **Fluency does not equal correctness**: The model's syntactic coherence remains completely intact at $\alpha = 50.0$ (H2). However, we did not evaluate whether the generated statements are calibrated or correct. High fluency at extreme steering scales may simply mask confident confabulations.
+3.  **Metaphor Limits**: The lack of a qualitative collapse confirms that the "event horizon" framing does not hold. Softmax bounds ensure representation stability, causing the model to bend its outputs semantically rather than collapse structurally.
+

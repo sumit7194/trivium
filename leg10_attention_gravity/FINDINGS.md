@@ -24,8 +24,12 @@ We successfully analyzed the attention matrices of the Qwen3-4B model across 50 
 
 ---
 
-## 2. Conclusion & Deliverables
+---
 
-*   `leg10_attention_gravity/code/extract_attention.py` — successfully executed on Qwen3-4B using the Phronesis virtual environment.
-*   `leg10_attention_gravity/code/plot_gravity.py` — generated the three-panel plot saved to `results/leg10_attention_gravity.png`.
-*   The results show a deep mathematical alignment: attention sinks behave exactly like black holes, with event horizons scaling linearly with mass, and massive intermediate tokens acting as gravitational lenses that magnify attention.
+## 3. Crucial Methodological Caveats (Confounders)
+
+While the mathematical alignment with General Relativity metrics is striking, we must note key architectural confounders:
+1.  **Causal Softmax Artifact (H2)**: The strong correlation between token mass $M_j$ (column sum) and event horizon $R_s$ (maximum distance of attention) is largely an architectural artifact of Causal Softmax. Because they are both functionals of the same attention column, and causal masking naturally gives earlier tokens a wider window of queries, a token with high mass is mathematically coupled to a larger horizon by construction. This is a positional baseline, not learned physics.
+2.  **Attention Sinks (H1)**: The "Newtonian falloff" decay is simply local attention decay plus the well-documented transformer "attention sink" phenomenon (where models dump unused attention mass onto the start-of-sequence or punctuation tokens).
+3.  **Metaphor vs. routing**: The gravity framing is a post-hoc vocabulary. Its value is not in simulating physical general relativity, but rather as an intuitive metric system to map attention routing.
+

@@ -30,8 +30,10 @@ We successfully swept the steering coefficient $\alpha_{steer} \in \{-3.0, -1.0,
 
 ---
 
-## 3. Conclusion & Deliverables
+---
 
-*   `leg10b_steered_gravity/code/steer_attention_gravity.py` — successfully executed on Qwen3-4B using Phronesis virtue vectors.
-*   `leg10b_steered_gravity/code/plot_steered_gravity.py` — generated the four-panel visualization saved to `results/leg10b_steered_gravity.png`.
-*   All four hypotheses were successfully verified, establishing a direct link between activation steering and the modulation of gravitational attention structures.
+## 3. Crucial Limitations & Caveats
+
+1.  **Tiny Effect Size on Token Mass Redirection (H4)**: While the epistemic-to-control ratio increases monotonically from $2.5753$ ($\alpha=-3.0$) to $2.5833$ ($\alpha=+3.0$), the total change is extremely small (a $0.3\%$ relative shift). Without error bars or confidence intervals across sentences, it is difficult to distinguish this small trend from noise. A more rigorous, non-gravity evaluation is required to confirm the significance of this redirection.
+2.  **Structural Invariants (H2)**: The horizon-mass correlation $r$ remains essentially flat ($\approx 0.878$), confirming that the Schwarzschild relation is an architectural invariant of Causal Softmax rather than a steerable physical property.
+

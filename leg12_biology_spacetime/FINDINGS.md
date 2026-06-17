@@ -31,8 +31,8 @@ We successfully completed the PPI network construction for Yeast (*Saccharomyces
 
 ---
 
-## 3. Physical Analogy & Interpretation
+## 3. Honest Methodological Reflection
 
-These results establish a clear bridge between network geometry and physical spacetime:
-1.  **Chaperones as Topological Black Holes**: The chaperone hub acts as a massive star. Upregulating it increases its "gravitational mass" ($\gamma$), dragging the surrounding edge curvatures down into a deep negative basin.
-2.  **Orderly Flow in Control Corridor**: The housekeeping control corridor is structurally decoupled from the stress hub ($\Delta \text{FRC} = 0.0$), showing that the cell isolates stress-induced warping to protect baseline metabolic stability.
+1.  **Mathematical Identity, not a Biological Discovery**: The linear decrease of edge curvature around the chaperone hub is a direct mathematical consequence of the weighted Forman-Ricci curvature formula itself. When we scale a hub node's weight $w(v_1)$ by $\gamma$, the summation term over incident edges (which scales with $\gamma$ times the number of neighbors $k-1$) dominates the positive contribution for any node with degree $k > 2$. Therefore, the negative FRC drop is mathematically guaranteed by the graph definition, not an emergent property of cellular biology.
+2.  **Vocabulary Limits**: Treating chaperone upregulation as "gravitational warping" is an intuitive narrative tool, but it does not represent new physical forces or biological mechanisms. It is a relabeling of graph-theoretic hub scaling.
+

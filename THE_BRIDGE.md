@@ -149,4 +149,23 @@ Match the projects' shared ethos throughout: pre-register → build → gate →
 
 ---
 
+## 10. Future Roadmap
+
+We have established a three-option roadmap for the next phase of the project:
+
+### Option A: Resolving the Phase-Shift Curvature Problem (Leg 7b)
+*   **Problem**: In Leg 7, the autoencoder resolved $4$ dimensions instead of the physical $2$ for locked Kerr ringdowns due to "phase-shift curvature" (translation shifts of wave peaks in the time-domain create highly curved manifolds).
+*   **Plan**: We will implement pre-processing and coordinate transformations (such as Fourier/magnitude spectra, phase alignment, or Hilbert envelopes) to remove phase-shift variance before bottleneck compression, and test if the autoencoder can recover the true physical dimensionality ($2$ for locked, $4$ for free).
+
+### Option B: Rotating Strong-Field Curriculum (Leg 5b)
+*   **Problem**: Leg 5 targeted the static Schwarzschild shadow ($b_{crit} = 3\sqrt{3}$). Rotating Kerr spacetimes have asymmetric shadows due to frame-dragging.
+*   **Plan**: We will use the ansatz engine to compute exact Kerr shadow boundaries and train targeted networks to reconstruct the spin parameter $a$ and viewer inclination $\theta_0$ from null geodesics.
+
+### Option C: Generalized Conjecture Handoff (Leg 4b)
+*   **Problem**: The symbolic geometrization proof in Leg 4 was restricted to a $1+1D$ static metric and simple linear velocity drag.
+*   **Plan**: Generalize the symbolic proof to a full $3+1D$ metric and test non-conservative forces like electromagnetic Lorentz forces or non-linear drag.
+
+---
+
 *Independence got you three clean instruments. The bridge is where you let them read the same thing — once, carefully, blind — and see if the universe gives the same answer three ways.*
+

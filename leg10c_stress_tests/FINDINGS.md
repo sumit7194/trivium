@@ -40,6 +40,12 @@ We ran the complete pre-registered stress-test battery to evaluate the robustnes
 
 ---
 
-## 3. Conclusion
+---
 
-We have successfully stress-tested our claims. While the linear Schwarzschild horizon correlation is a natural property of causally masked softmax attention, semantic training actively shapes the geometry (tightening event horizons by 4x and magnifying lensing by 3x). Furthermore, virtue steering's effects on mass redirection are highly directionally specific.
+## 3. Honest Methodological Reflection
+
+The stress-test controls isolate what is physically "real" from what is "relabeling" in the GR analogy:
+1.  **Schwarzschild Scaling is a Causal Masking Confounder (T3)**: The fact that $r \approx 0.91$ in the untrained model proves that the linear mass-horizon correlation is a mathematical inevitability of the Softmax function combined with a causal attention mask. It is an architectural artifact, not a physical simulation of spacetime. The "gravity" vocabulary does not add predictive value here.
+2.  **Redirection Effect Size is Very Small**: Although the virtue steering redirection (T2) is specific to the humility direction (monotonic increase from $1.8324 \to 1.8635$), the absolute effect size is minute (a $1.7\%$ relative change). While statistically monotonic, this tiny shift requires error bars and confidence intervals to ensure it is not a statistical fluctuation.
+3.  **Learned Routing**: The real finding of this leg is that **training compacts attention routing** (decreasing the horizon slope $G_{eff}$ and amplifying the lensing/deflection ratio by 3x). This is a valuable mechanistic interpretability result that does not require the gravity framing to stand.
+
