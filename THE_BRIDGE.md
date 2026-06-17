@@ -151,7 +151,7 @@ Match the projects' shared ethos throughout: pre-register → build → gate →
 
 ## 10. Future Roadmap
 
-We have established a three-option roadmap for the next phase of the project:
+We have established a five-option roadmap for the next phase of the project:
 
 ### Option A: Resolving the Phase-Shift Curvature Problem (Leg 7b)
 *   **Problem**: In Leg 7, the autoencoder resolved $4$ dimensions instead of the physical $2$ for locked Kerr ringdowns due to "phase-shift curvature" (translation shifts of wave peaks in the time-domain create highly curved manifolds).
@@ -164,6 +164,14 @@ We have established a three-option roadmap for the next phase of the project:
 ### Option C: Generalized Conjecture Handoff (Leg 4b)
 *   **Problem**: The symbolic geometrization proof in Leg 4 was restricted to a $1+1D$ static metric and simple linear velocity drag.
 *   **Plan**: Generalize the symbolic proof to a full $3+1D$ metric and test non-conservative forces like electromagnetic Lorentz forces or non-linear drag.
+
+### Option D: Integrability Fingerprints (Leg 5c)
+*   **Problem**: The count-triangle (§5) shows that counts diverge under some conditions (such as dyonic degeneracy), but we have not verified whether the neural bottleneck count can detect a hidden symmetry.
+*   **Plan**: Kerr geodesics are integrable due to the Carter constant (a conserved quantity beyond energy and angular momentum), but deforming the metric breaks this integrability. We will feed the neural bottleneck network geodesic trajectory data from an exactly-integrable system (Kerr, with Carter constant certified by ansatz) versus a deformed non-integrable system, and evaluate whether the bottleneck count (`tabula`) detects a difference (i.e., whether integrability leaves a representational fingerprint).
+
+### Option E: Physics-Grounded Echo Templates (Leg 8b)
+*   **Problem**: `deepstrain`'s echo search currently relies on phenomenological templates for exotic near-horizon structures, which may miss real signals due to template mismatch.
+*   **Plan**: Use `ansatz` to generate the exact near-horizon metric and reflection structure of an echo-producing exotic object (such as a wormhole or gravastar). Convert these exact solutions into physics-grounded wave templates and feed them to `deepstrain`'s search pipeline to search for echoes in real LIGO data.
 
 ---
 
