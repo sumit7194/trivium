@@ -123,73 +123,96 @@ def prep(X, n_train):
     }
 
 def main():
-    rng = np.random.default_rng(42)
-    masses = rng.uniform(40, 120, N_TRAIN)
-    chis = rng.uniform(0.05, 0.95, N_TRAIN)
-    
     t = np.arange(N_SAMP) / FS
     t0 = 0.0
     
-    print("Generating Locked Kerr waveforms...")
-    raw_obs = np.zeros((N_TRAIN, 2 * N_SAMP), dtype=np.float32)
-    fft_obs = np.zeros((N_TRAIN, 2 * (N_SAMP // 2 + 1)), dtype=np.float32)
-    env_obs = np.zeros((N_TRAIN, 2 * N_SAMP), dtype=np.float32)
-    
-    for k in range(N_TRAIN):
-        f1, tau1, f2, tau2 = get_freq_tau(masses[k], chis[k])
-        params = [
-            dict(f=f1, tau=tau1, amp=5.0, phi=0.0),
-            dict(f=f2, tau=tau2, amp=4.0, phi=0.0),
-        ]
-        x1 = rdlib.damped_sinusoids(t, t0, params)
-        x2 = rdlib.damped_sinusoids(t, t0, params)
-        
-        # 1. Baseline: Raw time domain
-        raw_obs[k] = np.concatenate([x1, x2])
-        
-        # 2. FFT Magnitude
-        X1 = np.abs(np.fft.rfft(x1))
-        X2 = np.abs(np.fft.rfft(x2))
-        fft_obs[k] = np.concatenate([X1, X2])
-        
-        # 3. Hilbert Envelope
-        env1 = np.abs(hilbert(x1))
-        env2 = np.abs(hilbert(x2))
-        env_obs[k] = np.concatenate([env1, env2])
-        
-    representations = {
-        "baseline": raw_obs,
-        "fft_magnitude": fft_obs,
-        "hilbert_envelope": env_obs
-    }
-    
+    families = ["locked", "free"]
     report = {}
-    n_train = int(N_TRAIN * 0.9)
     
-    for key, X in representations.items():
-        print(f"\nProcessing representation: {key} (shape={X.shape})")
-        p = prep(X.astype(np.float64), n_train)
-        if p is None:
-            continue
+    for family in families:
+        print(f"\n========================================")
+        print(f"Generating and training for family: {family.upper()}")
+        print(f"========================================")
+        
+        # Reset RNG per family to ensure identical parameter distributions (mass, chi)
+        rng_param = np.random.default_rng(42)
+        masses = rng_param.uniform(40, 120, N_TRAIN)
+        chis = rng_param.uniform(0.05, 0.95, N_TRAIN)
+        
+        # For free family, we use a separate RNG for relative amplitude/phase to keep masses/chis identical
+        rng_free = np.random.default_rng(2026)
+        
+        raw_obs = np.zeros((N_TRAIN, 2 * N_SAMP), dtype=np.float32)
+        fft_obs = np.zeros((N_TRAIN, 2 * (N_SAMP // 2 + 1)), dtype=np.float32)
+        env_obs = np.zeros((N_TRAIN, 2 * N_SAMP), dtype=np.float32)
+        
+        for k in range(N_TRAIN):
+            f1, tau1, f2, tau2 = get_freq_tau(masses[k], chis[k])
             
-        res = {
-            "linear_spectrum": p["linear_spectrum"],
-            "n_linear_kept": p["n_linear_kept"],
-            "n_features": p["n_features"],
-            "std_R2": {},
-            "white_R2": {}
+            if family == "locked":
+                amp1 = 5.0
+                amp2 = 4.0
+                phi2 = 0.0
+            else:
+                amp1 = 5.0
+                amp2 = amp1 * rng_free.uniform(0.2, 1.5)
+                phi2 = rng_free.uniform(-np.pi, np.pi)
+                
+            params = [
+                dict(f=f1, tau=tau1, amp=amp1, phi=0.0),
+                dict(f=f2, tau=tau2, amp=amp2, phi=phi2),
+            ]
+            x1 = rdlib.damped_sinusoids(t, t0, params)
+            x2 = rdlib.damped_sinusoids(t, t0, params)
+            
+            # 1. Baseline: Raw time domain
+            raw_obs[k] = np.concatenate([x1, x2])
+            
+            # 2. FFT Magnitude
+            X1 = np.abs(np.fft.rfft(x1))
+            X2 = np.abs(np.fft.rfft(x2))
+            fft_obs[k] = np.concatenate([X1, X2])
+            
+            # 3. Hilbert Envelope
+            env1 = np.abs(hilbert(x1))
+            env2 = np.abs(hilbert(x2))
+            env_obs[k] = np.concatenate([env1, env2])
+            
+        representations = {
+            "baseline": raw_obs,
+            "fft_magnitude": fft_obs,
+            "hilbert_envelope": env_obs
         }
         
-        for space in ("std", "white"):
-            Xtr, Xte = p[space]
-            res[f"{space}_R2"] = {}
-            for d in DIMS:
-                vals = [train_ae(Xtr, Xte, d, s) for s in SEEDS]
-                res[f"{space}_R2"][str(d)] = [float(np.mean(vals)), float(np.std(vals))]
+        family_report = {}
+        n_train = int(N_TRAIN * 0.9)
+        
+        for key, X in representations.items():
+            print(f"\nProcessing representation: {key} (shape={X.shape})")
+            p = prep(X.astype(np.float64), n_train)
+            if p is None:
+                continue
                 
-        report[key] = res
-        row = "  ".join(f"d{d}:{res['white_R2'][str(d)][0]:.4f}" for d in DIMS)
-        print(f"  white R²(d): {row}")
+            res = {
+                "linear_spectrum": p["linear_spectrum"],
+                "n_linear_kept": p["n_linear_kept"],
+                "n_features": p["n_features"],
+                "std_R2": {},
+                "white_R2": {}
+            }
+            
+            for space in ("std", "white"):
+                Xtr, Xte = p[space]
+                res[f"{space}_R2"] = {}
+                for d in DIMS:
+                    vals = [train_ae(Xtr, Xte, d, s) for s in SEEDS]
+                    res[f"{space}_R2"][str(d)] = [float(np.mean(vals)), float(np.std(vals))]
+                    
+            family_report[key] = res
+            row = "  ".join(f"d{d}:{res['white_R2'][str(d)][0]:.4f}" for d in DIMS)
+            print(f"  white R²(d): {row}")
+            
+        report[family] = family_report
         
     out_dir = Path("/Users/sumit/Github/TheBridge/results")
     out_dir.mkdir(parents=True, exist_ok=True)
