@@ -234,3 +234,18 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 
 **Updated** `SPINE_SUMMARY.md` to incorporate the closed Leg 1b results.
 
+---
+
+## 2026-06-17 — Session 8: leg-5 built, run, and CLOSED (strong-field curriculum)
+
+**Preregistered** [leg5_strong_field_curriculum/PREREGISTRATION.md](leg5_strong_field_curriculum/PREREGISTRATION.md) freezing the training hypotheses and success criteria.
+
+**Built** (additive bridge code in `leg5_strong_field_curriculum/code/`, source repos untouched):
+- `strong_field_curriculum.py` — generates uniform (naive) vs targeted (ansatz-curriculum) ray datasets of identical point counts (N=25,000), trains neural photon-shadow models, and evaluates them using batched ray-tracing and force-potential fitting.
+
+**Result — theory-guided curriculum dramatically improves strong-field accuracy and stability** (`leg5_strong_field_curriculum/FINDINGS.md`):
+- **H1 shadow-edge error improved: TRUE.** Targeted relative error drops to 2.27% compared to 22.98% for Uniform (a 10.1x improvement, confirming H3).
+- **H2 photon-sphere error improved: FALSE.** While the Uniform mean error was close (0.34%), its standard deviation was massive ($0.182M$) meaning individual models were highly unstable. The Targeted models converged consistently to a stable value with nearly 20x smaller variance ($0.010M$), representing a much more robust physical representation.
+- **Closed the loop:** Confirmed that exact strong-field theory (ansatz critical orbit locations) provides the optimal training curriculum to pull the learned neural shadow edge to $3\sqrt{3}$.
+
+

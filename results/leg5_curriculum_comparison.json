@@ -1,0 +1,24 @@
+{
+  "H1_shadow_edge_accuracy_improved": true,
+  "H2_photon_sphere_accuracy_improved": false,
+  "H3_relative_error_ratio_above_1_5": true,
+  "curriculum_benefit_confirmed": false,
+  "results": {
+    "Uniform (Curriculum A)": {
+      "b_crit_mean": 6.390384615384615,
+      "b_crit_std": 1.0096153846153846,
+      "b_crit_err": 0.22983009263918355,
+      "r_ps_mean": 2.989878951329088,
+      "r_ps_std": 0.18243463931491077,
+      "r_ps_err": 0.003373682890304005
+    },
+    "Targeted (Curriculum B)": {
+      "b_crit_mean": 5.314201183431953,
+      "b_crit_std": 0.19970414201183395,
+      "b_crit_err": 0.02271849459408858,
+      "r_ps_mean": 2.92997866915008,
+      "r_ps_std": 0.009466088851288435,
+      "r_ps_err": 0.023340443616640005
+    }
+  }
+}
