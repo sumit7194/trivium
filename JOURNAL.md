@@ -172,3 +172,46 @@ with the honest accounting and the §7 limits.
 **Spine status: COMPLETE.** Next options (THE_BRIDGE.md menu): Kerr extension of leg 1
 (rotating observables via ansatz engine, read-only); the conjecture handoff (§4A,
 geometrizes ⟺ universal ∧ conservative → ansatz prover); strong-field curriculum (§5).
+
+---
+
+## 2026-06-17 — Session 6: leg-1b built, run, and CLOSED (Kerr extension)
+
+**Continued** from session 5's final work (which hit the session limit mid-validation).
+The pre-registration and `kerr_observables.py` were written in session 5; this session
+validated, ran, and closed the leg.
+
+**Sanity validation** — exact metric-derived observables checked against known Bardeen
+values: Schwarzschild r_ph=3M, r_isco=6M, ω=0 ✅; Kerr a/M=0.9 prograde ISCO=2.321M
+(expected 2.32), retrograde=8.717M (expected 8.72) ✅. All physics correct.
+
+**Built** (additive bridge code in `leg1b_kerr/code/`, source repos untouched):
+- `kerr_observables.py` (session 5) — imports ansatz's `kerr_delta_metric` READ-ONLY,
+  derives exact equatorial observables (horizon, photon orbits, ISCO, frame-dragging,
+  redshift) from the exact metric components. Three families: Kerr (M,a), KN-full
+  (M,a,Q) with all observables, KN-Δ-symmetric (M,a,Q) with only Δ-dependent
+  observables. 8000 objects per family × 2 conventions = 6 `.npz` datasets.
+- `count_bottleneck_kerr.py` — identical instrument to leg 1 (same AE, same sweep,
+  same knee rule), reads only the `.npz` arrays (§2 blindness enforced mechanically).
+- `plot_curves_kerr.py` — the figure.
+
+**Result — every cell matched the frozen prediction** (`leg1b_kerr/FINDINGS.md`):
+
+| Cell | ansatz | tabula | verdict |
+|---|---|---|---|
+| Kerr dimensionful | 2 | 2 | ✅ |
+| KN-full dimensionful | 3 | 3 | ✅ |
+| KN-Δ-symmetric dimensionful | 2 | 2 | ✅ |
+| Kerr shape | 1 | 1 | ✅ |
+| KN-full shape | 2 | 2 | ✅ |
+| KN-Δ-symmetric shape | 1 | 1 | ✅ |
+
+**The doc's literal headline:** Kerr = 2, Kerr–Newman = 3 — confirmed by an
+independent neural measurement. The controlled test (KN-full vs KN-Δ-symmetric) shows
+frame-dragging lifts the a²+Q² degeneracy in the full observable set (→3) but the
+degeneracy persists in the Δ-symmetric subset (→2). This is the exact opposite of
+leg 1's dyonic case where no observable could lift the Q²+P² degeneracy.
+
+**Through-line:** the resolvable count is measured, not assumed. Both directions now
+demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy that can
+(leg 1b KN via frame-dragging).
