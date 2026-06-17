@@ -248,4 +248,17 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 - **H2 photon-sphere error improved: FALSE.** While the Uniform mean error was close (0.34%), its standard deviation was massive ($0.182M$) meaning individual models were highly unstable. The Targeted models converged consistently to a stable value with nearly 20x smaller variance ($0.010M$), representing a much more robust physical representation.
 - **Closed the loop:** Confirmed that exact strong-field theory (ansatz critical orbit locations) provides the optimal training curriculum to pull the learned neural shadow edge to $3\sqrt{3}$.
 
+---
 
+## 2026-06-17 — Session 9: leg-6 built, run, and CLOSED (regime prediction)
+
+**Preregistered** [leg6_regime_prediction/PREREGISTRATION.md](leg6_regime_prediction/PREREGISTRATION.md) freezing the training hypotheses and success criteria.
+
+**Built** (additive bridge code in `leg6_regime_prediction/code/`, source repos untouched):
+- `regime_prediction.py` — simulates direct vs. indirect observation regimes for a conserved 3D rotating state under controls, trains Generic vs. Orthogonal state-update models, and measures linear (Ridge) vs. non-linear (kNN) decodability of the latent representation.
+
+**Result — scramble signature isolated to Generic-Indirect regime** (`leg6_regime_prediction/FINDINGS.md`):
+- **H1 Direct Legibility: TRUE.** In the Direct observation regime, both Generic and Orthogonal models keep the state highly legible ($R^2 > 0.99$, scramble gap $\approx 0$). No scrambling occurs.
+- **H2 Indirect Scrambling: TRUE.** In the Indirect observation regime, the Generic model scrambles ($R^2_{linear} = 0.0524$, scramble gap = $0.3116$), while the Orthogonal model remains legible ($R^2_{linear} = 0.8786$, scramble gap = $0.0482$).
+- **H3 Erosion: FALSE.** The Generic model's linear decodability is so low from the start ($0.0524$) that there is no room for a gradual $0.15$ erosion over the evaluation window.
+- **Closed the loop:** Confirmed tabula's prediction that geometric conservation structure (orthogonal updates) is necessary to preserve representation legibility only under indirect observation.

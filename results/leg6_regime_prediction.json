@@ -1,0 +1,36 @@
+{
+  "H1_direct_legible": true,
+  "H2_indirect_scramble": true,
+  "H3_erosion_mismatch": false,
+  "regime_prediction_confirmed": false,
+  "results": {
+    "Direct_Orthogonal": {
+      "y_R2": 0.999255359172821,
+      "Q_linear": 0.999569296836853,
+      "Q_knn": 0.9989614486694336,
+      "gap": -0.0006078481674194336,
+      "erosion": 4.285573959350586e-05
+    },
+    "Direct_Generic": {
+      "y_R2": 0.9957542419433594,
+      "Q_linear": 0.9915050864219666,
+      "Q_knn": 0.9957154989242554,
+      "gap": 0.004210412502288818,
+      "erosion": 0.001640915870666504
+    },
+    "Indirect_Orthogonal": {
+      "y_R2": 0.9372872114181519,
+      "Q_linear": 0.878567636013031,
+      "Q_knn": 0.9268031716346741,
+      "gap": 0.048235535621643066,
+      "erosion": 0.0013312697410583496
+    },
+    "Indirect_Generic": {
+      "y_R2": 0.6086949110031128,
+      "Q_linear": 0.0524139404296875,
+      "Q_knn": 0.36404383182525635,
+      "gap": 0.31162989139556885,
+      "erosion": 0.08072763681411743
+    }
+  }
+}
