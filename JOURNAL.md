@@ -411,3 +411,20 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 - **H2 (Topological Polarization / Extremal Shift): TRUE.** The network-wide FRC variance explodes 165-fold (from $49.7090$ to $8215.5214$), demonstrating extreme topological polarization under stress.
 - **Closed the loop:** Established a formal connection between GR-like curvature warping and stress-driven network reorganization in biological interactomes.
 
+---
+
+## 2026-06-18 — Session 19: leg-7b built, run, and CLOSED (resolving phase-shift curvature)
+
+**Preregistered** [leg7b_phase_shift/PREREGISTRATION.md](leg7b_phase_shift/PREREGISTRATION.md) freezing hypotheses for FFT magnitude and Hilbert envelope sweeps on Locked Kerr ringdown waveforms.
+
+**Built** (additive bridge code in `leg7b_phase_shift/code/`, source repos untouched):
+- `phase_shift_resolution.py` — generates Locked Kerr waveforms and applies FFT magnitude and Hilbert envelope transformations, sweeping bottleneck autoencoders ($d \in [0, 5]$) over 3 random seeds.
+- `plot_phase_shift.py` — generates a 3-panel figure showing standard vs whitened $R^2(d)$ curves for all representations, using a 3% marginal gain threshold to identify the resolved knee, copying the plot to the brain artifacts directory.
+
+**Result — FFT magnitude recovers the true physical 2-parameter dimensionality** (`leg7b_phase_shift/FINDINGS.md`):
+- **H1 (Baseline Curvature Replication): TRUE.** The raw time-domain autoencoder resolves $d_{knee} = 4$ due to temporal phase-shift curvature winding in high-dimensional space.
+- **H2 (FFT Magnitude Recovery): TRUE.** Real FFT magnitude strips away oscillatory phase shifts, resolving exactly $d_{knee} = 2$ and achieving an exceptionally high $R^2 = 94.06\%$ at $d=2$ (vs $68.95\%$ for baseline).
+- **H3 (Hilbert Envelope Recovery): PARTIALLY TRUE.** Resolves to $d_{knee} = 5$ with low overall $R^2$ ($0.6882$), showing that discarding frequency information limits the network's ability to reconstruct the parameters.
+- **Closed the loop:** Resolved the phase-shift curvature problem by showing that Fourier magnitude transformations allow autoencoders to recover the exact $2$-parameter physical dimensionality of locked Kerr waveforms.
+
+
