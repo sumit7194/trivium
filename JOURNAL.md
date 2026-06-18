@@ -428,4 +428,24 @@ demonstrated — degeneracy that can't be lifted (leg 1 dyonic) and degeneracy t
 - **Whitening noise-inflation identified**: Whitening PCA components normalizes all directions, amplifying grid and numerical discretization artifacts. This forces the autoencoder to waste capacity on non-physical components, delaying the knee (resolving to $d_{knee} = 5$). Standardized (unwhitened) space is far more physically revealing.
 - **Closed the loop**: Confirmed that Fourier magnitude preprocessing in standardized space provides a physically faithful, robust method for intrinsic parameter dimension counting on oscillating physical waveforms.
 
+---
+
+## 2026-06-18 — Session 20: leg-8b built, run, and CLOSED (physics-grounded exotic templates - Option E)
+
+**Preregistered** [leg8b_exotic_templates/PREREGISTRATION.md](leg8b_exotic_templates/PREREGISTRATION.md) freezing hypotheses for SymPy verification of the Damour-Solodukhin (DS) wormhole light-ring, frequency-domain wave template generation, injection sweeps, and GW150914 on-source searches.
+
+**Built** (additive bridge code in `leg8b_exotic_templates/code/`, source repos untouched):
+- `physics_grounded_template.py` — symbolically verifies the photon sphere position of the DS metric, generates frequency-domain templates using a Fabry-Perot cavity potential barrier filtering model, and outputs a comparison plot.
+- `run_physics_search.py` — runs calibrated injection-recovery sensitivity sweeps in real detector noise, and searches the GW150914 post-merger window.
+- `plot_echoes_comparison.py` — plots search recovery rates for both the ML Scorer and Comb baseline across phenomenological and physics-grounded templates.
+
+**Result — physics-grounded wave dispersion triggers a sensitivity reversal and falsifies neural advantage** (`leg8b_exotic_templates/FINDINGS.md`):
+- **H1 (SymPy Verification): TRUE.** SymPy successfully verified the photon sphere at $r_{ph} = \frac{3M}{1+\lambda^2}$ as the potential derivative root.
+- **H2 (Dispersion/Redshifting): TRUE.** Subsequent reflections exhibit physical dispersion, redshifting, and broadening under potential barrier filtering.
+- **H3 (Sensitivity Degradation): TRUE.** High-frequency roll-off degrades the ML Scorer's 50% recovery threshold from $\approx 0.85\sigma$ to $\approx 1.25\sigma$.
+- **H4 (ML Scorer Advantage): FALSE (SENSITIVITY REVERSAL).** The ML Scorer is outperformed by the shape-agnostic Comb baseline (stable at $\approx 1.02\sigma$) for amplitudes $\ge 1.0\sigma$. The low-pass filtering of the potential barrier smooths subsequent echoes, causing them to resemble low-frequency red detector noise, which the autoencoder reconstructs easily, minimizing the anomaly signal.
+- **H5 (On-Source Search Null): TRUE.** Real GW150914 post-merger data search yields a null result ($p_{ML} = 0.903$, $p_{comb} = 1.000$).
+- **Closed the loop**: Confirmed that physics-grounded template modeling can erase a learned neural advantage by smoothing anomalies into the background noise distribution.
+
+
 
