@@ -40,7 +40,7 @@ Our measurement oracle (`deepstrain`) directly tests these horizon boundary cond
 *   In **Leg 3 (Triangle Close)**, we measured the no-hair deviation $\delta$ from LIGO GW250114 data, validating that the remnant is consistent with the smooth Kerr horizon of GR.
 *   In **Leg 8 (Exact Echo Spacing)**, we modeled the horizon modification physically as a Damour-Solodukhin wormhole throat located at a Planck distance ($10^{-38} M$) above where the event horizon would be.
 *   We integrated radial null geodesics to calculate the exact travel time (tortoise coordinate distance) from the throat to the photon sphere, mapping Penrose's causal structure modifications directly to deepstrain's network comb search on real GW150914 post-merger data.
-*   This maps abstract quantum-gravity corrections directly to empirical upper limits on horizon-scale reflectivity.
+*   The search returned a **non-detection** (no significant echo at the searched physical spacings); note this is a null result, not an exclusion/upper-limit on horizon-scale reflectivity, which would require an injection-efficiency curve (see Leg 8 FINDINGS §3).
 
 ---
 

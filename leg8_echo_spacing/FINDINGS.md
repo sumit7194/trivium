@@ -31,8 +31,17 @@ A trials-corrected p-value of $22.7\%$ is well above the standard $5\%$ signific
 
 ---
 
-## 3. Physical Exclusion Limits
+## 3. What this does and does not establish (non-detection, not an exclusion limit)
 
-By mapping the search directly to the physical parameter space, we establish the following constraints on the DS wormhole deviation parameter $\lambda$:
-1.  **Planckian horizon-scale modifications** ($\epsilon = 10^{-38}$) are constrained across the entire sweep, showing no statistically significant evidence for echoes.
-2.  **Macroscopic modifications** ($\epsilon = 10^{-10}$) are similarly constrained, with all physical spacings consistent with detector noise.
+Mapping the comb search directly onto the physical $\lambda$-spacing grid, the result is a
+clean **non-detection**: across both the Planckian ($\epsilon = 10^{-38}$) and macroscopic
+($\epsilon = 10^{-10}$) cutoffs, every physical spacing is consistent with detector noise
+(the one $p\approx0.006$ dip washes out to ~23% after the 41-trial correction).
+
+**Honest scope (corrected 2026-06-18):** this is *not* an exclusion limit on $\lambda$. An
+exclusion would require a sensitivity/efficiency curve — showing what echo amplitude we
+*would have detected* at each spacing — which this leg does not compute. So the correct
+statement is "no significant echo found at the searched physical spacings in GW150914," not
+"$\lambda$ is constrained / horizon-scale quantum corrections are constrained." Turning this
+into an upper limit on $\lambda$ is left as future work (it needs the injection-efficiency
+curve that Leg 8b begins to build).

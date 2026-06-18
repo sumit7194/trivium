@@ -1,6 +1,20 @@
 # Leg 7b — Findings: Resolving Phase-Shift Curvature (Option A+)
 
-We successfully extended our bottleneck sweeps to evaluate both the **Locked Kerr (Family 1)** and **Free Kerr (Family 2)** datasets under standard (time-domain), FFT magnitude, and Hilbert envelope representations. This has allowed us to comprehensively resolve the phase-shift curvature problem and understand the impact of representation whitening on intrinsic dimension counting.
+Bottleneck sweeps on the **Locked Kerr (Family 1)** and **Free Kerr (Family 2)** datasets
+under time-domain, FFT-magnitude, and Hilbert-envelope representations, to test whether a
+phase-invariant representation undoes the curvature inflation seen in Leg 7.
+
+## Result in one line (with the metric-space caveat stated up front)
+
+**FFT-magnitude preprocessing recovers the true 2D/4D dimensionality — but only in
+*standardized* space.** This is an important honest caveat: PREREGISTRATION specified the
+$R^2$ metric on **whitened** representations, and in whitened space FFT magnitude does
+*not* recover the true count (knee = 4 for Locked, 5 for Free). The "recovers 2D" headline
+therefore rests on a metric-space choice (standardized) that differs from the frozen
+prereg. §2.3 argues standardized space is the more physically faithful choice (whitening
+amplifies discretization/grid artifacts), and that argument is plausible — but it was made
+*after* seeing that whitened space failed, so treat "FFT recovers the true dimension" as
+holding **specifically in standardized space**, not unconditionally.
 
 ---
 
@@ -23,7 +37,7 @@ We successfully extended our bottleneck sweeps to evaluate both the **Locked Ker
 | | White | -0.0016 | 0.2280 | 0.6008 | 0.7624 | 0.8397 | 0.8302 | **4** | **4** |
 | **FFT Magnitude** | Std | -0.0017 | 0.8270 | **0.9612** | **0.9855** | **0.9962** | 0.9977 | **2** | **3** |
 | | White | -0.0016 | 0.3360 | 0.6704 | 0.7818 | 0.8397 | 0.9099 | **5** | **5** |
-| **Hilbert Envelope** | Std | -0.0016 | 0.8258 | 0.9547 | 0.9760 | 0.9839 | 0.9878 | **3** | **3** |
+| **Hilbert Envelope** | Std | -0.0022 | 0.8296 | 0.9305 | 0.9623 | 0.9755 | 0.9854 | **3** | **3** |
 | | White | -0.0016 | 0.0695 | 0.2318 | 0.3248 | 0.4011 | 0.4358 | **5** | **5** |
 
 ---
@@ -42,7 +56,14 @@ In standardized (unwhitened) space for the **Free Kerr (4D)** family, the FFT ma
 2. **$d = 3$ ($R^2 = 98.55\%$, gain $+2.43\%$)**: Resolves the overtone amplitude ratio $A_{221}/A_{220}$.
 3. **$d = 4$ ($R^2 = 99.62\%$, gain $+1.07\%$)**: Resolves the relative phase difference $\phi_{221}$.
 4. **$d = 5$ (gain $+0.15\%$)**: Yields negligible improvement once the 4 physical degrees of freedom are fully exhausted.
-Consequently, adjusting the knee threshold resolves different levels of physics: a **3% threshold** detects the 2 dominant parameters of the fundamental mode, a **2% threshold** resolves 3 parameters, and a **1% threshold** recovers all 4 physical parameters.
+Consequently, the resolved count depends on the knee threshold: a **3% threshold** detects
+the 2 dominant fundamental-mode parameters, a **2% threshold** resolves 3, and a **1%
+threshold** recovers all 4. This threshold-dependence is itself the caveat — the "all 4
+parameters recovered" reading requires picking the 1% threshold *after* knowing there are 4,
+so it is exploratory/confirmatory-after-the-fact, not an independent recovery of the count.
+The robust, threshold-agnostic statement is that FFT magnitude (standardized) resolves the
+2 dominant parameters sharply and exposes the overtone parameters as progressively smaller,
+energy-ranked marginal gains.
 
 ### 3. The Whitening Noise-Inflation Effect
 We observe a major disparity between standardized (`std`) and whitened (`white`) spaces:
@@ -53,8 +74,11 @@ We observe a major disparity between standardized (`std`) and whitened (`white`)
 ---
 
 ## 3. Verification & Visualizations
-The 6-panel comparison plot has been compiled and saved to:
-* `/Users/sumit/Github/TheBridge/results/leg7b_phase_shift.png`
-* Copied to the brain artifacts directory: [leg7b_phase_shift.png](file:///Users/sumit/.gemini/antigravity/brain/6d8c4aa5-66fc-4580-85dc-cd0e4dc34fa1/leg7b_phase_shift.png)
+The 6-panel comparison plot is saved to `results/leg7b_phase_shift.png`.
 
-This successfully and rigorously completes **Option A+**, establishing Fourier magnitude preprocessing in standardized space as a highly reliable, physically faithful method for intrinsic dimension counting.
+This completes **Option A+**. The honest scope of the conclusion: on these **two synthetic
+Kerr families**, FFT-magnitude preprocessing in **standardized** space undoes the
+phase-shift curvature inflation and recovers the true intrinsic dimension, where the raw
+time-domain and whitened representations do not. Whether it generalizes beyond these two
+families (and the standardized-vs-whitened question) is left open; this is a promising
+preprocessing recipe, not an established general-purpose method.

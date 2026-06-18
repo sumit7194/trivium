@@ -82,10 +82,10 @@ def main():
     fig.savefig(out_path, dpi=300, bbox_inches="tight")
     print(f"Saved sensitivity comparison plot to {out_path} ✅")
     
-    # Copy to brain artifact directory
-    BRAIN_DIR.mkdir(parents=True, exist_ok=True)
-    shutil.copy(out_path, BRAIN_DIR / "leg8b_sensitivity_comparison.png")
-    print(f"Copied sensitivity comparison plot to brain directory ✅")
+    # Optional best-effort mirror to a local agent "brain" dir, only if it already exists.
+    if BRAIN_DIR.parent.exists():
+        BRAIN_DIR.mkdir(parents=True, exist_ok=True)
+        shutil.copy(out_path, BRAIN_DIR / "leg8b_sensitivity_comparison.png")
 
 if __name__ == "__main__":
     main()

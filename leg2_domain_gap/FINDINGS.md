@@ -21,6 +21,8 @@ sim *or* real) — independently corroborating deepstrain's own parked-negative 
 
 Continuous overtone-SNR decode (REAL), linear vs kNN R²: 0.13/0.09 → 0.24/0.21 →
 0.28/0.25 → 0.31/0.28 along the chain. **Linear ≥ nonlinear in every cell.**
+(Computed by `probe_ladder.py` from the saved `osnr_real` arrays — reproducible from
+`code/`; see `results/probe_ladder.json` fields `L_osnr_real` / `N_osnr_real`.)
 
 ## Verdicts on the frozen predictions
 

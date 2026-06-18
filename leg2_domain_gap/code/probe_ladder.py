@@ -74,6 +74,16 @@ def ridge_r2_within(C, t):
     return r2_score(t, cross_val_predict(Ridge(), sc, t, cv=5))
 
 
+# --- ADDED 2026-06-18 (provenance fix): the continuous overtone-SNR faithfulness check.
+# The FINDINGS "linear >= kNN on continuous overtone-SNR" numbers were originally produced
+# by an exploratory script that was not committed. This reproduces them from the saved
+# `osnr_real` arrays so the table is reproducible from code/ alone. Linear = Ridge,
+# nonlinear = kNN regressor, both 5-fold CV R^2 within the REAL distribution.
+def knn_r2_within(C, t):
+    sc = StandardScaler().fit_transform(C)
+    return r2_score(t, cross_val_predict(KNeighborsRegressor(KNN_K), sc, t, cv=5))
+
+
 def main():
     rows = {}
     for ck in CKPTS:
@@ -93,6 +103,9 @@ def main():
             "N_inv_cross": cross_auc(Cs, ys, Cr, yr, knn=True),
             "L_loud_real": ridge_r2_within(Cr, d["loud_real"]),   # shortcut legibility (REAL)
             "L_loud_cross": ridge_r2_cross(Cs, d["loud_sim"], Cr, d["loud_real"]),
+            # continuous overtone-SNR faithfulness check (REAL): linear vs nonlinear R^2
+            "L_osnr_real": ridge_r2_within(Cr, d["osnr_real"]),
+            "N_osnr_real": knn_r2_within(Cr, d["osnr_real"]),
         }
         r["scramble_gap"] = r["N_inv_real"] - r["L_inv_cross"]    # P2: linear-low/nonlinear-high
         rows[ck] = r
@@ -116,6 +129,10 @@ def main():
         r = rows[c]
         print(f"{c:26s}{r['T_real']:8.3f}{r['L_inv_sim']:11.3f}{r['L_inv_cross']:12.3f}"
               f"{r['N_inv_real']:11.3f}{r['scramble_gap']:10.3f}{r['L_loud_cross']:10.3f}")
+    print("\ncontinuous overtone-SNR decode (REAL), linear R2 / kNN R2:")
+    for c in cks:
+        r = rows[c]
+        print(f"  {c:26s} {r['L_osnr_real']:.3f} / {r['N_osnr_real']:.3f}")
     print(f"\nP1 invariant-info-present (N_inv_real>0.7 all): {P1}")
     print(f"P2 scramble signature on non-transferring (gap>=0.20): {P2}")
     print(f"P3 legibility tracks transfer (Spearman L_inv_cross vs T_real >=0.8): "

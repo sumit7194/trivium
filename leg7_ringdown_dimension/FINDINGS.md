@@ -4,7 +4,23 @@
 
 ## Result in one line
 
-We demonstrated that **LIGO noise collapses the resolvable parameter space of a ringdown to zero**, while showing that the non-linear phase-shifting nature of wave frequency makes idealized waveforms appear 4D to standard autoencoders due to manifold curvature.
+Adding **synthetic Gaussian noise at a LIGO-like SNR (~7)** collapses the autoencoder's
+resolvable parameter count to **0**, while idealized (noise-free) waveforms appear **4D** to
+a standard autoencoder even when they are physically 2D, because frequency-dependent
+phase-shift curvature winds the waveform manifold. (Leg 7b shows an FFT-magnitude
+preprocessing that undoes the curvature inflation.)
+
+> **Two honest corrections (2026-06-18):**
+> 1. **Not real LIGO noise.** PREREGISTRATION described Family 3 as injection into "real
+>    LIGO O4 noise," but the committed `gen_ringdowns.py` adds **unit-variance Gaussian
+>    noise** (`rng.normal(0, 1, ...)`), not real detector noise. Every "LIGO noise" claim
+>    below should be read as "synthetic Gaussian noise at a comparable SNR." The
+>    information-limited conclusion is still suggestive, but it was *not* demonstrated on
+>    real noise — to honor the prereg one would inject into off-source real strain.
+> 2. **"Two detectors" is cosmetic.** The 328-dim vector is one 164-sample waveform
+>    duplicated (`x1` and `x2` are computed identically, with no per-detector noise or
+>    projection). The doubling does not change the intrinsic dimension, but the
+>    two-detector framing is not real.
 
 ---
 
@@ -14,7 +30,7 @@ We demonstrated that **LIGO noise collapses the resolvable parameter space of a 
 |---|---|---|---|---|
 | **Kerr Locked (Family 1)** | 2D ($M, \chi$) | **4** | 2 | ❌ **H1: FALSE** (Manifold curvature) |
 | **Kerr Free (Family 2)** | 4D ($M, \chi, A_{221}, \phi_{221}$) | **4** | 4 | ✅ **H2: TRUE** |
-| **LIGO Noise (Family 3)** | 1D/2D + Noise | **0** | 1 | ❌ **H3: FALSE** (Noise floor collapse) |
+| **Synthetic Gaussian noise (Family 3)** | 1D/2D + Noise | **0** | 1 | ❌ **H3: FALSE** (Noise floor collapse; synthetic noise, not real LIGO) |
 
 ---
 
@@ -36,6 +52,14 @@ Although the Kerr Locked waveform is topologically a 2-dimensional manifold ($M$
 *   **The MLP Limitation:** A standard bottleneck autoencoder requires extra coordinate capacity (4 dimensions instead of 2) to unfold and parameterize this curved manifold with high held-out $R^2$ ($> 90\%$). This explains why the "free" and "locked" cases both resolved to 4—the network spent its capacity on phase untangling rather than parameter counting.
 
 ### The Noise Floor Collapse (H3)
-In the presence of Gaussian noise at LIGO SNRs ($\approx 7$), the whitened $R^2(d)$ curve remains negative or zero for all bottleneck widths. The resolved dimension collapses to **0**.
+In the presence of **synthetic Gaussian noise** at a LIGO-like SNR ($\approx 7$; *not* real
+detector noise — see the correction above), the whitened $R^2(d)$ curve remains negative or
+zero for all bottleneck widths. The resolved dimension collapses to **0**.
 *   **The Cause:** The signal variance is completely dominated by the random noise in whitened space (linear PCs kept = 328, with a flat spectrum).
-*   **The Domain Gap Connection:** This result provides a direct, representation-level explanation for `deepstrain`'s tone-counting failure (Leg 2). At LIGO noise levels, the physical parameters (including spin and overtone properties) are completely unresolvable by direct representation learning on raw waveforms. The information is simply buried below the noise floor, confirming that the domain gap is information-limited, not legibility-limited.
+*   **The Domain Gap Connection (suggestive, not proven on real data):** This is consistent
+    with a representation-level explanation for `deepstrain`'s tone-counting failure (Leg 2):
+    at this SNR the physical parameters are unresolvable by direct representation learning on
+    raw waveforms, pointing to an information-limited rather than legibility-limited gap.
+    Because the noise here is synthetic Gaussian, this corroborates rather than demonstrates
+    the real-data conclusion — Leg 2 (which uses real O4 noise) is the load-bearing evidence
+    for that claim.

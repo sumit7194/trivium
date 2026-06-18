@@ -4,7 +4,14 @@
 
 ## Result in one line
 
-The theory-guided targeted curriculum (Curriculum B) **reduces the shadow-edge error from 22.98% to 2.27% (a 10.1x improvement)** and reduces the variance of the learned photon-sphere location by **almost 20x**, confirming that exact strong-field theory is a highly effective training guide.
+The theory-guided targeted curriculum (Curriculum B) **reduces the shadow-edge error from
+~23% to ~2% and the variance of the learned photon-sphere location by ~20x** — a clear
+directional win for using exact strong-field theory as a training guide. The headline
+"~10x" is the ratio of two **3-seed** means whose uniform-curriculum baseline is itself
+wildly unstable (b_crit std = 1.01M), so treat the *magnitude* as approximate and the
+*direction* as the result. Note also that the **pre-registered composite gate H1∧H2∧H3
+did not fully pass**: H2 (photon-sphere mean) was FALSE — see §2/§3 for why that is a
+useful negative rather than a failure.
 
 ---
 

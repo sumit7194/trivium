@@ -33,9 +33,15 @@ def prove_universality():
     # then the Christoffel symbol Gamma must depend on lambda.
     # Since lambda is a property of the test body, the metric/Gamma cannot be universal.
     dF_dlam = sp.diff(F, lam)
-    proven = (dGamma_dlam == -dF_dlam / (v**2))
-    print(f"Universality necessary: {proven} (Gamma depends on lambda iff force does)")
-    return proven
+    # NOTE (integrity, 2026-06-18): this equality is just the linearity of the derivative
+    # (v does not depend on lambda), so it is True for ANY F. It is a consistency check that
+    # the 1D reduction is self-consistent, NOT a proof of universality. The physical content
+    # is the verbal argument: dF/dlam != 0  =>  Gamma (hence the metric) depends on the body's
+    # species  =>  no universal background metric (the Weak Equivalence Principle). See FINDINGS §1.
+    consistent = (dGamma_dlam == -dF_dlam / (v**2))
+    print(f"Universality reduction self-consistent: {consistent} "
+          f"(tautological check; physical content is the WEP argument, not this line)")
+    return consistent
 
 
 def prove_conservativeness():
@@ -135,10 +141,12 @@ def main():
     c_ok = prove_conservativeness()
     
     if u_ok and c_ok:
-        print("\nALL CONJECTURES SYMBOLICALLY PROVEN ✅")
+        print("\nConservativeness: derived for 1+1D stationary metric (genuine special case).")
+        print("Universality: reduction self-consistent (WEP argument, not an independent proof).")
+        print("NOT a general proof of the conjecture — see FINDINGS Honest limits.")
         return 0
     else:
-        print("\nPROOF FAILED ❌")
+        print("\nCHECK FAILED ❌")
         return 1
 
 

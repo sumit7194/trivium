@@ -178,12 +178,14 @@ def main() -> None:
     out_file.write_text(json.dumps(results, indent=2))
     print(f"\nSaved search results to {out_file} ✅")
     
-    # Copy to brain artifact directory
-    brain_dir = Path("/Users/sumit/.gemini/antigravity/brain/6d8c4aa5-66fc-4580-85dc-cd0e4dc34fa1")
-    brain_dir.mkdir(parents=True, exist_ok=True)
+    # Optional best-effort mirror to a local agent "brain" dir, only if it already exists.
+    brain_root = Path("/Users/sumit/.gemini/antigravity/brain")
+    brain_dir = brain_root / "6d8c4aa5-66fc-4580-85dc-cd0e4dc34fa1"
+    if brain_root.exists():
+        brain_dir.mkdir(parents=True, exist_ok=True)
     import shutil
-    shutil.copy(out_file, brain_dir / "leg8b_echo_results.json")
-    print(f"Copied results JSON to brain directory ✅")
+    if brain_root.exists():
+        shutil.copy(out_file, brain_dir / "leg8b_echo_results.json")
 
 
 if __name__ == "__main__":

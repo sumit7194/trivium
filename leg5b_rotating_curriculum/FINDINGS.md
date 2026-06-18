@@ -1,6 +1,21 @@
 # Leg 5b — Findings: Rotating Strong-Field Curriculum
 
-We have successfully completed **Leg 5b: Rotating Strong-Field Curriculum (Option B)**. By switching to Boyer-Lindquist coordinates $[u, p_r, a, \xi]$ and optimizing trajectory diversity, we trained neural simulators that achieve an average test $R^2 = 1.00000$ and resolve asymmetric prograde and retrograde shadow boundaries across all spins.
+**Leg 5b: Rotating Strong-Field Curriculum (Option B).** Switching to Boyer-Lindquist
+coordinates $[u, p_r, a, \xi]$ removed a frame-dragging coordinate singularity (Discovery A)
+and let neural simulators reconstruct asymmetric prograde/retrograde shadow boundaries. The
+honest outcome is **mixed**: the targeted curriculum helps the *retrograde* boundary at
+$a=0.2$ and $a=0.8$ but makes the *prograde* boundary substantially **worse** (e.g.
+$2.30\% \to 19.10\%$ at $a=0.2$), so a net benefit "across all spins" is **not**
+established — see §2.
+
+> **Caveat on the "$R^2 = 1.00000$" claim (corrected 2026-06-18).** The one-step
+> prediction $R^2 \approx 1.0$ reported below is **not** evidence of fidelity — it is a
+> train/test **leakage artifact**. Discovery B reduced the dataset to ~260 unique
+> trajectories, then shuffled all integration *segments* before the 90/10 split, so
+> adjacent RK4 steps from the same smooth trajectory land in both train and test. A
+> one-step integrator predicting a neighbor it has effectively already seen will hit
+> $R^2 \to 1$ trivially. The scientifically meaningful numbers are the **shadow-boundary
+> errors** (computed by independent ray-tracing, not leaked), in the table below.
 
 ---
 
@@ -27,8 +42,12 @@ The following table summarizes the mean relative shadow boundary errors and stan
     The networks successfully reconstruct asymmetric shadow boundaries. For retrograde boundaries, the Targeted Curriculum (B) achieves lower error than Uniform (A) at $a=0.2$ (1.32% vs 3.47%) and $a=0.8$ (2.01% vs 3.71%). For prograde boundaries, Uniform (A) performed better because prograde orbits lie extremely close to the horizon (e.g. $r_{pro} \approx 1.60$ for $a=0.8$), making their winding phase highly sensitive to numerical discretization.
 *   **H2 (Error Reduction at High Spin) — Not Confirmed**:
     For $a=0.8$, the prograde error did not show a 2.0x reduction for Curriculum B. Instead, the retrograde boundary error showed a 1.8x reduction (2.01% vs 3.71%), while the prograde error was lower for Curriculum A.
-*   **H3 (High Fidelity Simulator) — Confirmed**:
-    The one-step prediction $R^2$ reached **$1.00000$** (at the float limit) for both models, demonstrating that Boyer-Lindquist coordinates allow the neural networks to learn null geodesic dynamics with extreme precision.
+*   **H3 (High Fidelity Simulator) — NOT a valid pass (leakage)**:
+    The one-step prediction $R^2$ reached $1.00000$ for both models, but as flagged above
+    this is a **train/test leakage artifact** (shuffled adjacent integrator steps), not a
+    demonstration of fidelity. This hypothesis should be treated as **unverified**: a
+    proper test requires splitting by *trajectory* (no steps from the same orbit in both
+    splits). The leg's real evidence is the shadow-boundary error table, not this $R^2$.
 
 ---
 

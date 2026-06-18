@@ -75,10 +75,10 @@ def main():
     fig.savefig(plot_path, dpi=300, bbox_inches="tight")
     print(f"Saved plot to {plot_path}")
     
-    # Copy to brain artifact directory
-    BRAIN_DIR.mkdir(parents=True, exist_ok=True)
-    shutil.copy(plot_path, BRAIN_DIR / "leg5c_integrability_curves.png")
-    print(f"Copied plot to brain artifact directory at: {BRAIN_DIR / 'leg5c_integrability_curves.png'}")
+    # Optional best-effort mirror to a local agent "brain" dir, only if it already exists.
+    if BRAIN_DIR.parent.exists():
+        BRAIN_DIR.mkdir(parents=True, exist_ok=True)
+        shutil.copy(plot_path, BRAIN_DIR / "leg5c_integrability_curves.png")
 
 
 if __name__ == "__main__":

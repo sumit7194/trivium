@@ -19,10 +19,21 @@ Reissner–Nordström, and falls exactly one short for dyonic RN** — the pre-r
 | **dyonic RN, dimensionful** | **3** | **2** | 2 | ✅ **predicted degeneracy** (tabula < exact by 1) |
 | Schwarzschild, shape | 0 | **0** | 0 | ✅ agree |
 | RN, shape | 1 | **1** | 1 | ✅ agree |
-| **dyonic RN, shape** | **2** | **1** | (1) | ✅ **same degeneracy** (tabula < exact by 1) |
+| dyonic RN, shape | 1 | **1** | 1 | ✅ agree |
 
 Every cell landed on the frozen prediction. The headline dyonic-dimensionful cell —
 predicted 3 (ansatz) vs 2 (tabula) — came back exactly 3 vs 2.
+
+A note on the dyonic *shape* cell, to avoid a false symmetry with the dimensionful
+one: the `Q²+P²` degeneracy shows up as a 3→2 gap only in the **dimensionful** row,
+where the ansatz column is the *algebraic* moduli count (3). In the **shape** row the
+pre-registration (PREREGISTRATION §2) defined `N_shape` as the count of independent
+*dimensionless observables* — which is already 1 for dyonic RN, because every
+observable depends on charge through `(Q²+P²)/M²`. So ansatz and tabula both read 1
+here: it is an agreement, exactly as frozen in PREREGISTRATION §4, **not** a second
+instance of the degeneracy. (The bare algebraic dimensionless moduli would be 2,
+`Q/M` and `P/M`; the prereg deliberately tracked the observable count instead, which
+is what tabula can see.)
 
 ## What the degeneracy means
 

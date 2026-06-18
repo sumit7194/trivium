@@ -4,60 +4,82 @@
 
 ## Result in one line
 
-Using symbolic differential geometry, we proved that **universality and conservativeness are necessary conditions for force geometrization**, successfully verifying the neural pattern discovered by `tabula-geometrica`.
+On a **1+1D stationary metric**, a SymPy derivation confirms that a pure linear-velocity
+friction force cannot be written as geodesic motion (the *conservativeness* half of
+tabula's "geometrizes ⟺ universal ∧ conservative" heuristic). The *universality* half is
+recorded here as the equivalence-principle argument it is — **not** an independently
+discovered theorem. This is a worked 1+1D special case of the handoff, not a general proof
+of the conjecture (see Honest limits).
 
 ---
 
-## 1. Universality Proof
+## 1. Universality — what the code actually shows (and what it does not)
 
-For a species-dependent force $a = F(x, v, \lambda)$ where $\lambda = q/m$ is the species parameter (charge-to-mass ratio), mapping the equation of motion to a 1D geodesic equation:
-$$\ddot{x} + \Gamma^x_{xx}(\lambda) \dot{x}^2 = 0$$
-requires:
-$$\Gamma^x_{xx}(x, \lambda) = -\frac{F(x, v, \lambda)}{v^2}$$
+The verbal argument is standard and correct: if a force law `a = F(x, v, λ)` depends on a
+per-body species parameter `λ = q/m`, then writing it as a 1D geodesic
+`ẍ + Γ(x,λ) v² = 0` forces `Γ = −F/v²` to inherit the `λ`-dependence, so the metric could
+not be a single universal background. That is just the **Weak Equivalence Principle**
+stated in reverse.
 
-Differentiating with respect to the species parameter $\lambda$:
-$$\frac{\partial \Gamma^x_{xx}}{\partial \lambda} = -\frac{1}{v^2} \frac{\partial F}{\partial \lambda}$$
-
-Since $\lambda$ is a property of the test body, if the force depends on the species ($\partial F / \partial \lambda \neq 0$), then the Christoffel symbol $\Gamma^x_{xx}$ (and thus the metric $g_{xx}$) must depend on the test body's species. This contradicts the fundamental assumption of general relativity that the spacetime metric is a universal background property. Thus, **universality is a necessary condition for geometrization** (verifying C1).
-
----
-
-## 2. Conservativeness (Dissipation) Proof
-
-To see if linear velocity-dependent friction ($a = -\gamma v$) can be represented as geodesic motion in a stationary metric, we evaluated the geodesic equation of a general stationary 1+1D metric:
-$$ds^2 = -A(x) dt^2 + B(x) dx^2 + 2 C(x) dt dx$$
-
-Expressed in coordinate time $t$ with velocity $v = \dot{x}$, the geodesic equation takes the form:
-$$\ddot{x} = A_0(x) + A_1(x) v + A_2(x) v^2 + A_3(x) v^3$$
-
-Using SymPy, we derived the coefficients in terms of the metric components ($D = AB + C^2$):
-*   **v⁰ coefficient (Potential force $A_0$):** $-\frac{A A'}{2D}$
-*   **v¹ coefficient (Friction/Coriolis $A_1$):** $\frac{-A C' + \frac{3}{2} C A'}{D}$
-*   **v² coefficient ($A_2$):** $\frac{-\frac{1}{2} A B' + B A'}{D}$
-*   **v³ coefficient ($A_3$):** $\frac{-B C' + \frac{1}{2} C B'}{D}$
-
-To represent pure linear velocity friction $\ddot{x} = -\gamma v$, we must set the potential force and higher-order velocity terms to zero:
-1.  **Setting $A_0 = 0$** implies $A'(x) = 0$ (the potential must be constant).
-2.  Substituting $A'(x) = 0$ into the remaining terms yields:
-    *   $A_2 = -\frac{A B'}{2D}$
-    *   $A_3 = \frac{-B C'}{2D}$
-3.  **Setting $A_2 = 0$** implies $B'(x) = 0$.
-4.  **Setting $A_3 = 0$** implies $C'(x) = 0$ (since $B \neq 0$).
-5.  Substituting $B'(x) = C'(x) = 0$ into $A_1$ yields:
-    *   **$A_1 = 0$**
-
-### The Contradiction
-
-By forcing all other terms in the geodesic equation to zero (no potential gradient, no quadratic or cubic velocity terms), the linear velocity coefficient $A_1$ is **identically forced to zero**. 
-
-This proves that **a pure linear friction force cannot be represented by the geodesic motion of a stationary metric** (verifying C2).
+**Honest note on the code.** `prove_geometrization.py` computes `∂/∂λ(−F/v²)` and checks it
+equals `−(∂F/∂λ)/v²`. Because `v` does not depend on `λ`, that equality is the **linearity
+of the derivative** — it is true for *any* `F` and proves nothing physical on its own. So
+Part 1 is a *consistency check that the reduction is self-consistent*, plus the WEP
+argument above — it is **not** a SymPy-discovered result, and it should not be cited as a
+"proof" of universality. (C1 is therefore best read as "restated, consistent," not
+"proven.")
 
 ---
 
-## 3. Physical Synthesis
+## 2. Conservativeness (dissipation) — a genuine 1+1D derivation
 
-This symbolic verification closes the loop between the neural heuristic and exact mathematical physics:
-*   **Universality** is the mathematical expression of the **Weak Equivalence Principle**: all particles must fall the same way in a gravitational field, allowing the field to be geometrized into a single, species-independent metric.
-*   **Conservativeness** is required because geodesic equations of a stationary metric are conservative and time-reversible. Linear velocity-dependent dissipation breaks time-reversal symmetry ($t \to -t$). In a static metric, this sign mismatch prevents velocity drag from being represented without introducing explicit time-dependence (non-stationarity) in the metric, or violating energy conditions.
+This part is a real symbolic result, within its stated scope. For a general stationary
+1+1D metric
+$$ds^2 = -A(x)\,dt^2 + B(x)\,dx^2 + 2C(x)\,dt\,dx,$$
+the coordinate-time geodesic equation is `ẍ = A₀ + A₁v + A₂v² + A₃v³`, with SymPy-derived
+coefficients (`D = AB + C²`):
 
-This handoff demonstrates the end-to-end falsifiability pipeline: `tabula` discovers a general heuristic transition from trajectories, and `ansatz` proves the exact boundaries of that transition.
+* **v⁰ (potential, A₀):** $-\frac{A A'}{2D}$
+* **v¹ (friction/Coriolis, A₁):** $\frac{-A C' + \frac{3}{2} C A'}{D}$
+* **v² (A₂):** $\frac{-\frac{1}{2} A B' + B A'}{D}$
+* **v³ (A₃):** $\frac{-B C' + \frac{1}{2} C B'}{D}$
+
+To represent *pure* linear friction `ẍ = −γv`, the other coefficients must vanish:
+`A₀ = 0 ⟹ A′ = 0`; then `A₂ = 0 ⟹ B′ = 0`; then `A₃ = 0 ⟹ C′ = 0`; substituting
+`A′ = B′ = C′ = 0` into `A₁` gives `A₁ = 0` identically (`sp.simplify(A1_final) == 0`,
+verified). So a metric with no potential gradient and no quadratic/cubic velocity terms
+**cannot** carry a non-zero linear-velocity term either — pure linear friction is not the
+geodesic motion of a stationary 1+1D metric. This matches the FINDINGS coefficient table
+and is the substantive content of the leg.
+
+---
+
+## 3. Physical reading
+
+Stripped to what is established: geodesic motion of a stationary metric is conservative and
+time-reversible, and the 1+1D algebra above shows there is no room in it for a
+time-reversal-breaking linear drag term once the conservative structure is imposed. This is
+the exact-side echo of tabula's neural observation that dissipative forces resist
+geometrization. The "universality" leg is the equivalence principle, restated.
+
+This is the discovery→check direction of the falsifiability pipeline run on **one worked
+special case** — a cheap neural heuristic handed to the symbolic engine and confirmed where
+the engine can reach. It is a demonstration of the pipeline, not a closed general theorem.
+
+## Honest limits
+
+- **1+1D and one drag model only.** The derivation is for a stationary 1+1D metric and a
+  pure linear-velocity friction `−γv`. The general 3+1D case, and non-conservative forces
+  like the electromagnetic Lorentz force or non-linear drag, are **not** covered — that is
+  exactly the still-open generalization flagged as "Leg 4b" in THE_BRIDGE.md §10 (Option C).
+- **Universality is not proven by the code.** As noted in §1, the SymPy step there is a
+  tautology; the content is the WEP argument. Do not cite Part 1 as a discovered proof.
+- **The energy-condition / WEC angle is asserted, not computed.** PREREGISTRATION raised a
+  WEC-violation (ρ < 0) route for the dissipative case; this leg does **not** compute any
+  energy-condition quantity, so that clause is unsupported here.
+- **No saved artifact.** The script prints to stdout; there is no `results/` transcript.
+  The conservativeness algebra is deterministic and re-derivable by running the script.
+
+## Artifacts
+- `code/prove_geometrization.py` — SymPy: the 1+1D geodesic-coefficient derivation
+  (substantive) and the universality consistency check (tautological — see §1).

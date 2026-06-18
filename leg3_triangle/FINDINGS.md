@@ -61,6 +61,13 @@ not an assumption**, and for the astrophysical black hole every method resolves 
 
 ## Honest limits
 
+- **Logged deviation (σ(δ)).** PREREGISTRATION §2 carried an early estimate σ(δ) ≈ 0.36.
+  The value used throughout this findings note is **σ(δ) ≈ 0.24**, derived directly from
+  the published 90% interval: (0.334 − (−0.460)) / (2 · 1.6449) = 0.241. The 0.24 is the
+  correct figure (it is what the CI implies and it reproduces from
+  `results/measured_dof.json`); the prereg's 0.36 was a pre-data guess. Recorded here as
+  a deviation per the project's own discipline (PREREGISTRATION §5 / leg-1 precedent);
+  it does not change any verdict — δ=0 sits inside the 90% CI either way.
 - **δ posterior approximated as Gaussian** from its published 90% interval (median −0.16,
   CI [−0.46, +0.33]); the Savage–Dickey BF is therefore approximate and prior-dependent
   (reported with a prior sensitivity). The primary empirical statement is prior-free

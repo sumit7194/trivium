@@ -402,11 +402,12 @@ def main():
     fig.savefig(plot_path, dpi=300, bbox_inches="tight")
     print(f"Saved plot to {plot_path}")
     
-    # Copy to brain artifacts
-    brain_dir = Path("/Users/sumit/.gemini/antigravity/brain/6d8c4aa5-66fc-4580-85dc-cd0e4dc34fa1")
-    brain_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copy(plot_path, brain_dir / "leg5b_curriculum_curves.png")
-    print(f"Copied plot to brain artifact directory at: {brain_dir / 'leg5b_curriculum_curves.png'}")
+    # Optional best-effort mirror to a local agent "brain" dir, only if it already exists.
+    brain_root = Path("/Users/sumit/.gemini/antigravity/brain")
+    if brain_root.exists():
+        brain_dir = brain_root / "6d8c4aa5-66fc-4580-85dc-cd0e4dc34fa1"
+        brain_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy(plot_path, brain_dir / "leg5b_curriculum_curves.png")
 
 if __name__ == "__main__":
     main()

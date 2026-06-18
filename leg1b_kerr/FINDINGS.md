@@ -11,16 +11,26 @@ cells** — Kerr = 2, Kerr–Newman = 3 (the doc's literal headline), and the co
 
 ## The outcome table (predicted → measured)
 
-| Cell | ansatz moduli | tabula count (whitened) | predicted | verdict |
+| Cell | ansatz resolvable count | tabula count (whitened) | predicted | verdict |
 |---|---|---|---|---|
 | Kerr, dimensionful | 2 | **2** | 2 | ✅ agree |
 | KN (full), dimensionful | 3 | **3** | 3 | ✅ agree |
-| **KN (Δ-symmetric), dimensionful** | **2** | **2** | 2 | ✅ **degeneracy exposed** |
+| **KN (Δ-symmetric), dimensionful** | **2** † | **2** | 2 | ✅ **degeneracy exposed** |
 | Kerr, shape | 1 | **1** | 1 | ✅ agree |
 | KN (full), shape | 2 | **2** | 2 | ✅ agree |
-| **KN (Δ-symmetric), shape** | **1** | **1** | 1 | ✅ **degeneracy exposed** |
+| **KN (Δ-symmetric), shape** | **1** † | **1** | 1 | ✅ **degeneracy exposed** |
 
 Every cell landed on the frozen prediction. No off-by-one, no anomalies.
+
+† The "ansatz count" column is the number of moduli that are *resolvable from the
+observable set shown to tabula*. For Kerr and KN-full this equals the algebraic moduli
+count (2 and 3). The **KN-Δ-symmetric** rows are not a different black hole — they are
+the *same* 3-moduli Kerr–Newman family (algebraic moduli still 3 / shape 2), observed
+through a restricted set of Δ-symmetric quantities that depend on charge and spin only
+through `a²+Q²`. So "2" (and "1" for shape) there is the *resolvable* count under that
+restriction, not a claim that KN has 2 algebraic moduli. This restricted-vs-full
+contrast is exactly the controlled test: full observables resolve 3, Δ-symmetric
+observables resolve 2.
 
 ## What this confirms — and how it contrasts with leg 1
 
