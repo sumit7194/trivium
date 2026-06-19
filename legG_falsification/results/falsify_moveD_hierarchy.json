@@ -1,0 +1,90 @@
+{
+ "eps": [
+  0.0,
+  0.02,
+  0.05,
+  0.08,
+  0.12,
+  0.18,
+  0.25,
+  0.35
+ ],
+ "exact": [
+  2.8953805513402296e-08,
+  5.790442142805854,
+  5.079050441818865,
+  10.374025910270012,
+  11.867966809720764,
+  13.54142104304461,
+  14.323635501824008,
+  14.645121059897045
+ ],
+ "approx": [
+  2.609614961627205e-18,
+  0.004254353011408137,
+  0.007334117501387449,
+  0.013132840381025095,
+  0.02042331917904283,
+  0.032541268308197716,
+  0.03554370043856338,
+  0.029836302977223957
+ ],
+ "sali": [
+  0.517135581085226,
+  0.5186163487732767,
+  0.5213668951835294,
+  0.5240604463802213,
+  0.5137049260365485,
+  0.49973380821246366,
+  0.5069725593217328,
+  0.47464172823008965
+ ],
+ "verdict_triples": [
+  [
+   "intact",
+   "intact",
+   "regular"
+  ],
+  [
+   "BROKEN",
+   "intact",
+   "regular"
+  ],
+  [
+   "BROKEN",
+   "intact",
+   "regular"
+  ],
+  [
+   "BROKEN",
+   "BROKEN",
+   "regular"
+  ],
+  [
+   "BROKEN",
+   "BROKEN",
+   "regular"
+  ],
+  [
+   "BROKEN",
+   "BROKEN",
+   "regular"
+  ],
+  [
+   "BROKEN",
+   "BROKEN",
+   "regular"
+  ],
+  [
+   "BROKEN",
+   "BROKEN",
+   "regular"
+  ]
+ ],
+ "n_distinct_regimes": 3,
+ "kam_gap_present": true,
+ "sali_never_chaotic": true,
+ "hierarchy_real_as_ordering": true,
+ "caveat": "specific boundary VALUES are threshold-dependent; the ORDERING is robust",
+ "first_midpoint_statistic_flagged_suspect_wrong_tool": true
+}

@@ -82,8 +82,11 @@ they show the hierarchy exact < approximate < chaotic.
 - **One deformation family, near-circular orbits.** The specific bump and the equatorial-circular
   orbit family fix the numbers; the *hierarchy* (exact < approximate < chaos) is the robust
   qualitative result, not the exact ε* values.
-- **Chaos boundary not located.** SALI never drops, so the chaos onset is only bounded (>0.35);
-  locating it would need larger ε (where orbits may unbind) or wilder orbits.
+- **Chaos boundary not located here** (>0.35). **Update (2026-06-20, Move G falsification):** the
+  adversarial pass validated SALI on a deliberately-chaotic non-axisymmetric control (it fired,
+  min-SALI 0.024) and pushed the real bump to high ε — the first chaotic orbits appear at **ε≈1.0**
+  (mixed phase space). So the chaos boundary is now *located* at ε≈1.0, confirming it sits far above
+  the exact (0⁺) and approximate (0.07) boundaries. See `legG_falsification/FINDINGS.md` Test 6.
 - **Not new physics.** KAM persistence of tori under perturbation is textbook; the contribution
   is the three-way cross-validated *picture* of it on a deformed black hole, by independent
   tools that were never tuned to each other.

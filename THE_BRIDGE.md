@@ -289,10 +289,12 @@ blind distillation, ansatz's exact Killing residual, SALI chaos index).
 **Outcome — a three-boundary hierarchy (a principled disagreement = the finding).** "Is it
 integrable?" split into three answers: the **exact** Killing tensor (ansatz) dies at ε*≈0⁺; an
 **approximate** invariant (tabula) survives to ε≈0.07 (the gradual KAM transition); **chaos**
-(SALI) never sets in for ε≤0.35. The pre-registered single agreed boundary (P3) was *falsified
-in exactly the anticipated way* (PREREG §6) — no single method sees the hierarchy; only the
-three together do. →
-[legD_integrability_boundary/FINDINGS.md](legD_integrability_boundary/FINDINGS.md).
+(SALI) sets in only at ε≈1.0 (originally bounded as ">0.35"; *located* by the Move-G falsification,
+which also validated SALI on a chaotic control). The pre-registered single agreed boundary (P3) was
+*falsified in exactly the anticipated way* (PREREG §6) — no single method sees the hierarchy; only
+the three together do. Move G confirmed the hierarchy is real *as an ordering* (the methods give
+different verdicts at the same ε — the KAM band), with the caveat that the specific boundary *values*
+are threshold-dependent. → [legD_integrability_boundary/FINDINGS.md](legD_integrability_boundary/FINDINGS.md).
 
 *(The original "discover a brand-new invariant nobody has written down" framing still awaits a
 metric class where ansatz can supply a full — not slow-rotation — deformed metric whose Carter
@@ -344,8 +346,10 @@ and Mω_R independently imply the *same* spin (0.818 vs 0.816), a two-observable
 one-parameter fit. **Claims CHANGED by the attacks** (the sign of honest falsification): Move F's
 "curvature" → **pure metric divergence** (a flat space with a diverging distance fires; a curved space
 without divergence does not); the synthesis's edge is **fundamental but coordinate-dependent in
-severity**; and the spine's count is **calibrated but only ±1 accurate on curved manifolds**. →
-[legG_falsification/FINDINGS.md](legG_falsification/FINDINGS.md).
+severity**; and the spine's count is **calibrated but only ±1 accurate on curved manifolds**. **Move D
+survived & was strengthened:** the three-boundary hierarchy is real *as an ordering* (the methods
+disagree at the same ε — the KAM band), SALI was validated on a chaotic control, and the chaos
+boundary was *located* at ε≈1.0. → [legG_falsification/FINDINGS.md](legG_falsification/FINDINGS.md).
 
 ### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F, falsification G)
 **A ✅ · B ✅ · C ✅ · D ✅ · Tier 3 ✅ · E ✅ · F ✅** (2026-06-19). Move A validated the

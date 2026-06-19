@@ -670,3 +670,24 @@ Propagated to THE_BRIDGE §10 and SPINE_SUMMARY honest limits.
 synthesis, and the spine's precision were all CHANGED/qualified by the attacks (curvature→divergence;
 edge coordinate-dependent; count ±1 curvature-inflation). Real falsification, not confirmation theatre.
 Still un-attacked: Moves C, D, E (already mixed/qualified).
+
+## 2026-06-20 — Session 28 (cont.): Move G — falsifying MOVE D (completes the pass)
+
+- **6a hierarchy distinctness:** a first statistic (midpoint-of-range) flagged SUSPECT — but it was
+  the wrong tool (conflated the exact residual's step-at-0 with its later rise; recorded for honesty).
+  The DIRECT test (do the methods give different verdicts at the same ε?) shows 3 distinct
+  verdict-regimes; at ε=0.02–0.05 exact=BROKEN while approx=intact (0.4% conserved) and SALI=regular
+  — the KAM band. So the hierarchy is REAL as an ordering of distinct phenomena. Caveat: the specific
+  boundary VALUES are threshold-dependent (signals monotonic in ε); the ORDERING is robust.
+- **6b SALI validity + chaos push (the genuine break-attempt):** a φ-dependent (non-axisymmetric)
+  bump made SALI FIRE (min-SALI 0.024) → SALI genuinely detects chaos. The real axisymmetric bump
+  stays regular at ε=0.35/0.6 and reaches its first chaotic orbits at ε≈1.0 (mixed phase space). So
+  "no chaos by 0.35" is confirmed and the chaos boundary is now LOCATED at ε≈1.0.
+
+**Move D verdict: SURVIVED & STRENGTHENED** — hierarchy real as an ordering, SALI validated, chaos
+boundary located. Propagated to THE_BRIDGE §10 and legD FINDINGS.
+
+**Falsification pass status:** spine, A(×2), B, D, F, synthesis all attacked. Survivors: spine
+(qualified ±1), A, B, D. Changed/qualified by attacks: F (→divergence), synthesis (→coordinate-
+dependent), spine precision (→±1 curvature inflation), D (values threshold-dependent, ordering robust).
+C and E left un-attacked but already self-bounded (mixed results). The pass is essentially complete.

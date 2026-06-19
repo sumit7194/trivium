@@ -22,6 +22,7 @@ the vacuum-BH counts (Kerr, Schwarzschild) are threshold-fragile while the charg
 | **3 mechanism** | Move F: bulk/edge needs curvature | hemisphere 0.45× (null), unbounded-flat 0.78× (null), **flat-diverging 4.50× (FIRES)** | **SURVIVED → SHARPENED** |
 | **4 fundamental?** | synthesis: exact owns the edge | edge from intrinsic radius = 1.89× (vs 3.81× in bad coords) — stays hard but milder | **SURVIVED, qualified** |
 | **5 the spine** | "a black hole is a 2-number object" | counter tracks true dim (corr 0.98), noise→8 (not 2), exact on flat manifolds; but +1 curvature inflation → vacuum-BH counts ±1 threshold-fragile | **SURVIVED, qualified** |
+| **6 Move D** | three-boundary integrability hierarchy | methods give different verdicts at same ε (KAM band real); SALI validated on a chaotic control; chaos boundary located at ε≈1.0 | **SURVIVED, strengthened** |
 
 ## What survived, and why the tests were genuine
 
@@ -106,12 +107,41 @@ threshold (a 1% rule would say 3); the charged-BH counts are robust. The "2-numb
 as a registered result, with the vacuum-case margins now known to be thin and tied to the leg-7b
 curvature effect.
 
+## Test 6 — MOVE D: is the three-boundary hierarchy real, and is "no chaos" meaningful?
+
+**6a Hierarchy distinctness.** The skeptic's worry: the three "boundaries" are one ε-signal read at
+three arbitrary thresholds. Direct test — do the methods give *different verdicts at the same ε*? At
+ε=0.02–0.05 the answer is yes: **exact = BROKEN, approximate = intact, chaos = none** (three
+different verdicts). The three verdict-regimes are
+`intact/intact/regular → BROKEN/intact/regular → BROKEN/BROKEN/regular`. The middle regime is the KAM
+band — the exact Killing tensor is gone yet the orbit is still conserved to 0.4% (a measured number,
+threshold-independent). So the methods measure **distinct things**; the hierarchy is **real as an
+ordering**. *Honest caveat:* the exact residual and approximate var-ratio are both monotonic in ε, so
+the specific boundary *values* are threshold/scale-dependent — the *ordering* is the robust result.
+*(A first statistic, midpoint-of-range, flagged SUSPECT; it was the wrong tool — it conflated the
+exact residual's step-at-0 with its later rise. Recorded for honesty.)*
+
+**6b Is SALI valid, and does the bump reach chaos? (the genuine break-attempt).** A positive control
+— a φ-dependent (non-axisymmetric) bump that removes L_z conservation — **made SALI fire** (min-SALI
+0.024 at ε=0.35), so SALI genuinely detects chaos; "no chaos" is not a dead instrument. The real
+axisymmetric bump stays regular at ε=0.35 and 0.6 (confirming Move D) and reaches its first chaotic
+orbits at **ε≈1.0** (min-SALI < 0.1, median still high — a mixed phase space, KAM-typical). So Move D's
+"chaos boundary > 0.35, not reached" is **confirmed and now LOCATED at ε≈1.0** — far above the exact
+(0⁺) and approximate (0.07) boundaries.
+
+**Move D verdict — SURVIVED and STRENGTHENED.** The hierarchy is a real ordering of distinct phenomena
+(exact 0⁺ < approximate 0.07 < chaos ≈1.0), SALI is validated, and the chaos boundary the original leg
+could only bound is now located. The only correction is the honest caveat that the *values* (not the
+ordering) are threshold-dependent.
+
 ## Scope — what was NOT stress-tested here (no false sense of completeness)
 
-This battery hit the spine and the strongest extension claims: the spine counter (calibration +
-threshold), Move A (two ways), Move B, Move F, and the synthesis. It did **not** separately
-re-attack Moves C, D, E (already reported as mixed/qualified). A complete adversarial pass on those
-remains open. "Survived" means "survived these specific attacks," not "proven."
+This battery hit the spine and most extension claims: the spine counter (calibration + threshold),
+Move A (two ways), Move B, Move D (hierarchy + chaos), Move F, and the synthesis. It did **not**
+separately re-attack Moves C and E — but both were *already* reported as **mixed results that did not
+fully pass their own pre-registered criteria** (C: invariant recovered in the bulk but not the Petrov
+edge; E: directional support but frozen thresholds missed), so they are self-bounded rather than
+unexamined. "Survived" means "survived these specific attacks," not "proven."
 
 ## Net read
 
