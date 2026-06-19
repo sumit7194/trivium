@@ -1,0 +1,23 @@
+{
+ "r2_weyl": {
+  "linear": 0.02099538814657531,
+  "knn": 0.6775713737871187,
+  "mlp": 0.9586805627078246,
+  "best_nonlinear": 0.9586805627078246,
+  "invariant_ref": 0.9990115776959615
+ },
+ "spearman": 0.5600404773951605,
+ "acc_OD": {
+  "via_linear": 0.45625,
+  "via_nonlinear": 0.63125,
+  "via_invariant_ref": 0.75
+ },
+ "legibility_gap": 0.9376851745612493,
+ "verdicts": {
+  "P1": true,
+  "P2": true,
+  "P3": false,
+  "P4": 0.0,
+  "confirmed": false
+ }
+}

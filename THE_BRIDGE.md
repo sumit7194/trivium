@@ -262,7 +262,15 @@ ansatz↔deepstrain link is now numeric, not propositional. →
   approximate). The parameter-free relations are the cleanest use. Converts leg 3 from a
   proof↔test proposition into a numeric exact↔measured comparison, scoped honestly.
 
-#### Move C — coordinate-free invariant cross-measure
+#### Move C — coordinate-free invariant cross-measure  *(✅ CLOSED 2026-06-19; mixed result)*
+**Outcome (mixed, reported honestly):** ansatz's coordinate-free Weyl invariant *is* present in
+the frame-randomized tidal field and a net recovers its **magnitude** (MLP R²=0.96) but **not
+linearly** (R²=0.02) — the legibility gap (P1, P2 ✅). It does **not** recover the **fine
+structure**: the exact Petrov O/D boundary (0.75, not >0.95) and the rank-ordering across 3
+decades (Spearman 0.56) fail (P3, P4 ✗). The finding: the learned representation captures the
+gross invariant, but the algebraically-special edge (near conformal-flatness) is where ansatz's
+exact construction is irreplaceable — the same shape as Move D's hierarchy. →
+[legC_invariant_crossmeasure/FINDINGS.md](legC_invariant_crossmeasure/FINDINGS.md). Plan below.
 - **Question.** Does tabula's learned representation recover ansatz's coordinate-free Weyl
   invariants / Petrov type — e.g. can a net trained on observations tell Petrov-D (black hole)
   from Petrov-O (conformally flat), blind?
@@ -296,12 +304,14 @@ natural target.)*
 - §74 polarization mode-count (GR = 2 tensor modes) against measured polarization content.
 
 ### 10.3 Order / status
-**A ✅ · B ✅ · D ✅** done (2026-06-19). **Remaining: C** (coordinate-free invariant
-cross-measure) and Tier 3 opportunistic. Move A validated the discovery→verify instrument, Move
-D took it to a genuinely-open question (the three-boundary integrability hierarchy), and Move B
-made the spine's ringdown link numeric (eikonal Kerr QNM vs measured GW250114). The next frontier
-step (a full-spin deformed metric with an unconfirmed Carter analog) waits on ansatz reaching
-beyond slow-rotation EdGB.
+**A ✅ · B ✅ · C ✅ · D ✅** — all four Phase-2 moves done (2026-06-19); only the opportunistic
+Tier-3 checks remain. Move A validated the discovery→verify instrument (blind recovery of the
+exact Carter constant); Move B made the spine's ringdown link numeric (eikonal Kerr QNM vs
+measured GW250114, a few %); Move D took the pipeline to a genuinely-open question (the
+three-boundary integrability hierarchy); Move C cross-measured the coordinate-free invariant
+(recovered in the large, not at the algebraically-special edge — a mixed, honest result). The
+next frontier step (a full-spin deformed metric with an unconfirmed Carter analog) waits on
+ansatz reaching beyond slow-rotation EdGB.
 
 ---
 

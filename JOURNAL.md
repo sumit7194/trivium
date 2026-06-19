@@ -519,3 +519,38 @@ cross-check. SPINE_SUMMARY "no QNM module" caveat resolved.
 
 **Phase-2 status:** Moves A ✅, B ✅, D ✅ done. Remaining: C (coordinate-free invariant
 cross-measure), Tier 3.
+
+---
+
+## 2026-06-19 — Session 25: Move C built, run, and CLOSED (invariant cross-measure; mixed)
+
+Fourth and final substantive Phase-2 leg. Uses ansatz's new coordinate-free oracles (§57 petrov,
+§76 invariant_fingerprint). Question: does a blind representation of the frame-randomized tidal
+field recover ansatz's exact coordinate-free Weyl invariant / Petrov type, and (the leg-2
+legibility lens) is it linearly legible or only nonlinearly present?
+
+**Built** (additive bridge code):
+- `tidal_observations.py` (ansatz venv) — numeric Riemann → electric tidal tensor E_ij from each
+  exact metric (Minkowski/de Sitter = Petrov-O, Schwarzschild/RN = Petrov-D), frame-randomized by
+  a random SO(3) at every sample; ansatz exact Kretschmann / Weyl-magnitude / Petrov labels.
+  Gated: Schwarzschild E=(M/r³)diag(−2,1,1), de Sitter isotropic ∝Λ — both exact.
+- `probe_invariants.py` (tabula venv) — the leg-2 probe ladder (linear/kNN/MLP + invariant-feature
+  ceiling), split by metric instance.
+
+**Result — mixed, reported honestly:**
+- **P1 ✅** Weyl magnitude recovered: MLP R²=0.96 (kNN 0.68; ceiling 0.999).
+- **P2 ✅** legibility gap = 0.94: linear R²=0.02 vs nonlinear 0.96 — the coordinate-free invariant
+  is PRESENT but NOT linearly legible from the frame-dependent observation. (de Sitter sharpens it:
+  large curvature, zero Weyl → the net must isolate the traceless part, and the MLP does.)
+- **P3 ✗** Petrov O/D accuracy 0.75 (not >0.95) — the small-Weyl edge (near conformal-flatness)
+  doesn't separate from O's exact zero.
+- **P4 ✗** Spearman 0.56 — magnitude scale captured, fine rank-ordering across 3 decades not
+  (heavy-tailed target: R² high, Spearman low).
+
+**The finding:** the learned representation recovers the gross coordinate-free invariant but parts
+ways at the algebraically-special boundary, where only ansatz's exact construction gets it right —
+the same shape as Move D's hierarchy (inductive captures the structure, deductive owns the edge).
+Does not fully meet its frozen success criterion; the legibility-gap half is the clean win.
+
+**Phase-2 status: COMPLETE.** Moves A ✅, B ✅, C ✅ (mixed), D ✅ done. Only opportunistic Tier-3
+checks remain (§75 area theorem, §74 polarizations).
