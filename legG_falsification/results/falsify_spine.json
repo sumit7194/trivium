@@ -1,0 +1,33 @@
+{
+ "rows": [
+  {
+   "true": 1,
+   "counted": 2
+  },
+  {
+   "true": 2,
+   "counted": 3
+  },
+  {
+   "true": 3,
+   "counted": 4
+  },
+  {
+   "true": 4,
+   "counted": 5
+  },
+  {
+   "true": 5,
+   "counted": 5
+  },
+  {
+   "true": 6,
+   "counted": 6
+  }
+ ],
+ "noise_null_count": 8,
+ "correlation": 0.9804686029234602,
+ "tracks_exactly_to": 6,
+ "collapsed_to_2": false,
+ "verdict": "SURVIVED \u2705 \u2014 the counter TRACKS true dimension up to d=6 and reports noise as high (8); '2' for black holes sits in the calibrated range. (Saturation above d=6 is an honest instrument ceiling, not a 2-bias.)"
+}

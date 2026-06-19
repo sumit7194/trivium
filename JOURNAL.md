@@ -649,3 +649,24 @@ attack; two tests CHANGED the claims (F: curvature→divergence; synthesis: edge
 coordinate-dependent severity) — the signature of real falsification, not confirmation theatre.
 **Scope (recorded):** did NOT separately re-attack the spine or Moves C/D/E; "survived" = "survived
 these attacks", not "proven". Corrections propagated to THE_BRIDGE §10.
+
+## 2026-06-20 — Session 28 (cont.): Move G — falsifying THE SPINE
+
+Attacked the headline ("a black hole is a 2-number object") as hard as possible, hoping it would break.
+- **5a calibration:** fed the EXACT leg-1 counter (cap lifted to d≤8) synthetic manifolds of known
+  dim 1–6 + a noise null. Counter TRACKS dimension (corr 0.98), exact on flat manifolds, noise→8.
+  **"Biased toward 2" REJECTED** — it's a genuine, calibrated dimension counter.
+- **5b flat-vs-curved control:** the +1 overcount at low dim is **curvature inflation** (leg 7b) —
+  linear/flat embeddings count exactly (2→2, 3→3, 4→4); curved ones overcount by +1 (2→3, etc.).
+- **5c threshold robustness of the REAL counts:** charged cases (RN=2, KN=3) robust across τ=1–5%;
+  vacuum cases ±1 fragile (Kerr=2 at frozen 2% but 3 at 1%; Schwarzschild=1 at 2% but 2 at 1%).
+
+**Spine verdict: SURVIVED, qualified.** The counter is calibrated (not a 2-collapse), so the strong
+falsification fails. But it's only ±1 accurate on curved manifolds, so "Kerr = 2" is a registered
+result with a thin vacuum-case margin (a 1% rule would say 3), while charged-BH counts are robust.
+Propagated to THE_BRIDGE §10 and SPINE_SUMMARY honest limits.
+
+**Falsification round net:** spine, Move A (×2), Move B all survived genuine attacks; Move F, the
+synthesis, and the spine's precision were all CHANGED/qualified by the attacks (curvature→divergence;
+edge coordinate-dependent; count ±1 curvature-inflation). Real falsification, not confirmation theatre.
+Still un-attacked: Moves C, D, E (already mixed/qualified).

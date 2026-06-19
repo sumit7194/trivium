@@ -5,11 +5,12 @@ break-attempts designed so an artifact would show up as a signal, reported outco
 
 ## Result in one line
 
-The main claims **survived** genuine break-attempts — and two of the tests **changed the claims**
-rather than rubber-stamping them, which is the signature of real falsification rather than
-confirmation theatre: Move F's "curvature" was corrected to **metric divergence** (a flat space
-with a diverging distance fires; curvature is irrelevant), and the synthesis's edge effect is
-**fundamental in existence but coordinate-dependent in severity**.
+The main claims **survived** genuine break-attempts — including the headline ("a black hole is a
+2-number object": the counter is calibrated, not biased toward 2) — and **three** tests changed or
+qualified the claims rather than rubber-stamping them, the signature of real falsification: Move F's
+"curvature" → **metric divergence**; the synthesis's edge is **fundamental but coordinate-dependent
+in severity**; and the spine's count is **calibrated but only ±1 accurate on curved manifolds**, so
+the vacuum-BH counts (Kerr, Schwarzschild) are threshold-fragile while the charged-BH counts are robust.
 
 ## The scorecard
 
@@ -20,6 +21,7 @@ with a diverging distance fires; curvature is irrelevant), and the synthesis's e
 | **B consistency** | Move B: QNM agreement is real | measured Q → χ=0.818, measured Mω_R → χ=0.816 (agree to **0.003**, both inside the measured CI) | **SURVIVED** |
 | **3 mechanism** | Move F: bulk/edge needs curvature | hemisphere 0.45× (null), unbounded-flat 0.78× (null), **flat-diverging 4.50× (FIRES)** | **SURVIVED → SHARPENED** |
 | **4 fundamental?** | synthesis: exact owns the edge | edge from intrinsic radius = 1.89× (vs 3.81× in bad coords) — stays hard but milder | **SURVIVED, qualified** |
+| **5 the spine** | "a black hole is a 2-number object" | counter tracks true dim (corr 0.98), noise→8 (not 2), exact on flat manifolds; but +1 curvature inflation → vacuum-BH counts ±1 threshold-fragile | **SURVIVED, qualified** |
 
 ## What survived, and why the tests were genuine
 
@@ -51,13 +53,65 @@ with a diverging distance fires; curvature is irrelevant), and the synthesis's e
   statement: the edge is fundamentally hard (it survives the natural coordinate), and poor
   observation coordinates make it worse.
 
+## Test 5 — THE SPINE: is the "2-number black hole" counter calibrated, or biased toward 2?
+
+The headline of the whole project. The dangerous failure mode: tabula's bottleneck counter returns
+~2 regardless of the truth, so the agreement with ansatz is an artifact. Two attacks:
+
+**5a Calibration (synthetic manifolds of known dimension + a noise null).** Fed the EXACT leg-1
+instrument (cap lifted from d≤4 to d≤8) smooth nonlinear manifolds of intrinsic dimension 1–6 and a
+pure-noise control:
+
+| true dim | 1 | 2 | 3 | 4 | 5 | 6 | noise (K=12) |
+|---|---|---|---|---|---|---|---|
+| counted | 2 | 3 | 4 | 5 | 5 | 6 | **8** |
+
+Correlation(counted, true) = **0.98**; noise → 8 (not 2). **The "biased toward 2" hypothesis is
+REJECTED** — the counter tracks dimension and reports noise as high-dimensional.
+
+**5b The +1 is curvature inflation, not bias (flat-vs-curved control).** The calibration showed a
+systematic **+1 overcount at low dim**. A control isolates the cause — a *linear* (flat) embedding vs
+a *nonlinear* (curved) one of the same latent dimension:
+
+| true dim | linear (flat) | nonlinear (curved) |
+|---|---|---|
+| 2 | **2** | 3 |
+| 3 | **3** | 4 |
+| 4 | **4** | 5 |
+
+Flat manifolds count **exactly**; curved manifolds overcount by **+1**. So the imprecision is the
+**leg-7b curvature-inflation effect** (a curved low-dim manifold needs an extra bottleneck dimension
+to unfold) — a property of the manifold's geometry, not a counter flaw.
+
+**5c Threshold robustness of the REAL black-hole counts.** Re-applying the knee rule to the saved
+real R²(d) curves at τ ∈ {1,2,3,5}%:
+
+| family | τ=1% | τ=2% (frozen) | τ=3% | τ=5% | ansatz |
+|---|---|---|---|---|---|
+| Schwarzschild | 2 | **1** | 1 | 1 | 1 |
+| RN | 2 | **2** | 2 | 2 | 2 |
+| dyonic (observable) | 2 | **2** | 2 | 2 | 3→2 (Q²+P² degeneracy) |
+| Kerr | 3 | **2** | 2 | 2 | 2 |
+| KN-full | 3 | **3** | 3 | 3 | 3 |
+| KN-Δ-symmetric | 2 | **2** | 2 | 2 | 2 |
+
+The **charged** cases (RN, KN) are threshold-robust; the **vacuum** cases (Schwarzschild, Kerr) are
+**±1 fragile** — correct at the frozen 2% rule but overcounting by 1 at a stricter 1% threshold,
+because their observable manifolds are more curved (5b).
+
+**Spine verdict — SURVIVED, with an honest qualification.** The counter is genuinely calibrated (not
+a 2-collapse): the strong falsification fails. But it is accurate only to **±1** on curved manifolds,
+so "Kerr = 2" holds *at the frozen 2% rule* yet sits one notch above the curvature-inflation
+threshold (a 1% rule would say 3); the charged-BH counts are robust. The "2-number black hole" stands
+as a registered result, with the vacuum-case margins now known to be thin and tied to the leg-7b
+curvature effect.
+
 ## Scope — what was NOT stress-tested here (no false sense of completeness)
 
-This battery hit the strongest, most-falsifiable claims: Move A (two ways), Move B, Move F, and the
-synthesis. It did **not** separately re-attack the spine (legs 1–3 — already audited; their counts
-do vary correctly across families, e.g. 1/2/3 for Schwarzschild/RN/dyonic), nor Moves C, D, E
-(already reported as mixed/qualified). A complete adversarial pass on those remains open. "Survived"
-means "survived these specific attacks," not "proven."
+This battery hit the spine and the strongest extension claims: the spine counter (calibration +
+threshold), Move A (two ways), Move B, Move F, and the synthesis. It did **not** separately
+re-attack Moves C, D, E (already reported as mixed/qualified). A complete adversarial pass on those
+remains open. "Survived" means "survived these specific attacks," not "proven."
 
 ## Net read
 

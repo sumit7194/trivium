@@ -46,6 +46,14 @@ object** — and the one place they disagree is itself predicted and explained.
   eikonal Kerr QNM from the exact metric; it matches deepstrain's measured GW250114 220 to a few
   percent (Q₂₂₀ 1–7%, Mω_R 3%), so leg 3's ringdown link is now numeric. See
   `legB_ringdown_bridge/FINDINGS.md`.
+- **Counter calibration & threshold fragility (adversarial test, 2026-06-20, Move G).** The
+  bottleneck counter was stress-tested: it is genuinely *calibrated* (tracks true dimension, corr
+  0.98 on synthetic d=1–6; reports noise as high; exact on flat manifolds) — it is **not** biased
+  toward 2. But it overcounts curved manifolds by +1 (the leg-7b curvature inflation), so the
+  **vacuum**-BH counts are threshold-fragile: Schwarzschild and Kerr give the ansatz-matching 1 and 2
+  at the frozen 2% knee rule but overcount by 1 at a stricter 1% threshold. The **charged**-BH counts
+  (RN=2, KN=3) are threshold-robust. So "Kerr = 2" is a registered result with a thin vacuum-case
+  margin, not a threshold-independent fact. See `legG_falsification/FINDINGS.md`.
 - No new physics. The contribution is method + end-to-end ownership + cross-validation,
   framed honestly (§7).
 

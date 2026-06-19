@@ -332,15 +332,20 @@ a **diverging distance** fires (4.5×), so curvature is incidental; the driver i
 divergence** itself.)*
 
 #### Move G — adversarial falsification  *(✅ CLOSED 2026-06-20; tried to BREAK the main claims)*
-A deliberate break-attempt, outcome-neutral. **Move A survived** two attacks: it returns DESTROYED on
-noise/shuffled/scrambled data (no hallucinated invariants) and recovers the **true a² to 0.0% across
-spins 0.1–0.9** (genuine spin measurement, not a fixed answer). **Move B survived:** the measured Q and
-Mω_R independently imply the *same* spin (χ=0.818 vs 0.816, agree to 0.003), a real two-observable
-consistency, not a one-parameter fit. **Two claims were CHANGED by the attacks** (the sign of honest
-falsification): Move F's "curvature/conformal-boundary" → **pure metric divergence** (a flat space with
-a diverging distance fires; a curved space without divergence does not); and the synthesis's edge is
-**fundamental but coordinate-dependent in severity** (it persists from the intrinsic coordinate at
-1.89× but is 2× milder than in the embedding coordinates). → [legG_falsification/FINDINGS.md](legG_falsification/FINDINGS.md).
+A deliberate break-attempt, outcome-neutral. **The spine survived its headline attack:** the bottleneck
+counter is genuinely *calibrated* — it tracks true dimension (corr 0.98 on synthetic d=1–6), is *exact*
+on flat manifolds, and reports pure noise as 8 (not 2), so it is **not biased toward 2**. But the attack
+revealed a real ±1 imprecision: on *curved* manifolds it overcounts by +1 (the leg-7b curvature
+inflation, confirmed by a flat-vs-curved control), so the **vacuum**-BH counts (Schwarzschild, Kerr) are
+threshold-fragile (Kerr = 2 at the frozen 2% rule but 3 at 1%), while the **charged**-BH counts (RN, KN)
+are robust. **Move A survived** two attacks: DESTROYED on noise/shuffled/scrambled data (no hallucinated
+invariants) and recovers the **true a² to 0.0% across spins 0.1–0.9**. **Move B survived:** measured Q
+and Mω_R independently imply the *same* spin (0.818 vs 0.816), a two-observable consistency, not a
+one-parameter fit. **Claims CHANGED by the attacks** (the sign of honest falsification): Move F's
+"curvature" → **pure metric divergence** (a flat space with a diverging distance fires; a curved space
+without divergence does not); the synthesis's edge is **fundamental but coordinate-dependent in
+severity**; and the spine's count is **calibrated but only ±1 accurate on curved manifolds**. →
+[legG_falsification/FINDINGS.md](legG_falsification/FINDINGS.md).
 
 ### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F, falsification G)
 **A ✅ · B ✅ · C ✅ · D ✅ · Tier 3 ✅ · E ✅ · F ✅** (2026-06-19). Move A validated the
