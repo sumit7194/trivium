@@ -1,0 +1,15 @@
+{
+ "area_theorem": {
+  "event": "GW150914",
+  "Mirr_final": 58.58129656472872,
+  "bound_sqrt_m1sq_m2sq": 46.9437961822433,
+  "radiated_fraction": 0.046827794561933554,
+  "max_fraction_cap": 0.29289321881345254,
+  "holds": true
+ },
+ "polarizations": {
+  "gr_modes": 2,
+  "max_metric_modes": 6,
+  "measured_consistent_with_2": true
+ }
+}
