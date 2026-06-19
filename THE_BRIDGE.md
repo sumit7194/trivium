@@ -149,29 +149,135 @@ Match the projects' shared ethos throughout: pre-register → build → gate →
 
 ---
 
-## 10. Future Roadmap
+## 10. Roadmap
 
-We have established a five-option roadmap for the next phase of the project:
+### 10.0 What changed (2026-06-19): the engines grew the two halves the bridge was missing
 
-### Option A: Resolving the Phase-Shift Curvature Problem (Leg 7b)
-*   **Problem**: In Leg 7, the autoencoder resolved $4$ dimensions instead of the physical $2$ for locked Kerr ringdowns due to "phase-shift curvature" (translation shifts of wave peaks in the time-domain create highly curved manifolds).
-*   **Plan**: We will implement pre-processing and coordinate transformations (such as Fourier/magnitude spectra, phase alignment, or Hilbert envelopes) to remove phase-shift variance before bottleneck compression, and test if the autoencoder can recover the true physical dimensionality ($2$ for locked, $4$ for free).
+Two independent build sprints — no cross-contamination, the repos still do not import
+each other — added exactly the two halves of an inductive→deductive **discovery pipeline**:
 
-### Option B: Rotating Strong-Field Curriculum (Leg 5b)
-*   **Problem**: Leg 5 targeted the static Schwarzschild shadow ($b_{crit} = 3\sqrt{3}$). Rotating Kerr spacetimes have asymmetric shadows due to frame-dragging.
-*   **Plan**: We will use the ansatz engine to compute exact Kerr shadow boundaries and train targeted networks to reconstruct the spin parameter $a$ and viewer inclination $\theta_0$ from null geodesics.
+- **ansatz** gained ~21 callable oracles (§56–76). Bridge-critical, with verified I/O:
+  - `wave_potential(f, ℓ, s)` and `eikonal_qnm(f)` — QNM / ringdown from a static lapse
+    (eikonal/WKB; Schwarzschild exact, ~3% vs Leaver). *The QNM unlock leg 3 was waiting on.*
+  - `is_killing_vector(geo, ξ)` (exact, symbolic) plus the Killing-tensor / Killing–Yano
+    residual machinery (`killing_tensor_residual`, §58/§69) — it can **numerically certify an
+    externally-proposed Carter-type invariant**.
+  - `invariant_fingerprint(geo)` (Weyl I/J, Kretschmann) and `petrov(geo)` — coordinate-free
+    exact ground truth for the inductive oracle.
+  - Logic-verified GW oracles: ringdown template + parameter-free no-hair ratio (§72),
+    inspiral chirp (§73), polarizations / mode-count (§74), area theorem (§75),
+    Kerr thermodynamics / Hawking (§61/§70).
+- **tabula** gained a **distillation head** (scripts 95–100): it now emits a discovered
+  conserved quantity as a **coefficient vector in an interpretable basis** (reconstructable to
+  a closed form), cross-validated against an independent chaos diagnostic (SALI). It caught the
+  Kepler Laplace–Runge–Lenz vector (96) and the Kerr–de Sitter *rational* Carter constant
+  (97, cosine 0.9999 to textbook), and can tell a separability-preserving deformation from an
+  integrability-breaking one **as a data test** (99). The FNO upgrade (100) broke the
+  field-learning architecture wall — an enabler for a later "propose a whole metric" route.
 
-### Option C: Generalized Conjecture Handoff (Leg 4b)
-*   **Problem**: The symbolic geometrization proof in Leg 4 was restricted to a $1+1D$ static metric and simple linear velocity drag.
-*   **Plan**: Generalize the symbolic proof to a full $3+1D$ metric and test non-conservative forces like electromagnetic Lorentz forces or non-linear drag.
+This makes the §4A **conjecture handoff** — historically our weakest, most-overclaimed leg —
+buildable *for real*, and upgrades the spine's proposition-level ringdown link (leg 3) to a
+numeric one.
 
-### Option D: Integrability Fingerprints (Leg 5c)
-*   **Problem**: The count-triangle (§5) shows that counts diverge under some conditions (such as dyonic degeneracy), but we have not verified whether the neural bottleneck count can detect a hidden symmetry.
-*   **Plan**: Kerr geodesics are integrable due to the Carter constant (a conserved quantity beyond energy and angular momentum), but deforming the metric breaks this integrability. We will feed the neural bottleneck network geodesic trajectory data from an exactly-integrable system (Kerr, with Carter constant certified by ansatz) versus a deformed non-integrable system, and evaluate whether the bottleneck count (`tabula`) detects a difference (i.e., whether integrability leaves a representational fingerprint).
+**Two standing integrity rules for this phase:**
+1. **Numeric, not symbolic.** Ansatz certifies a proposed Killing tensor by residual
+   `∇₍ₐK_bc₎ < tol` at sampled points, not as a symbolic theorem. Word every result
+   "numerically certified to tolerance," never "proved."
+2. **Independence is enforced by data flow, exactly as in leg 1.** Ansatz is the blind
+   geodesic *source*; only trajectory arrays cross to tabula; only the candidate invariant
+   crosses back; neither repo imports the other. This is chosen deliberately over reusing
+   tabula's own integrator — the slower path, but the only one where agreement means
+   *evidence, not echo* (§2). Optimizing this leg for speed would discard its entire value.
 
-### Option E: Physics-Grounded Echo Templates (Leg 8b)
-*   **Problem**: `deepstrain`'s echo search currently relies on phenomenological templates for exotic near-horizon structures, which may miss real signals due to template mismatch.
-*   **Plan**: Use `ansatz` to generate the exact near-horizon metric and reflection structure of an echo-producing exotic object (such as a wormhole or gravastar). Convert these exact solutions into physics-grounded wave templates and feed them to `deepstrain`'s search pipeline to search for echoes in real LIGO data.
+### 10.1 Phase 1 — complete
+
+The original five-option roadmap is done; each became a leg (see JOURNAL / per-leg FINDINGS):
+
+| Option | Became | Outcome |
+|---|---|---|
+| A — phase-shift curvature | leg 7b | FFT-magnitude recovers the true dimension (standardized space) |
+| B — rotating curriculum | leg 5b | mixed: helps retrograde, hurts prograde (train/test leakage flagged) |
+| C — generalized handoff | leg 4 | 1+1D special case only — **superseded by Move A** |
+| D — integrability fingerprint | leg 5c | dimension *counting* did **not** fingerprint integrability — **superseded by Move A** |
+| E — exotic echo templates | leg 8b | on-source null; suggestive but underpowered (N=25) sensitivity reversal |
+
+A through-line worth keeping: leg 5c showed that *counting the bottleneck dimension* fails to
+detect a hidden symmetry; tabula's new *invariant distillation* (95–99) succeeds where the
+count failed. Move A is built on the method that works.
+
+### 10.2 Phase 2 — the discovery→verify era
+
+Each move follows the §2 discipline: pre-register the prediction and the agreement criterion,
+obtain each side blind, report disagreements as findings.
+
+#### Move A — the hidden-symmetry discovery pipeline  *(headline; supersedes legs 4 and 5c)*
+- **Question.** Can the inductive oracle *discover* a spacetime's hidden conserved quantity
+  from trajectories alone, and the deductive oracle independently *certify* it from the metric
+  — agreeing on which spacetimes have one and which do not?
+- **Who does what.** Ansatz integrates geodesics from its exact metric and writes **only
+  trajectory arrays** (the leg-1 blindness boundary, enforced mechanically). Tabula distills a
+  candidate invariant blind (distillation head, 95–97) and emits its coefficient vector.
+  Ansatz reconstructs the candidate and certifies it numerically
+  (`killing_tensor_residual` / Killing–Yano, §58/§69).
+- **Calibration ladder (run in full, the rigorous path):** Kerr (M,a) → Kerr–Newman (M,a,Q;
+  charge preserves Carter) → Kerr–de Sitter (M,a,Λ; rational Carter) → bumpy-quadrupole
+  (Carter destroyed).
+- **Pre-registered verdicts (frozen before running):**
+  - *Tabula, blind:* EXISTS iff a low-degree-library invariant stays conserved on **held-out**
+    trajectories (held-out variance-ratio < ε), at the lowest library degree that works
+    (parsimony). For calibration metrics the cosine-to-textbook is a bonus check only — the
+    primary verdict uses held-out conservation alone, so the identical rule transfers to the
+    frontier (Move D), where there is no textbook answer to lean on.
+  - *Ansatz, from metric:* EXISTS iff the reconstructed K has Killing-tensor residual < tol at
+    N sampled points (and/or a Killing–Yano root exists).
+  - *Agreement (frozen):* the two EXISTS/DESTROYED verdicts must match cell-by-cell —
+    Kerr/KN/Kerr-dS → EXISTS (both), bumpy → DESTROYED (both). A mismatch is a finding.
+- **Validates.** The full falsifiability pipeline end-to-end — neural discovery → exact
+  certification — with both halves real and independent. **Honest size:** on the ladder it
+  re-derives *known* invariants (a methods milestone, not new physics); the new physics is
+  Move D. This is the leg that retires the "conjecture handoff" overclaim by doing it properly.
+
+#### Move B — the numeric ringdown bridge  *(leg 3b; upgrades the spine's weakest joint)*
+- **Question.** Does ansatz's exact QNM structure agree numerically with deepstrain's measured
+  GW250114 ringdown?
+- **Who.** Ansatz: `eikonal_qnm` (real frequency set by the photon-ring orbital frequency;
+  overtone damping spaced by (n+½)) and the no-hair template (§72). deepstrain: the measured
+  220/221 ringdown frequency, damping, and δ.
+- **Pre-register.** The measured fundamental sits within the eikonal band; the measured overtone
+  structure (real-frequency near-degeneracy, (n+½) damping ladder) is consistent with the
+  eikonal prediction within measurement error.
+- **Honest size.** Eikonal-level (static lapse; ~3% on Schwarzschild; Kerr-spin corrections
+  approximate). The parameter-free relations are the cleanest use. Converts leg 3 from a
+  proof↔test proposition into a numeric exact↔measured comparison, scoped honestly.
+
+#### Move C — coordinate-free invariant cross-measure
+- **Question.** Does tabula's learned representation recover ansatz's coordinate-free Weyl
+  invariants / Petrov type — e.g. can a net trained on observations tell Petrov-D (black hole)
+  from Petrov-O (conformally flat), blind?
+- **Who.** Ansatz: `invariant_fingerprint` (Weyl I/J, Kretschmann), `petrov` — exact labels.
+  Tabula: probe whether its bottleneck/representation linearly carries those invariants.
+- **Validates.** Whether the inductive oracle's learned geometry aligns with exact
+  coordinate-free truth — the §4A invariant cross-measure, now with a coordinate-proof reference.
+
+#### Move D — the frontier discovery  *(the prize; only after A passes calibration)*
+- **Question.** In a spacetime with **no known closed-form second invariant**, does tabula
+  propose one that ansatz certifies?
+- **Targets.** Rotating-EdGB (ansatz has only a slow-rotation closed-form fit; the Carter-analog
+  is genuinely open) or a Johannsen-type deformed Kerr.
+- **Discipline.** Run *only after* Move A passes on the calibration ladder — the instrument must
+  be validated on known answers before it is trusted on unknown ones. A certified new invariant
+  is a genuine result; a clean "no invariant exists" (tabula CERTIFY + ansatz residual fails) is
+  equally a result.
+
+#### Tier 3 — cheap consistency checks (opportunistic, ~half-day each)
+- §75 area-theorem merger-consistency (M_f ≥ √(M₁²+M₂²)) against deepstrain event parameters.
+- §74 polarization mode-count (GR = 2 tensor modes) against measured polarization content.
+
+### 10.3 Order
+**A → B → D**, with **C** and Tier 3 opportunistic. A is the highest value with both halves
+already built; B is cheap and fixes the spine; D is the frontier and must wait for A's
+calibration. The calibration path is deliberately the rigorous one (ansatz as blind data
+source), per §10.0.
 
 ---
 

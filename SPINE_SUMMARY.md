@@ -46,11 +46,17 @@ object** — and the one place they disagree is itself predicted and explained.
 - No new physics. The contribution is method + end-to-end ownership + cross-validation,
   framed honestly (§7).
 
-## Where to go next (THE_BRIDGE.md menu)
-- The conjecture handoff (§4A) — hand tabula's "geometrizes ⟺ universal ∧ conservative"
-  to ansatz's prover (energy conditions + Killing vector). The falsifiability pipeline.
-- Strong-field curriculum (§5) — use ansatz's exact light-ring structure to target
-  tabula's training and pull the shadow edge toward 3√3.
+## Where to go next (THE_BRIDGE.md §10 Phase 2)
+The original menu (conjecture handoff §4A, strong-field curriculum §5) is done — see
+Phase-1 legs 4/5/5b/5c/7b/8b. The current roadmap is the **discovery→verify era**:
+- **Move A** — the hidden-symmetry discovery pipeline: ansatz emits geodesics blind, tabula
+  distills a candidate conserved quantity (its new distillation head, scripts 95–97), ansatz
+  numerically certifies it (Killing-tensor residual, §58/§69). Calibration ladder Kerr →
+  KN → Kerr-dS → bumpy. *Supersedes legs 4 and 5c — the conjecture handoff done properly.*
+- **Move B** — numeric ringdown bridge (leg 3b): ansatz's QNM oracle (§56/§72) vs deepstrain's
+  measured GW250114 ringdown. Upgrades this spine from proof↔test to a numeric comparison.
+- **Move D** — frontier discovery: aim the Move-A pipeline at a metric with no known second
+  invariant (rotating-EdGB / Johannsen), once calibration passes.
 
 Per-leg detail: `leg1_moduli_count/FINDINGS.md`, `leg2_domain_gap/FINDINGS.md`,
 `leg3_triangle/FINDINGS.md`. Dated log: `JOURNAL.md`.
