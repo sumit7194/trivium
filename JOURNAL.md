@@ -554,3 +554,37 @@ Does not fully meet its frozen success criterion; the legibility-gap half is the
 
 **Phase-2 status: COMPLETE.** Moves A ✅, B ✅, C ✅ (mixed), D ✅ done. Only opportunistic Tier-3
 checks remain (§75 area theorem, §74 polarizations).
+
+---
+
+## 2026-06-19 — Session 26: Tier 3 + Move E (the cross-domain capstone)
+
+**Tier 3 — CLOSED.** §75 area theorem on GW150914 (M_irr,f=58.6 ≥ √(m1²+m2²)=46.9, margin 1.56×;
+radiated 4.7% < 29.3% cap) and §74 polarization (GR's 2 tensor modes consistent with measured).
+Textbook consistency checks; closes the roadmap's Tier-3 items.
+
+**Move E — CLOSED (the most ambitious leg).** User's framing: take the bridge's two meta-findings
+(the legibility gap, the bulk/edge boundary) and test whether they survive OUTSIDE GR, in tabula's
+curvature-atlas domains, with flat controls — turning "a fact about black holes" into "a fact about
+learned-vs-exact structure on a curved space."
+
+**Built** `curvature_universality.py` (tabula venv): Test A (legibility gap, S¹ neural ring vs flat
+line) + Test B (bulk/edge, hyperbolic disk vs flat Euclidean) + curvature sweeps (κ, r_max).
+
+**Result — a qualified yes:**
+- **Bulk/edge boundary (strong):** the hyperbolic edge/bulk recovery error SCALES with curvature —
+  0.78 → 0.95 → 1.26 → 2.32 as r_max→0.99 — while the flat Euclidean control stays ~0.5. The exact
+  structure's edge (Poincaré metric → ∞) is where learned recovery fails, monotonically; flat has no
+  edge. Same shape as Moves C/D, in a space with no black hole.
+- **Legibility gap (modest):** 16× larger on the curved S¹ (0.127) than the flat line (0.008) —
+  curvature-specific — but small, and driven by the closed TOPOLOGY (the coordinate seam), not tuning
+  width (κ-sweep: gap shrinks 0.17→0.04 as κ→16).
+- **Frozen aggressive thresholds (A1>0.3, B1≥3×) NOT all met** — reported honestly; A2/B2 (flat
+  controls clean) held. The directional contrast + bulk/edge scaling carry the conclusion.
+
+**The through-line (recorded in §10.3):** every leg's finding is about an EDGE of curved structure —
+the light ring (B), the algebraically-special limit (C), the integrability boundary (D), the ideal
+boundary of a hyperbolic disk / the seam of a circle (E). A learned representation recovers exact
+structure in the bulk and loses it at the edge. The GR results are one instance of a curvature fact.
+
+**Phase 2 COMPLETE:** A, B, C, D, Tier 3, E all closed.

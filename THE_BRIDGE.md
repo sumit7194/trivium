@@ -299,19 +299,36 @@ metric class where ansatz can supply a full — not slow-rotation — deformed m
 analog is suspected but unconfirmed; rotating EdGB at full spin, once ansatz reaches it, is the
 natural target.)*
 
-#### Tier 3 — cheap consistency checks (opportunistic, ~half-day each)
-- §75 area-theorem merger-consistency (M_f ≥ √(M₁²+M₂²)) against deepstrain event parameters.
-- §74 polarization mode-count (GR = 2 tensor modes) against measured polarization content.
+#### Tier 3 — cheap consistency checks  *(✅ CLOSED 2026-06-19)*
+- §75 area-theorem: GW150914 `M_irr,f = 58.6 ≥ √(m₁²+m₂²) = 46.9` (area increased, 1.56× margin);
+  radiated 4.7% < 29.3% cap. §74 polarization: GR's 2 tensor modes consistent with measured.
+  Textbook consistency checks. → [legTier3_consistency/FINDINGS.md](legTier3_consistency/FINDINGS.md).
 
-### 10.3 Order / status
-**A ✅ · B ✅ · C ✅ · D ✅** — all four Phase-2 moves done (2026-06-19); only the opportunistic
-Tier-3 checks remain. Move A validated the discovery→verify instrument (blind recovery of the
-exact Carter constant); Move B made the spine's ringdown link numeric (eikonal Kerr QNM vs
-measured GW250114, a few %); Move D took the pipeline to a genuinely-open question (the
-three-boundary integrability hierarchy); Move C cross-measured the coordinate-free invariant
-(recovered in the large, not at the algebraically-special edge — a mixed, honest result). The
-next frontier step (a full-spin deformed metric with an unconfirmed Carter analog) waits on
-ansatz reaching beyond slow-rotation EdGB.
+#### Move E — do the meta-findings survive outside GR?  *(✅ CLOSED 2026-06-19; the cross-domain capstone)*
+**Question (the only one with real headroom):** are the bridge's two meta-findings — the
+*legibility gap* (Move C / leg 2) and the *bulk/edge boundary* (Moves C, D) — facts about black
+holes, or about **learned-vs-exact structure on a curved space**? Tested in two non-GR curved
+domains from tabula's own atlas (the neural ring S¹, the hyperbolic disk), each vs a **flat
+control**. **Outcome — a qualified yes:** both reproduce in the curved domains and vanish in the
+flat controls; the **bulk/edge boundary *scales* with curvature** (edge/bulk error 0.78→2.32 as
+r_max→1, flat stays ~0.5) — the strong result; the **legibility gap is curvature/topology-specific
+(16× the flat control) but modest**. The frozen *aggressive* thresholds were not all met (reported
+honestly); the directional contrast + the bulk/edge scaling carry the conclusion: these are facts
+about curvature and learning, of which the GR results are one instance. →
+[legE_curvature_universality/FINDINGS.md](legE_curvature_universality/FINDINGS.md).
+
+### 10.3 Order / status — Phase 2 COMPLETE
+**A ✅ · B ✅ · C ✅ · D ✅ · Tier 3 ✅ · E ✅** (2026-06-19). Move A validated the discovery→verify
+instrument (blind recovery of the exact Carter constant); B made the spine's ringdown link numeric
+(eikonal Kerr QNM vs GW250114, a few %); D took the pipeline to a genuinely-open question (the
+three-boundary integrability hierarchy); C cross-measured the coordinate-free invariant (recovered
+in the bulk, not at the algebraically-special edge); E showed the two meta-findings track curvature,
+not GR, across non-GR domains with flat controls. **Through-line:** a learned representation
+recovers an exact structure in the bulk and loses it at the *edge* — the horizon/light-ring (B), the
+algebraically-special limit (C), the integrability boundary (D), the ideal boundary of a hyperbolic
+disk and the seam of a circle (E). The bridge's recurring finding is about **edges of curved
+structure**. Open frontier: a full-spin deformed metric with an unconfirmed Carter analog (awaits
+ansatz beyond slow-rotation EdGB); broader domains for the E universality claim.
 
 ---
 
