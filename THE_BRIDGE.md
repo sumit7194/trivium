@@ -316,19 +316,34 @@ r_max→1, flat stays ~0.5) — the strong result; the **legibility gap is curva
 honestly); the directional contrast + the bulk/edge scaling carry the conclusion: these are facts
 about curvature and learning, of which the GR results are one instance. →
 [legE_curvature_universality/FINDINGS.md](legE_curvature_universality/FINDINGS.md).
+*(Caveat, corrected by Move F: the "curvature" wording here is imprecise — see Move F.)*
 
-### 10.3 Order / status — Phase 2 COMPLETE
-**A ✅ · B ✅ · C ✅ · D ✅ · Tier 3 ✅ · E ✅** (2026-06-19). Move A validated the discovery→verify
-instrument (blind recovery of the exact Carter constant); B made the spine's ringdown link numeric
-(eikonal Kerr QNM vs GW250114, a few %); D took the pipeline to a genuinely-open question (the
-three-boundary integrability hierarchy); C cross-measured the coordinate-free invariant (recovered
-in the bulk, not at the algebraically-special edge); E showed the two meta-findings track curvature,
-not GR, across non-GR domains with flat controls. **Through-line:** a learned representation
-recovers an exact structure in the bulk and loses it at the *edge* — the horizon/light-ring (B), the
-algebraically-special limit (C), the integrability boundary (D), the ideal boundary of a hyperbolic
-disk and the seam of a circle (E). The bridge's recurring finding is about **edges of curved
-structure**. Open frontier: a full-spin deformed metric with an unconfirmed Carter analog (awaits
-ansatz beyond slow-rotation EdGB); broader domains for the E universality claim.
+#### Move F — curvature or boundary?  *(✅ CLOSED 2026-06-19; corrects Move E)*
+Move E's hyperbolic disk confounded curvature and a boundary. A 2×2 isolation (hyperbolic =
+curved+boundary, sphere S² = curved+no-boundary, flat disk = flat+boundary, flat torus = flat+no-
+boundary) shows the bulk/edge effect fires in **only one cell — hyperbolic (3.81×)**; the sphere
+(0.49×), flat disk (0.78×), and torus (0.51×) all stay quiet. So it is **neither curvature alone
+nor a boundary alone**: the driver is a **conformal boundary where the metric *diverges*** (the one
+space with unbounded distance). That is exactly a **black-hole horizon** (diverging proper distance
+/ the near-horizon hyperbolic throat) — a sharper and more GR-relevant statement than "curvature."
+→ [legF_curvature_vs_boundary/FINDINGS.md](legF_curvature_vs_boundary/FINDINGS.md).
+
+### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F)
+**A ✅ · B ✅ · C ✅ · D ✅ · Tier 3 ✅ · E ✅ · F ✅** (2026-06-19). Move A validated the
+discovery→verify instrument (blind recovery of the exact Carter constant); B made the spine's
+ringdown link numeric (eikonal Kerr QNM vs GW250114, a few %); D took the pipeline to a
+genuinely-open question (the three-boundary integrability hierarchy); C cross-measured the
+coordinate-free invariant (recovered in the bulk, not at the algebraically-special edge); E tested
+whether the meta-findings survive outside GR; F isolated the driver of the bulk/edge effect to a
+**conformal boundary where the metric diverges** (not curvature generically — correcting E).
+**Through-line:** a learned representation recovers an exact structure in the bulk and loses it at
+the *edge* — the horizon/light-ring (B), the algebraically-special limit (C), the integrability
+boundary (D), and — pinned by F — specifically a **conformal/horizon-like boundary where the metric
+diverges** for distance recovery (E/F). The bridge's recurring finding is about **edges of curved
+structure**, with the distance-recovery edge now identified as a metric-divergence boundary. Open
+frontier: a full-spin deformed metric with an unconfirmed Carter analog (awaits ansatz beyond
+slow-rotation EdGB); the hemisphere control (curved + finite-metric boundary, predicted: no effect)
+to finish nailing F; unifying the different edge types across C/D/E/F.
 
 ---
 

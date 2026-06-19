@@ -588,3 +588,34 @@ boundary of a hyperbolic disk / the seam of a circle (E). A learned representati
 structure in the bulk and loses it at the edge. The GR results are one instance of a curvature fact.
 
 **Phase 2 COMPLETE:** A, B, C, D, Tier 3, E all closed.
+
+---
+
+## 2026-06-19 — Session 27: Move F (curvature or boundary? — corrects Move E)
+
+User chose the sharpest stress-test of the Move E synthesis: isolate whether the bulk/edge effect
+needs CURVATURE or just a BOUNDARY (Move E's hyperbolic disk confounded both).
+
+**Built** `curvature_vs_boundary.py` — a 2×2 (same recovery harness: recover the exact intrinsic
+distance-to-reference from noisy embedding coords, edge/bulk error):
+- hyperbolic disk (curved + boundary, metric diverges)
+- sphere S² (curved, NO boundary, bounded metric)
+- flat disk (flat + boundary, finite metric)
+- flat torus (flat, no boundary)
+
+**Result — Move E CORRECTED (honest sharpening):** only **hyperbolic fires (edge/bulk 3.81×)**;
+sphere 0.49×, flat disk 0.78×, torus 0.51× all stay quiet. Neither curvature alone (sphere=curved,
+no effect) nor a boundary alone (flat disk=boundary, no effect) suffices. The driver is a
+**conformal boundary where the METRIC DIVERGES** — hyperbolic is the only space with unbounded
+distance. Absolute errors confirm it's real (~8× growth bulk→edge), not a relative-error artifact.
+
+**Why the correction is better:** a metric-divergence boundary is exactly a **black-hole horizon**
+(diverging proper distance, the near-horizon hyperbolic throat) and an AdS conformal boundary — a
+sharper, more GR-relevant statement than "curvature." Move E's "curvature-driven" wording is
+flagged as imprecise in THE_BRIDGE §10.2.
+
+**Honest scope:** sharpens the distance-RECOVERY edge specifically (E test B); the algebraically-
+special edge (C) and integrability edge (D) are different mechanisms — not claimed to all reduce to
+metric divergence. Frozen H-curvature and H-boundary both FALSE; the pre-registered "combination"
+outcome holds, sharpened to metric divergence. Next discriminant: a hemisphere (curved + finite
+boundary, predicted no effect).

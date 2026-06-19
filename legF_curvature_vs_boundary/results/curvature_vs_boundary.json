@@ -1,0 +1,35 @@
+{
+ "rows": {
+  "hyperbolic": {
+   "curvature": "curved",
+   "boundary": "boundary",
+   "bulk": 0.019417524401275647,
+   "edge": 0.07406246123678192,
+   "ratio": 3.814207192751942
+  },
+  "sphere": {
+   "curvature": "curved",
+   "boundary": "no_boundary",
+   "bulk": 0.009646687317896729,
+   "edge": 0.004700022524675146,
+   "ratio": 0.4872162193912484
+  },
+  "flat_disk": {
+   "curvature": "flat",
+   "boundary": "boundary",
+   "bulk": 0.018173336059010493,
+   "edge": 0.014154061255878389,
+   "ratio": 0.7788367094472282
+  },
+  "flat_torus": {
+   "curvature": "flat",
+   "boundary": "no_boundary",
+   "bulk": 0.010641676091222164,
+   "edge": 0.00544753837430937,
+   "ratio": 0.5119060501007728
+  }
+ },
+ "curved_show": 0.0,
+ "flat_quiet": 1.0,
+ "verdict": "COMBINATION \u2014 needs curvature AND a boundary (a conformal/horizon-like edge)."
+}
