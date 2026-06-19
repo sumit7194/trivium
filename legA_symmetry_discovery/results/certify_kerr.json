@@ -1,0 +1,9 @@
+{
+ "raw_resid": 0.00014735547730282406,
+ "K_scale": 5089.330217218436,
+ "norm_resid": 2.8953805513402296e-08,
+ "exact_kerrK_norm_resid": 7.194411757566924e-11,
+ "verdict": "EXISTS",
+ "tabula_verdict": "EXISTS",
+ "library": "L1"
+}

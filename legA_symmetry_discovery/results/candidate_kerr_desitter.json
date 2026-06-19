@@ -1,0 +1,15 @@
+{
+ "rung": "kerr_desitter",
+ "library": "L1",
+ "lam": 0.0,
+ "verdict": "EXISTS",
+ "heldout_varratio": 4.403327575334391e-12,
+ "coeffs": {
+  "c_ptheta2": 0.5507226264816035,
+  "c_cos2": 0.4440990644422271,
+  "c_cos2_E2": -0.4428117254917545,
+  "c_cos2_Lz2_csc2": 0.5508161085242133
+ },
+ "n_train_traj": 16,
+ "n_test_traj": 8
+}

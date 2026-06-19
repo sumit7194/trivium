@@ -408,3 +408,44 @@ of scope. See the Sessions 12–18 cut note above.
 
 **Housekeeping**: removed non-portable `~/.gemini/antigravity/brain` artifact-copy paths from
 findings docs and guarded them in code (best-effort, skipped when the path is absent).
+
+---
+
+## 2026-06-19 — Session 22: Move A built, run, and CLOSED (hidden-symmetry discovery pipeline)
+
+First leg of the Phase-2 roadmap (THE_BRIDGE §10.2). The inductive→deductive discovery
+pipeline, connecting capabilities both engines gained independently this week: tabula's
+distillation head (scripts 95–100) and ansatz's Carter / Killing–Yano oracles (§58/§69).
+**Supersedes legs 4 and 5c.**
+
+**Pre-registered then built** (additive bridge code, source repos untouched):
+- `export_geodesics.py` (ansatz venv) — the blind geodesic source. Builds each exact metric,
+  gates vacuum rungs with `ricci_numeric`, integrates geodesics via ansatz's `christoffel_numeric`,
+  writes ONLY trajectory data + manifest E, Lz (§3 blindness boundary).
+- `distill_invariant.py` (tabula venv) — reads only trajectories; the frozen library ladder
+  L1/L2/L3; split-by-trajectory held-out conservation (anti-leakage); emits candidate coeffs.
+- `certify_killing.py` (ansatz venv) — reconstructs K^μν from the coeffs, certifies ∇₍ₐK_bc₎.
+
+**Result — the pipeline closes; all four rungs AGREE, matching ground truth:**
+
+| Rung | tabula (blind) | ansatz (metric) | agree |
+|---|---|---|---|
+| Kerr | EXISTS (2.6e-18) | EXISTS (2.9e-8) | ✅ |
+| Kerr–Newman | EXISTS (9.3e-19) | EXISTS (3.1e-8) | ✅ |
+| Kerr–de Sitter | EXISTS (4.4e-12) | EXISTS (7.9e-4) | ✅ |
+| Bumpy quadrupole | DESTROYED (2.98e-2) | DESTROYED (14.6) | ✅ |
+
+EXISTS vs DESTROYED separated by 4+ orders of magnitude. **Bonus:** tabula recovered the exact
+textbook Carter coefficients blind — `(1, a², −a², 1)` with a²=0.36 (Kerr/KN, a=0.6) and a²=0.81
+(KdS, a=0.9), cosine 1.0000, never having been told the spin or seen the metric.
+
+**Honest notes (in FINDINGS):** (1) this is calibration on known answers — the instrument
+gate for Move D, not new physics. (2) The L1-vs-L2 *rational* sub-prediction did NOT land:
+Kerr–de Sitter solved by polynomial L1, because bound circular orbits require r < (3/Λ)^{1/3}
+and there the rational Carter correction (~0.03% at Λ=0.001) is sub-resolution — a real
+physical finding, anticipated by PREREG §6. (3) Logged deviations: KdS (a,Λ) chosen for bound
+orbits; certification threshold normalized (raw 1e-4 → scale-normalized 1e-3; decision is not
+threshold-sensitive given the 4-order gap); equatorial-circular launches.
+
+**Next: Move D** (frontier) — aim the validated pipeline at a metric with no known second
+invariant (rotating-EdGB / Johannsen). Move A's go/no-go gate: **GO.**

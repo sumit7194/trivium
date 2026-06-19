@@ -1,0 +1,9 @@
+{
+ "raw_resid": 422430.468400773,
+ "K_scale": 28844.450426396317,
+ "norm_resid": 14.645121059897045,
+ "exact_kerrK_norm_resid": 0.0031004731693230945,
+ "verdict": "DESTROYED",
+ "tabula_verdict": "DESTROYED",
+ "library": "L3"
+}

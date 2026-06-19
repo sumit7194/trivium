@@ -1,0 +1,15 @@
+{
+ "rung": "kerr_newman",
+ "library": "L1",
+ "lam": 0.0,
+ "verdict": "EXISTS",
+ "heldout_varratio": 9.295521206964688e-19,
+ "coeffs": {
+  "c_ptheta2": 0.6653077294275802,
+  "c_cos2": 0.23951117451830653,
+  "c_cos2_E2": -0.23951125879899698,
+  "c_cos2_Lz2_csc2": 0.6653077328224128
+ },
+ "n_train_traj": 19,
+ "n_test_traj": 9
+}

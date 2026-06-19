@@ -1,0 +1,15 @@
+{
+ "rung": "bumpy",
+ "library": "L3",
+ "lam": 0.0,
+ "verdict": "DESTROYED",
+ "heldout_varratio": 0.029836302977223957,
+ "coeffs": {
+  "c_ptheta2": -0.00038947288371981936,
+  "c_cos2": 0.6116101075156745,
+  "c_cos2_E2": -0.7348930079838424,
+  "c_cos2_Lz2_csc2": 0.002657762227606934
+ },
+ "n_train_traj": 18,
+ "n_test_traj": 9
+}
