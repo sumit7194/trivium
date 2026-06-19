@@ -449,3 +449,39 @@ threshold-sensitive given the 4-order gap); equatorial-circular launches.
 
 **Next: Move D** (frontier) — aim the validated pipeline at a metric with no known second
 invariant (rotating-EdGB / Johannsen). Move A's go/no-go gate: **GO.**
+
+---
+
+## 2026-06-19 — Session 23: Move D built, run, and CLOSED (integrability boundary)
+
+Second Phase-2 leg. **Pivot recorded:** the §10.2 menu named rotating-EdGB, but recon of
+ansatz's EdGB track (`scripts/19–22`, `docs/EDGB.md`) showed it is O(a) slow-rotation, where the
+Carter constant trivially survives via the spherical L² — not a frontier test. Retargeted to the
+genuinely-open question: where does Kerr's hidden symmetry die under a quadrupole deformation,
+swept ε=0→0.35, measured three independent ways.
+
+**Built** (additive bridge code; reuses Move A's validated machinery read-only):
+- `export_sweep.py` (ansatz venv) — sweeps ε, emits blind trajectories, computes SALI (chaos index).
+- `distill_sweep.py` (tabula venv, blind) — the approximate invariant per ε via the frozen ladder.
+- `certify_sweep.py` (ansatz venv) — the exact Killing-tensor residual per ε.
+- `plot_boundary.py` — the three-method figure.
+
+**Result — a three-boundary hierarchy (a principled disagreement = the finding):**
+
+| boundary | method | ε* |
+|---|---|---|
+| exact Killing tensor | ansatz residual | ≈ 0⁺ (dies at any ε>0) |
+| approximate invariant (KAM) | tabula held-out conservation | ≈ 0.07 |
+| chaos onset | SALI | > 0.35 (not reached; orbits stay regular) |
+
+"Is the deformed black hole integrable?" has three answers depending on what you mean. P1 (ε=0
+anchor) TRUE, P4 (gradual KAM transition) TRUE, **P3 (single agreed boundary) FALSE — in exactly
+the way PREREG §6 anticipated**: the two oracles measure exact vs approximate symmetry, and the
+gap quantifies the KAM regime. No single method sees the hierarchy; the three independent
+epistemologies (exact geometry, learned representation, dynamics) together do. Honest limits:
+tabula's middle boundary is resolution-dependent (ε_T=1e-2); one deformation family; chaos
+boundary only bounded; KAM persistence itself is textbook — the contribution is the three-way
+cross-validated picture.
+
+**Phase-2 status:** Moves A ✅ and D ✅ done. Remaining: B (numeric ringdown bridge), C
+(coordinate-free invariant cross-measure), Tier 3.

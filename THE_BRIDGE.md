@@ -210,7 +210,13 @@ count failed. Move A is built on the method that works.
 Each move follows the §2 discipline: pre-register the prediction and the agreement criterion,
 obtain each side blind, report disagreements as findings.
 
-#### Move A — the hidden-symmetry discovery pipeline  *(headline; supersedes legs 4 and 5c)*
+#### Move A — the hidden-symmetry discovery pipeline  *(✅ CLOSED 2026-06-19; supersedes legs 4 and 5c)*
+**Outcome:** the pipeline closed end-to-end. All four rungs agreed (Kerr/KN/Kerr-dS EXISTS,
+bumpy DESTROYED), EXISTS vs DESTROYED separated by 4+ orders of magnitude, and tabula recovered
+the *exact* textbook Carter coefficients `(1, a², −a², 1)` blind (cosine 1.0000), certified by
+ansatz. The rational-library sub-prediction did not land — Kerr-dS bound orbits require small Λ,
+where the rational correction is sub-resolution (a real physical finding). →
+[legA_symmetry_discovery/FINDINGS.md](legA_symmetry_discovery/FINDINGS.md). Original plan below.
 - **Question.** Can the inductive oracle *discover* a spacetime's hidden conserved quantity
   from trajectories alone, and the deductive oracle independently *certify* it from the metric
   — agreeing on which spacetimes have one and which do not?
@@ -259,25 +265,37 @@ obtain each side blind, report disagreements as findings.
 - **Validates.** Whether the inductive oracle's learned geometry aligns with exact
   coordinate-free truth — the §4A invariant cross-measure, now with a coordinate-proof reference.
 
-#### Move D — the frontier discovery  *(the prize; only after A passes calibration)*
-- **Question.** In a spacetime with **no known closed-form second invariant**, does tabula
-  propose one that ansatz certifies?
-- **Targets.** Rotating-EdGB (ansatz has only a slow-rotation closed-form fit; the Carter-analog
-  is genuinely open) or a Johannsen-type deformed Kerr.
-- **Discipline.** Run *only after* Move A passes on the calibration ladder — the instrument must
-  be validated on known answers before it is trusted on unknown ones. A certified new invariant
-  is a genuine result; a clean "no invariant exists" (tabula CERTIFY + ansatz residual fails) is
-  equally a result.
+#### Move D — the integrability boundary of a deformed black hole  *(✅ CLOSED 2026-06-19)*
+**Pivot (recorded):** the menu named rotating-EdGB, but recon showed ansatz's EdGB is *O(a)
+slow-rotation*, where the Carter constant trivially survives via the spherical L² — not a
+frontier test. We retargeted to the genuinely-open question: **where does Kerr's hidden symmetry
+die under a quadrupole deformation, swept ε=0→0.35, measured three independent ways** (tabula's
+blind distillation, ansatz's exact Killing residual, SALI chaos index).
+
+**Outcome — a three-boundary hierarchy (a principled disagreement = the finding).** "Is it
+integrable?" split into three answers: the **exact** Killing tensor (ansatz) dies at ε*≈0⁺; an
+**approximate** invariant (tabula) survives to ε≈0.07 (the gradual KAM transition); **chaos**
+(SALI) never sets in for ε≤0.35. The pre-registered single agreed boundary (P3) was *falsified
+in exactly the anticipated way* (PREREG §6) — no single method sees the hierarchy; only the
+three together do. →
+[legD_integrability_boundary/FINDINGS.md](legD_integrability_boundary/FINDINGS.md).
+
+*(The original "discover a brand-new invariant nobody has written down" framing still awaits a
+metric class where ansatz can supply a full — not slow-rotation — deformed metric whose Carter
+analog is suspected but unconfirmed; rotating EdGB at full spin, once ansatz reaches it, is the
+natural target.)*
 
 #### Tier 3 — cheap consistency checks (opportunistic, ~half-day each)
 - §75 area-theorem merger-consistency (M_f ≥ √(M₁²+M₂²)) against deepstrain event parameters.
 - §74 polarization mode-count (GR = 2 tensor modes) against measured polarization content.
 
-### 10.3 Order
-**A → B → D**, with **C** and Tier 3 opportunistic. A is the highest value with both halves
-already built; B is cheap and fixes the spine; D is the frontier and must wait for A's
-calibration. The calibration path is deliberately the rigorous one (ansatz as blind data
-source), per §10.0.
+### 10.3 Order / status
+**A ✅ → D ✅** done (2026-06-19). **Remaining: B** (numeric ringdown bridge — cheap, fixes the
+spine), then **C** (coordinate-free invariant cross-measure) and Tier 3 opportunistic. The
+calibration path was deliberately the rigorous one (ansatz as blind data source), per §10.0;
+Move A validated the instrument and Move D took it to a genuinely-open question. The next
+frontier step (a full-spin deformed metric with an unconfirmed Carter analog) waits on ansatz
+reaching beyond slow-rotation EdGB.
 
 ---
 
