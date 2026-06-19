@@ -243,7 +243,13 @@ where the rational correction is sub-resolution (a real physical finding). →
   re-derives *known* invariants (a methods milestone, not new physics); the new physics is
   Move D. This is the leg that retires the "conjecture handoff" overclaim by doing it properly.
 
-#### Move B — the numeric ringdown bridge  *(leg 3b; upgrades the spine's weakest joint)*
+#### Move B — the numeric ringdown bridge  *(✅ CLOSED 2026-06-19; leg 3b, upgrades the spine)*
+**Outcome:** established. Ansatz's eikonal Kerr QNM from the *exact metric* matches deepstrain's
+measured GW250114 220 to a few percent — quality factor Q₂₂₀ to 1–7%, Mω_R₂₂₀ to 3% — while the
+non-spinning Schwarzschild eikonal misses by 40–50% (so the agreement is the light ring, not a
+fit). `Ω_c·b_c = 1` exact: the LIGO ringdown and the EHT shadow are the same photon orbit. Leg 3's
+ansatz↔deepstrain link is now numeric, not propositional. →
+[legB_ringdown_bridge/FINDINGS.md](legB_ringdown_bridge/FINDINGS.md). Original plan below.
 - **Question.** Does ansatz's exact QNM structure agree numerically with deepstrain's measured
   GW250114 ringdown?
 - **Who.** Ansatz: `eikonal_qnm` (real frequency set by the photon-ring orbital frequency;
@@ -290,12 +296,12 @@ natural target.)*
 - §74 polarization mode-count (GR = 2 tensor modes) against measured polarization content.
 
 ### 10.3 Order / status
-**A ✅ → D ✅** done (2026-06-19). **Remaining: B** (numeric ringdown bridge — cheap, fixes the
-spine), then **C** (coordinate-free invariant cross-measure) and Tier 3 opportunistic. The
-calibration path was deliberately the rigorous one (ansatz as blind data source), per §10.0;
-Move A validated the instrument and Move D took it to a genuinely-open question. The next
-frontier step (a full-spin deformed metric with an unconfirmed Carter analog) waits on ansatz
-reaching beyond slow-rotation EdGB.
+**A ✅ · B ✅ · D ✅** done (2026-06-19). **Remaining: C** (coordinate-free invariant
+cross-measure) and Tier 3 opportunistic. Move A validated the discovery→verify instrument, Move
+D took it to a genuinely-open question (the three-boundary integrability hierarchy), and Move B
+made the spine's ringdown link numeric (eikonal Kerr QNM vs measured GW250114). The next frontier
+step (a full-spin deformed metric with an unconfirmed Carter analog) waits on ansatz reaching
+beyond slow-rotation EdGB.
 
 ---
 

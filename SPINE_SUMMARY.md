@@ -41,8 +41,11 @@ object** — and the one place they disagree is itself predicted and explained.
 
 - Family caveat. tabula's count was on charged-static RN (M,Q) in leg 1, and rotating Kerr (M,a) / KN (M,a,Q) in leg 1b; deepstrain's δ on
   rotating-vacuum Kerr (M,χ); ansatz proves both are 2-parameter.
-- No ansatz QNM module → leg 3's link is proposition-level (proof ↔ test), not a
-  numeric QNM bridge.
+- ~~No ansatz QNM module → leg 3's link is proposition-level (proof ↔ test), not a
+  numeric QNM bridge.~~ **Resolved (2026-06-19, Move B / leg 3b):** ansatz now computes the
+  eikonal Kerr QNM from the exact metric; it matches deepstrain's measured GW250114 220 to a few
+  percent (Q₂₂₀ 1–7%, Mω_R 3%), so leg 3's ringdown link is now numeric. See
+  `legB_ringdown_bridge/FINDINGS.md`.
 - No new physics. The contribution is method + end-to-end ownership + cross-validation,
   framed honestly (§7).
 

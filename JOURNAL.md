@@ -485,3 +485,37 @@ cross-validated picture.
 
 **Phase-2 status:** Moves A ✅ and D ✅ done. Remaining: B (numeric ringdown bridge), C
 (coordinate-free invariant cross-measure), Tier 3.
+
+---
+
+## 2026-06-19 — Session 24: Move B built, run, and CLOSED (numeric ringdown bridge / leg 3b)
+
+Third Phase-2 leg, and the one that upgrades the SPINE. Leg 3 closed the count-triangle but the
+ansatz↔deepstrain ringdown link was proposition-level (ansatz had no QNM module). It does now
+(§56/§72), so this leg makes the link numeric.
+
+**Built** (additive bridge code; reuses Move A's exact-metric machinery read-only):
+- `eikonal_kerr_qnm.py` (ansatz venv) — the eikonal Kerr QNM ω=mΩ_c−i(n+½)λ from the exact
+  metric via the Hamiltonian radial potential (Ω_c, λ from the prograde photon ring). Gated by
+  the Schwarzschild limit: reproduces Ω_c=λ=1/(3√3), Q=2, b_c=3√3, Ω_c·b_c=1 to machine precision.
+- `compare_ringdown.py` — reads deepstrain's measured GW250114 220 (read-only) and assembles the
+  comparison + frozen-prediction verdicts.
+- `plot_ringdown.py` — Q(χ), Mω_R(χ) with the measurement overlaid.
+
+**Result — all four predictions pass; the numeric ringdown bridge is ESTABLISHED:**
+- **Q₂₂₀ (M-independent, πfτ):** measured 4.00; ansatz eikonal 3.73 (χ=0.787) / 3.96 (χ=0.815)
+  → 1–7% (P1 <25% ✅).
+- **Mω_R₂₂₀:** measured 0.629; ansatz 0.609 → 3.1% (P2 <15% ✅).
+- **Spin essential (P3 ✅):** Schwarzschild (χ=0) is 40–50% off; the Kerr light-ring correction
+  closes it — the agreement is physics, not a fit.
+- **Ω_c·b_c = 1 exact (P4 ✅):** the LIGO ringdown and the EHT shadow are the same photon ring.
+
+Honest scope: eikonal (ℓ=2) carries a few-to-~15% intrinsic error vs Leaver — which IS the size
+of the residual gap; precise QNM needs Leaver (ansatz flags it doesn't do this). No new physics;
+the contribution is making the spine's ringdown link a real number cross-checked on real data.
+
+**Spine:** leg 3 → leg 3b; the count-triangle's measured leg now has a numeric ansatz
+cross-check. SPINE_SUMMARY "no QNM module" caveat resolved.
+
+**Phase-2 status:** Moves A ✅, B ✅, D ✅ done. Remaining: C (coordinate-free invariant
+cross-measure), Tier 3.
