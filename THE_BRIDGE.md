@@ -367,7 +367,18 @@ for *direct-exact* tasks** (A, B — ansatz computes from its exact metric, no n
 to observation precision). The recipe claim is withdrawn; the failure bought the real mechanism. →
 [legH_horizon_learnability/FINDINGS.md](legH_horizon_learnability/FINDINGS.md).
 
-### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F, falsification G, H)
+#### Move I — are the edges one mechanism, or several?  *(✅ CLOSED 2026-06-20; a falsified prediction → the taxonomy)*
+Tested whether all the "edges" reduce to one mechanism, via one discriminator: does the edge survive
+perfect observation? **Prediction I1 (the divergence edge vanishes at σ=0) was FALSIFIED** — it is
+5.69× at σ=0 — and chasing why gave the answer: it is **resolution-limited** (shrinks with data; the
+exact closed-form has zero error), so the exact form owns it and finite-resolution learning fails.
+**I2 held:** D's integrability edge is **physical** (var-ratio 5×10¹⁵× the noise floor on clean
+geodesics — the structure is genuinely gone). **Result — TWO kinds of edge:** recovery/resolution
+(structure exists, exact closed-form owns it, learning fails, noise defeats even exact) vs physical
+(structure absent). This reconciled F/G/H and corrected H's over-broad "neither owns it." →
+[legI_edge_taxonomy/FINDINGS.md](legI_edge_taxonomy/FINDINGS.md).
+
+### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F, falsification G, H, I)
 **A ✅ · B ✅ · C ✅ · D ✅ · Tier 3 ✅ · E ✅ · F ✅** (2026-06-19). Move A validated the
 discovery→verify instrument (blind recovery of the exact Carter constant); B made the spine's
 ringdown link numeric (eikonal Kerr QNM vs GW250114, a few %); D took the pipeline to a
@@ -384,14 +395,21 @@ mechanism for *recovery* tasks:** the edge there is **observation-noise amplific
 divergence** (`δQ ∝ (r−r_h)^{−p−1}δr`), which afflicts the exact construction *as much as* the learned
 one when both take a noisy observable as input. So "exact owns the edge" is true for **direct-exact**
 tasks (A, B — ansatz computes from its exact metric) but **false for noisy-recovery** tasks (E, F, H —
-the edge belongs to observation precision, not to exact-vs-learned). The recurring finding is now two
-honest statements: (i) a learned representation loses exact structure at edges where the metric/
-distance **diverges or degenerates** (the horizon, the light-ring, the algebraically-special and
-integrability limits); (ii) in *recovery from noisy observation*, that edge is owned by observation
-precision, not by any oracle. Survived adversarial falsification (G); refined by a failed recipe (H).
-Open frontier: a full-spin deformed metric with an unconfirmed Carter analog (awaits ansatz beyond
-slow-rotation EdGB); whether the edge *types* (divergence, algebraic-speciality, integrability-loss)
-are one mechanism or three; and whether the "direct-exact vs noisy-recovery" split is itself general.
+the edge belongs to observation precision, not to exact-vs-learned). **Move I then resolved the
+taxonomy** (and corrected H's over-broad reading): the edges are **TWO genuinely different kinds.**
+**(1) Recovery/resolution edges** (the metric/distance diverges or a signal vanishes — F, H, C): the
+exact structure *exists* — the **exact closed-form owns the edge** (zero error at exact input), while
+finite-resolution *learning* fails at the diverging gradient (shrinking only slowly with data), and
+*observation noise* defeats even the exact form (H). **(2) Physical edges** (the exact structure
+*ceases to exist* — D's integrability loss, the exact Killing tensor gone for ε>0): nothing recovers
+what is not there; the var-ratio is physical (5×10¹⁵× the noise floor on clean geodesics). So the
+honest final synthesis is **three statements**: a learned representation loses exact structure at edges
+where the metric **diverges/degenerates**; for *recovery* edges the **exact closed-form owns the edge**
+(learning fails; noisy input defeats even exact); for *physical* edges the structure is **absent**, and
+in **direct-exact** tasks (A, B) there is no edge at all. Survived adversarial falsification (G);
+refined by a failed recipe (H) and a falsified prediction (I). Open frontier: a full-spin deformed
+metric with an unconfirmed Carter analog (awaits ansatz beyond slow-rotation EdGB); whether *every*
+edge in physics is one of these two kinds.
 
 ---
 

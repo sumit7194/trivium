@@ -738,3 +738,27 @@ method-independent, not a learned-vs-exact effect.
 
 A failed recipe bought a real mechanism and corrected an over-broad reading. The recurring finding is
 now two honest statements (THE_BRIDGE §10.3).
+
+---
+
+## 2026-06-20 — Session 30: Move I — are the edges one mechanism? (a falsified prediction → the taxonomy)
+
+Tested the deepest open question via one discriminator: does an edge survive PERFECT observation?
+
+- **I1 FALSIFIED (the valuable surprise):** predicted the F/H divergence edge would vanish at σ=0
+  (edge/bulk ≤1.3). It did NOT — 5.69× at σ=0, even larger than at σ=1e-2. Chasing why: a data-size
+  sweep showed it SHRINKS with N (6.96×→3.80× over 4k→256k) and the exact closed-form has ZERO error.
+  So it is RESOLUTION-limited, not pure observation noise — the exact form OWNS it, finite-resolution
+  LEARNING fails at the diverging gradient. This corrects Move H's over-broad "neither owns the edge."
+- **I2 held:** D's integrability edge is PHYSICAL — on clean geodesics the var-ratio is 2.6e-18 at
+  ε=0 (integration floor) but 1.3e-2 at ε=0.08 (5e15× higher). The deformed torus genuinely admits no
+  low-degree invariant; the structure is GONE.
+
+**Result — TWO kinds of edge (the taxonomy):**
+1. RECOVERY/RESOLUTION edges (F, H, C): exact structure EXISTS; exact closed-form owns it (0 error);
+   finite-resolution learning fails at the diverging gradient/vanishing signal; observation noise
+   defeats even the exact form (H). "Exact owns the edge" holds for exact input.
+2. PHYSICAL edges (D): exact structure ABSENT for ε>0; nothing recovers what is not there.
+
+Reconciles A/B (direct-exact, no edge), F/H (recovery edge), D (physical edge) into one coherent
+three-statement synthesis (THE_BRIDGE §10.3). A falsified prediction bought the correct taxonomy.
