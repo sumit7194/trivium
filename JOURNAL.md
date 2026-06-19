@@ -716,3 +716,25 @@ Honest take: a new direction run with the same rigour that half-worked — the d
 learnability edge) is a genuine GR confirmation; the constructive recipe does not deliver for a mild
 divergence + leading-order asymptotic, and we drop it. Future: stronger divergences / higher-order
 asymptotics might flip H3. THE_BRIDGE §10 updated.
+
+## 2026-06-20 — Session 29 (cont.): Move H divergence-strength sweep → refines the synthesis
+
+Completed the Move H open question (does divergence STRENGTH determine the recipe's value?). Swept
+Q=(r−r_h)^(−p), p=0.5→3, with the exact single-term asymptotic. The hybrid does NOT reliably win at
+any strength (learned wins p=0.5,1,2,3; ties at p=1.5).
+
+**The mechanism (the valuable payoff of the failed recipe):** near a divergence, the exact asymptotic
+evaluated at NOISY position is just as catastrophically wrong as the learned emulator —
+δQ ∝ p(r−r_h)^(−p−1)δr → ∞. So the edge failure is OBSERVATION-NOISE AMPLIFICATION at the divergence,
+method-independent, not a learned-vs-exact effect.
+
+**Refines the "exact owns the edge" synthesis (honest correction, propagated to THE_BRIDGE §10.3):**
+- DIRECT-EXACT tasks (A, B — ansatz computes from its exact metric, no noisy intermediate): exact is
+  precise everywhere; "exact owns the edge" holds.
+- NOISY-RECOVERY tasks (E, F, H — recover a quantity from noisy observation): the edge belongs to
+  OBSERVATION PRECISION; both learned and exact-from-noisy-input fail there together. "Exact owns the
+  edge" does NOT hold. (This explains Move G/Test-4: the edge survives the intrinsic coordinate
+  because it is observational, not coordinate-dependent.)
+
+A failed recipe bought a real mechanism and corrected an over-broad reading. The recurring finding is
+now two honest statements (THE_BRIDGE §10.3).

@@ -51,6 +51,28 @@ The recipe would plausibly help only for a *stronger* divergence (where the lear
 catastrophic) or with a *higher-order* asymptotic (accurate over a wider band) — neither claimed here;
 both are future work.
 
+## Why the recipe *really* fails — and how it refines the synthesis (the valuable part)
+
+A controlled divergence-strength sweep (`Q = (r−r_h)^{−p}`, exact single-term asymptotic, `p=0.5→3`)
+shows the hybrid does **not** reliably win at *any* strength — learned wins at p=0.5, 1, 2, 3; the
+hybrid only ties near p=1.5. The mechanism is the insight: near a divergence, **the exact asymptotic
+evaluated at NOISY position is just as catastrophically wrong as the learned emulator** —
+`δQ ∝ p·(r−r_h)^{−p−1}·δr → ∞` as `r→r_h`. The edge failure is **observation-noise amplification at
+the divergence**, afflicting *any* method that takes the noisy observable as input. It is not a
+learned-vs-exact effect at all.
+
+**This bounds the bridge's "exact owns the edge" synthesis honestly:**
+- When the exact structure is used **directly** (ansatz computes from its exact metric — Moves A, B),
+  there is no noisy intermediate, so exact computation is precise everywhere, including the edge.
+- When a quantity must be **recovered from noisy observations** (Moves E, F, H), the edge belongs to
+  **observation precision**, not to exact-vs-learned — both fail there together. So "exact owns the
+  edge" holds for *direct-exact* tasks, **not** for *noisy-recovery* tasks. Move G/Test-4's "the edge
+  survives the intrinsic coordinate" is now explained: the edge is observational (noise × divergence),
+  which the coordinate choice cannot remove.
+
+This is the honest payoff of a failed recipe: it identified the real mechanism (noise amplification at
+a divergence) and corrected an over-broad reading of the synthesis.
+
 ## H2 (failure tracks the divergence) — weak
 
 The local learned error correlates with the metric factor `Q` but only modestly (Spearman 0.43

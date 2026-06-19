@@ -358,9 +358,13 @@ horizon. **Prediction — SUPPORTED:** a learned emulator of a horizon-diverging
 edge error **85–88×** the bulk, while a flat null (`Q=r`) shows none. So the horizon genuinely is a
 learnability edge; the abstract principle makes a correct, controlled GR prediction. **Recipe —
 REFUTED & dropped:** the hoped-for bulk-learn/exact-edge hybrid beats the pure-asymptotic emulator
-but **loses to pure-learned** at every matching radius (the mild `1/√` divergence leaves the learned
-edge error modest ~5%, and a leading-order asymptotic can't beat it). Per pre-registration the recipe
-claim is withdrawn — reported as a clean negative, not tuned into success. →
+but **loses to pure-learned** at every matching radius and at every divergence strength (p=0.5–3).
+The reason *refines the whole synthesis*: near a divergence the **exact asymptotic evaluated at noisy
+position is just as wrong as the learned emulator** (`δQ ∝ (r−r_h)^{−p−1}δr → ∞`), so the edge failure
+is **observation-noise amplification**, not learned-vs-exact. Hence **"exact owns the edge" holds only
+for *direct-exact* tasks** (A, B — ansatz computes from its exact metric, no noisy intermediate), and
+**not for *noisy-recovery* tasks** (E, F, H — both methods fail at the edge together; the edge belongs
+to observation precision). The recipe claim is withdrawn; the failure bought the real mechanism. →
 [legH_horizon_learnability/FINDINGS.md](legH_horizon_learnability/FINDINGS.md).
 
 ### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F, falsification G, H)
@@ -375,12 +379,19 @@ whether the meta-findings survive outside GR; F isolated the driver of the bulk/
 the bulk and loses it at the *edge* — the horizon/light-ring (B), the algebraically-special limit
 (C), the integrability boundary (D). For *distance recovery* specifically (E/F/G), the edge is
 pinned precisely: it is wherever the **metric/distance diverges** (a black-hole horizon; curvature is
-incidental — a flat space with a diverging distance shows it too, G/3c), and the effect is
-fundamental but milder in the right coordinates (G/4). The recurring finding is about **edges where
-the exact structure diverges or degenerates**, and it survived adversarial falsification (G). Open
-frontier: a full-spin deformed metric with an unconfirmed Carter analog (awaits ansatz beyond
-slow-rotation EdGB); a complete adversarial pass on the spine and Moves C/D/E; whether the three edge
-*types* (divergence, algebraic-speciality, integrability-loss) are one mechanism or three.
+incidental — a flat space with a diverging distance shows it too, G/3c). **But Move H corrects the
+mechanism for *recovery* tasks:** the edge there is **observation-noise amplification at the
+divergence** (`δQ ∝ (r−r_h)^{−p−1}δr`), which afflicts the exact construction *as much as* the learned
+one when both take a noisy observable as input. So "exact owns the edge" is true for **direct-exact**
+tasks (A, B — ansatz computes from its exact metric) but **false for noisy-recovery** tasks (E, F, H —
+the edge belongs to observation precision, not to exact-vs-learned). The recurring finding is now two
+honest statements: (i) a learned representation loses exact structure at edges where the metric/
+distance **diverges or degenerates** (the horizon, the light-ring, the algebraically-special and
+integrability limits); (ii) in *recovery from noisy observation*, that edge is owned by observation
+precision, not by any oracle. Survived adversarial falsification (G); refined by a failed recipe (H).
+Open frontier: a full-spin deformed metric with an unconfirmed Carter analog (awaits ansatz beyond
+slow-rotation EdGB); whether the edge *types* (divergence, algebraic-speciality, integrability-loss)
+are one mechanism or three; and whether the "direct-exact vs noisy-recovery" split is itself general.
 
 ---
 
