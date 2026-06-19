@@ -1,0 +1,40 @@
+{
+ "schwarzschild": {
+  "learned_bulk": 0.0006132594205681706,
+  "learned_edge": 0.05209921151151533,
+  "learned_edge_over_bulk": 84.95460446942116,
+  "asym_bulk": 0.442134629332523,
+  "asym_edge": 0.07136400778587364,
+  "hybrid_bulk": 0.0006132594205681706,
+  "hybrid_edge": 0.07136400778587364,
+  "spearman_err_vs_Q": 0.4271428571428571,
+  "max_learned": 0.05209921151151533,
+  "max_asym": 0.442134629332523,
+  "max_hybrid": 0.07136400778587364
+ },
+ "kerr": {
+  "learned_bulk": 0.0005996403134632631,
+  "learned_edge": 0.05288807220202786,
+  "learned_edge_over_bulk": 88.19966072088988,
+  "asym_bulk": 0.44331476297979183,
+  "asym_edge": 0.06313003286225749,
+  "hybrid_bulk": 0.0005996403134632631,
+  "hybrid_edge": 0.06313003286225749,
+  "spearman_err_vs_Q": 0.5550981513245663,
+  "max_learned": 0.05288807220202786,
+  "max_asym": 0.44331476297979183,
+  "max_hybrid": 0.06313003286225749
+ },
+ "flat_null": {
+  "learned_bulk": 0.003192679229289026,
+  "learned_edge": 0.0014795846896090592,
+  "learned_edge_over_bulk": 0.46343042421413133
+ },
+ "verdicts": {
+  "H1": true,
+  "H2": false,
+  "H3": false,
+  "flat_null_ok": true,
+  "supported": false
+ }
+}

@@ -691,3 +691,28 @@ boundary located. Propagated to THE_BRIDGE §10 and legD FINDINGS.
 (qualified ±1), A, B, D. Changed/qualified by attacks: F (→divergence), synthesis (→coordinate-
 dependent), spine precision (→±1 curvature inflation), D (values threshold-dependent, ordering robust).
 C and E left un-attacked but already self-bounded (mixed results). The pass is essentially complete.
+
+---
+
+## 2026-06-20 — Session 29: Move H — the horizon is a learnability edge (new direction; mixed)
+
+Took the battle-tested edges finding from diagnostic to predictive + constructive on the REAL
+horizon. Emulated a horizon-diverging GR quantity (1/√(−g_tt) Schwarzschild, √(g_rr) Kerr, from
+ansatz's exact metric) from noisy position, with three emulators (pure-learned, pure-asymptotic,
+hybrid) + a flat null.
+
+- **H1 (prediction) — SUPPORTED strongly:** the learned emulator fails AT the horizon — edge error
+  85× (Schwarzschild), 88× (Kerr) the bulk; the flat null (Q=r) shows none (0.5×). The horizon is
+  genuinely a learnability edge; the abstract principle makes a correct controlled GR prediction.
+- **H3 (the recipe) — REFUTED & dropped:** the bulk-learn/exact-edge hybrid beats pure-asymptotic
+  (0.07 vs 0.44) but LOSES to pure-learned (0.07 vs 0.05). A matching-radius sweep confirms no
+  matching beats pure-learned; a crossover analysis shows the leading-order asymptotic and the
+  learned emulator trade off point-by-point at the horizon. The mild 1/√ divergence leaves the
+  learned edge error modest (~5%), so leading-order asymptotics can't improve on it. Per the
+  pre-registration, the recipe claim is WITHDRAWN — reported as a clean negative, not tuned.
+- **H2 weak** (err~Q Spearman 0.43/0.56, <0.8).
+
+Honest take: a new direction run with the same rigour that half-worked — the diagnostic (horizon =
+learnability edge) is a genuine GR confirmation; the constructive recipe does not deliver for a mild
+divergence + leading-order asymptotic, and we drop it. Future: stronger divergences / higher-order
+asymptotics might flip H3. THE_BRIDGE §10 updated.

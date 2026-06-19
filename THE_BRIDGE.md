@@ -351,7 +351,19 @@ survived & was strengthened:** the three-boundary hierarchy is real *as an order
 disagree at the same ε — the KAM band), SALI was validated on a chaotic control, and the chaos
 boundary was *located* at ε≈1.0. → [legG_falsification/FINDINGS.md](legG_falsification/FINDINGS.md).
 
-### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F, falsification G)
+#### Move H — the horizon is a learnability edge  *(◐ CLOSED 2026-06-20; prediction holds, recipe refuted)*
+Took the (battle-tested) edges finding from diagnostic to predictive + constructive on the *real*
+horizon. **Prediction — SUPPORTED:** a learned emulator of a horizon-diverging GR quantity
+(`1/√(−g_tt)` Schwarzschild, `√(g_rr)` Kerr, from ansatz's exact metric) fails *at* the horizon —
+edge error **85–88×** the bulk, while a flat null (`Q=r`) shows none. So the horizon genuinely is a
+learnability edge; the abstract principle makes a correct, controlled GR prediction. **Recipe —
+REFUTED & dropped:** the hoped-for bulk-learn/exact-edge hybrid beats the pure-asymptotic emulator
+but **loses to pure-learned** at every matching radius (the mild `1/√` divergence leaves the learned
+edge error modest ~5%, and a leading-order asymptotic can't beat it). Per pre-registration the recipe
+claim is withdrawn — reported as a clean negative, not tuned into success. →
+[legH_horizon_learnability/FINDINGS.md](legH_horizon_learnability/FINDINGS.md).
+
+### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F, falsification G, H)
 **A ✅ · B ✅ · C ✅ · D ✅ · Tier 3 ✅ · E ✅ · F ✅** (2026-06-19). Move A validated the
 discovery→verify instrument (blind recovery of the exact Carter constant); B made the spine's
 ringdown link numeric (eikonal Kerr QNM vs GW250114, a few %); D took the pipeline to a
