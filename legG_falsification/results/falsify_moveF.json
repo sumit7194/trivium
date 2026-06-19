@@ -1,0 +1,11 @@
+{
+ "hyperbolic_baseline": 3.814207192751942,
+ "hemisphere": 0.44605868171971474,
+ "unbounded_flat": 0.7771577062508768,
+ "flat_diverging": 4.49838632116374,
+ "hyperbolic_from_intrinsic_r": 1.8926206036621103,
+ "interpretation": {
+  "F_survives_as_divergence": 1.0,
+  "edge_fundamental": 1.0
+ }
+}

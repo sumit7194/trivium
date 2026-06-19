@@ -327,8 +327,22 @@ nor a boundary alone**: the driver is a **conformal boundary where the metric *d
 space with unbounded distance). That is exactly a **black-hole horizon** (diverging proper distance
 / the near-horizon hyperbolic throat) — a sharper and more GR-relevant statement than "curvature."
 → [legF_curvature_vs_boundary/FINDINGS.md](legF_curvature_vs_boundary/FINDINGS.md).
+*(Sharpened again by Move G/Test 3c: even "conformal boundary" overstates it — a **flat** space with
+a **diverging distance** fires (4.5×), so curvature is incidental; the driver is the **metric/distance
+divergence** itself.)*
 
-### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F)
+#### Move G — adversarial falsification  *(✅ CLOSED 2026-06-20; tried to BREAK the main claims)*
+A deliberate break-attempt, outcome-neutral. **Move A survived** two attacks: it returns DESTROYED on
+noise/shuffled/scrambled data (no hallucinated invariants) and recovers the **true a² to 0.0% across
+spins 0.1–0.9** (genuine spin measurement, not a fixed answer). **Move B survived:** the measured Q and
+Mω_R independently imply the *same* spin (χ=0.818 vs 0.816, agree to 0.003), a real two-observable
+consistency, not a one-parameter fit. **Two claims were CHANGED by the attacks** (the sign of honest
+falsification): Move F's "curvature/conformal-boundary" → **pure metric divergence** (a flat space with
+a diverging distance fires; a curved space without divergence does not); and the synthesis's edge is
+**fundamental but coordinate-dependent in severity** (it persists from the intrinsic coordinate at
+1.89× but is 2× milder than in the embedding coordinates). → [legG_falsification/FINDINGS.md](legG_falsification/FINDINGS.md).
+
+### 10.3 Order / status — Phase 2 COMPLETE (+ explorations E, F, falsification G)
 **A ✅ · B ✅ · C ✅ · D ✅ · Tier 3 ✅ · E ✅ · F ✅** (2026-06-19). Move A validated the
 discovery→verify instrument (blind recovery of the exact Carter constant); B made the spine's
 ringdown link numeric (eikonal Kerr QNM vs GW250114, a few %); D took the pipeline to a
@@ -336,14 +350,16 @@ genuinely-open question (the three-boundary integrability hierarchy); C cross-me
 coordinate-free invariant (recovered in the bulk, not at the algebraically-special edge); E tested
 whether the meta-findings survive outside GR; F isolated the driver of the bulk/edge effect to a
 **conformal boundary where the metric diverges** (not curvature generically — correcting E).
-**Through-line:** a learned representation recovers an exact structure in the bulk and loses it at
-the *edge* — the horizon/light-ring (B), the algebraically-special limit (C), the integrability
-boundary (D), and — pinned by F — specifically a **conformal/horizon-like boundary where the metric
-diverges** for distance recovery (E/F). The bridge's recurring finding is about **edges of curved
-structure**, with the distance-recovery edge now identified as a metric-divergence boundary. Open
+**Through-line (as corrected by F and G):** a learned representation recovers an exact structure in
+the bulk and loses it at the *edge* — the horizon/light-ring (B), the algebraically-special limit
+(C), the integrability boundary (D). For *distance recovery* specifically (E/F/G), the edge is
+pinned precisely: it is wherever the **metric/distance diverges** (a black-hole horizon; curvature is
+incidental — a flat space with a diverging distance shows it too, G/3c), and the effect is
+fundamental but milder in the right coordinates (G/4). The recurring finding is about **edges where
+the exact structure diverges or degenerates**, and it survived adversarial falsification (G). Open
 frontier: a full-spin deformed metric with an unconfirmed Carter analog (awaits ansatz beyond
-slow-rotation EdGB); the hemisphere control (curved + finite-metric boundary, predicted: no effect)
-to finish nailing F; unifying the different edge types across C/D/E/F.
+slow-rotation EdGB); a complete adversarial pass on the spine and Moves C/D/E; whether the three edge
+*types* (divergence, algebraic-speciality, integrability-loss) are one mechanism or three.
 
 ---
 

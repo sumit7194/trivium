@@ -1,0 +1,20 @@
+{
+ "positive_real_kerr": {
+  "verdict": "EXISTS",
+  "varratio": 2.609614961627205e-18
+ },
+ "noise": {
+  "verdict": "DESTROYED",
+  "varratio": 0.9939720058129695
+ },
+ "shuffle": {
+  "verdict": "DESTROYED",
+  "varratio": 0.21139867029519668
+ },
+ "scramble": {
+  "verdict": "DESTROYED",
+  "varratio": 0.9965045277922193
+ },
+ "hallucinated_on": [],
+ "survived": true
+}

@@ -619,3 +619,33 @@ special edge (C) and integrability edge (D) are different mechanisms — not cla
 metric divergence. Frozen H-curvature and H-boundary both FALSE; the pre-registered "combination"
 outcome holds, sharpened to metric divergence. Next discriminant: a hemisphere (curved + finite
 boundary, predicted no effect).
+
+---
+
+## 2026-06-20 — Session 28: Move G — adversarial falsification of the main claims
+
+User's directive: stop confirming, try to BREAK the claims; no bias, no test with a result in mind.
+Ran genuine negative controls / break-attempts and report raw outcomes.
+
+**Built** `falsify_moveA.py` (Test 1), `export_multispin.py`+`falsify_moveA_test2.py` (Test 2),
+`falsify_moveB.py`, `falsify_moveF.py` (Tests 3, 4). All reuse the REAL Move A/B/F machinery
+read-only; only the inputs/controls change.
+
+**Scorecard:**
+- **Test 1 (Move A hallucination) — SURVIVED.** noise → DESTROYED (0.99), shuffled p_θ → DESTROYED
+  (0.21), scrambled labels → DESTROYED (1.00); real Kerr → EXISTS (2.6e-18). No false invariants.
+- **Test 2 (Move A generalization) — SURVIVED.** recovered a² = true a² to 0.0% across spins
+  0.1–0.9, correlation 1.0000. Genuine spin measurement, not a fixed answer.
+- **Move B (two-observable consistency) — SURVIVED.** measured Q → χ=0.818, measured Mω_R → χ=0.816
+  (agree to 0.003, both in the measured CI). Not a one-parameter fit.
+- **Test 3 (Move F mechanism) — SURVIVED & SHARPENED.** hemisphere 0.45× (null), unbounded-flat
+  0.78× (null), but **flat-with-diverging-distance 4.50× (FIRES)**. So curvature is IRRELEVANT —
+  the driver is the **metric/distance divergence** itself. Corrects F (and E) once more.
+- **Test 4 (synthesis) — SURVIVED, qualified.** edge from intrinsic radius = 1.89× (still hard, so
+  fundamental) but 2× milder than 3.81× in embedding coords (severity is coordinate-dependent).
+
+**Honest read:** the discovery→verify pipeline (A) and ringdown bridge (B) are robust to genuine
+attack; two tests CHANGED the claims (F: curvature→divergence; synthesis: edge fundamental but
+coordinate-dependent severity) — the signature of real falsification, not confirmation theatre.
+**Scope (recorded):** did NOT separately re-attack the spine or Moves C/D/E; "survived" = "survived
+these attacks", not "proven". Corrections propagated to THE_BRIDGE §10.
