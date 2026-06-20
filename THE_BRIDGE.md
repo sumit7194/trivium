@@ -411,6 +411,28 @@ refined by a failed recipe (H) and a falsified prediction (I). Open frontier: a 
 metric with an unconfirmed Carter analog (awaits ansatz beyond slow-rotation EdGB); whether *every*
 edge in physics is one of these two kinds.
 
+### 10.4 The loop closes — source-project upgrades feed back (2026-06-21)
+
+The bridge's own review fed concrete upgrades back into the source repos, and those now upgrade the
+bridge legs in return — the cross-validation cycle running both directions:
+- **ansatz** built §77 (precise Leaver QNM + the 221 overtone), §78 (symbolic Killing-tensor
+  verifier), §79 (geodesic + chaos lens), §80 (Kerr Petrov), §82 (integrability frontier), §83
+  (tetrad-free Weyl) — essentially the whole bridge-driven list.
+- **deepstrain** built §12 (multi-event δ stacking, σ 0.27→0.095), echoes §11 (non-detection →
+  exclusion curves), §08 N=300 (the underpowered injection fix), §13/§14 (more events + the δ SNR wall).
+
+**Bridge legs upgraded by these:**
+- **Move A v2 — a PROOF.** §78 re-certifies tabula's blind-distilled Carter constant *symbolically*
+  (`∇₍ₐK_bc₎≡0` for all M,a) — the discovery→verify pipeline ends in a theorem, not a 1e-8 residual.
+- **Move B v2 — precise & numeric.** §77's exact Leaver 220 inversion reproduces deepstrain's remnant
+  (two independent QNM codes agree); the 221 overtone (eikonal had none) gives the no-hair δ = −0.159,
+  **independently matching deepstrain's measured δ = −0.151 to 0.008**, Kerr-consistent; §12 tightens
+  σ(δ) to 0.095 over 8 events. Leg 3's no-hair link is now a precise two-mode comparison.
+- **Independent convergence (Move D ↔ ansatz §82).** From the *metric/symbolic* side, ansatz §82
+  deformed Kerr and found the canonical Carter tensor is no longer Killing yet **no detectable chaos**,
+  fate **undetermined** — exactly the bridge's Move D hierarchy / Move I "physical edge, KAM-robust"
+  conclusion, reached by a completely independent route. Evidence, not echo, at the meta level.
+
 ---
 
 *Independence got you three clean instruments. The bridge is where you let them read the same thing — once, carefully, blind — and see if the universe gives the same answer three ways.*

@@ -762,3 +762,27 @@ Tested the deepest open question via one discriminator: does an edge survive PER
 
 Reconciles A/B (direct-exact, no edge), F/H (recovery edge), D (physical edge) into one coherent
 three-statement synthesis (THE_BRIDGE §10.3). A falsified prediction bought the correct taxonomy.
+
+---
+
+## 2026-06-21 — Session 31: source-project upgrades feed back → Move A v2 (proof) + Move B v2 (precise)
+
+Checked the three sister projects — the user implemented essentially every bridge-driven suggestion
+(ansatz §77 precise QNM, §78 symbolic Killing verifier, §79 chaos lens, §80 Kerr Petrov, §82
+integrability frontier, §83 tetrad-free Weyl; deepstrain §12 multi-event δ stacking, echoes §11
+exclusion limits, §08 N=300, §13/§14 more events + δ SNR wall). Used them to upgrade the bridge:
+
+- **Move A v2 (`certify_symbolic.py`):** §78 re-certifies tabula's blind Carter discovery
+  SYMBOLICALLY — ∇₍ₐK_bc₎≡0 for all M,a (control rejects a non-Killing tensor). The discovery→verify
+  pipeline now ends in a PROOF, not a 1e-8 numeric residual. (a² recovered 0.360 Kerr/KN, 0.804 KdS,
+  cosine 1.0000.)
+- **Move B v2 (`precise_ringdown.py`):** §77's exact Leaver upgrades the eikonal ringdown bridge.
+  220 inversion → (M,χ)=(74.8,0.815), reproducing deepstrain's 220-fit (two independent QNM codes
+  agree). The 221 overtone (eikonal had none) gives the no-hair δ=−0.159, INDEPENDENTLY matching
+  deepstrain's NPE-measured δ=−0.151 to 0.008, Kerr-consistent; §12 stacking σ(δ) 0.274→0.095.
+- **Independent convergence (Move D ↔ ansatz §82):** ansatz independently deformed Kerr and found
+  the canonical Carter tensor broken but no detectable chaos, fate undetermined — exactly the bridge's
+  Move D/Move I conclusion, from the metric/symbolic side. Evidence, not echo, at the meta level.
+
+The cross-validation cycle now runs both ways: bridge review → source upgrades → better bridge legs.
+THE_BRIDGE §10.4 added; legA/legB FINDINGS updated with the v2 sections.

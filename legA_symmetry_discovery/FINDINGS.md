@@ -98,6 +98,17 @@ four-order-of-magnitude separation, and the distilled coefficients match the tex
 constant exactly. The pipeline can now be aimed at a metric with no known second invariant
 (rotating-EdGB / Johannsen) — Move D.
 
+## Update (2026-06-21) — Move A v2: the certification is now a PROOF
+
+ansatz gained a **symbolic** Killing-tensor verifier (§78, bridge-driven), so Move A's certification
+is upgraded from a numeric residual (~1e-8) to a **theorem**: tabula discovered the Carter
+coefficients `(1, a², −a², 1)` blind (cosine 1.0000 to textbook; a² recovered — 0.360 for Kerr/KN,
+0.804 for Kerr-dS), and ansatz §78 now certifies the identified Killing tensor satisfies
+`∇₍ₐK_bc₎ ≡ 0` **symbolically for all M, a** (control: a non-Killing tensor is correctly rejected). The
+discovery→verify pipeline now ends in a proof, not a measurement. (KN/Kerr-dS stay numerically
+certified above; their symbolic proofs — KN's Q-shift, Kerr-dS's rational Δ_θ — are the next step.)
+See `code/certify_symbolic.py`, `results/certify_symbolic.json`.
+
 ## Artifacts
 - `code/export_geodesics.py` — ansatz side: builds each exact metric (read-only via ansatz's
   numeric engine), gates vacuum rungs with `ricci_numeric`, integrates geodesics, writes only

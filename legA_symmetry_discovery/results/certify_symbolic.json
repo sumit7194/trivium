@@ -1,0 +1,6 @@
+{
+ "kerr_carter_residual": "0",
+ "is_killing_tensor_symbolic": true,
+ "non_killing_rejected": true,
+ "certification_upgraded_to_proof": true
+}

@@ -68,6 +68,25 @@ The §5 count-triangle's measured leg now has a numeric ansatz cross-check: the 
 whose no-hair δ≈0 says "2 numbers" also rings at the frequency ansatz's exact light ring predicts.
 **Leg 3 → leg 3b: the ringdown bridge is numeric.**
 
+## Update (2026-06-21) — Move B v2: precise (Leaver) ringdown + the numeric no-hair test
+
+ansatz gained the **precise QNM oracle** (§77, Leaver via `qnm`, bridge-driven), so the spine's
+ringdown link is upgraded from the eikonal (few-to-15%) to an exact, two-mode, numeric no-hair test:
+- **The 220 inversion reproduces deepstrain's own remnant.** Inverting the measured 220 with exact
+  Leaver (its M-independent Q fixes χ, then f fixes M) gives **(M, χ) = (74.8, 0.815)** — matching
+  deepstrain's 220-fit exactly (two *independent* QNM codes, ansatz's `qnm` and deepstrain's `rdlib`,
+  agree).
+- **The 221 overtone — which the eikonal could not produce — is now a numeric test.** The exact-Leaver
+  Kerr 221 prediction (f=254.5 Hz) vs the measured 221 (f=214.1 Hz) gives the no-hair deviation
+  `δ ≡ (ω₂₂₁_meas − ω₂₂₁_Kerr)/ω₂₂₁_Kerr` (deepstrain's definition) = **−0.159**, which **independently
+  matches deepstrain's NPE-measured δ = −0.151 [−0.46,+0.32] to 0.008**, and is **Kerr-consistent**
+  (δ=0 in the 90% CI).
+- **Multi-event tightening (§12):** stacking sharpens `σ(δ)` from 0.274 (1 event) to **0.095 (8 events)**.
+
+So leg 3's no-hair link is now a precise, numeric, two-mode comparison whose δ ansatz and deepstrain
+reproduce by independent routes — a real cross-validation upgrade over the v1 light-ring-level test.
+See `code/precise_ringdown.py`, `results/precise_ringdown.json`.
+
 ## Artifacts
 - `code/eikonal_kerr_qnm.py` — ansatz side: eikonal Kerr QNM from the exact metric, Schwarzschild-gated.
 - `code/compare_ringdown.py` — measured-vs-eikonal comparison + frozen-prediction verdicts.

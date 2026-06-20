@@ -1,0 +1,20 @@
+{
+ "inversion_220": {
+  "bridge_M": 74.76481559651923,
+  "bridge_chi": 0.8154875189843533,
+  "deepstrain_M": 76.3431282043457,
+  "deepstrain_chi": 0.7657371759414673
+ },
+ "f221_predicted": 254.51550658938302,
+ "f221_measured": 214.0773538531886,
+ "delta_bridge": -0.15888286445915617,
+ "delta_deepstrain": [
+  -0.15089819580316544,
+  -0.4587454304099083,
+  0.3244132012128829
+ ],
+ "delta_match": true,
+ "kerr_consistent": true,
+ "sigma_single": 0.2737659588456154,
+ "sigma_stack8": 0.09525420146961101
+}
