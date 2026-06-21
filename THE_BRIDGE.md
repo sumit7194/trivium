@@ -436,6 +436,14 @@ bridge legs in return — the cross-validation cycle running both directions:
   deformed Kerr and found the canonical Carter tensor is no longer Killing yet **no detectable chaos**,
   fate **undetermined** — exactly the bridge's Move D hierarchy / Move I "physical edge, KAM-robust"
   conclusion, reached by a completely independent route. Evidence, not echo, at the meta level.
+- **Leg J resolves the "undetermined" fate.** Two calibrated attacks settle it for the bump:
+  a *complete symbolic Killing–Yano search* (Kerr-gated, exact linear algebra) finds **no exact KY tensor
+  survives to degree 4** → by Eisenhart no exact Carter-type Killing tensor (the strict horn **closed**);
+  and an *orbit-dynamics* measure shows the canonical Carter constant, though violated (drift→7%), stays a
+  **bounded non-diffusing near-invariant** (no chaos). Verdict: **formally non-integrable, near-integrable**
+  — matching the Kerr-deformation literature (Brink III/IV; arXiv:1807.08594), reached by proof *and*
+  dynamics. The dimension-scan instrument *failed its calibration gate* (strong-field zoom-whirl) and was
+  honestly discarded. Open: eccentric/resonant orbits and higher-degree/non-KY-origin tensors.
 
 ---
 

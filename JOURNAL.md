@@ -842,3 +842,24 @@ Finding: sharpens Move D/§82 from "no chaos detected" (absence of evidence) to 
 exists" (positive evidence for surviving tori) — horn (i), weak form, for the near-circular regime. Does
 NOT prove a new exact Killing tensor (that's the high-degree symbolic search, still future) and can't
 exclude exponentially-thin chaos (finite time). Honest, calibrated, gate-disciplined.
+
+## 2026-06-21 — Session 32 (cont.): the proof horn — symbolic Killing–Yano search resolves the fate
+
+Did literature-first (per the operating habit): searched prior art on Killing tensors in deformed Kerr.
+Key citations now in legJ FINDINGS — Brink "Spacetime Encodings III/IV" (exact 2nd-order KTs in SAV are
+very restrictive); "Preserving Kerr symmetries in deformed spacetimes" (arXiv:1807.08594) — by Eisenhart,
+exact KT ⟺ KY tensor; generic deformations keep only an APPROXIMATE one that grows with the perturbation;
+Frolov-Krtouš-Kubizňák Living Review (principal tensor). This both told us the expected answer and gave
+the clean decidable route (KY, not the degree-6 Carter tensor).
+
+Built `symbolic_ky_search.py`: complete polynomial KY search in rational u=cosθ coords (where Kerr's KY is
+degree ≤3), exact rational linear algebra at sample points → null-space dimension = # KY tensors.
+- Kerr gate PASSES: null-space = 1 (rediscovers its unique KY).
+- Bumpy ε=0.20, 0.35: null-space = 0 at degree ≤3 AND ≤4 → NO KY tensor survives.
+→ By Eisenhart, NO exact Carter-type Killing tensor for the bump (to degree 4) — the STRICT horn is CLOSED.
+
+Combined with the Carter-dynamics result (bounded non-diffusing C₀, no chaos): the bumpy metric is
+FORMALLY NON-INTEGRABLE but NEAR-INTEGRABLE — matching the deformation literature, reached independently by
+proof AND dynamics. Move D/§82's "fate undetermined" is resolved for this deformation. legJ FINDINGS +
+THE_BRIDGE §10.4 updated with the result and citations. Still open: eccentric/resonant orbits,
+higher-degree/non-KY-origin tensors.
