@@ -37,6 +37,21 @@ conserved to 1.3e-10, so any ε>0 drift is real signal.
   →1.01, random-walk diffusion →3.63, secular drift →1.77, slow drift →1.22. The bumpy orbits read
   **1.0–1.05 — below even the slow-drift level**, so C₀ is a *purely bounded* oscillation, not diffusion.
 
+## The dangerous regime — eccentric/inclined orbits, where chaos hides (`export_eccentric.py`)
+
+The first pass used near-circular orbits (the *stable* ones). Chaos in a near-integrable system concentrates
+at **resonances**, reached by eccentric/inclined orbits — which we now build properly: specify
+(r_peri, r_apo, inclination), solve the Kerr turning-point conditions `R(r_p)=R(r_a)=0, Θ(θ_min)=0` for
+(E,L,Q) [Schmidt 2002], launch at the equatorial pericenter, and integrate. A fine scan in r_apo
+(eccentricity 0.20 → 0.53 at r_p=4.5, incl ≈13–20°) **crosses resonances**. Calibration: on Kerr these are
+genuine eccentric inclined tori with C₀ conserved to ~2e-9.
+
+In the strongest bump (ε=0.35), all 17 eccentric orbits show Carter drift **0.13 → 0.18** — *larger* than
+the near-circular 7% (eccentric orbits probe the bump harder) — yet **saturation 1.00–1.02, zero diffusing.**
+So even in the resonance-crossing eccentric/inclined regime, C₀ stays a bounded non-diffusing near-invariant:
+**no chaos found where it is most likely.** (The Kerr-baseline saturation is noisier — up to 1.48 — because
+it is machine-noise on a *constant* C₀; the bump's real oscillation reads a clean ~1.0, well separated.)
+
 ## The proof horn — complete symbolic Killing–Yano search (`symbolic_ky_search.py`)
 
 The dynamical probe shows the tori survive but cannot, by itself, decide whether a *new exact* hidden
@@ -92,11 +107,13 @@ it is a genuine sharpening of Move D / §82, which had only the *absence* of det
 Carter-type (KY-origin) hidden symmetry survives the bump up to degree 4 — while the dynamics show the
 **approximate** invariant persists (bounded, non-diffusing C₀) with **no chaos** for the probed orbits. So
 the bump destroys the *exact* Carter constant (proven here both ways) yet leaves a *bounded approximate*
-one: the standard KAM near-integrable picture, and the one the deformation literature predicts. What remains
-genuinely open: (a) the **eccentric/resonant** orbit regime (where chaos is likeliest — blocked here by
-strong-field zoom-whirl), and (b) **higher-degree / non-KY-origin** Killing tensors and the direct degree-6
-Killing-tensor search (the heavier final confirmation). Neither is expected to overturn the picture, but
-neither is closed.
+one: the standard KAM near-integrable picture, and the one the deformation literature predicts. The
+**eccentric/inclined/resonance-crossing regime is now probed too** (Schmidt-constructed orbits, ε=0.35) —
+no chaos there either, only a larger-but-bounded C₀ drift. What remains genuinely open: (a) **thin chaos
+below resolution** — a finer resonance scan or much longer integration could still catch exponentially-thin
+KAM layers or slow Arnold diffusion (a single fine scan can step over very narrow resonances); and (b)
+**higher-degree / non-KY-origin** Killing tensors / the direct degree-6 Killing-tensor search (the heavier
+final confirmation). Neither is expected to overturn the picture, but neither is closed.
 
 ## Prior art (so we neither repeat nor overclaim, and can cite)
 
@@ -121,6 +138,8 @@ above by two independent routes.
 - `code/export_orbits.py` — stage 1 (ansatz venv): integrates bound orbits, exports C₀ time series; reuses
   legA's `export_geodesics` (metrics, Christoffels, Carter tensor) read-only.
 - `code/carter_dynamics.py` — drift + saturation measures, Kerr-calibrated, synthetic-validated.
+- `code/export_eccentric.py` — Schmidt-constructed eccentric/inclined orbits (turning-point solve), the
+  resonance-crossing chaos hunt; Kerr-calibrated (C₀ conserved to 2e-9). `results/eccentric_eps*.json`.
 - `code/symbolic_ky_search.py` — the proof horn: complete symbolic Killing–Yano search (Eisenhart route),
   Kerr-gated, exact rational linear algebra; rules out an exact KY tensor on the bump to degree 4.
 - `code/count_dimension.py` — the attempted dimension scan (gate-failed, kept for transparency).

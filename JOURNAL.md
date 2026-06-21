@@ -863,3 +863,17 @@ FORMALLY NON-INTEGRABLE but NEAR-INTEGRABLE — matching the deformation literat
 proof AND dynamics. Move D/§82's "fate undetermined" is resolved for this deformation. legJ FINDINGS +
 THE_BRIDGE §10.4 updated with the result and citations. Still open: eccentric/resonant orbits,
 higher-degree/non-KY-origin tensors.
+
+## 2026-06-21 — Session 32 (cont.): the dangerous regime — eccentric/inclined orbits, no chaos
+
+Closed the last dynamical open item: chaos in a near-integrable system hides at resonances (eccentric/
+inclined orbits), which the velocity-kick launches couldn't reach (zoom-whirl). Built export_eccentric.py:
+Schmidt turning-point solve (R(r_p)=R(r_a)=0, Θ(θ_min)=0 → E,L,Q), launch at equatorial pericenter,
+integrate in Kerr (calib) + bump. Calibration clean: genuine eccentric (ecc 0.2–0.53) inclined (20°) tori,
+C₀ conserved to 2e-9 on Kerr.
+
+Bump ε=0.35, 17 orbits finely scanning eccentricity (crossing resonances): Carter drift grows to 13–18%
+(LARGER than near-circular's 7% — eccentric orbits probe the bump harder) BUT saturation 1.00–1.02, ZERO
+diffusing. No chaos even where it's most likely. Strengthens the near-integrable verdict — now tested in the
+dangerous regime, not just the tame one. Still open: thin chaos below resolution (finer scan/longer time);
+higher-degree/non-KY-origin tensors. legJ FINDINGS + verdict updated.
