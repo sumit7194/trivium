@@ -45,3 +45,24 @@ statement is "no significant echo found at the searched physical spacings in GW1
 "$\lambda$ is constrained / horizon-scale quantum corrections are constrained." Turning this
 into an upper limit on $\lambda$ is left as future work (it needs the injection-efficiency
 curve that Leg 8b begins to build).
+
+---
+
+## 4. Update (2026-06-21) — caveat RESOLVED: the non-detection is now an exclusion curve
+
+deepstrain's echoes **§11** now computes the missing injection-efficiency curve — `A90(Δt)`, the
+first-pulse amplitude recovered at ≥90% above each spacing's `p<0.01` background, at **N=300**
+injections, over Δt ∈ [0.05, 0.47] s. `code/resolve_exclusion.py` composes it with this leg's *exact*
+`Δt(λ)` mapping (the DS-wormhole light-ring round-trip, GW150914 remnant M=68, χ=0.69):
+
+- **15 of 21** physical λ-spacings (the Planckian ε=10⁻³⁸ rotating sweep, Δt ≈ 0.053–0.139 s) fall in
+  the searched band. There the search **excludes first-pulse echo amplitude ≥ 1.60–1.82** (strain-noise
+  units) **at 90% confidence** — because a train that loud would have been recovered and was not.
+- Spacings *outside* [0.05, 0.47] s — the small-λ Planckian saturation and the whole macroscopic
+  (ε=10⁻¹⁰, Δt≈0.036 s) cutoff — sit below the searched band; an exclusion there needs §11 extended to
+  shorter Δt.
+
+**So the §3 caveat is resolved at the amplitude level:** at each searched physical spacing this is now a
+real 90%-amplitude exclusion, not just a non-detection. A *direct* limit on λ itself still needs the
+reflectivity→amplitude model mapping echo loudness to λ — but the efficiency-backed exclusion the
+caveat demanded is now in hand. See `code/resolve_exclusion.py`, `results/resolve_exclusion.json`.
