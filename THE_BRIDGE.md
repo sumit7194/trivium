@@ -424,8 +424,10 @@ bridge legs in return — the cross-validation cycle running both directions:
 **Bridge legs upgraded by these:**
 - **Move A v2 — a PROOF, on every rung.** §78 re-certifies tabula's blind-distilled Carter constant
   *symbolically* — `∇₍ₐK_bc₎≡0` proven for **Kerr, Kerr–Newman (all Q), and Kerr–de Sitter (all Λ)**
-  (non-vacuous: control rejected, K ∝̸ g, correct Λ→0 limit). The discovery→verify pipeline now ends
-  in a theorem on every charged/cosmological rung, not a 1e-8 residual.
+  (non-vacuous: control rejected, K ∝̸ g, correct Λ→0 limit) — *and* the **DESTROYED** rung proven the
+  other way: Kerr's Carter tensor on the bumpy metric has residual `∝ ε·a² ≠ 0` (zero only at ε=0). The
+  whole discovery→verify ladder is now a theorem on every rung, EXISTS and DESTROYED alike — not a
+  numeric residual.
 - **Move B v2 — precise & numeric.** §77's exact Leaver 220 inversion reproduces deepstrain's remnant
   (two independent QNM codes agree); the 221 overtone (eikonal had none) gives the no-hair δ = −0.159,
   **independently matching deepstrain's measured δ = −0.151 to 0.008**, Kerr-consistent; §12 tightens

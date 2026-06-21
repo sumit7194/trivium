@@ -811,3 +811,14 @@ legA FINDINGS table + THE_BRIDGE §10.4 updated.
 
 Session 31 total: Move A proven on all 3 rungs, Move B v2 precise, leg 8 caveat resolved, spine
 refreshed — all driven by the source projects' bridge-suggested upgrades. The loop runs both ways.
+
+## 2026-06-21 — Session 31 (cont.): the discovery ladder is now fully symbolic (DESTROYED rung too)
+
+`certify_symbolic_bumpy.py`: completed the symbolic certification of Move A's full calibration ladder.
+Kerr's Carter Killing tensor, evaluated on the bridge's bumpy metric (g_tt·(1+6ε u²/r)), has symbolic
+residual ∇₍ₐK_bc₎ ∝ ε·a²·u² — exactly 0 at ε=0 (recovers the proven Kerr Killing tensor) and ≠0 at
+first order in ε. So the DESTROYED verdict (was numeric residual 14.6) is now a symbolic theorem: the
+hidden symmetry is provably broken for the rotating rung. Independently corroborates ansatz §82, which
+broke the canonical Carter tensor with a DIFFERENT bump ε(3cos²θ−1)/r³ — robust across deformation
+families; both §82 and Move D see no chaos (fate undetermined). All 4 rungs (3 EXISTS proven Killing,
+1 DESTROYED proven not-Killing) are now symbolic verdicts. legA FINDINGS + THE_BRIDGE §10.4 updated.

@@ -114,13 +114,21 @@ metric).
 | **Kerr** | r²−2Mr+a² | `∇₍ₐK_bc₎ ≡ 0` ✅ PROVEN | `certify_symbolic.py` |
 | **Kerr–Newman** | r²−2Mr+a²+Q² | `∇₍ₐK_bc₎ ≡ 0` ✅ PROVEN (all M,a,Q) | `certify_symbolic_kn.py` |
 | **Kerr–de Sitter** | (1−Λr²/3)(r²+a²)−2Mr, Δ_θ=1+Λa²u²/3 | `∇₍ₐK_bc₎ ≡ 0` ✅ PROVEN (all M,a,Λ) | `certify_symbolic_kds.py` |
+| **Bumpy quadrupole** (DESTROYED) | Kerr, g_tt·(1+6ε u²/r) | `∇₍ₐK_bc₎ ∝ ε·a² ≠ 0` ✅ PROVEN **not** Killing | `certify_symbolic_bumpy.py` |
 
 The Kerr–dS proof uses the same Kerr-Schild form `K = Σ(lₐn_b+l_b nₐ)+r²g` with Ξ-scaled principal
 nulls; it is non-vacuous (det g = −Σ²/Ξ⁴ ≠ 0, K ∝̸ g, control rejected, K_rr/g_rr→−a²u² as Λ→0).
 So the original numeric KdS residual (7.9e-4) was just tabula's small Λ-coefficient drift around the
-*exact* Killing tensor, which is now proven exactly. The whole discovery→verify pipeline — neural
-blind discovery → exact certification — ends in a **theorem on every charged/cosmological rung**.
-See `code/certify_symbolic.py`, `certify_symbolic_kn.py`, `certify_symbolic_kds.py`.
+*exact* Killing tensor, which is now proven exactly. The **DESTROYED** rung closes the ladder
+symbolically too: Kerr's Carter tensor on the bumped metric has residual `∝ ε·a²·u²` — exactly zero at
+ε=0 (recovering the proven Killing tensor) and non-zero at first order in ε, so the hidden symmetry is
+*provably* broken for the rotating rung (was numeric residual 14.6). This independently corroborates
+**ansatz §82**, which broke the canonical Carter tensor with a *different* bump `ε(3cos²θ−1)/r³` — so
+"deform Kerr ⇒ canonical Carter broken" is robust across deformation families, while both §82's geodesic
+scan and the bridge's Move D chaos lens see *no* chaos (fate undetermined). The whole
+discovery→verify ladder — blind neural discovery → exact certification — is now a **theorem on every
+rung, EXISTS and DESTROYED alike**. See `code/certify_symbolic.py`, `certify_symbolic_kn.py`,
+`certify_symbolic_kds.py`, `certify_symbolic_bumpy.py`.
 
 ## Artifacts
 - `code/export_geodesics.py` — ansatz side: builds each exact metric (read-only via ansatz's
