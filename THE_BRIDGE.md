@@ -422,8 +422,10 @@ bridge legs in return — the cross-validation cycle running both directions:
   exclusion curves), §08 N=300 (the underpowered injection fix), §13/§14 (more events + the δ SNR wall).
 
 **Bridge legs upgraded by these:**
-- **Move A v2 — a PROOF.** §78 re-certifies tabula's blind-distilled Carter constant *symbolically*
-  (`∇₍ₐK_bc₎≡0` for all M,a) — the discovery→verify pipeline ends in a theorem, not a 1e-8 residual.
+- **Move A v2 — a PROOF, on every rung.** §78 re-certifies tabula's blind-distilled Carter constant
+  *symbolically* — `∇₍ₐK_bc₎≡0` proven for **Kerr, Kerr–Newman (all Q), and Kerr–de Sitter (all Λ)**
+  (non-vacuous: control rejected, K ∝̸ g, correct Λ→0 limit). The discovery→verify pipeline now ends
+  in a theorem on every charged/cosmological rung, not a 1e-8 residual.
 - **Move B v2 — precise & numeric.** §77's exact Leaver 220 inversion reproduces deepstrain's remnant
   (two independent QNM codes agree); the 221 overtone (eikonal had none) gives the no-hair δ = −0.159,
   **independently matching deepstrain's measured δ = −0.151 to 0.008**, Kerr-consistent; §12 tightens

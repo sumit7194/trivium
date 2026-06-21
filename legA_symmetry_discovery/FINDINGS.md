@@ -101,13 +101,26 @@ constant exactly. The pipeline can now be aimed at a metric with no known second
 ## Update (2026-06-21) — Move A v2: the certification is now a PROOF
 
 ansatz gained a **symbolic** Killing-tensor verifier (§78, bridge-driven), so Move A's certification
-is upgraded from a numeric residual (~1e-8) to a **theorem**: tabula discovered the Carter
-coefficients `(1, a², −a², 1)` blind (cosine 1.0000 to textbook; a² recovered — 0.360 for Kerr/KN,
-0.804 for Kerr-dS), and ansatz §78 now certifies the identified Killing tensor satisfies
-`∇₍ₐK_bc₎ ≡ 0` **symbolically for all M, a** (control: a non-Killing tensor is correctly rejected). The
-discovery→verify pipeline now ends in a proof, not a measurement. (KN/Kerr-dS stay numerically
-certified above; their symbolic proofs — KN's Q-shift, Kerr-dS's rational Δ_θ — are the next step.)
-See `code/certify_symbolic.py`, `results/certify_symbolic.json`.
+is upgraded from a numeric residual to a **theorem**: tabula discovered the Carter coefficients
+`(1, a², −a², 1)` blind (cosine 1.0000 to textbook; a² recovered — 0.360 for Kerr/KN, 0.804 for
+Kerr-dS), and ansatz §78 now certifies the identified Killing tensor satisfies `∇₍ₐK_bc₎ ≡ 0`
+**symbolically** (control: a non-Killing tensor is correctly rejected; verified non-vacuous on each
+metric).
+
+**All three EXISTS rungs are now proven, not just Kerr:**
+
+| Rung | Δ | symbolic verdict | check |
+|---|---|---|---|
+| **Kerr** | r²−2Mr+a² | `∇₍ₐK_bc₎ ≡ 0` ✅ PROVEN | `certify_symbolic.py` |
+| **Kerr–Newman** | r²−2Mr+a²+Q² | `∇₍ₐK_bc₎ ≡ 0` ✅ PROVEN (all M,a,Q) | `certify_symbolic_kn.py` |
+| **Kerr–de Sitter** | (1−Λr²/3)(r²+a²)−2Mr, Δ_θ=1+Λa²u²/3 | `∇₍ₐK_bc₎ ≡ 0` ✅ PROVEN (all M,a,Λ) | `certify_symbolic_kds.py` |
+
+The Kerr–dS proof uses the same Kerr-Schild form `K = Σ(lₐn_b+l_b nₐ)+r²g` with Ξ-scaled principal
+nulls; it is non-vacuous (det g = −Σ²/Ξ⁴ ≠ 0, K ∝̸ g, control rejected, K_rr/g_rr→−a²u² as Λ→0).
+So the original numeric KdS residual (7.9e-4) was just tabula's small Λ-coefficient drift around the
+*exact* Killing tensor, which is now proven exactly. The whole discovery→verify pipeline — neural
+blind discovery → exact certification — ends in a **theorem on every charged/cosmological rung**.
+See `code/certify_symbolic.py`, `certify_symbolic_kn.py`, `certify_symbolic_kds.py`.
 
 ## Artifacts
 - `code/export_geodesics.py` — ansatz side: builds each exact metric (read-only via ansatz's

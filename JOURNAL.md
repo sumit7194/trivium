@@ -786,3 +786,15 @@ exclusion limits, §08 N=300, §13/§14 more events + δ SNR wall). Used them to
 
 The cross-validation cycle now runs both ways: bridge review → source upgrades → better bridge legs.
 THE_BRIDGE §10.4 added; legA/legB FINDINGS updated with the v2 sections.
+
+## 2026-06-21 — Session 31 (cont.): Move A symbolic proof completed on all three rungs
+
+Extended the §78 symbolic Carter proof from Kerr to the charged and cosmological rungs:
+- **Kerr–Newman** (`certify_symbolic_kn.py`): Δ=r²−2Mr+a²+Q² → ∇₍ₐK_bc₎≡0 PROVEN for all M,a,Q.
+- **Kerr–de Sitter** (`certify_symbolic_kds.py`): rational Δ_θ=1+Λa²u²/3, same Kerr-Schild K with
+  Ξ-scaled nulls → ∇₍ₐK_bc₎≡0 PROVEN for all M,a,Λ. Non-vacuous (det g=−Σ²/Ξ⁴≠0, K∝̸g, control
+  rejected, K_rr/g_rr→−a²u² as Λ→0). The original numeric residual (7.9e-4) was just tabula's small
+  Λ-coefficient drift around the exact tensor — now proven exactly.
+
+All three EXISTS rungs of Move A's calibration ladder are now theorems, not numeric residuals.
+legA FINDINGS table + THE_BRIDGE §10.4 updated.
