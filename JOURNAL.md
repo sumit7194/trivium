@@ -798,3 +798,16 @@ Extended the §78 symbolic Carter proof from Kerr to the charged and cosmologica
 
 All three EXISTS rungs of Move A's calibration ladder are now theorems, not numeric residuals.
 legA FINDINGS table + THE_BRIDGE §10.4 updated.
+
+## 2026-06-21 — Session 31 (cont.): leg 8 exclusion + spine refresh
+
+- **Leg 8 v2** (`resolve_exclusion.py`): composed deepstrain echoes §11's A90(Δt) efficiency curve
+  (N=300) with the bridge's exact Δt(λ) mapping → resolved leg 8's flagged "non-detection ≠ exclusion"
+  caveat. 15/21 physical λ-spacings in the searched band; there, first-pulse amplitude ≥1.60–1.82
+  (strain-noise units) excluded at 90%. Honest scope: amplitude exclusion per spacing, not a direct
+  λ limit (still needs the reflectivity→amplitude model).
+- **Spine refresh**: SPINE_SUMMARY leg-3 row + count-triangle + honest-limits updated with Move B v2
+  (precise Leaver δ=−0.159 matching measured δ=−0.151 to 0.008; stacked σ(δ) 0.27→0.095).
+
+Session 31 total: Move A proven on all 3 rungs, Move B v2 precise, leg 8 caveat resolved, spine
+refreshed — all driven by the source projects' bridge-suggested upgrades. The loop runs both ways.

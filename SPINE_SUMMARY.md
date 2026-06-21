@@ -13,7 +13,7 @@ object** — and the one place they disagree is itself predicted and explained.
 | **1** | ansatz ↔ tabula | proved moduli count = inferred observable count on Schwarzschild (1/0) and RN (2/1); **dyonic 3→2** = the predicted `Q²+P²` degeneracy (observable < algebraic), mechanism proved by ansatz `34` | ✅ agreement + a named departure |
 | **1b** | ansatz ↔ tabula (Kerr) | rotating Kerr (2/1) and Kerr-Newman (3/2) match predictions; KN-full (3) vs KN-Δ-symmetric (2) controlled test confirms frame-dragging-based degeneracy lifting | ✅ closed (Kerr=2, KN=3) |
 | **2** | tabula ↔ deepstrain | the legibility law does **not** explain the tone-count sim→real gap — **no scramble signature**; the gap is **information-limited**, independently reproducing deepstrain's own parked verdict | ✅ clean, useful negative |
-| **3** | ansatz ↔ deepstrain (+ tabula) | the **measured** no-hair δ (GW250114 = −0.16 [−0.46,+0.33], δ=0 in CI) closes the **count-triangle**: proved 2, inferred 2, measured-consistent-with 2 | ✅ the spine triangulates |
+| **3** | ansatz ↔ deepstrain (+ tabula) | the **measured** no-hair δ (GW250114 = −0.15 [−0.46,+0.32], δ=0 in CI) closes the **count-triangle**: proved 2, inferred 2, measured-consistent-with 2. **Move B v2 (2026-06-21):** ansatz's exact-Leaver 221 gives δ=−0.159, *independently matching* the measured δ to 0.008; stacking 8 events tightens σ(δ) 0.27→0.095 | ✅ the spine triangulates, now precise |
 
 ## The count-triangle (§5)
 
@@ -21,7 +21,7 @@ object** — and the one place they disagree is itself predicted and explained.
                     how it knows        count
    ansatz           proves (exact)        2     Kerr 2-param; scalar no-hair proved
    tabula           infers (neural)       2     RN observable manifold dim = 2 (leg 1)
-   deepstrain       measures (real)       2     no-hair δ ≈ 0, σ(δ)≈0.24 (leg 3)
+   deepstrain       measures (real)       2     no-hair δ ≈ 0, σ(δ) 0.27→0.095 stacked (leg 3 / Move B v2)
 ```
 
 ## What the bridge actually bought (honest accounting)
@@ -44,8 +44,11 @@ object** — and the one place they disagree is itself predicted and explained.
 - ~~No ansatz QNM module → leg 3's link is proposition-level (proof ↔ test), not a
   numeric QNM bridge.~~ **Resolved (2026-06-19, Move B / leg 3b):** ansatz now computes the
   eikonal Kerr QNM from the exact metric; it matches deepstrain's measured GW250114 220 to a few
-  percent (Q₂₂₀ 1–7%, Mω_R 3%), so leg 3's ringdown link is now numeric. See
-  `legB_ringdown_bridge/FINDINGS.md`.
+  percent (Q₂₂₀ 1–7%, Mω_R 3%), so leg 3's ringdown link is now numeric. **Upgraded again
+  (2026-06-21, Move B v2):** ansatz's *precise* Leaver oracle (§77) replaces the eikonal — the
+  exact 220 inversion reproduces deepstrain's remnant (two independent QNM codes agree), and the
+  221 overtone (eikonal had none) gives δ=−0.159, independently matching the measured δ=−0.151 to
+  0.008. See `legB_ringdown_bridge/FINDINGS.md`.
 - **Counter calibration & threshold fragility (adversarial test, 2026-06-20, Move G).** The
   bottleneck counter was stress-tested: it is genuinely *calibrated* (tracks true dimension, corr
   0.98 on synthetic d=1–6; reports noise as high; exact on flat manifolds) — it is **not** biased
