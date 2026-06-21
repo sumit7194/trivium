@@ -877,3 +877,22 @@ Bump ε=0.35, 17 orbits finely scanning eccentricity (crossing resonances): Cart
 diffusing. No chaos even where it's most likely. Strengthens the near-integrable verdict — now tested in the
 dangerous regime, not just the tame one. Still open: thin chaos below resolution (finer scan/longer time);
 higher-degree/non-KY-origin tensors. legJ FINDINGS + verdict updated.
+
+## 2026-06-21 — Session 32 (cont.): positive control corrects the leg-J chaos instrument
+
+Ran the positive control the falsify-everything discipline demands: can our "no chaos" detector actually
+SEE chaos? Cross-checked the Carter-saturation measure against ansatz §79's Lyapunov exponent (validated:
+Kerr→floor λ≈0.021) and legG's SALI.
+- Both detectors AGREE the accessible orbits are regular: §79 Lyapunov sits at the Kerr floor for every
+  orbit (near-circular + Schmidt eccentric/inclined, even near separatrix r_p→3.2) up to ε=1.2. legG's SALI
+  corroborates (axisymmetric bump median 0.81 regular at ε=1.0; only the most aggressive orbit dips to a
+  marginal 0.066). The clear chaos legG found was the φ-DEPENDENT (non-axisymmetric) bump — a different,
+  more aggressive deformation.
+- Could NOT validate the Carter-saturation as a chaos detector: the only clearly-chaotic case (φ-dependent
+  bump) unbinds these orbits, so no chaotic BOUND orbit was in reach. Plus a sound theoretical reason to
+  distrust it (compact energy surface → C₀ range-bounded whether chaotic or not).
+
+CORRECTION (logged, not hidden): dropped Carter-saturation as chaos evidence; leg J's "no chaos in reach"
+now rests on the validated §79 Lyapunov (conclusion unchanged, footing improved). The Carter DRIFT stays a
+valid deformation-magnitude measure. Two leg-J instruments failed and were discarded honestly (dimension
+scan via zoom-whirl; Carter-saturation via this control). FINDINGS + THE_BRIDGE updated.

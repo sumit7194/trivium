@@ -1,20 +1,23 @@
-# Leg J — Findings: the broken Carter constant survives as a BOUNDED near-invariant
+# Leg J — Findings: the deformed Kerr is formally non-integrable but its orbits stay regular
 
 *Run 2026-06-21. Gates and outcome-meanings frozen in [PREREGISTRATION.md](PREREGISTRATION.md) before any
 orbit was integrated. This leg attacks the project's one UNDETERMINED result — Move D / ansatz §82's
-"deform Kerr → canonical Carter tensor broken, yet no detectable chaos, fate undetermined."*
+"deform Kerr → canonical Carter tensor broken, yet no detectable chaos, fate undetermined." A post-hoc
+positive control (§ below) corrected our dynamical instrument — logged honestly, not hidden.*
 
 ## Result in one line — the fate is no longer "undetermined"
 
 Two independent attacks settle Move D / §82's open horn for this deformation: **(symbolic) no exact
 Killing–Yano tensor survives the bump** (complete degree-≤4 search; Kerr's is rediscovered, the bump has
-none → by Eisenhart no exact Carter-type Killing tensor exists), and **(dynamical) the canonical Carter
-constant `C₀`, though violated (drift 0 → ~7%), stays a BOUNDED non-diffusing near-invariant** (saturation
-1.0–1.05, zero diffusing orbits). Together: the bumpy metric is **formally NON-integrable but
-NEAR-integrable** — no new exact hidden symmetry, yet an approximate invariant survives, the tori persist,
-and there is no chaos. This is exactly the picture the Kerr-deformation literature predicts (Brink III/IV;
-[1807.08594](https://arxiv.org/abs/1807.08594)) — reached here independently, by proof *and* by orbit
-dynamics.
+none → by Eisenhart no exact Carter-type Killing tensor exists), and **(dynamical) the geodesic flow stays
+REGULAR** — ansatz §79's Lyapunov exponent sits at the Kerr floor (λ ≈ 0.015–0.03) for every accessible
+orbit, near-circular *and* eccentric/inclined, **up to ε=1.2**, even as the canonical Carter constant `C₀`
+is violated (drift 7→18%). Together: the bumpy metric is **formally NON-integrable but NEAR-integrable** —
+no new exact hidden symmetry, yet the KAM tori survive and there is no chaos in reach. This matches the
+Kerr-deformation literature (Brink III/IV; [1807.08594](https://arxiv.org/abs/1807.08594)), reached here by
+proof *and* by orbit dynamics. **Correction (positive control):** our first-pass chaos indicator
+(Carter-constant *saturation*) could not be validated as a chaos detector and is **superseded** by the
+Lyapunov exponent here — the conclusion is unchanged but now rests on the standard, validated tool.
 
 ## The measures (both calibrated on Kerr, ε=0)
 
@@ -32,10 +35,13 @@ conserved to 1.3e-10, so any ε>0 drift is real signal.
 - **DRIFT** `=(max−min)/|mean|` over the orbit — how much the canonical invariant is violated. It grows
   ~`√ε` (sub-linear), confirming the symbolic result `∇₍ₐK₀_bc₎ ∝ ε·a²` quantitatively, and stays a few
   percent — not exploding.
-- **SATURATION** `= spread(full)/spread(first quarter)` — does the violation stay in a fixed band (≈1,
-  bounded → torus) or keep growing (≫1, diffusion → chaos)? Validated on synthetics: bounded oscillation
-  →1.01, random-walk diffusion →3.63, secular drift →1.77, slow drift →1.22. The bumpy orbits read
-  **1.0–1.05 — below even the slow-drift level**, so C₀ is a *purely bounded* oscillation, not diffusion.
+- **SATURATION** `= spread(full)/spread(first quarter)` — was intended as a bounded-vs-diffusing chaos
+  proxy (synthetic-validated: bounded→1.01, random-walk→3.63). The bumpy orbits read 1.0–1.05. **⚠ This is
+  NOT used as chaos evidence** — see the positive-control § below: on a *compact* bound energy surface C₀ is
+  range-bounded whether or not the orbit is chaotic, and a fast-mixing chaotic orbit fills that range as
+  quickly as a torus, so saturation ≈1 either way. We could not validate it on a chaotic bound orbit, so it
+  is superseded by the Lyapunov exponent. (The drift above remains valid — it measures the deformation
+  magnitude, not chaos.)
 
 ## The dangerous regime — eccentric/inclined orbits, where chaos hides (`export_eccentric.py`)
 
@@ -51,6 +57,28 @@ the near-circular 7% (eccentric orbits probe the bump harder) — yet **saturati
 So even in the resonance-crossing eccentric/inclined regime, C₀ stays a bounded non-diffusing near-invariant:
 **no chaos found where it is most likely.** (The Kerr-baseline saturation is noisier — up to 1.48 — because
 it is machine-noise on a *constant* C₀; the bump's real oscillation reads a clean ~1.0, well separated.)
+
+## Positive control — and a correction (the discipline working)
+
+A null ("no chaos") is only as good as a *demonstration that the detector can see chaos*. So we ran the
+positive control we'd demand of anyone else, cross-checking the Carter-saturation measure against ansatz
+**§79's Lyapunov exponent** (independent, standard; calibrated — Kerr reads the floor λ≈0.015) and legG's
+SALI. Findings:
+
+- **Both detectors agree the accessible orbits are regular.** On the axisymmetric bump (our deformation),
+  §79 Lyapunov sits at the Kerr floor (λ ≈ 0.015–0.034) for *every* orbit — near-circular and
+  eccentric/inclined, even near the separatrix (r_p→3.2) — **up to ε=1.2**. The Carter-saturation agrees
+  (≈1). This corroborates legG's own SALI: the axisymmetric bump's median SALI stays 0.81 (regular) at
+  ε=1.0; only the single most-aggressive orbit dips to a *marginal* 0.066. So our bump is **robustly regular
+  even at strong deformation** — the chaos legG found was the *non-axisymmetric* (φ-dependent) bump
+  (SALI 0.024), a different, more aggressive deformation.
+- **We could not validate the Carter-saturation as a chaos detector.** The only clearly-chaotic case (the
+  φ-dependent bump) sends these orbits *unbound* (chaos → escape), so no clearly-chaotic *bound* orbit was
+  in reach to test the measure on. Given the sound theoretical reason to distrust it (compactness, above),
+  we **drop it as chaos evidence** and rest the regularity conclusion on the Lyapunov.
+
+The conclusion ("no chaos in reach") is unchanged — but it now stands on a validated tool, not an
+unvalidated one. *That swap is the point of running the control.*
 
 ## The proof horn — complete symbolic Killing–Yano search (`symbolic_ky_search.py`)
 
@@ -104,10 +132,12 @@ it is a genuine sharpening of Move D / §82, which had only the *absence* of det
 ## Verdict — Move D / §82's "fate undetermined" is resolved (for this deformation)
 
 **Formally non-integrable, but near-integrable.** The symbolic search **closes the strict horn** — no exact
-Carter-type (KY-origin) hidden symmetry survives the bump up to degree 4 — while the dynamics show the
-**approximate** invariant persists (bounded, non-diffusing C₀) with **no chaos** for the probed orbits. So
-the bump destroys the *exact* Carter constant (proven here both ways) yet leaves a *bounded approximate*
-one: the standard KAM near-integrable picture, and the one the deformation literature predicts. The
+Carter-type (KY-origin) hidden symmetry survives the bump up to degree 4 — while the dynamics (now the
+validated **§79 Lyapunov**, λ at the Kerr floor to ε=1.2, with legG's SALI corroborating) show the geodesic
+flow stays **regular: the KAM tori survive, no chaos in reach**, even though the canonical Carter constant
+is violated (drift 7→18%). So the bump destroys the *exact* Carter constant (proven both ways) yet the
+motion stays regular: the standard KAM near-integrable picture, and the one the deformation literature
+predicts. The
 **eccentric/inclined/resonance-crossing regime is now probed too** (Schmidt-constructed orbits, ε=0.35) —
 no chaos there either, only a larger-but-bounded C₀ drift. What remains genuinely open: (a) **thin chaos
 below resolution** — a finer resonance scan or much longer integration could still catch exponentially-thin
@@ -140,6 +170,8 @@ above by two independent routes.
 - `code/carter_dynamics.py` — drift + saturation measures, Kerr-calibrated, synthetic-validated.
 - `code/export_eccentric.py` — Schmidt-constructed eccentric/inclined orbits (turning-point solve), the
   resonance-crossing chaos hunt; Kerr-calibrated (C₀ conserved to 2e-9). `results/eccentric_eps*.json`.
+- `code/verify_chaos.py` — the positive control: ansatz §79 Lyapunov vs Carter-saturation on the bump to
+  ε=1.2 (both read regular; Lyapunov supersedes the unvalidated saturation). `results/verify_chaos.json`.
 - `code/symbolic_ky_search.py` — the proof horn: complete symbolic Killing–Yano search (Eisenhart route),
   Kerr-gated, exact rational linear algebra; rules out an exact KY tensor on the bump to degree 4.
 - `code/count_dimension.py` — the attempted dimension scan (gate-failed, kept for transparency).

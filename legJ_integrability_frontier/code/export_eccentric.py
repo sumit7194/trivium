@@ -122,7 +122,10 @@ def main():
     OUT.mkdir(exist_ok=True)
     rp, thmin = 4.5, math.radians(70.0)
     ras = [7.0 + 0.5*k for k in range(17)]               # fine eccentricity scan → crosses resonances
-    for eps in [0.0, 0.35]:
+    # POSITIVE CONTROL: push ε past Move D's SALI-found chaos boundary (>0.35). If our Carter detector
+    # works, saturation must flip bounded(~1)→diffusing(≫1) here — validating the leg-J null and
+    # cross-checking SALI by an independent route.
+    for eps in [0.0, 0.35, 0.6, 0.9, 1.2]:
         gfun = lambda x, e=eps: eg.g_bumpy(x, A, e)
         rows = []
         for ra in ras:

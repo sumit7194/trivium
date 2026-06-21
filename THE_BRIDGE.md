@@ -439,11 +439,14 @@ bridge legs in return — the cross-validation cycle running both directions:
 - **Leg J resolves the "undetermined" fate.** Two calibrated attacks settle it for the bump:
   a *complete symbolic Killing–Yano search* (Kerr-gated, exact linear algebra) finds **no exact KY tensor
   survives to degree 4** → by Eisenhart no exact Carter-type Killing tensor (the strict horn **closed**);
-  and an *orbit-dynamics* measure shows the canonical Carter constant, though violated (drift→7%), stays a
-  **bounded non-diffusing near-invariant** (no chaos). Verdict: **formally non-integrable, near-integrable**
-  — matching the Kerr-deformation literature (Brink III/IV; arXiv:1807.08594), reached by proof *and*
-  dynamics. The dimension-scan instrument *failed its calibration gate* (strong-field zoom-whirl) and was
-  honestly discarded. Open: eccentric/resonant orbits and higher-degree/non-KY-origin tensors.
+  and the **§79 Lyapunov exponent** (validated — Kerr floor; legG's SALI corroborating) stays at the floor
+  for every accessible orbit (near-circular *and* Schmidt-built eccentric/inclined, **to ε=1.2**) → the KAM
+  tori survive, **no chaos in reach**, even as the canonical Carter constant is violated (drift 7→18%).
+  Verdict: **formally non-integrable, near-integrable** — matching the Kerr-deformation literature (Brink
+  III/IV; arXiv:1807.08594), by proof *and* dynamics. Two instruments were *failed and discarded honestly*:
+  the dimension scan (zoom-whirl gate failure) and the Carter-saturation chaos proxy (a positive control
+  showed it could not be validated as a chaos detector → superseded by the Lyapunov). Open: thin chaos below
+  resolution; higher-degree/non-KY-origin tensors.
 
 ---
 

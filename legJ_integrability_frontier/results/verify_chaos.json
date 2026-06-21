@@ -1,0 +1,127 @@
+{
+ "kerr_lyapunov_floor": 0.020530458509346507,
+ "all_orbits_regular": true,
+ "max_lyapunov": 0.02097608980990369,
+ "rows": [
+  {
+   "eps": 0.0,
+   "ra": 8.0,
+   "lyapunov": 0.020530458509346507,
+   "carter_sat": 1.035523462871998,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.0,
+   "ra": 11.0,
+   "lyapunov": 0.018036999009405533,
+   "carter_sat": 1.0320075781910505,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.0,
+   "ra": 14.0,
+   "lyapunov": 0.01076509019745514,
+   "carter_sat": 1.3086121278643026,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.35,
+   "ra": 8.0,
+   "lyapunov": 0.02097608980990369,
+   "carter_sat": 1.0029017809426348,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.35,
+   "ra": 11.0,
+   "lyapunov": 0.01834571512324781,
+   "carter_sat": 1.007178463224643,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.35,
+   "ra": 14.0,
+   "lyapunov": 0.012054267252484149,
+   "carter_sat": 1.0097500755426434,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.6,
+   "ra": 8.0,
+   "lyapunov": 0.020897897277631833,
+   "carter_sat": 1.0026997958440926,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.6,
+   "ra": 11.0,
+   "lyapunov": 0.018558883587704838,
+   "carter_sat": 1.0051075925332222,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.6,
+   "ra": 14.0,
+   "lyapunov": 0.010850479068729872,
+   "carter_sat": 1.0024217386694425,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.9,
+   "ra": 8.0,
+   "lyapunov": 0.02071800365979799,
+   "carter_sat": 1.0031840429184982,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.9,
+   "ra": 11.0,
+   "lyapunov": 0.018172941398026225,
+   "carter_sat": 1.0017759595057854,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 0.9,
+   "ra": 14.0,
+   "lyapunov": 0.009096472529870015,
+   "carter_sat": 1.0002794442851735,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 1.2,
+   "ra": 8.0,
+   "lyapunov": 0.02095547709249201,
+   "carter_sat": 1.0030791815119493,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 1.2,
+   "ra": 11.0,
+   "lyapunov": 0.018347270561247596,
+   "carter_sat": 1.0080847423795818,
+   "lyap_regular": true,
+   "carter_regular": true
+  },
+  {
+   "eps": 1.2,
+   "ra": 14.0,
+   "lyapunov": 0.009819870897755668,
+   "carter_sat": 1.0034896783867764,
+   "lyap_regular": true,
+   "carter_regular": true
+  }
+ ]
+}
