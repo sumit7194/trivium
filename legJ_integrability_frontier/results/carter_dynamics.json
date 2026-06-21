@@ -1,0 +1,41 @@
+{
+ "gate_pass": true,
+ "kerr_drift": 1.2796919233571999e-10,
+ "by_eps": [
+  {
+   "eps": 0.0,
+   "n": 27,
+   "drift_median": 1.2796919233571999e-10,
+   "sat_median": 1.0494447963960158,
+   "frac_diffusing": 0.037037037037037035
+  },
+  {
+   "eps": 0.05,
+   "n": 27,
+   "drift_median": 0.02332889120378037,
+   "sat_median": 1.02890330650843,
+   "frac_diffusing": 0.0
+  },
+  {
+   "eps": 0.12,
+   "n": 27,
+   "drift_median": 0.04341168923785636,
+   "sat_median": 1.0276405800302144,
+   "frac_diffusing": 0.0
+  },
+  {
+   "eps": 0.25,
+   "n": 27,
+   "drift_median": 0.06361272214771851,
+   "sat_median": 1.0090982566149425,
+   "frac_diffusing": 0.0
+  },
+  {
+   "eps": 0.35,
+   "n": 27,
+   "drift_median": 0.07235259153656963,
+   "sat_median": 1.0075697439280005,
+   "frac_diffusing": 0.0
+  }
+ ]
+}

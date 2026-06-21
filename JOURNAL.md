@@ -822,3 +822,23 @@ hidden symmetry is provably broken for the rotating rung. Independently corrobor
 broke the canonical Carter tensor with a DIFFERENT bump ε(3cos²θ−1)/r³ — robust across deformation
 families; both §82 and Move D see no chaos (fate undetermined). All 4 rungs (3 EXISTS proven Killing,
 1 DESTROYED proven not-Killing) are now symbolic verdicts. legA FINDINGS + THE_BRIDGE §10.4 updated.
+
+## 2026-06-21 — Session 32: Leg J — first attack on the Move D / §82 open horn
+
+Built leg J to attack the project's one UNDETERMINED result (deform Kerr → Carter broken, no detectable
+chaos, fate undetermined). Pre-registered two calibrated methods.
+
+- **Method A (dimension scan) FAILED its calibration gate** — honestly logged. The plan (phase-space
+  intrinsic dimension: torus=2 vs chaos=3, reusing leg 1's counter) was defeated by the strong-field
+  **zoom-whirl** regime: orbit eccentricity is hypersensitive to the launch (a 2% sub-circular kick →
+  Δr=24 or escape), so controlled moderate-eccentricity 2-tori couldn't be generated and Kerr orbits read
+  D≈1.3 not 2. Per pre-registration, no claim made from it; pivoted.
+- **Method B/A′ (Carter-constant dynamics) — clean, calibrated, decisive.** Track Kerr's exact C₀ along
+  bumpy orbits. Gate: Kerr drift = 1.3e-10 (conserved). Bumpy: drift grows to ~7% (ε=0.35) — confirming
+  ∇K∝ε quantitatively — BUT saturation ratio stays 1.0–1.05 (synthetic-validated: bounded≈1, diffusion≈3.6),
+  diffusing fraction 0.00. So C₀ is a BOUNDED, non-diffusing near-invariant: the tori survive, no chaos.
+
+Finding: sharpens Move D/§82 from "no chaos detected" (absence of evidence) to "a bounded near-invariant
+exists" (positive evidence for surviving tori) — horn (i), weak form, for the near-circular regime. Does
+NOT prove a new exact Killing tensor (that's the high-degree symbolic search, still future) and can't
+exclude exponentially-thin chaos (finite time). Honest, calibrated, gate-disciplined.
