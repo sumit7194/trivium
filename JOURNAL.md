@@ -896,3 +896,22 @@ CORRECTION (logged, not hidden): dropped Carter-saturation as chaos evidence; le
 now rests on the validated §79 Lyapunov (conclusion unchanged, footing improved). The Carter DRIFT stays a
 valid deformation-magnitude measure. Two leg-J instruments failed and were discarded honestly (dimension
 scan via zoom-whirl; Carter-saturation via this control). FINDINGS + THE_BRIDGE updated.
+
+## 2026-06-24 — Session 33: sister-project check → leg J non-KY-origin caveat closed + §84/§85 convergence
+
+Checked recent progress in all three sisters. Bridge-usable: ansatz §84/§85 (integrability) — confined
+elsewhere: ansatz's observational campaign §86–93 (EHT shadow + X-ray ISCO + LIGO ringdown three-way no-hair
+test — only the ringdown leg has sibling data, already bridged in Move B); tabula §110–116 (Page curve,
+Aharonov–Bohm, spinor double-cover, grid-cell torus); deepstrain PBH learned-coincidence. Documented in chat.
+
+Acted on the one usable item:
+- **numeric_killing_search.py** — ported ansatz §85's multi-orbit SVD Killing-tensor search onto OUR bump
+  (g_tt·(1+6ε cos²θ/r)). Gate PASS (Kerr recovers Carter, smallest SV 5.6e-14, gap 3.6e10). Our bump: no
+  conserved quadratic (smallest SV ~1e-3, ~10 orders above machine zero, no gap) → no rank-2 Killing tensor,
+  KY-origin or not. Closes leg J's non-KY-origin caveat at rank 2 by an independent numeric method on the
+  same metric. Honest note: obstruction is a flat ~1e-3 floor (10 bound orbits), not §85's clean ε-growth —
+  we claim the absence, not a scaling. Residual (shared with §85): higher-rank/quartic tensor.
+- Documented the **four-method convergence** (bridge symbolic-KY + Lyapunov; ansatz §84 Poincaré [Hénon–Heiles
+  validated, sharper than Lyapunov] + §85 numeric SVD) on two bump families → one verdict: deformed Kerr is
+  formally non-integrable, near-integrable. ansatz's direct symbolic search swamped (7.5h) — our KY route is
+  a method they lack. legJ FINDINGS + THE_BRIDGE §10.4 updated.

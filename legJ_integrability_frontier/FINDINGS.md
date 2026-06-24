@@ -100,9 +100,31 @@ dimension counts the KY tensors of degree ≤D.
 
 **Result:** Kerr's unique KY tensor is recovered (gate passes); **no KY tensor survives the bump up to
 degree 4.** By Eisenhart, **no exact Carter-type Killing tensor exists** for this deformation (to degree 4)
-— the strict horn is **CLOSED**, not undetermined. *Caveat:* this rules out KY-origin (Carter-type) tensors
-to degree 4; a higher-degree or non-KY-origin Killing tensor is not excluded (the converse of Eisenhart is
-not general), and the direct degree-6 Killing-tensor search is the heavier final confirmation.
+— the strict horn is **CLOSED**, not undetermined. *Caveat (now retired below):* the symbolic search rules
+out *KY-origin* tensors; a non-KY-origin rank-2 Killing tensor needs the separate numeric search next.
+
+## Closing the non-KY-origin caveat — numeric rank-2 search (`numeric_killing_search.py`)
+
+The symbolic KY proof rules out a *KY-origin* Carter tensor; the converse of Eisenhart isn't general, so a
+non-KY-origin rank-2 Killing tensor stays open. ansatz §85 closes exactly this gap for *its* bump by a
+multi-orbit SVD null-space search over a general quadratic-in-momenta basis — and its direct *symbolic*
+Killing-tensor search **swamped (7.5 h, no output)**, validating our low-degree KY route. We **port §85's
+exact method** (its basis, SVD, and Carter-recovery gate, read-only) onto **our** bump:
+
+| metric | smallest singular value | gap | invariant? |
+|---|---|---|---|
+| **Kerr (gate)** | **5.6e-14** | **3.6e10** | yes — recovers `p_θ²+11.56·cot²θ+0.035·cos²θ` = Carter ✅ |
+| bumpy ε=0.1 | 1.5e-3 | 2.3 | no |
+| bumpy ε=0.2 | 9.8e-4 | 3.3 | no |
+| bumpy ε=0.35 | 8.5e-4 | 4.2 | no |
+
+Kerr's Carter constant is recovered at machine zero with a 10-order gap; **our bump shows no conserved
+quadratic** — the smallest singular value sits ~ten orders *above* machine zero with no gap. So **no rank-2
+Killing tensor (KY-origin or not) survives our bump**, by an independent (numeric) method on the *same*
+metric — retiring leg J's non-KY-origin caveat at rank 2. *Honest note:* unlike §85's cleaner monotone
+growth, here the obstruction is a flat ~1e-3 floor (only ~10 bound orbits survived this E,L), so we claim
+the *absence* (unambiguous: ~10 orders off machine zero, no gap), not a clean ε-scaling. **Residual (shared
+with §85): a higher-rank / quartic Killing tensor is still not excluded.**
 
 ## What it means (read against the pre-registered outcomes)
 
@@ -139,11 +161,27 @@ is violated (drift 7→18%). So the bump destroys the *exact* Carter constant (p
 motion stays regular: the standard KAM near-integrable picture, and the one the deformation literature
 predicts. The
 **eccentric/inclined/resonance-crossing regime is now probed too** (Schmidt-constructed orbits, ε=0.35) —
-no chaos there either, only a larger-but-bounded C₀ drift. What remains genuinely open: (a) **thin chaos
-below resolution** — a finer resonance scan or much longer integration could still catch exponentially-thin
-KAM layers or slow Arnold diffusion (a single fine scan can step over very narrow resonances); and (b)
-**higher-degree / non-KY-origin** Killing tensors / the direct degree-6 Killing-tensor search (the heavier
-final confirmation). Neither is expected to overturn the picture, but neither is closed.
+no chaos there either, only a larger-but-bounded C₀ drift. What remains genuinely open is now narrow:
+**higher-rank / quartic Killing tensors** (rank-2 is excluded both KY-origin-symbolically and
+numerically), and **thin chaos below resolution** — though §84's Poincaré (sharper than Lyapunov, which
+averages weak chaos away) and a fine eccentricity scan both find none. Neither residual is expected to
+overturn the picture.
+
+## Independent convergence — ansatz §84/§85 reach the same verdict (different methods, different bump)
+
+This is the bridge's premise firing on its hardest question. Working separately, ansatz attacked the same
+deformed-Kerr integrability question on *its own* bump (`ε(3cos²θ−1)/r³`, not our `g_tt·(1+6ε cos²θ/r)`):
+- **§85** — the same multi-orbit numeric Killing-tensor search: Kerr recovers Carter; the deformed metric
+  has no conserved quadratic. Same conclusion as our port, on a different bump.
+- **§84** — Poincaré surface-of-section, **validated on Hénon–Heiles** (textbook 2-DOF chaos) — the
+  positive control our own chaos detector lacked, and *sharper* than Lyapunov: deformed Kerr reads
+  regular-or-destroyed, never a bounded chaotic sea.
+- ansatz's **direct symbolic** Killing-tensor search **swamped (7.5 h, no output)** — so the bridge's
+  KY-route (seconds) is a method ansatz lacks, while §84/§85 are methods the bridge lacked.
+
+**Four methods, two projects, two bump families, one verdict:** deformed Kerr has no exact Carter constant
+and stays KAM-regular — formally non-integrable, near-integrable. That convergence is why the leg-J
+conclusion is trustworthy rather than merely tidy.
 
 ## Prior art (so we neither repeat nor overclaim, and can cite)
 
@@ -172,6 +210,8 @@ above by two independent routes.
   resonance-crossing chaos hunt; Kerr-calibrated (C₀ conserved to 2e-9). `results/eccentric_eps*.json`.
 - `code/verify_chaos.py` — the positive control: ansatz §79 Lyapunov vs Carter-saturation on the bump to
   ε=1.2 (both read regular; Lyapunov supersedes the unvalidated saturation). `results/verify_chaos.json`.
+- `code/numeric_killing_search.py` — ports ansatz §85's multi-orbit SVD null-space search onto our bump;
+  closes the non-KY-origin caveat at rank 2 (Kerr Carter recovered; bump has none). `results/numeric_killing_search.json`.
 - `code/symbolic_ky_search.py` — the proof horn: complete symbolic Killing–Yano search (Eisenhart route),
   Kerr-gated, exact rational linear algebra; rules out an exact KY tensor on the bump to degree 4.
 - `code/count_dimension.py` — the attempted dimension scan (gate-failed, kept for transparency).

@@ -445,8 +445,15 @@ bridge legs in return — the cross-validation cycle running both directions:
   Verdict: **formally non-integrable, near-integrable** — matching the Kerr-deformation literature (Brink
   III/IV; arXiv:1807.08594), by proof *and* dynamics. Two instruments were *failed and discarded honestly*:
   the dimension scan (zoom-whirl gate failure) and the Carter-saturation chaos proxy (a positive control
-  showed it could not be validated as a chaos detector → superseded by the Lyapunov). Open: thin chaos below
-  resolution; higher-degree/non-KY-origin tensors.
+  showed it could not be validated as a chaos detector → superseded by the Lyapunov).
+- **Four-method convergence (bridge ↔ ansatz §84/§85).** ansatz independently attacked the same question on
+  *its own* bump: §85 (numeric SVD Killing-tensor search) finds no conserved quadratic; §84 (Poincaré,
+  validated on Hénon–Heiles — the positive control our chaos detector lacked, and sharper than Lyapunov)
+  finds regular-or-destroyed, never chaotic. ansatz's *direct symbolic* search swamped (7.5 h) — so the
+  bridge's KY-route is a method ansatz lacks, and §84/§85 are methods the bridge lacked. Porting §85's
+  numeric search onto *our* bump (`numeric_killing_search.py`) retires the non-KY-origin caveat at rank 2.
+  **Four methods, two projects, two bump families, one verdict** — formally non-integrable, near-integrable.
+  Only residual: higher-rank/quartic tensors and thin sub-resolution chaos (both expected to confirm).
 
 ---
 

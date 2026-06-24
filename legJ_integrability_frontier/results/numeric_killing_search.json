@@ -1,0 +1,25 @@
+{
+ "basis_indep": 0.04538227502781119,
+ "gate_pass": true,
+ "kerr_smallest_SV": 5.637610059106394e-14,
+ "kerr_gap": 35987999813.908745,
+ "bumpy": {
+  "0.1": {
+   "smallest_SV": 0.001490530455210916,
+   "gap": 2.349765548377936,
+   "n_orbits": 10
+  },
+  "0.2": {
+   "smallest_SV": 0.0009759445097021337,
+   "gap": 3.3460184025642996,
+   "n_orbits": 10
+  },
+  "0.35": {
+   "smallest_SV": 0.0008500622672433469,
+   "gap": 4.239824229485191,
+   "n_orbits": 10
+  }
+ },
+ "no_invariant": true,
+ "obstruction_grows_with_eps": false
+}
