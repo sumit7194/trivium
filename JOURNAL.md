@@ -982,3 +982,17 @@ the divergence — not the asymptotic's form (mild story) nor the divergence str
 negative; corroborates Move I ("noise defeats even exact") in the horizon-emulation setting. A7 DONE
 (honest negative, refines leg H). Only a higher-order asymptotic WITH a noise-robust r−r_h estimate could
 rescue it — logged, not claimed.
+
+## 2026-06-24 — Session 33 (cont.): leg N (B3) — discover→verify generalizes to a holonomy invariant
+
+Aimed Move A's discover→verify architecture at a different CLASS of invariant: the geodetic-precession
+HOLONOMY (geometric phase), not a Killing tensor. holonomy.py: parallel-transport a gyroscope around a
+circular geodesic.
+- VERIFY (gate): transport precession matches the closed form 2π(1−√(1−3M/r)) to ~2–3% (numerical). PASS.
+- DISCOVER (blind): from the gyro-direction time series alone (no metric), unwrap+fit → holonomy 1.322 at
+  r=8M, matching the exact 1.316 to 0.5%. The discover→verify loop closes for a geometric-phase invariant.
+- CONTRAST: the spin shifts the holonomy (Schwarzschild 1.34 → Kerr a=0.9 1.64; frame-dragging) → it's a
+  GEOMETRIC phase, not a protected integer. Honest: the θ-bump is equatorially blind (cos²θ=0), so probing
+  leg J's bump via holonomy needs an off-equatorial spatial loop (logged next step).
+B3 DONE: the bridge's discover→verify instrument generalizes beyond Killing tensors. (Convention debugging:
+the gyro's net rotation 2π√(1−3M/r), geodetic precession = 2π − that; launcher u^φ<0 made T8<0 — caught.)
