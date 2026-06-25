@@ -1,0 +1,82 @@
+{
+ "E": 0.95,
+ "x0": 8.0,
+ "metrics": {
+  "Kerr": {
+   "q": 0.0,
+   "rows": [
+    {
+     "L": 3.2,
+     "py_inclination": 1.3335179786246931,
+     "dEdt": -6.358339524966998e-05,
+     "dLdt": -0.0015558679088691703,
+     "dQdt": -0.0010072060300944452,
+     "reliable": true
+    },
+    {
+     "L": 3.0,
+     "py_inclination": 1.7537019598319894,
+     "dEdt": -6.480243763282188e-05,
+     "dLdt": -0.0014843294511004395,
+     "dQdt": -0.0017582899671381184,
+     "reliable": true
+    },
+    {
+     "L": 2.8,
+     "py_inclination": 2.0719783321611027,
+     "dEdt": -6.60794103512315e-05,
+     "dLdt": -0.0014110709794024467,
+     "dQdt": -0.0024780713328030712,
+     "reliable": true
+    },
+    {
+     "L": 2.6,
+     "py_inclination": 2.3304808805040533,
+     "dEdt": -6.742041915873489e-05,
+     "dLdt": -0.0013359993270421393,
+     "dQdt": -0.00316600697401095,
+     "reliable": true
+    }
+   ]
+  },
+  "MN bump q=0.2": {
+   "q": 0.2,
+   "rows": [
+    {
+     "L": 3.2,
+     "py_inclination": 0.3945422048619349,
+     "dEdt": -0.002126225190648339,
+     "dLdt": -0.008335686448315907,
+     "dQdt": -0.0006359744301007866,
+     "reliable": false
+    },
+    {
+     "L": 3.0,
+     "py_inclination": 0.515876765195073,
+     "dEdt": -0.00521622283471081,
+     "dLdt": -0.014162252330008233,
+     "dQdt": -0.00032250701761541095,
+     "reliable": false
+    },
+    {
+     "L": 2.8,
+     "py_inclination": 0.608127630070188,
+     "dEdt": -0.009809266318975447,
+     "dLdt": -0.02056916784114234,
+     "dQdt": 0.000460934378278046,
+     "reliable": false
+    },
+    {
+     "L": 2.6,
+     "py_inclination": 0.68317983297026,
+     "dEdt": -0.016103515202466036,
+     "dLdt": -0.02736668367888026,
+     "dQdt": 0.0011453399832212685,
+     "reliable": false
+    }
+   ]
+  }
+ },
+ "kerr_validation_monotone_deinclining": true,
+ "verdict": "ansatz's Carter flux dQ/d\u03c4 (Ask A) validated on KERR: <0 and monotone with inclination (the inclined inspiral de-inclines) \u2014 B1 now evolves (E,L,Q) self-consistently for Kerr. On the strong MN bump the leading-order Newtonian-Carter kludge degrades (inflated |dE|, dQ sign-flip) \u2014 ansatz's flagged limit; reliable bump inclined inspiral needs the relativistic Carter term (refined sister-request)."
+}
