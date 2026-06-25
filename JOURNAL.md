@@ -928,3 +928,16 @@ Compiled BACKLOG.md from a full doc sweep (deferred items A1–A10 + separate-an
   artifact, not a momentum form. A momentum-dependence check unmasks it; without it we'd have falsely
   reported a surviving quartic. → No rank-2 AND no rank-4 Killing tensor; residual now only rank ≥6 (exotic).
 legJ FINDINGS + verdict updated.
+
+## 2026-06-24 — Session 33 (cont.): A9 knocked out → leg K (the count's 4th lens, §9 answered)
+
+Built leg K (mdl_count.py) to answer THE_BRIDGE §9's "do MDL/moduli/DOF agree on the count? where part?"
+Two estimators on leg 1's observation data:
+- Linear MDL (Minka PPCA): 5, 7, 7 — overcounts badly (curvature inflation; the manifold is nonlinearly
+  embedded, so a linear code needs many dims). Wrong lens.
+- Nonlinear intrinsic dim (Levina–Bickel MLE): 1.31, 2.52, 2.56 — upward-biased, so read STEPS:
+  Schwarzschild→RN +1.21 (one new dim), RN→dyonic +0.04 (NO new dim). dyonic has RN's dimension (=2),
+  not 3 → Q²+P² observable degeneracy confirmed by a 4th, information-geometric lens.
+§9 ANSWER: the lenses part on the CODE, not the physics — moduli/measured-δ/neural-knee/nonlinear-ID all
+agree on the observable count (1,2,2); only the linear MDL is the outlier, and WHY is the curvature leg 7b/
+Move I already flagged. SPINE_SUMMARY count-triangle gained the 4th row; §9 marked answered.

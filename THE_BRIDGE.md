@@ -142,6 +142,9 @@ Match the projects' shared ethos throughout: pre-register → build → gate →
 ## 9. Open questions to carry in
 
 - Do MDL, moduli dimension, and measured DOF all give the same count for a black hole? Where do they part, and why?
+  **→ ANSWERED (leg K / A9):** they agree on the observable count (1, 2, 2) when the code is *nonlinear*
+  (moduli, measured-δ, neural-knee, and Levina–Bickel intrinsic-dim all converge; dyonic≈RN confirms the
+  Q²+P² degeneracy). They part only for a *linear* MDL, which overcounts via curvature (leg 7b / Move I).
 - Does **amortization predict sim→real transfer** in GW data? (If yes: the most original result available here.)
 - Is tabula's strong-field error in the regime real ringdowns actually constrain — i.e., does it *matter*?
 - Does "geometrizes ⟺ universal ∧ conservative" survive an exact proof on the ansatz catalog?

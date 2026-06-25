@@ -22,6 +22,7 @@ object** — and the one place they disagree is itself predicted and explained.
    ansatz           proves (exact)        2     Kerr 2-param; scalar no-hair proved
    tabula           infers (neural)       2     RN observable manifold dim = 2 (leg 1)
    deepstrain       measures (real)       2     no-hair δ ≈ 0, σ(δ) 0.27→0.095 stacked (leg 3 / Move B v2)
+   info-geometry    intrinsic-dim         2     nonlinear ID = observable count; dyonic≈RN (leg K / A9, §9)
 ```
 
 ## What the bridge actually bought (honest accounting)

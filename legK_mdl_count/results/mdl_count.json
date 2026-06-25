@@ -1,0 +1,28 @@
+{
+ "rows": [
+  {
+   "manifold": "Schwarzschild",
+   "algebraic": 1,
+   "observable": 1,
+   "linear_mdl_dim": 5,
+   "nonlinear_mle_id": 1.31
+  },
+  {
+   "manifold": "RN (M,Q)",
+   "algebraic": 2,
+   "observable": 2,
+   "linear_mdl_dim": 7,
+   "nonlinear_mle_id": 2.52
+  },
+  {
+   "manifold": "dyonic (M,Qe,Qm)",
+   "algebraic": 3,
+   "observable": 2,
+   "linear_mdl_dim": 7,
+   "nonlinear_mle_id": 2.56
+  }
+ ],
+ "step_schw_to_rn": 1.21,
+ "step_rn_to_dyonic": 0.04,
+ "dyonic_collapses_to_2": true
+}
