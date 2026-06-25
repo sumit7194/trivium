@@ -1043,3 +1043,21 @@ next-gen/LISA ringdown. B2 DONE (honest forecast + explicit data-gap). Cited M87
 
 BACKLOG COMPLETE: 10 items DONE, 2 PARTIAL (A1, B1 — need external inputs), 1 PARKED (A5, data-limited),
 1 RETIRED (A10). Every well-posed item resolved; honest-result discipline held throughout.
+
+## 2026-06-24 — deepstrain delivered A1 + A5 artifacts; bridge analyses done
+
+deepstrain's Claude session produced both requested artifacts. Bridge-side analyses:
+- **A1 (amortization_verdict.py)** — read §19 (5 NPE variants, N_train 5k→150k). The §9 "most original"
+  hypothesis is NOT supported: amortization gap shrinks with training (0.095→0.028) but transfer is negative
+  for all (−0.016…−0.142), corr(gap,transfer)=+0.04≈0. Amortization (sim self-consistency) and transfer
+  (sim→real) are DECOUPLED — the sim→real gap is a DOMAIN SHIFT (real noise ≠ sim), not amortization,
+  corroborating leg 2. Combined: within-model legibility→precision holds (leg L); cross-model
+  amortization→transfer does not. Honest: weak test (5 pts, noise-limited). A1 → DONE.
+- **A5 (precise_multievent.py)** — read §18 (raw per-event 220/221 fits). Exact-Leaver 220 inversion
+  reproduces deepstrain's (M,χ) across all 5 robust events (≤0.000, same Leaver map — multi-event
+  reproducibility). Per-event δ is 221-info-limited (2/5 rail at 180 Hz; rest low-confidence); 3 usable δ's
+  stack to mean −0.007 (Kerr-consistent, spread 0.243). Move B v2 extends at the 220 level; no-hair tightens
+  via NPE stacking (§12), not raw 221. A5 → DONE.
+
+BACKLOG now: 12 DONE, 0 PARTIAL, 1 PARKED→resolved, A10 RETIRED, B1 the only open (needs GW fluxes).
+SISTER_REQUESTS: A1, A5 marked fulfilled; B1 (ansatz GW-flux) + A10 (tabula reframe) remain.

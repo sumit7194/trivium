@@ -152,6 +152,10 @@ Match the projects' shared ethos throughout: pre-register → build → gate →
   params / 1 event, and the mechanism is shared Fisher information (not an amortization-gap-overfitting
   effect) — the cross-model version needs several NPEs deepstrain would train. Also (A6): δ is
   information-limited even in this richer model, corroborating leg 2.
+  **→ FULL VERDICT (A1, deepstrain's 5 NPE variants):** the amortization *gap* does NOT predict transfer
+  (corr +0.04≈0); transfer is negative for all variants (real under-coverage), set by the sim↔real *domain
+  shift*, not amortization — refuting the hypothesis but corroborating leg 2. Within-model legibility→precision
+  stands; cross-model amortization→transfer does not. (Weak test: 5 pts, noise-limited.)
 - Is tabula's strong-field error in the regime real ringdowns actually constrain — i.e., does it *matter*?
 - Does "geometrizes ⟺ universal ∧ conservative" survive an exact proof on the ansatz catalog?
 - Does any bridge result, phrased as "when is a learned geometry legible/transferable," generalize to the curvature-atlas domains outside GR?

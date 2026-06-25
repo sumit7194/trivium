@@ -1,0 +1,14 @@
+{
+ "corr_gap_transfer": 0.0406834458985318,
+ "amort_gap_range": [
+  0.09500000000000001,
+  0.02833333333333336
+ ],
+ "transfer_all_negative": true,
+ "transfer_range": [
+  -0.016111111111111076,
+  -0.1416666666666666
+ ],
+ "verdict": "amortization does NOT predict transfer (corr~0); sim\u2192real gap is domain-shift, not amortization",
+ "weak_test_caveats": "5 points, noise-limited, single lever, coverage proxy"
+}

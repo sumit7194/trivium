@@ -51,6 +51,19 @@ large-N correlation. The stronger A1 (does an NPE's amortization *gap* predict t
 *models*) needs several NPEs of varying capacity, which deepstrain would have to train — logged as the
 next step.
 
+## Update (2026-06-24) — A1 full (cross-model): amortization does NOT predict transfer
+
+deepstrain trained 5 no-hair NPE variants (N_train 5k→150k) and reported per-variant amortization gap (sim
+coverage deviation) + transfer (real−sim coverage); `code/amortization_verdict.py` reads it. **The §9 "most
+original" hypothesis is NOT supported:** the amortization gap shrinks monotonically with training
+(0.095→0.028) but transfer is negative for *every* variant (−0.016…−0.142), and corr(gap, transfer)=+0.04≈0.
+So amortization (sim self-consistency) and transfer (sim→real robustness) are **decoupled** — the sim→real
+failure is a **domain shift** (real O4 noise ≠ training white noise), which better amortization can't cure,
+**corroborating leg 2** (the gap is domain/information-limited). Combined: *within* a model, per-parameter
+legibility predicts real precision (the leg-L positive); *across* models, the amortization gap is orthogonal
+to transfer (this null). Honest (deepstrain): weak test — 5 points, noise-limited transfer (±0.06), single
+lever, coverage proxy; "no relationship at this resolution," not a strong null. `results/amortization_verdict.json`.
+
 ## Artifacts
 - `code/export_nohair_codes.py` — deepstrain side: extracts the no-hair NPE's 56-d Embed summary on 5000
   simulated ringdowns with known (M, χ, δ). `results/nohair_codes.npz`.

@@ -87,6 +87,18 @@ So leg 3's no-hair link is now a precise, numeric, two-mode comparison whose δ 
 reproduce by independent routes — a real cross-validation upgrade over the v1 light-ring-level test.
 See `code/precise_ringdown.py`, `results/precise_ringdown.json`.
 
+## Update (2026-06-24) — A5: precise multi-event no-hair (deepstrain §18 raw tone fits)
+
+deepstrain §18 exported per-event raw 220/221 fits; `code/precise_multievent.py` runs Move B v2's exact-Leaver
+inversion across the 5 robust-220 events (GW250114, GW150914, GW170814, GW170104, GW190828). **The 220
+inversion reproduces deepstrain's (M,χ) exactly** (≤0.000 in χ — both apply the Leaver/qnm map; a multi-event
+reproducibility check). **The per-event δ is 221-information-limited:** 2/5 events rail the 221 at the 180-Hz
+floor and the rest are low-confidence (the two-tone can't split ~6-Hz tones at this SNR — deepstrain's caveat,
+leg 2/7's info-limit). The 3 usable δ's (−0.058, −0.104, +0.139) stack to mean δ=−0.007 (Kerr-consistent),
+wide 0.243 spread. So Move B v2 extends to the catalog **at the 220 level**; multi-event *no-hair* tightening
+comes from NPE δ stacking (§12: σ 0.27→0.095), not raw per-event 221 fits — the 221 stays signal-limited.
+`results/precise_multievent.json`.
+
 ## Artifacts
 - `code/eikonal_kerr_qnm.py` — ansatz side: eikonal Kerr QNM from the exact metric, Schwarzschild-gated.
 - `code/compare_ringdown.py` — measured-vs-eikonal comparison + frozen-prediction verdicts.

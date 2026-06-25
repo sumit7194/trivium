@@ -6,7 +6,9 @@ item that is currently PARTIAL or PARKED. Compiled 2026-06-24.*
 
 ---
 
-## → deepstrain (BlackHole): unblock **A1** (amortization → sim→real transfer) — the §9 "most original" item
+## → deepstrain (BlackHole): A1 (amortization → transfer) — ✅ FULFILLED (2026-06-24): §19 artifact delivered; bridge verdict in leg L (amortization does NOT predict transfer, corr≈0). Decisive follow-up (more variants/injections, C2ST) optional.
+
+<details><summary>original ask</summary>
 
 **Why it's blocked:** the bridge (leg L) showed the *per-parameter* legibility predicts real-data precision
 on ONE NPE. The deeper claim — does an NPE's **amortization gap predict its transfer** — needs *several*
@@ -32,7 +34,11 @@ amortization gap → worse (or better!) transfer — genuinely unknown, which is
 
 ---
 
-## → deepstrain (BlackHole): unblock **A5** (precise multi-event no-hair)
+</details>
+
+## → deepstrain (BlackHole): A5 (precise multi-event no-hair) — ✅ FULFILLED (2026-06-24): §18 raw tone fits delivered; bridge result in leg B (220 cross-check across 5 events; 221 info-limited).
+
+<details><summary>original ask</summary>
 
 **Why it's blocked:** Move B v2's exact-Leaver δ test needs the **raw 220/221 tone fits** (f, τ, amplitudes)
 per event. Currently only GW250114 (§06) has them; §13's other 7 events expose only the NPE δ posterior.
@@ -45,6 +51,8 @@ per-event precise δ, and stack — extending Move B v2 from one event to the ca
 no-hair precision test).
 
 ---
+
+</details>
 
 ## → ansatz (conjecture_machine) [or a new module]: unblock **B1** (full EMRI waveform)
 
