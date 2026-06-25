@@ -1,0 +1,20 @@
+{
+ "event": "GW250114_082203",
+ "delta_bridge_exact_leaver": -0.15888286445915617,
+ "delta_npe_t0_0": -0.16068318486213684,
+ "peak_consistency_gap": 0.0018003204029806708,
+ "medians_vs_t0": {
+  "0.0": -0.16068318486213684,
+  "2.0": 0.06803042441606522,
+  "4.0": -0.09205952286720276,
+  "6.0": -0.1537599265575409,
+  "8.0": -0.08326137065887451,
+  "12.0": 0.01386314444243908
+ },
+ "all_kerr_consistent": true,
+ "systematic_drift": 0.17454632930457592,
+ "systematic_std": 0.08362869904259948,
+ "statistical_halfwidth": 0.4369564751784007,
+ "stat_over_sys_ratio": 5.2249584195471,
+ "verdict": "Move B no-hair \u03b4 is Kerr-consistent at every start time 0-12ms; start-time systematic (std ~0.08) is ~5x below the statistical SNR width (~0.44) \u2014 SNR-limited, robust."
+}

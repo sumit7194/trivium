@@ -99,7 +99,31 @@ wide 0.243 spread. So Move B v2 extends to the catalog **at the 220 level**; mul
 comes from NPE δ stacking (§12: σ 0.27→0.095), not raw per-event 221 fits — the 221 stays signal-limited.
 `results/precise_multievent.json`.
 
+## Update (2026-06-26) — start-time robustness: the no-hair δ survives the dominant ringdown systematic
+
+The biggest systematic in ringdown spectroscopy is *when* the ringdown starts (early ⇒ overtone/nonlinear
+contamination; late ⇒ no SNR). Move B's exact-Leaver no-hair test was run at the **peak** (t0=0), so the
+fair question is whether its Kerr-consistency is a start-time artifact. deepstrain §16 re-fit the GW250114
+NPE δ posterior at offsets **0–12 ms** past the peak; `code/starttime_robustness.py` reads it (read-only)
+and frames it against leg B's independent exact-Leaver δ.
+
+- **Independent routes agree at the peak.** leg B's exact-Leaver δ = **−0.159** matches deepstrain's t0=0
+  NPE median **−0.161** to **0.002** — the bridge's exact δ and deepstrain's learned δ coincide at the peak.
+- **Kerr-consistent at EVERY start time.** Across t0 = 0, 2, 4, 6, 8, 12 ms the δ median wanders in
+  [−0.16, +0.07], but **δ=0 (Kerr) sits inside the 90% CI at all six** — the no-hair conclusion does not
+  depend on the start-time choice.
+- **Systematic ≪ statistical.** The start-time drift (std **0.084** across t0; peak-to-late **0.175**) is
+  **5.2× smaller** than the statistical 90% half-width (**0.437**). So the no-hair test is **SNR-limited,
+  not start-time-systematic-limited** — tightening it needs more data/SNR (corroborating leg 2 / leg 7's
+  information limit on δ), not better start-time control.
+
+So Move B's headline — the exact-Leaver δ is Kerr-consistent — is **robust to the dominant ringdown
+systematic**, and the bridge's exact δ tracks deepstrain's learned δ as the fit window is moved.
+`results/starttime_robustness.json`.
+
 ## Artifacts
+- `code/starttime_robustness.py` — reads deepstrain §16's δ-vs-start-time + leg B's exact-Leaver δ; the
+  start-time robustness + systematic-vs-statistical analysis. `results/starttime_robustness.json`.
 - `code/eikonal_kerr_qnm.py` — ansatz side: eikonal Kerr QNM from the exact metric, Schwarzschild-gated.
 - `code/compare_ringdown.py` — measured-vs-eikonal comparison + frozen-prediction verdicts.
 - `code/plot_ringdown.py` — the Q(χ), Mω_R(χ) figure with GW250114 overlaid.
