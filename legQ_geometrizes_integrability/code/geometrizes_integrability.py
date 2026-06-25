@@ -21,6 +21,9 @@ from pathlib import Path
 
 TABULA = Path("/Users/sumit/Github/SpaceTime/curvature/results/127_integrability_legibility.json")
 LEGO = Path(__file__).resolve().parents[2] / "legO_catalog_survey/results/survey_catalog.json"
+# ZV γ-metric extension (2026-06-26): tabula §132 legibility + leg O survey_zv KY-integrability
+ZV_TABULA = Path("/Users/sumit/Github/SpaceTime/curvature/results/132_zv_gamma_metric.json")
+ZV_LEGO = Path(__file__).resolve().parents[2] / "legO_catalog_survey/results/survey_zv.json"
 OUT = Path(__file__).resolve().parent.parent / "results"
 
 
@@ -42,6 +45,21 @@ def main():
     tab_leg = {canon(k): v["legible"] for k, v in tab.items()}
     tab_int = {canon(k): v["integrable"] for k, v in tab.items()}      # tabula's own integrability label
     lego_int = {canon(k): (d >= 1) for k, d in lego.items()}
+
+    # --- ZV γ-metric extension: a 6th/7th metric and a 2nd independent non-integrable case ---
+    # tabula §132 (legibility on real ZV geodesics) + leg O survey_zv (symbolic KY in prolate coords)
+    try:
+        zt = json.loads(ZV_TABULA.read_text())
+        zl = json.loads(ZV_LEGO.read_text())["ky_dim"]
+        tab_leg["zv δ=1"] = bool(zt["delta_1_Schwarzschild"]["legible"])
+        tab_leg["zv δ=2"] = bool(zt["delta_2_ZV_same_EL"]["legible"])
+        tab_int["zv δ=1"], tab_int["zv δ=2"] = True, False            # tabula proves δ=1 int, δ=2 non-int
+        for k, dim in zl.items():
+            kk = "zv δ=1" if "δ=1" in k else ("zv δ=2" if "δ=2" in k else None)
+            if kk:
+                lego_int[kk] = (dim >= 1)
+    except (FileNotFoundError, KeyError):
+        pass
 
     joint = sorted(set(tab_leg) & set(lego_int))                      # metrics present in BOTH repos
     tab_only = sorted(set(tab_leg) - set(lego_int))

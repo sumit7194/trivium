@@ -29,14 +29,26 @@
    "ky_integrable": true,
    "legible": true,
    "agree": true
+  },
+  {
+   "metric": "zv \u03b4=1",
+   "ky_integrable": true,
+   "legible": true,
+   "agree": true
+  },
+  {
+   "metric": "zv \u03b4=2",
+   "ky_integrable": false,
+   "legible": false,
+   "agree": true
   }
  ],
- "n_match": 5,
- "n_joint": 5,
+ "n_match": 7,
+ "n_joint": 7,
  "phi_matthews": 1.0,
  "contingency": {
-  "int_and_legible": 4,
-  "non_and_nonlegible": 1,
+  "int_and_legible": 5,
+  "non_and_nonlegible": 2,
   "false_legible": 0,
   "missed": 0
  },

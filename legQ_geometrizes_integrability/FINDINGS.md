@@ -11,12 +11,12 @@ tests the equivalence across the catalog. Both source artifacts are consumed REA
 Across the catalog, **a learned geometry is legible iff the metric admits a Killing tensor** — tabula's
 neural legibility instrument EMITS the verified hidden invariant (Carter constant) for exactly the metrics
 that leg O's symbolic Killing–Yano survey finds integrable, and CERTIFIES "no invariant" for exactly the
-ones it finds non-integrable. **5/5 metrics agree on the joint set; Matthews φ = 1.0** (perfect
-separation). Two deliberately-independent repos — a *neural* probe on observed geodesics (tabula) and a
-*symbolic* KY algebra on the exact metric (leg O) — reach the identical integrability verdict metric by
-metric. A10 is un-retired in its well-posed form, and **confirmed**.
+ones it finds non-integrable. **7/7 metrics agree on the joint set; Matthews φ = 1.0** (perfect
+separation), with **two independent non-integrable cases**. Two deliberately-independent repos — a *neural*
+probe on observed geodesics (tabula) and a *symbolic* KY algebra on the exact metric (leg O) — reach the
+identical integrability verdict metric by metric. A10 is un-retired in its well-posed form, and **confirmed**.
 
-## The join (tabula §127 `legible` vs leg O `KY-integrable`)
+## The join (tabula `legible` vs leg O `KY-integrable`)
 
 | metric | leg O: KY-integrable (symbolic) | tabula: legible (neural) | agree |
 |---|---|---|---|
@@ -25,11 +25,24 @@ metric. A10 is un-retired in its well-posed form, and **confirmed**.
 | Kerr–de Sitter | yes | yes | ✅ |
 | Taub–NUT | yes | yes | ✅ |
 | bumpy (quadrupole) | **no** | **no** | ✅ |
+| **Zipoy–Voorhees δ=1** (Schwarzschild) | yes | yes | ✅ |
+| **Zipoy–Voorhees δ=2** (γ-metric) | **no** | **no** | ✅ |
 
-Contingency on the joint set: integrable&legible = 4, non-integrable&non-legible = 1, false-legible = 0,
+Contingency on the joint set: integrable&legible = 5, non-integrable&non-legible = 2, false-legible = 0,
 missed = 0 → **φ (Matthews) = 1.0**. tabula reports ~26 orders of magnitude separating "emit" (engine
 held-out variance ~1e-28 on the integrable metrics) from "certify" (~1e-2 on the bumpy ones) — the
 legibility split is not marginal, it is categorical.
+
+**Update (2026-06-26) — Zipoy–Voorhees closes the loop, both repos independently.** After leg O added the
+exact ZV γ-metric to its symbolic KY survey (δ=1 → KY tensor, δ=2 → none), tabula ran §132: it built the
+*real* ZV geodesic Hamiltonian in prolate-spheroidal coords and applied its emit-or-certify legibility
+instrument, deriving the exact separation constant `C = (1−y²)p_y² + L²/(1−y²)` to look for. It **EMITS C for
+δ=1** (Schwarzschild: conserved to 1.1e-23 = integration precision, cosine-to-C = 1.000) and **CERTIFIES no
+invariant for δ=2** (C-drift 8.0e-6 = **7×10¹⁷×** the integrable floor; 3e-4 in the strong-chaos region). So
+the legible ⟺ integrable equivalence now holds on a **second, independent non-integrable spacetime** — a
+*different deformation* (exact static vacuum γ-metric vs the axisymmetric bump) in *different coordinates*
+(prolate x,y vs Boyer–Lindquist r,u) — verified by both the neural (tabula §132) and symbolic (leg O
+`survey_zv`) routes. The §9 claim is no longer resting on a single bump.
 
 **Single-repo metrics (consistency check, same rule):**
 - *leg O only* — **Schwarzschild**: KY-integrable = yes (tabula did not run a legibility datum for it; the
@@ -37,8 +50,9 @@ legibility split is not marginal, it is categorical.
 - *tabula only* — **bumpy-strong**: legible = no, tabula-integrable = no → **consistent** with
   legible ⟺ integrable on tabula's own labels.
 
-So a *union* view spans 7 metrics, every one consistent with the equivalence; 5 are directly
-cross-validated across both repos.
+So a *union* view spans 9 metrics, every one consistent with the equivalence; **7 are directly
+cross-validated** across both repos (Kerr, KN, KdS, Taub–NUT, bumpy, ZV δ=1, ZV δ=2), with two of them
+(bumpy, ZV δ=2) *independent* non-integrable cases.
 
 ## What this establishes (and what it does not)
 
@@ -72,6 +86,8 @@ cross-validated across both repos.
 
 - tabula §127 — `/Users/sumit/Github/SpaceTime/curvature/results/127_integrability_legibility.json`
   (`legible` per metric) + `notes/A10_for_bridge.md`.
-- leg O — `legO_catalog_survey/results/survey_catalog.json` (`ky_dim` per metric).
-- `code/geometrizes_integrability.py` — normalizes metric names across the repos, joins the columns, builds
-  the 2×2 contingency, reports φ. `results/geometrizes_integrability.json`.
+- tabula §132 — `/Users/sumit/Github/SpaceTime/curvature/results/132_zv_gamma_metric.json` (ZV γ-metric
+  legibility on real geodesics; δ=1 emits C, δ=2 certifies none).
+- leg O — `legO_catalog_survey/results/survey_catalog.json` + `survey_zv.json` (`ky_dim` per metric, incl. ZV).
+- `code/geometrizes_integrability.py` — normalizes metric names across the repos, joins the columns (incl.
+  the ZV extension), builds the 2×2 contingency, reports φ. `results/geometrizes_integrability.json`.
