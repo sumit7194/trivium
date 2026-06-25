@@ -1,0 +1,26 @@
+{
+ "geometric_legN": {
+  "holonomy_r8M": {
+   "Schwarzschild": 1.337,
+   "Kerr a=0.6": 1.535,
+   "Kerr a=0.9": 1.636
+  },
+  "max_spin_shift_frac": 0.22363500373971573,
+  "character": "continuous / spin-dependent (not protected)"
+ },
+ "topological_tabula120": {
+  "chern_R2": 0.9920212626457214,
+  "round_accuracy": 1.0,
+  "deform_delta": 0.006666666828095913,
+  "sweep_plateaus": {
+   "u<-2": 0.0,
+   "-2<u<0": -1.0,
+   "0<u<2": 1.0,
+   "u>2": 0.0
+  },
+  "bulk_boundary_pass": true,
+  "character": "quantized / deformation-robust (protected)"
+ },
+ "geo_shift_over_topo_shift": 33.5452497486797,
+ "verdict": "discover\u2192verify is invariant-agnostic across the geometric\u2194topological spectrum: leg N's holonomy shifts +22% under spin (geometric), tabula \u00a7120's Chern stays \u00b10.007 under deformation (topological) \u2014 same architecture, two independent repos, opposite ends."
+}
