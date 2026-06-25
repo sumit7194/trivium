@@ -1,0 +1,6 @@
+{
+ "auc_loudness_to_label": 0.49260875000000004,
+ "auc_code_to_label": 0.7558244999999999,
+ "r2_code_to_loudness": 0.8667424113289364,
+ "loudness_shortcut_exists": false
+}

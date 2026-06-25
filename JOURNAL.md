@@ -1025,3 +1025,21 @@ Verdict: a forecast, not yet a test. Natural first target: a galactic BH with bo
 next-gen/LISA ringdown. B2 DONE (honest forecast + explicit data-gap). Cited M87*/Cygnus X-1 sources.
 
 ## Phase 2 status: B4, B2 DONE. Remaining: A4 (reframe), A8 (niche), A10 (vague). High-value board cleared.
+
+## 2026-06-24 — Phase 2 (fresh): clean sweep — A4 + A8 done, A10 retired (ill-posed)
+
+- **A4** (`leg8/reflectivity_limit.py`): reframed leg 8 v2's amplitude exclusion into the standard echo
+  product — an effective-reflectivity upper limit R_eff ≲ 0.20–0.26 (90%, = A90/ringdown-SNR ~7-8). Honest:
+  a direct λ limit stays weak/model-dependent (the DS echo amplitude is barrier-set; λ mainly sets the
+  spacing), so the robust statement is the reflectivity bound — exactly as leg 8 §3 anticipated.
+- **A8** (`leg2/extract_base_native.py` + probe): fed the base tone-count model its NATIVE convention
+  (un-normalized, non-SNR-matched, so 2-tone is genuinely louder). No loudness shortcut even there:
+  loudness→label AUC 0.49 (per-event ±30% amplitude scatter swamps the 221 energy). Nuance — the native
+  code STRONGLY encodes loudness (R² 0.87) yet does NOT exploit it (uninformative for the label); the
+  invariant stays legible (code→tone AUC 0.76). leg 2's P4-False is robust to the convention.
+- **A10** retired as ILL-POSED: "geometrizes ⟺ universal ∧ conservative" is a tabula legibility claim, not a
+  metric theorem; "exact proof on the ansatz catalog" doesn't map to a computation. Move E covers the
+  directional claim. Dropped, not faked.
+
+BACKLOG COMPLETE: 10 items DONE, 2 PARTIAL (A1, B1 — need external inputs), 1 PARKED (A5, data-limited),
+1 RETIRED (A10). Every well-posed item resolved; honest-result discipline held throughout.

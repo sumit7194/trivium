@@ -72,9 +72,15 @@ This is a real bridge result, not a dead end:
   from the label), so the absolute AUCs reflect the *hard* overtone-presence regime, not
   the model's reported 0.72 (which had a partial loudness cue). This is the faithful test
   of overtone *legibility*, but the numbers are convention-dependent.
-- **Base-model shortcut untested in its native convention.** All checkpoints were fed
+- **Base-model shortcut untested in its native convention.** ~~All checkpoints were fed
   `norm_seg` input; the base model was trained pre-norm, so its loudness shortcut (P4)
-  was not probed where it lives. A follow-up could feed base un-normalized data.
+  was not probed where it lives.~~ **Resolved (2026-06-24, A8 — `extract_base_native.py`):** fed the base
+  model its native input (un-normalized, NOT SNR-matched, so 2-tone is genuinely louder). Result: **no
+  loudness shortcut even natively.** Loudness→label AUC = **0.49** (useless) because the per-event amplitude
+  scatter (±30%) swamps the small 221 energy. Nuance: the native code *strongly encodes* loudness
+  (code→loudness R² = 0.87) yet does NOT exploit it (it's uninformative for the label), while the invariant
+  stays legible (code→tone AUC = 0.76). So **P4-False is robust to the convention** — "the code represents
+  loudness" ≠ "the model uses loudness as a shortcut." See `results/base_native_probe.json`.
 - **4 checkpoints, narrow transfer spread.** This was a parked honest-negative, so the
   transfer outcomes barely separate (~0.58–0.64); P3 is underpowered by construction.
 - **Tone-count only.** Other deepstrain models (the no-hair δ SBI, the PBH learned
