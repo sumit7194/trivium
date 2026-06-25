@@ -8,33 +8,33 @@
     {
      "L": 3.2,
      "py_inclination": 1.3335179786246931,
-     "dEdt": -6.358339524966998e-05,
-     "dLdt": -0.0015558679088691703,
-     "dQdt": -0.0010072060300944452,
+     "dEdt": -6.263781123864897e-05,
+     "dLdt": -0.0015414253911875252,
+     "dQdt": -0.0010854706165668655,
      "reliable": true
     },
     {
      "L": 3.0,
      "py_inclination": 1.7537019598319894,
-     "dEdt": -6.480243763282188e-05,
-     "dLdt": -0.0014843294511004395,
-     "dQdt": -0.0017582899671381184,
+     "dEdt": -6.391198177678074e-05,
+     "dLdt": -0.001471491707296344,
+     "dQdt": -0.0018945326275335208,
      "reliable": true
     },
     {
      "L": 2.8,
      "py_inclination": 2.0719783321611027,
-     "dEdt": -6.60794103512315e-05,
-     "dLdt": -0.0014110709794024467,
-     "dQdt": -0.0024780713328030712,
+     "dEdt": -6.524640246290565e-05,
+     "dLdt": -0.0013997732299708633,
+     "dQdt": -0.002671806427073517,
      "reliable": true
     },
     {
      "L": 2.6,
      "py_inclination": 2.3304808805040533,
-     "dEdt": -6.742041915873489e-05,
-     "dLdt": -0.0013359993270421393,
-     "dQdt": -0.00316600697401095,
+     "dEdt": -6.66478972466399e-05,
+     "dLdt": -0.0013261689002508422,
+     "dQdt": -0.003445843493077902,
      "reliable": true
     }
    ]
@@ -45,38 +45,39 @@
     {
      "L": 3.2,
      "py_inclination": 0.3945422048619349,
-     "dEdt": -0.002126225190648339,
-     "dLdt": -0.008335686448315907,
-     "dQdt": -0.0006359744301007866,
-     "reliable": false
+     "dEdt": -7.35425630237485e-05,
+     "dLdt": -0.0013303149910936646,
+     "dQdt": -0.004494564420853396,
+     "reliable": true
     },
     {
      "L": 3.0,
      "py_inclination": 0.515876765195073,
-     "dEdt": -0.00521622283471081,
-     "dLdt": -0.014162252330008233,
-     "dQdt": -0.00032250701761541095,
-     "reliable": false
+     "dEdt": -8.621462033932541e-05,
+     "dLdt": -0.0009983021246622841,
+     "dQdt": -0.007010224522783277,
+     "reliable": true
     },
     {
      "L": 2.8,
      "py_inclination": 0.608127630070188,
-     "dEdt": -0.009809266318975447,
-     "dLdt": -0.02056916784114234,
-     "dQdt": 0.000460934378278046,
-     "reliable": false
+     "dEdt": -9.110108346499674e-05,
+     "dLdt": -0.0007767198592153335,
+     "dQdt": -0.008887251341220682,
+     "reliable": true
     },
     {
      "L": 2.6,
      "py_inclination": 0.68317983297026,
-     "dEdt": -0.016103515202466036,
-     "dLdt": -0.02736668367888026,
-     "dQdt": 0.0011453399832212685,
-     "reliable": false
+     "dEdt": -9.371101491624208e-05,
+     "dLdt": -0.0006034025870816115,
+     "dQdt": -0.010116322906282428,
+     "reliable": true
     }
    ]
   }
  },
- "kerr_validation_monotone_deinclining": true,
- "verdict": "ansatz's Carter flux dQ/d\u03c4 (Ask A) validated on KERR: <0 and monotone with inclination (the inclined inspiral de-inclines) \u2014 B1 now evolves (E,L,Q) self-consistently for Kerr. On the strong MN bump the leading-order Newtonian-Carter kludge degrades (inflated |dE|, dQ sign-flip) \u2014 ansatz's flagged limit; reliable bump inclined inspiral needs the relativistic Carter term (refined sister-request)."
+ "kerr_clean": true,
+ "bump_clean": true,
+ "verdict": "ansatz's Carter flux dQ/d\u03c4 (Ask A) validated on BOTH Kerr and the MN bump after the f4cc1b1 refine: dE physical, dQ<0 and monotone with inclination \u2014 the inclined EMRI inspiral de-inclines in both. B1's generic eccentric-inclined case now evolves (E,L,Q) self-consistently in the deformed metric, not just Kerr."
 }

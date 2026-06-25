@@ -82,19 +82,23 @@ ansatz (§101) delivered the third flux — `quadrupole_flux(…, carter=True) �
 leading (Newtonian) Carter flux. `code/inspiral_inclined.py` validates it on genuinely inclined orbits:
 
 - **Clean on Kerr (Ask A validated).** Across a range of launch inclinations (p_y = 1.33 → 2.33 at x0=8),
-  `dQ/dτ` is **negative and grows monotonically more negative** (−1.0e-3 → −3.2e-3): radiation reaction
+  `dQ/dτ` is **negative and grows monotonically more negative** (−1.1e-3 → −3.5e-3): radiation reaction
   drives the inclined orbit toward the equatorial plane — the orbit **de-inclines**, exactly as a
   GW-emitting inspiral must. So the bridge inspiral is no longer restricted to Q=0; with the third flux it
-  evolves (E, L, Q) self-consistently on Kerr.
-- **Honest limit on the strong bump.** At MN q=0.2 the leading-order Newtonian-Carter kludge **degrades** —
-  |dE/dτ| inflates 30–250× and `dQ/dτ` flips sign (unphysical) at high inclination. This is ansatz's own
-  flagged limit (the relativistic `a²(1−E²)cos²` term is omitted); a reliable *inclined* inspiral **in the
-  bump** needs that term — logged as a refined sister-request. The smooth de-inclination is the full
-  adiabatic story regardless: the resonant *kick* (a jump in Q at a low-order ω_r:ω_θ) is non-adiabatic,
-  beyond any orbit-averaged flux — consistent with this leg's finding that the bump's resonances are regular.
+  evolves (E, L, Q) self-consistently.
+- **Now clean on the strong bump too (ansatz `f4cc1b1`).** Our first run found the leading-order flux
+  *degrading* on MN q=0.2 (|dE/dτ| inflated 30–250×, `dQ/dτ` sign-flipping); we relayed the exact failing
+  case, and ansatz fixed **two** bugs — a convergence-plateau cutoff for `dE` (a strongly-perturbed orbit's
+  harmonic sum was not converging) and the **Burke–Thorne radiation-reaction force** for `dQ` (replacing the
+  noise-prone path-derivative estimate). Re-running with the fixed flux: on MN q=0.2 `dE/dτ` is now physical
+  (−7e-5 … −9e-5, matching Kerr's scale) and `dQ/dτ` is **negative and monotone** (−4.5e-3 → −1.0e-2) — the
+  bump's inclined inspiral **de-inclines cleanly**, just like Kerr. The strong-bump degradation is gone.
 
-So B1's generic (eccentric-inclined) case is now self-consistent **for Kerr**, with the bump's inclined
-inspiral pending the relativistic Carter flux. `results/inspiral_inclined.json`.
+So B1's generic (eccentric-inclined) case is now self-consistent **on both Kerr and the deformed metric** —
+the inclined orbit loses (E, L, Q) and drives toward the equatorial plane in both. (The resonant *kick* — a
+jump in Q as ω_r:ω_θ crosses a low-order rational — is non-adiabatic, beyond any orbit-averaged flux, and
+this leg already found the bump's resonances regular; so the smooth de-inclination is the full adiabatic
+story.) `results/inspiral_inclined.json`.
 
 ## What it means (honest correction of B1's premise)
 

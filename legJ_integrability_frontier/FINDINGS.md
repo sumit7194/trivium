@@ -301,10 +301,17 @@ three fronts:
   de-noised Lyapunov reads **2.09** on the Majumdar–Papapetrou di-hole (§79, vs ≈0 for Kerr). So leg J's
   "regular box-dim on the bump" is a null on a detector **proven to see chaos when it is present** — the one
   honest gap (detector never tested on chaos) is **closed**.
-- **MN's own bound chaos stays unreachable — independently confirmed.** ansatz's own low-L MN scan (`q` up to
-  1.2) also tops out at box-dim ~1.16–1.22 (regular with more crossings), matching our equatorial-launcher
-  result. So it is a **launch-data limitation** (MN's documented chaos, Lukes-Gerakopoulos 2010, needs
-  specific literature initial data fed to `mn_bound_orbit`), not a detector failure.
+- **MN's own bound chaos stays unreachable — and we now know *why*.** ansatz's own low-L MN scan (`q` up to
+  1.2) also tops out at box-dim ~1.16–1.22 (regular), matching our equatorial-launcher result — so it is a
+  **launch-basin limitation, not a detector failure**. The reason (ansatz, from Lukes-Gerakopoulos/Apostolatos/
+  Contopoulos 2010): **MN has *two* permissible regions where Kerr has one, and the chaos lives in the *inner*
+  region near the rod** — both our scan and ansatz's launched in the *outer* region, i.e. the wrong basin the
+  whole time. The documented chaotic orbit is **χ=0.9, q=0.95, E=0.95, L_z=3, inner region**. Reaching it
+  needs a metric numerically *stable near the rod* — the current `manko_novikov` transcription (shared by both
+  repos) overflows there (the `exp(−2β·…)` multipole factors blow up, β≈11 at χ=0.9), so launching the
+  inner-region orbit is **blocked pending a rod-stable MN reimplementation** (logged as a refined sister-ask).
+  This *localizes* the open piece precisely: not "can the detectors see MN chaos?" (they see Hénon–Heiles and
+  the di-hole) but "can the shared metric code reach the inner basin?".
 
 **Net:** leg J's "formally non-integrable, dynamically regular" verdict now rests on (i) the exact symbolic
 KY + SVD proofs, and (ii) the roundoff-immune **box-dimension**, a detector validated on genuine chaos, with

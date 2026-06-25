@@ -62,26 +62,39 @@ def main():
         out["metrics"][name] = {"q": q, "rows": rows}
         print()
 
-    kerr = out["metrics"]["Kerr"]["rows"]
-    kerr_monotone = all(kerr[i]["dQdt"] < 0 for i in range(len(kerr))) and \
-        all(kerr[i + 1]["dQdt"] < kerr[i]["dQdt"] for i in range(len(kerr) - 1))
-    print("  VALIDATION (Ask A) — clean on KERR: dQ/dτ is negative and grows monotonically more negative with")
-    print(f"  launch p_y (de-inclining; monotone={kerr_monotone}). Radiation reaction drives the inclined orbit")
-    print("  toward the equatorial plane, exactly as a GW-emitting inspiral must — so the bridge inspiral is no")
-    print("  longer restricted to Q=0: with ansatz's third flux it evolves (E, L, Q) self-consistently on Kerr.")
-    print("\n  HONEST LIMIT on the strong bump: at MN q=0.2 the leading-order Newtonian-Carter kludge DEGRADES —")
-    print("  |dE/dτ| inflates 30–250× and dQ/dτ flips sign (unphysical) at high inclination. This is ansatz's")
-    print("  own flagged limit ('treat the magnitude as leading-order for strong-field orbits'): a reliable")
-    print("  inclined inspiral IN THE BUMP needs the relativistic Carter term (the a²(1−E²)cos² piece omitted)")
-    print("  — refined sister-request. The resonant kick is also non-adiabatic, beyond any orbit-averaged flux")
-    print("  (and the bump's resonances are regular, leg M) — so the smooth de-inclination is the full story here.")
+    def clean(rows):
+        """A metric's flux is reliable iff every orbit de-inclines (dQ<0) with physical |dE| (no inflation),
+        and dQ grows monotonically more negative with inclination."""
+        if not rows:
+            return False, False
+        ok = all(r["dQdt"] < 0 and r["dEdt"] > -1e-3 for r in rows)
+        mono = all(rows[i + 1]["dQdt"] < rows[i]["dQdt"] for i in range(len(rows) - 1))
+        return ok, mono
 
-    out["kerr_validation_monotone_deinclining"] = bool(kerr_monotone)
-    out["verdict"] = ("ansatz's Carter flux dQ/dτ (Ask A) validated on KERR: <0 and monotone with inclination "
-                      "(the inclined inspiral de-inclines) — B1 now evolves (E,L,Q) self-consistently for Kerr. "
-                      "On the strong MN bump the leading-order Newtonian-Carter kludge degrades (inflated |dE|, "
-                      "dQ sign-flip) — ansatz's flagged limit; reliable bump inclined inspiral needs the "
-                      "relativistic Carter term (refined sister-request).")
+    kerr_ok, kerr_mono = clean(out["metrics"]["Kerr"]["rows"])
+    bump_ok, bump_mono = clean(out["metrics"]["MN bump q=0.2"]["rows"])
+    print(f"  VALIDATION (Ask A) — Kerr: de-inclines cleanly = {kerr_ok} (monotone {kerr_mono});  "
+          f"MN bump q=0.2: de-inclines cleanly = {bump_ok} (monotone {bump_mono}).")
+    if kerr_ok and bump_ok:
+        print("  Both pass: dE/dτ is physical and dQ/dτ < 0 (grows more negative with inclination) on Kerr AND")
+        print("  the bump — radiation reaction drives the inclined orbit toward the equatorial plane in both.")
+        print("  ansatz's f4cc1b1 refine (convergence-plateau cutoff for dE + Burke–Thorne RR force for dQ)")
+        print("  removed the strong-bump degradation (the earlier |dE| inflation + dQ sign-flip are gone). So")
+        print("  B1's generic (eccentric-inclined) inspiral now evolves (E, L, Q) self-consistently IN THE BUMP,")
+        print("  not just on Kerr — the eccentric-inclined case is unblocked.")
+    else:
+        print("  (one metric still degrades — inspect the rows above.)")
+    print("\n  SCOPE: the resonant *kick* (a jump in Q as ω_r:ω_θ crosses a low-order rational) is non-adiabatic,")
+    print("  beyond any orbit-averaged flux — and leg M already found the bump's resonances regular — so the")
+    print("  smooth de-inclination this captures is the full adiabatic story.")
+
+    out["kerr_clean"], out["bump_clean"] = bool(kerr_ok), bool(bump_ok)
+    out["verdict"] = ("ansatz's Carter flux dQ/dτ (Ask A) validated on BOTH Kerr and the MN bump after the "
+                      "f4cc1b1 refine: dE physical, dQ<0 and monotone with inclination — the inclined EMRI "
+                      "inspiral de-inclines in both. B1's generic eccentric-inclined case now evolves (E,L,Q) "
+                      "self-consistently in the deformed metric, not just Kerr."
+                      if (kerr_ok and bump_ok) else
+                      "Carter flux clean on Kerr; one metric still degrades — see rows.")
     (OUT / "inspiral_inclined.json").write_text(json.dumps(out, indent=1))
     print(f"\n  wrote results/inspiral_inclined.json")
 
