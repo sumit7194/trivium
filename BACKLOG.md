@@ -1,0 +1,45 @@
+# TheBridge — Backlog & Plan
+
+*Living list of things noted "to try later" across the docs, plus separate-angle ideas. Compiled
+2026-06-24 from a sweep of all 53 docs. Knock items out top-of-section first; update STATUS as we go.*
+
+**Legend** — STATUS: `TODO` · `WIP` · `DONE` · `PARKED` (honest dead-end / blocked).
+VALUE: `confirm` (expected outcome, tightens rigor) · `surprise` (could overturn / genuinely new).
+EFFORT: `S` (hours) · `M` (a session) · `L` (multi-session / new module).
+
+---
+
+## A. Noted in the docs, not yet done
+
+| ID | Item | Where noted | Value | Effort | Status |
+|----|------|-------------|-------|--------|--------|
+| A1 | **Amortization → sim→real transfer in GW data** — does an NPE's amortization gap *predict* its transfer? Flagged in §9 as "the most original result available here." | THE_BRIDGE §9 | surprise | L | TODO |
+| A2 | **Quartic (rank-4) Killing-tensor search** — rank-2 excluded two ways; extend §85's basis to quartic to retire leg J's last residual. | legJ FINDINGS; ansatz §85 | confirm | S | TODO |
+| A3 | **Targeted resonance chaos hunt** — compute orbital frequencies, sit *exactly* on low-order resonances (vs the fine scan we did). | legJ verdict | confirm | M | TODO |
+| A4 | **Direct upper limit on λ** — convert leg 8 v2's amplitude exclusion into a limit on the wormhole parameter λ (needs reflectivity→amplitude model). | leg8 FINDINGS §3 | confirm | M | TODO |
+| A5 | **Precise multi-event no-hair** — extend Move B v2's exact-Leaver 221 δ test to GW150914 + GW170814 (deepstrain §13). | legB FINDINGS | confirm | S | TODO |
+| A6 | **Scramble signature in richer-info deepstrain models** — test the no-hair δ SBI / PBH learned stages (tone-count was info-limited). Overlaps A1. | leg2 FINDINGS | surprise | M | TODO |
+| A7 | **Hybrid recipe for stronger divergences** — H3 failed for mild 1/√; try 1/(r−r_h) or higher-order asymptotic; might flip H3. | legH FINDINGS | surprise | M | TODO |
+| A8 | **Base-model shortcut in native convention** — feed the base model un-normalized data (test loudness shortcut where it lives). | leg2 FINDINGS | confirm | S | TODO |
+| A9 | **MDL lens on the count** — third leg of the count-triangle: code-length of the observation set → does it converge to 2? | THE_BRIDGE §9 | surprise | M | TODO |
+| A10 | **"Geometrizes ⟺ universal ∧ conservative" as an exact proof** on the ansatz catalog (Move E was only directional). | THE_BRIDGE §9 | confirm | M | TODO |
+
+## B. Separate angles (new directions, off the current trajectory)
+
+| ID | Item | Why it's different | Value | Effort | Status |
+|----|------|--------------------|-------|--------|--------|
+| B1 | **Make leg J observational (EMRI/LISA)** — toy EMRI inspiral in the bumpy metric, hunt resonance-crossing glitches → connect "no Carter constant" to a LISA-detectable signature. | turns an abstract proof into a path to real data | surprise | L | TODO |
+| B2 | **Multi-messenger no-hair triangulation** — pull external EHT shadow + X-ray ISCO spin, combine with deepstrain ringdown spin, run ansatz §93's three-way consistency. | new data source; breaks strict-3-siblings but a real new triangulation | surprise | L | TODO |
+| B3 | **Topological discover→verify** — aim Move A's pipeline at a winding number / holonomy (cf. tabula §113/§114) instead of a Killing tensor. | different *class* of hidden structure, same architecture | surprise | M | TODO |
+| B4 | **Discover→verify as a survey** — run the pipeline across the ansatz catalog (Kerr/KN/KdS/Taub-NUT/…): which admit rank-2 vs rank-4 KTs? | turns a single-metric test into an instrument | confirm | M | TODO |
+
+---
+
+## Knock-out order (revise freely)
+
+1. **A2 quartic search** — cleanest closer, builds on `numeric_killing_search.py`. (start here)
+2. **A5 precise multi-event no-hair** — small, tightens the spine, reuses Move B v2.
+3. **A1 / A6 amortization→transfer** — the originality bet; A6 is the concrete entry point.
+4. **B1 EMRI observational** — the big separate angle, after the quick wins.
+
+Everything else as time/interest allows. Update STATUS + a one-line result inline when done.
