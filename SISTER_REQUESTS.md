@@ -66,10 +66,17 @@ step 3): the bump lowers ω_φ at each ω_r:ω_θ resonance by −4.8%→−12.6
   di-hole §79) → leg J's detectors are now validated *on* chaos.
 
 **Remaining (refined) asks:**
-1. **Relativistic Carter flux** — add the `a²(1−E²)cos²` term so dQ/dτ is reliable for *inclined* inspirals
-   **in the strong bump** (the leading-order Newtonian form sign-flips there).
-2. **MN chaotic initial data** — literature (Lukes-Gerakopoulos 2010) exact (E, L_z, pericenter) for a known
-   chaotic MN orbit, fed to `mn_bound_orbit`, so both validated detectors run on MN's own bound chaos.
+1. **Reliable inclined-orbit flux on the strong bump** — ✅ **FULFILLED (2026-06-26, ansatz `f4cc1b1`)**: two
+   bugs fixed (convergence-plateau cutoff for `dE`, Burke–Thorne RR force for `dQ`). Bridge re-ran
+   `inspiral_inclined.py`: MN q=0.2 `dE/dτ` now physical, `dQ/dτ` < 0 and monotone — the inclined inspiral
+   de-inclines cleanly **in the bump** too (leg M step 4 updated). B1's eccentric-inclined case is unblocked.
+2. **MN chaotic initial data** — params + insight delivered, but **blocked by the metric**: the documented
+   chaotic orbit is **χ=0.9, q=0.95, E=0.95, L_z=3, in MN's *inner* permissible region near the rod** (MN has
+   two regions, Kerr one — both repos' scans searched the *outer* basin). Reaching it needs a **rod-stable MN
+   reimplementation** (the shared `manko_novikov` overflows near the rod, `exp(−2β)`, β≈11 at χ=0.9). ansatz
+   offered to take it on — optional capstone (the detectors are already validated on Hénon–Heiles + di-hole),
+   would give MN's *own* bound chaos as the positive control. Caveat: keep the rod-stable version identical to
+   the current one in the outer region so existing bridge results (B1, positive control) aren't disturbed.
 
 ## → deepstrain (BlackHole): echo Δt ↔ Abedi — ✅ FULFILLED (2026-06-26): §18 `18_abedi_crosscheck.json` → leg 8 (`abedi_crosscheck.py`); the formula reproduces Abedi 2017 Table I to 98.5–99.7%, the literature anchor.
 
