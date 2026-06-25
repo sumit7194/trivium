@@ -956,3 +956,16 @@ Embed summary code on 5000 sim ringdowns (export_nohair_codes.py), ran the legib
   down — concrete support for §9's amortization→transfer. Honest: 3 params/1 event; mechanism is shared
   Fisher info (not amortization-gap-overfitting); the cross-model version needs several NPEs deepstrain
   would train. §9 marked with concrete support; BACKLOG A6 DONE, A1 PARTIAL.
+
+## 2026-06-24 — Session 33 (cont.): leg M — observational handle on leg J (B1 partial + A3 done)
+
+Built leg M to make leg J observational (EMRI/LISA) and do the targeted resonance hunt (A3).
+- Step 1 (compute_freqs.py): orbital frequencies ω_r, ω_θ from libration periods. The bump SHIFTS the
+  frequency map — Kerr orbits near 1:2 (ω_r/ω_θ 0.51–0.62), bump near 1:3 (0.31–0.37; the θ-bump raises ω_θ).
+  The resonance structure differs — a frequency-domain, LISA-relevant observable, independent of chaos.
+- Step 2 / A3 (resonance_study.py): at the bump's 1:3 resonance (r_a≈9), λ at the Kerr floor (0.018) and
+  Carter drift (0.141) sits BETWEEN the off-resonance values — no enhancement. REGULAR resonance, no chaos.
+  leg J's null holds at the single likeliest place for chaos.
+Honest correction of B1's premise: broken integrability here does NOT give chaotic resonance-crossing
+glitches (orbits stay on tori); the signature is the smooth frequency-map shift. B1 PARTIAL (a full EMRI
+waveform needs GW fluxes/radiation reaction — next step); A3 DONE.

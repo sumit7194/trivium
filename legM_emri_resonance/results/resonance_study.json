@@ -1,0 +1,48 @@
+{
+ "Kerr": [
+  {
+   "ra": 7.0,
+   "ratio": 0.5143,
+   "near_1_3": false,
+   "carter_drift": 1.6217917354745095e-09,
+   "lyapunov": 0.0158
+  },
+  {
+   "ra": 9.0,
+   "ratio": 0.5643,
+   "near_1_3": false,
+   "carter_drift": 1.8544168711062263e-09,
+   "lyapunov": 0.0175
+  },
+  {
+   "ra": 13.0,
+   "ratio": 0.6092,
+   "near_1_3": false,
+   "carter_drift": 2.4577738673209638e-09,
+   "lyapunov": 0.0155
+  }
+ ],
+ "bump": [
+  {
+   "ra": 7.0,
+   "ratio": 0.3098,
+   "near_1_3": false,
+   "carter_drift": 0.12559801325975495,
+   "lyapunov": 0.0154
+  },
+  {
+   "ra": 9.0,
+   "ratio": 0.3399,
+   "near_1_3": true,
+   "carter_drift": 0.1411970964207188,
+   "lyapunov": 0.0177
+  },
+  {
+   "ra": 13.0,
+   "ratio": 0.3722,
+   "near_1_3": false,
+   "carter_drift": 0.1689184348938014,
+   "lyapunov": 0.0156
+  }
+ ]
+}
