@@ -969,3 +969,16 @@ Built leg M to make leg J observational (EMRI/LISA) and do the targeted resonanc
 Honest correction of B1's premise: broken integrability here does NOT give chaotic resonance-crossing
 glitches (orbits stay on tori); the signature is the smooth frequency-map shift. B1 PARTIAL (a full EMRI
 waveform needs GW fluxes/radiation reaction — next step); A3 DONE.
+
+## 2026-06-24 — Session 33 (cont.): A7 — stronger divergence does NOT flip H3 (deeper reason found)
+
+strong_divergence.py: tested leg H's prediction that the hybrid recipe (H3) would work for a STRONGER
+divergence (g_rr=r/(r−2), exponent −1, vs the mild blueshift −1/2). H3 still FAILS — and the real reason is
+deeper than leg H's mild-case story: the exact asymptotic evaluated at NOISY position has a catastrophic
+error tail near r_h (a divergence amplifies position noise; points within obs-noise of the singularity blow
+up), dominating the mean error. The learned kNN's spatial smoothing avoids the tail and wins at EVERY noise
+level (swept 0.002–0.05) and divergence strength. So the bottleneck is OBSERVATION-NOISE amplification near
+the divergence — not the asymptotic's form (mild story) nor the divergence strength. Reinforces H3's
+negative; corroborates Move I ("noise defeats even exact") in the horizon-emulation setting. A7 DONE
+(honest negative, refines leg H). Only a higher-order asymptotic WITH a noise-robust r−r_h estimate could
+rescue it — logged, not claimed.

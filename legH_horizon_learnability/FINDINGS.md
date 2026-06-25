@@ -51,6 +51,28 @@ The recipe would plausibly help only for a *stronger* divergence (where the lear
 catastrophic) or with a *higher-order* asymptotic (accurate over a wider band) — neither claimed here;
 both are future work.
 
+## Update (2026-06-24, A7) — stronger divergence does NOT flip H3; the real bottleneck is observation noise
+
+leg H predicted the hybrid recipe "would plausibly help only for a *stronger* divergence." A7
+(`code/strong_divergence.py`) tested it on `g_rr = r/(r−2)` (diverges as 1/(r−r_h), exponent −1, vs the
+mild −1/2 blueshift), with a noise sweep. **H3 still fails** — and for a deeper reason than the mild-case
+explanation:
+
+| Schw strong 1/Δ | learned | asym | hybrid | H3? |
+|---|---|---|---|---|
+| noise 0.002 | **0.011** | 0.69 | 0.076 | ❌ |
+| noise 0.05 | 0.27 | 1401 | 1401 | ❌ |
+
+The exact asymptotic, evaluated at **noisy** position, has a catastrophic error *tail* near the horizon —
+the points within observation-noise of the singularity blow up (a divergence amplifies position noise) —
+and that tail dominates the mean error. The learned kNN's **spatial smoothing avoids the tail**, so it wins
+at every noise level and divergence strength. So the recipe's bottleneck is **observation-noise
+amplification near the divergence**, *not* the asymptotic's leading-order form (the mild-case story) nor the
+divergence strength. This **reinforces** H3's negative and **corroborates Move I**: at the edge, *noise
+defeats even the exact physics* — the same finding, now in the horizon-emulation setting. (A genuinely
+higher-order asymptotic *with a noise-robust estimate of r−r_h* is the only thing that could rescue it —
+logged, not claimed.) See `code/strong_divergence.py`, `results/strong_divergence.json`.
+
 ## Why the recipe *really* fails — and how it refines the synthesis (the valuable part)
 
 A controlled divergence-strength sweep (`Q = (r−r_h)^{−p}`, exact single-term asymptotic, `p=0.5→3`)
