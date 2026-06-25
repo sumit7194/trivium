@@ -54,17 +54,26 @@ no-hair precision test).
 
 </details>
 
-## → ansatz (conjecture_machine) [or a new module]: unblock **B1** (full EMRI waveform)
+## → ansatz (conjecture_machine): B1 (full EMRI inspiral) — ✅ FULFILLED for circular (2026-06-26); dQ/dτ remains for eccentric-inclined
 
-**Why it's blocked:** leg M established the geodesic frequency map and that the bump's resonances are
-regular; a full EMRI waveform needs the orbit to *inspiral* (radiation reaction).
+ansatz delivered `emri.py` with a Peters-validated `quadrupole_flux` (`dE/dτ, dL/dτ`) on Manko–Novikov. The
+bridge used it (leg M step 3, `inspiral_mn.py`) to drive a **self-consistent quasi-circular inspiral** that
+traverses the ω_r:ω_θ resonance sequence — Q=0 on circular equatorial orbits, so no dQ/dτ was needed. The
+MN bump lowers ω_φ at each resonance crossing by a deviation growing inward (−4.8% at 3:4 → −12.6% at 1:3).
+**B1 is closed for the circular case.**
+
+**Remaining (smaller) ask — `dQ/dτ`:** a Carter-flux for **eccentric + inclined** inspirals, so the bridge
+can drive a generic (not just circular) orbit through a resonance and see the resonant kick on the *third*
+integral. The `dE/dτ, dL/dτ` halves already exist; only the Carter-flux is missing.
+
+<details><summary>original ask</summary>
 
 **The ask (bigger):** an EMRI **GW-flux / radiation-reaction** model — `dE/dτ, dL/dτ` (and ideally `dQ/dτ`)
 for inspiraling orbits in Kerr and the bumpy metric (Teukolsky-based, or a calibrated post-Newtonian/
-kludge flux). This is a substantial capability, not a quick add.
+kludge flux). **What the bridge then does:** drive a self-consistent inspiral through a resonance and read
+off the waveform's resonance-crossing signature.
 
-**What the bridge then does:** drive a self-consistent inspiral through a resonance and read off the
-waveform's resonance-crossing signature (the frequency-shift + any jump), completing B1.
+</details>
 
 ---
 

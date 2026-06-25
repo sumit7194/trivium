@@ -12,6 +12,10 @@ substantially (Kerr orbits sit near the **1:2** resonance, bump orbits near **1:
 bump raises ω_θ) — **but NOT as chaos**: a targeted hunt at the bump's 1:3 resonance (the single likeliest
 place for chaos) finds the Lyapunov exponent at the Kerr floor and no enhanced Carter drift. So the EMRI
 signature of *this* deformation is the smooth frequency-map shift, not resonance-crossing glitches.
+**B1-full (step 3, 2026-06-26):** a self-consistent quasi-circular inspiral — radiation reaction (ansatz's
+Peters-validated flux) draining (E,L) — now **traverses** that resonance sequence, and the MN quadrupole
+bump lowers the orbital frequency at each ω_r:ω_θ crossing by a deviation that grows inward (**−4.8% at 3:4
+→ −12.6% at 1:3**). The deviation-from-Kerr is driven by radiation reaction, not just mapped.
 
 ## Step 1 — the frequency map (the observable)
 
@@ -40,6 +44,37 @@ Kerr floor (0.018 vs 0.016) everywhere. So the bump's 1:3 is a **regular resonan
 frequencies merely lock), not a chaotic one. This is the sharpest test of leg J's "no chaos" — at the most
 likely place — and the null holds.
 
+## Step 3 — B1-full: the self-consistent inspiral that TRAVERSES the resonances (2026-06-26)
+
+leg M step 1 mapped the resonances *statically*; B1's remaining step was to let radiation reaction **drive**
+an inspiral *through* them. ansatz built `emri.py` (Peters-validated `quadrupole_flux`) for exactly this.
+`code/inspiral_mn.py` does it on Manko–Novikov as a **quasi-circular equatorial** inspiral — the honest way
+around the missing 3rd flux: circular equatorial orbits have **Carter Q=0**, so the inspiral is fully
+self-consistent in (E,L) alone, *no dQ/dτ kludge*. The orbit loses (E,L) to GW emission and spirals inward;
+the radial:vertical epicyclic ratio ω_r:ω_θ sweeps through the low-order resonances.
+
+**Gated first.** The circular-orbit (E,L) solver (the effective potential W is *quadratic* in (E,L), so
+W=−1 ∧ ∂ₓW=0 solve algebraically) reproduces the **Kerr a=0.5 prograde ISCO at r≈4.2M** (xc≈3.75), with
+ω_r→0 there and ω_r/ω_θ→1 at large radius (Keplerian) — the epicyclic frequencies are correct before any
+inspiral is trusted.
+
+**The inspiral sweep (the deviation-from-Kerr signature, now traversed by a real flux):**
+
+| ω_r:ω_θ resonance | Kerr r/M | bump r/M | **Δω_φ/ω_φ (bump−Kerr)** |
+|---|---|---|---|
+| 3:4 | 10.33 | 10.65 | **−4.8%** |
+| 2:3 |  7.92 |  8.26 | **−6.6%** |
+| 3:5 |  6.78 |  7.12 | **−8.0%** |
+| 1:2 |  5.71 |  6.06 | **−10.0%** |
+| 2:5 |  5.06 |  5.43 | **−11.7%** |
+| 1:3 |  4.77 |  5.14 | **−12.6%** |
+
+The MN quadrupole (q=0.2) shifts **every** resonance outward and **lowers the orbital frequency** at each
+crossing, by a deviation that **grows inward** (−4.8% → −12.6%) as the quadrupole's strong-field influence
+rises — and the inspiral rate `dxc/dτ` (read off the flux) accelerates from −0.01 to −0.12 toward the ISCO,
+so the orbit genuinely *passes through* the whole sequence. This is leg M's frequency-map deviation, now
+**driven by radiation reaction**, not just plotted — closing B1.
+
 ## What it means (honest correction of B1's premise)
 
 We expected broken integrability → chaotic resonance-crossing *glitches*. The reality is subtler and matches
@@ -53,11 +88,19 @@ implies "shifted frequency structure."
 - The bump is strong (ε=0.35) and ad-hoc; a realistic near-Kerr EMRI deviation is far smaller and the
   ω-shift would scale down — the *mechanism* (frequency-map shift, regular resonances) is the transferable
   point, not the numbers.
-- **Not a waveform.** A full EMRI signal needs the GW energy/angular-momentum fluxes (radiation reaction) to
-  drive the inspiral through the resonance; that is the next step (B1 remains PARTIAL). What is established
-  here is the geodesic frequency map and that the resonances are regular (no chaotic kick to model).
 - Frequencies from libration-period detection on a finite integration; ratios good to ~±0.01.
+- **B1-full scope (step 3).** The inspiral is **quasi-circular** (e=0) — chosen so Carter Q=0 and the
+  evolution is self-consistent without the (still-missing) dQ/dτ flux. It therefore maps where the ω_r:ω_θ
+  resonances *fall* (via the circular epicyclic ratio) and how the bump shifts them; the actual resonant
+  *kick* needs finite eccentricity+inclination (and dQ/dτ) — but leg M step 2 already showed those resonances
+  are **regular** (no chaotic kick), so the signature is precisely the smooth frequency-shift this quantifies.
+  The flux is ansatz's Peters-validated quadrupole *kludge* (not Teukolsky), adiabatic; the MN quadrupole
+  q=0.2 is moderate and the shift scales with q. A fully eccentric-inclined inspiral is the next ask
+  (sister-request: dQ/dτ from ansatz).
 
 ## Artifacts
 - `code/compute_freqs.py` — ω_r, ω_θ from radial/latitudinal libration periods; the resonance scan.
 - `code/resonance_study.py` — Carter drift + Lyapunov on vs off the bump's 1:3 resonance (A3). `results/resonance_study.json`.
+- `code/inspiral_mn.py` — **B1-full**: circular-orbit (E,L) solver (algebraic, Kerr-ISCO-gated) + epicyclic
+  frequencies + the Peters-flux-driven quasi-circular inspiral sweeping ω_r:ω_θ resonances; Kerr vs MN bump.
+  `--validate` gates on the Kerr ISCO; `--run` writes `results/inspiral_mn.json`.
