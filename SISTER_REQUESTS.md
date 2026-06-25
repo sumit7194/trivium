@@ -54,17 +54,26 @@ no-hair precision test).
 
 </details>
 
-## → ansatz (conjecture_machine): B1 (full EMRI inspiral) — ✅ FULFILLED for circular (2026-06-26); dQ/dτ remains for eccentric-inclined
+## → ansatz (conjecture_machine): B1 + FD-fix + chaos launcher — ✅ ALL FULFILLED (2026-06-26, §101 commit b05e2b3)
 
-ansatz delivered `emri.py` with a Peters-validated `quadrupole_flux` (`dE/dτ, dL/dτ`) on Manko–Novikov. The
-bridge used it (leg M step 3, `inspiral_mn.py`) to drive a **self-consistent quasi-circular inspiral** that
-traverses the ω_r:ω_θ resonance sequence — Q=0 on circular equatorial orbits, so no dQ/dτ was needed. The
-MN bump lowers ω_φ at each resonance crossing by a deviation growing inward (−4.8% at 3:4 → −12.6% at 1:3).
-**B1 is closed for the circular case.**
+ansatz delivered `emri.py` (Peters-validated `quadrupole_flux`) → B1-full quasi-circular inspiral (leg M
+step 3): the bump lowers ω_φ at each ω_r:ω_θ resonance by −4.8%→−12.6%. Then §101 closed the three follow-ups:
+- **`dQ/dτ` Carter flux** (`quadrupole_flux(carter=True)`) → leg M step 4: the inclined inspiral **de-inclines**
+  (Kerr clean); the leading-order kludge degrades on the strong bump (flagged).
+- **FD-noise Lyapunov fix** — ansatz *independently reproduced* the bridge's false-positive (λ≈0.32 on a
+  regular orbit) and shipped the de-noised defaults → leg J gap closed.
+- **`mn_bound_orbit` launcher + genuine-chaos validation** (box-dim 1.34 on Hénon–Heiles §84; λ 2.09 on the
+  di-hole §79) → leg J's detectors are now validated *on* chaos.
 
-**Remaining (smaller) ask — `dQ/dτ`:** a Carter-flux for **eccentric + inclined** inspirals, so the bridge
-can drive a generic (not just circular) orbit through a resonance and see the resonant kick on the *third*
-integral. The `dE/dτ, dL/dτ` halves already exist; only the Carter-flux is missing.
+**Remaining (refined) asks:**
+1. **Relativistic Carter flux** — add the `a²(1−E²)cos²` term so dQ/dτ is reliable for *inclined* inspirals
+   **in the strong bump** (the leading-order Newtonian form sign-flips there).
+2. **MN chaotic initial data** — literature (Lukes-Gerakopoulos 2010) exact (E, L_z, pericenter) for a known
+   chaotic MN orbit, fed to `mn_bound_orbit`, so both validated detectors run on MN's own bound chaos.
+
+## → deepstrain (BlackHole): echo Δt ↔ Abedi — ✅ FULFILLED (2026-06-26): §18 `18_abedi_crosscheck.json` → leg 8 (`abedi_crosscheck.py`); the formula reproduces Abedi 2017 Table I to 98.5–99.7%, the literature anchor.
+
+## → tabula (SpaceTime/curvature): ZV γ-metric legibility — ✅ FULFILLED (2026-06-26): §132 `132_zv_gamma_metric.json` → leg Q; legible⟺KY-integrable now 7/7 (φ=1.0), a 2nd independent non-integrable case.
 
 <details><summary>original ask</summary>
 

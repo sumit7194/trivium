@@ -72,9 +72,23 @@ sister-repo artifact):
 | **start-time robustness** | leg B | no-hair δ Kerr-consistent at every start time 0–12ms; SNR-limited, not systematic (`d190fed`) |
 | **topological discover→verify** | leg N | tabula §120 Chern completes B3's topological end; geometric (+22%) vs topological (±0.7%) (`711a01f`) |
 
-**Remaining (need new sister-repo capability, logged as sister-requests):**
-- **Eccentric-inclined EMRI inspiral** — needs a dQ/dτ Carter-flux from ansatz (B1 is closed for circular).
-- **MN bound chaos** — validating box-dim *on* genuine bound chaos needs a Gair-style off-equatorial launcher
-  (leg J's equatorial family doesn't reach it).
-- **Echo Δt vs Abedi → leg 8** — deepstrain §14 internal-validated the echo-spacing formula; a clean bridge
-  cross-check would need the Abedi closed form reconstructed (not done — flagged rather than faked).
+## Phase 4 (2026-06-26) — all three sister-requests fulfilled and integrated
+
+The three asks relayed to the sister sessions all came back and are now bridged:
+
+| ask | sister deliverable | bridge integration |
+|---|---|---|
+| **dQ/dτ Carter flux** (B1-eccentric) | ansatz §101 `quadrupole_flux(carter=True)` | leg M step 4 (`7296ced`): inclined inspiral de-inclines (Kerr clean); kludge limit on strong bump flagged |
+| **MN bound-chaos launcher + FD fix** | ansatz §101 `mn_bound_orbit`, `geodesic_chaos.lyapunov` de-noised | leg J (`df89527`): FD false-positive cross-confirmed + fixed; detectors validated on genuine chaos (Hénon–Heiles 1.34, di-hole 2.09) — **gap closed** |
+| **Echo Δt ↔ Abedi** (leg 8) | deepstrain §18 `18_abedi_crosscheck.json` | leg 8 (`3ae5fdb`): formula reproduces Abedi 2017 Table I to **98.5–99.7%**, literature anchor |
+| **ZV γ-metric legibility** (A10) | tabula §132 `132_zv_gamma_metric.json` | leg Q (`bc08ec8`): legible⟺KY-integrable now **7/7, φ=1.0**, 2nd independent non-integrable case |
+
+**Two genuinely-new findings from the round-trip:** (a) ansatz *independently reproduced* the bridge's
+FD-noise Lyapunov false-positive and shipped the fix — a cross-repo confirmation; (b) both repos *independently*
+confirm MN's bound chaos is unreachable by the equatorial launcher (box-dim tops ~1.2) — a launch-data limit.
+
+**Remaining (smaller, refined sister-requests):**
+- **Relativistic Carter flux** — the leading-order Newtonian dQ/dτ degrades on the *strong bump* (inflated
+  |dE|, sign-flip); a reliable *inclined* inspiral in the bump needs the `a²(1−E²)cos²` term (ansatz).
+- **MN chaotic initial data** — feeding literature (Lukes-Gerakopoulos 2010) exact (E, L_z, pericenter) to
+  `mn_bound_orbit` would let both validated detectors run on MN's own bound chaos (ansatz).
