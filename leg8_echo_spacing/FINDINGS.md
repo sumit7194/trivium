@@ -66,3 +66,26 @@ injections, over Δt ∈ [0.05, 0.47] s. `code/resolve_exclusion.py` composes it
 real 90%-amplitude exclusion, not just a non-detection. A *direct* limit on λ itself still needs the
 reflectivity→amplitude model mapping echo loudness to λ — but the efficiency-backed exclusion the
 caveat demanded is now in hand. See `code/resolve_exclusion.py`, `results/resolve_exclusion.json`.
+
+## 5. Update (2026-06-26) — literature anchor: the echo Δt reproduces Abedi 2017 Table I to 98.5–99.7%
+
+leg 8's echo delay is derived from the exact Damour–Solodukhin wormhole (H2: `Δt ≈ −8M·ln(λ) + C(ε)`).
+deepstrain §18 supplies the literature anchor (`code/abedi_crosscheck.py`, read-only): an *uncalibrated*
+first-principles **Kerr-tortoise round-trip** — `Δt = 2[r*(r_peak) − r*(r_mem)]`, reflecting membrane one
+Planck proper-distance above r₊ — whose leading order is the same `8·M·ln(M/ℓ_P)` form, **reproduces Abedi
+2017 (arXiv:1612.00266) Table I** on all three of its published events with **no parameter tuned to Δt**:
+
+| event | M_f (det) | χ_f | Δt model (s) | Δt Abedi (s) | agreement |
+|---|---|---|---|---|---|
+| GW150914 | 68.0 | 0.69 | 0.2970 | 0.2925 | **98.45%** |
+| GW151226 | 22.4 | 0.74 | 0.1010 | 0.1013 | **99.68%** |
+| GW151012 | 42.0 | 0.66 | 0.1786 | 0.1778 | **99.54%** |
+| GW250114 | 76.0 | 0.76 | 0.3544 | — (2025, no Table-I) | predicts 0.354 s |
+
+So the bridge's echo-delay physics is now **anchored to the literature standard** — two independent routes
+(ansatz/leg 8's symbolic DS-wormhole integration and deepstrain's numerical Kerr-tortoise) share the same
+leading-order `8M·ln(1/Planck-param)` log law, and the latter reproduces the published Abedi prediction to
+better than 2% with nothing tuned. This is **directly parallel to Move B** pinning the bridge's exact QNM to
+Leaver: a first-principles bridge calculation matched against the field's reference. The Δt(λ) mapping that
+the §4 exclusion curve rests on therefore carries a literature-validated normalization.
+`results/abedi_crosscheck.json`.

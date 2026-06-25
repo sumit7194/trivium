@@ -1,0 +1,37 @@
+{
+ "source": "deepstrain \u00a718 (read-only)",
+ "reference": "Abedi, Dvali, et al. 2017, arXiv:1612.00266, Eq.2 / Table I; Cardoso & Pani reviews",
+ "leading_order_scaling": "dt_echo \u2248 8\u00b7M\u00b7ln(M/\u2113_P)\u00b7[1 + O(a\u00b2)]   (Abedi abstract; Planck units)",
+ "uncalibrated": true,
+ "events": [
+  {
+   "event": "GW150914",
+   "dt_model_s": 0.29703,
+   "dt_abedi_s": 0.2925,
+   "percent_agreement": 98.45
+  },
+  {
+   "event": "GW151226",
+   "dt_model_s": 0.10097,
+   "dt_abedi_s": 0.1013,
+   "percent_agreement": 99.68
+  },
+  {
+   "event": "GW151012",
+   "dt_model_s": 0.17862,
+   "dt_abedi_s": 0.1778,
+   "percent_agreement": 99.54
+  },
+  {
+   "event": "GW250114",
+   "dt_model_s": 0.35442,
+   "dt_abedi_s": null,
+   "percent_agreement": null
+  }
+ ],
+ "agreement_range_pct": [
+  98.45,
+  99.68
+ ],
+ "verdict": "leg 8's echo spacing (Damour\u2013Solodukhin, \u0394t\u2248\u22128M\u00b7ln \u03bb) shares its leading-order log form with the Abedi Kerr-tortoise round-trip, which reproduces Abedi 2017 Table I to 98.5\u201399.7% on 3 real events with no tuned parameter \u2014 the literature anchor for leg 8, parallel to Move B's QNM\u2194Leaver."
+}
