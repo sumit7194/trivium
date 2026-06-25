@@ -1,0 +1,24 @@
+{
+ "basis_indep": 0.006241752232167466,
+ "gate_pass": true,
+ "kerr_nzero": 2,
+ "MZ": 1e-11,
+ "bumpy": {
+  "0.1": {
+   "phys_smallest_SV": 0.0008628933182803209,
+   "raw_smallest_SV": 1.299620937195152e-08,
+   "n_orbits": 17
+  },
+  "0.2": {
+   "phys_smallest_SV": 0.0006526442604138397,
+   "raw_smallest_SV": 5.3258244925399065e-09,
+   "n_orbits": 17
+  },
+  "0.35": {
+   "phys_smallest_SV": 0.0004768735514514073,
+   "raw_smallest_SV": 2.10155783930517e-09,
+   "n_orbits": 17
+  }
+ },
+ "no_quartic_invariant": true
+}

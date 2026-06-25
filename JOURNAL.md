@@ -915,3 +915,16 @@ Acted on the one usable item:
   validated, sharper than Lyapunov] + §85 numeric SVD) on two bump families → one verdict: deformed Kerr is
   formally non-integrable, near-integrable. ansatz's direct symbolic search swamped (7.5h) — our KY route is
   a method they lack. legJ FINDINGS + THE_BRIDGE §10.4 updated.
+
+## 2026-06-24 — Session 33 (cont.): BACKLOG created + A2 (quartic search) knocked out
+
+Compiled BACKLOG.md from a full doc sweep (deferred items A1–A10 + separate-angle ideas B1–B4). Parked A5
+(precise multi-event no-hair) — data-limited (only GW250114 has raw 220/221; §13's other 7 events give NPE
+δ only). Knocked out A2:
+- **numeric_quartic_search.py** — extended ansatz §85's SVD to a rank-4 (quartic-in-momenta) basis. Gate:
+  Kerr recovers BOTH C₀ and C₀² (machine-zero SVs at ~1e-13). Our bump: no quartic invariant (obstruction
+  ~1e-3, matching the rank-2 search). A logged catch: the raw smallest SV was a *gapped* 2e-9 that looked
+  like an invariant — decoding showed it pure-spatial (cot²θ−cos²θ−½cos⁴θ−½cot⁴θ), a near-flat-over-sampled-θ
+  artifact, not a momentum form. A momentum-dependence check unmasks it; without it we'd have falsely
+  reported a surviving quartic. → No rank-2 AND no rank-4 Killing tensor; residual now only rank ≥6 (exotic).
+legJ FINDINGS + verdict updated.

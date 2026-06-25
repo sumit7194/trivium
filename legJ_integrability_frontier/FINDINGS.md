@@ -123,8 +123,32 @@ quadratic** — the smallest singular value sits ~ten orders *above* machine zer
 Killing tensor (KY-origin or not) survives our bump**, by an independent (numeric) method on the *same*
 metric — retiring leg J's non-KY-origin caveat at rank 2. *Honest note:* unlike §85's cleaner monotone
 growth, here the obstruction is a flat ~1e-3 floor (only ~10 bound orbits survived this E,L), so we claim
-the *absence* (unambiguous: ~10 orders off machine zero, no gap), not a clean ε-scaling. **Residual (shared
-with §85): a higher-rank / quartic Killing tensor is still not excluded.**
+the *absence* (unambiguous: ~10 orders off machine zero, no gap), not a clean ε-scaling.
+
+## Retiring the quartic residual — rank-4 search (`numeric_quartic_search.py`)
+
+The last residual was a higher-rank (rank-4 / quartic-in-momenta) Killing tensor. We extend the SVD search
+to a degree-4 basis. At fixed E,L, Kerr's reducible quartic invariants are the Carter constant `C₀` *and its
+square* `C₀²`, so the **gate is "Kerr recovers both"**:
+
+| metric | smallest momentum-bearing SV | invariant? |
+|---|---|---|
+| **Kerr (gate)** | **2.1e-14** (two machine-zero SVs = C₀, C₀²) | yes ✅ |
+| bumpy ε=0.1 / 0.2 / 0.35 | **8.6e-4 / 6.5e-4 / 4.8e-4** | no |
+
+So Kerr recovers both invariants at machine zero, and **our bump has no quartic invariant** — its real
+obstruction sits at ~1e-3 (matching the rank-2 search), ten orders above machine zero.
+
+*A logged catch (the discipline working):* the raw smallest singular value for the bump was a *gapped* 2e-9
+— which looks like an invariant. Decoding the vector showed it is **pure spatial**
+(`cot²θ − cos²θ − ½cos⁴θ − ½cot⁴θ`, no momentum dependence) — i.e. a function of θ that is merely near-flat
+over the limited θ-range these orbits sample, *not* a conserved quantity (a Killing-tensor invariant must be
+a form in momenta, like Kerr's `C₀²` which carries `pth²·cot²θ`, `pth⁴`). Requiring momentum dependence
+unmasks it; the genuine obstruction is the ~1e-3 momentum-bearing SV. Without that check we'd have falsely
+reported a surviving quartic.
+
+**So: no rank-2 AND no rank-4 Killing tensor survives our bump** — leg J's quartic residual is retired. The
+only remaining residual is rank ≥6, which is exotic and not expected for a quadrupole deformation.
 
 ## What it means (read against the pre-registered outcomes)
 
@@ -161,11 +185,11 @@ is violated (drift 7→18%). So the bump destroys the *exact* Carter constant (p
 motion stays regular: the standard KAM near-integrable picture, and the one the deformation literature
 predicts. The
 **eccentric/inclined/resonance-crossing regime is now probed too** (Schmidt-constructed orbits, ε=0.35) —
-no chaos there either, only a larger-but-bounded C₀ drift. What remains genuinely open is now narrow:
-**higher-rank / quartic Killing tensors** (rank-2 is excluded both KY-origin-symbolically and
+no chaos there either, only a larger-but-bounded C₀ drift. What remains genuinely open is now very narrow:
+**rank-≥6 Killing tensors** (rank-2 excluded KY-origin-symbolically *and* numerically; rank-4 excluded
 numerically), and **thin chaos below resolution** — though §84's Poincaré (sharper than Lyapunov, which
 averages weak chaos away) and a fine eccentricity scan both find none. Neither residual is expected to
-overturn the picture.
+overturn the picture; a rank-≥6 hidden symmetry for a quadrupole deformation would be exotic.
 
 ## Independent convergence — ansatz §84/§85 reach the same verdict (different methods, different bump)
 
@@ -212,6 +236,8 @@ above by two independent routes.
   ε=1.2 (both read regular; Lyapunov supersedes the unvalidated saturation). `results/verify_chaos.json`.
 - `code/numeric_killing_search.py` — ports ansatz §85's multi-orbit SVD null-space search onto our bump;
   closes the non-KY-origin caveat at rank 2 (Kerr Carter recovered; bump has none). `results/numeric_killing_search.json`.
+- `code/numeric_quartic_search.py` — extends the SVD to rank-4 (gate: Kerr recovers C₀ AND C₀²); bump has
+  no quartic invariant (momentum-dependence check unmasks a pure-spatial artifact). `results/numeric_quartic_search.json`.
 - `code/symbolic_ky_search.py` — the proof horn: complete symbolic Killing–Yano search (Eisenhart route),
   Kerr-gated, exact rational linear algebra; rules out an exact KY tensor on the bump to degree 4.
 - `code/count_dimension.py` — the attempted dimension scan (gate-failed, kept for transparency).
