@@ -56,3 +56,25 @@ traverses the resonance sequence (leg M step 3). The remaining open extension is
 EMRI inspiral, which needs a dQ/dτ flux from ansatz (sister-request).
 
 Update STATUS + a one-line result inline when done.
+
+## Phase 3 (2026-06-26) — Tier-1 close-out + Tier-2 extensions
+
+The A-board (A1–A10) and B-board (B1–B4) are now all DONE or honestly retired. This session also added
+robustness/extension passes (each cross-validates an existing headline against a new metric, systematic, or
+sister-repo artifact):
+
+| item | leg | result |
+|---|---|---|
+| **A10 revival** | leg Q | legible ⟺ KY-integrable: tabula §127 vs leg O agree 5/5, φ=1.0 (`5176f7d`) |
+| **MN positive control** | leg J | caught our Lyapunov detector false-positiving on FD-noise; box-dim is the anchor (`7c3598c`, `e38d3d5`) |
+| **B1-full** | leg M | flux-driven quasi-circular inspiral traverses ω_r:ω_θ resonances; bump shifts ω_φ −5%→−13% (`750231c`) |
+| **ZV γ-metric** | leg O | 2nd non-integrable case, in prolate (x,y) coords: δ=1 gate ✅, δ=2 → no KY (`c94616d`) |
+| **start-time robustness** | leg B | no-hair δ Kerr-consistent at every start time 0–12ms; SNR-limited, not systematic (`d190fed`) |
+| **topological discover→verify** | leg N | tabula §120 Chern completes B3's topological end; geometric (+22%) vs topological (±0.7%) (`711a01f`) |
+
+**Remaining (need new sister-repo capability, logged as sister-requests):**
+- **Eccentric-inclined EMRI inspiral** — needs a dQ/dτ Carter-flux from ansatz (B1 is closed for circular).
+- **MN bound chaos** — validating box-dim *on* genuine bound chaos needs a Gair-style off-equatorial launcher
+  (leg J's equatorial family doesn't reach it).
+- **Echo Δt vs Abedi → leg 8** — deepstrain §14 internal-validated the echo-spacing formula; a clean bridge
+  cross-check would need the Abedi closed form reconstructed (not done — flagged rather than faked).
