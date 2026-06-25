@@ -35,11 +35,22 @@ EFFORT: `S` (hours) · `M` (a session) · `L` (multi-session / new module).
 
 ---
 
-## Knock-out order (revise freely)
+## Phase 1 (2026-06-24 marathon) — DONE
 
-1. **A2 quartic search** — cleanest closer, builds on `numeric_killing_search.py`. (start here)
-2. **A5 precise multi-event no-hair** — small, tightens the spine, reuses Move B v2.
-3. **A1 / A6 amortization→transfer** — the originality bet; A6 is the concrete entry point.
-4. **B1 EMRI observational** — the big separate angle, after the quick wins.
+Cleared in one session: **A2, A3, A6, A7, A9, B3** done · **A1, B1** partial · **A5** parked.
+Every high-value item on the board addressed; the honest-result discipline held throughout.
 
-Everything else as time/interest allows. Update STATUS + a one-line result inline when done.
+## Phase 2 (fresh) — the remaining 5
+
+| order | item | character | needs |
+|---|---|---|---|
+| 1 | **B4 catalog survey** | cleanest concrete win — turns the new Killing-tensor machinery into a reusable instrument across Kerr/KN/KdS/Taub-NUT/bumpy | assemble each catalog metric in the reduction coords |
+| 2 | **A10 geometrizes-proof** | sharpen Move E's directional "tracks curvature" on the ansatz catalog | scoping — what exactly to prove |
+| 3 | **A4 direct λ limit** | leg 8 upgrade; likely a *reframe* (DS echo amplitude is barrier-set, λ-weak → bounds reflectivity, not λ directly) | the reflectivity→amplitude model |
+| 4 | **A8 base-model native convention** | niche leg-2 follow-up (small) | feed base model un-normalized data |
+| — | **B2 multi-messenger no-hair** | most ambitious; a genuinely new triangulation | **USER DECISION:** ingest external EHT/X-ray data (breaks the strict 3-siblings premise) |
+
+Finishing the PARTIALs (A1 cross-model amortization; B1 full EMRI waveform) needs new external inputs
+(several NPEs deepstrain would train; GW fluxes) — bigger, separate efforts.
+
+Update STATUS + a one-line result inline when done.
