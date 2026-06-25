@@ -1009,3 +1009,19 @@ So one symbolic search now classifies any catalog metric as KY-integrable or not
 instrument. Honest scope: degree ≤4, KY-origin (higher-degree/non-KY-origin needs the numeric rank-2/4
 search, addable per metric). All integrable rows reproduce known integrability (instrument demo, not new
 physics). B4 DONE.
+
+## 2026-06-24 — Phase 2 (fresh): leg P (B2) — multi-messenger no-hair test (forecast + data-gap)
+
+Confronted ansatz §93's three-way spin-consistency no-hair test with real multi-messenger data
+(forecast_multimessenger.py; reuses §93 maps read-only). External EHT/X-ray data ingested (3-siblings rule
+relaxed for this leg, logged).
+- The literal test CAN'T run: M87* (EHT, a≈0.8), Cygnus X-1 (X-ray, a>0.95), GW250114 (LIGO ringdown,
+  χ≈0.77) are three DIFFERENT objects spanning 8 orders in mass — no single object has ≥2 messenger spins.
+- Ringdown-map cross-check: ansatz's QNM↔spin reproduces deepstrain's GW250114 χ=0.77 (Move B v2). Validated leg.
+- FORECAST (new): the three inferred spins barely disagree under a near-horizon deformation (spread <0.034
+  for ε≤1) → detecting non-Kerr needs a single multi-messenger object AND precision <0.05; current EHT
+  (σ~0.3) only catches gross ε≳5. ISCO most sensitive (near-horizon, §88); EHT precision the bottleneck.
+Verdict: a forecast, not yet a test. Natural first target: a galactic BH with both an X-ray ISCO spin and a
+next-gen/LISA ringdown. B2 DONE (honest forecast + explicit data-gap). Cited M87*/Cygnus X-1 sources.
+
+## Phase 2 status: B4, B2 DONE. Remaining: A4 (reframe), A8 (niche), A10 (vague). High-value board cleared.
