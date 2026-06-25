@@ -2,8 +2,10 @@
 
 *Run 2026-06-21. Gates and outcome-meanings frozen in [PREREGISTRATION.md](PREREGISTRATION.md) before any
 orbit was integrated. This leg attacks the project's one UNDETERMINED result — Move D / ansatz §82's
-"deform Kerr → canonical Carter tensor broken, yet no detectable chaos, fate undetermined." A post-hoc
-positive control (§ below) corrected our dynamical instrument — logged honestly, not hidden.*
+"deform Kerr → canonical Carter tensor broken, yet no detectable chaos, fate undetermined." Two post-hoc
+positive controls (§§ below) corrected our dynamical instrument — first Carter-saturation → Lyapunov, then
+(2026-06-26, on the bound-chaotic Manko–Novikov metric) Lyapunov → **box-dimension**, after finding the
+two-trajectory Lyapunov is finite-difference-noise-limited on bumpy metrics — logged honestly, not hidden.*
 
 ## Result in one line — the fate is no longer "undetermined"
 
@@ -226,6 +228,63 @@ specific bump: a complete symbolic KY non-existence proof (degree ≤4) **and** 
 orbit-dynamics measurement that the approximate invariant is bounded and non-diffusing, agreeing with the
 above by two independent routes.
 
+## Update (2026-06-26) — MN positive control: the Lyapunov detector is finite-difference-noise-limited; box-dimension is the anchor
+
+This leg's "no chaos in reach" rested on **ansatz §79's two-trajectory Lyapunov**, with one honest gap stated
+above: *no clearly-chaotic **bound** orbit was ever in reach to validate the detector* (the only chaotic
+case — legG's φ-dependent bump — sends orbits unbound). To close it we built a positive control on the
+**Manko–Novikov** metric (ansatz §99): an EXACT rotating vacuum with a tunable quadrupole q (q=0 ≡ Kerr),
+documented-chaotic for q≠0 (Gair 2008; Lukes-Gerakopoulos 2010), whose chaos is **bound**. We ran OUR
+Lyapunov next to ansatz's validated **Poincaré box-dimension** on the same orbits. The control did not
+rubber-stamp our tool — **it caught a flaw in it.**
+
+**The disagreement.** On MN q=0.5 (E=0.95, L=2.8, x0=3.5–8), the box-dimension calls every orbit **regular**
+(0.89–1.08, all ≤1.4) while the naive Lyapunov calls every one **chaotic** (λ=0.12–0.31). On the q=0 Kerr
+control the *same* λ sits at the floor (0.016–0.033) and agrees (regular). The split is exactly Kerr-vs-bump.
+
+**Three independent tests prove the λ is numerical, not dynamical** (`diagnose_lyapunov_boxdim.py`, MN q=0.5):
+
+| test | x0=4.0 | x0=7.0 | reading |
+|---|---|---|---|
+| **(A) box-dim vs n** (120→1500 crossings) | 1.06→1.12→1.15→**1.15** | 1.08→1.16→**1.16** | converges **regular**, never climbs toward 2 |
+| **(B) λ vs d0** (1e-6→1e-10) | 0.05→0.07→0.23→0.93→**4.23** | 0.04→0.05→0.15→1.01→**4.90** | a true exponent is d0-independent; ours **diverges as d0→0** |
+| **(C) λ vs FD-step h** (1e-6→1e-3) | 0.23→0.056→**0.044**→0.044 | 0.15→0.049→**0.052**→0.052 | **collapses to the ~0.05 floor** when the derivative is cleaned |
+
+**The Kerr (q=0) control clinches it.** Run through the *identical* battery, smooth Kerr (x0=4.0) shows **no
+artifact**: λ vs d0 stays flat (0.016→0.016→0.017→0.035→0.060, vs MN's →4.23) and λ vs h stays flat
+(0.016→0.016, nothing to collapse), box-dim 1.11. Same code, same d0, same h — the *only* variable is metric
+bumpiness, and it is what turns the divergence/collapse on. A controlled comparison, not an inference.
+
+**Mechanism.** ansatz's `build_hamilton_numeric` (MN) and `geodesic_chaos.lyapunov` (this leg's tool) both
+compute forces by **central finite-difference Christoffels** (step h=1e-6 → roundoff ≈ ε/h ≈ 1e-10
+relative). The Benettin scheme perturbs by **d0=1e-8**, so that force noise is a large fraction of the true
+separation signal — and larger on a bumpy metric (bigger higher-derivatives) than on smooth Kerr. Hence λ
+*diverges* as d0 shrinks (B, the noise floor dominates) and *collapses* when h is cleaned (C, less
+roundoff). The MN q=0.5 orbits are genuinely **regular** (A is the ground truth, independent of any λ); the
+"chaos" was the differentiator's roundoff.
+
+**What this means for this leg (the conclusion is unchanged; the instrument is sharpened — again).**
+- The **"formally non-integrable" half is untouched** — it rests on the exact symbolic KY non-existence
+  proof and the rank-2/4 SVD nulls (exact rational linear algebra, no numerics to contaminate).
+- The **"no chaos" half should be read off the box-dimension**, the detector validated here to track the
+  high-resolution ground truth. The earlier "λ at the Kerr floor on the bump" is now understood
+  correctly: finite-difference noise can only *inflate* λ, so a *floor* reading is **conservative** — real
+  chaos would have pushed λ *up*, not hidden it (the bump simply produced less FD-derivative noise than the
+  extreme q=0.5 MN, so its λ never inflated). legG's **SALI** (independent implementation) reading regular
+  on the same bump corroborates. So the null holds, now on the cleanest available tool.
+- **Actionable correction for anyone using the two-trajectory Lyapunov on a finite-difference-force metric:**
+  either use the **box-dimension** (Poincaré) instead, or *de-noise* the λ (FD step h≳1e-4 **and** d0≳1e-6),
+  where it returns to the floor on these regular orbits. A small d0 with a small h is the trap.
+
+**The bound-chaos gap is now better-characterized, not yet closed.** A sweep toward MN's documented chaotic
+zone (`chaos_search_mn.py`: stronger q, lower L, deeper x0) finds that our equatorial launch family
+(x₀, y=0, p_x=0, p_y on-shell) does **not** access bound chaos here — strong-q orbits (q≳0.7) fail to bind
+into long-lived librating orbits, and the q=0.5 orbits that do bind are regular (box-dim ≤1.16). So a
+genuinely chaotic **bound** orbit to validate box-dimension *on chaos* (not just on regularity) remains out
+of reach with this launch scheme — the same honest gap this leg flagged, now with the added, decisive
+knowledge that the naive Lyapunov could not have filled it either. Reaching MN's chaotic orbits needs a
+different launcher (Gair-style off-equatorial / pericenter-specified initial data) — logged as the next step.
+
 ## Artifacts
 - `code/export_orbits.py` — stage 1 (ansatz venv): integrates bound orbits, exports C₀ time series; reuses
   legA's `export_geodesics` (metrics, Christoffels, Carter tensor) read-only.
@@ -234,6 +293,15 @@ above by two independent routes.
   resonance-crossing chaos hunt; Kerr-calibrated (C₀ conserved to 2e-9). `results/eccentric_eps*.json`.
 - `code/verify_chaos.py` — the positive control: ansatz §79 Lyapunov vs Carter-saturation on the bump to
   ε=1.2 (both read regular; Lyapunov supersedes the unvalidated saturation). `results/verify_chaos.json`.
+- `code/positive_control_mn.py` — MN positive control: OUR Lyapunov vs ansatz's box-dimension on
+  Manko–Novikov q=0 (Kerr, regular) and q=0.5; surfaces the systematic λ-vs-box-dim disagreement on the
+  bump. `results/positive_control_mn.json` (+ durable `.jsonl`).
+- `code/diagnose_lyapunov_boxdim.py` — the 3-test diagnosis (box-dim vs n; λ vs d0; λ vs FD-step h) proving
+  the naive two-trajectory λ is finite-difference roundoff on bumpy metrics, not chaos.
+  `results/diagnose_lyapunov_boxdim.json`.
+- `code/chaos_search_mn.py` — sweep toward MN's chaotic zone (stronger q, lower L, deeper x0) reporting
+  box-dim + naive vs de-noised λ per orbit; finds the equatorial launch family does not reach bound chaos
+  here. `results/chaos_search_mn.json` (+ durable `.jsonl`).
 - `code/numeric_killing_search.py` — ports ansatz §85's multi-orbit SVD null-space search onto our bump;
   closes the non-KY-origin caveat at rank 2 (Kerr Carter recovered; bump has none). `results/numeric_killing_search.json`.
 - `code/numeric_quartic_search.py` — extends the SVD to rank-4 (gate: Kerr recovers C₀ AND C₀²); bump has

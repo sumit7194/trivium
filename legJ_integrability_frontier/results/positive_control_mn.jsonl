@@ -1,0 +1,17 @@
+{"q": 0.5, "x0": 3.5, "box_dim": 1.0437314206251695, "lyapunov": 0.3071023809474017, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": true}
+{"q": 0.5, "x0": 4.0, "box_dim": 1.057738608709968, "lyapunov": 0.23310149768576374, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": true}
+{"q": 0.5, "x0": 4.5, "box_dim": 1.057738608709968, "lyapunov": 0.21014294597213196, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": true}
+{"q": 0.5, "x0": 5.0, "box_dim": 0.9848131754782404, "lyapunov": 0.15316135617427618, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": true}
+{"q": 0.5, "x0": 5.5, "box_dim": 1.0437314206251695, "lyapunov": 0.1320716670708271, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": true}
+{"q": 0.5, "x0": 6.0, "box_dim": 1.0437314206251695, "lyapunov": 0.11739678981258246, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": true}
+{"q": 0.5, "x0": 7.0, "box_dim": 1.0849625007211563, "lyapunov": 0.15055866663734713, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": true}
+{"q": 0.5, "x0": 8.0, "box_dim": 0.8888037893317762, "lyapunov": 0.15441079982212563, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": true}
+{"q": 0.0, "x0": 3.0, "box_dim": 0.9490601929903933, "lyapunov": 0.03245589331924518, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": false}
+{"q": 0.0, "x0": 3.5, "box_dim": 0.9036774610288022, "lyapunov": 0.01620242311833489, "n_pts": 120, "chaotic_boxdim": false, "chaotic_lyapunov": false}
+{"q": 0.0, "x0": 4.0, "box_dim": 1.0776391127389553, "lyapunov": 0.017338345059885567, "n_pts": 116, "chaotic_boxdim": false, "chaotic_lyapunov": false}
+{"q": 0.0, "x0": 4.5, "box_dim": 0.7297158093186485, "lyapunov": 0.021495065686257205, "n_pts": 109, "chaotic_boxdim": false, "chaotic_lyapunov": false}
+{"q": 0.0, "x0": 5.0, "box_dim": 1.1111962106682243, "lyapunov": 0.026690197782008967, "n_pts": 105, "chaotic_boxdim": false, "chaotic_lyapunov": false}
+{"q": 0.0, "x0": 5.5, "box_dim": 1.057738608709968, "lyapunov": 0.025429341492662787, "n_pts": 102, "chaotic_boxdim": false, "chaotic_lyapunov": false}
+{"q": 0.0, "x0": 6.0, "box_dim": 1.0294468445267841, "lyapunov": 0.027193613015499527, "n_pts": 100, "chaotic_boxdim": false, "chaotic_lyapunov": false}
+{"q": 0.0, "x0": 7.0, "box_dim": 1.014873671697026, "lyapunov": 0.0282014980141244, "n_pts": 97, "chaotic_boxdim": false, "chaotic_lyapunov": false}
+{"q": 0.0, "x0": 8.0, "box_dim": 1.0849625007211563, "lyapunov": 0.031335871361944184, "n_pts": 96, "chaotic_boxdim": false, "chaotic_lyapunov": false}

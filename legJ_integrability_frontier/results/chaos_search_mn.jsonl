@@ -1,0 +1,14 @@
+{"q": 0.5, "E": 0.95, "L": 1.6, "x0": 3.5, "box_dim": 0.6111962106682239, "n_pts": 300, "lam_naive": 0.4163, "lam_clean": 0.0742, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 1.6, "x0": 4.0, "box_dim": 1.098198606401752, "n_pts": 300, "lam_naive": 0.2896, "lam_clean": 0.0524, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 1.6, "x0": 5.0, "box_dim": 1.0437314206251698, "n_pts": 300, "lam_naive": 0.151, "lam_clean": 0.0595, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 1.6, "x0": 6.0, "box_dim": 0.7512501702645917, "n_pts": 300, "lam_naive": 0.1362, "lam_clean": 0.0558, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 1.9, "x0": 3.5, "box_dim": 1.0437314206251695, "n_pts": 300, "lam_naive": 0.3939, "lam_clean": 0.0698, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 1.9, "x0": 4.0, "box_dim": 1.1239637567217928, "n_pts": 300, "lam_naive": 0.2679, "lam_clean": 0.062, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 1.9, "x0": 5.0, "box_dim": 1.1488402743203427, "n_pts": 300, "lam_naive": 0.1843, "lam_clean": 0.0496, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 1.9, "x0": 6.0, "box_dim": 1.0849625007211563, "n_pts": 300, "lam_naive": 0.1589, "lam_clean": 0.0586, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 2.2, "x0": 3.5, "box_dim": 1.0437314206251695, "n_pts": 300, "lam_naive": 0.3728, "lam_clean": 0.0622, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 2.2, "x0": 4.0, "box_dim": 1.098198606401752, "n_pts": 300, "lam_naive": 0.259, "lam_clean": 0.0632, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 2.2, "x0": 5.0, "box_dim": 1.1488402743203427, "n_pts": 300, "lam_naive": 0.208, "lam_clean": 0.0553, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 2.2, "x0": 6.0, "box_dim": 1.098198606401752, "n_pts": 300, "lam_naive": 0.1632, "lam_clean": 0.0566, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 2.5, "x0": 3.5, "box_dim": 1.0714789769210216, "n_pts": 300, "lam_naive": 0.3743, "lam_clean": 0.0664, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 2.5, "x0": 4.0, "box_dim": 1.098198606401752, "n_pts": 300, "lam_naive": 0.2714, "lam_clean": 0.0618, "chaotic_boxdim": false}
