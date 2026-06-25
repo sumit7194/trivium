@@ -1,0 +1,22 @@
+{
+ "regular_mn_orbit": {
+  "q": 0.5,
+  "x0": 4.0,
+  "box_dim": 1.057738608709968,
+  "lambda_old_ch1e-6_d0_1e-8": 0.4432087987694908,
+  "lambda_denoised_ch1e-4_d0_1e-6": -0.0017043078520372168
+ },
+ "fd_false_positive_reproduced_and_fixed": true,
+ "genuine_chaos_controls": {
+  "henon_heiles_boxdim_\u00a784": {
+   "regular": 1.0,
+   "chaotic": 1.34
+  },
+  "dihole_lyapunov_\u00a779": {
+   "regular_kerr": 0.0,
+   "chaotic": 2.09
+  }
+ },
+ "gap_closed": true,
+ "verdict": "Chaos detectors validated on genuine chaos (H\u00e9non\u2013Heiles box-dim 1.34; di-hole \u03bb 2.09). Our FD-noise Lyapunov false-positive independently reproduced + fixed by ansatz \u00a7101. leg J's no-chaos null rests on the roundoff-immune box-dimension, a validated detector. MN bound chaos unreachable by the equatorial launcher (launch-data limit, not detector)."
+}

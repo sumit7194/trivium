@@ -286,7 +286,36 @@ of reach with this launch scheme — the same honest gap this leg flagged, now w
 knowledge that the naive Lyapunov could not have filled it either. Reaching MN's chaotic orbits needs a
 different launcher (Gair-style off-equatorial / pericenter-specified initial data) — logged as the next step.
 
+## Update (2026-06-26b) — gap CLOSED: detectors validated on genuine chaos, and ansatz cross-confirmed the fix
+
+We relayed the FD-noise finding and the bound-chaos gap to ansatz; both came back resolved (ansatz §101 +
+`emri.mn_bound_orbit`, this leg's `detector_validation.py` reproducing it read-only). The gap closes on all
+three fronts:
+
+- **Our FD-noise false-positive was independently reproduced AND fixed.** ansatz reproduced it exactly — on a
+  box-dim-regular MN q=0.5 orbit the old Lyapunov (ch=1e-6, d0=1e-8) reads λ≈+0.32–0.44, the de-noised one
+  (ch=1e-4, d0=1e-6) collapses to ≈0 — and shipped the fix as the new `geodesic_chaos.lyapunov` defaults. A
+  cross-repo confirmation of the bridge's finding, and the buggy detector is now corrected at the source.
+- **The detectors are validated ON genuine chaos.** The *same* instruments flag real chaos elsewhere in
+  ansatz: the box-dimension reads **1.34** on the chaotic Hénon–Heiles orbit (§84, vs ≈1.0 regular), and the
+  de-noised Lyapunov reads **2.09** on the Majumdar–Papapetrou di-hole (§79, vs ≈0 for Kerr). So leg J's
+  "regular box-dim on the bump" is a null on a detector **proven to see chaos when it is present** — the one
+  honest gap (detector never tested on chaos) is **closed**.
+- **MN's own bound chaos stays unreachable — independently confirmed.** ansatz's own low-L MN scan (`q` up to
+  1.2) also tops out at box-dim ~1.16–1.22 (regular with more crossings), matching our equatorial-launcher
+  result. So it is a **launch-data limitation** (MN's documented chaos, Lukes-Gerakopoulos 2010, needs
+  specific literature initial data fed to `mn_bound_orbit`), not a detector failure.
+
+**Net:** leg J's "formally non-integrable, dynamically regular" verdict now rests on (i) the exact symbolic
+KY + SVD proofs, and (ii) the roundoff-immune **box-dimension**, a detector validated on genuine chaos, with
+the one λ-based caveat reproduced and fixed at the source by ansatz. The discipline closed the loop across
+both repos. `results/detector_validation.json`. *(Bonus from the same ansatz update: a Carter flux dQ/dτ
+that unblocks the eccentric-inclined EMRI inspiral — see leg M.)*
+
 ## Artifacts
+- `code/detector_validation.py` — closes the gap: reproduces (read-only, with ansatz's shipped fix) the FD
+  false-positive + de-noised λ on a regular MN orbit, and records the genuine-chaos positive controls
+  (Hénon–Heiles box-dim 1.34, di-hole λ 2.09). `results/detector_validation.json`.
 - `code/export_orbits.py` — stage 1 (ansatz venv): integrates bound orbits, exports C₀ time series; reuses
   legA's `export_geodesics` (metrics, Christoffels, Carter tensor) read-only.
 - `code/carter_dynamics.py` — drift + saturation measures, Kerr-calibrated, synthetic-validated.
