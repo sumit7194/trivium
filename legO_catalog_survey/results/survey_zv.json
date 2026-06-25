@@ -1,0 +1,8 @@
+{
+ "ky_dim": {
+  "ZV \u03b4=1 (Schwarzschild)": 1,
+  "ZV \u03b4=2 (\u03b3-metric, bumpy)": 0
+ },
+ "gate_pass": true,
+ "verdict": "ZV \u03b4=1 (Schwarzschild) KY-integrable; ZV \u03b4=2 (\u03b3-metric) no KY tensor \u2014 a 2nd non-integrable confirmation for the leg-O instrument"
+}

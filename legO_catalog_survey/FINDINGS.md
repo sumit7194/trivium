@@ -10,7 +10,10 @@ read-only.*
 A single symbolic Killing–Yano search, applied uniformly, correctly classifies the whole catalog: it
 recovers the Carter-type hidden symmetry on every integrable metric — **including the genuinely non-Kerr
 Taub–NUT** — and reads **NONE** for the bumpy metric (leg J). The discover→verify machinery is now a
-reusable instrument, not a one-off.
+reusable instrument, not a one-off. **Extended (2026-06-26):** the same search, run in *prolate-spheroidal*
+coordinates on the exact **Zipoy–Voorhees γ-metric**, recovers Schwarzschild's KY (δ=1, gate) and reads
+**NONE** for the deformed γ-metric (δ=2) — a *second*, literature-standard non-integrable spacetime, in
+*different coordinates*, so the instrument keys on integrability itself, not on one bump or one chart.
 
 ## The survey (degree-≤4 KY 2-form search, exact rational linear algebra)
 
@@ -30,6 +33,29 @@ reusable instrument, not a one-off.
 - **The non-integrable case reads NONE:** the bumpy metric (leg J's deformation) has no KY tensor,
   reproduced here in the uniform survey.
 
+## Update (2026-06-26) — Zipoy–Voorhees γ-metric: a second non-integrable confirmation, in a second chart
+
+The catalog above is all Boyer–Lindquist (r, u=cosθ) with a *single* non-integrable example (the bumpy
+metric). To test that the instrument flags **integrability itself** — not a quirk of one bump or one
+coordinate system — we added the **Zipoy–Voorhees (γ-) metric** (ansatz `zipoy_voorhees.py`): an *exact*
+static vacuum with a tunable Geroch–Hansen quadrupole, δ=1 ≡ Schwarzschild, δ≠1 genuinely non-integrable (a
+documented chaotic testbed, Lukes-Gerakopoulos 2010). It is naturally written in *prolate-spheroidal* (x, y),
+so the same KY-nullspace search was run with monomials in (x, y). For integer δ the metric is rational, so
+the exact-rational linear algebra carries over; δ=2 is the clean deformed case.
+
+| metric | coords | KY 2-forms (deg ≤4) | hidden symmetry? |
+|---|---|---|---|
+| **ZV δ=1** (Schwarzschild) | prolate (x,y) | **1** | YES — gate ✅ |
+| **ZV δ=2** (γ-metric) | prolate (x,y) | **0** | NO (non-integrable) |
+
+- **Gate passes in the new chart:** Schwarzschild's KY tensor is recovered from the prolate-coordinate
+  metric — the search is not tied to Boyer–Lindquist.
+- **A second non-integrable case reads NONE:** the δ=2 γ-metric — a *different* deformation from leg J's
+  bump (an exact vacuum naked singularity vs. an axisymmetric quadrupole bump), and a literature-standard
+  chaotic spacetime — admits no degree-≤4 KY tensor. So the instrument's NONE is about integrability, not
+  about one specific bump. (This also predicts, via leg Q's legible ⟺ KY-integrable, that a learned ZV-δ=2
+  geometry would be *non-legible* — a clean future tabula cross-check.)
+
 ## What it buys
 
 One symbolic search now **classifies any catalog metric** as KY-integrable or not — turning leg J's
@@ -47,3 +73,5 @@ the non-Kerr (Taub–NUT) generalization test.
 ## Artifacts
 - `code/survey_catalog.py` — the catalog metrics (Schwarzschild, Kerr, KN, KdS, Taub–NUT, bumpy) in
   rational u=cosθ coords + the uniform KY survey. `results/survey_catalog.json`.
+- `code/survey_zv.py` — the Zipoy–Voorhees γ-metric (ansatz `zipoy_voorhees.py`) in prolate-spheroidal
+  (x,y); same KY search, Schwarzschild-gated (δ=1), δ=2 reads NONE. `results/survey_zv.json`.
