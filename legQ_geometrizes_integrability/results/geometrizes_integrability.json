@@ -1,0 +1,53 @@
+{
+ "joint_rows": [
+  {
+   "metric": "bumpy",
+   "ky_integrable": false,
+   "legible": false,
+   "agree": true
+  },
+  {
+   "metric": "kerr",
+   "ky_integrable": true,
+   "legible": true,
+   "agree": true
+  },
+  {
+   "metric": "kerr-de sitter",
+   "ky_integrable": true,
+   "legible": true,
+   "agree": true
+  },
+  {
+   "metric": "kerr-newman",
+   "ky_integrable": true,
+   "legible": true,
+   "agree": true
+  },
+  {
+   "metric": "taub-nut",
+   "ky_integrable": true,
+   "legible": true,
+   "agree": true
+  }
+ ],
+ "n_match": 5,
+ "n_joint": 5,
+ "phi_matthews": 1.0,
+ "contingency": {
+  "int_and_legible": 4,
+  "non_and_nonlegible": 1,
+  "false_legible": 0,
+  "missed": 0
+ },
+ "lego_only": {
+  "schwarzschild": true
+ },
+ "tabula_only": {
+  "bumpy-strong": {
+   "legible": false,
+   "integrable": false
+  }
+ },
+ "verdict": "A10 CONFIRMED \u2014 legibility \u27fa KY-integrability holds for every catalog metric tested by both instruments; two independent repos (tabula's neural legibility head, leg O's symbolic KY algebra) agree metric-by-metric."
+}

@@ -68,13 +68,21 @@ waveform's resonance-crossing signature (the frequency-shift + any jump), comple
 
 ---
 
-## A10 (geometrizes-proof) — RETIRED as ill-posed, but here's a well-posed reframe
+## A10 (geometrizes-proof) — ✅ FULFILLED (2026-06-26): well-posed reframe answered + bridged in leg Q (legible ⟺ KY-integrable, 5/5, φ=1.0)
 
-As stated ("geometrizes ⟺ universal ∧ conservative as an *exact proof* on the ansatz catalog") it is not a
-metric theorem and was dropped. **A well-posed revival** (if wanted): does a learned geometry *geometrize /
-become legible* **iff the metric is integrable** (admits a Killing tensor)? That ties **tabula**'s
-geometrization-legibility to **leg O**'s catalog integrability survey:
+The ill-posed form ("geometrizes ⟺ universal ∧ conservative as an *exact proof* on the ansatz catalog")
+stays retired — not a metric theorem. The **well-posed revival** — does a learned geometry *become legible*
+**iff the metric is integrable** (admits a Killing tensor)? — was answered by tabula (§127) and bridged in
+**leg Q**: tabula's neural `legible` column vs leg O's symbolic `KY-integrable` column agree **5/5** across
+the catalog (Kerr/KN/KdS/Taub–NUT legible+integrable; bumpy neither), Matthews **φ=1.0**; the two
+single-repo metrics (Schwarzschild, bumpy-strong) are consistent too. Two deliberately-independent repos,
+identical per-metric verdict — the clean, cross-validated version of the §9 claim.
+
+<details><summary>original ask</summary>
+
 - *tabula ask:* run the geometrization/legibility probe on observations from each catalog metric
   (Kerr, KN, KdS, Taub–NUT, bumpy).
 - *bridge then:* correlate "geometrizes (legible)" against leg O's "KY-integrable" column. A clean,
   testable version of the §9 claim.
+
+</details>
