@@ -12,3 +12,5 @@
 {"q": 0.5, "E": 0.95, "L": 2.2, "x0": 6.0, "box_dim": 1.098198606401752, "n_pts": 300, "lam_naive": 0.1632, "lam_clean": 0.0566, "chaotic_boxdim": false}
 {"q": 0.5, "E": 0.95, "L": 2.5, "x0": 3.5, "box_dim": 1.0714789769210216, "n_pts": 300, "lam_naive": 0.3743, "lam_clean": 0.0664, "chaotic_boxdim": false}
 {"q": 0.5, "E": 0.95, "L": 2.5, "x0": 4.0, "box_dim": 1.098198606401752, "n_pts": 300, "lam_naive": 0.2714, "lam_clean": 0.0618, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 2.5, "x0": 5.0, "box_dim": 1.1111962106682243, "n_pts": 300, "lam_naive": 0.1534, "lam_clean": 0.0439, "chaotic_boxdim": false}
+{"q": 0.5, "E": 0.95, "L": 2.5, "x0": 6.0, "box_dim": 1.1239637567217926, "n_pts": 300, "lam_naive": 0.2055, "lam_clean": 0.0593, "chaotic_boxdim": false}

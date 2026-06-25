@@ -278,8 +278,9 @@ roundoff). The MN q=0.5 orbits are genuinely **regular** (A is the ground truth,
 
 **The bound-chaos gap is now better-characterized, not yet closed.** A sweep toward MN's documented chaotic
 zone (`chaos_search_mn.py`: stronger q, lower L, deeper x0) finds that our equatorial launch family
-(x₀, y=0, p_x=0, p_y on-shell) does **not** access bound chaos here — strong-q orbits (q≳0.7) fail to bind
-into long-lived librating orbits, and the q=0.5 orbits that do bind are regular (box-dim ≤1.16). So a
+(x₀, y=0, p_x=0, p_y on-shell) does **not** access bound chaos here — every strong-q grid point (q≳0.7)
+fails to bind into a ≥40-crossing orbit (skipped), and the 16 bindable q=0.5 orbits are **all regular**
+(box-dim ≤1.15, de-noised λ 0.04–0.07 at the floor). So a
 genuinely chaotic **bound** orbit to validate box-dimension *on chaos* (not just on regularity) remains out
 of reach with this launch scheme — the same honest gap this leg flagged, now with the added, decisive
 knowledge that the naive Lyapunov could not have filled it either. Reaching MN's chaotic orbits needs a
