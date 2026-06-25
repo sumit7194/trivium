@@ -146,6 +146,12 @@ Match the projects' shared ethos throughout: pre-register → build → gate →
   (moduli, measured-δ, neural-knee, and Levina–Bickel intrinsic-dim all converge; dyonic≈RN confirms the
   Q²+P² degeneracy). They part only for a *linear* MDL, which overcounts via curvature (leg 7b / Move I).
 - Does **amortization predict sim→real transfer** in GW data? (If yes: the most original result available here.)
+  **→ CONCRETE SUPPORT (leg L / A1):** the no-hair NPE's per-parameter *legibility* (measured on simulation:
+  M 0.86, χ 0.51, δ 0.09) predicts its real-data posterior precision (M tightest → δ widest, identical
+  ranking). A cheap sim probe forecasts which parameters the real measurement pins down. Honest scope: 3
+  params / 1 event, and the mechanism is shared Fisher information (not an amortization-gap-overfitting
+  effect) — the cross-model version needs several NPEs deepstrain would train. Also (A6): δ is
+  information-limited even in this richer model, corroborating leg 2.
 - Is tabula's strong-field error in the regime real ringdowns actually constrain — i.e., does it *matter*?
 - Does "geometrizes ⟺ universal ∧ conservative" survive an exact proof on the ansatz catalog?
 - Does any bridge result, phrased as "when is a learned geometry legible/transferable," generalize to the curvature-atlas domains outside GR?

@@ -941,3 +941,18 @@ Two estimators on leg 1's observation data:
 §9 ANSWER: the lenses part on the CODE, not the physics — moduli/measured-δ/neural-knee/nonlinear-ID all
 agree on the observable count (1,2,2); only the linear MDL is the outlier, and WHY is the curvature leg 7b/
 Move I already flagged. SPINE_SUMMARY count-triangle gained the 4th row; §9 marked answered.
+
+## 2026-06-24 — Session 33 (cont.): leg L — amortization legibility (A6 done, A1 partial)
+
+Built leg L on deepstrain's richer no-hair δ SBI (the amortized NPE inferring M,χ,δ). Extracted its 56-d
+Embed summary code on 5000 sim ringdowns (export_nohair_codes.py), ran the legibility probe ladder
+(probe_nohair.py).
+- **A6 (done):** δ is INFORMATION-limited even in the richer NPE — linear R² 0.08, nonlinear 0.09, no
+  legibility gap (no scramble signature). M (0.86) and χ (0.51) are cleanly legible. So the no-hair test is
+  signal-limited, not encoding-limited — corroborating leg 2's tone-count verdict in a 2nd, richer model,
+  and localizing the info-wall to δ (the 221-overtone deviation).
+- **A1 (partial):** the per-parameter SIM legibility predicts the REAL-data precision — ranking M(0.86)→
+  4.47, χ(0.51)→3.52, δ(0.09)→1.28 is identical. A cheap sim probe forecasts which params real data pins
+  down — concrete support for §9's amortization→transfer. Honest: 3 params/1 event; mechanism is shared
+  Fisher info (not amortization-gap-overfitting); the cross-model version needs several NPEs deepstrain
+  would train. §9 marked with concrete support; BACKLOG A6 DONE, A1 PARTIAL.

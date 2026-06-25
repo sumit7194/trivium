@@ -1,0 +1,43 @@
+{
+ "probes": [
+  {
+   "param": "M",
+   "linear_R2": 0.78,
+   "nonlinear_R2": 0.862,
+   "gap": 0.082,
+   "reading": "cleanly (linearly) legible"
+  },
+  {
+   "param": "chi",
+   "linear_R2": 0.527,
+   "nonlinear_R2": 0.505,
+   "gap": -0.022,
+   "reading": "cleanly (linearly) legible"
+  },
+  {
+   "param": "delta",
+   "linear_R2": 0.081,
+   "nonlinear_R2": 0.088,
+   "gap": 0.006,
+   "reading": "INFO-LIMITED (both low \u2014 like the tone-count)"
+  }
+ ],
+ "a1_legibility_vs_precision": [
+  {
+   "param": "M",
+   "sim_legibility": 0.862,
+   "real_precision": 4.473
+  },
+  {
+   "param": "chi",
+   "sim_legibility": 0.505,
+   "real_precision": 3.52
+  },
+  {
+   "param": "delta",
+   "sim_legibility": 0.088,
+   "real_precision": 1.277
+  }
+ ],
+ "ranking_matches": true
+}
