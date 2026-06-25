@@ -44,7 +44,7 @@ Every high-value item on the board addressed; the honest-result discipline held 
 
 | order | item | character | needs |
 |---|---|---|---|
-| 1 | **B4 catalog survey** | cleanest concrete win — turns the new Killing-tensor machinery into a reusable instrument across Kerr/KN/KdS/Taub-NUT/bumpy | assemble each catalog metric in the reduction coords |
+| ✅ | **B4 catalog survey** | **DONE** (2026-06-24, leg O): uniform KY survey classifies the catalog — Schwarzschild/Kerr/KN/KdS/**Taub–NUT** all KY-integrable (gate ✅), bumpy NONE (leg J). Instrument generalizes (incl. non-Kerr Taub–NUT). | — |
 | 2 | **A10 geometrizes-proof** | sharpen Move E's directional "tracks curvature" on the ansatz catalog | scoping — what exactly to prove |
 | 3 | **A4 direct λ limit** | leg 8 upgrade; likely a *reframe* (DS echo amplitude is barrier-set, λ-weak → bounds reflectivity, not λ directly) | the reflectivity→amplitude model |
 | 4 | **A8 base-model native convention** | niche leg-2 follow-up (small) | feed base model un-normalized data |

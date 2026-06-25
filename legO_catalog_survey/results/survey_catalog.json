@@ -1,0 +1,11 @@
+{
+ "ky_dim": {
+  "Schwarzschild": 1,
+  "Kerr (gate)": 1,
+  "Kerr\u2013Newman": 1,
+  "Kerr\u2013de Sitter": 1,
+  "Taub\u2013NUT": 1,
+  "bumpy \u03b5=0.35": 0
+ },
+ "gate_pass": true
+}

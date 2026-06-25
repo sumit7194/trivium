@@ -996,3 +996,16 @@ circular geodesic.
   leg J's bump via holonomy needs an off-equatorial spatial loop (logged next step).
 B3 DONE: the bridge's discover→verify instrument generalizes beyond Killing tensors. (Convention debugging:
 the gyro's net rotation 2π√(1−3M/r), geodetic precession = 2π − that; launcher u^φ<0 made T8<0 — caught.)
+
+## 2026-06-24 — Phase 2 (fresh): leg O (B4) — Killing-tensor search as a catalog survey instrument
+
+Turned leg J's symbolic KY search into a reusable INSTRUMENT (survey_catalog.py): one uniform degree-≤4
+KY-existence search run across the ansatz catalog in u=cosθ coords.
+- Gate PASS (Kerr admits its KY).
+- KY-integrable: Schwarzschild, Kerr, Kerr–Newman, Kerr–de Sitter, AND Taub–NUT (a non-Kerr integrable
+  metric, NUT-charge g_tφ∝cosθ — confirms the instrument isn't Kerr-specific, keys on the genuine symmetry).
+- No KY tensor: the bumpy metric (reproduces leg J in the uniform survey).
+So one symbolic search now classifies any catalog metric as KY-integrable or not — a clean reference
+instrument. Honest scope: degree ≤4, KY-origin (higher-degree/non-KY-origin needs the numeric rank-2/4
+search, addable per metric). All integrable rows reproduce known integrability (instrument demo, not new
+physics). B4 DONE.
