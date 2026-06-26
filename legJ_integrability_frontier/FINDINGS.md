@@ -362,7 +362,44 @@ anywhere." Exhibiting MN's own thin layer needs those exact moderate-q ICs (rela
 itself is now a reusable, validated leg-J instrument that the naive rotation number was not.
 `results/rotation_number_chaos.json` (+ `rotation_number_validation.json`, `rotation_number_mn.jsonl`).
 
+## Update (2026-06-26d) — POSITIVE CONTROL CLOSED: the detector exhibits MN's own thin-layer chaos
+
+The one open thread — exhibit MN's *own* bound chaos so a detector validated on a proxy (Hénon–Heiles)
+catches the real thing — is now closed, by a clean two-repo split. ansatz reached MN's inner basin (the
+literature's chaotic region near the rod, χ=0.9, q=0.95, E=0.95, Lz=3; Contopoulos–Lukes-Gerakopoulos–
+Apostolatos 2011) with an **adaptive** integrator — our fixed-step `poincare.section` dies there instantly
+(0 crossings, H-drift ∞, confirming the stiffness), so ansatz supplied two adaptive-integrated (x, px)
+section series (H-drift <2e-3 kept). Both orbits sit at **box-dim 1.20–1.22** — exactly the borderline
+where box-counting cannot decide island-of-stability vs thin chaos. We applied the **bridge's
+independently-validated frequency-drift detector** to ansatz's trajectories (`inner_region_chaos.py`):
+
+| orbit | crossings | box-dim (ansatz) | drift \|Δf\|/f (bridge) | verdict |
+|---|---|---|---|---|
+| **orbit_A** | 800 | 1.203 | **0.0000** | regular — island of stability |
+| orbit_A[:126] | 126 | — | 0.0000 | regular (length-match control) |
+| **orbit_B** | 126 | 1.219 | **0.980** | **thin chaos — fires (≫ 0.0115)** |
+
+**Box-dimension called both ~1.2; the frequency-drift detector resolves them** — orbit_A is the regular
+island, orbit_B is the chaotic boundary layer. The verdict is *not* a short-series artifact: at the *same*
+126 crossings, the regular orbit_A reads 0.0000 while orbit_B reads 0.98 — a clean separation at matched
+length, and orbit_B's drift exceeds even the Hénon–Heiles chaotic floor (0.59). So **MN's own thin-layer
+chaos is exhibited, on the exact metric** (ansatz-verified vs Gair-Li-Mandel 2008), by a detector validated
+on Hénon–Heiles and immune to the two pitfalls that defeated the earlier attempts (the Lyapunov's
+finite-difference noise, the rotation number's resonant-island false-positive).
+
+**What this settles.** Leg J's chaos-detector arc is complete: three detectors of known, validated behaviour
+— box-dimension (Hénon–Heiles 1.34, robust but *blunt*: blind to this thin layer, reads both inner orbits
+~1.2), de-noised Lyapunov (di-hole 2.09), and frequency drift (Hénon–Heiles + now MN's own inner chaos,
+*thin-layer-sensitive*). The first two *and* the sharpest third all read the leg-J **bump** regular — so the
+"formally non-integrable, dynamically regular" verdict for the bump now rests on detectors proven to catch
+chaos right down to the thin boundary layer that box-dim misses. The bridge built the tool; ansatz supplied
+the trajectory its own box-dim couldn't classify; the bridge's detector classified it. `results/inner_region_chaos.json`.
+
 ## Artifacts
+- `code/inner_region_chaos.py` — the closer: applies the validated frequency-drift detector to ansatz's
+  adaptive-integrated MN inner-region section series (`mn_inner_sections_for_bridge.json`, read-only) —
+  resolves orbit_A (regular island, drift 0) vs orbit_B (thin chaos, drift 0.98) where box-dim reads both
+  ~1.2. Exhibits MN's own thin-layer chaos. `results/inner_region_chaos.json`.
 - `code/rotation_number_chaos.py` — the thin-layer-sensitive frequency-drift detector: validated on
   Hénon–Heiles + a strict Kerr/1:3-island control, then the MN q=0.6 resonance-band scan (all regular).
   Reboot-resilient (cached validation + per-orbit MN checkpoint). `results/rotation_number_chaos.json`.

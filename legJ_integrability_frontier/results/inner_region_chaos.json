@@ -1,0 +1,30 @@
+{
+ "params": {
+  "metric": "Manko-Novikov (exact, verified vs Gair-Li-Mandel 2008)",
+  "a": 0.9,
+  "q": 0.95,
+  "E": 0.95,
+  "Lz": 3.0
+ },
+ "threshold": 0.011500809845622713,
+ "orbits": {
+  "orbit_A": {
+   "n_crossings": 800,
+   "H_drift": 0.0004875698081505675,
+   "freq": 0.15265459819474356,
+   "drift": 6.459110574668407e-06,
+   "fires": false,
+   "verdict": "regular (island of stability)",
+   "drift_trunc126": 2.5035193618046344e-06
+  },
+  "orbit_B": {
+   "n_crossings": 126,
+   "H_drift": 0.00038902253414052623,
+   "freq": 0.14687293762582612,
+   "drift": 0.9798386593864266,
+   "fires": true,
+   "verdict": "THIN CHAOS (drift fires > threshold)"
+  }
+ },
+ "verdict": "MN inner-region thin-layer chaos EXHIBITED: frequency-drift fires (>threshold) on the literature chaotic-basin orbits (\u03c7=0.9,q=0.95,E=0.95,Lz=3) that box-dim left at 1.20 \u2014 settled on the exact metric with a detector validated on H\u00e9non\u2013Heiles."
+}
