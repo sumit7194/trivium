@@ -330,7 +330,42 @@ the one λ-based caveat reproduced and fixed at the source by ansatz. The discip
 both repos. `results/detector_validation.json`. *(Bonus from the same ansatz update: a Carter flux dQ/dτ
 that unblocks the eccentric-inclined EMRI inspiral — see leg M.)*
 
+## Update (2026-06-26c) — a thin-layer-sensitive detector (frequency drift), validated, reads moderate-q MN regular
+
+ansatz §102 noted MN's geometric chaos is a *thin layer* near resonances — gross box-dimension grazes it
+(≤1.22) because the chaotic band has negligible area. To probe below box-dim's resolution we built a third
+detector (`code/rotation_number_chaos.py`). The first attempt — the **centroid-angle rotation number** —
+false-flagged Kerr's regular **1:3 resonant island** as chaos (the orbit hops between islands around the
+global centroid; nonconv 0.035 > the genuinely-chaotic Hénon–Heiles 0.007): the *same* noise/island pitfall
+that defeated the naive Lyapunov, so it was discarded. The robust replacement is the **frequency drift**
+(Laskar-style): the dominant frequency of an orbit's section coordinate is *constant* for any regular orbit —
+torus **or** resonant island — and only DRIFTS for chaos; |Δf|/f between the first and second half of the
+section series is the flag, area-blind and island-immune.
+
+- **Validated (strict gate).** On Hénon–Heiles the genuinely-chaotic orbits (box-dim>1.4) drift **0.59–0.73**
+  while *every* regular orbit — including the islands *inside* the chaotic energy — drifts ≤0.0001. On the
+  **Kerr (q=0) integrable control** every orbit reads ≤0.006, the **1:3 island included (0.0018)** — the
+  resonant-island false-positive is gone. Regular ceiling 0.006, chaotic floor 0.59 → a **~100× margin**;
+  threshold 0.0115.
+- **MN q=0.6, across the resonance band (14 orbits, E=0.95, L=2.8):** **all regular**, drift ≤0.002 — *no*
+  thin layer that box-dim missed. A detector *proven* to catch thin chaos, and immune to both pitfalls that
+  fooled the Lyapunov and the rotation number, reads these moderate-q bump orbits as genuinely regular.
+
+**So leg J's null now rests on three detectors of known behaviour** — box-dimension (validated on
+Hénon–Heiles 1.34, robust but blunt), the de-noised Lyapunov (validated on the di-hole 2.09), and now the
+frequency drift (validated on Hénon–Heiles, *thin-layer-sensitive*) — all three reading regular on the bump.
+
+**Honest scope (the one open thread):** this is a single (E, L) slice. MN's *documented* thin chaos lives at
+specific literature initial conditions (Lukes-Gerakopoulos), and a blind x0-sweep can miss the exact resonant
+separatrix — so this is "regular in this slice, on a newly-validated sharp instrument," **not** "no MN chaos
+anywhere." Exhibiting MN's own thin layer needs those exact moderate-q ICs (relayed to ansatz). The detector
+itself is now a reusable, validated leg-J instrument that the naive rotation number was not.
+`results/rotation_number_chaos.json` (+ `rotation_number_validation.json`, `rotation_number_mn.jsonl`).
+
 ## Artifacts
+- `code/rotation_number_chaos.py` — the thin-layer-sensitive frequency-drift detector: validated on
+  Hénon–Heiles + a strict Kerr/1:3-island control, then the MN q=0.6 resonance-band scan (all regular).
+  Reboot-resilient (cached validation + per-orbit MN checkpoint). `results/rotation_number_chaos.json`.
 - `code/detector_validation.py` — closes the gap: reproduces (read-only, with ansatz's shipped fix) the FD
   false-positive + de-noised λ on a regular MN orbit, and records the genuine-chaos positive controls
   (Hénon–Heiles box-dim 1.34, di-hole λ 2.09). `results/detector_validation.json`.
