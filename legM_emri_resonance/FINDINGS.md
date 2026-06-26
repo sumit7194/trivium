@@ -86,19 +86,31 @@ leading (Newtonian) Carter flux. `code/inspiral_inclined.py` validates it on gen
   drives the inclined orbit toward the equatorial plane — the orbit **de-inclines**, exactly as a
   GW-emitting inspiral must. So the bridge inspiral is no longer restricted to Q=0; with the third flux it
   evolves (E, L, Q) self-consistently.
-- **Now clean on the strong bump too (ansatz `f4cc1b1`).** Our first run found the leading-order flux
-  *degrading* on MN q=0.2 (|dE/dτ| inflated 30–250×, `dQ/dτ` sign-flipping); we relayed the exact failing
-  case, and ansatz fixed **two** bugs — a convergence-plateau cutoff for `dE` (a strongly-perturbed orbit's
-  harmonic sum was not converging) and the **Burke–Thorne radiation-reaction force** for `dQ` (replacing the
-  noise-prone path-derivative estimate). Re-running with the fixed flux: on MN q=0.2 `dE/dτ` is now physical
-  (−7e-5 … −9e-5, matching Kerr's scale) and `dQ/dτ` is **negative and monotone** (−4.5e-3 → −1.0e-2) — the
-  bump's inclined inspiral **de-inclines cleanly**, just like Kerr. The strong-bump degradation is gone.
+- **Clean on the bump too — after TWO upstream fixes.** Our first run found the flux *degrading* on MN q=0.2
+  (|dE/dτ| inflated, `dQ/dτ` sign-flipping). Relaying the exact failing case triggered two ansatz fixes:
+  (i) `f4cc1b1` — a convergence-plateau cutoff for `dE` (a near-resonant orbit's harmonic sum wasn't
+  converging) and the **Burke–Thorne RR force** for `dQ`; and (ii) `3e08fef` — the **asymptotic-flatness
+  metric fix** (see below). Re-running on the corrected metric, MN q=0.2 is now **clean and physical**:
+  `dE/dτ ≈ −6.4e-5` (matching Kerr's −6.3e-5) and `dQ/dτ` negative + monotone (−1.1e-3 → −2.7e-3) — and the
+  orbits sit **right next to Kerr's** (launch p_y 1.35 → 2.08 vs Kerr 1.33 → 2.07), exactly as a *mild* q=0.2
+  bump should. So B1's generic (eccentric-inclined) case is self-consistent **on both Kerr and the deformed
+  metric**: the inclined orbit loses (E, L, Q) and de-inclines in both.
 
-So B1's generic (eccentric-inclined) case is now self-consistent **on both Kerr and the deformed metric** —
-the inclined orbit loses (E, L, Q) and drives toward the equatorial plane in both. (The resonant *kick* — a
-jump in Q as ω_r:ω_θ crosses a low-order rational — is non-adiabatic, beyond any orbit-averaged flux, and
-this leg already found the bump's resonances regular; so the smooth de-inclination is the full adiabatic
-story.) `results/inspiral_inclined.json`.
+**The asymptotic-flatness metric fix (`3e08fef`) — a correctness win the bridge surfaced.** Pushing Ask 2 to
+χ=0.9, q=0.95 forced ansatz to make the shared `manko_novikov` computable at high q — which exposed that it
+was **never asymptotically flat for any q≠0**: `g_xx → 0.085×` the Minkowski value at infinity (a stray
+constant in the γ potential). It hid because the vacuum check is insensitive to a constant in γ (Ricci=0
+survives γ→γ+c) and the q=0≡Kerr anchor has that constant =0. The fix normalizes e^{2γ}→1 at infinity; q=0
+stays byte-identical to Kerr, vacuum preserved, `g_xx(q=0.2)/g_xx(q=0) → 1.0004`. **Impact, handled:** the
+fix is a constant rescaling of g_xx, g_yy, so it **preserves orbit paths exactly** — box-dimensions, Poincaré
+sections, and all leg-J integrability/positive-control results are *invariant* (re-verified: B1-full's
+circular-orbit resonance table and Δω_φ shifts are unchanged to 8 sig figs, since equatorial orbits have no
+radial/polar motion for g_xx/g_yy to touch). Only *proper-time* quantities move for q≠0 — the eccentric-
+inclined flux/frequencies — which is why this section's numbers were re-run on the corrected metric.
+
+(The resonant *kick* — a jump in Q as ω_r:ω_θ crosses a low-order rational — is non-adiabatic, beyond any
+orbit-averaged flux, and this leg already found the bump's resonances regular; so the smooth de-inclination
+is the full adiabatic story.) `results/inspiral_inclined.json`.
 
 ## What it means (honest correction of B1's premise)
 

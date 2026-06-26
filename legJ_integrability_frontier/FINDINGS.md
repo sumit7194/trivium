@@ -301,17 +301,28 @@ three fronts:
   de-noised Lyapunov reads **2.09** on the Majumdar–Papapetrou di-hole (§79, vs ≈0 for Kerr). So leg J's
   "regular box-dim on the bump" is a null on a detector **proven to see chaos when it is present** — the one
   honest gap (detector never tested on chaos) is **closed**.
-- **MN's own bound chaos stays unreachable — and we now know *why*.** ansatz's own low-L MN scan (`q` up to
-  1.2) also tops out at box-dim ~1.16–1.22 (regular), matching our equatorial-launcher result — so it is a
-  **launch-basin limitation, not a detector failure**. The reason (ansatz, from Lukes-Gerakopoulos/Apostolatos/
-  Contopoulos 2010): **MN has *two* permissible regions where Kerr has one, and the chaos lives in the *inner*
-  region near the rod** — both our scan and ansatz's launched in the *outer* region, i.e. the wrong basin the
-  whole time. The documented chaotic orbit is **χ=0.9, q=0.95, E=0.95, L_z=3, inner region**. Reaching it
-  needs a metric numerically *stable near the rod* — the current `manko_novikov` transcription (shared by both
-  repos) overflows there (the `exp(−2β·…)` multipole factors blow up, β≈11 at χ=0.9), so launching the
-  inner-region orbit is **blocked pending a rod-stable MN reimplementation** (logged as a refined sister-ask).
-  This *localizes* the open piece precisely: not "can the detectors see MN chaos?" (they see Hénon–Heiles and
-  the di-hole) but "can the shared metric code reach the inner basin?".
+- **MN's own bound chaos is an *honest null* at this extreme — and chasing it found a metric bug.** Both our
+  equatorial scan and ansatz's low-L scan (q up to 1.2) topped out at box-dim ~1.16–1.22 (regular) — a
+  launch-basin issue, not a detector failure. To reach the documented chaotic orbit (χ=0.9, q=0.95, E=0.95,
+  L_z=3; Lukes-Gerakopoulos/Apostolatos/Contopoulos 2010, which lives in an *inner* region MN has but Kerr
+  doesn't), ansatz made the shared metric computable at high q (§102) — and that **surfaced a correctness
+  bug**: `manko_novikov` was *never asymptotically flat for q≠0* (g_xx → 0.085× Minkowski at infinity), hidden
+  because the vacuum check is blind to a constant in γ and the q=0≡Kerr anchor has it =0. Fixed (`3e08fef`),
+  q=0 byte-identical to Kerr, **orbit paths preserved → every leg-J result here is invariant** (box-dims,
+  sections, KY/SVD proofs, the positive control; only proper-time flux/frequencies move, which only leg M's
+  inspiral uses).
+- **And the chaos at χ=0.9, q=0.95 is *pathology-bound*, not a clean sea (ansatz §102).** With the metric
+  finally computable there, the permissible region splits into **three disconnected wells**: inner [1.24,1.64]
+  is metric-degenerate (signature flip to closed timelike curves by x≈1.7 — MN's known near-rod
+  naked-singularity pathology); a second-region lens [3.04,4.96] is bound but its inner edge abuts that CTC
+  zone (a traced orbit drifts to x≈2.98 and hits it); the outer well [5.58,31] is clean and **regular**
+  (box-dim 0.97–1.03). So at this extreme deformation the chaotic basin is bound up with the singularity
+  pathology — a clean box-dim→2 orbit is not exhibitable there. The geometric chaos MN does have is a
+  *thin layer* near resonances (the literature resolves it via the rotation number, not gross area-filling) —
+  the **same elusiveness leg O hit on Zipoy–Voorhees**. The rigorous statement is untouched: §99 proves no
+  quadratic Carter constant for q≠0 (non-integrable); the *dynamical* chaos is thin and, at q=0.95,
+  pathology-bound. A clean positive control would need *moderate* q (~0.3–0.6, clean metric) + a
+  rotation-number sweep across a low-order resonance (logged) — not the extreme q.
 
 **Net:** leg J's "formally non-integrable, dynamically regular" verdict now rests on (i) the exact symbolic
 KY + SVD proofs, and (ii) the roundoff-immune **box-dimension**, a detector validated on genuine chaos, with
