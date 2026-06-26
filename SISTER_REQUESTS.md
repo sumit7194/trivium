@@ -70,13 +70,20 @@ step 3): the bump lowers ω_φ at each ω_r:ω_θ resonance by −4.8%→−12.6
    bugs fixed (convergence-plateau cutoff for `dE`, Burke–Thorne RR force for `dQ`). Bridge re-ran
    `inspiral_inclined.py`: MN q=0.2 `dE/dτ` now physical, `dQ/dτ` < 0 and monotone — the inclined inspiral
    de-inclines cleanly **in the bump** too (leg M step 4 updated). B1's eccentric-inclined case is unblocked.
-2. **MN chaotic initial data** — params + insight delivered, but **blocked by the metric**: the documented
-   chaotic orbit is **χ=0.9, q=0.95, E=0.95, L_z=3, in MN's *inner* permissible region near the rod** (MN has
-   two regions, Kerr one — both repos' scans searched the *outer* basin). Reaching it needs a **rod-stable MN
-   reimplementation** (the shared `manko_novikov` overflows near the rod, `exp(−2β)`, β≈11 at χ=0.9). ansatz
-   offered to take it on — optional capstone (the detectors are already validated on Hénon–Heiles + di-hole),
-   would give MN's *own* bound chaos as the positive control. Caveat: keep the rod-stable version identical to
-   the current one in the outer region so existing bridge results (B1, positive control) aren't disturbed.
+2. **MN chaotic initial data** — ✅ **RESOLVED (2026-06-26, ansatz §102 `3e08fef`+`3468cc2`)**, with two
+   outcomes bigger than the ask:
+   - **A metric correctness bug, found + fixed.** Making MN computable at χ=0.9, q=0.95 exposed that
+     `manko_novikov` was *never asymptotically flat for q≠0* (g_xx → 0.085× Minkowski at infinity; the vacuum
+     check couldn't see it). Fixed; q=0 byte-identical to Kerr; **orbit paths preserved** → all bridge box-dim/
+     section/positive-control results invariant (B1-full re-verified unchanged; B1-eccentric flux re-run).
+   - **The chaos is an honest null at that extreme.** χ=0.9,q=0.95 splits into three wells — inner
+     CTC-degenerate (near-rod naked singularity), second-region lens abutting it, outer clean+regular. The
+     chaotic basin is **pathology-bound**, not a clean sea; MN's geometric chaos is thin-layer near resonances
+     (same elusiveness as ZV). §99's no-Carter (non-integrable) proof stands.
+   - **Open (optional) path to a *clean* positive control:** moderate q (~0.3–0.6, clean metric) + literature
+     ICs + a **rotation-number sweep** across a low-order resonance to resolve the thin layer (gross box-dim
+     grazes it ≤1.22; the finite-differenced Hamiltonian makes high-res sections compute-prohibitive). Not
+     required — the detectors are already validated on Hénon–Heiles + di-hole.
 
 ## → deepstrain (BlackHole): echo Δt ↔ Abedi — ✅ FULFILLED (2026-06-26): §18 `18_abedi_crosscheck.json` → leg 8 (`abedi_crosscheck.py`); the formula reproduces Abedi 2017 Table I to 98.5–99.7%, the literature anchor.
 

@@ -83,9 +83,13 @@ The three asks relayed to the sister sessions all came back and are now bridged:
 | **Echo Δt ↔ Abedi** (leg 8) | deepstrain §18 `18_abedi_crosscheck.json` | leg 8 (`3ae5fdb`): formula reproduces Abedi 2017 Table I to **98.5–99.7%**, literature anchor |
 | **ZV γ-metric legibility** (A10) | tabula §132 `132_zv_gamma_metric.json` | leg Q (`bc08ec8`): legible⟺KY-integrable now **7/7, φ=1.0**, 2nd independent non-integrable case |
 
-**Two genuinely-new findings from the round-trip:** (a) ansatz *independently reproduced* the bridge's
+**Three genuinely-new findings from the round-trip:** (a) ansatz *independently reproduced* the bridge's
 FD-noise Lyapunov false-positive and shipped the fix — a cross-repo confirmation; (b) both repos *independently*
-confirm MN's bound chaos is unreachable by the equatorial launcher (box-dim tops ~1.2) — a launch-data limit.
+confirm MN's bound chaos is unreachable by the equatorial launcher (box-dim tops ~1.2) — a launch-data limit;
+(c) **the bridge's push to χ=0.9/q=0.95 surfaced a real correctness bug** — the shared `manko_novikov` was
+never asymptotically flat for q≠0 (g_xx → 0.085× Minkowski), now fixed (`3e08fef`), paths preserved so all
+path-based bridge results are invariant (B1-full re-verified; B1-eccentric flux re-run). The bridge's
+"push to the extreme" caught a latent bug the vacuum check couldn't — its value proposition realized a 3rd time.
 
 **Remaining (smaller, refined sister-requests):**
 - **Relativistic Carter flux** — the leading-order Newtonian dQ/dτ degrades on the *strong bump* (inflated
