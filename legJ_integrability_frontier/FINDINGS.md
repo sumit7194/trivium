@@ -395,6 +395,14 @@ finite-difference noise, the rotation number's resonant-island false-positive).
 chaos right down to the thin boundary layer that box-dim misses. The bridge built the tool; ansatz supplied
 the trajectory its own box-dim couldn't classify; the bridge's detector classified it. `results/inner_region_chaos.json`.
 
+**Complementary map (the chaos is inner-only).** Independently, the bridge swept the *outer* 2/3 resonance
+itself (`thin_chaos_resonance.py`, a=0.9, q=0.6, Lz=3.0, x0∈[7.3,8.1] — the slice ansatz located; our
+fixed-step integrator handles the outer region fine): **all 17 orbits regular** (drift ≤0.006), including the
+resonance centre x0=7.70 (drift 0.0000). So the outer 2/3 resonance is a **regular island**, and MN's chaos
+is localized to the **inner boundary layer** — the complete picture matches the literature's CZV structure
+(regular outer region · inner island of stability · thin chaotic boundary layer), and the *same* validated
+frequency-drift detector classifies every part of it. `results/thin_chaos_resonance.json`.
+
 ## Artifacts
 - `code/inner_region_chaos.py` — the closer: applies the validated frequency-drift detector to ansatz's
   adaptive-integrated MN inner-region section series (`mn_inner_sections_for_bridge.json`, read-only) —
