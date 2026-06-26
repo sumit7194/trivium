@@ -25,6 +25,12 @@
    "agree": true
   },
   {
+   "metric": "mn q=0.5",
+   "ky_integrable": false,
+   "legible": false,
+   "agree": true
+  },
+  {
    "metric": "taub-nut",
    "ky_integrable": true,
    "legible": true,
@@ -43,12 +49,12 @@
    "agree": true
   }
  ],
- "n_match": 7,
- "n_joint": 7,
+ "n_match": 8,
+ "n_joint": 8,
  "phi_matthews": 1.0,
  "contingency": {
   "int_and_legible": 5,
-  "non_and_nonlegible": 2,
+  "non_and_nonlegible": 3,
   "false_legible": 0,
   "missed": 0
  },

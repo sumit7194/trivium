@@ -11,10 +11,11 @@ tests the equivalence across the catalog. Both source artifacts are consumed REA
 Across the catalog, **a learned geometry is legible iff the metric admits a Killing tensor** — tabula's
 neural legibility instrument EMITS the verified hidden invariant (Carter constant) for exactly the metrics
 that leg O's symbolic Killing–Yano survey finds integrable, and CERTIFIES "no invariant" for exactly the
-ones it finds non-integrable. **7/7 metrics agree on the joint set; Matthews φ = 1.0** (perfect
-separation), with **two independent non-integrable cases**. Two deliberately-independent repos — a *neural*
-probe on observed geodesics (tabula) and a *symbolic* KY algebra on the exact metric (leg O) — reach the
-identical integrability verdict metric by metric. A10 is un-retired in its well-posed form, and **confirmed**.
+ones it finds non-integrable. **8/8 metrics agree on the joint set; Matthews φ = 1.0** (perfect
+separation), with **three independent non-integrable deformation classes** (axisymmetric bump · static
+γ-metric · rotating quadrupole). Two deliberately-independent repos — a *neural* probe on observed geodesics
+(tabula) and a *symbolic* KY algebra on the exact metric (leg O / ansatz §99) — reach the identical
+integrability verdict metric by metric. A10 is un-retired in its well-posed form, and **confirmed**.
 
 ## The join (tabula `legible` vs leg O `KY-integrable`)
 
@@ -27,8 +28,9 @@ identical integrability verdict metric by metric. A10 is un-retired in its well-
 | bumpy (quadrupole) | **no** | **no** | ✅ |
 | **Zipoy–Voorhees δ=1** (Schwarzschild) | yes | yes | ✅ |
 | **Zipoy–Voorhees δ=2** (γ-metric) | **no** | **no** | ✅ |
+| **Manko–Novikov q=0.5** (rotating quadrupole) | **no** (§99) | **no** | ✅ |
 
-Contingency on the joint set: integrable&legible = 5, non-integrable&non-legible = 2, false-legible = 0,
+Contingency on the joint set: integrable&legible = 5, non-integrable&non-legible = 3, false-legible = 0,
 missed = 0 → **φ (Matthews) = 1.0**. tabula reports ~26 orders of magnitude separating "emit" (engine
 held-out variance ~1e-28 on the integrable metrics) from "certify" (~1e-2 on the bumpy ones) — the
 legibility split is not marginal, it is categorical.
@@ -44,15 +46,26 @@ the legible ⟺ integrable equivalence now holds on a **second, independent non-
 (prolate x,y vs Boyer–Lindquist r,u) — verified by both the neural (tabula §132) and symbolic (leg O
 `survey_zv`) routes. The §9 claim is no longer resting on a single bump.
 
+**Update (2026-06-27) — Manko–Novikov: a THIRD independent non-integrable class.** tabula ran §144 on the
+**Manko–Novikov** metric (the rotating bumpy-Kerr we chaos-hunted in legs J/M — a Geroch–Hansen *rotating
+quadrupole*, distinct from the axisymmetric bump and the static γ-metric). It **EMITS the exact Kerr Carter
+constant at q=0** (`Q = (1−y²)p_y² + a²(1−E²)y² + L²y²/(1−y²)`, held-out 3.4e-17, cosine 1.000) and
+**CERTIFIES none at q=0.5** (held-out 0.60 = **2×10¹⁶×** the Kerr floor) — exactly ansatz §99's
+no-quadratic-Carter result. Crucially, tabula built MN **independently from Gair–Li–Mandel (arXiv:0708.0628),
+not from ansatz's code**, so the agreement with §99 is an *independent cross-check*, not a shared-code
+artifact. With MN q=0.5 the correlation is **8/8, φ=1.0, across three independent non-integrable deformation
+classes** — a far harder thing to be coincidence than a single bump. (MN q=0 ≡ Kerr served as tabula's
+machinery control, cosine 1.000.)
+
 **Single-repo metrics (consistency check, same rule):**
 - *leg O only* — **Schwarzschild**: KY-integrable = yes (tabula did not run a legibility datum for it; the
   KY survey's gate metric).
 - *tabula only* — **bumpy-strong**: legible = no, tabula-integrable = no → **consistent** with
   legible ⟺ integrable on tabula's own labels.
 
-So a *union* view spans 9 metrics, every one consistent with the equivalence; **7 are directly
-cross-validated** across both repos (Kerr, KN, KdS, Taub–NUT, bumpy, ZV δ=1, ZV δ=2), with two of them
-(bumpy, ZV δ=2) *independent* non-integrable cases.
+So a *union* view spans 10 metrics, every one consistent with the equivalence; **8 are directly
+cross-validated** across both repos (Kerr, KN, KdS, Taub–NUT, bumpy, ZV δ=1, ZV δ=2, MN q=0.5), of which
+**three** (bumpy, ZV δ=2, MN q=0.5) are *independent* non-integrable cases spanning three deformation classes.
 
 ## What this establishes (and what it does not)
 
@@ -86,8 +99,10 @@ cross-validated** across both repos (Kerr, KN, KdS, Taub–NUT, bumpy, ZV δ=1, 
 
 - tabula §127 — `/Users/sumit/Github/SpaceTime/curvature/results/127_integrability_legibility.json`
   (`legible` per metric) + `notes/A10_for_bridge.md`.
-- tabula §132 — `/Users/sumit/Github/SpaceTime/curvature/results/132_zv_gamma_metric.json` (ZV γ-metric
-  legibility on real geodesics; δ=1 emits C, δ=2 certifies none).
-- leg O — `legO_catalog_survey/results/survey_catalog.json` + `survey_zv.json` (`ky_dim` per metric, incl. ZV).
+- tabula §132 — `132_zv_gamma_metric.json` (ZV γ-metric legibility; δ=1 emits C, δ=2 certifies none).
+- tabula §144 — `144_manko_novikov.json` (MN legibility, built independently from Gair–Li–Mandel; q=0 emits
+  the Kerr Carter, q=0.5 certifies none). + `notes/A10_for_bridge.md` (MN section).
+- leg O — `legO_catalog_survey/results/survey_catalog.json` + `survey_zv.json` (`ky_dim` per metric, incl. ZV);
+  MN q≠0 non-integrability from ansatz §99 (no quadratic Carter).
 - `code/geometrizes_integrability.py` — normalizes metric names across the repos, joins the columns (incl.
-  the ZV extension), builds the 2×2 contingency, reports φ. `results/geometrizes_integrability.json`.
+  the ZV + MN extensions), builds the 2×2 contingency, reports φ. `results/geometrizes_integrability.json`.

@@ -24,6 +24,8 @@ LEGO = Path(__file__).resolve().parents[2] / "legO_catalog_survey/results/survey
 # ZV γ-metric extension (2026-06-26): tabula §132 legibility + leg O survey_zv KY-integrability
 ZV_TABULA = Path("/Users/sumit/Github/SpaceTime/curvature/results/132_zv_gamma_metric.json")
 ZV_LEGO = Path(__file__).resolve().parents[2] / "legO_catalog_survey/results/survey_zv.json"
+# Manko–Novikov extension (2026-06-27): tabula §144 legibility; integrability from ansatz §99 (no quad. Carter)
+MN_TABULA = Path("/Users/sumit/Github/SpaceTime/curvature/results/144_manko_novikov.json")
 OUT = Path(__file__).resolve().parent.parent / "results"
 
 
@@ -58,6 +60,17 @@ def main():
             kk = "zv δ=1" if "δ=1" in k else ("zv δ=2" if "δ=2" in k else None)
             if kk:
                 lego_int[kk] = (dim >= 1)
+    except (FileNotFoundError, KeyError):
+        pass
+
+    # --- Manko–Novikov extension: an 8th metric, a 3rd independent non-integrable class (rotating quadrupole) ---
+    # legibility from tabula §144 (built independently from Gair-Li-Mandel, not ansatz code); integrability of the
+    # q≠0 rotating quadrupole from ansatz §99's symbolic no-quadratic-Carter proof. (MN q=0 ≡ Kerr, the control.)
+    try:
+        mt = json.loads(MN_TABULA.read_text())
+        tab_leg["mn q=0.5"] = bool(mt["mn_q_moderate"]["legible"])
+        tab_int["mn q=0.5"] = False
+        lego_int["mn q=0.5"] = False                                  # ansatz §99: no quadratic Carter for q≠0
     except (FileNotFoundError, KeyError):
         pass
 
