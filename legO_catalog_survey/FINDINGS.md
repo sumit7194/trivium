@@ -56,6 +56,16 @@ the exact-rational linear algebra carries over; δ=2 is the clean deformed case.
   about one specific bump. (This also predicts, via leg Q's legible ⟺ KY-integrable, that a learned ZV-δ=2
   geometry would be *non-legible* — a clean future tabula cross-check.)
 
+**Update (2026-06-26/07-02) — both halves of the prediction landed.** (i) tabula ran the legibility probe on
+real ZV geodesics (§132): δ=1 emits the separation constant exactly, **δ=2 is non-legible** — the predicted
+cross-check, confirmed (leg Q, now 8/8). (ii) ansatz **exhibited ZV δ=2's actual chaos** (§106, using the
+frequency-drift detector the bridge built for leg J): the razor-thin stochastic layer at the plunge
+separatrix — layer x0=7.545 (drift 0.0266, escapes after 210 crossings) vs the eternal island chain at
+~1e-4, a 267× split 0.012 apart in x0, both chaos signatures (frequency wander + finite lifetime). So this
+row's "NO hidden symmetry" is now backed at **all three levels: symbolic** (this survey: no KY tensor),
+**neural** (tabula: non-legible), and **dynamical** (ansatz: chaos exhibited) — the strongest-validated
+non-integrable entry in the catalog.
+
 ## What it buys
 
 One symbolic search now **classifies any catalog metric** as KY-integrable or not — turning leg J's

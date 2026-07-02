@@ -403,6 +403,35 @@ is localized to the **inner boundary layer** — the complete picture matches th
 (regular outer region · inner island of stability · thin chaotic boundary layer), and the *same* validated
 frequency-drift detector classifies every part of it. `results/thin_chaos_resonance.json`.
 
+## Update (2026-07-02) — the detector flows UPSTREAM: ansatz adopts it natively (§105) and closes ZV with it (§106)
+
+The 4th cross-repo win, and a new kind — not a bug the bridge caught, but an **instrument the bridge built
+propagating into a source repo**:
+
+- **§105 (ansatz): the frequency-drift detector, natively reimplemented + gated.** ansatz implemented
+  `poincare.frequency_drift` from the method description (windowed-FFT peak, parabolic sub-bin refinement,
+  first-vs-second-half |Δf|/f) and gated it as battery #89 (all 89 green): Hénon–Heiles regular 0.0000 vs
+  chaotic 1.38; Kerr bound geodesic 0.0000; MN inner-CZV **orbit_A 0.0000 / orbit_B 0.9798** — *"native
+  detector reproduces the bridge's verdict to the digit."* Two independent implementations (bridge NumPy,
+  ansatz native no-numpy), same verdicts on the same data — the detector itself is now cross-validated the
+  way the bridge's results are. It joins box-dimension (§84) and the de-noised Lyapunov (§79/§101) as
+  ansatz's third chaos lens, "the one that succeeds exactly where they're ambiguous."
+- **§106 (ansatz): ZV δ=2's razor-thin stochastic layer, exhibited.** Applying the §105 playbook to
+  Zipoy–Voorhees (the layer §97/§98's box-dim scans grazed; Lukes-Gerakopoulos PRD 86 044013), a 0.002-step
+  refine at the plunge separatrix found the **full anatomy**: *plunge* | **layer x0=7.545** (drift 0.0266,
+  210 crossings then **escapes**) | *island chain* 7.549–7.563 (drift ~1e-4, eternal) | **layer x0=7.565**
+  (drift 0.0132, escapes) | *tori* 7.60+. Two independent layer hits bracketing the island chain — a **267×
+  drift ratio 0.012 apart in x0** — each with *both* chaos signatures (progressive frequency wander
+  0.005→0.025→0.070 AND finite lifetime; KAM tori are eternal), at H-drift 5e-12. Honest notes carried over:
+  transient/sticky layer chaos (drift magnitude h-sensitive, both signatures persist at h and h/2); layer at
+  ρ≈7.48–7.50 vs the literature's 7.518 (~0.5% convention nuance).
+
+**Net:** the detector is **3-for-3 on thin layers** (MN inner-CZV split, MN island-vs-layer, ZV separatrix
+layer), and *both* exact bumpy-BH metrics in ansatz's engine (MN rotating, ZV static) now have their
+algebraic non-integrability backed by an exhibited dynamical positive control. For the bridge's ledger this
+also upgrades **leg O/leg Q's ZV row**: "certify = no exact invariant" now has the matching *dynamical*
+chaos exhibit on the same spacetime (see leg O FINDINGS).
+
 ## Artifacts
 - `code/inner_region_chaos.py` — the closer: applies the validated frequency-drift detector to ansatz's
   adaptive-integrated MN inner-region section series (`mn_inner_sections_for_bridge.json`, read-only) —
