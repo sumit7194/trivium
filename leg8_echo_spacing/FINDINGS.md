@@ -89,3 +89,24 @@ better than 2% with nothing tuned. This is **directly parallel to Move B** pinni
 Leaver: a first-principles bridge calculation matched against the field's reference. The Δt(λ) mapping that
 the §4 exclusion curve rests on therefore carries a literature-validated normalization.
 `results/abedi_crosscheck.json`.
+
+## 6. Update (2026-07-02) — the anchor loop closed observationally: searched at the predicted Δt, all null
+
+§5 anchored the echo-delay formula to the literature (<2% vs Abedi Table I, nothing tuned). deepstrain E3
+(§19) now supplies the observational close (`code/abedi_search_nulls.py`, read-only): at each event's
+**formula-predicted** Δt, two independent statistics — a per-event ML scorer (trained on the event's own
+off-source data) and the comb — evaluated against large independent ±hour backgrounds:
+
+| event | Δt_pred (s) | ML p | comb p |
+|---|---|---|---|
+| GW150914 | 0.2925 | 0.995 | 0.967 |
+| GW151012 | 0.1778 | 0.130 | 0.233 |
+| GW151226 | 0.1013 | 0.404 | 0.850 |
+| GW250114 | 0.2952 | 0.617 | 0.331 |
+
+**Clean nulls everywhere** (min p = 0.13; an early own-block GW151012 ML p=0.033 washed out to 0.130 on the
+larger independent background — a small-sample artifact, per deepstrain's own note). So the full chain now
+stands: exact first-principles Δt (DS-wormhole + Kerr-tortoise, literature-anchored §5) → searched at
+exactly that Δt on 4 real events (incl. GW250114 at the formula's own 0.295 s prediction) → **no echo**.
+The §4 amplitude exclusion rests on a per-event, two-statistic null, not just the comb.
+`results/abedi_search_nulls.json`.
