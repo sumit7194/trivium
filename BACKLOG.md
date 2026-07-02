@@ -91,8 +91,31 @@ never asymptotically flat for q≠0 (g_xx → 0.085× Minkowski), now fixed (`3e
 path-based bridge results are invariant (B1-full re-verified; B1-eccentric flux re-run). The bridge's
 "push to the extreme" caught a latent bug the vacuum check couldn't — its value proposition realized a 3rd time.
 
-**Remaining (smaller, refined sister-requests):**
-- **Relativistic Carter flux** — the leading-order Newtonian dQ/dτ degrades on the *strong bump* (inflated
-  |dE|, sign-flip); a reliable *inclined* inspiral in the bump needs the `a²(1−E²)cos²` term (ansatz).
-- **MN chaotic initial data** — feeding literature (Lukes-Gerakopoulos 2010) exact (E, L_z, pericenter) to
-  `mn_bound_orbit` would let both validated detectors run on MN's own bound chaos (ansatz).
+**Remaining — both since RESOLVED (stale as of 2026-07-02, kept for the record):**
+- ~~Relativistic Carter flux~~ — **DONE** (ansatz `f4cc1b1` + the `3e08fef` metric fix): the inclined
+  inspiral de-inclines cleanly on Kerr AND the bump (leg M step 4).
+- ~~MN chaotic initial data~~ — **DONE and exceeded** (ansatz §102–§104 + bridge frequency-drift): MN's own
+  thin-layer chaos exhibited (leg J 2026-06-26d); detector upstreamed (§105) and 3-for-3 incl. ZV (§106).
+The only parked frontier: the deep chaotic sea at x<1.5 (needs higher-precision integration, both repos).
+
+## Phase 5 (2026-07-02) — round-4 sister sweep integrated
+
+Sisters kept working; the bridge integrated the day's output (recon → 4 legs):
+
+| item | leg | result |
+|---|---|---|
+| **detector flows upstream** | leg J + leg O | ansatz §105 natively reimplemented the bridge's frequency-drift detector (reproduces MN orbit_A 0.0000 / orbit_B 0.980 to the digit) and §106 exhibited **ZV δ=2's** own thin-layer chaos — closing §97/§98's caveat. leg O's ZV row now backed at all 3 levels (symbolic + neural + dynamical). The **4th cross-repo win**, and the first *instrument* (not bug) to propagate. (`837d4fc`) |
+| **Move B v3** | leg B | deepstrain R2v2's field-standard `ringdown` package independently detects the GW250114 overtone; three pipelines (exact-Leaver / NPE / Isi–Farr) agree on **M to 0.00 M⊙**; a spin systematic honestly surfaced (`6ab92cd`) |
+| **Abedi loop closed** | leg 8 | deepstrain E3 searched the formula-predicted Δt on 4 events (incl. GW250114) — all clean nulls (`beb3a0b`) |
+| **frontier cross-validation** | **leg R (new)** | tabula's regime detector, blind on GR ensembles: Kerr + MN q=0.5 both EMIT-regular; the **integrable≠regular dissociation** (regime-regular vs legibility-illegible on MN q=0.5, the EXP-7 dissociation on a GR metric) matches the bridge's dual ground truth. C3 di-hole = diagnosed scope boundary (scattering chaos escapes the 0-1 test) (`70d5e2f`) |
+
+**A recurring theme, now explicit (walls are instrument-relative, not absolute).** tabula's frontier
+(EXP-12: sample complexity `N_resolve ~ 1/δ²` diverges at a verdict wall) is the *theory*; the bridge keeps
+hitting *GR instances* of the same law — δ is information-limited given SNR (leg 2/7); MN thin chaos is below
+box-dimension's resolution but above the frequency-drift detector's (leg J); di-hole chaos is unreachable by
+a trajectory 0-1 test but reachable by a section frequency-drift (leg R). No discovery limit here is
+absolute; each is a statement about a *specific instrument at a specific sampling*. The bridge's three chaos
+lenses (box-dim, de-noised Lyapunov, frequency-drift) and tabula's (0-1 test) tile complementary regions —
+which is exactly why the multi-instrument, multi-repo cross-validation is worth doing.
+
+**Open (unchanged):** the deep chaotic sea at x<1.5 (higher-precision integration, both repos).

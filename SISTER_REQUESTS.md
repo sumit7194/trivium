@@ -6,6 +6,24 @@ item that is currently PARTIAL or PARKED. Compiled 2026-06-24.*
 
 ---
 
+## Round-4 status (2026-07-02) — no open asks; sisters self-directed and integrated
+
+All prior asks are fulfilled. This round the sisters worked autonomously and the bridge integrated their
+output read-only (no new requests were needed):
+- **ansatz §105/§106** — natively reimplemented the bridge's frequency-drift detector (reproduces MN
+  orbit_A/orbit_B to the digit) and exhibited **ZV δ=2's** own thin-layer chaos → legs J + O (`837d4fc`).
+  The bridge's instrument propagated *upstream* — the first tool (not bug) to flow into a source repo.
+- **deepstrain R2v2 + E3** — field-standard `ringdown` package re-detects the GW250114 overtone (three
+  pipelines agree on M to 0.00 M⊙) → Move B v3 (`6ab92cd`); echo search at the Abedi-predicted Δt, all
+  null → leg 8 (`beb3a0b`).
+- **tabula EXP-1..12 frontier** — the "representability frontier" (5 verdicts, 3 axes). The bridge
+  cross-validated its **regime detector** against exact-GR ground truth → **leg R** (`70d5e2f`): the
+  integrable≠regular dissociation on Manko–Novikov, matching bridge ground truth.
+
+**One standing item (either repo, no rush):** the MN **deep chaotic sea** at x<1.5 — beyond trustworthy
+integration on both sides; needs a higher-precision (symplectic / extended-precision) integrator before the
+frequency-drift detector can be pointed at it. Parked, not requested.
+
 ## → deepstrain (BlackHole): A1 (amortization → transfer) — ✅ FULFILLED (2026-06-24): §19 artifact delivered; bridge verdict in leg L (amortization does NOT predict transfer, corr≈0). Decisive follow-up (more variants/injections, C2ST) optional.
 
 <details><summary>original ask</summary>
