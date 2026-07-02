@@ -1,0 +1,38 @@
+{
+ "C1": {
+  "n_orbits": 20,
+  "steps": 1501,
+  "dtype": "trajectories",
+  "verdict": "EMIT-regular",
+  "info": {
+   "frac_regular": 1.0,
+   "frac_chaotic_strict": 0.0,
+   "fraction_chaotic": 0.0,
+   "n": 20.0
+  }
+ },
+ "C2": {
+  "n_orbits": 20,
+  "steps": 1501,
+  "dtype": "trajectories",
+  "verdict": "EMIT-regular",
+  "info": {
+   "frac_regular": 1.0,
+   "frac_chaotic_strict": 0.0,
+   "fraction_chaotic": 0.0,
+   "n": 20.0
+  }
+ },
+ "C3": {
+  "n_orbits": 20,
+  "steps": 1501,
+  "dtype": "trajectories",
+  "verdict": "EMIT-regular",
+  "info": {
+   "frac_regular": 1.0,
+   "frac_chaotic_strict": 0.0,
+   "fraction_chaotic": 0.0,
+   "n": 20.0
+  }
+ }
+}

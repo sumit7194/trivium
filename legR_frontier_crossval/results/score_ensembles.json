@@ -1,0 +1,34 @@
+{
+ "rows": [
+  {
+   "class": "C1",
+   "expected": "EMIT-regular",
+   "verdict": "EMIT-regular",
+   "fraction_chaotic": 0.0,
+   "correct": true,
+   "desc": "Kerr (integrable, regular)"
+  },
+  {
+   "class": "C2",
+   "expected": "EMIT-regular",
+   "verdict": "EMIT-regular",
+   "fraction_chaotic": 0.0,
+   "correct": true,
+   "desc": "MN q=0.5 outer \u2014 NON-integrable (\u00a7144 illegible, leg O no-KY) yet KAM-regular (leg J)"
+  },
+  {
+   "class": "C3",
+   "expected": "CERTIFY-CHAOS",
+   "verdict": "EMIT-regular",
+   "fraction_chaotic": 0.0,
+   "correct": false,
+   "desc": "di-hole (chaotic, \u03bb=2.09 \u00a779)"
+  }
+ ],
+ "Q1_pass": false,
+ "dissociation": true,
+ "wrong_confident": [
+  "C3"
+ ],
+ "verdict": "Partial \u2014 see rows; C2 verdict EMIT-regular, wrong=['C3']."
+}

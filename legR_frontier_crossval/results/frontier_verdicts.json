@@ -1,0 +1,45 @@
+{
+ "S1": {
+  "n": 810,
+  "dtype": "unknown",
+  "verdict": "UNKNOWN",
+  "info": {},
+  "K_raw": 0.595786613368309
+ },
+ "S2": {
+  "n": 810,
+  "dtype": "unknown",
+  "verdict": "UNKNOWN",
+  "info": {},
+  "K_raw": 0.4310747946403636
+ },
+ "S3": {
+  "n": 810,
+  "dtype": "unknown",
+  "verdict": "UNKNOWN",
+  "info": {},
+  "K_raw": 0.7702343236126407
+ },
+ "S4": {
+  "n": 810,
+  "dtype": "unknown",
+  "verdict": "UNKNOWN",
+  "info": {},
+  "K_raw": 0.8631977456054517
+ },
+ "S5": {
+  "n": 800,
+  "dtype": "unknown",
+  "verdict": "UNKNOWN",
+  "info": {},
+  "K_raw": 0.029138141300969
+ },
+ "S6": {
+  "n": 126,
+  "dtype": "unknown",
+  "verdict": "UNKNOWN",
+  "info": {},
+  "K_raw": -0.6167691875207723,
+  "subfloor_note": "n=126 < tabula's validated floor N_MIN_TRAJ=800; K_raw is information-only (pre-registered P3)"
+ }
+}

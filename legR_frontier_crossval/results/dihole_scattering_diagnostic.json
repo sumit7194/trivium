@@ -1,0 +1,21 @@
+{
+ "system": "Majumdar-Papapetrou di-hole (ansatz \u00a779)",
+ "finding": "scattering chaos: bounded orbits are regular, chaotic orbits ESCAPE (|X|->1e11-1e16)",
+ "evidence": {
+  "chaotic_ICs_lyapunov": [
+   1.253,
+   0.148,
+   0.275,
+   1.528
+  ],
+  "chaotic_ICs_X_escape_to": [
+   "~1e11",
+   "~1e11",
+   "~1e11",
+   "~1e16"
+  ],
+  "bounded_ICs_found": 8,
+  "bounded_ICs_chaotic_by_0-1-test": 0
+ },
+ "implication": "the 0-1 test needs a BOUNDED stationary observable; the raw escaping X-coordinate of di-hole scattering chaos is not one, so the detector reads EMIT-regular for the observable it is given. A representation boundary, not a bounded-chaos miss (tabula validated the test on Lorenz, a bounded attractor)."
+}
