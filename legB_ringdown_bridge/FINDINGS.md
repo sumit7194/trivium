@@ -121,7 +121,32 @@ So Move B's headline — the exact-Leaver δ is Kerr-consistent — is **robust 
 systematic**, and the bridge's exact δ tracks deepstrain's learned δ as the fit window is moved.
 `results/starttime_robustness.json`.
 
+## Update (2026-07-02) — Move B v3: the field-standard package joins, and three pipelines converge on one remnant
+
+deepstrain R2v2 (§21) re-measured GW250114 with the **field-standard `ringdown` package** (Isi/Farr
+frequency-domain coherent pipeline, Kerr-templated, NUTS; R̂ ≤ 1.004) — giving Move B a third, fully
+independent route. `code/package_crosscheck.py` crosses it with ansatz's exact Leaver:
+
+- **Spectrum check (two QNM codes):** at the package's own median (M=74.8, χ=0.729), ansatz's exact-Leaver
+  220/221 frequencies reproduce the package's implied spectrum to **0.12% / 0.15%** — the Leaver
+  continued-fraction and the package's internal Kerr spectrum are interchangeable.
+- **Three-pipeline remnant:** bridge exact-Leaver ← raw two-tone fit (v2): **(74.8, 0.815)** · deepstrain
+  NPE: **(76.3, 0.766)** · package n2: **(74.8 [70.4–79.0], 0.729 [0.644–0.795])**. The **mass agrees to
+  0.00 M⊙** between the exact-Leaver inversion and the field-standard package — three methodologically
+  disjoint routes (algebraic inversion / learned SBI / FD Bayesian), one remnant mass.
+- **Honest tension (spin):** v2's χ=0.815 sits *just above* the package's 90% [0.644, 0.795] — traceable to
+  the raw two-tone fit's f220 (257.8 Hz) vs the package's (236.3 Hz): a time-domain damped-sinusoid fit and
+  an FD coherent Kerr-templated fit split the same two-mode signal differently between f220 and χ at fixed
+  M. A real cross-pipeline systematic that the triangulation *surfaced* — logged, not smoothed over.
+- **The overtone is decisive, and Kerr wins again:** A221/A220 = 1.017 with **P(A221 < 10%·A220) = 0.000**
+  — the 221 is *required* by the data in the field-standard pipeline; and the n1→n2 mass shift
+  (84.6 → 74.8 M⊙) is the classic unmodeled-overtone bias, resolved by adding the 221. A Kerr-templated
+  two-mode fit succeeding decisively corroborates v2's independent δ = −0.159 (Kerr-consistent) from the
+  outside. `results/package_crosscheck.json`.
+
 ## Artifacts
+- `code/package_crosscheck.py` — Move B v3: exact-Leaver vs the `ringdown` package (spectrum check,
+  three-pipeline remnant, overtone reality). `results/package_crosscheck.json`.
 - `code/starttime_robustness.py` — reads deepstrain §16's δ-vs-start-time + leg B's exact-Leaver δ; the
   start-time robustness + systematic-vs-statistical analysis. `results/starttime_robustness.json`.
 - `code/eikonal_kerr_qnm.py` — ansatz side: eikonal Kerr QNM from the exact metric, Schwarzschild-gated.
