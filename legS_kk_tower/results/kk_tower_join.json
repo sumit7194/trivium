@@ -1,0 +1,58 @@
+{
+ "theorem_anchor": "ansatz \u00a7111 (5D vacuum \u21d4 4D EMD, proven; trap caught)",
+ "rows": [
+  {
+   "n": 1,
+   "quantum_rest": 1.0022,
+   "tabula_fdtd_rest": 1.0066143265615055,
+   "tabula_learned_mass": 1.0077579016193274,
+   "err_quantum": 0.0021999999999999797,
+   "err_fdtd": 0.0066143265615055125,
+   "err_learned": 0.007757901619327434
+  },
+  {
+   "n": 2,
+   "quantum_rest": 2.0031,
+   "tabula_fdtd_rest": 2.0026779088832627,
+   "tabula_learned_mass": 1.9920019437519372,
+   "err_quantum": 0.0015499999999999403,
+   "err_fdtd": 0.001338954441631346,
+   "err_learned": 0.003999028124031412
+  },
+  {
+   "n": 3,
+   "quantum_rest": 3.0027,
+   "tabula_fdtd_rest": 2.99891753790532,
+   "tabula_learned_mass": 2.956663502369627,
+   "err_quantum": 0.0008999999999999749,
+   "err_fdtd": 0.0003608206982267011,
+   "err_learned": 0.014445499210124316
+  }
+ ],
+ "n0_learned_mass": 0.05504029409278609,
+ "max_err": {
+  "quantum": 0.0021999999999999797,
+  "tabula_fdtd": 0.0066143265615055125,
+  "learned": 0.014445499210124316,
+  "cross_implementation": 0.004414326561505533
+ },
+ "group_velocities_quantum_vs_KG": {
+  "1": {
+   "measured": 0.999,
+   "exact": 1.0
+  },
+  "2": {
+   "measured": 0.703,
+   "exact": 0.707
+  },
+  "3": {
+   "measured": 0.445,
+   "exact": 0.447
+  }
+ },
+ "learned_quality": {
+  "isotonic_R2": 0.9999634401511962,
+  "decode_acc": 1.0
+ },
+ "gate_pass": true
+}
