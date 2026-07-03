@@ -6,6 +6,14 @@ item that is currently PARTIAL or PARKED. Compiled 2026-06-24.*
 
 ---
 
+## Round-5 status (2026-07-03) — the QUANTUM project joins as the 4th sister
+
+`/Users/sumit/Github/quantum` (local-only, QM-foundations lab) is now formally in the family: it already
+runs the sister-ask pattern itself (3 asks → ansatz §111–§113 KK proofs + trap; tabula §157 KK-mass
+discovery), and the bridge's **leg S** joined its flagship claim (m_n = n/R) across all four repos, gated.
+No open asks this round — the sisters' autonomous output (deepstrain §22/§23 referee + follow-up A; ansatz
+§110; tabula EXP-15/§157) was consumed read-only into legs B/S/8/T. Parked frontier unchanged (MN deep sea).
+
 ## Round-4 status (2026-07-02) — no open asks; sisters self-directed and integrated
 
 All prior asks are fulfilled. This round the sisters worked autonomously and the bridge integrated their

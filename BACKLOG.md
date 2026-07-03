@@ -119,3 +119,16 @@ lenses (box-dim, de-noised Lyapunov, frequency-drift) and tabula's (0-1 test) ti
 which is exactly why the multi-instrument, multi-repo cross-validation is worth doing.
 
 **Open (unchanged):** the deep chaotic sea at x<1.5 (higher-precision integration, both repos).
+
+## Phase 6 (2026-07-03) — round-5: the family grows to four
+
+| item | leg | result |
+|---|---|---|
+| **v3 spin tension resolved** | leg B | deepstrain's §22/§23 start-time referee: the raw-fit/package/NPE differences are ONE measured 9-point systematic family (M 74.7→65.9); NPE sits at the peak; overtone decisive at every start. Surfaced by v3, explained by the referee (`0ff1ffa`) |
+| **KK tower, 4 repos** | **leg S (new)** | m_n = n/R by four disjoint routes: ansatz-proven reduction (§111, trap caught) · quantum direct numerics (0.22%) · tabula independent FDTD (0.66%; cross-impl 0.44%) · tabula neural discovery from projections (1.44%, R²=0.99996). Gate PASS — the first FOUR-repo cross-validation; **quantum welcomed as the 4th sister** (`d84e74a`) |
+| **GW250114 mimicker status** | leg 8 §7 | ansatz §110's two-light-ring taxonomy × the bridge stack: prompt ringdown = one-ring Kerr physics (3 pipelines), echoes null at the Planck Δt, R_eff≲0.2 — every tested observable reads "one ring"; scoped as consistency, not horizon proof (`69c7977`) |
+| **Mercury anomaly accounting** | **leg T (new)** | pre-registered Le Verrier decomposition: tabula's real-data 120-yr total (568.4″/cy) − Clemence Newtonian (532.3) = 36.1 vs exact GR 43.0 (computed with tabula's own measured GM☉) — closes within ~1σ of the 6.6″/cy instrument floor. Consistency, not detection (`4e9c643`) |
+| **learned ≈ classical at the wall** | note | deepstrain follow-up A: a CNN forward pass TIES a realizable 1,619-template matched-filter bank (0.472 vs 0.489, identical injections; both far under the true-template oracle 0.72) → the operative wall is TEMPLATE-BANK MISMATCH, not learned-vs-classical — another entry in the walls-are-instrument-relative ledger (Phase 5), and their co-injection protocol shrank an apparent 10% MF win to a 3% tie (their own north-star catch) |
+
+**Family status:** four sisters (ansatz · tabula · deepstrain · quantum), two new legs (S, T), 20 legs + 8
+moves total. Open frontier unchanged: MN deep sea x<1.5 (higher-precision integrator, parked).
