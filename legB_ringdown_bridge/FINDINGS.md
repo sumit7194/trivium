@@ -144,7 +144,24 @@ independent route. `code/package_crosscheck.py` crosses it with ansatz's exact L
   two-mode fit succeeding decisively corroborates v2's independent δ = −0.159 (Kerr-consistent) from the
   outside. `results/package_crosscheck.json`.
 
+## Update (2026-07-03) — the v3 spin tension RESOLVED: one start-time knob, three pipelines, closed picture
+
+v3 logged an honest tension (χ=0.815 from the raw-fit inversion vs the package's 90% [0.644, 0.795]).
+deepstrain's follow-up B answers it (§22 start-time sweep + §23 NPE-package loop; `code/starttime_resolution.py`,
+read-only): the package's remnant is a **start-time family** — across 9 offsets (0–5.4 ms, all R̂<1.005)
+M drifts **74.7 → 65.9 M⊙** and χ by −0.074 as early-time merger content is excluded; the **NPE sits at the
+peak** of that family (inheriting the +7.9 M⊙ early-time bias, its CI nesting the package's); and the raw
+two-tone fit's f220=257.8 Hz vs the package's 236.3 Hz are **positions on the same measured curve** —
+different effective start/weighting, not method disagreement. The v3 mass agreement (Δ=0.00 M⊙ at peak)
+stands; the χ offset was the same knob's imprint. Crucially the **overtone stays real at every start**
+(P(A221≈0)=0.000 at peak; A221/A220 decays 1.01→0.52 as the start moves late — the physical τ221≈1.4 ms
+behaviour). The tension we refused to smooth over in v3 is now a quantified systematic — the triangulation
+did its job twice: first surfacing it, then (via deepstrain's referee) explaining it.
+`results/starttime_resolution.json`.
+
 ## Artifacts
+- `code/starttime_resolution.py` — the v3-tension resolution (deepstrain §22/§23 read-only): the start-time
+  family, NPE's position in it, the closed three-pipeline picture. `results/starttime_resolution.json`.
 - `code/package_crosscheck.py` — Move B v3: exact-Leaver vs the `ringdown` package (spectrum check,
   three-pipeline remnant, overtone reality). `results/package_crosscheck.json`.
 - `code/starttime_robustness.py` — reads deepstrain §16's δ-vs-start-time + leg B's exact-Leaver δ; the

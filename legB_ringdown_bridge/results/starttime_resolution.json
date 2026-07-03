@@ -1,0 +1,16 @@
+{
+ "source": "deepstrain \u00a722 (22_starttime_sweep.json) + \u00a723 (23_npe_package_loop.json), read-only",
+ "sweep_m_drift": -8.8082405752115,
+ "sweep_chi_drift": -0.0743865581087737,
+ "npe_at_peak": true,
+ "npe_mass_bias_vs_true": 7.905462646484381,
+ "package_ci_nested_in_npe": true,
+ "v3_tension": {
+  "bridge_leaver_chi": 0.8154875189843533,
+  "package_chi90": [
+   0.6440253614584668,
+   0.7950427869280424
+  ]
+ },
+ "verdict": "The v3 cross-pipeline spin tension is a START-TIME systematic, now measured as a 9-point family (M 74.7\u219265.9, \u03c7 \u00b10.07); NPE sits at the peak and inherits its bias; the overtone remains decisive at every start. Three pipelines + one knob = closed picture."
+}
