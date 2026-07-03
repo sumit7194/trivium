@@ -1,0 +1,24 @@
+{
+ "D_cantor_analytic": 0.6309297535714574,
+ "D_uniform": 1.0,
+ "V1_pass": true,
+ "D_cantor_mask": 0.6309297535714574,
+ "D_periodic_mask": 0.7324867603589635,
+ "sep": 0.10155700678750612,
+ "slope_std_cantor": 0.0,
+ "slope_std_periodic": 0.2675132396410364,
+ "V2_pass": true,
+ "JS": {
+  "periodic": 0.34177072212262494,
+  "cantor": 0.43787386280059015
+ },
+ "corr": {
+  "uniform": 0.9655103455283552,
+  "periodic": 0.8582052980788568,
+  "cantor": 0.9170402655787447
+ },
+ "D_cantor_detection": 0.6309297535714574,
+ "V3_repro": true,
+ "V3_pass": true,
+ "verdict": "The bridge's GR-born box-dimension instrument, applied to quantum's QM detector wall, recovers the Cantor boundary's exact fractal dimension (D=0.6309 vs log2/log3=0.6309) and the solid wall's D=1.0 (V1); it separates the Cantor from the periodic wall at identical 8/27 coverage (D 0.63 vs 0.73, V2) \u2014 the dimensional axis quantum's JS-divergence could not name; and an independent reimplementation of quantum's wave sim reproduces its gating and fringe-integrity while showing the Cantor detection support inherits the boundary's sub-integer dimension (D=0.63), confirming quantitatively quantum's 'gated, not fractal-manufactured' verdict (V3). \u03bb\u22486.3-cell resolution floor; cross-repo triangulation, not a continuum claim."
+}
