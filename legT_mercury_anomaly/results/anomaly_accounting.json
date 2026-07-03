@@ -1,0 +1,13 @@
+{
+ "measured_total": 568.4348567552803,
+ "known_total": 575.0,
+ "newtonian_lit": 532.3,
+ "residual": 36.13485675528034,
+ "gr_term_mu_hat": 42.980624968880264,
+ "gr_term_mu_true": 42.98066383241285,
+ "sigma_meas": 6.565143244719707,
+ "abs_diff": 6.845768213599925,
+ "T1_pass": true,
+ "T2_pass": true,
+ "verdict": "Le Verrier decomposition with sister instruments: tabula's real-data total minus the literature Newtonian secular leaves 36.1 \u2033/cy, matching the exact GR term 43.0 (computed with tabula's own measured GM\u2609) within ~1\u03c3 of the instrument's 6.6 \u2033/cy floor. Consistency accounting, not a detection."
+}
