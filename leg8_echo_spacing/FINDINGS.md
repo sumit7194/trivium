@@ -110,3 +110,23 @@ stands: exact first-principles Δt (DS-wormhole + Kerr-tortoise, literature-anch
 exactly that Δt on 4 real events (incl. GW250114 at the formula's own 0.295 s prediction) → **no echo**.
 The §4 amplitude exclusion rests on a per-event, two-statistic null, not just the comb.
 `results/abedi_search_nulls.json`.
+
+## 7. Update (2026-07-03) — GW250114 in the two-light-ring taxonomy: every tested observable reads "one ring"
+
+ansatz §110 built the horizon-independent BH-vs-mimicker discriminator (one unstable photon ring = BH;
+outer unstable + inner *stable* ring = ultracompact horizonless mimicker — the inner ring being the seat of
+trapped-mode echoes and the light-ring instability; verified on the engine's exact ultracompact star).
+`code/mimicker_status.py` reads the bridge's own gated GW250114 stack in that taxonomy:
+
+| observable | taxonomy meaning | GW250114 |
+|---|---|---|
+| prompt ringdown | one-ring physics | matches the exact Kerr light ring (Q 1–7%, Mω_R 3%, Ω_c·b_c=1); 221 decisive (P(A221≈0)=0.000); 3 pipelines, ΔM=0.00 M⊙ ✓ |
+| late-time echoes | the two-ring signature | **null** at the Planck-wall Δt=0.295 s (ML p=0.62, comb p=0.33) |
+| reflectivity | inner-ring wall strength | R_eff ≲ 0.20–0.26 (90%) |
+
+**Verdict: every tested observable reads "one ring"** — taxonomy-consistency with a black hole, with the
+two-ring alternative's *only* generic signature (echoes) cleanly null and its wall bounded to ≲20–26%
+reflectivity. **Honest limits (per §110's own framing):** this is consistency, *not* a horizon proof — a
+low-reflectivity or off-Δt mimicker survives; the nonlinear light-ring-instability timescale is
+unconstrained; the direct two-ring count needs imaging or long-baseline post-merger data.
+`results/mimicker_status.json`.

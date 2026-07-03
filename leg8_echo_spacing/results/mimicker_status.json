@@ -1,0 +1,21 @@
+{
+ "taxonomy": "ansatz \u00a7110 (one unstable ring = BH; outer unstable + inner stable = ultracompact mimicker)",
+ "one_ring_evidence": {
+  "lightring_match": "Q 1-7%, M\u03c9R 3%, \u03a9c\u00b7bc=1 (Move B v1)",
+  "overtone": {
+   "a221_over_a220": 1.0174214009258948,
+   "p_a221_below_10pct": 0.0,
+   "n1_mass": 84.57614010718046,
+   "n2_mass": 74.76627789408292
+  },
+  "three_pipeline_mass_agreement_Msun": 0.0
+ },
+ "two_ring_evidence": {
+  "echo_ml_p": 0.6165489404641776,
+  "echo_comb_p": 0.33097880928355194,
+  "dt_pred_s": 0.2952457935058558,
+  "reflectivity_90": "R_eff <~ 0.20-0.26"
+ },
+ "verdict": "GW250114 sits squarely in the ONE-RING (black hole) class: prompt ringdown = exact Kerr light-ring physics (three pipelines), decisive Kerr overtone, and NO two-ring signature \u2014 echoes null at the predicted \u0394t with reflectivity bounded \u22720.2. In \u00a7110's taxonomy every tested observable reads 'one ring'.",
+ "honest_limits": "taxonomy-consistency, not a horizon proof; low-R or off-\u0394t mimickers survive"
+}
