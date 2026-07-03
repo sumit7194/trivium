@@ -112,6 +112,37 @@ inclined flux/frequencies — which is why this section's numbers were re-run on
 orbit-averaged flux, and this leg already found the bump's resonances regular; so the smooth de-inclination
 is the full adiabatic story.) `results/inspiral_inclined.json`.
 
+## Step 5 — resonance locking under the self-consistent flux: the plateau is NOT in the outer inspiral (2026-07-03)
+
+ansatz §107/§108 exhibited the *locking* LISA signature on ZV δ=2 (devil's staircase; a trapped orbit's ν
+pinned while Lz drifts at a *prescribed* rate). The bridge owns two things they didn't use: the metric of
+record (MN, rotating) and the validated flux (§100/§101). `code/resonance_locking_mn.py` (a=0.9, q=0.6,
+E=0.95, Lz=3.0 — the B1 slice):
+
+- **A (staircase scan, 46 orbits + Kerr control):** the MN riser's local slope **collapses ~8–10×** around
+  ν=1/3 (the section-convention image of the 2/3 epicyclic resonance) while Kerr rides through its in-range
+  rational (1/4) at uniform slope — clean differential near-resonant structure. But a 0.005-step, 240-crossing
+  refine of the flat zone finds **no exact lock**: ν wiggles *through* 1/3 (0.33354→0.33365→0.33292), never
+  pinning the way ZV's islands pin at 0.20000 — so **any 2/3 island here is narrower than Δx0 = 0.005**.
+  (Two methodology catches, logged: the naive |ν−r|<tol counting statistic would have "flagged" the smooth
+  Kerr riser too — the honest discriminator is *slope collapse*, not tolerance counts; and `section_freq`
+  carries an n-bias ~7e-4 between 160/240 crossings, which caps absolute-ν claims at the few×1e-4 level.)
+- **B (transit under the true flux direction):** driving the orbit through the resonance along the
+  **self-consistent (dE/dτ, dLz/dτ) from ansatz's validated `quadrupole_flux`** (magnitude scaled to a
+  feasible sweep, disclosed): **smooth transit** — dwell ratio **1.07** vs the internally-normalized
+  uniform-sweep expectation (18 in-band windows vs 16.9 expected), no capture, no mini-plateau. (The Kerr
+  companion run swept less than one band width — a sanity run, not a powered control; MN's dwell statistic
+  is self-normalized and doesn't need it.) Matches §108's own lesson — capture requires an island — and
+  Part A's no-resolvable-island refine.
+
+**The sharpened LISA statement (the step-5 payoff):** for a *moderate* bump in the *outer* inspiral, the
+observable is the **frequency-map shift** (step 3: ω_φ −4.8% → −12.6% at each crossing) **plus a
+slope-collapse near resonances — but NOT locking plateaus**: the crossings are clean transits. The
+plateau/locking signature lives where the islands are fat — the **plunge-edge / inner region** (ansatz
+§107/§108 on ZV's plunge separatrix; our inner-region island orbit_A) — i.e. the *late* inspiral. The two
+repos' results compose into a localization: *early outer inspiral → smooth shifted chirp; late/plunge-edge →
+locking plateaus possible.* `results/locking_scan.json`, `results/locking_drift.json`.
+
 ## What it means (honest correction of B1's premise)
 
 We expected broken integrability → chaotic resonance-crossing *glitches*. The reality is subtler and matches
@@ -144,3 +175,6 @@ implies "shifted frequency structure."
 - `code/inspiral_inclined.py` — **B1-eccentric**: validates ansatz's Carter flux dQ/dτ (`carter=True`) on
   inclined orbits — clean de-inclining on Kerr; documents the leading-order kludge's degradation on the
   strong bump. `results/inspiral_inclined.json`.
+- `code/resonance_locking_mn.py` — **step 5**: the MN staircase scan (slope collapse, no resolvable island;
+  Kerr control) + the transit-dwell test under the self-consistent flux direction (smooth crossing).
+  `results/locking_scan.json`, `results/locking_drift.json`.
