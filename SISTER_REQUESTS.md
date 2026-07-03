@@ -12,7 +12,12 @@ item that is currently PARTIAL or PARKED. Compiled 2026-06-24.*
 runs the sister-ask pattern itself (3 asks → ansatz §111–§113 KK proofs + trap; tabula §157 KK-mass
 discovery), and the bridge's **leg S** joined its flagship claim (m_n = n/R) across all four repos, gated.
 No open asks this round — the sisters' autonomous output (deepstrain §22/§23 referee + follow-up A; ansatz
-§110; tabula EXP-15/§157) was consumed read-only into legs B/S/8/T. Parked frontier unchanged (MN deep sea).
+§110/§112/§113; tabula EXP-15/§157) was consumed read-only into legs B/S/8/T/U. Parked frontier unchanged
+(MN deep sea). **leg U** then took ansatz's two *new* KK sections one rung up: §112's proven 6D T²
+diagonal-metric tower and §113's twist-is-an-axion, reproduced on the bridge's own two-loop simulator (the
+axion measured as a degeneracy-splitting). A natural *optional* sister ask sits here if wanted: a **neural
+6D** discovery (tabula) or **6D direct numerics** (quantum) would give leg U the same four-route breadth
+leg S has — currently it is bridge-numeric + ansatz-symbolic only.
 
 ## Round-4 status (2026-07-02) — no open asks; sisters self-directed and integrated
 
