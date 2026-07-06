@@ -6,7 +6,8 @@ ways: deductive proof, inductive representation-learning, and empirical measurem
 real LIGO data. The whole point is that the three projects were built with independent
 roots on purpose, so when two agree it is **evidence, not an echo**.
 
-> **Start here:** [SPINE_SUMMARY.md](SPINE_SUMMARY.md) (the closed result) ·
+> **Start here:** [CAPSTONE.md](CAPSTONE.md) (state of the whole program — scoreboard, load-bearing
+> results, and the honest-miss ledger) · [SPINE_SUMMARY.md](SPINE_SUMMARY.md) (the founding result) ·
 > [THE_BRIDGE.md](THE_BRIDGE.md) (the design doc) · this README (the operating contract).
 
 ## The three oracles (independent public repos this bridges)
