@@ -6,6 +6,22 @@ item that is currently PARTIAL or PARKED. Compiled 2026-06-24.*
 
 ---
 
+## Round-6 asks (2026-07-10) — the axion trilogy + the papers-of-the-week
+
+Full paste-ready ask blocks were relayed by the user to each sister session on 2026-07-10. Summary + dependency map:
+
+| ask | to | independent? | bridge follow-up (the wait-point) |
+|---|---|---|---|
+| **A. Discover the axion** — twisted-T² wave data → does the bottleneck find 3 latents (2 radii + twist χ), the (1,±1) mass split, and the SL(2,ℝ)/SO(2) latent geometry? (= quantum's direction #5 + our leg-U four-route note; two projects converged on this ask independently) | tabula | ✅ fully | bridge joins vs leg U + ansatz §113 → **five-route leg U** |
+| **B. 6D twisted-tower direct numerics** — extend `kk_projection.py` to two loops + twist; blind-measure the split | quantum | ✅ fully | joins the same five-route leg U |
+| **C. Flux atlas** (seconding quantum's #1 top pick) — §111–113 continuation: fluxes + θ-odd twist, machine-map which combos stabilize which moduli, obstructions as theorems | ansatz | ✅ fully | future bridge legs verify stabilized-moduli masses numerically |
+| **D. Jacobson 1995, machine-verified** — Clausius + Raychaudhuri → Einstein eqs; the null-contraction ⟹ full-equations step is a clean provable theorem | ansatz | ✅ fully | anchors bridge leg X-b (entropic hinge on a lattice) |
+| **E. Independent X-b implementation** — coherent-state relative entropy on a harmonic chain vs Longo's boost-energy formula, implemented blind in quantum's own style | quantum | ✅ fully | cross-gated against the bridge's own X-b run |
+| **F. 7D Einstein–Cartan reduction check** (Pinčák G₂-remnant paper) | ansatz | ⛔ **WAITS on bridge leg W** (arithmetic audit) — only relayed if W survives | leg W-b |
+| — deepstrain | — | no ask this round (honest: neither paper-of-the-week has observational purchase); standing optional A1-decisive item unchanged | — |
+
+Bridge runs independently meanwhile: **leg W** (remnant arithmetic audit) and **leg X-b** (entropic hinge on a lattice).
+
 ## Round-5 status (2026-07-03) — the QUANTUM project joins as the 4th sister
 
 `/Users/sumit/Github/quantum` (local-only, QM-foundations lab) is now formally in the family: it already
