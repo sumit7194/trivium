@@ -1,0 +1,17 @@
+{
+ "formula_gev": 4.960327868852459e-15,
+ "formula_kg": 8.842578078688525e-42,
+ "paper_gev": 4.96e-15,
+ "paper_kg": 9e-41,
+ "ratio_gev": 0.9999339017780421,
+ "ratio_kg": 10.178027177041136,
+ "W1a_pass": true,
+ "W1b_pass": false,
+ "s_bits_solar": 1.5140130745111085e+77,
+ "paper_qubits": 1.515e+77,
+ "ratio_qubits": 1.0006518606117125,
+ "W2_pass": true,
+ "remnant_own_entropy_nats": 2.0743319819381032e-66,
+ "capacity_gap_orders": 142.86325136227356,
+ "verdict": "The paper's GeV remnant mass (4.96e-15) follows from its own formula (W1a PASS); its kg value (9e-41, the press-propagated number) is ~10.2x the formula/its own GeV value (W1b FAIL) \u2014 consistent with a dropped leading zero of 0.884e-41 kg. The 1.515e77-qubit claim is exact standard Bekenstein-Hawking in bits (W2 PASS, no model-specific physics). Audit of quoted numbers only; the 7D model itself is out of scope."
+}
