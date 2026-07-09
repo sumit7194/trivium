@@ -135,3 +135,17 @@ which is exactly why the multi-instrument, multi-repo cross-validation is worth 
 **Family status:** four sisters (ansatz · tabula · deepstrain · quantum), **four** new legs this round
 (S, T, U, V), 22 legs + 8 moves total. Open frontier unchanged: MN deep sea x<1.5 (higher-precision
 integrator, parked).
+
+## Phase 7 (2026-07-10) — round-6: the bridge points outward
+
+The week's two physics headlines (both entropy⟺geometry — the family's home turf) triangulated with the
+bridge's own discipline, plus a full round of sister asks relayed (see SISTER_REQUESTS round-6).
+
+| item | leg | result |
+|---|---|---|
+| **published-paper audit** | **leg W (new)** | Pinčák et al. (GRG 58(3) 2026, the "information paradox solved" world press): their GeV remnant mass follows their own formula (W1a PASS) but their kg value — THE press-propagated number — is **10.18× their own GeV value** (W1b FAIL; formula-true 0.884e-41 kg, consistent with a dropped leading zero); the 1.515e77-qubit headline is exactly standard Bekenstein–Hawking in bits (W2 PASS 0.07%, no model-specific physics). Typo-class finding, not a refutation; PDF eq.20 to be eyeballed before any outward note (`3f3fbad`) |
+| **the entropic hinge** | **leg X (new)** | the computable core of Dorau–Much (PRL 2026) / Jacobson 1995: on a harmonic chain, coherent-state wedge relative entropy = 2π×boost energy to 1.5% (X1), the **Bisognano–Wichmann 2π measured from entropy data to 1.63%** (X2, primary), complement placebo 1e-9 (X3). O4: float64 recovers only 11.5% — the boost weight lives at ν−½~e^(−2πx), an **arithmetic-precision wall** (walls-are-instrument-relative, number-format edition). mpmath dps=60 via ansatz venv (`pending`) |
+| **round-6 asks relayed** | SISTER_REQUESTS | tabula: discover-the-axion (five-route leg U prize) · quantum: 6D twisted tower + blind X-b twin · ansatz: flux atlas (seconding quantum's #1) + Jacobson machine-verification; conditional 7D-torsion ask now formally PARKED per leg W's verdict |
+
+**Wait-points:** five-route leg U join (tabula+quantum results) · X-b cross-gate (quantum's twin) ·
+everything else independent. Open frontier unchanged (MN deep sea).

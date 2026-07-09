@@ -1,0 +1,43 @@
+{
+ "N": 96,
+ "mu": 0.5,
+ "sigma": 2.5,
+ "dps": 60,
+ "sweep": [
+  {
+   "x0": 8,
+   "S_rel": 36.02290493802945,
+   "two_pi_boostE": 36.57515469785973,
+   "ratio": 0.9849009590146013
+  },
+  {
+   "x0": 10,
+   "S_rel": 45.02769191627259,
+   "two_pi_boostE": 45.71891322661046,
+   "ratio": 0.9848810642783269
+  },
+  {
+   "x0": 12,
+   "S_rel": 54.028895678229574,
+   "two_pi_boostE": 54.862695800653555,
+   "ratio": 0.9848020570215209
+  },
+  {
+   "x0": 14,
+   "S_rel": 63.00402809595375,
+   "two_pi_boostE": 64.00647843404889,
+   "ratio": 0.9843382988312965
+  }
+ ],
+ "X1_ratio": 0.9848020570215209,
+ "X1_pass": true,
+ "two_pi_measured": 6.180575847776243,
+ "X2_dev": 0.016330802672029243,
+ "X2_pass": true,
+ "X3_control_frac": 1.0834082392031373e-09,
+ "X3_pass": true,
+ "O4_float64_recovers": 0.1152958589785404,
+ "eps_max": 109.74784013205964,
+ "modes_dropped": 32,
+ "verdict": "Coherent-state relative entropy on a wedge equals 2\u03c0 x boost energy on the lattice: identity ratio 0.9848 at baseline (X1), Bisognano-Wichmann 2\u03c0 measured from entropy data to 1.63% (X2), complement control 1.1e-09 (X3). float64 recovers only 12% (O4 precision wall). Validates the hinge identity of Jacobson 1995 / Dorau-Much 2026; not their S=A/4 input."
+}
