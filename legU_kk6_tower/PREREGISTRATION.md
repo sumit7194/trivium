@@ -74,3 +74,25 @@ internal metric enters only through a **finite-difference Laplace–Beltrami ope
   leg S's tower to **6D with its full moduli space**. It is **not** a claim that our universe has extra
   dimensions, and the buzz-vs-formula agreement is a self-consistency of two implementations of the same
   geometry (the FD Laplacian vs the closed-form coset metric), not an independent measurement of nature.
+
+---
+
+## ADDENDUM (frozen 2026-07-10, before `code/five_route_join.py` is written or run) — the five-route join
+
+Round-6 sister results landed: tabula `158_axion_discovery.json` (+`notes/axion_for_bridge.md`, commit
+`3c84ef2`) and quantum `qsim/kk6_twisted_tower.json` (blind protocol). Join gates, frozen now:
+
+- **J1 (quantum's blind tower):** all 10 sectors |err| < 1%; the (1,±1) m-split at χ=0.3 within 1% of
+  0.449961; the (1,0)/(0,1) control split < 0.1%.
+- **J2 (tabula's FDTD route, their S0):** Δm² vs 4χ/(1−χ²) corr ≥ 0.999 and err ≤ 1%.
+- **J3 (tabula's neural route, blind):** behavioral Δm̂² corr ≥ 0.99, median err ≤ 5%, degenerate-control
+  ratio ≤ 1%; bottleneck latent count = 3 with per-modulus decode r ≥ 0.9 (and χ-only family → K=1).
+- **J4 (cross-route):** bridge's own measured m-split (leg U: 1.69166−1.24086) vs quantum's blind
+  0.448672 — agree within 1% of each other.
+- **Recorded, not gated:** tabula's geometry certificates (modular T/S gauge ≤ 0.5%; hyperbolic-limit
+  diagnostics; cosine vs true-mass metric) — tabula's own gated results, cited as route-5's deep half;
+  the bridge does not re-derive them.
+
+PASS ⇒ leg U is a **five-route object**: ansatz proof (§112/§113) · bridge FD simulator · quantum blind
+numerics · tabula FDTD · tabula neural discovery — with the moduli-space geometry (SL(2,ℤ) fundamental
+domain, hyperbolic limit) discovered from shadows.

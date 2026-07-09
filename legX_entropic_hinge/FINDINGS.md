@@ -64,3 +64,26 @@ wall set by the number format, not the physics — the family's recurring theme,
 
 Dorau & Much arXiv:2510.24491 · Jacobson gr-qc/9504004 · Longo 2019 · Casini–Grillo–Pontello 2019 ·
 Bisognano–Wichmann 1976. `code/entropic_hinge.py` · `results/entropic_hinge.json`.
+
+---
+
+## Update (2026-07-10) — quantum's blind twin landed: cross-gate CLOSED, and their adversarial test passed
+
+quantum's independent implementation (no shared code; Williamson-then-functional-calculus route, dps=60)
+verified the identity to **≤0.06% on clean geometries** (up to 0.21% where the packet grazes the far wedge
+boundary — their residual anatomy, which also explains this leg's tolerance design), and shipped an
+adversarial warning: an **arccoth ordering bug** in their first build passed every thermal self-test
+silently and was caught only by a **squeezed-state** regression. The bridge answered with certification
+gates (frozen in the ADDENDUM before `code/certification_tests.py` ran):
+
+- **C1** squeezed discriminator through the *production* `modular_form`: A_q = εe^{−2r}, B_p = εe^{+2r}
+  recovered to **4×10⁻⁶¹** — the ordering trap is absent in this construction. PASS.
+- **C2** rotated two-mode: A_q = R diag(ε_k e^{−2r_k}) Rᵀ to **6×10⁻⁶²**. PASS.
+- **C3** Fock-basis end-to-end (density matrices only, no Gaussian formulas): matches ½d²ε to
+  **1.9×10⁻¹⁶**. PASS.
+- **C4** the record: two independent implementations agree with Longo's formula on disjoint grids, and the
+  **float64 wall was measured twice independently** — bridge 11.5% recovery (O4) vs quantum's 10–14% clip
+  bands. The precision wall is now a two-instrument fact.
+
+The leg-S-pattern cross-gate is closed: the entropic hinge identity holds by two blind implementations +
+an exact-formula anchor, with a placebo control and a certified-adversarially machinery. `results/certification_tests.json`.

@@ -149,3 +149,10 @@ bridge's own discipline, plus a full round of sister asks relayed (see SISTER_RE
 
 **Wait-points:** five-route leg U join (tabula+quantum results) · X-b cross-gate (quantum's twin) ·
 everything else independent. Open frontier unchanged (MN deep sea).
+
+**Phase-7 same-day update (2026-07-10 evening):** three sisters reported. **Leg U → FIVE-ROUTE** (J1-J4 ✅:
+quantum blind tower 10/10 ≤0.27%, tabula FDTD corr 1.00000, tabula neural K=3/corr 0.9997 + SL(2,Z)
+fundamental domain + hyperbolic moduli metric cosine 0.9994 — the geometry discovered from shadows). **Leg X
+cross-gate CLOSED** (quantum's blind twin ≤0.06%; their adversarial squeezed-state test answered at 1e-61 on
+the production code path; the float64 wall now a two-instrument fact: 11.5% ↔ 10-14%). deepstrain concurred
++ logged. ansatz (flux atlas + Jacobson) still running — the remaining wait-point.

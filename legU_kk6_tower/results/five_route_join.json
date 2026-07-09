@@ -1,0 +1,47 @@
+{
+ "J1": {
+  "max_err_pct": 0.2715,
+  "split": 0.448672,
+  "split_err": 0.0028646927178132874,
+  "control": 0.0,
+  "pass": true
+ },
+ "J2": {
+  "corr": 0.9999999936703831,
+  "err": 0.002452556795652644,
+  "pass": true
+ },
+ "J3": {
+  "corr": 0.9997257283865281,
+  "med_err": 0.014427670653350332,
+  "ctrl": 0.0016129037474646054,
+  "latents": {
+   "chi_family": 1,
+   "three_moduli": 3,
+   "R2_by_K": {
+    "2": 0.9967474551195222,
+    "3": 0.9997597694406635,
+    "4": 0.9996746441482474
+   }
+  },
+  "decode_r": {
+   "Phi1": 0.9677950312358294,
+   "Phi2": 0.9660828131543326,
+   "chi": 0.9717314792163768
+  },
+  "pass": true
+ },
+ "J4": {
+  "bridge_split": 0.4507987531818829,
+  "quantum_split": 0.448672,
+  "rel_diff": 0.004740106763700161,
+  "pass": true
+ },
+ "geometry_recorded": {
+  "modular_gauge_pct": 0.22,
+  "hyperbolic_cosine": 0.9994,
+  "source": "tabula notes/axion_for_bridge.md, commit 3c84ef2"
+ },
+ "five_route": true,
+ "verdict": "The 6D twisted KK tower and its axion splitting are established by five failure-mode-disjoint routes (symbolic proof / bridge FD / quantum blind numerics / tabula FDTD / tabula neural discovery), with the SL(2,Z)-fundamental-domain moduli geometry discovered from projections alone (tabula 158)."
+}

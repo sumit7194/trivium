@@ -1,0 +1,23 @@
+{
+ "C1": {
+  "worst_Aq": 4.427908164577358e-61,
+  "worst_Bp": 4.5631417620483334e-61,
+  "pass": true
+ },
+ "C2": {
+  "rel_err": 5.896070420658989e-62,
+  "pass": true
+ },
+ "C3": {
+  "S_rel_fock": 0.5938665128613381,
+  "target": 0.593866512861338,
+  "rel_err": 1.8694824520007626e-16,
+  "pass": true
+ },
+ "C4_record": {
+  "bridge": "1.5% offset / 1.63% slope (mu=0.5, sigma=2.5, dispersion-dominated)",
+  "quantum": "<=0.06% clean-geometry (m<=0.1); 0.2% rows finite-wedge",
+  "float64_wall": "bridge 11.5% recovery vs quantum 10-14% clip bands"
+ },
+ "cross_gate_closed": true
+}

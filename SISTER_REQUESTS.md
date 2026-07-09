@@ -22,6 +22,12 @@ Full paste-ready ask blocks were relayed by the user to each sister session on 2
 
 Bridge runs independently meanwhile: **leg W** (remnant arithmetic audit) and **leg X-b** (entropic hinge on a lattice).
 
+**Round-6 status (same day, 2026-07-10 evening):** asks A, B, E — ✅ **FULFILLED** (tabula 158 `3c84ef2`:
+axion discovered, K=3, modular gauge + hyperbolic limit; quantum: blind twisted tower 10/10 + entropic-hinge
+twin ≤0.06% with an adversarial squeezed-state warning the bridge's machinery passed at 1e-61). Bridge joins
+banked: **leg U five-route** ✅ and **leg X cross-gate** ✅. deepstrain concurred with the no-chase call and
+logged the round. Ask C/D (ansatz flux atlas + Jacobson): **still running**. Ask F stays PARKED.
+
 ## Round-5 status (2026-07-03) — the QUANTUM project joins as the 4th sister
 
 `/Users/sumit/Github/quantum` (local-only, QM-foundations lab) is now formally in the family: it already

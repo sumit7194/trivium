@@ -79,3 +79,27 @@ physics and not a grid artifact.
 - quantum `qsim/kk_projection.py` + `PLAN_projections.md` — the 5D single-loop precedent and the honest
   framing this leg adopts.
 - `code/kk6_tower.py` — the bridge's own T² projection simulator + gates. `results/kk6_tower.json`.
+
+---
+
+## Update (2026-07-10) — the five-route join: PASS. Leg U is the family's strongest object.
+
+Round-6 sister results landed and the join gates (frozen in the PREREGISTRATION ADDENDUM before
+`code/five_route_join.py` ran) all pass:
+
+| route | who | result | gate |
+|---|---|---|---|
+| 1. symbolic proof | ansatz §112/§113 | M-dictionary + χ = SL(2,ℝ)/SO(2) axion, leftover-zero | anchor |
+| 2. FD simulator | bridge (this leg) | split 0.45080, Δ(m²) to 0.25% | U1/U2 ✅ |
+| 3. blind direct numerics | quantum | 10/10 sectors ≤0.27%; split 0.44867 (0.29%); control 0 | J1 ✅ |
+| 4. independent FDTD | tabula (158, S0) | Δm² vs 4χ/(1−χ²) corr 1.00000, err 0.25% | J2 ✅ |
+| 5. neural discovery, blind | tabula (158) | K=3 latents (decode r ≈0.97 each; χ-family K=1 = the axion); Δm̂² corr 0.9997, med 1.44%; control 0.16% | J3 ✅ |
+
+Cross-route: bridge vs quantum measured splits agree to **0.47%** (J4 ✅). And the deep half, tabula's own
+gated geometry results (recorded, not re-derived): the net's moduli space is the **SL(2,ℤ) fundamental
+domain** (modular T/S gauge certificate ≤0.22%) and its learned spectrum reproduces the **hyperbolic
+SL(2,ℝ)/SO(2) metric** in the many-mode limit (cosine vs true-mass metric 0.9994) — *the moduli-space
+geometry ansatz proved symbolically, discovered from projections alone*. tabula also flagged the honest
+subtlety: "latent metric" is gauge-ill-posed; the canonical object is the behavioral sensitivity metric,
+hyperbolic only in the e^{−βm²} many-mode limit — adopted as this leg's framing too.
+One spectrum, one axion, five failure-mode-disjoint routes. `results/five_route_join.json`.

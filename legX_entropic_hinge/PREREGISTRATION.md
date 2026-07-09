@@ -59,3 +59,27 @@ implementing the same check, blind (round-6 Ask 2); the cross-gate happens when 
 
 Dorau & Much, arXiv:2510.24491 (PRL 2026) · Jacobson, gr-qc/9504004 · Longo 2019 (entropy of coherent
 states) · Casini–Grillo–Pontello 2019 · Bisognano–Wichmann 1976. Interpreter: ansatz `.venv` (mpmath 1.3.0).
+
+---
+
+## ADDENDUM (frozen 2026-07-10, before `code/certification_tests.py` is written or run) — the cross-gate
+
+quantum's blind twin landed (`qsim/entropic_hinge.json`, `hinge_mp_certification.json`) — the identity
+verified to ≤0.06% on clean geometries — **with an adversarial warning**: their arccoth-ordering bug
+passed every thermal single-mode self-test silently and was only caught by a **squeezed-state** regression
+(γ = diag(νe^{2r}, νe^{−2r}) must map to M = diag(βe^{−2r}, βe^{+2r})). The bridge's construction is
+different (X^{1/2}PX^{1/2} route, one-mode-derived diag(νε) resynthesis) but the warning transfers: a
+thermal test cannot distinguish orderings here either. Certification gates, frozen now:
+
+- **C1 (the squeezed discriminator, production code path):** single squeezed thermal mode,
+  X = νe^{2r}, P = νe^{−2r} over a (ν, r) grid: the production `modular_form` must return
+  A_q = ε e^{−2r} (and the p-form B_p = ε e^{+2r}) with ε = ln((ν+½)/(ν−½)), to rel. error < 1e-10.
+- **C2 (rotated two-mode):** X = R D_x Rᵀ, P = R D_p Rᵀ (shared rotation, distinct ν_k, r_k):
+  A_q must equal R diag(ε_k e^{−2r_k}) Rᵀ to rel. error < 1e-10.
+- **C3 (Fock-basis end-to-end):** single thermal mode (ν=0.8), real displacement d: S_rel computed from
+  truncated density matrices (dim 60, no Gaussian formulas anywhere) must match ½d²ε to < 1e-6 rel.
+- **C4 (cross-implementation record, no new compute):** both independent implementations agree with the
+  formula on disjoint parameter grids (bridge: 1.5% offset / 1.63% slope at μ=0.5, σ=2.5 —
+  dispersion-dominated; quantum: ≤0.06% clean-geometry at m≤0.1, wide packets, with finite-wedge anatomy
+  for their 0.2% rows), and the float64 wall was measured twice independently (bridge O4: 11.5% recovery;
+  quantum: 10–14% clip bands). C1–C3 PASS ⇒ the leg-S-pattern cross-gate closes.
