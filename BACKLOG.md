@@ -156,3 +156,12 @@ fundamental domain + hyperbolic moduli metric cosine 0.9994 — the geometry dis
 cross-gate CLOSED** (quantum's blind twin ≤0.06%; their adversarial squeezed-state test answered at 1e-61 on
 the production code path; the float64 wall now a two-instrument fact: 11.5% ↔ 10-14%). deepstrain concurred
 + logged. ansatz (flux atlas + Jacobson) still running — the remaining wait-point.
+
+**Phase-7 close (2026-07-10, late):** ansatz delivered C/D (`5d97d5b`, 99/99) — **round 6 CLOSED, 6/6 asks
+resolved, four sisters all reporting in one day.** §114 flux atlas: G²=2n²/detM ⟹ flux stabilizes ONLY
+volume+axion combination detM (AdS₄ at detM=−3n²/2Λ₆) while the SL(2,ℝ)/SO(2) coset stays exactly flat —
+leg U's vacuum manifold, axion massless under pure flux; SS-twist folklore falsified; two machine-over-human
+catches. §115 Jacobson: Raychaudhuri = pure geometry (free-Kasner σ² cancellation), the hinge theorem
+(null-contraction ⟹ Einstein eqs + free Λ) PROVEN, localization postulate honestly ASSUMED — leg X now
+carries the derivation's full PROVEN/MEASURED/ASSUMED anatomy across three repos. Queued next: ansatz's
+closed-form stabilized-moduli masses → bridge numerical verification (flux-atlas leg). Ask F stays PARKED.

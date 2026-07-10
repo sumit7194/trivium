@@ -87,3 +87,23 @@ gates (frozen in the ADDENDUM before `code/certification_tests.py` ran):
 
 The leg-S-pattern cross-gate is closed: the entropic hinge identity holds by two blind implementations +
 an exact-formula anchor, with a placebo control and a certified-adversarially machinery. `results/certification_tests.json`.
+
+---
+
+## Update (2026-07-10, round-6 close) — ansatz §115 landed: the derivation's full anatomy, on the family's ledger
+
+ansatz machine-verified Jacobson 1995 (round-6 Ask D; `scripts/115_jacobson.py`, commit `5d97d5b`, 99/99
+green, three-valued throughout). Combined with this leg and quantum's twin, the family now holds the
+**complete anatomy of the thermodynamic derivation of the Einstein equations** — every link labeled:
+
+| status | link | who / result |
+|---|---|---|
+| **PROVEN** | Raychaudhuri identity is pure geometry (leftover zero on the free static family AND free Kasner, where σ² = t^{−2p₁−2}(p₂−p₃)²/2 enters and cancels exactly — no field equations used); θ = d(lnA)/dλ; the bifurcation expansion → the δA integral | ansatz §115 (J1, J1c) |
+| **PROVEN** | the hinge theorem: S(k,k)=0 ∀ null k ⟹ S = φ·g (null-cone parametrization, 10-unknown linear system, exactly 1-param solutions) + Bianchi/∇T=0 forcing φ = R/2 + Λ ⟹ **R_ab − ½R g_ab − Λg_ab = c·T_ab**, leftover zero | ansatz §115 (J3) |
+| **MEASURED** | the 2π — the Unruh/Bisognano–Wichmann factor that *is* the temperature in δQ=TδS and the modular flow in S_rel = 2π×boost-energy | bridge (this leg, 1.63%) + quantum's blind twin (≤0.06%), cross-gated |
+| **ASSUMED** | the localization postulate (integral equality for all local Rindler horizons ⟹ integrand equality) — logged by the machine as ASSUMED, not proven; **the one non-theorem in the chain, in 1995 and 2026 alike** | ansatz §115 (J2), honest |
+| **ASSUMED** | S = A/4 (η = 1/4G input; the constants chain κ-cancellation → c = 8πG verified given it) | ansatz §115 (J2) + Dorau–Much's own statement |
+
+Emergent gravity's derivation, decomposed across three repos: what is geometry (proven), what is quantum
+information (measured, twice, blind), and what remains postulate (named). SymPy wall logged by ansatz as
+usual (free-function families, not arbitrary two-argument metrics).

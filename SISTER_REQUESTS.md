@@ -26,7 +26,20 @@ Bridge runs independently meanwhile: **leg W** (remnant arithmetic audit) and **
 axion discovered, K=3, modular gauge + hyperbolic limit; quantum: blind twisted tower 10/10 + entropic-hinge
 twin ≤0.06% with an adversarial squeezed-state warning the bridge's machinery passed at 1e-61). Bridge joins
 banked: **leg U five-route** ✅ and **leg X cross-gate** ✅. deepstrain concurred with the no-chase call and
-logged the round. Ask C/D (ansatz flux atlas + Jacobson): **still running**. Ask F stays PARKED.
+logged the round. Ask C/D (ansatz flux atlas + Jacobson): ✅ **FULFILLED** (2026-07-10 late, ansatz `5d97d5b`, 99/99 green) —
+**§114 flux atlas** (8 machine-readable entries, `data/flux_atlas.json`; the dictionary theorem G² = 2n²/detM —
+flux couples ONLY through volume+axion detM, never shape; flux+Λ₆ stabilizes the volume into AdS₄ while the
+SL(2,ℝ)/SO(2) coset stays EXACTLY flat — the vacuum manifold IS leg U's coset, axion massless; the "SS twists
+generate potentials" folklore proven FALSE on metric-only T²; the constant-flux/twisted Maxwell violation
+caught by the machine; compactness caveat + Andriot et al. JHEP 12(2022)026 prior art logged honestly) and
+**§115 Jacobson** (Raychaudhuri pure-geometry leftover-zero incl. free-Kasner σ² cancellation; the hinge
+theorem S(k,k)=0 ∀ null k ⟹ Einstein eqs with free Λ PROVEN; the localization step logged ASSUMED — the one
+non-theorem in 1995 and 2026 alike). Bridge synthesis: leg X FINDINGS now carries the derivation's full
+PROVEN/MEASURED/ASSUMED anatomy across three repos. **Round 6 fully closed — 6/6 asks resolved.**
+**Ask F: confirmed PARKED** (leg W's verdict stands; relayed to ansatz — torsion does not enter the engine).
+**Offered next rung (accepted, queued):** ansatz ships the Einstein-frame potential + stabilized-moduli
+masses in closed form → bridge verifies numerically (a future leg: detM oscillation about the AdS₄ minimum
+vs the closed-form mass — the flux-atlas edition of leg U).
 
 ## Round-5 status (2026-07-03) — the QUANTUM project joins as the 4th sister
 
