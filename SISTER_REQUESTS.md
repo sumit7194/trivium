@@ -41,6 +41,19 @@ PROVEN/MEASURED/ASSUMED anatomy across three repos. **Round 6 fully closed — 6
 masses in closed form → bridge verifies numerically (a future leg: detM oscillation about the AdS₄ minimum
 vs the closed-form mass — the flux-atlas edition of leg U).
 
+## Round-7 note (2026-07-21) — ansatz built Cartan–Karlhede (no ask was filed; they took the recommendation)
+
+The bridge's answer to "which sister should own a standalone CK tool" was **ansatz** — it is that repo's own
+missing organ (the §02 NOVELTY fingerprint is a heuristic filter; CK is the decision procedure it
+approximates), every prerequisite (Petrov, null tetrads, ∇Riemann, n-dimensional symbolic GR) lives only
+there, and the three-valued/UNDECIDED discipline the spec demands is already their culture. They built it:
+**§116–§118 + `scripts/ck.py`** (`564769c`→`3ca3f08`), with the prior-art sweep done first as advised.
+See BACKLOG Phase 8. Two things the bridge now owes:
+- **leg Y (proposed):** run CK over the bridge's own catalog to audit legs O/Q for coordinate-disguised
+  duplicates — a falsification-flavoured self-check of our strongest result.
+- **standing:** the flux-atlas next rung (ansatz's offered closed-form stabilized-moduli masses → bridge
+  numerical verification) is still queued and unstarted.
+
 ## Round-5 status (2026-07-03) — the QUANTUM project joins as the 4th sister
 
 `/Users/sumit/Github/quantum` (local-only, QM-foundations lab) is now formally in the family: it already

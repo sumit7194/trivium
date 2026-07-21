@@ -165,3 +165,37 @@ catches. §115 Jacobson: Raychaudhuri = pure geometry (free-Kasner σ² cancella
 (null-contraction ⟹ Einstein eqs + free Λ) PROVEN, localization postulate honestly ASSUMED — leg X now
 carries the derivation's full PROVEN/MEASURED/ASSUMED anatomy across three repos. Queued next: ansatz's
 closed-form stabilized-moduli masses → bridge numerical verification (flux-atlas leg). Ask F stays PARKED.
+
+## Phase 8 (2026-07-21) — ansatz ships Cartan–Karlhede; the costume problem becomes a decision procedure
+
+Sister sweep (bridge tree was clean; nothing of ours pending). **ansatz §116–§118 + `scripts/ck.py`**
+(`564769c`→`3ca3f08`) — the tool the bridge recommended ansatz own, built end-to-end:
+
+| § | result | bearing on the bridge |
+|---|---|---|
+| **§116 CK decision procedure** (9/9) | domain-aware Gram–Schmidt null tetrad → PND canonicalization → isotropy-invariant Cartan invariants → resultant elimination → three-valued verdict. Types D + I decided; N via the tensorial ∇C test; II/III + order-1 null-rotation isotropy → UNDECIDED. Prior art swept 2026-07-21: **no Python/SymPy CK existed** (EinsteinPy has Weyl but no tetrads/NP/Petrov; RicciPy halted; the procedure lived only in CLASSI/SHEEP and Maple) — the claim is retired by being *made false* | **Directly upgrades leg O**: ZV δ=1 in prolate spheroidal coords (Ψ₂ = −1/(x+1)³, sharing no visible form with Schwarzschild's −M/r³) has a **byte-identical certificate** to Schwarzschild M=1; M=1 vs M=2 differ in exactly one coefficient. leg O's heuristic "ZV δ=1 = Schwarzschild gate" is now **proven**. **VSI blind spot closed** — three Kretschmann=0 pp-waves decided |
+| **§117 matter sector** (12/12) | tr((R^a_b)^k) k=1..4 (frame-independent order-0 invariants) + Segre classifier; the hole was *measured before fixing* (Minkowski vs radiation FRW gave identical signatures → UNDECIDED). Derives the textbook classification unaided; RN Schwarzschild-chart vs ingoing Eddington–Finkelstein → EQUIVALENT | a matter-sector costume test the bridge's catalog work can lean on |
+| **§118 novelty proof-backed** (6/6) | §02's three 2025 deferrals honoured: KNOWN_LIKELY → **PROVEN_KNOWN**, blind-spot verdicts adjudicated, CANDIDATE_NEW → **PROVEN_NEW_vs_CATALOG**. Honest scope stated *inside* the battery: PROVEN_NEW = inequivalent to *our catalog*, **not** a literature-novelty claim | the NOVELTY stage goes heuristic-filter → proof procedure |
+
+**Correctness ledger grows (§4d):** five bugs caught by failing tests, each "a confidently-wrong answer
+waiting to ship" — a single ∇C frame component is not an invariant (boost weight +1); elimination needs the
+**squarefree** part (isotropic coords double-cover → certificate came out as a literal square); the
+**discrete PND freedom** made axis-relabelled Kasner read INEQUIVALENT to *itself* (fixed via
+relabelling-immune I³/J²); domain sampling accepted out-of-domain points (SymPy predicates don't evaluate
+under `.subs`); type N needs Ψ₄→1. Plus the humbling one in §118: **Minkowski vs Minkowski came out
+UNDECIDED** — with no nonzero invariant anywhere there is nothing to parametrize a certificate by — fixed
+with the rigorous flat base case. And a cost wall logged honestly: type-I exponents must be rationalized
+(Kasner u=2: >10 min → 2.4 s) and N must stay small (u=3 unfinished at 25 min) — *walls are
+instrument-relative*, symbolic-algebra edition.
+
+**deepstrain `0b33652`** — reproducibility fix in a source the bridge cites: `bank_build.py` imported
+`BankMF`, never committed, so a fresh clone would ImportError. The Phase-6 CNN-ties-bank note's artifacts
+are unaffected in value; the repo is now actually reproducible. tabula: no new commits since `3c84ef2`.
+
+**Open bridge work this unlocks (proposed, not yet run): leg Y — CK adjudication of the bridge's own
+catalog.** Use the sister's new decision procedure to audit *our* strongest claim's independence
+assumption: are legs O/Q's catalog entries genuinely distinct spacetimes, or are any coordinate-disguised
+duplicates? ZV δ=1 ≡ Schwarzschild is now proven — the question is whether any bridge count treats them (or
+another pair) as independent. Outcomes are all findings: entries distinct ⇒ leg Q's 8/8 becomes
+proof-backed; a duplicate ⇒ an honest downward correction to our own headline; UNDECIDED on the heavy
+type-I entries (MN, bumpy) ⇒ the expression-swell wall, reported as such.
