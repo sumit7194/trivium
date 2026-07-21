@@ -1,0 +1,95 @@
+{
+ "amendment": "post-hoc, after the v1 wall",
+ "budget_s": 240,
+ "entries": {
+  "Kerr": {
+   "invariants": "[0, 0, 0, 0]",
+   "segre": "vacuum (R_ab = 0)",
+   "seconds": 5.9
+  },
+  "Kerr-Newman": {
+   "invariants": "[0, 390625/(4*(390625*r**8 + 562500*r**6*u**2 + 303750*r**4*u**4 + 72900*r**2*u**6 + 6561*u**8)), 0, 152587890625/(64*(152587890625*r**16 + 439453125000*r**14*u**2 + 553710937500*r**12*u**4 + 398671875000*r**10*u**6 + 179402343750*r**8*u**8 + 51667875000*r**6*u**10 + 9300217500*r**4*u**12 + 956593800*r**2*u**14 + 43046721*u**16))]",
+   "segre": "non-null electromagnetic (Segre [(11)(1,1)], traceless)",
+   "seconds": 9.8
+  },
+  "Kerr-de Sitter": {
+   "invariants": "[3/25, 9/2500, 27/250000, 81/25000000]",
+   "segre": "Einstein space (R_ab = Lambda g_ab)",
+   "seconds": 20.6
+  },
+  "Taub-NUT": {
+   "invariants": "[0, 0, 0, 0]",
+   "segre": "vacuum (R_ab = 0)",
+   "seconds": 1.3
+  },
+  "ZV d=1": {
+   "invariants": "[0, 0, 0, 0]",
+   "segre": "vacuum (R_ab = 0)",
+   "seconds": 0.1
+  }
+ },
+ "pairs": [
+  {
+   "a": "Kerr",
+   "b": "Kerr-Newman",
+   "verdict": "INEQUIVALENT (rigorous)",
+   "why": "Segre differs"
+  },
+  {
+   "a": "Kerr",
+   "b": "Kerr-de Sitter",
+   "verdict": "INEQUIVALENT (rigorous)",
+   "why": "Segre differs"
+  },
+  {
+   "a": "Kerr",
+   "b": "Taub-NUT",
+   "verdict": "INCONCLUSIVE",
+   "why": "order-0 matches (necessary, not sufficient) \u2014 NOT evidence of sameness"
+  },
+  {
+   "a": "Kerr",
+   "b": "ZV d=1",
+   "verdict": "INCONCLUSIVE",
+   "why": "order-0 matches (necessary, not sufficient) \u2014 NOT evidence of sameness"
+  },
+  {
+   "a": "Kerr-Newman",
+   "b": "Kerr-de Sitter",
+   "verdict": "INEQUIVALENT (rigorous)",
+   "why": "Segre differs"
+  },
+  {
+   "a": "Kerr-Newman",
+   "b": "Taub-NUT",
+   "verdict": "INEQUIVALENT (rigorous)",
+   "why": "Segre differs"
+  },
+  {
+   "a": "Kerr-Newman",
+   "b": "ZV d=1",
+   "verdict": "INEQUIVALENT (rigorous)",
+   "why": "Segre differs"
+  },
+  {
+   "a": "Kerr-de Sitter",
+   "b": "Taub-NUT",
+   "verdict": "INEQUIVALENT (rigorous)",
+   "why": "Segre differs"
+  },
+  {
+   "a": "Kerr-de Sitter",
+   "b": "ZV d=1",
+   "verdict": "INEQUIVALENT (rigorous)",
+   "why": "Segre differs"
+  },
+  {
+   "a": "Taub-NUT",
+   "b": "ZV d=1",
+   "verdict": "INCONCLUSIVE",
+   "why": "order-0 matches (necessary, not sufficient) \u2014 NOT evidence of sameness"
+  }
+ ],
+ "decided_rigorously": 7,
+ "total_pairs": 10
+}

@@ -106,3 +106,32 @@ cross-validated** across both repos (Kerr, KN, KdS, Taub–NUT, bumpy, ZV δ=1, 
   MN q≠0 non-integrability from ansatz §99 (no quadratic Carter).
 - `code/geometrizes_integrability.py` — normalizes metric names across the repos, joins the columns (incl.
   the ZV + MN extensions), builds the 2×2 contingency, reports φ. `results/geometrizes_integrability.json`.
+
+---
+
+## Amendment (2026-07-21) — the independence assumption, now named (leg Y)
+
+**[Filed under leg Y's pre-registered outcome 3 — the same-day amendment clause. No result below changes;
+what changes is that an assumption which was silent is now stated.]**
+
+This leg's "8/8, φ = 1.0" counts eight entries as eight **different spacetimes**. That was never tested —
+two metrics can look wholly different on paper and be one spacetime in different coordinates. ansatz's new
+Cartan–Karlhede procedure (§116–§118) made the test possible, and **leg Y** ran it against this catalog:
+
+- **No duplicate was found.** The 8/8 and φ = 1.0 stand unchanged.
+- **7 of the 10 integrable-entry pairs are now rigorously proven distinct** (order-0 Ricci/Segre
+  invariants: every pair involving Kerr–Newman or Kerr–de Sitter). Those move from assumed to proven.
+- **3 integrable pairs remain open** — Kerr vs Taub–NUT, Kerr vs ZV δ=1, Taub–NUT vs ZV δ=1 — all
+  vacuum-vs-vacuum, where the matter sector is identically zero and the Weyl-side machinery hit a
+  symbolic-algebra wall.
+- **The claim of "three independent non-integrable classes" is an ASSUMPTION, not a result.** bumpy ε=0.35
+  and ZV δ=2 cannot coincide on structural grounds (stationary-rotating vs static). But **bumpy vs
+  Manko–Novikov q=0.5 — both rotating quadrupole deformations of Kerr — is untested**: that regime
+  (rotating, genuinely two-variable) is where the algebra engine walls. Until it is decided, "three
+  independent classes" should be read as *three deformation constructions believed distinct*, not three
+  proven-distinct spacetimes.
+
+The φ = 1.0 correlation is unaffected either way — it is computed per-entry against tabula's verdicts, and
+a duplicated entry would not flip any cell. What a duplicate would reduce is the *breadth* claim ("across
+three independent classes"), which is why that sentence now carries this caveat. See
+`legY_ck_adjudication/FINDINGS.md`.

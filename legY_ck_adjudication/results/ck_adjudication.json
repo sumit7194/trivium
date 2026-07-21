@@ -1,0 +1,195 @@
+{
+ "budget_s": 600,
+ "timing": {
+  "Kerr": {
+   "seconds": 601.4,
+   "fail": "wall"
+  },
+  "Kerr-Newman": {
+   "seconds": 610.8,
+   "fail": "wall"
+  },
+  "Kerr-de Sitter": {
+   "seconds": 32.4,
+   "fail": "procedure"
+  },
+  "Taub-NUT": {
+   "seconds": 600.0,
+   "fail": "wall"
+  },
+  "ZV d=1": {
+   "seconds": 5.9,
+   "fail": null
+  },
+  "Schwarzschild(std chart)": {
+   "seconds": 1.6,
+   "fail": null
+  },
+  "ZV d=2": {
+   "seconds": 600.0,
+   "fail": "wall"
+  },
+  "bumpy eps=0.35": {
+   "seconds": 671.3,
+   "fail": "wall"
+  }
+ },
+ "Y0": {
+  "verdict": "EQUIVALENT",
+  "why": [
+   "(D_l_Psi2)(D_n_Psi2) matches: 729*w**9 + 729*w**8/8 + 243*w**6*z + 27*w**3*z**2 + z**3"
+  ],
+  "pass": true
+ },
+ "Y1": {
+  "pairs": [
+   {
+    "a": "Kerr",
+    "b": "Kerr-Newman",
+    "verdict": "UNDECIDED",
+    "why": [
+     "WALL: exceeded 600s",
+     "WALL: exceeded 600s"
+    ]
+   },
+   {
+    "a": "Kerr",
+    "b": "Kerr-de Sitter",
+    "verdict": "UNDECIDED",
+    "why": [
+     "WALL: exceeded 600s",
+     "ValueError: cannot determine the sign of a frame norm in the declared domain: 2500*(625*r**4 - 62275*r**2 + 125000*r - 81*u**4 - 22419*u**2)/(6295081*(25*r**2 + 9*u**2)). D"
+    ]
+   },
+   {
+    "a": "Kerr",
+    "b": "Taub-NUT",
+    "verdict": "UNDECIDED",
+    "why": [
+     "WALL: exceeded 600s",
+     "WALL: exceeded 600s"
+    ]
+   },
+   {
+    "a": "Kerr",
+    "b": "ZV d=1",
+    "verdict": "UNDECIDED",
+    "why": [
+     "WALL: exceeded 600s",
+     "None"
+    ]
+   },
+   {
+    "a": "Kerr-Newman",
+    "b": "Kerr-de Sitter",
+    "verdict": "UNDECIDED",
+    "why": [
+     "WALL: exceeded 600s",
+     "ValueError: cannot determine the sign of a frame norm in the declared domain: 2500*(625*r**4 - 62275*r**2 + 125000*r - 81*u**4 - 22419*u**2)/(6295081*(25*r**2 + 9*u**2)). D"
+    ]
+   },
+   {
+    "a": "Kerr-Newman",
+    "b": "Taub-NUT",
+    "verdict": "UNDECIDED",
+    "why": [
+     "WALL: exceeded 600s",
+     "WALL: exceeded 600s"
+    ]
+   },
+   {
+    "a": "Kerr-Newman",
+    "b": "ZV d=1",
+    "verdict": "UNDECIDED",
+    "why": [
+     "WALL: exceeded 600s",
+     "None"
+    ]
+   },
+   {
+    "a": "Kerr-de Sitter",
+    "b": "Taub-NUT",
+    "verdict": "UNDECIDED",
+    "why": [
+     "ValueError: cannot determine the sign of a frame norm in the declared domain: 2500*(625*r**4 - 62275*r**2 + 125000*r - 81*u**4 - 22419*u**2)/(6295081*(25*r**2 + 9*u**2)). D",
+     "WALL: exceeded 600s"
+    ]
+   },
+   {
+    "a": "Kerr-de Sitter",
+    "b": "ZV d=1",
+    "verdict": "UNDECIDED",
+    "why": [
+     "ValueError: cannot determine the sign of a frame norm in the declared domain: 2500*(625*r**4 - 62275*r**2 + 125000*r - 81*u**4 - 22419*u**2)/(6295081*(25*r**2 + 9*u**2)). D",
+     "None"
+    ]
+   },
+   {
+    "a": "Taub-NUT",
+    "b": "ZV d=1",
+    "verdict": "UNDECIDED",
+    "why": [
+     "WALL: exceeded 600s",
+     "None"
+    ]
+   }
+  ],
+  "duplicates": [],
+  "undecided": [
+   [
+    "Kerr",
+    "Kerr-Newman"
+   ],
+   [
+    "Kerr",
+    "Kerr-de Sitter"
+   ],
+   [
+    "Kerr",
+    "Taub-NUT"
+   ],
+   [
+    "Kerr",
+    "ZV d=1"
+   ],
+   [
+    "Kerr-Newman",
+    "Kerr-de Sitter"
+   ],
+   [
+    "Kerr-Newman",
+    "Taub-NUT"
+   ],
+   [
+    "Kerr-Newman",
+    "ZV d=1"
+   ],
+   [
+    "Kerr-de Sitter",
+    "Taub-NUT"
+   ],
+   [
+    "Kerr-de Sitter",
+    "ZV d=1"
+   ],
+   [
+    "Taub-NUT",
+    "ZV d=1"
+   ]
+  ]
+ },
+ "Y2": {
+  "pairs": [
+   {
+    "a": "bumpy eps=0.35",
+    "b": "ZV d=2",
+    "verdict": "UNDECIDED",
+    "why": [
+     "WALL: exceeded 600s",
+     "WALL: exceeded 600s"
+    ]
+   }
+  ],
+  "MN_note": "Manko-Novikov q=0.5 not attempted in v1: rotating + genuinely two-variable (r AND theta), the regime ansatz records as blowing up the algebra engine (killed 7.5h runs). Pre-registered Y3 wall; the bumpy-vs-MN pair therefore remains ASSUMED-distinct, stated as such."
+ }
+}

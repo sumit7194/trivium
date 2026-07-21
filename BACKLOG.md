@@ -199,3 +199,16 @@ duplicates? ZV δ=1 ≡ Schwarzschild is now proven — the question is whether 
 another pair) as independent. Outcomes are all findings: entries distinct ⇒ leg Q's 8/8 becomes
 proof-backed; a duplicate ⇒ an honest downward correction to our own headline; UNDECIDED on the heavy
 type-I entries (MN, bumpy) ⇒ the expression-swell wall, reported as such.
+
+**Phase 8b (2026-07-21) — leg Y: we audited our own headline.** Pointed ansatz's new CK at leg Q's catalog
+with all outcomes pre-declared equally acceptable. **Y0 PASS** — the bridge's own ZV δ=1 construction is
+byte-identically Schwarzschild (certificate matches ansatz §116 exactly, reached from a different
+construction: a real cross-check of their new instrument). **No duplicate found**, so no downward
+correction. **7/10 integrable pairs now rigorously proven distinct** via order-0 Ricci/Segre invariants
+(post-hoc amendment, labelled as such); 3 vacuum-vs-vacuum pairs open. **The exposed pair (bumpy vs MN,
+both rotating quadrupole deformations) is UNTESTED** — the pre-registered wall — so leg Q's "three
+independent non-integrable classes" is amended today to read as an explicit assumption. Second finding:
+the wall is **chart-relative** — the same procedure finishes ZV δ=1 in 5.9 s and Schwarzschild in 1.6 s,
+but walls at 600 s on our rational-u Kerr-form entries: walls-are-instrument-relative, symbolic-algebra
+edition. Correctness ledger: our own calling bug (tuple-return + Q-predicate domains) caught because the
+failures came back in 0.1–20 s instead of hitting the budget.
