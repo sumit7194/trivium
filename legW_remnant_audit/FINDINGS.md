@@ -256,3 +256,80 @@ The lesson stands and sharpens: **v1's process was wrong even though its answer 
 corrections were confidently wrong twice while sounding more rigorous each time.** Being the one who says
 "actually, let me check" is not the same as having checked. The only pass that settled anything was the one
 that read all 33 pages.
+
+---
+
+## RE-AUDIT v5 (2026-07-22) — independent second audit; 8 arithmetic errors + 1 structural failure
+
+An **independent Claude session** was given the v4 findings and re-derived everything from the Springer
+full text without access to this session's work. It confirmed items 1–3, inferred item 4 by proxy, and
+**found four further arithmetic errors and one structural failure**. Every claim below was then
+**re-verified here against the PDF** (`code/verify_crosscheck.py`) before being recorded — the second
+audit is corroboration, not authority.
+
+### Confirmed arithmetic errors (8)
+
+| # | where | paper prints | correct | off by | note |
+|---|---|---|---|---|---|
+| 1 | **Eq. 20, p.8** (+ abstract, Concl. 1) | 9×10⁻⁴¹ kg | 8.84×10⁻⁴² kg | **10×** | mantissa exact |
+| 2 | **Eq. 25, p.9** | 10⁻³ eV | 4.96×10⁻⁶ eV | **202×** | and 1000× off Eq. 17, which it claims to match |
+| 3 | **Eq. 49, p.19** | 6.05×10¹⁵ GeV | 6.05×10³⁵ GeV | **10²⁰** | mantissa exact |
+| 4 | **Eq. C.7, p.31** | 8π²×2.5×10³³ | 8π²×6.05×10⁶⁶ = 4.78×10⁶⁸ | — | uses the **unsquared** ratio |
+| 5 | **Eq. 15, p.7** | 1.35×10⁻³² | 1.355×10⁻³⁴ | **10²** | mantissa exact |
+| 6 | **Eq. 22, p.8** | r₄/ℓ_Pl ≃ 2.4×10³³ | 2.44×10³ | **10³⁰** | 2.4×10³³ is **M_Pl/M_res** (Eq. 48) — a quantity transplanted from another equation |
+| 7 | **Eq. 45, p.18** | exp(−10⁶⁹) | 64π³×6.05×10⁶⁶ = 1.2×10⁷⁰ | ~12× | order-of-magnitude claim; mild |
+| 8 | **§2.6 ΔS, p.10** | 10⁻²⁹ | 3.43×10⁻²⁷ | ~343× | |
+
+**Eq. C.7 is now directly confirmed** — the second audit could not see it (Springer's HTML truncates
+mid-Appendix C) and inferred it from the body's three inconsistent decay rates. This session has the PDF:
+p.31 reads verbatim *"Γ ∼ exp(−S_inst) ∼ exp(−8π² × 2.5 × 10³³) = exp(−2 × 10³⁵)"*, and 2.5×10³³ is
+M_Pl/M_res, not its square. The paper states this one quantity **three times with three values**:
+exp(−10⁶⁹) (Eq. 45), exp(−6×10⁶⁶) (§7.1.3), exp(−10³⁵) (Eq. C.7 / §7.4 item 5).
+
+**The pattern:** in items 1, 3, 5, 6 the **mantissa is exactly right and only the exponent is wrong**. That
+is the signature of arithmetic performed correctly and then mis-transcribed — not of misunderstood physics.
+
+### Item 3 is deeper than a typo — two incompatible definitions of r₄
+
+The second audit's sharpest catch. §7.1.4 uses `r₄ ~ ⟨τ₀⟩/M_Pl²`, which gives **r₄ = 3.26×10⁻⁵² m**.
+Appendix A (Eq. A.13) derives **r₄ = 3.9×10⁻³² m**. The ratio is **1.196×10²⁰** — exactly the factor by
+which Eq. 49 fails. So the 10²⁰ is not a typo; it is two mutually inconsistent definitions of the same
+quantity. And the §7.1.4 version is the one promoted to **Conclusions item 4 as the paper's "falsifiable
+prediction"** (`r₄² ~ ⟨τ₀⟩²/M_Pl²`) — i.e. the flagship prediction rests on the relation that contradicts
+the appendix which allegedly derives it.
+
+### The structural failure — Appendix B does not derive what it claims
+
+This is larger than all the arithmetic combined, and it sits under the paper's central claim.
+
+- **Eq. B.8:** `ln Ω = (π/3)⟨τ₀⟩³/M_Pl³` = **8.59×10⁻⁵¹** (paper prints 8.6×10⁻⁵¹ — matches).
+- **Eq. B.9:** asserts this **equals** `4π M_BH²/M_Pl²` — the Bekenstein–Hawking entropy.
+
+Two independent problems, both verified here:
+
+1. **Numerically false.** With the paper's own M_res, `4π M_res²/M_Pl²` = **2.08×10⁻⁶⁶** (paper prints
+   2.1×10⁻⁶⁶). B.8 and B.9 differ by **4.1×10¹⁵**.
+2. **Structurally impossible.** B.8 scales as `⟨τ₀⟩³/M_Pl³`; the target scales as `⟨τ₀⟩⁴/M_Pl⁴` under the
+   paper's own M_res relation — *different powers*. More fundamentally, **M_BH appears nowhere in
+   B.1–B.8**: the cavity radius (B.3) is `⟨τ₀⟩/M_Pl²` and the cutoff (B.6) is `M_Pl`, both fixed constants.
+   A derivation containing only constants produces a **single fixed number** and cannot scale with
+   progenitor mass. The step B.8 → B.9 silently replaces M_res with M_BH.
+
+Since matching Bekenstein–Hawking entropy *is* the paper's claim to resolving the information paradox, the
+microscopic derivation does not establish the result it is presented as establishing. **Stated at its
+proper strength:** the derivation *as printed* contains no M_BH dependence and so cannot yield a
+mass-dependent entropy. Whether the authors have an unwritten argument supplying it is unknown to us — which
+is why this belongs in correspondence as a **question**, not a verdict.
+
+### What is clean
+
+Eqs. 59–62 (solar-mass qubit count) verify exactly (1.515×10⁷⁷, reproduced to 0.02%), and Eqs. 28/29 are
+consistent with Appendix A's r₄. The derivational logic of §2 and §6 is sound; the failures are
+concentrated in transcription, and in Appendix B's final step.
+
+### Method note
+
+This is the family's cross-validation pattern applied to an external target: two independent audits, no
+shared work, each re-verifying the other before recording. The second audit corrected the first's
+*coverage* (four missed errors, one missed structural failure); this session corrected the second's one
+*gap* (Eq. C.7, unreachable in HTML). Neither was taken on trust.
