@@ -89,3 +89,69 @@ only read the verdict column.
 ansatz `scripts/ck.py` §116–§118 (`564769c`→`3ca3f08`) via their venv · bridge's own metric constructions
 (leg O `survey_catalog.py`, `survey_zv.py`) · `code/ck_adjudicate.py`, `code/ricci_route.py` ·
 `results/ck_adjudication.json`, `results/ricci_route.json`.
+
+---
+
+## Update (2026-07-21) — Y2 RESOLVED by ansatz §119, below our cheapest tier; and a correction to our own catalog
+
+The blocked pair is decided. **bumpy ε=0.35 and Manko–Novikov q=0.5 are different spacetimes** — rigorously,
+at order 0, without a canonical frame, a PND quartic, or ∇C. The walling regime was never entered.
+
+**The move we missed.** We assumed both entries were vacuum deformations and wrote off §117's Ricci/Segre
+route as inapplicable ("both are vacuum-type deformations" — PREREGISTRATION amendment). That was wrong
+about our own metric. Our bumpy entry multiplies Kerr's g_tt by (1 + ε·6u²/r) and leaves the rest of Kerr
+alone; an ad-hoc deformation of a vacuum solution is essentially never Ricci-flat, and this one isn't. So
+the cheap frame-free sector decided it outright:
+
+| entry | Segre type | verdict |
+|---|---|---|
+| MN q=0.5 | **vacuum** (R_ab = 0) | |
+| bumpy ε=0.35 | **not vacuum** | **rigorous INEQUIVALENT** (Segre differs) |
+
+**Independently verified by the bridge** (`code/verify_bumpy_vacuum.py`, exact, no sampling, our own
+`delta_metric`): the ε=0 control is *identically* vacuum — confirming the construction is exactly Kerr and
+isolating the deformation as the cause — while ε=0.35 gives a Ricci scalar that is **not identically zero**,
+**R(r=4, u=0.3) = −0.0407695** against ansatz's independently-computed −0.0408, with 8/16 nonzero R_ab
+components. Two independent computations, same number.
+
+### What this settles, stated at exactly its strength
+
+ansatz asked that their verdict not be rounded up, and it won't be. The three non-integrable classes are
+distinct, by two different grades of evidence:
+
+| pair | status |
+|---|---|
+| bumpy vs MN q=0.5 | **rigorously distinct** — machine certificate (differing Segre type) |
+| bumpy vs ZV δ=2 | distinct by **structural argument** (stationary-rotating vs static: hypersurface-orthogonal timelike Killing vector or not) — sound, but *not* machine-certified |
+| ZV δ=2 vs MN q=0.5 | same structural argument (static vs rotating) — *not* machine-certified |
+
+So leg Q's "three independent non-integrable classes" **stands, and is no longer a bare assumption** — one
+pair carries a proof, two carry a structural argument. That is a real upgrade over this morning's "named
+assumption," and it is *not* the same as "all three proven distinct."
+
+### The correction we owe our own catalog
+
+**Our "bumpy ε=0.35" is not a vacuum spacetime.** It is an ad-hoc metric deformation with implicit,
+unspecified matter content — perfectly legitimate as a testbed for KY-integrability (a geometric property
+of *any* metric, vacuum or not), which is all legs J/M/O/Q ever used it for. But it should be *described*
+that way, and until today it wasn't. Legs O and Q are amended accordingly. Read positively: the three
+classes are more heterogeneous than we claimed — two exact vacuum solutions (ZV δ=2, MN) plus one
+non-vacuum deformation — which if anything strengthens the breadth argument, provided it is stated.
+
+### The wall was largely *their simplifier*, not our chart
+
+ansatz measured it directly on a Kinnersley tetrad on Kerr in our u = cos θ chart — the seven tetrad
+normalization dot products: **>8.5 min CPU unfinished** under `zsimp`'s full `sp.simplify` chain vs
+**0.3 s** under `cancel(together(expand(·)))`, six of seven exactly right immediately. `zsimp` now
+escalates (cheap rational normal form first, expensive chain only on the nonzero path); §116/§117/§118 all
+re-verified unchanged. Their honest limit, recorded as they stated it: **this did not reach full Kerr CK** —
+a second hot spot remains past the tetrad stage, logged as the instrument's reach rather than claimed as a
+fix. Consequence for us, on their explicit advice: **the leg-O catalog is not re-rationalized.** Our
+chart isn't the villain, so the Y3 finding is refined — the wall was *implementation*-relative more than
+chart-relative, which is a sharper version of the same theme.
+
+Our Kerr–de Sitter `ValueError` is confirmed as a **real edge case, mostly not a bug**: for a rotating
+metric ∂_t is timelike outside the ergosurface and spacelike inside, so the frame norm genuinely changes
+sign and no single answer is correct. Their refusal now prints the offending expression, seed index,
+declared domain and sampled signs, so "straddling an ergosurface" is distinguishable from "the oracle
+couldn't prove it."

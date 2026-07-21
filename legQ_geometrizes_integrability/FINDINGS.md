@@ -135,3 +135,26 @@ The φ = 1.0 correlation is unaffected either way — it is computed per-entry a
 a duplicated entry would not flip any cell. What a duplicate would reduce is the *breadth* claim ("across
 three independent classes"), which is why that sentence now carries this caveat. See
 `legY_ck_adjudication/FINDINGS.md`.
+
+---
+
+## Amendment 2 (2026-07-21, same day) — the assumption is discharged for one pair, and a description corrected
+
+[Supersedes the "named assumption" status of Amendment 1 for the bumpy-vs-MN pair.]
+
+ansatz §119 decided the pair leg Y could not reach, using the cheap frame-free sector rather than full CK:
+**bumpy ε=0.35 and Manko–Novikov q=0.5 are different spacetimes**, because MN is vacuum (R_ab = 0) and
+**bumpy is not** — a differing Segre type is a rigorous INEQUIVALENT. The bridge verified the non-vacuum
+claim independently and exactly (R(r=4, u=0.3) = −0.0407695 vs ansatz's −0.0408; ε=0 control identically
+vacuum). So this leg's **"three independent non-integrable classes" stands**, with its evidence now
+explicit rather than assumed:
+
+- bumpy vs MN — **rigorously distinct** (machine certificate);
+- bumpy vs ZV δ=2, and ZV δ=2 vs MN — distinct by **structural argument** (static vs stationary-rotating),
+  sound but not machine-certified.
+
+**Correction to a description in this leg and leg O:** the entry called "bumpy ε=0.35" is **not a vacuum
+spacetime** — it is an ad-hoc deformation (Kerr's g_tt × (1 + ε·6u²/r)) carrying implicit, unspecified
+matter content. That is legitimate for everything it was used for here (KY-integrability is a property of
+any metric), but the class should be described as *two exact vacuum solutions (ZV δ=2, MN) plus one
+non-vacuum deformation*, not three vacuum deformations. See `legY_ck_adjudication/FINDINGS.md`.

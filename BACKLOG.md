@@ -212,3 +212,17 @@ the wall is **chart-relative** — the same procedure finishes ZV δ=1 in 5.9 s 
 but walls at 600 s on our rational-u Kerr-form entries: walls-are-instrument-relative, symbolic-algebra
 edition. Correctness ledger: our own calling bug (tuple-return + Q-predicate domains) caught because the
 failures came back in 0.1–20 s instead of hitting the budget.
+
+**Phase 8c (2026-07-21) — leg Y closed by ansatz §119, and a correction to our own catalog.** The pair leg
+Y couldn't reach is decided **below our cheapest proposed tier**: bumpy ε=0.35 vs MN q=0.5 are different
+spacetimes because **MN is vacuum and our bumpy is not** — differing Segre type = rigorous INEQUIVALENT, no
+canonical frame or ∇C needed. Bridge verified independently and exactly (R(4,0.3) = −0.0407695 vs their
+−0.0408; ε=0 control identically vacuum). leg Q's "three independent classes" **stands** — one pair proven,
+two by structural (static-vs-rotating) argument, stated at exactly that strength per ansatz's request not to
+round the verdict up. **Correction owed and filed:** our "bumpy" entry is an ad-hoc non-vacuum deformation,
+not a vacuum solution — legs O/Q amended to describe the class as two exact vacuum solutions + one
+non-vacuum deformation. **Y3 refined:** the wall was largely ansatz's *simplifier*, not our chart (their
+measurement: 8.5 min unfinished under the full simplify chain vs 0.3 s under cancel(together(expand))) —
+zsimp now escalates; per their explicit advice the leg-O catalog is **not** re-rationalized. Their honest
+limit stands: full Kerr CK still unreached, a second hot spot past the tetrad stage. Our KdS ValueError is
+a genuine ergosurface edge case (∂_t changes character), now with diagnostics.
