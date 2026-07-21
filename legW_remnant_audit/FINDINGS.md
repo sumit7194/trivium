@@ -125,3 +125,76 @@ citations should never have been written as quotations in the first place.
   lighter than published).
 - **Our evidence chain was contaminated** by fabricated citations, published in FINDINGS and a commit
   message for one day before being caught by a challenge from the user.
+
+---
+
+## RE-AUDIT v3 (2026-07-22) — I over-corrected. Eq. (20) is real, W1a is UN-VOIDED, and there is a SECOND slip.
+
+The v2 re-audit above contains **my own error**, and it is the mirror image of v1's. v1 trusted an extraction
+without reading the paper. v2 then read the paper — but only pages 1–4, 9–10, 15–17 and 24–26 — and from
+that **partial** read declared: *"The paper quotes no GeV value for M_res anywhere."* That statement is
+**false**. Page 8, which v2 never opened, contains Eq. (20):
+
+> *"Using the geometric relation M_res = ⟨τ₀⟩²/M_Pl with ⟨τ₀⟩ = 246 GeV and M_Pl = 1.22 × 10¹⁹ GeV gives*
+> **M_res = (246 GeV)²/(1.22 × 10¹⁹ GeV) ≃ 5 × 10⁻¹⁵ GeV ≃ 9 × 10⁻⁴¹ kg."**   (Eq. 20, p.8)
+
+**Both values, in one equation, on one line.** So v1's core framing — *the paper's two quoted masses are
+mutually inconsistent* — was **correct**, and closer to the truth than my correction of it. Gate **W1a is
+UN-VOIDED**: it tested a quote that genuinely exists (the paper prints ≃5×10⁻¹⁵ GeV; v1's "4.96×10⁻¹⁵" was
+the extraction being more precise than the source). Only v1's *equation number* for it ("eq. 47") was wrong.
+
+### Slip 1 — Eq. (20): the mantissa is right, one exponent digit is wrong
+
+| quantity | value | status |
+|---|---|---|
+| 246²/1.22×10¹⁹ | 4.9603×10⁻¹⁵ GeV | paper prints **≃5×10⁻¹⁵ GeV** — **correct** |
+| that value in kg | 8.84×10⁻⁴² kg → rounds to **9×10⁻⁴² kg** | paper prints **≃9×10⁻⁴¹ kg** — **off by 10.18×** |
+
+The forensics are now exact, and cleaner than either hypothesis entertained earlier: **the mantissa "9" is
+precisely right, and only the exponent is wrong — −42 printed as −41.** The number it converts *from* is
+correct and printed on the same line. It is a one-character unit-conversion slip, not a calculation error
+and not a dropped zero.
+
+### Slip 2 — Eq. (25) vs Eq. (17): the same quantity, in a third unit, wrong by ~200×
+
+Eq. (17), p.7: *"m_phys ≃ 1 × 10⁻¹⁵ GeV"* — that is **10⁻⁶ eV**.
+Eq. (25), p.9: *"m_φ ~ v²/M_Pl ≃ 10⁻³ eV"*, described in the same sentence as *"the same order of magnitude
+as the torsion-Higgs mass computed in Eq. (17)."*
+
+But v²/M_Pl = 4.96×10⁻¹⁵ GeV = **4.96×10⁻⁶ eV**. So:
+
+- the paper's **claim** (same order as Eq. 17 = 10⁻⁶ eV) is **correct** at the true value 5×10⁻⁶ eV;
+- the paper's **printed number** (10⁻³ eV) is **202× larger** and is *not* the same order as Eq. (17),
+  contradicting its own sentence.
+- A GeV→eV conversion using 10¹² instead of 10⁹ reproduces the printed figure (4.96×10⁻³ ≈ 10⁻³ eV).
+
+### The unifying finding
+
+**Both slips are unit conversions of the same, correctly-computed quantity.** The paper derives
+v²/M_Pl = 5×10⁻¹⁵ GeV and states it correctly (Eq. 20). It then converts that one number into kg (Eq. 20,
+wrong by 10×) and into eV (Eq. 25, wrong by ~200×). The underlying physics number is right in both places;
+only its expression in other units fails. That is why the errors survived review: the derivation is sound
+and the primary quantity is correct — the failures are in the last inch.
+
+Both are also **self-evident from the paper alone**: Eq. (20) contradicts itself across a single line, and
+Eq. (25) contradicts Eq. (17) via the paper's own explicit claim of order-of-magnitude equality. No external
+convention or assumption is needed to see either.
+
+### Correctness ledger — the bridge's second error in this leg, and its lesson
+
+v2's failure was *partial reading presented as complete verification*. Having caught v1 for not reading the
+source, v2 read four page-ranges out of 33, found no GeV value in them, and wrote a universal negative
+("nowhere in the paper"). The correct scope for that sentence was "not in the pages I read."
+
+Standing policy, extended: **a negative claim about a document requires reading the document, not sampling
+it.** Positive claims can be made from a located quote; negative claims ("the paper never says X") require
+coverage, or must be stated with their actual scope. Both v1 and v2 erred in the same direction — toward the
+conclusion we already believed.
+
+### Net after three passes
+
+- **The finding is confirmed, and is now larger than first reported:** two independent unit-conversion slips
+  (Eq. 20, factor 10; Eq. 25, factor ~200), both provable from the paper's own printed values, neither
+  touching the model's mechanism.
+- **The bridge erred twice getting here** — once by trusting an extraction, once by over-correcting from a
+  partial read — and both errors are recorded above rather than quietly rewritten.
