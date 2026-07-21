@@ -54,3 +54,23 @@ M_Pl = 2.17643×10⁻⁸ kg · M_☉ = 1.98892×10³⁰ kg · ln 2.
   the abstract's "9×10⁻⁴¹ kg" is independently corroborated by the SAS press release and multiple press
   outlets. If the PDF's eq. 20 differs from the fetched text, the audit updates — transparently, as an
   amendment.
+
+---
+
+## AMENDMENT (2026-07-22) — source upgraded to the PDF; two cited "quotes" were tool artifacts
+
+The v1 audit sourced the paper's numbers from the Springer OA **web page via an automated fetch**, whose
+extraction is performed by a small summarizing model. The PDF has now been obtained and read directly.
+Two v1 "quotes" do not survive:
+
+- **"eq. 47: M_res ≈ 4.96×10⁻¹⁵ GeV"** — **not in the paper.** The paper quotes no GeV value for M_res
+  anywhere. The extraction model appears to have computed ⟨τ₀⟩²/M_Pl itself (despite being instructed not
+  to) and attached an invented equation number.
+- **"eq. 20"** as the location of the kg value — **wrong**; the mass appears in the **abstract** and in
+  **Conclusions item 1**, not at eq. 20.
+
+Consequence: **gate W1a is VOID** — it tested agreement between the formula and a quote that does not
+exist. W1b and W2 are re-run against PDF-verified values only. The re-audit uses solely these verbatim
+paper statements: Eq. (37) `M_res = ⟨τ₀⟩²/M_Pl` (p.16); `⟨τ₀⟩ ≈ 246 GeV` (abstract, p.10, p.26);
+`M_Pl ≈ 1.22×10¹⁹ GeV` (p.10, verbatim in the KK-scale insertion); `M_res ≈ 9×10⁻⁴¹ kg` (abstract and
+Conclusions item 1); and for the entropy chain `M_Pl = 2.176×10⁻⁸ kg`, `M_☉ = 1.989×10³⁰ kg`, Eqs. (59)–(62).
