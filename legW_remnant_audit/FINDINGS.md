@@ -198,3 +198,61 @@ conclusion we already believed.
   touching the model's mechanism.
 - **The bridge erred twice getting here** — once by trusting an extraction, once by over-correcting from a
   partial read — and both errors are recorded above rather than quietly rewritten.
+
+---
+
+## RE-AUDIT v4 (2026-07-22) — ALL 33 PAGES READ. v1 was right; my v2/v3 accusations were false.
+
+The full PDF has now been read cover to cover (pp. 1–33). The record must be corrected **in v1's favour**,
+and against my own two "corrections".
+
+### Retraction: the extraction never hallucinated
+
+**Eq. (47) exists, on p.19, and reads exactly:**
+
+> *"Given ⟨τ₀⟩ ≈ 246 GeV and M_Pl ≈ 1.22e19 GeV, the remnant mass is:*
+> **M_res = (≈246 GeV)²/(≈1.22e19 GeV) ≈ 4.96e−15 GeV."   (47)**
+
+v1 reported "eq. 47 gives 4.96×10⁻¹⁵ GeV". That is **verbatim correct** — the equation number, the value,
+and all three significant figures. **v2's claim that the extraction "computed the value itself and attached
+an invented equation number" is retracted in full**, as is v3's residual claim that "only the equation
+number was wrong." Neither was true. The tool read the paper correctly; I accused it of fabrication on the
+basis of not having read pp. 8 and 19.
+
+**Gate W1a is restored, PASS.** The paper prints a GeV value in *two* places (Eq. 20 p.8, Eq. 47 p.19), both
+correct, and a kg value that does not follow from either.
+
+### The four checkable statements, all located
+
+| # | where | paper prints | correct value | status |
+|---|---|---|---|---|
+| 1 | **Eq. 47, p.19** | M_res ≈ 4.96×10⁻¹⁵ GeV | 4.9603×10⁻¹⁵ GeV | ✅ correct |
+| 1 | **Eq. 20, p.8** | "≃ 5×10⁻¹⁵ GeV ≃ **9×10⁻⁴¹ kg**" | 5×10⁻¹⁵ GeV = 8.91×10⁻⁴² → **9×10⁻⁴² kg** | ❌ **10.2×**; mantissa right, exponent −42→−41 |
+| 2 | **Eq. 25, p.9** vs **Eq. 17, p.7** | m_φ ~ v²/M_Pl ≃ **10⁻³ eV**, "same order as Eq. 17" | v²/M_Pl = 4.96×10⁻⁶ eV; Eq. 17 = 10⁻⁶ eV | ❌ **202×**; contradicts its own Eq. 17 |
+| 3 | **Eq. 49, p.19** | "(1.22×10¹⁹)²/246 ≈ **6.05×10¹⁵ GeV**" | 6.050×10³⁵ GeV | ❌ **10²⁰**; mantissa right, exponent off by 20 |
+| 4 | **Eq. C.7, p.31** vs **Eq. 48, p.19** | S_inst = 8π²·**2.5×10³³** → exp(−2×10³⁵) | Eq. 48 gives (M_Pl/M_res)² = 6.05×10⁶⁶ → 4.78×10⁶⁸ | ❌ uses the **unsquared** ratio; also contradicts Eq. 45 (exp(−10⁶⁹)) |
+
+Items 3 and 4 are **new** and were invisible until the appendices were read. Note the pattern in 1 and 3:
+in both, the **mantissa is exactly right and only the exponent is wrong** — the arithmetic was done
+correctly and mis-transcribed. Item 4 is a substitution slip (ratio for ratio-squared) and is physically
+inconsequential (every value is an effectively-zero decay rate), but it contradicts two other equations in
+the same paper.
+
+Item 3's physical value is *not* in doubt: Eq. 21 (p.8), Eq. 29 (p.10) and Eq. C.8 (p.31) all give
+M_KK ≈ 5–8.6×10¹⁵ GeV consistently. Only the printed division in Eq. 49 fails to evaluate to its own result.
+
+### Correctness ledger — final accounting for this leg
+
+Three passes, and **the bridge's errors were both mine, not the tool's**:
+
+- **v1** (extraction-sourced): conclusion correct, citation correct. Its only real flaw was *epistemic* —
+  it asserted the paper's contents without having read the paper, and was right by luck of a good extraction.
+- **v2**: read 4 page-ranges of 33, found no GeV value in them, and published the universal negative "the
+  paper quotes no GeV value anywhere" plus an accusation of tool fabrication. **Both false.**
+- **v3**: corrected part of v2 but still asserted the "eq. 47" citation was invented. **Also false.**
+- **v4** (this): full read. v1 vindicated; two further errors found in the paper.
+
+The lesson stands and sharpens: **v1's process was wrong even though its answer was right, and my
+corrections were confidently wrong twice while sounding more rigorous each time.** Being the one who says
+"actually, let me check" is not the same as having checked. The only pass that settled anything was the one
+that read all 33 pages.
