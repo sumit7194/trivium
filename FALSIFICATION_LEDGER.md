@@ -27,7 +27,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 |----|---|---|---|
 | K1 | **"S_rel = 2π×boost-energy holds for EVERY localized excitation of the vacuum"** (not just coherent states). | leg X machinery + a **squeezed** packet (still Gaussian, so exactly computable): S_rel = Δ⟨K⟩ − ΔS, and squeezing makes ΔS ≠ 0. | The measured deviation IS the entanglement-entropy change ΔS — killing K1 *measures* the correction term and shows why coherent states are special in Longo's theorem. **→ KILLED 2026-07-23, see below.** |
 | K2 | **"The KK mass tower determines the hidden geometry"** ("you can hear the shape of the hidden drum"). | Compute spectra of the Gordon–Webb–Wolpert **isospectral drums** (two different shapes, provably identical spectra) with our FD Laplacian. Same tower, different geometry ⇒ dead. | A worked demonstration of spectral non-uniqueness on our own instrument — and it sets up G1 (below), which is the genuinely interesting sequel. |
-| K3 | **"Clausius δQ = TδS holds exactly at every patch size"** — the **lattice analog of the localization postulate**. | leg X machinery: compare modular-energy flux vs entropy change for wavepackets crossing wedge sub-patches of shrinking size; look for entropy-production corrections. | A measured curve "Clausius violation vs patch size" on a lattice — a home-built, honest *probe of the exact link both emergent-gravity papers assume*. Toy-model only, and labeled so. |
+| K3 | **"Clausius δQ = TδS holds exactly at every patch size"** — the **lattice analog of the localization postulate**. | leg X machinery: compare modular-energy flux vs entropy change for wavepackets crossing wedge sub-patches of shrinking size; look for entropy-production corrections. | A measured curve "Clausius violation vs patch size" on a lattice — a home-built, honest *probe of the exact link both emergent-gravity papers assume*. Toy-model only, and labeled so. **→ KILLED 2026-07-23, see below.** |
 | K4 | **"Every deformation of a vacuum metric that keeps the vacuum character of its invariants is itself vacuum."** | Already effectively dead via §119 (our own bumpy entry!); formalize: sample ad-hoc g_tt-multiplier deformations, compute Ricci exactly. | The obstruction is instructive: ad-hoc metric surgery essentially never preserves Ricci-flatness — a warning theorem for every "bumpy BH" paper that skips the check. |
 | K5 | **"A neural net trained on projections can learn ONLY the spectrum"** (i.e. behavioral data carries no more than eigenvalues). | tabula: train on projections from the two GWW drums (same spectrum). If the net distinguishes them, K5 is dead — eigen*functions* leak through projections. | Sharp statement of *what* representation learning actually accesses — the family's legibility program, sharpened by a falsification. |
 | K6 | **"Static one-variable ansatz metrics are always Petrov type D or O."** | ansatz: construct in-family counterexample or extract why the ansatz forces D/O (CK Petrov module, cheap). | Either a counterexample metric or a small classification theorem for the ansatz world ansatz actually lives in. |
@@ -68,7 +68,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 
 1. ~~**K1** (squeezed-state kill — days, all machinery exists, measures Longo's correction term)~~ **✓ DONE 2026-07-23 — KILLED** (obstruction: cross-cut entanglement; see Results log)
 2. ~~**M2** (area-law coefficient — the S = A/4 probe, direct sequel to the emergent-gravity thread)~~ **✓ DONE 2026-07-23 — KILLED** (κ ranges 0.30–0.51 across regulators, exponent stays 2; see Results log)
-3. **K3** (lattice localization probe — aims at the ASSUMED link itself; the most philosophically loaded)
+3. ~~**K3** (lattice localization probe — aims at the ASSUMED link itself; the most philosophically loaded)~~ **✓ DONE 2026-07-23 — KILLED** (entropy production Σ=S_rel>0 at every patch size, near-equilibrium; see Results log)
 4. **G2** (adversarial legibility — needs an ansatz ask to construct the attack metrics)
 5. **K2 → K5 → M4** (the isospectral-drums arc — one build, three postulates)
 6. **G6** (CK practical termination — cheap, immediately useful to the new tool)
@@ -120,6 +120,27 @@ pre-registration frozen before code; Srednicki radial decomposition, float64).
 - **Honest scope:** a lattice fact (entanglement coefficient is scheme-dependent), **not** a statement about a
   black hole's actual S = A/4. Well-known result (Srednicki; Bombelli et al; Solodukhin); no novelty claimed —
   the value is the calibrated, control-gated, home-built separation of universal-from-scheme.
+
+### K3 — `KILLED (obstruction: entropy production Σ=S_rel>0 at every patch size; near-equilibrium)` · 2026-07-23
+
+Full write-up: [falsification/K3_clausius_patch/FINDINGS.md](falsification/K3_clausius_patch/FINDINGS.md)
+(pre-registration frozen before code; reuses K1; mpmath dps=60).
+
+- **Verdict: KILLED.** The patchwise modular first law Δ⟨K_ℓ⟩ = ΔS_ℓ (the relative-entropy form of Clausius
+  δQ=TδS) fails at **every** patch size for a squeezed excitation: the entropy production
+  **Σ_ℓ = S_rel,ℓ > 0**, rising from 0.45·δQ (ℓ=1) to a saturated 0.71·δQ. All five gates pass.
+- **The measured curve (the ledger's ask):** Σ_ℓ is the patch's relative entropy — **monotone ↑ in ℓ** (a
+  direct check of V1, relative-entropy monotonicity) and **saturating** once the patch covers the excitation.
+- **The physics of the violation:** it is a genuine **near-equilibrium, second-order** quantity — Σ/δQ → 0 as
+  the excitation strength r → 0 (patchwise Clausius holds to good fractional accuracy for weak driving,
+  degrades to O(1) for strong). The **coherent** case is degenerate: ΔS=0 ⇒ Σ=δQ (Longo:
+  S_rel(coherent)=Δ⟨K⟩), bracketing the extremes with the squeezed case.
+- **Honest scope (frozen):** this is the **entanglement/modular first law**, the lattice witness of the
+  *localization assumption* — **not** Jacobson's horizon-*area* Clausius (needs S=A/4, a separate assumed
+  link). Coherent flux being the maximal-Σ case here is not a failure of Jacobson (his δS is δA/4G, not the
+  matter ΔS). The payout is a home-built, quantitative statement of *why* localization is assumed, not proven.
+- **Open extension:** the a→0 continuum limit at fixed physical patch is under-determined by the reachable
+  lattice points; left as future work (needs the bigger instrument — feeds G4/G7). Not claimed.
 
 ## What this ledger is not
 
