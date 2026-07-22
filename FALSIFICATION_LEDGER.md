@@ -50,7 +50,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 | ID | Postulate (precise) | Attack | Honest odds |
 |----|---|---|---|
 | M1 | **"No closed-form equal-spin charged rotating black hole exists in plain 5D Einstein–Maxwell"** (the famous gap; CCLP needs the Chern–Simons term). Postulated in the *kill-me* direction: we hunt the solution; failure = extract the obstruction. | ansatz: equal spins collapse it to one variable — inside the walls. Rational-form family hunt; if dry, obstruction extraction: *why* does the CS term make it solvable? (Already Tier-2 on quantum's roadmap; bounded: one battery.) | Solution: very low (experts suspect none). Obstruction theorem: decent — and that's the real prize. |
-| M2 | **"The Srednicki area-law coefficient is independent of regulator scheme"** (lattice vs momentum cutoff vs smearing). | leg X machinery in 3D: entanglement entropy of spheres, three regulator schemes, compare coefficients. | Expected KILL (coefficient is famously scheme-dependent) — but a clean three-scheme demonstration, with the area-*scaling* invariant across all three, is the sharpest home-built statement of *exactly where* S = A/4's "1/4" hides. Direct sequel to today's discussion. |
+| M2 | **"The Srednicki area-law coefficient is independent of regulator scheme"** (lattice vs momentum cutoff vs smearing). | leg X machinery in 3D: entanglement entropy of spheres, three regulator schemes, compare coefficients. | Expected KILL (coefficient is famously scheme-dependent) — but a clean three-scheme demonstration, with the area-*scaling* invariant across all three, is the sharpest home-built statement of *exactly where* S = A/4's "1/4" hides. Direct sequel to today's discussion. **→ KILLED 2026-07-23, see below.** |
 | M3 | **"Every consistent 6D→4D truncation in the metric-only T² family embeds §111's 5D EMD islands"** (§112 showed it for the diagonal slice; postulate full generality incl. dynamical χ). | ansatz: the flux-atlas machinery pointed at the truncation-classification question. | If TRUE with certificate: a tidy classification theorem for the family's own KK world. If killed: a genuinely new consistent island — prior-art sweep before any claim. |
 | M4 | **"The GWW isospectral pair becomes distinguishable at ANY nonzero coupling to a second field"** (spectral degeneracy is measure-zero fragile). | quantum/bridge: couple a probe field, perturbation theory + numerics on both drums; find the splitting or the protection mechanism. | Either way it sharpens K2/K5 into physics: *what does it take* for hidden geometry to become audible? |
 
@@ -67,7 +67,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 ## Recommended first volley (ordered by value-per-effort)
 
 1. ~~**K1** (squeezed-state kill — days, all machinery exists, measures Longo's correction term)~~ **✓ DONE 2026-07-23 — KILLED** (obstruction: cross-cut entanglement; see Results log)
-2. **M2** (area-law coefficient — the S = A/4 probe, direct sequel to the emergent-gravity thread)
+2. ~~**M2** (area-law coefficient — the S = A/4 probe, direct sequel to the emergent-gravity thread)~~ **✓ DONE 2026-07-23 — KILLED** (κ ranges 0.30–0.51 across regulators, exponent stays 2; see Results log)
 3. **K3** (lattice localization probe — aims at the ASSUMED link itself; the most philosophically loaded)
 4. **G2** (adversarial legibility — needs an ansatz ask to construct the attack metrics)
 5. **K2 → K5 → M4** (the isospectral-drums arc — one build, three postulates)
@@ -100,6 +100,26 @@ Full write-up: [falsification/K1_squeezed/FINDINGS.md](falsification/K1_squeezed
   orbit; displacement factorization across a factor) are standard modular-theory / Gaussian-QFT facts. No
   novelty claimed — this is a worked, Fock-certified demonstration + a clean localization of the hypothesis
   on the family's own instrument, which is exactly Tier K's stated payout.
+
+### M2 — `KILLED (obstruction: κ is regulator-dependent; the exponent is not)` · 2026-07-23
+
+Full write-up: [falsification/M2_arealaw/FINDINGS.md](falsification/M2_arealaw/FINDINGS.md) (calibrated by V2;
+pre-registration frozen before code; Srednicki radial decomposition, float64).
+
+- **Verdict: KILLED.** The 3D free-scalar entanglement area-law coefficient κ (S ≈ κ(R/a)²) takes three
+  clearly different values — **0.301 / 0.414 / 0.511 (51% spread)** — under three UV regulators (bare-NN
+  lattice / improved Symanzik stencil / higher-derivative smooth), while the **area-law exponent stays ≈ 2.0
+  in all three**. R1 reproduces Srednicki's κ ≈ 0.295 (anchor). All five gates pass.
+- **The payout — where the "1/4" hides:** the *exponent* (area law S ∝ R²) is regulator-invariant to ~2%
+  (real physics); the *coefficient* κ — the number that would have to equal 1/4G for S = A/4 — moves by tens
+  of percent with the UV regulator. A cutoff calculation cannot pin it down.
+- **Control makes it a measurement, not fitting noise (M2d):** a coordinate-only change (midpoint r_j=j−½,
+  *same* regulator) leaves κ fixed to 1.8% (0.296 vs 0.301), while a genuine regulator change moves it 51%.
+- **Method lesson banked:** the ℓ-sum converges slowly (tail ~ ℓ^{−2.6}); ℓ_max ≈ n undercounts κ by ~2×.
+  Fixed with summation to L₀=500 + analytic power-law tail; κ stable under L₀, n-window, and box-size N (M2e).
+- **Honest scope:** a lattice fact (entanglement coefficient is scheme-dependent), **not** a statement about a
+  black hole's actual S = A/4. Well-known result (Srednicki; Bombelli et al; Solodukhin); no novelty claimed —
+  the value is the calibrated, control-gated, home-built separation of universal-from-scheme.
 
 ## What this ledger is not
 

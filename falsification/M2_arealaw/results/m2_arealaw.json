@@ -1,0 +1,85 @@
+{
+ "N": 200,
+ "L0": 500,
+ "ns": [
+  15,
+  20,
+  25,
+  30,
+  35,
+  40
+ ],
+ "regulators": {
+  "R1 bare NN (Srednicki)": {
+   "kappa": 0.30142080771923396,
+   "exponent": 1.9614893460297838,
+   "c": 3.4778145654617805,
+   "S_ext": [
+    70.91757837329162,
+    124.11766117395224,
+    192.1296459593723,
+    274.9907855588853,
+    372.75925652814095,
+    485.52047820231644
+   ]
+  },
+  "R2 improved stencil": {
+   "kappa": 0.41386589904850435,
+   "exponent": 1.9344456552477016,
+   "c": 7.943986477984357,
+   "S_ext": [
+    100.51466198671014,
+    173.63326819310302,
+    266.9979126901248,
+    380.7155850021148,
+    514.932189581159,
+    669.8531491810022
+   ]
+  },
+  "R3 higher-deriv smooth": {
+   "kappa": 0.5106581368511789,
+   "exponent": 1.9688581993007077,
+   "c": 3.938948138716364,
+   "S_ext": [
+    119.09312312906434,
+    208.49304649845448,
+    323.00433961752026,
+    462.96818296463084,
+    628.9260069105841,
+    821.6732205466575
+   ]
+  }
+ },
+ "control_midpoint": {
+  "kappa": 0.29609683278593485,
+  "exponent": 2.00265648127956
+ },
+ "kappa_spread": 0.5120230250676416,
+ "kappa_min": 0.30142080771923396,
+ "kappa_max": 0.5106581368511789,
+ "M2a_anchor_pass": true,
+ "M2b_kill": true,
+ "M2c_universality_pass": true,
+ "M2d_control_pass": true,
+ "M2e_robustness": {
+  "L0=400": [
+   0.30216840522831157,
+   0.4155834035418905,
+   0.5174686172903613
+  ],
+  "drop n=15": [
+   0.30111770950902944,
+   0.41342778621388415,
+   0.5108624485916505
+  ],
+  "N=150": [
+   0.3023949678341056,
+   0.41530729182169007,
+   0.5105199342008199
+  ]
+ },
+ "M2e_ordering_stable": true,
+ "verdict": "KILLED",
+ "all_pass": true,
+ "summary": "M2 (KILLED): the 3D scalar entanglement area-law coefficient \u03ba = 0.301/0.414/0.511 for bare-NN/improved/higher-derivative regulators (51% spread), while the area-law exponent stays \u22482 in all three and a coordinate-only change leaves \u03ba fixed (control 0.296 vs 0.301). The '1/4' in S=A/4 lives in the regulator-dependent coefficient; the area law itself is universal. R1 reproduces Srednicki \u03ba\u22480.295."
+}
