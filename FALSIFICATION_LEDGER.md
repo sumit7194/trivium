@@ -59,7 +59,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 | ID | Postulate | Attack | Why bother |
 |----|---|---|---|
 | V1 | Relative entropy is monotone under region inclusion on our chain (proven in QFT). | leg X machinery, nested wedges. | If this *fails* we have a bug, not a discovery — the ultimate canary test. |
-| V2 | The 1+1 massless chain's interval entropy runs as (c/3)ln L with c = 1. | Covariance-matrix entropy vs L. | Calibrates the entropy instrument against an exact CFT result before M2 trusts it in 3D. |
+| V2 | The 1+1 massless chain's interval entropy runs as (c/3)ln L with c = 1. | Covariance-matrix entropy vs L. | Calibrates the entropy instrument against an exact CFT result before M2 trusts it in 3D. **→ SURVIVES 2026-07-23: c=0.977, R²=1.000000, gapped control saturates, float64=mpmath to 5e-9. [falsification/V2_cft_calibration](falsification/V2_cft_calibration).** |
 | V3 | 2D flat tori ARE determined by their spectrum (a real theorem — the converse of K2's kill). | Verify numerically across random T² moduli: no spurious isospectral pairs at resolution. | Bounds the instrument's resolution and completes the "hearing shapes" story honestly: audible in 2D-flat, inaudible for drums. |
 
 ---
