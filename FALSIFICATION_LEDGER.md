@@ -25,7 +25,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 
 | ID | Postulate (precise) | Attack | What the kill yields |
 |----|---|---|---|
-| K1 | **"S_rel = 2π×boost-energy holds for EVERY localized excitation of the vacuum"** (not just coherent states). | leg X machinery + a **squeezed** packet (still Gaussian, so exactly computable): S_rel = Δ⟨K⟩ − ΔS, and squeezing makes ΔS ≠ 0. | The measured deviation IS the entanglement-entropy change ΔS — killing K1 *measures* the correction term and shows why coherent states are special in Longo's theorem. |
+| K1 | **"S_rel = 2π×boost-energy holds for EVERY localized excitation of the vacuum"** (not just coherent states). | leg X machinery + a **squeezed** packet (still Gaussian, so exactly computable): S_rel = Δ⟨K⟩ − ΔS, and squeezing makes ΔS ≠ 0. | The measured deviation IS the entanglement-entropy change ΔS — killing K1 *measures* the correction term and shows why coherent states are special in Longo's theorem. **→ KILLED 2026-07-23, see below.** |
 | K2 | **"The KK mass tower determines the hidden geometry"** ("you can hear the shape of the hidden drum"). | Compute spectra of the Gordon–Webb–Wolpert **isospectral drums** (two different shapes, provably identical spectra) with our FD Laplacian. Same tower, different geometry ⇒ dead. | A worked demonstration of spectral non-uniqueness on our own instrument — and it sets up G1 (below), which is the genuinely interesting sequel. |
 | K3 | **"Clausius δQ = TδS holds exactly at every patch size"** — the **lattice analog of the localization postulate**. | leg X machinery: compare modular-energy flux vs entropy change for wavepackets crossing wedge sub-patches of shrinking size; look for entropy-production corrections. | A measured curve "Clausius violation vs patch size" on a lattice — a home-built, honest *probe of the exact link both emergent-gravity papers assume*. Toy-model only, and labeled so. |
 | K4 | **"Every deformation of a vacuum metric that keeps the vacuum character of its invariants is itself vacuum."** | Already effectively dead via §119 (our own bumpy entry!); formalize: sample ad-hoc g_tt-multiplier deformations, compute Ricci exactly. | The obstruction is instructive: ad-hoc metric surgery essentially never preserves Ricci-flatness — a warning theorem for every "bumpy BH" paper that skips the check. |
@@ -66,12 +66,40 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 
 ## Recommended first volley (ordered by value-per-effort)
 
-1. **K1** (squeezed-state kill — days, all machinery exists, measures Longo's correction term)
+1. ~~**K1** (squeezed-state kill — days, all machinery exists, measures Longo's correction term)~~ **✓ DONE 2026-07-23 — KILLED** (obstruction: cross-cut entanglement; see Results log)
 2. **M2** (area-law coefficient — the S = A/4 probe, direct sequel to the emergent-gravity thread)
 3. **K3** (lattice localization probe — aims at the ASSUMED link itself; the most philosophically loaded)
 4. **G2** (adversarial legibility — needs an ansatz ask to construct the attack metrics)
 5. **K2 → K5 → M4** (the isospectral-drums arc — one build, three postulates)
 6. **G6** (CK practical termination — cheap, immediately useful to the new tool)
+
+## Results log (attacks run)
+
+### K1 — `KILLED (obstruction: cross-cut entanglement, not squeezing per se)` · 2026-07-23
+
+Full write-up: [falsification/K1_squeezed/FINDINGS.md](falsification/K1_squeezed/FINDINGS.md)
+(pre-registration + addendum frozen before code; run on the Mac, mpmath dps=60).
+
+- **Verdict: KILLED.** A squeezed packet **straddling the entangling cut** breaks S_rel = 2π×boost-energy by
+  the entanglement-entropy change ΔS > 0 — **22–56%** across squeeze r = 0.2–0.8. All gates pass; the
+  Gaussian pipeline is certified non-circularly against brute-force **Fock density matrices to 1.3×10⁻⁹**.
+- **The kill is more conditional than K1 assumed — and that is the finding.** A squeeze sitting *entirely
+  inside the wedge* leaves the identity **exact** (ΔS = 0: it is a local unitary on A, and entropy is
+  invariant under local unitaries). The frozen pre-registered attack put the squeeze inside A and so
+  correctly **survived** — the survival located the real obstruction. A position scan shows deviation
+  climbing 0 → 63% precisely as the squeeze crosses the cut. **It is *cross-cut* squeezing, not squeezing,
+  that kills the identity.**
+- **Why coherent states are special, sharpened:** displacement operators **factorize** across any cut
+  (D(f)=D(f_A)⊗D(f_Ā)) ⇒ ΔS = 0 for *every* coherent state; single-mode squeezes do not factorize across a
+  cut they straddle. The obstruction is non-factorization, cleaner than "coherent = unsqueezed."
+- **Payout collected:** the deviation *is* the correction term ΔS (measured independently from the symplectic
+  spectra), as K1 promised. **Bonus:** leg X's O4 float64 wall reappeared inside the *certification* (the
+  brute-force log is float64-limited exactly where leg X's production was; mpmath crosses it) — another
+  walls-are-instrument-relative instance (feeds **G7**).
+- **Prior-art note:** the sharp statements (Longo's coherent-state entropy theorem; ΔS = 0 ⟺ local-unitary
+  orbit; displacement factorization across a factor) are standard modular-theory / Gaussian-QFT facts. No
+  novelty claimed — this is a worked, Fock-certified demonstration + a clean localization of the hypothesis
+  on the family's own instrument, which is exactly Tier K's stated payout.
 
 ## What this ledger is not
 

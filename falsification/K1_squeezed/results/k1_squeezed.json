@@ -1,0 +1,128 @@
+{
+ "N": 96,
+ "mu": 0.5,
+ "dps": 60,
+ "reuse_check_rel": 0.0,
+ "K1d_cert": {
+  "gauss": {
+   "dK": 0.2524372005766877,
+   "dS": 0.17515819279526676,
+   "s_rel": 0.07727900778142097
+  },
+  "fock": {
+   "dK": 0.25243720186297625,
+   "dS": 0.17515819279526645,
+   "s_rel": 0.07727900906770979,
+   "tr_rho": 0.9999999999999999,
+   "tr_sig": 1.0,
+   "cov_err": 1.1102230246251565e-16
+  },
+  "err": {
+   "s_rel": 1.286288825452786e-09,
+   "dK": 1.2862885201414542e-09,
+   "dS": 3.0531133177191805e-16
+  }
+ },
+ "K1d_pass": true,
+ "K1c_control": {
+  "dS": 0.0,
+  "s_rel": 54.028895678229574,
+  "dK": 54.028895678229574,
+  "ratio": 1.0
+ },
+ "K1c_pass": true,
+ "K1a_position_scan": [
+  {
+   "dK": 17.345581948515115,
+   "dS": 6.552950622954285e-09,
+   "s_rel": 17.345581941962163,
+   "ratio": 0.9999999996222121,
+   "dev": 3.777878794960383e-10,
+   "x0": 12
+  },
+  {
+   "dK": 11.56462296893299,
+   "dS": 6.552254476470996e-05,
+   "s_rel": 11.564557446388227,
+   "ratio": 0.9999943342255998,
+   "dev": 5.665774400145048e-06,
+   "x0": 8
+  },
+  {
+   "dK": 5.836362488637731,
+   "dS": 0.04995047481008739,
+   "s_rel": 5.786412013827644,
+   "ratio": 0.9914415057482582,
+   "dev": 0.008558494251741782,
+   "x0": 4
+  },
+  {
+   "dK": 3.313091738575823,
+   "dS": 0.26675289206888925,
+   "s_rel": 3.046338846506934,
+   "ratio": 0.9194852080420941,
+   "dev": 0.08051479195790592,
+   "x0": 2
+  },
+  {
+   "dK": 1.4888377739780079,
+   "dS": 0.43729997161117196,
+   "s_rel": 1.051537802366836,
+   "ratio": 0.7062809802019226,
+   "dev": 0.2937190197980774,
+   "x0": 0
+  },
+  {
+   "dK": 0.42195142654075035,
+   "dS": 0.26675289206888925,
+   "s_rel": 0.15519853447186108,
+   "ratio": 0.36781137521968454,
+   "dev": 0.6321886247803155,
+   "x0": -2
+  }
+ ],
+ "K1a_frozen_inside_wedge": {
+  "x0": 12,
+  "dS": 6.552950622954285e-09,
+  "verdict": "SURVIVES (local unitary on A)"
+ },
+ "K1a_kill_sweep": [
+  {
+   "dK": 0.2123444087081378,
+   "dS": 0.11918869793621394,
+   "s_rel": 0.09315571077192387,
+   "ratio": 0.43870102979713543,
+   "dev": 0.5612989702028646,
+   "r": 0.2
+  },
+  {
+   "dK": 0.6839183783055887,
+   "dS": 0.26912866486899395,
+   "s_rel": 0.4147897134365947,
+   "ratio": 0.6064900821414368,
+   "dev": 0.3935099178585632,
+   "r": 0.4
+  },
+  {
+   "dK": 1.4888377739780079,
+   "dS": 0.43729997161117196,
+   "s_rel": 1.051537802366836,
+   "ratio": 0.7062809802019226,
+   "dev": 0.2937190197980774,
+   "r": 0.6
+  },
+  {
+   "dK": 2.755632454158517,
+   "dS": 0.6168880599622684,
+   "s_rel": 2.1387443941962485,
+   "ratio": 0.7761355804068412,
+   "dev": 0.22386441959315886,
+   "r": 0.8
+  }
+ ],
+ "K1a_verdict": "KILLED",
+ "K1a_kill": true,
+ "K1e_positivity_pass": true,
+ "all_pass": true,
+ "summary": "K1 (S_rel=2pi*boostE for EVERY excitation) KILLED: a squeeze straddling the cut deviates from 2pi*boost-energy by the entanglement-entropy change dS>0 (22-56% across r=0.2-0.8), Fock-certified to 1e-9; an inside-wedge squeeze SURVIVES (dS=0, local unitary) and the coherent control has dS<1e-40 (leg X recovered). The kill MEASURES the correction dS and sharpens Longo's theorem: coherent states are special because displacements factorize across the cut, so the identity fails iff the excitation entangles across the horizon."
+}
