@@ -54,6 +54,33 @@ See BACKLOG Phase 8. Two things the bridge now owes:
 - **standing:** the flux-atlas next rung (ansatz's offered closed-form stabilized-moduli masses → bridge
   numerical verification) is still queued and unstarted.
 
+## Round-8 asks (2026-07-23) — the adversarial-legibility round (Falsification Ledger G2, K5, G6)
+
+Paste-ready blocks: **[falsification/G2_adversarial_legibility/SISTER_ASKS.md](falsification/G2_adversarial_legibility/SISTER_ASKS.md)**.
+Joint gate frozen **before** either sister was asked: [G2 PREREGISTRATION.md](falsification/G2_adversarial_legibility/PREREGISTRATION.md).
+
+| ask | to | independent? | bridge wait-point |
+|---|---|---|---|
+| **A. Build two adversarial metrics** — (A1) integrable with an irreducible Killing tensor but **no KY root** (§98's quartic search *inverted*: build, don't detect; §69 certifies KY-absence); (A2) integrable via a **transcendental** (non-polynomial in momenta) invariant, with degree ≤4 polynomials excluded | ansatz | ✅ | bridge seals the symbolic verdict, then joins tabula's blind run |
+| **B. Blind legibility on those two metrics** — emit-or-certify as in §132/§144, **without** being told KY/integrability status | tabula | ✅ (blindness is the asset) | the frozen G2 decision table |
+| **C. K5 — can a net hear the shape of a drum?** train on projections from the two GWW isospectral drums (bridge ships `falsification/K2_isospectral_drums/code/k2_drums.py`; spectra verified identical to ~1e-15, resolution-independently; domains provably non-congruent) | tabula | ✅ | K5 verdict |
+| **D. G6 — extend `ck.py` to ORDER 2** | ansatz | ✅ | G6 becomes testable at all |
+
+**Why G2 now:** leg Q's "legible ⟺ KY-integrable" is 8/8 with φ = 1.0 — but **all 8 metrics were found, not
+designed**, and in every one of them KY-ness, integrability and polynomial-invariance *coincide*. The record
+therefore cannot distinguish three hypotheses (legibility tracks KY specifically · tracks integrability ·
+tracks merely having a *polynomial* invariant). The two designed metrics separate them. A **kill is the
+valuable outcome** and is pre-registered as such: it would localize what legibility really tracks.
+
+**Why D now:** the bridge tried to test G6 and could not — `ck.py` computes **orders 0–1 only** and flags its
+own gap (*"the order-1 elimination was skipped — needs order 2"*). We did **not** patch it (sisters are
+read-only). Order 2 would also close the three vacuum-vs-vacuum pairs leg Y left open. Leg Y's own conclusion
+that *"the wall was largely the simplifier, not the chart"*, plus §119's `zsimp` escalation, suggests the
+extension is now much cheaper than it looked in July.
+
+**Blind-protocol reminder (voids the round if broken):** ansatz's symbolic verdicts go to the **bridge only**;
+tabula runs blind; the bridge unseals and joins. Independence is why agreement counts as evidence, not echo.
+
 ## Round-5 status (2026-07-03) — the QUANTUM project joins as the 4th sister
 
 `/Users/sumit/Github/quantum` (local-only, QM-foundations lab) is now formally in the family: it already
