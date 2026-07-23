@@ -52,7 +52,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 | M1 | **"No closed-form equal-spin charged rotating black hole exists in plain 5D Einstein–Maxwell"** (the famous gap; CCLP needs the Chern–Simons term). Postulated in the *kill-me* direction: we hunt the solution; failure = extract the obstruction. | ansatz: equal spins collapse it to one variable — inside the walls. Rational-form family hunt; if dry, obstruction extraction: *why* does the CS term make it solvable? (Already Tier-2 on quantum's roadmap; bounded: one battery.) | Solution: very low (experts suspect none). Obstruction theorem: decent — and that's the real prize. |
 | M2 | **"The Srednicki area-law coefficient is independent of regulator scheme"** (lattice vs momentum cutoff vs smearing). | leg X machinery in 3D: entanglement entropy of spheres, three regulator schemes, compare coefficients. | Expected KILL (coefficient is famously scheme-dependent) — but a clean three-scheme demonstration, with the area-*scaling* invariant across all three, is the sharpest home-built statement of *exactly where* S = A/4's "1/4" hides. Direct sequel to today's discussion. **→ KILLED 2026-07-23, see below.** |
 | M3 | **"Every consistent 6D→4D truncation in the metric-only T² family embeds §111's 5D EMD islands"** (§112 showed it for the diagonal slice; postulate full generality incl. dynamical χ). | ansatz: the flux-atlas machinery pointed at the truncation-classification question. | If TRUE with certificate: a tidy classification theorem for the family's own KK world. If killed: a genuinely new consistent island — prior-art sweep before any claim. |
-| M4 | **"The GWW isospectral pair becomes distinguishable at ANY nonzero coupling to a second field"** (spectral degeneracy is measure-zero fragile). | quantum/bridge: couple a probe field, perturbation theory + numerics on both drums; find the splitting or the protection mechanism. | Either way it sharpens K2/K5 into physics: *what does it take* for hidden geometry to become audible? |
+| M4 | **"The GWW isospectral pair becomes distinguishable at ANY nonzero coupling to a second field"** (spectral degeneracy is measure-zero fragile). | quantum/bridge: couple a probe field, perturbation theory + numerics on both drums; find the splitting or the protection mechanism. | Either way it sharpens K2/K5 into physics: *what does it take* for hidden geometry to become audible? **→ KILLED-as-stated 2026-07-23 (substance survives), see below.** |
 
 ## Tier V — validation postulates (expected to SURVIVE; they harden instruments, cheap to run)
 
@@ -70,7 +70,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 2. ~~**M2** (area-law coefficient — the S = A/4 probe, direct sequel to the emergent-gravity thread)~~ **✓ DONE 2026-07-23 — KILLED** (κ ranges 0.30–0.51 across regulators, exponent stays 2; see Results log)
 3. ~~**K3** (lattice localization probe — aims at the ASSUMED link itself; the most philosophically loaded)~~ **✓ DONE 2026-07-23 — KILLED** (entropy production Σ=S_rel>0 at every patch size, near-equilibrium; see Results log)
 4. **G2** (adversarial legibility — needs an ansatz ask to construct the attack metrics)
-5. **K2 → K5 → M4** (the isospectral-drums arc — one build, three postulates) — **K2 ✓ DONE 2026-07-23 — KILLED** (exact isospectrality, ~1e-15, resolution-independent; see Results log). K5/M4 next off the same build.
+5. **K2 → K5 → M4** (the isospectral-drums arc — one build, three postulates) — **K2 ✓ DONE 2026-07-23 — KILLED** (exact isospectrality, ~1e-15, resolution-independent) · **M4 ✓ DONE 2026-07-23 — KILLED-as-stated, substance survives** (uniform coupling protected; all space-varying couplings split at first order). **K5 remains — it needs tabula (neural, sister-dependent).**
 6. **G6** (CK practical termination — cheap, immediately useful to the new tool)
 
 ## Results log (attacks run)
@@ -164,6 +164,29 @@ Full write-up: [falsification/K2_isospectral_drums/FINDINGS.md](falsification/K2
   demonstration on the family's own instrument. 2D drums are an *analogy* for a KK tower, not a KK reduction;
   what is killed is "spectrum ⇒ geometry" for a Laplacian problem. Sets up **K5** (do eigenfunctions leak what
   eigenvalues don't?), **M4** (does coupling break the degeneracy?) and the converse **V3**.
+
+### M4 — `KILLED as literally stated (substance survives; obstruction: only constants are protected)` · 2026-07-23
+
+Full write-up: [falsification/M4_drum_coupling/FINDINGS.md](falsification/M4_drum_coupling/FINDINGS.md)
+(pre-registration frozen before code; reuses the K2 build).
+
+- **Verdict: KILLED as stated — a split verdict, pre-registered as the expected outcome.** A **uniform**
+  coupling V = c leaves the GWW drums indistinguishable (split ~10⁻¹⁵, since H = −∇²+cI shifts every
+  eigenvalue equally), so the postulate's "**ANY** nonzero coupling" is false to a trivial counterexample.
+- **The substance survives emphatically:** every spatially-varying coupling splits the degeneracy —
+  linear ramp 9.2e-3, Gaussian bump 4.0e-3, radial well 2.0e-2, tile-local 8.3e-3 (α=1) — against a ~10⁻¹⁵
+  isospectral floor, i.e. twelve orders of magnitude. The degeneracy *is* measure-zero fragile.
+- **First-order, exactly:** split ∝ α^p with **p = 0.9978 / 1.0000** — textbook Rayleigh–Schrödinger. The
+  transplantation degeneracy is *accidental*, protected by no symmetry that survives a position-dependent
+  probe.
+- **The protection mechanism (the kill's lesson):** the plausible guess that a **tile-local** coupling would be
+  protected by the transplantation is **refuted** — it splits as strongly as a generic one. Transplantation
+  maps each tile to a *signed linear combination* of rotated/reflected tiles, so a multiplication operator
+  commutes with it only if constant. Sharp bracket: **uniform ⇒ deaf · anything that distinguishes points in
+  space ⇒ audible.** That answers the arc's question — what it takes for hidden geometry to become audible.
+- **Honest scope:** static scalar potential as a stand-in for a second field, on 2D drums (an analogy for a KK
+  tower, not a KK reduction). No novelty claimed — textbook perturbation theory; the payout is the
+  quantitative bracket and the explicit refutation of the tile-locality guess.
 
 ## What this ledger is not
 

@@ -1,0 +1,61 @@
+{
+ "n": 32,
+ "n_eigenvalues": 12,
+ "control_split": 1.5261609327633605e-14,
+ "uniform_splits": {
+  "1.0": 5.976280366548538e-15,
+  "5.0": 8.820193824872782e-15,
+  "50.0": 9.419200786087781e-15
+ },
+ "unit_strength_splits": {
+  "linear ramp  V=\u03b1\u00b7x": 0.00917987849040243,
+  "gaussian bump V=\u03b1\u00b7e^(\u2212|r\u2212r\u2080|\u00b2/0.2)": 0.003978629629850341,
+  "radial well  V=\u03b1\u00b7|r\u2212r\u2080|\u00b2": 0.019556819574887373,
+  "tile-local   V=\u03b1\u00b7(fx+fy)": 0.008282564626578188
+ },
+ "scaling": {
+  "linear ramp": {
+   "alphas": [
+    0.01,
+    0.03,
+    0.1,
+    0.3
+   ],
+   "splits": [
+    9.424069364992746e-05,
+    0.0002825733272113029,
+    0.0009401764698756713,
+    0.00280568264836005
+   ],
+   "p": 0.997831469123673
+  },
+  "gaussian bump": {
+   "alphas": [
+    0.01,
+    0.03,
+    0.1,
+    0.3
+   ],
+   "splits": [
+    3.976731679177418e-05,
+    0.00011930344400531622,
+    0.0003976951971692661,
+    0.001193222119139438
+   ],
+   "p": 1.0000483349473024
+  }
+ },
+ "res64": {
+  "linear ramp  V=\u03b1\u00b7x": 0.009124133028934674,
+  "gaussian bump V=\u03b1\u00b7e^(\u2212|r\u2212r\u2080|\u00b2/0.2)": 0.004015335445347886
+ },
+ "control_split_n64": 7.20966981514091e-15,
+ "M4a_kill_ANY": true,
+ "M4b_fragility_pass": true,
+ "M4c_first_order_pass": true,
+ "M4d_protection_pass": true,
+ "M4e_canary_pass": true,
+ "verdict": "KILLED",
+ "all_pass": true,
+ "summary": "M4 (KILLED as literally stated): a UNIFORM coupling V=c leaves the GWW drums isospectral (split ~1e-15) \u2014 H=\u2212\u2207\u00b2+cI shifts every eigenvalue equally \u2014 so the postulate's 'ANY nonzero coupling' is false. Its substance survives: every spatially-varying coupling tested (linear ramp, Gaussian bump, radial well, tile-local) splits the spectra by 1e-3..1e-2 at unit strength, linearly in coupling (p\u22481, first-order perturbation). Tile-locality is not protection; the protected class is exactly the constants. Hidden geometry becomes audible precisely when the probe distinguishes points in space."
+}
