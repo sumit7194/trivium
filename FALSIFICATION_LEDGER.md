@@ -28,7 +28,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 | K1 | **"S_rel = 2π×boost-energy holds for EVERY localized excitation of the vacuum"** (not just coherent states). | leg X machinery + a **squeezed** packet (still Gaussian, so exactly computable): S_rel = Δ⟨K⟩ − ΔS, and squeezing makes ΔS ≠ 0. | The measured deviation IS the entanglement-entropy change ΔS — killing K1 *measures* the correction term and shows why coherent states are special in Longo's theorem. **→ KILLED 2026-07-23, see below.** |
 | K2 | **"The KK mass tower determines the hidden geometry"** ("you can hear the shape of the hidden drum"). | Compute spectra of the Gordon–Webb–Wolpert **isospectral drums** (two different shapes, provably identical spectra) with our FD Laplacian. Same tower, different geometry ⇒ dead. | A worked demonstration of spectral non-uniqueness on our own instrument — and it sets up G1 (below), which is the genuinely interesting sequel. **→ KILLED 2026-07-23, see below.** |
 | K3 | **"Clausius δQ = TδS holds exactly at every patch size"** — the **lattice analog of the localization postulate**. | leg X machinery: compare modular-energy flux vs entropy change for wavepackets crossing wedge sub-patches of shrinking size; look for entropy-production corrections. | A measured curve "Clausius violation vs patch size" on a lattice — a home-built, honest *probe of the exact link both emergent-gravity papers assume*. Toy-model only, and labeled so. **→ KILLED 2026-07-23, see below.** |
-| K4 | **"Every deformation of a vacuum metric that keeps the vacuum character of its invariants is itself vacuum."** | Already effectively dead via §119 (our own bumpy entry!); formalize: sample ad-hoc g_tt-multiplier deformations, compute Ricci exactly. | The obstruction is instructive: ad-hoc metric surgery essentially never preserves Ricci-flatness — a warning theorem for every "bumpy BH" paper that skips the check. |
+| K4 | **"Every deformation of a vacuum metric that keeps the vacuum character of its invariants is itself vacuum."** | Already effectively dead via §119 (our own bumpy entry!); formalize: sample ad-hoc g_tt-multiplier deformations, compute Ricci exactly. | The obstruction is instructive: ad-hoc metric surgery essentially never preserves Ricci-flatness — a warning theorem for every "bumpy BH" paper that skips the check. **→ KILLED 2026-07-23, see below.** |
 | K5 | **"A neural net trained on projections can learn ONLY the spectrum"** (i.e. behavioral data carries no more than eigenvalues). | tabula: train on projections from the two GWW drums (same spectrum). If the net distinguishes them, K5 is dead — eigen*functions* leak through projections. | Sharp statement of *what* representation learning actually accesses — the family's legibility program, sharpened by a falsification. |
 | K6 | **"Static one-variable ansatz metrics are always Petrov type D or O."** | ansatz: construct in-family counterexample or extract why the ansatz forces D/O (CK Petrov module, cheap). | Either a counterexample metric or a small classification theorem for the ansatz world ansatz actually lives in. |
 
@@ -187,6 +187,30 @@ Full write-up: [falsification/M4_drum_coupling/FINDINGS.md](falsification/M4_dru
 - **Honest scope:** static scalar potential as a stand-in for a second field, on 2D drums (an analogy for a KK
   tower, not a KK reduction). No novelty claimed — textbook perturbation theory; the payout is the
   quantitative bracket and the explicit refutation of the tile-locality guess.
+
+### K4 — `KILLED (obstruction: vacuum ⟺ h′=0 ⟺ pure gauge; and R≡0 does not certify vacuum)` · 2026-07-23
+
+Full write-up: [falsification/K4_bumpy_vacuum/FINDINGS.md](falsification/K4_bumpy_vacuum/FINDINGS.md)
+(pre-registration frozen before code; exact symbolic GR in sympy).
+
+- **Verdict: KILLED, with an exact theorem rather than a pile of examples.** For the family bumpy-BH
+  constructions actually use — multiply g_tt by (1+εh(r)), leave g_rr alone — the identity
+  **R_tt/A + R_rr/B = ε(r−2M)h′/(r²(1+εh))** holds **to all orders in ε**, so the metric is Ricci-flat
+  **iff h′=0 iff h is constant**, i.e. a pure rescaling of t — **pure gauge**. No nontrivial bumpy profile of
+  this form is ever a vacuum. Five sampled profiles each give 4/16 nonvanishing R_ab, consistent with leg Y's
+  independent check of ansatz §119.
+- **The postulate is false as stated (K4c, the sharp part):** at O(ε) the Ricci **scalar** vanishes on the
+  family h = C₁ + C₂√(r/(r−2M)); on the C₂ branch **R ≡ 0 while R_ab ≠ 0** (traceless but nonvanishing:
+  R₁₁ = −0.044, R₂₂ = R₃₃ = 0.177 at M=1, r=4). **A vanishing scalar invariant does not certify vacuum** —
+  exactly the check ad-hoc constructions skip.
+- **Method honesty:** sympy's `dsolve` returned a *bogus* closed form for that ODE (r-dependent exponent,
+  spurious logs). The solution was hand-derived and **verified by substitution** in the production script;
+  nothing rests on the solver. (Also: recomputing Christoffels with the √ profile made `simplify` thrash for
+  10+ minutes; substituting into the general-h Ricci is equivalent and runs in 4 s.)
+- **Honest scope:** proved for this deformation family only. The complementary case is noted, not re-proved:
+  adjusting g_rr to hold A·B fixed lands back on Schwarzschild with a shifted mass (Birkhoff). So ad-hoc
+  surgery either breaks vacuum or merely relabels the mass. No novelty claimed (Birkhoff is textbook); the
+  payout is the explicit obstruction and the explicit invariant-trap counterexample.
 
 ## What this ledger is not
 

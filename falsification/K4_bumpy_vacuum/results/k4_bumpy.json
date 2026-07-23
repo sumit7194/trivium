@@ -1,0 +1,55 @@
+{
+ "family": "ds^2 = -f(1+eps*h(r))dt^2 + dr^2/f + r^2 dOmega^2, f = 1-2M/r",
+ "K4d_controls": {
+  "eps0_ricci_flat": true,
+  "h_const_ricci_flat": true,
+  "pass": true
+ },
+ "K4b_obstruction": {
+  "combination": "epsilon*(-2*M + r)*Derivative(h(r), r)/(r**2*(epsilon*h(r) + 1))",
+  "matches_closed_form": true,
+  "solution": "Eq(h(r), C1)",
+  "pass": true
+ },
+ "K4a_samples": {
+  "1/r": {
+   "nonzero_components": 4,
+   "R_tt_at_r4": "-0.000295351"
+  },
+  "1/r^2": {
+   "nonzero_components": 4,
+   "R_tt_at_r4": "-4.94347e-5"
+  },
+  "exp(-r)": {
+   "nonzero_components": 4,
+   "R_tt_at_r4": "2.84089e-5"
+  },
+  "gaussian bump exp(-(r-5)^2)": {
+   "nonzero_components": 4,
+   "R_tt_at_r4": "0.0169180"
+  },
+  "\u00a7119-style 6/r": {
+   "nonzero_components": 4,
+   "R_tt_at_r4": "-0.00183424"
+  }
+ },
+ "K4a_pass": true,
+ "K4c_trap": {
+  "O_eps_ricci_scalar": "2*M*Derivative(h(r), (r, 2))/r + M*Derivative(h(r), r)/r**2 - Derivative(h(r), (r, 2)) - 2*Derivative(h(r), r)/r",
+  "solution": "C1 + C2*sqrt(r)*sqrt(1/(-2*M + r))",
+  "ode_substitution_check": "0",
+  "verified": true,
+  "scalar_zero_on_C2_branch": true,
+  "nonzero_Rab_components_at_M1_r4": 3,
+  "diagonal_values_at_M1_r4": {
+   "R[0,0]": "0",
+   "R[1,1]": "-0.0441942",
+   "R[2,2]": "0.176777",
+   "R[3,3]": "0.176777"
+  },
+  "pass": true
+ },
+ "verdict": "KILLED",
+ "all_pass": true,
+ "summary": "K4 (KILLED): for the deformation family bumpy-BH constructions actually use \u2014 multiply g_tt by (1+eps*h(r)), leave g_rr alone \u2014 the exact identity R_tt/A + R_rr/B = eps*(r-2M)*h'/(r^2(1+eps*h)) holds to ALL orders in eps, so the metric is vacuum iff h'=0, i.e. iff h is constant (a pure rescaling of t = pure gauge). No nontrivial bumpy deformation of this form is ever Ricci-flat, confirmed on five sampled profiles. Moreover the postulate's own hypothesis fails: at O(eps) the Ricci SCALAR vanishes on the two-parameter family h = C1 + C2*sqrt(r/(r-2M)), and the C2 branch has R = 0 while R_ab != 0 \u2014 a vanishing scalar invariant does not certify vacuum. (sympy's dsolve returns a bogus closed form for that ODE; the solution was hand-derived and verified by substitution.) Formalises leg Y / ansatz \u00a7119 into a general warning theorem."
+}
