@@ -26,7 +26,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 | ID | Postulate (precise) | Attack | What the kill yields |
 |----|---|---|---|
 | K1 | **"S_rel = 2π×boost-energy holds for EVERY localized excitation of the vacuum"** (not just coherent states). | leg X machinery + a **squeezed** packet (still Gaussian, so exactly computable): S_rel = Δ⟨K⟩ − ΔS, and squeezing makes ΔS ≠ 0. | The measured deviation IS the entanglement-entropy change ΔS — killing K1 *measures* the correction term and shows why coherent states are special in Longo's theorem. **→ KILLED 2026-07-23, see below.** |
-| K2 | **"The KK mass tower determines the hidden geometry"** ("you can hear the shape of the hidden drum"). | Compute spectra of the Gordon–Webb–Wolpert **isospectral drums** (two different shapes, provably identical spectra) with our FD Laplacian. Same tower, different geometry ⇒ dead. | A worked demonstration of spectral non-uniqueness on our own instrument — and it sets up G1 (below), which is the genuinely interesting sequel. |
+| K2 | **"The KK mass tower determines the hidden geometry"** ("you can hear the shape of the hidden drum"). | Compute spectra of the Gordon–Webb–Wolpert **isospectral drums** (two different shapes, provably identical spectra) with our FD Laplacian. Same tower, different geometry ⇒ dead. | A worked demonstration of spectral non-uniqueness on our own instrument — and it sets up G1 (below), which is the genuinely interesting sequel. **→ KILLED 2026-07-23, see below.** |
 | K3 | **"Clausius δQ = TδS holds exactly at every patch size"** — the **lattice analog of the localization postulate**. | leg X machinery: compare modular-energy flux vs entropy change for wavepackets crossing wedge sub-patches of shrinking size; look for entropy-production corrections. | A measured curve "Clausius violation vs patch size" on a lattice — a home-built, honest *probe of the exact link both emergent-gravity papers assume*. Toy-model only, and labeled so. **→ KILLED 2026-07-23, see below.** |
 | K4 | **"Every deformation of a vacuum metric that keeps the vacuum character of its invariants is itself vacuum."** | Already effectively dead via §119 (our own bumpy entry!); formalize: sample ad-hoc g_tt-multiplier deformations, compute Ricci exactly. | The obstruction is instructive: ad-hoc metric surgery essentially never preserves Ricci-flatness — a warning theorem for every "bumpy BH" paper that skips the check. |
 | K5 | **"A neural net trained on projections can learn ONLY the spectrum"** (i.e. behavioral data carries no more than eigenvalues). | tabula: train on projections from the two GWW drums (same spectrum). If the net distinguishes them, K5 is dead — eigen*functions* leak through projections. | Sharp statement of *what* representation learning actually accesses — the family's legibility program, sharpened by a falsification. |
@@ -70,7 +70,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 2. ~~**M2** (area-law coefficient — the S = A/4 probe, direct sequel to the emergent-gravity thread)~~ **✓ DONE 2026-07-23 — KILLED** (κ ranges 0.30–0.51 across regulators, exponent stays 2; see Results log)
 3. ~~**K3** (lattice localization probe — aims at the ASSUMED link itself; the most philosophically loaded)~~ **✓ DONE 2026-07-23 — KILLED** (entropy production Σ=S_rel>0 at every patch size, near-equilibrium; see Results log)
 4. **G2** (adversarial legibility — needs an ansatz ask to construct the attack metrics)
-5. **K2 → K5 → M4** (the isospectral-drums arc — one build, three postulates)
+5. **K2 → K5 → M4** (the isospectral-drums arc — one build, three postulates) — **K2 ✓ DONE 2026-07-23 — KILLED** (exact isospectrality, ~1e-15, resolution-independent; see Results log). K5/M4 next off the same build.
 6. **G6** (CK practical termination — cheap, immediately useful to the new tool)
 
 ## Results log (attacks run)
@@ -141,6 +141,29 @@ Full write-up: [falsification/K3_clausius_patch/FINDINGS.md](falsification/K3_cl
   matter ΔS). The payout is a home-built, quantitative statement of *why* localization is assumed, not proven.
 - **Open extension:** the a→0 continuum limit at fixed physical patch is under-determined by the reachable
   lattice points; left as future work (needs the bigger instrument — feeds G4/G7). Not claimed.
+
+### K2 — `KILLED (obstruction: spectral non-uniqueness — exact, not approximate)` · 2026-07-23
+
+Full write-up: [falsification/K2_isospectral_drums/FINDINGS.md](falsification/K2_isospectral_drums/FINDINGS.md)
+(pre-registration frozen before code; FD Dirichlet Laplacian, scipy shift-invert).
+
+- **Verdict: KILLED.** The Gordon–Webb–Wolpert drums — two non-congruent domains built from the same 7
+  right-isosceles triangles glued differently — have **identical Dirichlet spectra to ~10⁻¹⁵** (lowest 20
+  eigenvalues, digit for digit including the degenerate pairs). Same tower, different geometry.
+- **The agreement is combinatorially EXACT, not an FD artifact** (the sharper claim): the error is **flat at
+  ~10⁻¹⁵ across n = 16, 32, 64** rather than decaying like O(h²) — the fingerprint of transplantation, which
+  is a combinatorial bijection and so applies verbatim to the discrete operator at any grid size.
+- **Non-congruence proved exactly** (not numerically): exhaustive search over all 8 symmetries of the square
+  + translation finds no isometry between the vertex sets. They do share area (3.5) and perimeter (10.2426) —
+  *required*, since those are the leading heat-trace coefficients, so that agreement is a consistency check,
+  not evidence of sameness.
+- **Pre-registered guard fired honestly:** at n = 24 the drums give different interior-point counts
+  (1988 vs 1981) and are not isospectral there — a property of the offset grid (not transplantation-compatible
+  at that resolution), excluded in advance and reported rather than hidden.
+- **Honest scope:** a known theorem (Kac 1966 / GWW 1992) — **zero novelty claimed**. Tier-K payout: a worked
+  demonstration on the family's own instrument. 2D drums are an *analogy* for a KK tower, not a KK reduction;
+  what is killed is "spectrum ⇒ geometry" for a Laplacian problem. Sets up **K5** (do eigenfunctions leak what
+  eigenvalues don't?), **M4** (does coupling break the degeneracy?) and the converse **V3**.
 
 ## What this ledger is not
 
