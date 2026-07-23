@@ -87,3 +87,46 @@ evidence rather than an echo. Any leakage of ansatz's verdict to tabula before s
 survey) · [leg J](../../legJ_integrability_frontier) · ansatz §69 (Killing–Yano), §97/§98 (quadratic and
 quartic Killing-tensor searches), §99 (MN no-Carter) · tabula §127/§132/§144 (legibility instrument).
 Sister asks: [SISTER_ASKS.md](SISTER_ASKS.md).
+
+---
+
+## ADDENDUM (2026-07-23, evening) — ansatz's half received, verified, and sealed; the "KY-integrable" reading fixed
+
+ansatz delivered both candidates (§120, §121) with a clean blind split (metric-only vs sealed). The bridge
+independently recomputed the central claims on its own sympy machinery (`code/verify_candidates.py`,
+`results/bridge_verification.json`) — leg-Y discipline, never accept a sister's verdict unchecked:
+
+- **Candidate A confirmed:** {Q, H} = 0 (Q is a genuine Killing tensor); the four mixed eigenvalues
+  {y², −x², (y²−x⁴)/(1+x²), y²(1−x²)/(1+y²)} are distinct (min gap 0.65 at a sample point) ⇒ K ≠ Y·Y for any
+  2-form (even-multiplicity impossible); 6/16 nonzero Ricci ⇒ non-vacuum. Matches §120's sealed verdict.
+- **Candidate B confirmed:** {I, H₂} = 0 with I = p_y/p_x − ln p_x — a genuine first integral, non-analytic in
+  the momenta. Matches §121's sealed verdict.
+
+The metric-only files are staged for tabula in `tabula_package/` (leak-checked: only the "WITHHELD"
+disclaimer, no verdict fields). The sealed verdicts live in `results/*_SEALED.json`, **bridge-only**.
+
+**Fixing the reading of "KY-integrable" (frozen now, before tabula answers).** ansatz flagged, honestly, that
+Candidate B's 4D lift is *not* KY-empty: it carries a 2-dimensional Killing–Yano space (dt∧dv and the (x,y)
+area form), but both are **covariantly constant** and square to **reducible** Killing tensors, so neither
+supplies a hidden constant of motion — they are forced by the product structure and present whether or not the
+metric is integrable. So a naïve "admits *any* KY tensor" reading is non-discriminating for B.
+
+The bridge therefore adopts the **strong, discriminating reading** for the whole G2 gate:
+
+> **"KY-integrable" ≡ the metric's *hidden* constant of motion arises from a Killing–Yano tensor
+> (an irreducible K = Y·Y).** Trivial covariantly-constant KY forms that square to reducible Killing tensors
+> do **not** count.
+
+Under this reading **both candidates are non-KY-integrable**, verified: A's hidden constant is an irreducible
+Killing tensor with no KY root; B's hidden constant is transcendental (no KY root, indeed not even
+polynomial). The frozen decision table stands unchanged — it is keyed on tabula's legible/illegible verdict,
+with "KY-integrable" read strongly. Restating the gate explicitly so it cannot drift when tabula answers:
+
+- **A legible** → G2 **KILLED** (legible without KY; legibility does not require KY structure).
+- **A illegible** → G2 **survives its strongest attack**; legibility genuinely tracks KY specifically.
+- **B legible** → G2 **KILLED** *and* H_POLY falls (tabula found a non-polynomial invariant — capability
+  result, own prior-art sweep required).
+- **B illegible** → G2 **survives**; consistent with legibility requiring polynomial (or KY) structure —
+  supports H_POLY; does not by itself separate H_POLY from H_KY (that is A's job).
+
+**Status: awaiting tabula's blind run.** No G2 verdict is claimed until it lands.

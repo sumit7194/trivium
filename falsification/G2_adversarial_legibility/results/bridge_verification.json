@@ -1,0 +1,21 @@
+{
+  "note": "Bridge-side INDEPENDENT verification of ansatz's sealed verdicts (round 8, §120/§121). The bridge never accepts a sister's verdict unchecked (leg Y discipline). Recomputed from the metric-only data on the bridge's own sympy machinery; does not use ansatz's sealed reasoning.",
+  "candidate_A": {
+    "killing_tensor_verified": true,
+    "poisson_bracket_Q_H": "0 (exact)",
+    "mixed_eigenvalues_distinct": true,
+    "mixed_eigenvalues_at_1.3_0.7": [-1.69, -0.8796, -0.2269, 0.49],
+    "min_eigenvalue_gap": 0.653,
+    "ky_root_impossible_reason": "four distinct eigenvalues; any (Y.Y)^a_b has even-multiplicity spectrum",
+    "non_vacuum_verified": true,
+    "nonzero_Ricci_components_at_1.3_0.7": 6,
+    "verdict": "ansatz's §120 sealed claims (irreducible rank-2 Killing tensor, no KY root, non-vacuum) CONFIRMED by the bridge"
+  },
+  "candidate_B": {
+    "transcendental_invariant_conserved": true,
+    "poisson_bracket_I_H2": "0 (exact), I = p_y/p_x - ln(p_x)",
+    "non_analytic_in_momenta": true,
+    "verdict": "ansatz's §121 sealed claim ({I,H}=0 for the transcendental invariant) CONFIRMED by the bridge"
+  },
+  "status": "ansatz half received, verified, and sealed. AWAITING tabula's blind legibility run before the G2 decision table can be applied."
+}
