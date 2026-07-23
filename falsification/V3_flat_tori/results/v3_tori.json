@@ -1,0 +1,75 @@
+{
+ "K_eigenvalues": 40,
+ "dual_range": 14,
+ "n_pairs": 2000,
+ "V3c_modular_control": {
+  "tau+1": 4.487641581427043e-16,
+  "tau-1": 4.487641581427043e-16,
+  "-1/tau": 8.975283162854085e-16
+ },
+ "V3c_pass": true,
+ "V3a_min_spec_dist_far_pairs": 0.014759888440268954,
+ "V3a_n_far_pairs": 1886,
+ "V3a_pass": true,
+ "V3a_hard_fail": false,
+ "V3b_scaling": {
+  "10": {
+   "deltas": [
+    0.01,
+    0.001,
+    0.0001,
+    1e-05,
+    1e-06
+   ],
+   "dists": [
+    0.012019485333050505,
+    0.001197183098591253,
+    0.00011967065551157866,
+    1.1966589007572161e-05,
+    1.1966541351742206e-06
+   ],
+   "p": 1.000402465343008,
+   "resolving_delta": 8.319823788546554e-13
+  },
+  "40": {
+   "deltas": [
+    0.01,
+    0.001,
+    0.0001,
+    1e-05,
+    1e-06
+   ],
+   "dists": [
+    0.012330686595048955,
+    0.0014116510170884878,
+    0.0001412114867368785,
+    1.4121612524033697e-05,
+    1.4121658906464292e-06
+   ],
+   "p": 0.9882046138865895,
+   "resolving_delta": 8.109848484848542e-13
+  },
+  "160": {
+   "deltas": [
+    0.01,
+    0.001,
+    0.0001,
+    1e-05,
+    1e-06
+   ],
+   "dists": [
+    0.015191907506467515,
+    0.001511879137408245,
+    0.00015111479760841247,
+    1.5110748599627868e-05,
+    1.5110675483230245e-06
+   ],
+   "p": 1.000488795166255,
+   "resolving_delta": 6.582451871657848e-13
+  }
+ },
+ "V3b_pass": true,
+ "verdict": "SURVIVES",
+ "all_pass": true,
+ "summary": "V3 (SURVIVES): unit-covolume flat 2-tori are spectrally determined \u2014 over 2000 random moduli pairs, every pair separated by hyperbolic distance >0.1 has spectral distance >1.5e-02, and SL(2,Z)-equivalent moduli are isospectral to <1e-12 (control). Spectral distance responds linearly to moduli perturbation (p\u22481), bounding the instrument's resolving power. Strictly 2D: flat tori are NOT spectrally determined in 4D (Conway-Sloane) or 16D (Milnor). Converse to K2: drums are isospectral but not isometric; flat 2-tori are isospectral iff isometric."
+}
