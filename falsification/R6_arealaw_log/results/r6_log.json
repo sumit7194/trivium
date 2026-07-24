@@ -1,0 +1,53 @@
+{
+ "N": 200,
+ "L0": 500,
+ "ns": [
+  8,
+  12,
+  16,
+  20,
+  24,
+  28,
+  32,
+  36,
+  40
+ ],
+ "regulators": {
+  "R1 bare NN": {
+   "kappa": 0.29984190354827905,
+   "b": 2.3216062992460835,
+   "b_jk": 2.338397331345072,
+   "b_err": 0.07615255433988395,
+   "rms_log": 0.03519644591361349,
+   "rms_nolog": 0.4655572511242601,
+   "improve": 13.227393818879568,
+   "resolvable": true
+  },
+  "R2 improved": {
+   "kappa": 0.4113462562751205,
+   "b": 3.7184807319176487,
+   "b_jk": 3.728717440871018,
+   "b_err": 0.049793955861411894,
+   "rms_log": 0.05415479621057363,
+   "rms_nolog": 0.7455113542436226,
+   "improve": 13.766303382341281,
+   "resolvable": true
+  },
+  "R3 higher-deriv": {
+   "kappa": 0.51036200325221,
+   "b": 0.5221135953972313,
+   "b_jk": 0.4421844477621513,
+   "b_err": 0.749319210855703,
+   "rms_log": 0.45245904582624635,
+   "rms_nolog": 0.4643476794225173,
+   "improve": 1.0262756015288872,
+   "resolvable": false
+  }
+ },
+ "control_b": -0.4547386298576325,
+ "across_spread_b": 1.30835753876906,
+ "within_error_b": 0.29175524035233297,
+ "any_resolvable": true,
+ "verdict": "KILLED (b regulator-dependent)",
+ "summary": "Subleading log coefficient of the 3D area law across three UV regulators: b = [2.322, 3.718, 0.522], jackknife errors [0.076, 0.05, 0.749]. Verdict: KILLED (b regulator-dependent). Reuses M2's V2-calibrated pipeline; lattice free scalar, not a black hole."
+}
