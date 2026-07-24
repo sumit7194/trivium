@@ -26,10 +26,10 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 | ID | Postulate (precise) | Attack | What the kill yields |
 |----|---|---|---|
 | K1 | **"S_rel = 2π×boost-energy holds for EVERY localized excitation of the vacuum"** (not just coherent states). | leg X machinery + a **squeezed** packet (still Gaussian, so exactly computable): S_rel = Δ⟨K⟩ − ΔS, and squeezing makes ΔS ≠ 0. | The measured deviation IS the entanglement-entropy change ΔS — killing K1 *measures* the correction term and shows why coherent states are special in Longo's theorem. **→ KILLED 2026-07-23, see below.** |
-| K2 | **"The KK mass tower determines the hidden geometry"** ("you can hear the shape of the hidden drum"). | Compute spectra of the Gordon–Webb–Wolpert **isospectral drums** (two different shapes, provably identical spectra) with our FD Laplacian. Same tower, different geometry ⇒ dead. | A worked demonstration of spectral non-uniqueness on our own instrument — and it sets up G1 (below), which is the genuinely interesting sequel. **→ KILLED 2026-07-23, see below.** |
+| K2 | **"The KK mass tower determines the hidden geometry"** ("you can hear the shape of the hidden drum"). | Compute spectra of the Gordon–Webb–Wolpert **isospectral drums** (two different shapes, provably identical spectra) with our FD Laplacian. Same tower, different geometry ⇒ dead. | A worked demonstration of spectral non-uniqueness on our own instrument — and it sets up G1 (below), which is the genuinely interesting sequel. **→ KILLED 2026-07-23; MECHANISM CORRECTED 2026-07-24 (grid bug found by tabula — the "exact, resolution-independent" agreement was an artifact; verdict stands on convergence + the GWW theorem). See below.** |
 | K3 | **"Clausius δQ = TδS holds exactly at every patch size"** — the **lattice analog of the localization postulate**. | leg X machinery: compare modular-energy flux vs entropy change for wavepackets crossing wedge sub-patches of shrinking size; look for entropy-production corrections. | A measured curve "Clausius violation vs patch size" on a lattice — a home-built, honest *probe of the exact link both emergent-gravity papers assume*. Toy-model only, and labeled so. **→ KILLED 2026-07-23, see below.** |
 | K4 | **"Every deformation of a vacuum metric that keeps the vacuum character of its invariants is itself vacuum."** | Already effectively dead via §119 (our own bumpy entry!); formalize: sample ad-hoc g_tt-multiplier deformations, compute Ricci exactly. | The obstruction is instructive: ad-hoc metric surgery essentially never preserves Ricci-flatness — a warning theorem for every "bumpy BH" paper that skips the check. **→ KILLED 2026-07-23, see below.** |
-| K5 | **"A neural net trained on projections can learn ONLY the spectrum"** (i.e. behavioral data carries no more than eigenvalues). | tabula: train on projections from the two GWW drums (same spectrum). If the net distinguishes them, K5 is dead — eigen*functions* leak through projections. | Sharp statement of *what* representation learning actually accesses — the family's legibility program, sharpened by a falsification. **→ ASK FILED 2026-07-23 (round 8): the K2 drums build is ready and shipped to tabula.** |
+| K5 | **"A neural net trained on projections can learn ONLY the spectrum"** (i.e. behavioral data carries no more than eigenvalues). | tabula: train on projections from the two GWW drums (same spectrum). If the net distinguishes them, K5 is dead — eigen*functions* leak through projections. | Sharp statement of *what* representation learning actually accesses — the family's legibility program, sharpened by a falsification. **→ KILLED 2026-07-24 (tabula): a net separates the two isospectral drums at 0.76 (position-blind, held-out nodes) and 0.98 (modal arm) while the eigenvalue tower and stripped controls sit at CHANCE. Eigenfunctions leak through projections — "a recording is the spectrum weighted by eigenfunction overlaps." [falsification/K5_drum_learnability](falsification/K5_drum_learnability).** |
 | K6 | **"Static one-variable ansatz metrics are always Petrov type D or O."** | ansatz: construct in-family counterexample or extract why the ansatz forces D/O (CK Petrov module, cheap). | Either a counterexample metric or a small classification theorem for the ansatz world ansatz actually lives in. |
 
 ## Tier G — genuine uncertainty (the real bets; either verdict is a finding worth keeping)
@@ -37,7 +37,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 | ID | Postulate (precise) | Attack | Notes on odds |
 |----|---|---|---|
 | G1 | **"Flux on T² can stabilize ONLY the volume+axion combination detM — never the shape."** (§114 proved this for the configurations tried; postulate it as a *theorem for all* metric-only flux configs on T².) | ansatz: extend the §114 dictionary theorem G² = 2n²/detM to the full config space (both flux legs, both twists, Λ₆); either leftover-zero generality or the counterexample config. | The dictionary theorem's structure suggests TRUE; a kill (shape-stabilizing flux) would be genuinely surprising and worth a prior-art sweep either way. |
-| G2 | **"legible ⟺ KY-integrable survives adversarial metric design."** Current record 8/8 — but nobody has *designed* a metric to break it. Candidates: (a) integrable via rank-4-only Killing tensor (no KY origin) — is it legible? (b) a metric with a *transcendental* (non-polynomial) invariant — integrable but possibly illegible. | ansatz constructs the candidates (its rank-4 search machinery inverted: build, don't detect); tabula runs legibility blind; bridge gates. | This is the family's flagship claim under deliberate attack. A kill would *localize* what "legible" really tracks (KY specifically? any invariant? polynomial invariants only?) — arguably more valuable than the survival. **→ IN FLIGHT 2026-07-23 (round 8): ansatz DELIVERED both candidates (§120 rank-2 KT no-KY-root; §121 transcendental invariant), bridge-verified independently ({Q,H}=0, 4 distinct eigenvalues, non-vacuum; {I,H}=0). Sealed; metric-only staged for tabula. AWAITING tabula's blind run before the frozen table is applied. [falsification/G2_adversarial_legibility](falsification/G2_adversarial_legibility).** |
+| G2 | **"legible ⟺ KY-integrable survives adversarial metric design."** Current record 8/8 — but nobody has *designed* a metric to break it. Candidates: (a) integrable via rank-4-only Killing tensor (no KY origin) — is it legible? (b) a metric with a *transcendental* (non-polynomial) invariant — integrable but possibly illegible. | ansatz constructs the candidates (its rank-4 search machinery inverted: build, don't detect); tabula runs legibility blind; bridge gates. | This is the family's flagship claim under deliberate attack. A kill would *localize* what "legible" really tracks (KY specifically? any invariant? polynomial invariants only?) — arguably more valuable than the survival. **→ KILLED 2026-07-24. Candidate A (irreducible Killing tensor, NO KY root) is LEGIBLE — tabula emitted its exact quadratic invariant to 2.2e-19, blind ⇒ legible WITHOUT KY, the biconditional is false. Candidate B (transcendental invariant) is ILLEGIBLE. Legibility tracks neither KY (A kills H_KY) nor integrability (B kills H_INT) but POLYNOMIAL-REPRESENTABILITY. [falsification/G2_adversarial_legibility](falsification/G2_adversarial_legibility).** |
 | G3 | **"Every stationary non-integrable vacuum in our reach has detectable thin-layer resonance chaos."** (MN: yes. ZV δ=2: yes. Two for two.) | Point the frequency-drift detector at each new non-integrable vacuum entering the catalog; postulate dies on the first clean non-integrable metric with NO layer at instrument resolution. | Instrument-relative by construction (stated in the postulate); a kill = "non-integrability without dynamical signature at resolution X," which would be a real curiosity. |
 | G4 | **"The MN deep chaotic sea at x<1.5 is real chaos, not integrator artifact."** | Blocked on the symplectic/extended-precision integrator (the standing parked item) — this postulate is the *reason* to finally build it. | Honest status: UNDECIDABLE-BY-US until the instrument exists. Kept on the ledger as the oldest open wall. |
 | G5 | **"No rank-6 Killing tensor for MN q=0.5."** (Rank-2 excluded two ways, rank-4 excluded; the residual.) | ansatz's exact-rational nullspace search extended to rank 6 (large but bounded basis). | Expected TRUE (kill unlikely); value is closing leg J's last residual with a certificate either way. |
@@ -52,7 +52,7 @@ sweep (the quantum session's standing job) **before** anyone gets excited. Postu
 | M1 | **"No closed-form equal-spin charged rotating black hole exists in plain 5D Einstein–Maxwell"** (the famous gap; CCLP needs the Chern–Simons term). Postulated in the *kill-me* direction: we hunt the solution; failure = extract the obstruction. | ansatz: equal spins collapse it to one variable — inside the walls. Rational-form family hunt; if dry, obstruction extraction: *why* does the CS term make it solvable? (Already Tier-2 on quantum's roadmap; bounded: one battery.) | Solution: very low (experts suspect none). Obstruction theorem: decent — and that's the real prize. |
 | M2 | **"The Srednicki area-law coefficient is independent of regulator scheme"** (lattice vs momentum cutoff vs smearing). | leg X machinery in 3D: entanglement entropy of spheres, three regulator schemes, compare coefficients. | Expected KILL (coefficient is famously scheme-dependent) — but a clean three-scheme demonstration, with the area-*scaling* invariant across all three, is the sharpest home-built statement of *exactly where* S = A/4's "1/4" hides. Direct sequel to today's discussion. **→ KILLED 2026-07-23, see below.** |
 | M3 | **"Every consistent 6D→4D truncation in the metric-only T² family embeds §111's 5D EMD islands"** (§112 showed it for the diagonal slice; postulate full generality incl. dynamical χ). | ansatz: the flux-atlas machinery pointed at the truncation-classification question. | If TRUE with certificate: a tidy classification theorem for the family's own KK world. If killed: a genuinely new consistent island — prior-art sweep before any claim. |
-| M4 | **"The GWW isospectral pair becomes distinguishable at ANY nonzero coupling to a second field"** (spectral degeneracy is measure-zero fragile). | quantum/bridge: couple a probe field, perturbation theory + numerics on both drums; find the splitting or the protection mechanism. | Either way it sharpens K2/K5 into physics: *what does it take* for hidden geometry to become audible? **→ KILLED-as-stated 2026-07-23 (substance survives), see below.** |
+| M4 | **"The GWW isospectral pair becomes distinguishable at ANY nonzero coupling to a second field"** (spectral degeneracy is measure-zero fragile). | quantum/bridge: couple a probe field, perturbation theory + numerics on both drums; find the splitting or the protection mechanism. | Either way it sharpens K2/K5 into physics: *what does it take* for hidden geometry to become audible? **→ KILLED-as-stated 2026-07-23 (substance survives); OBSERVABLE CORRECTED 2026-07-24 after K2's grid bug — rebuilt on a differential observable, all conclusions unchanged. See below.** |
 
 ## Tier V — validation postulates (expected to SURVIVE; they harden instruments, cheap to run)
 
@@ -232,6 +232,45 @@ Full write-up: [falsification/K4_bumpy_vacuum/FINDINGS.md](falsification/K4_bump
 - **G7 fed again:** the CK order-1→order-2 wall is the session's fifth logged crossing (after float64→mpmath,
   ℓ-sum→tail-extrapolation, dsolve→hand-derivation, simplify-thrash→substitution). Every wall hit this round
   had a crossing exhibited or in progress.
+
+### Round 8 CLOSED (2026-07-24) — G2 KILLED, K5 KILLED, and a bug of ours caught by a sister
+
+**G2 — `KILLED (obstruction: legibility tracks polynomial-representability, not Killing–Yano)`.**
+Full write-up: [falsification/G2_adversarial_legibility/FINDINGS.md](falsification/G2_adversarial_legibility/FINDINGS.md).
+The flagship biconditional "legible ⟺ KY-integrable" (leg Q, 8/8, φ=1.0) is **false**:
+
+| candidate | sealed (ansatz, bridge-verified) | tabula, blind | consequence |
+|---|---|---|---|
+| **A** | irreducible rank-2 Killing tensor, **no KY root**, non-vacuum | **LEGIBLE** (exact quadratic invariant, 2.2e-19) | legible *without* KY ⇒ **H_KY dead** |
+| **B** | **transcendental** invariant, no polynomial ≤4 | **ILLEGIBLE** (certify-relative-to-basis) | integrable but illegible ⇒ **H_INT dead** |
+
+**The corrected claim: legible ⟺ the hidden invariant is polynomial-representable in the probe's basis.**
+KY was only ever a *proxy*, exact on the old catalog because Collinson 1976 / Dietz–Rüdiger 1981 force
+KT ⇒ KY for type-D **vacua** — and the catalog was all type-D vacuum. The coincidence was forced by the
+catalog's own restriction, never evidence. Candidate A leaves vacuum and proxy separates from quantity.
+A is also a genuine **blind rediscovery**: ansatz constructed the Killing tensor, the bridge verified it,
+tabula re-emitted it to 2.2e-19 having seen neither. Three instruments, one answer, no shared code. This is
+the outcome the ledger predicted would be "arguably more valuable than the survival."
+
+**K5 — `KILLED`.** A net separates the isospectral drums (0.76 position-blind, 0.98 modal) while the
+eigenvalue tower sits at chance. Eigenfunctions leak through projections.
+
+**A bug of ours, caught by a sister — recorded, not smoothed.** tabula could not run K5 on the bridge's K2
+build and diagnosed why: our grid used the same offset in x and y, dropping every point on an internal
+diagonal, which **disconnected each drum into the same 3 congruent pieces** — the two operators were one
+matrix relabelled, so K2's "exact, resolution-independent isospectrality" was a **triviality, not
+transplantation**, and K5 was untestable on it. The bridge confirmed independently (3 components,
+360/360/120), fixed the grid, and added a connectivity assertion as a regression guard.
+- **K2 corrected:** verdict KILLED **stands**, now on the continuum GWW theorem + convergence
+  (6.87e-2 → 1.47e-2, order ≈ h⁰·⁹⁷). The exactness claim is **retracted**.
+- **M4 corrected:** its observable rested on the same spurious floor; replayed plainly on the fixed grid the
+  measurement died (p ≈ 0.03). Rebuilt on a **differential observable** (each drum's own coupling-induced
+  shift, so common-mode discretisation cancels) — **all conclusions survive**, now resolution-stable:
+  uniform coupling 2e-13 vs spatially-varying 0.14–1.45, p = 0.9997/1.0014.
+- Symmetry worth noting: tabula's own round-8 flags include a trajectory-indexing bug that briefly made both
+  G2 candidates read illegible, caught only because a hand-derived invariant contradicted the engine. Both
+  bugs were caught the same way — a machine answer contradicted an independently derived one. That is the
+  entire case for keeping the instruments independent.
 
 ## What this ledger is not
 
