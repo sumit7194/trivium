@@ -66,7 +66,7 @@ answer). Nothing here has been run.*
 
 1. **R2** — the theorem attempt (highest value; mostly symbolic; bridge+ansatz)
 2. **R1** — file the drafted tabula ask (sister-side; zero bridge compute)
-3. **S1** — Schiemann pair (bridge-side, self-contained, exact arithmetic, beautiful)
+3. ~~**S1** — Schiemann pair~~ **✓ DONE 2026-07-24 — KILLED** (exact: same theta to norm 400, det 35852544 both; degree-2 Siegel differs at bucket (48,96,−24), 0 vs 4). Flat 4-tori are not spectrally determined; the KK tower cannot fix the hidden T⁴ in dim ≥ 4. [falsification/S1_schiemann_tori](falsification/S1_schiemann_tori)
 4. **A1** — too-clean audit (cheap; institutionalizes L2)
 5. **R3** — the Clausius scaling law (reuses K3 machinery end-to-end)
 6. **S2 → S3** — the curved-space rung, then the drum compactification

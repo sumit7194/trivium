@@ -1,0 +1,93 @@
+{
+ "source": "Cervino-Hein arXiv:0910.2127; Schiemann (a,b,c,d)=(1,7,13,19); Conway-Sloane 1992",
+ "G1": [
+  [
+   96,
+   48,
+   72,
+   276
+  ],
+  [
+   48,
+   192,
+   492,
+   528
+  ],
+  [
+   72,
+   492,
+   1728,
+   1368
+  ],
+  [
+   276,
+   528,
+   1368,
+   1728
+  ]
+ ],
+ "G2": [
+  [
+   96,
+   144,
+   24,
+   276
+  ],
+  [
+   144,
+   1728,
+   492,
+   1584
+  ],
+  [
+   24,
+   492,
+   192,
+   456
+  ],
+  [
+   276,
+   1584,
+   456,
+   1728
+  ]
+ ],
+ "det_G1": 35852544,
+ "det_G2": 35852544,
+ "Nmax": 400,
+ "occupied_shells": [
+  48,
+  96,
+  120,
+  144,
+  168,
+  192,
+  216,
+  240,
+  264,
+  288,
+  312,
+  336,
+  360,
+  384
+ ],
+ "theta_mismatches": 0,
+ "S1a_pass": true,
+ "n_vectors": [
+  134,
+  134
+ ],
+ "siegel2_diff_buckets": 3049,
+ "first_diff_bucket": [
+  48,
+  96,
+  -24
+ ],
+ "first_diff_counts": [
+  0,
+  4
+ ],
+ "S1b_pass": true,
+ "killed": true,
+ "verdict": "Two non-isometric flat 4-tori with identical Laplace spectra (Schiemann/Conway-Sloane lattices, exact integer theta match to norm 400; degree-2 Siegel theta differs). A KK mass tower cannot determine the hidden T^4 in dim >= 4; contrast V3 (determined in 2D)."
+}
