@@ -1061,3 +1061,66 @@ deepstrain's Claude session produced both requested artifacts. Bridge-side analy
 
 BACKLOG now: 12 DONE, 0 PARTIAL, 1 PARKED→resolved, A10 RETIRED, B1 the only open (needs GW fluxes).
 SISTER_REQUESTS: A1, A5 marked fulfilled; B1 (ansatz GW-flux) + A10 (tabula reframe) remain.
+
+## 2026-07-22 → 07-24 — The Falsification Ledger: 11 postulates attacked, the flagship killed
+
+New standing programme: [FALSIFICATION_LEDGER.md](FALSIFICATION_LEDGER.md) — precise postulates stated so a
+computation can contradict them, each with pre-registration → attack → three-valued verdict. All bridge-side
+work lives in `falsification/<ID>/`. **11 resolved.**
+
+**Tier K/M/V, bridge-side (self-contained):**
+- **K1 KILLED** — S_rel = 2π×boost-energy fails for squeezed excitations; the deviation IS the entanglement
+  entropy change ΔS. The kill is *conditional*: an inside-wedge squeeze is a local unitary (ΔS=0, survives);
+  only a **cross-cut** squeeze breaks it. Coherent states are special because displacements *factorize*
+  across the cut. Fock-certified to 1.3e-9.
+- **V2 SURVIVES** — entropy instrument reproduces c=1 (calibration gate for M2); float64 cleared.
+- **M2 KILLED** — the S=A/4 coefficient is regulator-dependent: κ = 0.301/0.414/0.511 across three UV
+  regulators (51% spread) while the area-law **exponent** stays ≈2. Where the "1/4" hides. R1 reproduces
+  Srednicki κ≈0.295. Method lesson: the ℓ-sum tail ~ℓ^-2.6 — ℓ_max≈n undercounts κ by 2×.
+- **K3 KILLED** — patchwise Clausius (the modular first law) fails at every patch size; entropy production
+  Σ=S_rel rises 0.45→0.71·δQ, monotone in ℓ (a live V1 check), vanishing as the excitation → 0. Scope frozen:
+  the entanglement first law, NOT the horizon-area Clausius (that needs S=A/4).
+- **K2 KILLED** (mechanism corrected 07-24, see below) · **M4 KILLED-as-stated** (substance survives;
+  observable corrected 07-24) · **V3 SURVIVES** (flat 2-tori are spectrally determined; resolving δ≈7e-13;
+  strictly 2D — 4D/16D counterexamples noted) · **V1 SURVIVES** (relative-entropy monotonicity, 0 violations
+  / 72 points — the canary for the whole leg-X/K1/K3 stack; anchors to leg X's cross-gated 54.03).
+- **K4 KILLED** — ad-hoc metric surgery never preserves vacuum. Exact obstruction, all orders in ε:
+  R_tt/A + R_rr/B = ε(r−2M)h′/(r²(1+εh)), so vacuum ⟺ h′=0 ⟺ pure gauge. And the postulate fails *as stated*:
+  R≡0 while R_ab≠0 on h = C₁+C₂√(r/(r−2M)) — a vanishing scalar invariant does not certify vacuum.
+  (sympy's `dsolve` returned a bogus closed form; the solution was hand-derived and verified by substitution.)
+
+**Round 8 — the adversarial round, with both sisters (2026-07-23/24):**
+- **G2 KILLED — the flagship falsified.** "legible ⟺ KY-integrable" (leg Q, 8/8, φ=1.0) is false. ansatz built
+  two designed adversaries (§120, §121); the bridge verified them independently; tabula ran **blind**.
+  Candidate A (irreducible Killing tensor, **no KY root**) → **LEGIBLE** (2.2e-19) ⇒ legible without KY,
+  H_KY dead. Candidate B (**transcendental** invariant) → **ILLEGIBLE** ⇒ integrable but illegible, H_INT dead.
+  **Corrected claim: legible ⟺ the invariant is polynomial-representable in the probe's basis.** KY was a
+  *proxy*, exact on the old catalog only because Collinson 1976 / Dietz–Rüdiger 1981 force KT⇒KY for type-D
+  **vacua** — the coincidence was forced by the catalog's restriction, never evidence. A is a genuine blind
+  rediscovery across three instruments with no shared code.
+- **K5 KILLED** (tabula) — a net separates the isospectral drums (0.76 position-blind, 0.98 modal) while the
+  eigenvalue tower sits at chance. "A recording is the spectrum weighted by eigenfunction overlaps."
+- **G6 SURVIVES (partial)** — ansatz shipped CK **order-2** (§122), validated vs Karlhede–Lindström–Åman 1982
+  and Collins–d'Inverno–Vickers 1990 (type-D vacuum bound = 2 — which *is* the postulate). Confirmed
+  order-exactly-2 on Schwarzschild and ZV δ=1; Kerr/Taub–NUT still wall in the simplifier, so coverage is
+  partial though the bound is theorem-backed. The three vacuum-vs-vacuum pairs leg Y left open await follow-up.
+
+**A bug of ours, caught by a sister — the round's real lesson.** tabula could not run K5 on our K2 build and
+diagnosed why: `k2_drums.py` used the same grid offset in x and y, dropping every point on an internal
+diagonal and **disconnecting each drum into the same 3 congruent pieces** — the two operators were *one matrix
+relabelled*. Our headline "exact, resolution-INDEPENDENT isospectrality (~1e-15)" was a **triviality, not
+transplantation**; the very resolution-independence we celebrated was the tell-tale. Confirmed independently
+(3 components, 360/360/120), fixed (distinct offsets), and a **connectivity assertion** added as a regression
+guard. K2's verdict stands on the continuum GWW theorem + convergence (order ≈ h^0.97); the exactness claim is
+retracted. M4 rested on the same phantom floor — replayed on the fixed grid its measurement died (p≈0.03) —
+and was rebuilt on a **differential observable**, with all conclusions surviving.
+tabula's own flagged bug (trajectory-indexing, which briefly made both G2 candidates read illegible) was caught
+the same way: a machine answer contradicted an independently derived one. Neither repo could have caught its
+own. That is the entire case for keeping the instruments independent, and it paid for itself twice in one round.
+
+**G7 fed five times** (float64→mpmath · ℓ-sum→tail extrapolation · dsolve→hand-derivation · simplify-thrash→
+substitution · CK order-1→order-2): every wall hit this campaign had a crossing exhibited or in progress.
+
+**Open, sister-dependent:** G6's three vacuum-vs-vacuum pairs · G1 · G5 · K6 · G4 (parked, needs the
+symplectic integrator). **Next ask worth filing:** G2's corrected claim is instrument-relative — whether a
+log-augmented or rational basis makes Candidate B legible would sharpen "polynomial-representable".

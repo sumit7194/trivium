@@ -56,6 +56,23 @@ See BACKLOG Phase 8. Two things the bridge now owes:
 
 ## Round-8 asks (2026-07-23) — the adversarial-legibility round (Falsification Ledger G2, K5, G6)
 
+> ### ✅ ROUND 8 CLOSED (2026-07-24) — 4/4 asks resolved
+> - **A (ansatz, build the adversaries)** — ✅ FULFILLED (§120, §121). Both metrics delivered with a clean
+>   blind split (metric-only vs sealed); bridge-verified independently before tabula ran.
+> - **B (tabula, blind legibility)** — ✅ FULFILLED. **A LEGIBLE** (exact quadratic invariant, 2.2e-19);
+>   **B ILLEGIBLE** (certify-relative-to-basis). ⇒ **G2 KILLED**; corrected claim: *legible ⟺ the hidden
+>   invariant is polynomial-representable in the probe's basis*.
+> - **C (tabula, K5 drums)** — ✅ FULFILLED. **K5 KILLED** (0.76 position-blind, 0.98 modal, tower at chance).
+>   tabula also **found a bug in the bridge's K2 test case** (grid disconnected each drum into 3 congruent
+>   pieces); confirmed and fixed bridge-side, with a regression guard added.
+> - **D (ansatz, CK order-2)** — ✅ DELIVERED (§122), validated against two published results. **G6 SURVIVES
+>   (partial)**: order-exactly-2 confirmed on Schwarzschild and ZV δ=1; Kerr/Taub–NUT still wall in the
+>   simplifier. **Follow-up outstanding:** the three vacuum-vs-vacuum pairs leg Y left open.
+>
+> **Next ask worth filing (tabula):** G2's corrected claim is explicitly *basis-relative*. Does a
+> log-augmented or rational basis make Candidate B legible? That would sharpen "polynomial-representable"
+> into a precise statement about what the probe can access.
+
 Paste-ready blocks: **[falsification/G2_adversarial_legibility/SISTER_ASKS.md](falsification/G2_adversarial_legibility/SISTER_ASKS.md)**.
 Joint gate frozen **before** either sister was asked: [G2 PREREGISTRATION.md](falsification/G2_adversarial_legibility/PREREGISTRATION.md).
 

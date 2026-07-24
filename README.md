@@ -9,6 +9,11 @@ roots on purpose, so when two agree it is **evidence, not an echo**.
 > **Start here:** [CAPSTONE.md](CAPSTONE.md) (state of the whole program — scoreboard, load-bearing
 > results, and the honest-miss ledger) · [SPINE_SUMMARY.md](SPINE_SUMMARY.md) (the founding result) ·
 > [THE_BRIDGE.md](THE_BRIDGE.md) (the design doc) · this README (the operating contract).
+>
+> **[FALSIFICATION_LEDGER.md](FALSIFICATION_LEDGER.md)** — the standing programme of postulates stated *to be
+> killed*: pre-register → attack → three-valued verdict. 11 resolved, including the flagship
+> "legible ⟺ KY-integrable" (falsified 2026-07-24 and replaced by a sharper claim). Attacks live in
+> [`falsification/`](falsification).
 
 ## The three oracles (independent public repos this bridges)
 
