@@ -1124,3 +1124,32 @@ substitution · CK order-1→order-2): every wall hit this campaign had a crossi
 **Open, sister-dependent:** G6's three vacuum-vs-vacuum pairs · G1 · G5 · K6 · G4 (parked, needs the
 symplectic integrator). **Next ask worth filing:** G2's corrected claim is instrument-relative — whether a
 log-augmented or rational basis makes Candidate B legible would sharpen "polynomial-representable".
+
+## 2026-07-24 evening — v2 round-9: two sisters close in, both kills-with-sharpening + one confirmed footnote
+
+Bridge-solo v2 this session: **S1 KILLED** (flat 4-tori not spectrally determined — same KK tower, different
+hidden T⁴, exact), **A1 SURVIVES** (too-clean audit certifies the corpus, standing guard installed),
+**R3 KILLED (p=2)** (fractional Clausius violation is *linear* not r²; the decomposition — Σ=S_rel~r², δQ~r —
+shows the patchwise first law holds EXACTLY to first order, the violation is the second-order residual).
+
+Sisters reported (bridge verified read-only against their committed JSONs):
+- **G8 SURVIVES (deepstrain)** — the Fisher-floor number, taken up from their own offer. σ(δ)_NPE=0.263 sits
+  between the data-only Cramér–Rao floor (0.321) and the data+prior floor (0.215); a prior-shrinkage test
+  (inject δ=0.4 → NPE median +0.055) proves the sub-floor precision is prior regularization, not the data.
+  No pipeline beats the floor at current SNR — the deficit is fundamental. The "2.6× tighter" headline stands
+  with an honest footnote: efficient-Bayesian + prior-regularized, not floor-beating. (Their note also logs a
+  Fisher condition-number 1e22 preconditioning fix and a self-caught truncated-write on their JOURNAL —
+  restored from git.)
+- **R1 KILLED, axis named (tabula)** — the postulate "B legible with augmented basis" is false: B stays
+  illegible across polynomial/rational/log-coordinate/exp(quadratic-momentum). Sharpening: B's transcendence
+  lives in the MOMENTA, so log-*coordinate* augmentation is the wrong axis. Corrected-G2 claim sharpened to
+  **legible ⟺ representable in the probe's MOMENTUM basis** (not coordinate basis). Un-blind step (name B's
+  transcendental-momentum family) is the bridge's to run — the seal is ours.
+- **R5 KILLED-as-stated (tabula)** — low-mode concentration confirmed (first ~16 modes carry the bulk) but
+  95%-saturation at m*≈24 (their JSON; their prose said ~40) ≫ the predicted ~10. Sensors: the signal is
+  spatially DISTRIBUTED (0.48 at 4 nodes → 0.73 at 128). K5's wall is **low-rank-in-frequency,
+  high-rank-in-space** — spectrally cheap, spatially expensive.
+
+**Still running:** ansatz R2 (the emit⟺span theorem — the flagship). When it lands, the bridge unseals +
+scores. **Bridge follow-up teed up:** R1's un-blind — unseal Candidate B, identify its invariant's actual
+momentum-function family, file the momentum-family-basis ask ("the instant it's named, the boundary moves").

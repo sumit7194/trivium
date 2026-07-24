@@ -54,6 +54,16 @@ See BACKLOG Phase 8. Two things the bridge now owes:
 - **standing:** the flux-atlas next rung (ansatz's offered closed-form stabilized-moduli masses → bridge
   numerical verification) is still queued and unstarted.
 
+## Round-9 (v2) status (2026-07-24) — tabula R1+R5 & deepstrain G8 CLOSED; ansatz R2 running
+
+- **deepstrain G8 — ✅ SURVIVES** (Fisher floor: σ_NPE 0.263 between data-only 0.321 and data+prior 0.215;
+  prior-shrinkage proves sub-floor = prior regularization; honesty footnote on "2.6×"). Their own offer, taken up.
+- **tabula R1 — ✅ KILLED, axis named**: legible ⟺ representable in the probe's MOMENTUM basis (log-coordinate
+  is the wrong axis; B's transcendence is in the momenta). **Bridge owes the un-blind** (name B's momentum family).
+- **tabula R5 — ✅ KILLED-as-stated**: low-mode concentration holds, m*≈24 not ~10; signal spatially distributed
+  (low-rank-in-frequency, high-rank-in-space).
+- **ansatz R2 (emit⟺span theorem) — RUNNING**; bridge unseals + scores on delivery.
+
 ## Round-8 asks (2026-07-23) — the adversarial-legibility round (Falsification Ledger G2, K5, G6)
 
 > ### ✅ ROUND 8 CLOSED (2026-07-24) — 4/4 asks resolved
