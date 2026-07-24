@@ -1,0 +1,291 @@
+{
+ "N": 300,
+ "lmax": 3,
+ "nmax": 6,
+ "T_total": 400.0,
+ "S2a": {
+  "worst_rel_err": 0.00419675775875599,
+  "tol": 0.015,
+  "missing": [],
+  "pass": true,
+  "levels": [
+   {
+    "n": 1,
+    "m_pred": 1.7320508075688772,
+    "by_l": {
+     "0": {
+      "m_meas": 1.724781809903653,
+      "rel_err": 0.00419675775875599,
+      "missing": false
+     },
+     "1": {
+      "m_meas": 1.7310880248970528,
+      "rel_err": 0.0005558628347489068,
+      "missing": false
+     }
+    }
+   },
+   {
+    "n": 2,
+    "m_pred": 2.8284271247461903,
+    "by_l": {
+     "0": {
+      "m_meas": 2.8169044685696365,
+      "rel_err": 0.004073874159861121,
+      "missing": false
+     },
+     "1": {
+      "m_meas": 2.8284402762478296,
+      "rel_err": 4.649757995958567e-06,
+      "missing": false
+     },
+     "2": {
+      "m_meas": 2.828475545325838,
+      "rel_err": 1.7119260108901052e-05,
+      "missing": false
+     }
+    }
+   },
+   {
+    "n": 3,
+    "m_pred": 3.872983346207417,
+    "by_l": {
+     "0": {
+      "m_meas": 3.859766230997882,
+      "rel_err": 0.003412644472762211,
+      "missing": false
+     },
+     "1": {
+      "m_meas": 3.873628996217024,
+      "rel_err": 0.00016670611564578036,
+      "missing": false
+     },
+     "2": {
+      "m_meas": 3.8737352212160805,
+      "rel_err": 0.00019413329246554555,
+      "missing": false
+     },
+     "3": {
+      "m_meas": 3.873792536547042,
+      "rel_err": 0.00020893204728524847,
+      "missing": false
+     }
+    }
+   },
+   {
+    "n": 4,
+    "m_pred": 4.898979485566356,
+    "by_l": {
+     "0": {
+      "m_meas": 4.880828000467372,
+      "rel_err": 0.003705156380520185,
+      "missing": false
+     },
+     "1": {
+      "m_meas": 4.897785367966533,
+      "rel_err": 0.00024374823437030212,
+      "missing": false
+     },
+     "2": {
+      "m_meas": 4.897939729879313,
+      "rel_err": 0.00021223924086772794,
+      "missing": false
+     },
+     "3": {
+      "m_meas": 4.898053932342859,
+      "rel_err": 0.0001889277606129545,
+      "missing": false
+     }
+    }
+   },
+   {
+    "n": 5,
+    "m_pred": 5.916079783099616,
+    "by_l": {
+     "0": {
+      "m_meas": 5.895941537750114,
+      "rel_err": 0.0034039847479796445,
+      "missing": false
+     },
+     "1": {
+      "m_meas": 5.9156896141705735,
+      "rel_err": 6.595058608865197e-05,
+      "missing": false
+     },
+     "2": {
+      "m_meas": 5.915865991857808,
+      "rel_err": 3.6137315527635523e-05,
+      "missing": false
+     },
+     "3": {
+      "m_meas": 5.916013811552601,
+      "rel_err": 1.115122673023215e-05,
+      "missing": false
+     }
+    }
+   },
+   {
+    "n": 6,
+    "m_pred": 6.928203230275509,
+    "by_l": {
+     "0": {
+      "m_meas": 6.903207555010375,
+      "rel_err": 0.0036078149607254154,
+      "missing": false
+     },
+     "1": {
+      "m_meas": 6.927640055557203,
+      "rel_err": 8.128726880370988e-05,
+      "missing": false
+     },
+     "2": {
+      "m_meas": 6.928043647125993,
+      "rel_err": 2.3033843582705817e-05,
+      "missing": false
+     },
+     "3": {
+      "m_meas": 6.928381653651867,
+      "rel_err": 2.5753196092500912e-05,
+      "missing": false
+     }
+    }
+   }
+  ]
+ },
+ "S2b": {
+  "l_independent": true,
+  "cutoff_holds": true,
+  "count_ok": true,
+  "pass": true,
+  "levels": [
+   {
+    "n": 1,
+    "spread": 0.0036408949240070835,
+    "l_independent": true,
+    "absent_above": true,
+    "count": 4,
+    "expected": 4
+   },
+   {
+    "n": 2,
+    "spread": 0.004090993419970022,
+    "l_independent": true,
+    "absent_above": true,
+    "count": 9,
+    "expected": 9
+   },
+   {
+    "n": 3,
+    "spread": 0.0036215765200474596,
+    "l_independent": true,
+    "absent_above": true,
+    "count": 16,
+    "expected": 16
+   },
+   {
+    "n": 4,
+    "spread": 0.0035162286199072307,
+    "l_independent": true,
+    "absent_above": true,
+    "count": 25,
+    "expected": 25
+   },
+   {
+    "n": 5,
+    "spread": 0.003392833521249412,
+    "l_independent": true,
+    "absent_above": true,
+    "count": 36,
+    "expected": 36
+   },
+   {
+    "n": 6,
+    "spread": 0.0036335681568179165,
+    "l_independent": true,
+    "absent_above": true,
+    "count": 49,
+    "expected": 49
+   }
+  ]
+ },
+ "S2c": {
+  "first_flat_impossible_n": 3,
+  "levels": [
+   {
+    "n": 1,
+    "m2": 3,
+    "three_square": true,
+    "rep": [
+     1,
+     1,
+     1
+    ],
+    "r3": 8,
+    "s3_degen": 4
+   },
+   {
+    "n": 2,
+    "m2": 8,
+    "three_square": true,
+    "rep": [
+     0,
+     2,
+     2
+    ],
+    "r3": 12,
+    "s3_degen": 9
+   },
+   {
+    "n": 3,
+    "m2": 15,
+    "three_square": false,
+    "rep": null,
+    "r3": 0,
+    "s3_degen": 16
+   },
+   {
+    "n": 4,
+    "m2": 24,
+    "three_square": true,
+    "rep": [
+     2,
+     2,
+     4
+    ],
+    "r3": 24,
+    "s3_degen": 25
+   },
+   {
+    "n": 5,
+    "m2": 35,
+    "three_square": true,
+    "rep": [
+     1,
+     3,
+     5
+    ],
+    "r3": 48,
+    "s3_degen": 36
+   },
+   {
+    "n": 6,
+    "m2": 48,
+    "three_square": true,
+    "rep": [
+     4,
+     4,
+     4
+    ],
+    "r3": 8,
+    "s3_degen": 49
+   }
+  ]
+ },
+ "S2d": {
+  "worst_disagreement": 0.0005480625821253525,
+  "consistent": true
+ },
+ "A1_guard_exact_hits": 0,
+ "verdict": "SURVIVES \u2014 the rest-buzz instrument reads the curved S\u00b3 tower n(n+2) with degeneracy (n+1)\u00b2",
+ "summary": "Rest-buzz on a curved hidden S\u00b3: measured tower matches sqrt(n(n+2)) to 0.42% worst-case across \u2113=0..3; \u2113-independence and the n\u2265\u2113 cutoff give degeneracy (n+1)\u00b2. First S\u00b3 level no unit flat T\u00b3 can produce: n=3 (m\u00b2=15, not a sum of three squares). SURVIVES \u2014 the rest-buzz instrument reads the curved S\u00b3 tower n(n+2) with degeneracy (n+1)\u00b2"
+}
