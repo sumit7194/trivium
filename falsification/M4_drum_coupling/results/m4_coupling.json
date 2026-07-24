@@ -1,17 +1,18 @@
 {
  "n": 32,
  "n_eigenvalues": 12,
- "control_split": 1.5261609327633605e-14,
+ "observable": "differential: max|shift1-shift2|, shift=lambda(V)-lambda(0)",
+ "CORRECTION": "Original observable compared the two drums' spectra directly against a ~1e-15 floor that only existed because of K2's grid bug (drums disconnected into congruent pieces). On a correct grid that floor is ~2e-2 discretisation error, which swamped the signal (alpha-scaling read p~0.03). Replaced by the differential observable, which cancels common-mode discretisation error and is resolution-stable.",
  "uniform_splits": {
-  "1.0": 5.976280366548538e-15,
-  "5.0": 8.820193824872782e-15,
-  "50.0": 9.419200786087781e-15
+  "1.0": 7.389644451902897e-13,
+  "5.0": 1.6484591469634008e-13,
+  "50.0": 1.193711796076967e-14
  },
  "unit_strength_splits": {
-  "linear ramp  V=\u03b1\u00b7x": 0.00917987849040243,
-  "gaussian bump V=\u03b1\u00b7e^(\u2212|r\u2212r\u2080|\u00b2/0.2)": 0.003978629629850341,
-  "radial well  V=\u03b1\u00b7|r\u2212r\u2080|\u00b2": 0.019556819574887373,
-  "tile-local   V=\u03b1\u00b7(fx+fy)": 0.008282564626578188
+  "linear ramp  V=\u03b1\u00b7x": 0.6706378783965484,
+  "gaussian bump V=\u03b1\u00b7e^(\u2212|r\u2212r\u2080|\u00b2/0.2)": 1.4453700506991531,
+  "radial well  V=\u03b1\u00b7|r\u2212r\u2080|\u00b2": 1.0624435199703406,
+  "tile-local   V=\u03b1\u00b7(fx+fy)": 0.14330808826443261
  },
  "scaling": {
   "linear ramp": {
@@ -22,12 +23,12 @@
     0.3
    ],
    "splits": [
-    9.424069364992746e-05,
-    0.0002825733272113029,
-    0.0009401764698756713,
-    0.00280568264836005
+    0.007908255002107012,
+    0.02372401639230759,
+    0.0790684870686249,
+    0.23703255654216093
    ],
-   "p": 0.997831469123673
+   "p": 0.9997494856530702
   },
   "gaussian bump": {
    "alphas": [
@@ -37,19 +38,19 @@
     0.3
    ],
    "splits": [
-    3.976731679177418e-05,
-    0.00011930344400531622,
-    0.0003976951971692661,
-    0.001193222119139438
+    0.003033732098344899,
+    0.009104406624658168,
+    0.030384939436942204,
+    0.09145722205794016
    ],
-   "p": 1.0000483349473024
+   "p": 1.001387561968667
   }
  },
  "res64": {
-  "linear ramp  V=\u03b1\u00b7x": 0.009124133028934674,
-  "gaussian bump V=\u03b1\u00b7e^(\u2212|r\u2212r\u2080|\u00b2/0.2)": 0.004015335445347886
+  "linear ramp  V=\u03b1\u00b7x": 0.6800194482633738,
+  "gaussian bump V=\u03b1\u00b7e^(\u2212|r\u2212r\u2080|\u00b2/0.2)": 1.4724293504174972
  },
- "control_split_n64": 7.20966981514091e-15,
+ "uniform_control_n64": 1.8758328224066162e-13,
  "M4a_kill_ANY": true,
  "M4b_fragility_pass": true,
  "M4c_first_order_pass": true,
@@ -57,5 +58,5 @@
  "M4e_canary_pass": true,
  "verdict": "KILLED",
  "all_pass": true,
- "summary": "M4 (KILLED as literally stated): a UNIFORM coupling V=c leaves the GWW drums isospectral (split ~1e-15) \u2014 H=\u2212\u2207\u00b2+cI shifts every eigenvalue equally \u2014 so the postulate's 'ANY nonzero coupling' is false. Its substance survives: every spatially-varying coupling tested (linear ramp, Gaussian bump, radial well, tile-local) splits the spectra by 1e-3..1e-2 at unit strength, linearly in coupling (p\u22481, first-order perturbation). Tile-locality is not protection; the protected class is exactly the constants. Hidden geometry becomes audible precisely when the probe distinguishes points in space."
+ "summary": "M4 (KILLED as literally stated): a UNIFORM coupling shifts both GWW drums identically (1.6e-13 differential), so it adds zero distinguishing power and the postulate's 'ANY nonzero coupling' is false. Its substance survives: every spatially-varying coupling distinguishes them (ramp 0.67, bump 1.45, tile-local 0.14) \u2014 twelve orders above the uniform case \u2014 linearly in coupling strength (p~1). Tile-locality is not protection; only constants are. Observable corrected 2026-07-24 after K2's grid bug; conclusions unchanged, now measured on a resolution-stable differential."
 }
