@@ -1,0 +1,40 @@
+{
+ "R2a": {
+  "harmonic_ratio": 4.578531292757464e-15,
+  "exact_null_resid": 2.9702794092568385e-10,
+  "pass": true
+ },
+ "O4_approx_false_positive": {
+  "emitting_poly_degrees": [
+   6
+  ],
+  "note": "high-degree poly approximates the transcendental invariant below tau_rel; false emit; NOT in \u00a7123's obstruction map; a finding to relay \u2014 caught only by out-of-sample testing"
+ },
+ "R2b": {
+  "poly_ratios": {
+   "2": 0.0688636600240871,
+   "4": 0.00043859771590316725,
+   "6": 2.6880934996633315e-07
+  },
+  "poly_emits": {
+   "2": false,
+   "4": false,
+   "6": true
+  },
+  "cos_ratio": 2.1757613146617808e-12,
+  "pass": true
+ },
+ "R2c": {
+  "O1_caught": true,
+  "rank_gen": 2,
+  "O2_one": 1,
+  "O2_many": 0,
+  "pass": true
+ },
+ "R2d": {
+  "pass": true
+ },
+ "cross_gate_closed": true,
+ "prior_art": "Liu-Madhavan-Tegmark; Kaiser-Kutz-Brunton arXiv:1811.00961; SID SVD-null-space",
+ "verdict": "Independent bridge reimplementation of ansatz \u00a7123's emit criterion reproduces the emit\u27faspan theorem: representable invariants always emit (R2a), the pendulum flips illegible\u2192legible on adding a cos atom (R2b), the O1/O2 obstructions are caught by the G1/G2 guards (R2c), and the scales match \u00a7123 (R2d). Cross-implementation gate; theorem is ansatz's, prior art is the SID literature's, zero novelty."
+}
