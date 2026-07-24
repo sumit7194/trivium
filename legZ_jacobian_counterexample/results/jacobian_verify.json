@@ -1,0 +1,56 @@
+{
+ "map": {
+  "F1": "z2**2*(z1*z2 + 1)*(3*z1*z2 + 4) + z3*(z1*z2 + 1)**3",
+  "F2": "3*z1*z2**2*(3*z1*z2 + 4) + 3*z1*z3*(z1*z2 + 1)**2 + z2",
+  "F3": "-z1**3*z3 - 3*z1**2*z2 + 2*z1"
+ },
+ "det_jacobian": "-2",
+ "Z1_pass": true,
+ "collision_points": [
+  [
+   "0",
+   "0",
+   "-1/4"
+  ],
+  [
+   "1",
+   "-3/2",
+   "13/2"
+  ],
+  [
+   "-1",
+   "3/2",
+   "13/2"
+  ]
+ ],
+ "images": [
+  [
+   "-1/4",
+   "0",
+   "0"
+  ],
+  [
+   "-1/4",
+   "0",
+   "0"
+  ],
+  [
+   "-1/4",
+   "0",
+   "0"
+  ]
+ ],
+ "distinct": true,
+ "common_image": "(-1/4, 0, 0)",
+ "Z2_pass": true,
+ "component_degrees": [
+  7,
+  6,
+  4
+ ],
+ "total_degree": 7,
+ "Z3_pass": true,
+ "verified": true,
+ "source": "Tao, 'A digestion of the Jacobian conjecture counterexample', 2026-07-21; counterexample by L. Alpoge (w/ Claude Fable 5)",
+ "verdict": "Independently verified in exact SymPy: a degree-7 polynomial self-map of C^3 with constant Jacobian determinant -2 sends three distinct points to (-1/4,0,0), disproving the Jacobian conjecture in dimension >= 3."
+}

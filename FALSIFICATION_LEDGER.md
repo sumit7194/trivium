@@ -272,6 +272,19 @@ transplantation**, and K5 was untestable on it. The bridge confirmed independent
   bugs were caught the same way — a machine answer contradicted an independently derived one. That is the
   entire case for keeping the instruments independent.
 
+## Outward capstone — leg Z: verifying the biggest real postulate-kill (2026-07-24)
+
+The campaign killed eight of the family's own toy postulates. **Leg Z** turns the same discipline outward
+and verifies, exactly, the **disproof of the Jacobian conjecture** (open 1939 → false, ~2026-07-20; L.
+Alpöge with Claude Fable 5). A degree-7 self-map of ℂ³ with Jacobian determinant **identically −2** (SymPy
+expands the full determinant to the constant −2) collides three distinct points onto (−¼,0,0) — constant
+nonzero Jacobian + genuine non-injectivity ⇒ the conjecture is false in dim ≥ 3. All three gates PASS;
+leg-W discipline applied (map hand-checked at every collision before coding; the gate is self-validating).
+The structural rhyme: it is the sharpest instance of *locally-invertible-everywhere ⇏ globally-invertible*
+— the same inference template as leg X's ASSUMED localization postulate, and the template's best case, now
+failed by explicit counterexample. Not a family postulate; the campaign's outward capstone.
+See [legZ_jacobian_counterexample](legZ_jacobian_counterexample/FINDINGS.md).
+
 ## What this ledger is not
 
 Not a route to discovering new physics about nature — no instrument here touches an experiment. Not a
