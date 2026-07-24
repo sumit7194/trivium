@@ -42,7 +42,7 @@ answer). Nothing here has been run.*
 | **S2** | **"The rest-buzz instrument reads ANY hidden manifold whose Laplacian is known: the S³ tower is n(n+2)."** (Rung 1 of `KK_EXTENSION_NOTES.md`, stated as a falsifiable gate.) | bridge FD on S³ (or spectral method); gate against the exact Casimir spectrum; five-route extendable later (ansatz proof anchor exists in the audited paper's Eq. 26–27 lineage — cite, don't trust). | The curved-space generalization of legs S/U — the crown jewel's next rung as a v2 entry. |
 | **S3** | **"A KK reduction on a GWW-drum cross-section yields two field theories with identical mass towers but distinguishable local physics."** (K5's lesson lifted from analogy to an actual compactification: cylinder ℝ × drum.) | bridge: FD tower on both drum cross-sections (fixed grid, connectivity-asserted per L2) + a local-correlator observable that separates them. | Unifies the whole arc — K2 (same tower) + K5 (locals leak) — in field-theory language. Medium effort. |
 
-## Tier A — audits (new tier, born from L2)
+## Tier A — audits (new tier, born from L2)  ·  **A1 ✓ DONE 2026-07-24 — SURVIVES** (93 too-clean values across 17 files, all exact-by-construction or the caught K2 bug; 0 new suspects; complete-baseline guard installed; M4's K2-entangled uniform floor confirmed clean = operator identity). [falsification/A1_tooclean_audit](falsification/A1_tooclean_audit)
 
 | ID | Item | Attack |
 |----|---|---|

@@ -1,0 +1,84 @@
+{
+ "too_clean_threshold": 1e-10,
+ "n_candidates": 93,
+ "n_files": 17,
+ "tally": {
+  "EXACT-OK": 85,
+  "KNOWN-BUG": 8
+ },
+ "baseline": [
+  {
+   "match": "legZ_jacobian",
+   "tag": "EXACT-OK",
+   "reason": "SymPy exact: det expands to \u22122 identically; rational collisions"
+  },
+  {
+   "match": "S1_schiemann",
+   "tag": "EXACT-OK",
+   "reason": "exact integer lattice arithmetic (theta counts, Siegel buckets)"
+  },
+  {
+   "match": "legY_ck",
+   "tag": "EXACT-OK",
+   "reason": "symbolic CK certificate (byte-identical = same polynomial)"
+  },
+  {
+   "match": "legU_kk6",
+   "tag": "EXACT-OK",
+   "reason": "within-shell degeneracy 0.00% = exact x\u2194y grid symmetry (\u03a61=\u03a62)"
+  },
+  {
+   "match": "legX_entropic/results",
+   "tag": "EXACT-OK",
+   "reason": "C1/C2 mpmath algebraic identities (\u03b5e^\u00b12r) at dps=60; C3 Fock exact"
+  },
+  {
+   "match": "K1_squeezed",
+   "tag": "EXACT-OK",
+   "reason": "Fock-vs-Gaussian certification (both exact up to arithmetic prec.)"
+  },
+  {
+   "match": "K4_bumpy",
+   "tag": "EXACT-OK",
+   "reason": "exact symbolic GR (leftover-zero to all orders in \u03b5)"
+  },
+  {
+   "match": "V1_relent",
+   "tag": "EXACT-OK",
+   "reason": "positivity to \u22126e-59 = mpmath round-off of a proven-nonneg quantity"
+  },
+  {
+   "match": "V3_flat_tori",
+   "tag": "EXACT-OK",
+   "reason": "SL(2,\u2124) control 1e-16 = isometric lattices by construction"
+  },
+  {
+   "match": "K2_isospectral",
+   "tag": "KNOWN-BUG",
+   "reason": "the disconnected-grid triviality; exactness RETRACTED, caught by tabula"
+  },
+  {
+   "match": "M4_drum_coupling",
+   "tag": "EXACT-OK",
+   "reason": "uniform-coupling splits ~1e-13 = exact operator identity H=\u2212\u2207\u00b2+cI (shifts all eigenvalues by c, preserves differences on ANY grid; NOT the K2 phantom \u2014 verified: M4 substance rebuilt on connected grid)"
+  },
+  {
+   "match": "K3_clausius_patch",
+   "tag": "EXACT-OK",
+   "reason": "K3d coherent control \u03a3/\u03b4Q=1.000000 = Longo's theorem exactly (displacement \u21d2 \u0394S=0 \u21d2 \u03a3=\u03b4Q), same mechanism as K1's EXACT-OK"
+  },
+  {
+   "match": "K5_drum_learnability",
+   "tag": "KNOWN-BUG",
+   "reason": "prose quotes the K2 disconnected-grid bug (max|L\u2082\u2212L\u2081|=0), not a new value"
+  },
+  {
+   "match": "V2_cft_calibration",
+   "tag": "EXACT-OK",
+   "reason": "gapped_pseudo_c 6e-11 = correct physics (gapped \u27f9 c=0 control); R\u00b2=1.000000 = fit of the theoretically-exact CFT log-form (over-precise print)"
+  }
+ ],
+ "suspicious": [],
+ "survived": true,
+ "verdict": "Every machine-precision agreement in the bridge's corpus classifies as exact-by-construction (SymPy/integer/symbolic/exact-symmetry) or the already-caught K2 bug; no unexplained numerical-method exactness remains. Standing guard: a re-run surfacing a candidate outside the baseline is a new suspect."
+}
