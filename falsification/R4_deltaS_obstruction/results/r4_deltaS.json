@@ -1,0 +1,23 @@
+{
+ "nu_vac": 1.5430806348152437,
+ "S_vac": 0.6594529591680367,
+ "R4a": {
+  "dS_displacement": 0.0,
+  "dS_crosscut_squeeze": -0.48816487855268215,
+  "pass": true
+ },
+ "R4b": {
+  "found": true,
+  "theta": 0.5235987755982988,
+  "r_star": 0.29509606830061375,
+  "dS_at_root": 0.0,
+  "nonfactorizing": true,
+  "nontrivial": true,
+  "bracket": [
+   -0.3744593853248428,
+   3.2613021828000077
+  ],
+  "note": "grid-scan (60x60) missed this zero \u2014 the \u0394S=0 curve exists (BS<0, TMS>0); root-finding is the correct instrument, not sampling"
+ },
+ "verdict": "postulate TRUE \u2014 non-factorization sufficient-but-not-necessary; obstruction = \u0394S\u22600 exactly (K1 wording amended)"
+}

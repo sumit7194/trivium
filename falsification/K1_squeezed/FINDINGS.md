@@ -103,3 +103,15 @@ Longo 2019 · Casini–Grillo–Pontello 2019 · Bisognano–Wichmann 1976 · re
 [leg X](../../legX_entropic_hinge) `entropic_hinge.py` (G_qq) and the leg-X certification's B_p construction
 (G_pp). `code/k1_squeezed.py` · `results/k1_squeezed.json`. Interpreter: conjecture_machine `.venv`
 (mpmath 1.3.0, numpy 2.4.6).
+
+---
+
+## Precision amendment (2026-07-24, via R4)
+
+The obstruction to the Longo identity is **exactly ΔS ≠ 0**; the "non-factorization / entangles across the
+cut" language above is **sufficient but not necessary**. R4 root-found a genuinely-entangling (non-
+factorizing) operation — BS(π/6)·TMS(r\*=0.295) on a 2-mode toy — with **ΔS = 0**, which therefore *satisfies*
+the identity despite being non-factorizing (the beamsplitter disentangles, the two-mode squeeze re-entangles,
+and they cancel). **This does not change K1's verdict**: the cross-cut *squeezes* K1 tested genuinely have
+ΔS ≠ 0, so the kill stands — only the characterization of the obstruction is sharpened. See
+[R4_deltaS_obstruction](../R4_deltaS_obstruction/FINDINGS.md).
