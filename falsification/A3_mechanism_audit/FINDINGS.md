@@ -127,7 +127,7 @@ rather than merely named. **Four claims, four different outcomes — which is it
 | claim | site(s) | outcome |
 |---|---|---|
 | **Collinson / Dietz–Rüdiger** — KT ⇒ KY on type-D vacua | L1 + 4 more | ✅ **VERIFIED** (Collinson, *Int. J. Theor. Phys.* **15**, 311–314) · `acceleration-free` qualifier **OPEN** |
-| **Collins–d'Inverno–Vickers** — type-D vacuum CK bound = 2 | G6's verdict | ⚠️ **PARTIALLY VERIFIED — "not in doubt" RETRACTED** |
+| **Collins–d'Inverno–Vickers** — type-D vacuum CK bound = 2 | G6's verdict | ⚠️→✅ **RETRACTED, then SETTLED same day by ansatz: a counting convention; both numbers right** (derivative order 2 = 3 iterations). Verdict stays re-based on our own measurement. |
 | **Witten's no-go** — no chiral fermions from smooth KK | A2, KK notes | ✅ **VERIFIED, and strengthened** |
 | **Longo** — coherent-state entropy theorem | K1, K3, R4, A1 | 🏷️ **`[asserted, unverified]`** — tagged, not checked |
 
