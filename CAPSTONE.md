@@ -1,6 +1,6 @@
 # The Bridge — Capstone
 
-*State of the program, 2026-07-03. A single reading map for the whole body of work: what the bridge is, the
+*State of the program, **2026-07-26**. A single reading map for the whole body of work: what the bridge is, the
 full scoreboard, the results that hold the weight, the patterns that recurred, and — given equal billing —
 what failed or stayed out of reach. Every number here traces to one gated leg and its commit; this document
 introduces **no new claim**. If a figure below disagrees with a leg's `FINDINGS.md`, the leg wins.*
@@ -16,7 +16,7 @@ Four sibling projects, built with **independent roots on purpose**, cross-valida
 | **ansatz** | conjecture_machine | **deductive** — exact symbolic+numeric GR; proves metrics, invariants, hair-counts. The ground-truth oracle. |
 | **tabula** | SpaceTime/curvature | **inductive** — neural geometry-from-observation; sees only observations, never the metric. The representation oracle. |
 | **deepstrain** | BlackHole | **empirical** — real LIGO ringdown/echo/PBH searches; sensitivity from injections, significance from measured background. The measurement oracle. |
-| **quantum** | quantum (local) | **foundational** — QM-foundations lab (KK projections, weak measurement, detector geometry). Joined 2026-07-03. |
+| **quantum** | [vestigium](https://github.com/sumit7194/vestigium) | **foundational** — verified QM-foundations lab (KK projections, weak measurement, detector geometry, entropic time). Joined 2026-07-03; repo public 2026-07-26. |
 
 The bridge keeps all four **READ-ONLY** and holds one discipline (THE_BRIDGE.md §2):
 
@@ -27,8 +27,12 @@ Every leg follows **pre-register → build → gate → document**: the predicti
 frozen in a `PREREGISTRATION.md` *before* the compute runs. The north star, verbatim from the working
 sessions: **robustness and correctness is the only north star.**
 
-**Scale.** 36 pre-registered, gated investigations (37 leg directories; one is preregistration-only), 105
-commits, across four repos. No single leg is the asset — the triangulation is.
+**Scale.** 36 pre-registered gated legs **plus 26 falsification attacks** (`falsification/`), across four
+repos. No single leg is the asset — the triangulation is.
+
+**Two halves.** Legs A–V *build* cross-validated results. The **falsification campaign** (from 2026-07-22)
+tries to *destroy* them, including a **self-audit tier** that turns the method on the bridge itself. Both
+halves are reported here; the second is younger and has already killed one of the first's headline claims.
 
 ---
 
@@ -92,12 +96,31 @@ Verdicts are quoted as the legs state them — passes, nulls, and refutations al
 | U | does the 6D twist split the KK tower (the axion)? | **pass** | tower m=√(n₁²+n₂²) err 0.33%; χ splits √2→1.241/1.692, Δ(m²) 0.25% match | `d8515fd` |
 | V | box-dimension (from GR orbits) on quantum's detector wall? | **pass** | Cantor D=0.6309 exact; reproduces quantum's JS 0.342/0.438 to 2 decimals | `c24d725` |
 
+### The falsification campaign (2026-07-22 →) — postulates stated *to be killed*
+
+Pre-register → attack → **three-valued verdict** (KILLED / SURVIVES / UNDECIDED). Full detail in
+[FALSIFICATION_LEDGER.md](FALSIFICATION_LEDGER.md) (v1) and [FALSIFICATION_V2.md](FALSIFICATION_V2.md) (v2+).
+
+| tier | what it attacks | outcome |
+|---|---|---|
+| **K** (expected kills) | sharpening shots | K1–K5 **all KILLED**, each yielding a mechanism, not a bare "no" |
+| **G** (genuine bets) | the real uncertainty | **G2 KILLED** — the flagship *legible ⟺ KY-integrable* fell to designed adversaries. **G7 KILLED** (see §4a). G6 SURVIVES (partial) |
+| **M** (moonshots) | low odds, stated up front | **M2 KILLED** (κ scheme-dependent); **M6 KILLED by its own prior-art gate** |
+| **V** (validation) | expected to survive; harden instruments | V1, V2, V3 **all SURVIVE** — the instrument canaries held |
+| **R** (refinements) | bred from v1 corpses | R1–R9: 4 killed, 1 postulate-true, 3 undecided, 1 cross-gate + a new obstruction (**O4**) |
+| **S** (spectral/KK) | the drums→tori→curved arc | **S1 KILLED** (flat 4-tori not spectrally determined); **S2 SURVIVES**; S3 supported |
+| **A** (self-audit) | **the bridge's own record** | **A1 SURVIVES** · **A2 KILLED G7** · **A3 KILLED** (a load-bearing citation was never verified) |
+
+**Running total: 12 kills, 6 survivals, 4 undecided, 1 postulate-true — and 10 self-caught instrument bugs,
+every one a silent failure that looked like a result.**
+
 ---
 
-## 3. The four load-bearing results
+## 3. The five load-bearing results
 
-The legs that carry the weight — each a place where independent epistemologies concur (or disagree for a
-named reason) on something none could establish alone.
+The work that carries the weight — each a place where independent epistemologies concur, or disagree for a
+named reason, on something none could establish alone. **One of them is a falsification of our own flagship
+claim, and it belongs here on merit: the replacement is sharper than what it replaced.**
 
 1. **The count triangulates (spine + K).** A black hole is a **2-number object**, confirmed three
    independent ways — ansatz *proves* it, tabula *infers* it from observation, deepstrain *measures* it
@@ -105,11 +128,16 @@ named reason) on something none could establish alone.
    *predicted and mechanism-proved* (Q²+P² degeneracy). A claim surviving deduction, representation-learning,
    and empirical measurement at once is confirmed in a way no single method gives.
 
-2. **legible ⟺ KY-integrable (leg Q).** tabula's neural "does a learned geometry become legible" verdict and
-   leg O's symbolic "does the metric admit a Killing–Yano tensor" verdict agree **8/8** across the catalog
-   (Matthews φ=1.0) — including **three independent non-integrable classes** (axisymmetric bump, static
-   γ-metric, rotating Manko–Novikov). Two deliberately-independent repos, identical verdict metric-by-metric:
-   the clean, cross-validated version of the geometrization claim.
+2. **~~legible ⟺ KY-integrable (leg Q)~~ → FALSIFIED, and replaced by something sharper (G2, R1, R2).**
+   Leg Q's **8/8, φ=1.0** agreement across the catalog is a real measurement and stands. **The law it was
+   read as does not.** All 8 metrics were *found, not designed*, and Collinson 1976 forces KT⇒KY on type-D
+   vacua — so the catalog's homogeneity manufactured the coincidence (**L1**). Designed adversaries killed
+   it both ways: Candidate A (Killing tensor, **no** KY root) is **legible**; Candidate B (transcendental
+   invariant) is **illegible**. Legibility tracks neither KY nor integrability but **representability in the
+   probe's basis** — and R1 named the axis (the *momentum* basis, not coordinate). *This is the program's
+   most valuable result precisely because it is a kill:* a flagship claim was replaced by a mechanical,
+   movable boundary, and the replacement was then confirmed in both directions on a metric whose answer we
+   knew independently.
 
 3. **The GW250114 stack (Move B v1→v3 + start-time referee + mimicker status).** Three independent QNM
    pipelines (exact-Leaver, NPE, field-standard `ringdown`) agree on the remnant to **0.00 M⊙**; the exact
@@ -118,23 +146,62 @@ named reason) on something none could establish alone.
    ansatz §110's two-light-ring taxonomy every tested observable reads "one ring" (leg 8 §7). Triangulation
    did its job twice: it surfaced the systematic, then it accounted for it.
 
-4. **The KK ladder, 5D → 6D (legs S + U).** The KK mass tower `m_n=n/R` established across **four repos by
+4. **The KK ladder, 5D → 6D → curved (legs S + U + S2).** The KK mass tower `m_n=n/R` established across **four repos by
    four failure-mode-disjoint routes** (symbolic proof / direct numerics / independent FDTD / neural
    discovery, leg S) — then extended to **6D** where the bridge's own T² simulator reproduces the
    sum-of-two-squares tower and shows the **twist χ is a measurable axion**, splitting the degeneracy exactly
-   per the SL(2,ℝ)/SO(2) coset metric (leg U). The founding discover-then-verify pattern, run through a hidden
-   *dimension*.
+   per the SL(2,ℝ)/SO(2) coset metric (leg U) — then shown to be a **method, not a flat-space artifact**:
+   the same rest-buzz instrument reads a **curved** hidden S³ to 0.42%, with degeneracy (n+1)² *measured*
+   via the n≥ℓ cutoff (S2). The founding discover-then-verify pattern, run through a hidden *dimension*.
+
+5. **The self-audit tier — the method turned on itself (A1, A2, A3).** The bridge audited its own record
+   three times and the audits **bit**. A1 swept 93 too-clean numbers (all legitimate; a standing guard
+   installed). **A2 killed G7**, the program's own headline meta-claim, and replaced it with a four-species
+   wall taxonomy that three sisters then tested out-of-sample — amending it twice. **A3** found a
+   load-bearing theorem cited five times across the corpus with no identifier and no verification record;
+   it turned out to be *true*, which is the point: **an unverified claim of ours was false the same week,
+   and the process was identical. Only the luck differed.** A program that only reports its hits is not
+   doing cross-validation; one that will not audit its own scoreboard is not either.
 
 ---
 
 ## 4. The recurring themes
 
 Four patterns showed up across legs that were designed independently. Gathering their instances is the point
-of this section — each theme is only visible once its scattered appearances sit together.
+of this section — each theme is only visible once its scattered appearances sit together. **One of the four
+has since been killed by our own audit and replaced; it is kept below with its corpse visible, because how a
+theme dies is worth as much as the theme.**
 
-### 4a. Walls are instrument-relative (not absolute)
-A discovery limit is never a property of nature alone; it is a statement about *a specific instrument at a
-specific sampling*. Instances: δ is information-limited given SNR (legs 2, 7, L); MN thin-layer chaos is below
+### 4a. ~~Walls are instrument-relative~~ → **KILLED, and replaced by a four-species taxonomy**
+This was the program's recurring theme, promoted to meta-claim **G7** and "fed" eight times. **A2 attacked it
+deliberately and it died** — on the strict reading it is *false* (S1: two flat 4-tori, provably non-isometric
+and provably isospectral — no instrument upgrade crosses a wall where the information is not in the channel),
+and on the permissive reading it is *unfalsifiable* (saving it requires counting any channel change and any
+unbounded "in-principle" instrument as an upgrade).
+
+**Why eight rounds missed it is the finding:** *you only notice a wall as a wall when you cross it.* All eight
+"confirmations" were precision walls, which announce themselves. Information and definitional walls never feel
+like walls — they feel like **results**. S1 felt like *discovering* that 4-tori aren't spectrally determined;
+M2 felt like *measuring* that κ is scheme-dependent. So they were filed as findings and never put to G7. The
+meta-claim was tested against a sample that structurally excluded its own counterexamples.
+
+**The replacement** — four species, *not* a partition, with membership that can depend on regime and on a
+computable crossover:
+
+| species | diagnostic | prescription |
+|---|---|---|
+| **1 · precision** | does it converge as you refine? | keep pushing |
+| **2 · information** | do two distinct configurations give *identical* in-channel data? | **change channel** |
+| **3 · definitional** | do two legitimate conventions give different limits? | stop measuring; report the scheme-dependence *as* the result |
+| **4 · model fidelity** *(deepstrain)* | does the error stay put as the measurement improves? | improve the **model**, not the measurement — and locate the crossover |
+
+All three sisters then tested it out-of-sample and **two amended it**: deepstrain contributed species 4 (an
+SNR-independent waveform bias, crossover at SNR≈124); quantum showed species 3 can *switch off* with a
+physical parameter (Λ≈2–4) — while our own R8 showed κ's does **not**, so "definitional" must be checked per
+case. quantum then confirmed the species-2 prescription against a species-3 wall: κ's regulator spread is
+unmoved by refinement (41.8→41.7%) while mutual information's dies as s^−2.26 on the same lattice.
+
+The old theme's instances remain true as *species-1* cases: δ is information-limited given SNR (legs 2, 7, L); MN thin-layer chaos is below
 box-dimension's resolution but above the frequency-drift detector's (leg J); di-hole chaos is unreachable by a
 trajectory 0-1 test but reachable by a section frequency-drift (leg R); a CNN ties a realizable matched-filter
 bank because both are capped by *bank mismatch*, not by learned-vs-classical (Phase-5 note, `84b54d0`); and the
@@ -173,6 +240,20 @@ strongest existence proof that cross-validation earns its keep:
   A2); **data leakage** found and fixed in the rotating curriculum (leg 5b); **threshold-fragility** of the
   vacuum-BH counts surfaced under adversarial test (Move G). Sisters caught their own too — deepstrain's
   co-injection protocol shrank an apparent 10% matched-filter win to a 3% tie.
+- **A sister caught a bridge bug that invalidated a celebrated result.** tabula could not run K5 and correctly
+  diagnosed why: the bridge's drum grid used the same offset in x and y, silently **disconnecting each drum
+  into 3 congruent pieces**, so the two "isospectral" operators were *one matrix relabelled*. Our
+  "exact, resolution-independent isospectrality" was a triviality. Verdict survived on the continuum theorem
+  plus convergence; the mechanism was retracted and a connectivity assertion installed (**L2**).
+- **The bridge's independent reimplementation found an obstruction the original missed.** Re-deriving ansatz
+  §123's emit criterion in our own code reproduced all four teeth *and* surfaced **O4**: a degree-6 polynomial
+  that **falsely emits** by approximating a transcendental invariant. tabula reproduced it at degree 8. Three
+  repos then independently converged on the same defence (generalisation testing) — which R7 showed is the
+  **only** one available, because approximation and representation are indistinguishable in-sample.
+- **Two retractions of our own, in one day, same failure mode.** M6 asserted a mechanism *from reading* and
+  shipped it unrun (R7 measured it false by 28×); R6 asserted one *from memory* against its own pre-registered
+  discipline, and it was **inverted** — caught by quantum re-testing the item. Both are recorded in place with
+  the original wording struck rather than deleted.
 
 ---
 
@@ -196,6 +277,16 @@ hits is not doing cross-validation.
 - **Parked frontier** — the MN deep chaotic sea at x<1.5 is beyond trustworthy integration on both sides;
   needs a symplectic / extended-precision integrator before the frequency-drift detector can point at it.
 - **Cut legs** — the original legs 9–12 were removed in an integrity audit (`b6edddc`) as not meeting the bar.
+- **R6 retracted twice over** — its mechanism was inverted (spatial vs *spacetime* dimension) and its numbers
+  turned out to be an artifact of a 3-term truncation: extending the fit makes `b` **diverge** by 14× its own
+  error (R9). Honest status: *this instrument cannot extract the subleading log at all* — a species-1 wall,
+  not the species-3 one R6 claimed.
+- **M6 killed by its own gate** — the "publishable methods result" was admitted conditionally on a prior-art
+  sweep. The sweep found both halves already in the literature, with sharper thresholds than ours. The gate
+  did exactly what it was for: the cheapest possible way to not write a paper that would have been scooped.
+- **S3's gate was unreachable by construction** — a threshold set against a quantity K2 had already documented
+  as staircase-limited. The postulate was supported; the frozen bar was not met; it was **not** relabelled.
+- **G7 killed** — see §4a. The program's own headline meta-claim, attacked deliberately and lost.
 
 ---
 
@@ -208,18 +299,35 @@ deepstrain's §18/§22/§23 were produced). Notably, the flow has gone **upstrea
 frequency-drift detector was natively reimplemented *inside* ansatz (§105) — the first instrument, not bug, to
 propagate into a source repo.
 
-**Open threads (all optional):**
-- **Leg S/U four-route breadth** — legs U is bridge-numeric + ansatz-symbolic only; a neural 6D discovery
-  (tabula) or 6D direct numerics (quantum) would give it leg S's four-route breadth.
-- **The MN deep sea** — parked pending a higher-precision integrator (both repos).
-- **quantum's foundations suite** — weak-measurement/Born-rule, decoherence, Zeno, Bohmian, CSL, Wigner's
-  friend remain unbridged; only the fractal-boundary experiment has been consumed (leg V).
+**The lessons ledger.** Twelve standing rules now govern the work, each bought by a specific failure and
+several contributed by sisters — L1 proxies masquerade as laws on homogeneous catalogs · L2 too-clean is a bug
+smell · L3 design kills to output curves · L4 survivals localize · L5 independence pays twice · L6 the outward
+turn is event-driven · ~~L7~~ *(killed by A2)* · **L8** state the units of both sides *(tabula)* · **L9** scan
+the physical regime *(quantum)* · **L10** every claim carries a receipt · **L11** a relayed claim is repeated,
+not corroborated — and the *originating* repo must tag it *(ansatz)* · **L12** a residual needs both a floor
+probe and a limit probe *(quantum)*. Full text in [FALSIFICATION_V2.md](FALSIFICATION_V2.md).
 
-**Per-leg detail** lives in each `leg*/FINDINGS.md`; the dated narrative in `JOURNAL.md`; the running plan and
-phase ledgers in `BACKLOG.md`; the original design map in `THE_BRIDGE.md`.
+**Open threads (all optional):**
+- **Leg S/U four-route breadth** — leg U is bridge-numeric + ansatz-symbolic only; a neural 6D discovery
+  (tabula) or 6D direct numerics (quantum) would give it leg S's four-route breadth.
+- **The MN deep sea (G4)** — parked pending a higher-precision integrator; the oldest open wall, and a
+  species-1 one (crossable in principle).
+- **quantum's foundations suite** — weak-measurement/Born-rule, decoherence, Zeno, Bohmian, CSL, Wigner's
+  friend remain unbridged; the fractal boundary (leg V), entropic time and the 2D κ-vs-I(A:B) build are consumed.
+- **The corner-log** — quantum's 2D result used strip geometry only; corners are the obvious next thing that
+  could behave differently.
+- **The generator-based emit criterion (ansatz)** — deciding "does an invariant exist in span(Φ)" from
+  `{I,H}=0` alone, with no data and no threshold. It would dissolve O4 *a priori* rather than catching it
+  after the fact. Gated on their own symbolic prior-art sweep.
+
+**Per-leg detail** lives in each `leg*/FINDINGS.md` and `falsification/<ID>/FINDINGS.md`; the dated narrative
+in `JOURNAL.md`; the running plan and phase ledgers in `BACKLOG.md`; the original design map in
+`THE_BRIDGE.md`; the standing attack programme in `FALSIFICATION_LEDGER.md` and `FALSIFICATION_V2.md`.
 
 ---
 
-*Four ways of knowing the same physics, made to meet cleanly. The contribution is method, end-to-end
-ownership, and cross-validation — reported honestly, hits and misses alike. Robustness and correctness is the
-only north star.*
+*Four ways of knowing the same physics, made to meet cleanly — and then made to attack each other, and
+themselves. The contribution is method, end-to-end ownership, and cross-validation, reported honestly: hits,
+misses, and retractions alike. The scoreboard above lists a killed flagship and two of our own retracted
+mechanisms because a scoreboard that cannot lose is not a scoreboard. Robustness and correctness is the only
+north star.*
