@@ -70,6 +70,21 @@ See BACKLOG Phase 8. Two things the bridge now owes:
 - **tabula R5 — ✅ KILLED-as-stated**: low-mode concentration holds, m*≈24 not ~10; signal spatially distributed
   (low-rank-in-frequency, high-rank-in-space).
 - **ansatz R2 (emit⟺span theorem) — RUNNING**; bridge unseals + scores on delivery.
+- **tabula un-blind round — ✅ CLOSED 2026-07-26** (their §164, commit `f9a8205`). They verified `I = p_y/p_x
+  − ln p_x` **by hand from B's Hamiltonian before running** (İ = 0 identically; 7.5e-30 numerically), then:
+  **Test 1 emits** — held-out **1.8e-29**, recovering the *literature direction* at cosine **1.0000**
+  (labelled a consistency check, correctly). **Test 2 never converges** — deg 2/4/6/8 → 1.3e-3, 2.0e-4,
+  2.6e-5, 5.6e-6, still **10²³×** above the emitting arm, exactly as the grading theorem requires.
+  **O4 reproduced**: degree-8 in-sample **9.9e-7 crosses the 1e-6 line** while held-out is 5.6e-6 — their
+  harness has been held-out by construction since §161 so it never bit, but it was an untested assumption
+  until named. They also **self-corrected a bad proxy** (an "in-sample/held-out gap ≥ 10×" rule) to the
+  line-crossing definition before scoring, and note their §162 "rational" arm was rational in *coordinates*
+  — so both R1 extensions were off-axis for the same structural reason.
+  **Bridge owes back (filed):** (i) `p_x > 0` is **their** condition, not ours — they credited us with a note
+  we never wrote; corrected in [UNBLIND_B.md](falsification/G2_adversarial_legibility/UNBLIND_B.md);
+  (ii) published machinery exists for both the log-basis arm and the O4 guard (Ray 2026), and the real fix is
+  a **noise-calibrated threshold** replacing the hand-set 1e-6 — see
+  [M6](falsification/M6_prior_art_gate/FINDINGS.md).
 
 ## Round-8 asks (2026-07-23) — the adversarial-legibility round (Falsification Ledger G2, K5, G6)
 

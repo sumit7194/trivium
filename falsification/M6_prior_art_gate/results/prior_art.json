@@ -1,0 +1,43 @@
+{
+ "gate": "M6 prior-art sweep — the condition under which M6 was admitted to the v2 moonshot board",
+ "date": "2026-07-26",
+ "verdict": "KILLED — both halves of the proposed write-up are prior art, and the literature is sharper on both",
+ "claims_tested": [
+  {"half": 1, "claim": "emit succeeds <=> the invariant lies in the span of the probe basis",
+   "status": "PRIOR ART, and known more sharply",
+   "key_source": "arXiv:2403.04889",
+   "evidence": "Oellerich & Emelianenko state the failure trichotomy explicitly: a failure to produce sigma_i ~ 0 means (1) the library lacks the appropriate terms, (2) inadequate/noisy data, or (3) no conservation law exists. (1) IS the claim. They further supply a noise-calibrated cutoff sigma = sqrt(Np)*||eps||^{2/3} from perturbation theory (their Cor. 4.2) and a spectral-gap library-selection criterion max(sigma_{j-1} - sigma_j) — both strictly sharper than our fixed tau_rel = 1e-6."},
+  {"half": 2, "claim": "O4 — an over-rich polynomial basis can FALSELY emit by approximating an invariant outside its span",
+   "status": "PRIOR ART, actively attacked in the literature",
+   "key_source": "arXiv:2603.20474",
+   "evidence": "Ray 2026 names non-polynomial invariants and false positives as the target problem; pipeline includes log-basis Lasso (the same log-augmented basis tabula tried in R1) and a constancy gate plus diversity filter to remove spurious laws (the formalized version of our proposed out-of-sample guard), reporting FDR = 0.0 over nine systems. Broader literature: overcomplete polynomial libraries are strongly collinear and 'no regularisation tuning can provide a formal guarantee on the rate of false discoveries.'"}
+ ],
+ "sources": [
+  {"id": "arXiv:2305.19525", "title": "Discovering New Interpretable Conservation Laws as Sparse Invariants",
+   "authors": "Ziming Liu, Patrick Obin Sturm, Saketh Bharadwaj, Sam Silva, Max Tegmark",
+   "verification": "FETCHED (title, authors, abstract read)",
+   "bearing": "the SID algorithm — closest prior art to R2's method. Abstract page did not contain span-condition or false-positive discussion; that negative is ABSTRACT-LEVEL ONLY and is treated as weak evidence."},
+  {"id": "arXiv:2403.04889", "title": "Towards Robust Data-Driven Automated Recovery of Symbolic Conservation Laws from Limited Data",
+   "authors": "Tracey Oellerich, Maria Emelianenko (George Mason University)",
+   "verification": "FETCHED (failure trichotomy, Cor. 4.2 threshold, spectral-gap criterion read directly)",
+   "bearing": "LOAD-BEARING for half 1. Same instrument (library -> design matrix -> SVD -> near-null singular value), states the span condition, and supplies a noise-calibrated threshold we lack."},
+  {"id": "arXiv:2603.20474", "title": "From Data to Laws: Neural Discovery of Conservation Laws Without False Positives",
+   "authors": "Rahul D Ray", "submitted": "2026-03-20",
+   "verification": "FETCHED (title, author, date, abstract read). Postdates the assistant knowledge cutoff — found by search, verified by fetch, not recalled.",
+   "bearing": "LOAD-BEARING for half 2. Targets exactly O4's failure mode; includes log-basis Lasso and a constancy-gate + diversity-filter guard."},
+  {"id": "arXiv:1811.00961", "title": "Discovering conservation laws from data for control",
+   "authors": "Kaiser, Kutz, Brunton",
+   "verification": "SEARCH-RESULT ONLY — not independently fetched",
+   "bearing": "Koopman-based conserved-quantity discovery; background prior art already cited in R2's own FINDINGS."},
+  {"id": "arXiv:2004.02322", "title": "SINDy-PI: Robust Implicit Sparse Identification",
+   "verification": "SEARCH-RESULT ONLY — not independently fetched",
+   "bearing": "documents the ill-conditioned null-space problem in implicit-SINDy — the conditioning issue underlying O4."}
+ ],
+ "instrument_upgrades_adopted": [
+  "replace fixed tau_rel = 1e-6 with a noise-calibrated cutoff (Oellerich & Emelianenko Cor. 4.2)",
+  "adopt the spectral-gap library criterion max(sigma_{j-1} - sigma_j) instead of a hand-set ratio threshold",
+  "adopt a constancy-gate + diversity-filter false-positive guard (Ray 2026) in place of the ad-hoc out-of-sample check"
+ ],
+ "unaffected": "R2's cross-gate closure (bridge reimplementing ansatz 123 independently) is cross-validation between two independent implementations, never a novelty claim — its value is unchanged. O4 remains a real finding about OUR instrument; it is not a finding about the field.",
+ "taxonomy_note": "By A2's taxonomy this is a species-1 (precision/instrument) wall: prescription is 'keep pushing, upgrade the instrument' — which is exactly what the three adopted upgrades do."
+}

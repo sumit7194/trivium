@@ -74,6 +74,21 @@ out-of-sample orbits (different energies/initial conditions than those used to b
 approximation degrades off-sample, a true invariant does not. We would rather hand you this trap than have
 you find it the way we did.
 
+## Amendment (2026-07-26, after tabula's run) — a condition we should have stated, and did not
+
+**Both atoms are singular at `p_x = 0`.** `p_y/p_x` and `ln p_x` are meaningless there, so the probe orbits
+must keep `p_x` bounded away from zero. **This condition is tabula's, not ours** — they derived and enforced
+it (min `p_x` = 0.046 across their run) and then generously credited it to a "probe with `p_x > 0`" note in
+this document. **No such note existed.** It is recorded here with attribution so the robustness condition
+lands in their instrument's provenance, where it belongs, rather than being absorbed into ours.
+
+Also amended: the O4 guard proposed below as "use out-of-sample orbits" has **published machinery** — Ray
+2026, [arXiv:2603.20474](https://arxiv.org/abs/2603.20474), *log-basis Lasso* plus a *constancy gate and
+diversity filter*. And the deeper fix is not a guard at all: our fixed `τ_rel = 1e-6` is the wrong kind of
+threshold; a **noise-calibrated** cutoff (Oellerich & Emelianenko,
+[arXiv:2403.04889](https://arxiv.org/abs/2403.04889), Cor. 4.2) dissolves the trap instead of defending
+against it. See [M6's prior-art gate](../M6_prior_art_gate/FINDINGS.md).
+
 ## Honest bookkeeping
 
 - **B is now burned as a blind target.** That is fine and was always the plan: R1 already answered the blind
