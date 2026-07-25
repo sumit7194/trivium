@@ -54,6 +54,21 @@ See BACKLOG Phase 8. Two things the bridge now owes:
 - **standing:** the flux-atlas next rung (ansatz's offered closed-form stabilized-moduli masses → bridge
   numerical verification) is still queued and unstarted.
 
+## Round-11 asks (2026-07-26) — filed after A2 (G7 killed) and M6 (prior-art gate)
+
+Three asks, one per sister, deliberately chosen so that **each can overturn something the bridge just
+concluded** rather than confirm it. Frozen before any sister was contacted.
+
+| ask | to | independent? | bridge wait-point | what a kill does to us |
+|---|---|---|---|---|
+| **A. Prior-art STOP + reframe on R2** — the emit⟺span theorem is already in the literature (Oellerich & Emelianenko arXiv:2403.04889 states the trichotomy on the *same* SVD-null-space instrument, with a noise-calibrated cutoff we lack; Ray 2026 arXiv:2603.20474 covers O4). **Do not spend more effort on the numerical statement.** The reframe: ansatz is the only sibling that can do the **exact symbolic** version — a proof over the engine's actual algorithm in exact rational arithmetic, where "lies in the span" is *decidable*, not thresholded. That is the gap the numerical literature structurally cannot fill. | ansatz | ✅ | M6 stays dead either way; a symbolic decidability result would be a *new* item, not M6 revived | saves burned effort; reframes the only surviving contribution |
+| **B. Is the δ wall species-1 or species-2?** A2 classified deepstrain's no-hair δ limit as **CROSSABLE** (more SNR moves the Fisher floor) under the conservative rule — explicitly *against* the bridge's prior. Test it: inject at escalating SNR and ask whether σ(δ) scales as 1/SNR (**species-1, precision**) or **saturates at a nonzero floor** as SNR→∞ (**species-2, information** — a genuine in-band degeneracy). | deepstrain | ✅ | A2's classification table | **saturation KILLS our classification** and adds a 4th uncrossable wall to A2 — we amend |
+| **C. Does entropic time depend on the coarse-graining?** Barontini (arXiv:2509.07745, PRR 8 L022047) builds a relational "entropic time" whose entropy reduces to *atom number in the bright sector*. Our M2/R6 lesson says coarse-graining is a **scheme choice**. Build a bipartite time-independent-H sim (their detector-wall machinery from leg V suffices), construct entropic time under **2–3 legitimately different coarse-grainings**, and ask whether they order the same events identically. | quantum | ✅ | a species-3 (definitional) test on someone else's result | divergence ⇒ "time" is partly the experimenter's choice — an M2-species finding outside our own repo |
+
+**Why these three now:** A2 killed G7 and left a taxonomy that has only ever been applied to *our* walls.
+Asks B and C are its first out-of-sample tests — B on a sibling's wall, C on the literature's. If the
+taxonomy cannot survive being pointed away from home, it is not the useful replacement A2d claimed.
+
 ## Round-9 (v2) status (2026-07-24) — tabula R1+R5 & deepstrain G8 CLOSED; ansatz R2 running
 
 - **deepstrain G8 — ✅ SURVIVES** (Fisher floor: σ_NPE 0.263 between data-only 0.321 and data+prior 0.215;
