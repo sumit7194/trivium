@@ -81,3 +81,36 @@ signatures. The regular neighbours at the same δ furnish the per-δ noise floor
 - Compute is bounded up front: crossings per orbit and grid size are fixed in the script and reported, so a
   null is always accompanied by exactly what was searched.
 - Bridge-solo; imports ansatz read-only; no sister dependency.
+
+---
+
+# ADDENDUM — instrument upgrade for the overnight run (frozen 2026-07-26, before the rerun)
+
+*The first attempt returned **UNDECIDED(search)**: the drift measure's floor (2/N = 0.0333 at N=60) sat
+**above** the signal being hunted (§106's 0.027). [A2](../A2_wall_audit/FINDINGS.md) classifies that as a
+**species-1** wall — prescription: **upgrade the instrument**. **The gates G3a–G3d are UNCHANGED**; only the
+instrument is. Recorded before the rerun so the upgrade cannot be tuned to a result.*
+
+## Four changes, each answering a named defect
+
+1. **Continuous drift estimator.** The FFT peak now uses **parabolic sub-bin interpolation** (the same fix
+   S2's rest-buzz used), so the resolution is set by the data rather than by the bin grid `2/N`. This kills
+   the quantization that made every δ return an identical 6.67e-2.
+2. **Hunt the separatrix, not the band interior.** ⚠️ **The first run looked in the wrong place.** §106's
+   layer sits at the **plunge separatrix**; we scanned `x₀ ∈ [10,16]`, the *interior* of the long-lived band.
+   Tonight's probe locates the plunge↔survive transition at **x₀ ≈ 8–10**. The rerun finds that transition
+   **per δ** and steps finely across it.
+3. **§106's actual stepping and record length:** `x₀` step **0.002** across the transition, **N = 200**
+   crossings (up to 1.2M integration steps per orbit) — versus 9 samples and N=60.
+4. **Each conjunct validated independently on the control** — tonight's real lesson. The `drift AND escape`
+   criterion passed vacuously twice (first on zero orbits, then on a dead drift conjunct). G3a now
+   additionally requires that the drift measure be **non-degenerate** on the control (a real spread, not one
+   repeated value) and reports separately whether the escape detector ever fired anywhere in the run. **A
+   conjunctive gate certifies nothing unless each conjunct is known to be alive.**
+
+## Unchanged, and stated so
+
+Gates **G3a–G3d**, the fire criterion (`drift ≥ 3× floor` **and** finite escape lifetime), the A1 integration
+guard (`dH < 1e-4`), E = 0.95, Lz = 3.0, and the δ list. **UNDECIDED(search) remains a live outcome** — a
+better instrument is not a guarantee, and if the layer still does not reproduce that is reported as such.
+Results are written **incrementally per δ** so a partial run is still evidence.
