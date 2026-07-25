@@ -245,7 +245,7 @@ The flagship biconditional "legible ⟺ KY-integrable" (leg Q, 8/8, φ=1.0) is *
 | **B** | **transcendental** invariant, no polynomial ≤4 | **ILLEGIBLE** (certify-relative-to-basis) | integrable but illegible ⇒ **H_INT dead** |
 
 **The corrected claim: legible ⟺ the hidden invariant is polynomial-representable in the probe's basis.**
-KY was only ever a *proxy*, exact on the old catalog because Collinson 1976 / Dietz–Rüdiger 1981 force
+KY was only ever a *proxy*, exact on the old catalog because Collinson 1976 (*Int. J. Theor. Phys.* **15**, 311–314) / Dietz–Rüdiger 1981 (*Proc. R. Soc. Lond. A* **375**, 361) force
 KT ⇒ KY for type-D **vacua** — and the catalog was all type-D vacuum. The coincidence was forced by the
 catalog's own restriction, never evidence. Candidate A leaves vacuum and proxy separates from quantity.
 A is also a genuine **blind rediscovery**: ansatz constructed the Killing tensor, the bridge verified it,

@@ -1,0 +1,1157 @@
+{
+ "docs_swept": 25,
+ "candidates": 123,
+ "near_headline": 24,
+ "by_file": {
+  "falsification/A1_tooclean_audit/FINDINGS.md": 3,
+  "falsification/A2_wall_audit/FINDINGS.md": 11,
+  "falsification/G2_adversarial_legibility/FINDINGS.md": 4,
+  "falsification/K1_squeezed/FINDINGS.md": 10,
+  "falsification/K2_isospectral_drums/FINDINGS.md": 3,
+  "falsification/K3_clausius_patch/FINDINGS.md": 2,
+  "falsification/K4_bumpy_vacuum/FINDINGS.md": 1,
+  "falsification/K5_drum_learnability/FINDINGS.md": 2,
+  "falsification/M2_arealaw/FINDINGS.md": 2,
+  "falsification/M4_drum_coupling/FINDINGS.md": 3,
+  "falsification/M6_prior_art_gate/FINDINGS.md": 5,
+  "falsification/R2_emit_theorem/FINDINGS.md": 3,
+  "falsification/R3_clausius_scaling/FINDINGS.md": 7,
+  "falsification/R4_deltaS_obstruction/FINDINGS.md": 3,
+  "falsification/R6_arealaw_log/FINDINGS.md": 15,
+  "falsification/R7_emit_threshold/FINDINGS.md": 10,
+  "falsification/R8_regime_scan/FINDINGS.md": 3,
+  "falsification/S1_schiemann_tori/FINDINGS.md": 1,
+  "falsification/S2_s3_tower/FINDINGS.md": 3,
+  "falsification/S3_drum_compactification/FINDINGS.md": 5,
+  "falsification/V1_relent_monotone/FINDINGS.md": 1,
+  "falsification/V2_cft_calibration/FINDINGS.md": 2,
+  "falsification/V3_flat_tori/FINDINGS.md": 2,
+  "FALSIFICATION_LEDGER.md": 15,
+  "FALSIFICATION_V2.md": 7
+ },
+ "by_tag": {
+  "because": 35,
+  "mechanism": 29,
+  "the-reason": 5,
+  "why": 32,
+  "therefore": 14,
+  "since": 5,
+  "due-to": 1,
+  "hence": 5,
+  "explains": 2
+ },
+ "hits": [
+  {
+   "file": "falsification/A1_tooclean_audit/FINDINGS.md",
+   "line": 22,
+   "tags": [
+    "because"
+   ],
+   "near_headline": true,
+   "text": "The gate is SUSPICIOUS-count = 0 **only because each of the 93 carries a checkable reason** \u2014 this is not"
+  },
+  {
+   "file": "falsification/A1_tooclean_audit/FINDINGS.md",
+   "line": 40,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "M4 was the genuine concern, because its old isospectral floor **rode on the K2 disconnected-grid bug**. A1"
+  },
+  {
+   "file": "falsification/A1_tooclean_audit/FINDINGS.md",
+   "line": 47,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "mechanism, that it is not."
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 1,
+   "tags": [
+    "the-reason"
+   ],
+   "near_headline": true,
+   "text": "# A2 \u2014 Findings: G7 is KILLED \u2014 and the reason we never noticed is the finding"
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 4,
+   "tags": [
+    "because"
+   ],
+   "near_headline": true,
+   "text": "Falsification v2+, Tier A. **This was a deliberate attack on our own headline meta-claim**, filed because G7"
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 11,
+   "tags": [
+    "the-reason"
+   ],
+   "near_headline": true,
+   "text": "isospectral*, which discharges the frozen proof obligation exactly. And the reason eight rounds of"
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 12,
+   "tags": [
+    "why"
+   ],
+   "near_headline": true,
+   "text": "\"confirmation\" missed it turns out to be structural, not accidental \u2014 see *Why G7 kept surviving* below."
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 60,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "> this, because the information is not in the channel at any precision."
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 67,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## The vacuity horn (A2c, permissive reading) \u2014 and why it isn't a rescue"
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 87,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## Why G7 kept surviving eight rounds \u2014 the actual finding"
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 89,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "This is the part worth keeping, and it is a selection effect with a precise mechanism:"
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 138,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "`\u03b4_bias = 0.072`, **independent of SNR** \u2014 because `F\u207b\u00b9 \u221d A\u207b\u00b2` while `\u27e8\u2202h|\u0394h\u27e9 \u221d A\u00b2`, so `\u0394\u03b8 \u221d A\u2070`. Total"
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 139,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "error therefore *saturates*:"
+  },
+  {
+   "file": "falsification/A2_wall_audit/FINDINGS.md",
+   "line": 183,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "\"invariants.\" Null-space counting of any flavour therefore needs a **library-conditioning gate**. This is the"
+  },
+  {
+   "file": "falsification/G2_adversarial_legibility/FINDINGS.md",
+   "line": 29,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "The 8/8 record could not separate three hypotheses because KY-ness, integrability and polynomial-invariance"
+  },
+  {
+   "file": "falsification/G2_adversarial_legibility/FINDINGS.md",
+   "line": 40,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "> catalog because Collinson (1976) / Dietz\u2013R\u00fcdiger (1981) force KT \u21d2 KY for type-D **vacua**, and the whole"
+  },
+  {
+   "file": "falsification/G2_adversarial_legibility/FINDINGS.md",
+   "line": 48,
+   "tags": [
+    "why"
+   ],
+   "near_headline": true,
+   "text": "## Why the two verdicts are strong rather than lucky"
+  },
+  {
+   "file": "falsification/G2_adversarial_legibility/FINDINGS.md",
+   "line": 80,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "- A **trajectory-indexing bug** briefly made *both* candidates read illegible, caught only because their"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 14,
+   "tags": [
+    "because"
+   ],
+   "near_headline": true,
+   "text": "sitting **entirely inside the wedge** leaves the identity **exact** (\u0394S = 0, because it is a local unitary"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 16,
+   "tags": [
+    "because"
+   ],
+   "near_headline": true,
+   "text": "**1.3\u00d710\u207b\u2079**. Coherent states are special not because they are unsqueezed, but because **displacement"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 27,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "| **K1a\u2032** (mechanism) | position scan r=0.6, centre from inside A across the cut | \u0394S: 0 \u2192 **0.437**, deviation: 0 \u2192 **63%** | mechanism shown |"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 31,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "## The mechanism (K1a\u2032 \u2014 the finding the ledger did not anticipate)"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 46,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "**Why:** von Neumann entropy of the reduced state S(\u03c1_A) is invariant under any unitary supported on A"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 50,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "crosses the cut**. The frozen pre-registered attack put the squeeze at x\u2080 = 12 (inside A) and therefore"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 53,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## Why coherent states are special (the sharpened statement)"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 67,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "*ratio* actually shrinks with r (56% \u2192 22%) because \u0394\u27e8K_\u03c3\u27e9 grows faster than \u0394S \u2014 a large squeeze is"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 83,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "the brute-force trace \u2014 the *same wall leg X logged as O4*. The certification toy therefore uses a gentle"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 113,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "factorizing) operation \u2014 BS(\u03c0/6)\u00b7TMS(r\\*=0.295) on a 2-mode toy \u2014 with **\u0394S = 0**, which therefore *satisfies*"
+  },
+  {
+   "file": "falsification/K2_isospectral_drums/FINDINGS.md",
+   "line": 3,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": true,
+   "text": "> ## \u26a0\ufe0f CORRECTION (2026-07-24) \u2014 the first version of this result was wrong in its *mechanism*"
+  },
+  {
+   "file": "falsification/K2_isospectral_drums/FINDINGS.md",
+   "line": 10,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": true,
+   "text": "> independent**\" was therefore a **triviality, not transplantation**, and K5 was untestable on it."
+  },
+  {
+   "file": "falsification/K2_isospectral_drums/FINDINGS.md",
+   "line": 50,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## Why K2b matters (and why \"same perimeter\" is a feature, not a coincidence)"
+  },
+  {
+   "file": "falsification/K3_clausius_patch/FINDINGS.md",
+   "line": 64,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "relative-entropy-valued correction at every scale \u2014 i.e. *why* the localization step is an assumption, not a"
+  },
+  {
+   "file": "falsification/K3_clausius_patch/FINDINGS.md",
+   "line": 71,
+   "tags": [
+    "since"
+   ],
+   "near_headline": false,
+   "text": "the wall begins only where the patch reaches deep into the wedge \u2014 irrelevant here since \u03a3_\u2113 saturates at"
+  },
+  {
+   "file": "falsification/K4_bumpy_vacuum/FINDINGS.md",
+   "line": 39,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## K4c \u2014 the invariant trap (why the postulate is false *as stated*)"
+  },
+  {
+   "file": "falsification/K5_drum_learnability/FINDINGS.md",
+   "line": 31,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "**The mechanism, in tabula's phrase:** *a recording is the spectrum weighted by eigenfunction overlaps.*"
+  },
+  {
+   "file": "falsification/K5_drum_learnability/FINDINGS.md",
+   "line": 38,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "tabula could not run K5 on the bridge's original K2 build, and correctly diagnosed why: the bridge's grid used"
+  },
+  {
+   "file": "falsification/M2_arealaw/FINDINGS.md",
+   "line": 37,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## Why this is the sharp statement of \"where the 1/4 hides\""
+  },
+  {
+   "file": "falsification/M2_arealaw/FINDINGS.md",
+   "line": 74,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "whereas a smooth UV cutoff is rigorous and is the same mechanism \u2014 stated in the pre-registration."
+  },
+  {
+   "file": "falsification/M4_drum_coupling/FINDINGS.md",
+   "line": 58,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## Why the splitting is first-order (M4c)"
+  },
+  {
+   "file": "falsification/M4_drum_coupling/FINDINGS.md",
+   "line": 66,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "## The protection mechanism (M4d \u2014 what the kill teaches)"
+  },
+  {
+   "file": "falsification/M4_drum_coupling/FINDINGS.md",
+   "line": 70,
+   "tags": [
+    "the-reason"
+   ],
+   "near_headline": false,
+   "text": "generic one (0.14 vs a 2e-13 floor). The reason is structural \u2014 transplantation does not merely permute the 7 tiles, it maps"
+  },
+  {
+   "file": "falsification/M6_prior_art_gate/FINDINGS.md",
+   "line": 42,
+   "tags": [
+    "due-to"
+   ],
+   "near_headline": false,
+   "text": "> not contain the appropriate terms, (2) inadequate data due to noise or amount, or (3) the system does not"
+  },
+  {
+   "file": "falsification/M6_prior_art_gate/FINDINGS.md",
+   "line": 73,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "*transcendental* invariant over *bounded* data. **O4 is therefore ADJACENT to Ray, not squarely"
+  },
+  {
+   "file": "falsification/M6_prior_art_gate/FINDINGS.md",
+   "line": 123,
+   "tags": [
+    "since"
+   ],
+   "near_headline": false,
+   "text": "**The point for M6:** tabula's harness has been **held-out by construction since \u00a7161**, so O4 never bit"
+  },
+  {
+   "file": "falsification/M6_prior_art_gate/FINDINGS.md",
+   "line": 136,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "defence available, because the approximation/representation distinction is invisible in-sample by"
+  },
+  {
+   "file": "falsification/M6_prior_art_gate/FINDINGS.md",
+   "line": 174,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "SID does not state it explicitly is therefore **weak evidence** (abstract-level), and the load-bearing prior"
+  },
+  {
+   "file": "falsification/R2_emit_theorem/FINDINGS.md",
+   "line": 53,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "> an approximation drifts. This surfaced at deg-6 here because \u00a7123's deg-4 demo sat just above the floor."
+  },
+  {
+   "file": "falsification/R2_emit_theorem/FINDINGS.md",
+   "line": 55,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "This is a genuine, relayable contribution to the theorem's scope \u2014 exactly why the family reimplements"
+  },
+  {
+   "file": "falsification/R2_emit_theorem/FINDINGS.md",
+   "line": 61,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "because the polynomial basis included the constant \u03c6=1, which per-orbit centring turns into an all-zeros"
+  },
+  {
+   "file": "falsification/R3_clausius_scaling/FINDINGS.md",
+   "line": 13,
+   "tags": [
+    "hence"
+   ],
+   "near_headline": true,
+   "text": "second-order, while the *heat* is first-order. Hence **the patchwise first law \u03b4Q = T\u03b4S holds exactly to"
+  },
+  {
+   "file": "falsification/R3_clausius_scaling/FINDINGS.md",
+   "line": 34,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "linear, because the heat \u03b4Q is itself only first-order-small). Disentangling them gives a statement more"
+  },
+  {
+   "file": "falsification/R3_clausius_scaling/FINDINGS.md",
+   "line": 39,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "> relative entropy (\u2265 0). The *fractional* irreversibility \u03a3/\u03b4Q \u2248 4\u00b7r therefore degrades **linearly** with"
+  },
+  {
+   "file": "falsification/R3_clausius_scaling/FINDINGS.md",
+   "line": 42,
+   "tags": [
+    "the-reason"
+   ],
+   "near_headline": false,
+   "text": "So K3's \"\u03a3/\u03b4Q \u2192 0 as r \u2192 0\" is now resolved: it vanishes *linearly*, not quadratically, and the reason is"
+  },
+  {
+   "file": "falsification/R3_clausius_scaling/FINDINGS.md",
+   "line": 45,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## Why this is a good kill (L3)"
+  },
+  {
+   "file": "falsification/R3_clausius_scaling/FINDINGS.md",
+   "line": 47,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "A survival would have said \"p=2, as guessed.\" The kill instead **output a mechanism**: the exponent"
+  },
+  {
+   "file": "falsification/R3_clausius_scaling/FINDINGS.md",
+   "line": 57,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "- The finite-r fits (2.02, 1.12, 0.89) sit slightly off the clean asymptotics (2, 1, 1) because of"
+  },
+  {
+   "file": "falsification/R4_deltaS_obstruction/FINDINGS.md",
+   "line": 25,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": true,
+   "text": "## The mechanism"
+  },
+  {
+   "file": "falsification/R4_deltaS_obstruction/FINDINGS.md",
+   "line": 35,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "Because the identity is `S_rel = \u0394\u27e8K\u27e9 \u2212 \u0394S` and holds iff \u0394S = 0, this operation \u2014 though non-factorizing \u2014"
+  },
+  {
+   "file": "falsification/R4_deltaS_obstruction/FINDINGS.md",
+   "line": 36,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "**satisfies the Longo identity**. Non-factorization is therefore *not* the faithful criterion."
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 1,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": true,
+   "text": "# R6 \u2014 Findings: the 3D area-law log coefficient measured regulator-dependent \u2014 MECHANISM RETRACTED"
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 3,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": true,
+   "text": "> ## \u26a0\ufe0f MECHANISM RETRACTED 2026-07-26 \u2014 the dimension-parity claim below is INVERTED"
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 15,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": true,
+   "text": "> **Retracted:** the mechanism (\"odd d has no universal log, so `b\u00b7log n` fits scheme-dependent residue\")"
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 19,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": true,
+   "text": "> **Status downgraded:** from *KILLED with a mechanism* to **UNDECIDED** \u2014 the measurement now demands an"
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 20,
+   "tags": [
+    "explains"
+   ],
+   "near_headline": true,
+   "text": "> explanation we do not have. R6's own pre-registration listed the leading candidate: *\"further subleading"
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 29,
+   "tags": [
+    "mechanism",
+    "why"
+   ],
+   "near_headline": false,
+   "text": "> why the wrong-mechanism problem is the live one."
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 33,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "> failure mode as [M6](../M6_prior_art_gate/FINDINGS.md)'s retraction today \u2014 a mechanism asserted without"
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 49,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "returned a clean KILL, with a mechanism."
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 62,
+   "tags": [
+    "mechanism",
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## The mechanism (why this KILL is the *expected* physics, not a defeat)"
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 73,
+   "tags": [
+    "hence"
+   ],
+   "near_headline": false,
+   "text": "scheme-dependent \u2014 hence b is scheme-dependent. R3's b is not even resolvable (adding the log term does not"
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 80,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "- **b** (log coefficient) \u2014 **scheme-dependent** (R6, this finding), *because 3D has no universal log at all*."
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 86,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "The pre-registration flagged UNDECIDED(precision) as most likely because b is a ~10\u207b\u2074 relative correction on"
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 92,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "is to resolve, because the protected 3D subleading term is a constant, not a log."
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 99,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "confirms on our own instrument that only the exponent is universal, and pins *why* the log is not."
+  },
+  {
+   "file": "falsification/R6_arealaw_log/FINDINGS.md",
+   "line": 104,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "That contamination is part of *why* a 3D log coefficient is not a clean universal \u2014 which is the finding,"
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 33,
+   "tags": [
+    "mechanism",
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## Why the threshold could never have worked \u2014 the mechanism"
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 35,
+   "tags": [
+    "explains"
+   ],
+   "near_headline": false,
+   "text": "This is the part worth keeping, and it explains the failure rather than just recording it."
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 44,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "- **small because a true invariant lies in the span** (representation), from"
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 45,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "- **small because a rich basis approximates one that doesn't** (approximation),"
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 47,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "because both produce a genuinely small \u03c3_min on the sampled data. **The distinction is not visible in-sample"
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 48,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "at all.** Only **generalisation** exposes it \u2014 which is exactly why R7d works: the approximation degrades"
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 51,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "There is also a regime effect worth stating precisely, because it partly excuses O&E's formula: their cutoff"
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 55,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "hand-set \u03c4**, which is why the upgrade made O4 *easier* to pass, not harder. **My pre-registration flagged"
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 83,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "The error's shape is worth naming: **I asserted a mechanism from reading, and shipped it in a FINDINGS the"
+  },
+  {
+   "file": "falsification/R7_emit_threshold/FINDINGS.md",
+   "line": 84,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "same day, without running the one experiment that would test it.** R7 exists because the assertion was"
+  },
+  {
+   "file": "falsification/R8_regime_scan/FINDINGS.md",
+   "line": 38,
+   "tags": [
+    "mechanism",
+    "since"
+   ],
+   "near_headline": false,
+   "text": "The mechanism is straightforward and worth stating, since it makes the direction predictable rather than"
+  },
+  {
+   "file": "falsification/R8_regime_scan/FINDINGS.md",
+   "line": 52,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "> are unconditional and even sharpen (\u03ba). \"Species-3\" is therefore a label that must be **checked per case"
+  },
+  {
+   "file": "falsification/R8_regime_scan/FINDINGS.md",
+   "line": 55,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "This matters because the tempting generalisation after quantum's result \u2014 *\"definitional walls always have"
+  },
+  {
+   "file": "falsification/S1_schiemann_tori/FINDINGS.md",
+   "line": 10,
+   "tags": [
+    "hence"
+   ],
+   "near_headline": true,
+   "text": "**Two non-isometric flat 4-tori have identical Laplace spectra \u2014 hence identical KK mass towers.** The"
+  },
+  {
+   "file": "falsification/S2_s3_tower/FINDINGS.md",
+   "line": 65,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "isospectral 4-tori, K2's drums): here the tower *does* distinguish the geometry, because the two candidates"
+  },
+  {
+   "file": "falsification/S2_s3_tower/FINDINGS.md",
+   "line": 74,
+   "tags": [
+    "hence"
+   ],
+   "near_headline": false,
+   "text": "a **1-dof chi-square** for a single random probe, hence near zero with appreciable probability. Levels"
+  },
+  {
+   "file": "falsification/S2_s3_tower/FINDINGS.md",
+   "line": 83,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "i.e. **e\u00b3\u00b2 over T=400**, burying every real peak ~10\u00b9\u2074 below the leading ramp. \u2113\u22651 was immune because its"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 5,
+   "tags": [
+    "because"
+   ],
+   "near_headline": true,
+   "text": "the tower does not determine the geometry) + K5 (KILLED \u2014 a net separates them anyway, because *a recording"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 53,
+   "tags": [
+    "why"
+   ],
+   "near_headline": true,
+   "text": "## Why the verdict is not \"TRUE\" \u2014 my error, stated plainly"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 58,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "It fails because I chose it badly at freeze time. It compares a quantity converging **to zero** (\u03b4_spec, an"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 61,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "drums' 45\u00b0 edges cannot be resolved by a square grid better than O(h). Reaching 10\u00d7 therefore needs"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 91,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "This is K5's mechanism \u2014 *identical eigenvalues, different eigenfunctions; a projection samples the"
+  },
+  {
+   "file": "falsification/V1_relent_monotone/FINDINGS.md",
+   "line": 39,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "## Why this matters (the canary role)"
+  },
+  {
+   "file": "falsification/V2_cft_calibration/FINDINGS.md",
+   "line": 24,
+   "tags": [
+    "why"
+   ],
+   "near_headline": true,
+   "text": "## Why this matters for M2"
+  },
+  {
+   "file": "falsification/V2_cft_calibration/FINDINGS.md",
+   "line": 30,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "therefore run its per-l-sector eigendecompositions in float64 for speed, with confidence."
+  },
+  {
+   "file": "falsification/V3_flat_tori/FINDINGS.md",
+   "line": 48,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "dimension. The family's instrument reproduces both halves: it fails to distinguish the drums (because they"
+  },
+  {
+   "file": "falsification/V3_flat_tori/FINDINGS.md",
+   "line": 49,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "genuinely cannot be distinguished) and cleanly distinguishes every pair of flat tori (because they genuinely"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 28,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "| K1 | **\"S_rel = 2\u03c0\u00d7boost-energy holds for EVERY localized excitation of the vacuum\"** (not just coherent states). | leg X machinery + a **squeezed** packet (still Gaussian, so exactly computable): S_rel = \u0394\u27e8K\u27e9 \u2212 \u0394S, and squeezing makes \u0394S \u2260 0. | The measured deviation IS the entanglement-entropy c"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 29,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": true,
+   "text": "| K2 | **\"The KK mass tower determines the hidden geometry\"** (\"you can hear the shape of the hidden drum\"). | Compute spectra of the Gordon\u2013Webb\u2013Wolpert **isospectral drums** (two different shapes, provably identical spectra) with our FD Laplacian. Same tower, different geometry \u21d2 dead. | A worked "
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 33,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "| K6 | **\"Static one-variable ansatz metrics are always Petrov type D or O.\"** | ansatz: construct in-family counterexample or extract why the ansatz forces D/O (CK Petrov module, cheap). | Either a counterexample metric or a small classification theorem for the ansatz world ansatz actually lives in"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 45,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "| G7 \u2717 **KILLED 2026-07-26 (A2)** \u2014 strict reading KILLED, permissive reading VACUOUS; replaced by the wall taxonomy. **S1 discharges the kill condition alone:** two flat 4-tori provably non-isometric (Siegel theta 0 vs 4) *and* provably isospectral (theta to norm 400) \u21d2 distinct configurations, ide"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 52,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "| M1 | **\"No closed-form equal-spin charged rotating black hole exists in plain 5D Einstein\u2013Maxwell\"** (the famous gap; CCLP needs the Chern\u2013Simons term). Postulated in the *kill-me* direction: we hunt the solution; failure = extract the obstruction. | ansatz: equal spins collapse it to one variable"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 55,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "| M4 | **\"The GWW isospectral pair becomes distinguishable at ANY nonzero coupling to a second field\"** (spectral degeneracy is measure-zero fragile). | quantum/bridge: couple a probe field, perturbation theory + numerics on both drums; find the splitting or the protection mechanism. | Either way it"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 59,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "| ID | Postulate | Attack | Why bother |"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 92,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "- **Why coherent states are special, sharpened:** displacement operators **factorize** across any cut"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 141,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "matter \u0394S). The payout is a home-built, quantitative statement of *why* localization is assumed, not proven."
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 158,
+   "tags": [
+    "since"
+   ],
+   "near_headline": false,
+   "text": "*required*, since those are the leading heat-trace coefficients, so that agreement is a consistency check,"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 174,
+   "tags": [
+    "since"
+   ],
+   "near_headline": false,
+   "text": "coupling V = c leaves the GWW drums indistinguishable (split ~10\u207b\u00b9\u2075, since H = \u2212\u2207\u00b2+cI shifts every"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 182,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "- **The protection mechanism (the kill's lesson):** the plausible guess that a **tile-local** coupling would be"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 248,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "KY was only ever a *proxy*, exact on the old catalog because Collinson 1976 / Dietz\u2013R\u00fcdiger 1981 force"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 259,
+   "tags": [
+    "why"
+   ],
+   "near_headline": false,
+   "text": "build and diagnosed why: our grid used the same offset in x and y, dropping every point on an internal"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 271,
+   "tags": [
+    "because"
+   ],
+   "near_headline": false,
+   "text": "G2 candidates read illegible, caught only because a hand-derived invariant contradicted the engine. Both"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 16,
+   "tags": [
+    "because"
+   ],
+   "near_headline": true,
+   "text": "| L1 | **Proxies masquerade as laws when the catalog is homogeneous.** KY\u21d4legible held 8/8 only because Collinson/Dietz\u2013R\u00fcdiger force KT\u21d2KY on type-D vacua \u2014 the catalog's restriction manufactured the coincidence. *Weapon: designed adversaries and deliberately heterogeneous catalogs.* | G2 |"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 18,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": true,
+   "text": "| L3 | **Design kills to output curves, not booleans.** K1's deviation *measured* \u0394S; K3 produced \u03a3(\u2113); M4 produced the \u03b1^p law (p=0.998); M2 separated exponent (universal) from coefficient (scheme). A kill that returns a mechanism is worth ten that return \"no.\" | K1, K3, M4, M2 |"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 37,
+   "tags": [
+    "hence"
+   ],
+   "near_headline": false,
+   "text": "| **R8** \u2713 DONE 2026-07-26 \u2014 **SURVIVES** \u00b7 **applies L9 (quantum's lesson) to our own banked result.** M2 killed \u03ba as scheme-dependent from a SINGLE point (its operators are massless); quantum had just shown that exact assumption failing on Barontini's. Added a mass (`K\u2192K+m\u00b2I`, mass-then-regulator "
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 38,
+   "tags": [
+    "the-reason",
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "| **R7** \u2713 DONE 2026-07-26 \u2014 **postulate FALSE; M6 AMENDED** \u00b7 A2's taxonomy prescribed a species-1 instrument upgrade, so it was **run as a test rather than assumed** \u2014 and the decisive gate failed. The O&E noise-calibrated cutoff **lets the O4 degree-6 false positive through by 28\u00d7** (\u03c3_min 1.07e-"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 39,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "| **R6** \u26a0\ufe0f **MECHANISM RETRACTED 2026-07-26, status \u2192 UNDECIDED** (measurement stands: b = 2.32/3.72/0.52, spread 1.31 \u226b 0.29). The stated mechanism \u2014 *\"odd d has no universal log\"* \u2014 **conflated spatial with spacetime dimension and is inverted**: the rule is even **spacetime** \u21d2 universal log, and"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 45,
+   "tags": [
+    "therefore"
+   ],
+   "near_headline": false,
+   "text": "| **S1** | **\"Flat 4-tori are NOT spectrally determined \u2014 and therefore a KK compactification's mass tower cannot determine the hidden T\u2074, even in principle.\"** Verify a **Schiemann pair** (4D isospectral non-isometric lattices): theta series agree term-by-term to high order (exact integer arithmeti"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 58,
+   "tags": [
+    "mechanism"
+   ],
+   "near_headline": false,
+   "text": "- **Z2 (candidate):** *digest the digestion* \u2014 verify Tao's structural mechanism behind the Jacobian counterexample (the Sym\u00b9\u00d7Sym\u00b2 multiplication-map construction) symbolically, not just the endpoint map. Bounded, educational, genuine depth beyond leg Z's endpoint check."
+  }
+ ]
+}

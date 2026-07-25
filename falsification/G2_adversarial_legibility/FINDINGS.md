@@ -37,7 +37,7 @@ coincided in every catalog entry. The two designed metrics pull them apart, and 
 
 > **The corrected claim: legible ⟺ the metric's hidden invariant is polynomial-representable in the probe's
 > basis.** Killing–Yano structure was never what legibility was measuring — it was a *proxy*, exact on the old
-> catalog because Collinson (1976) / Dietz–Rüdiger (1981) force KT ⇒ KY for type-D **vacua**, and the whole
+> catalog because Collinson (1976, *Int. J. Theor. Phys.* **15**, 311–314) / Dietz–Rüdiger (1981, *Proc. R. Soc. Lond. A* **375**, 361) force KT ⇒ KY for type-D **vacua**, and the whole
 > catalog was type-D vacuum. The moment Candidate A leaves vacuum, the proxy and the real quantity separate,
 > and legibility follows the polynomial, not the KY.
 
