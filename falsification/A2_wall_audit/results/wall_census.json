@@ -1,0 +1,1623 @@
+{
+ "files_swept": 130,
+ "raw_hits": 200,
+ "substantive_hits": 173,
+ "by_file": {
+  "BACKLOG.md": 21,
+  "CAPSTONE.md": 6,
+  "FALSIFICATION_LEDGER.md": 11,
+  "FALSIFICATION_V2.md": 9,
+  "JOURNAL.md": 11,
+  "KK_EXTENSION_NOTES.md": 8,
+  "ROUTE5_NOTES.md": 3,
+  "SISTER_REQUESTS.md": 5,
+  "SPINE_SUMMARY.md": 1,
+  "THE_BRIDGE.md": 3,
+  "falsification/A2_wall_audit/PREREGISTRATION.md": 17,
+  "falsification/G2_adversarial_legibility/FINDINGS.md": 1,
+  "falsification/G2_adversarial_legibility/PREREGISTRATION.md": 1,
+  "falsification/G2_adversarial_legibility/SISTER_ASKS.md": 3,
+  "falsification/K1_squeezed/FINDINGS.md": 4,
+  "falsification/K1_squeezed/PREREGISTRATION.md": 3,
+  "falsification/K2_isospectral_drums/FINDINGS.md": 1,
+  "falsification/K3_clausius_patch/FINDINGS.md": 4,
+  "falsification/K3_clausius_patch/PREREGISTRATION.md": 2,
+  "falsification/M2_arealaw/FINDINGS.md": 1,
+  "falsification/M2_arealaw/PREREGISTRATION.md": 1,
+  "falsification/R4_deltaS_obstruction/FINDINGS.md": 1,
+  "falsification/S1_schiemann_tori/PREREGISTRATION.md": 2,
+  "falsification/S2_s3_tower/FINDINGS.md": 2,
+  "falsification/S2_s3_tower/PREREGISTRATION.md": 1,
+  "falsification/S3_drum_compactification/FINDINGS.md": 7,
+  "falsification/S3_drum_compactification/PREREGISTRATION.md": 2,
+  "falsification/V2_cft_calibration/FINDINGS.md": 1,
+  "falsification/V2_cft_calibration/PREREGISTRATION.md": 1,
+  "falsification/V3_flat_tori/FINDINGS.md": 1,
+  "leg1_moduli_count/PREREGISTRATION.md": 1,
+  "leg2_domain_gap/FINDINGS.md": 3,
+  "leg8_echo_spacing/FINDINGS.md": 3,
+  "legJ_integrability_frontier/FINDINGS.md": 1,
+  "legL_amortization/FINDINGS.md": 1,
+  "legQ_geometrizes_integrability/FINDINGS.md": 2,
+  "legV_fractal_boundary/FINDINGS.md": 11,
+  "legV_fractal_boundary/PREREGISTRATION.md": 10,
+  "legW_remnant_audit/FINDINGS.md": 2,
+  "legX_entropic_hinge/FINDINGS.md": 6,
+  "legX_entropic_hinge/PREREGISTRATION.md": 6,
+  "legY_ck_adjudication/FINDINGS.md": 14,
+  "legY_ck_adjudication/PREREGISTRATION.md": 6
+ },
+ "by_tag": {
+  "parked": 23,
+  "unreachable": 11,
+  "wall": 119,
+  "out-of-reach": 2,
+  "blocked": 1,
+  "cannot": 9,
+  "in-principle": 7,
+  "not-determined": 3,
+  "undecidable": 1
+ },
+ "hits": [
+  {
+   "file": "BACKLOG.md",
+   "line": 6,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "**Legend** \u2014 STATUS: `TODO` \u00b7 `WIP` \u00b7 `DONE` \u00b7 `PARKED` (honest dead-end / blocked)."
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 40,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "Cleared in one session: **A2, A3, A6, A7, A9, B3** done \u00b7 **A1, B1** partial \u00b7 **A5** parked."
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 88,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "confirm MN's bound chaos is unreachable by the equatorial launcher (box-dim tops ~1.2) \u2014 a launch-data limit;"
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 99,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "The only parked frontier: the deep chaotic sea at x<1.5 (needs higher-precision integration, both repos)."
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 113,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "(EXP-12: sample complexity `N_resolve ~ 1/\u03b4\u00b2` diverges at a verdict wall) is the *theory*; the bridge keeps"
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 115,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "box-dimension's resolution but above the frequency-drift detector's (leg J); di-hole chaos is unreachable by"
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 137,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "integrator, parked)."
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 148,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "| **round-6 asks relayed** | SISTER_REQUESTS | tabula: discover-the-axion (five-route leg U prize) \u00b7 quantum: 6D twisted tower + blind X-b twin \u00b7 ansatz: flux atlas (seconding quantum's #1) + Jacobson machine-verification; conditional 7D-torsion ask now formally PARKED per leg W's verdict |"
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 157,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "the production code path; the float64 wall now a two-instrument fact: 11.5% \u2194 10-14%). deepstrain concurred"
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 167,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "closed-form stabilized-moduli masses \u2192 bridge numerical verification (flux-atlas leg). Ask F stays PARKED."
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 187,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "with the rigorous flat base case. And a cost wall logged honestly: type-I exponents must be rationalized"
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 188,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "(Kasner u=2: >10 min \u2192 2.4 s) and N must stay small (u=3 unfinished at 25 min) \u2014 *walls are"
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 201,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "type-I entries (MN, bumpy) \u21d2 the expression-swell wall, reported as such."
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 209,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "both rotating quadrupole deformations) is UNTESTED** \u2014 the pre-registered wall \u2014 so leg Q's \"three"
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 211,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "the wall is **chart-relative** \u2014 the same procedure finishes ZV \u03b4=1 in 5.9 s and Schwarzschild in 1.6 s,"
+  },
+  {
+   "file": "BACKLOG.md",
+   "line": 224,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "non-vacuum deformation. **Y3 refined:** the wall was largely ansatz's *simplifier*, not our chart (their"
+  },
+  {
+   "file": "CAPSTONE.md",
+   "line": 5,
+   "tags": [
+    "out-of-reach"
+   ],
+   "g7_boilerplate": false,
+   "context": "what failed or stayed out of reach. Every number here traces to one gated leg and its commit; this document"
+  },
+  {
+   "file": "CAPSTONE.md",
+   "line": 45,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "| 2 | does the legibility law explain the sim\u2192real tone-count gap? | **useful negative** \u2014 no scramble signature; gap is *information-limited* | reproduces deepstrain's own parked verdict | `cfd1acb` |"
+  },
+  {
+   "file": "CAPSTONE.md",
+   "line": 93,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| V | box-dimension (from GR orbits) on quantum's detector wall? | **pass** | Cantor D=0.6309 exact; reproduces quantum's JS 0.342/0.438 to 2 decimals | `c24d725` |"
+  },
+  {
+   "file": "CAPSTONE.md",
+   "line": 138,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "box-dimension's resolution but above the frequency-drift detector's (leg J); di-hole chaos is unreachable by a"
+  },
+  {
+   "file": "CAPSTONE.md",
+   "line": 205,
+   "tags": [
+    "blocked"
+   ],
+   "g7_boilerplate": false,
+   "context": "blocked on something only a sibling can produce, the bridge files a concrete ask in `SISTER_REQUESTS.md`,"
+  },
+  {
+   "file": "CAPSTONE.md",
+   "line": 214,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **The MN deep sea** \u2014 parked pending a higher-precision integrator (both repos)."
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 20,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "`OPEN` \u00b7 `KILLED (obstruction: \u2026)` \u00b7 `SURVIVED-N` \u00b7 `UNDECIDABLE-BY-US (wall: \u2026)`."
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 42,
+   "tags": [
+    "wall",
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "| G4 | **\"The MN deep chaotic sea at x<1.5 is real chaos, not integrator artifact.\"** | Blocked on the symplectic/extended-precision integrator (the standing parked item) \u2014 this postulate is the *reason* to finally build it. | Honest status: UNDECIDABLE-BY-US until the instrument exists. Kept on the ledger as the oldest open wall. |"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 52,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| M1 | **\"No closed-form equal-spin charged rotating black hole exists in plain 5D Einstein\u2013Maxwell\"** (the famous gap; CCLP needs the Chern\u2013Simons term). Postulated in the *kill-me* direction: we hunt the solution; failure = extract the obstruction. | ansatz: equal spins collapse it to one variable \u2014 inside the walls. Rational-form family hunt; if dry, obstruction extraction: *why* does the CS te"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 96,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "spectra), as K1 promised. **Bonus:** leg X's O4 float64 wall reappeared inside the *certification* (the"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 227,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **G6 \u2014 SURVIVES (partial).** The wall the bridge logged is being crossed: ansatz shipped CK order-2 (\u00a7122),"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 229,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "entry that completes (Schwarzschild \u00d72, ZV \u03b4=1). Kerr and Taub\u2013NUT still wall in the simplifier; the bound is"
+  },
+  {
+   "file": "FALSIFICATION_LEDGER.md",
+   "line": 233,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "\u2113-sum\u2192tail-extrapolation, dsolve\u2192hand-derivation, simplify-thrash\u2192substitution). Every wall hit this round"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 4,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "4 SURVIVED, 1 parked; see `FALSIFICATION_LEDGER.md` for the corpses). v2 is not more postulates for their own"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 34,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| **R5** \u2713 DONE 2026-07-24 (tabula) \u2014 **KILLED-as-stated, half confirmed** \u00b7 low-mode concentration CONFIRMED (first ~16 modes carry the bulk) but 95%-saturation at **m\\*\u224824** (JSON; report said ~40) \u226b predicted ~10. Sensors: signal is **spatially DISTRIBUTED** \u2014 0.48 at 4 nodes \u2192 0.73 at 128. **Low-rank-in-frequency, high-rank-in-space**: the K5 wall is spectrally cheap, spatially expensive. [tab"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 41,
+   "tags": [
+    "cannot",
+    "in-principle"
+   ],
+   "g7_boilerplate": false,
+   "context": "| **S1** | **\"Flat 4-tori are NOT spectrally determined \u2014 and therefore a KK compactification's mass tower cannot determine the hidden T\u2074, even in principle.\"** Verify a **Schiemann pair** (4D isospectral non-isometric lattices): theta series agree term-by-term to high order (exact integer arithmetic); non-isometry proven exactly (lattice invariants). | bridge: theta-series enumeration + exact lat"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 43,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "| **S3** \u2713 DONE 2026-07-24 \u2014 **UNDECIDED(gate mis-specified); postulate SUPPORTED, KILLED definitively excluded** \u00b7 KK on \u211d^{1,3}\u00d7drum: masses `m_k\u00b2=\u03bb_k` (eigenVALUE) vs vertices `g_ijk=\u222b\u03c8i\u03c8j\u03c8k` (eigenFUNCTION). **\u03b4_spec falls 5.24%\u21920.67%** (isospectral, K2 reproduced) while **\u03b4_coup RISES 0.09%\u21921.86%**, h\u21920 limit **+2.137%**, against a congruent-mirror **null extrapolating to +0.007%** (a clean \u221d"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 62,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| **M5** | **mini-CLASSI**: CK-certificate database over the full family catalog \u2014 the \"surface CK more\" instrument, publishable-genre (JOSS), pending the quantum session's GitHub/PyPI prior-art sweep (still owed) and the Kerr/Taub\u2013NUT simplifier walls | instrument-building: low risk, real (small) audience |"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 69,
+   "tags": [
+    "not-determined"
+   ],
+   "g7_boilerplate": false,
+   "context": "3. ~~**S1** \u2014 Schiemann pair~~ **\u2713 DONE 2026-07-24 \u2014 KILLED** (exact: same theta to norm 400, det 35852544 both; degree-2 Siegel differs at bucket (48,96,\u221224), 0 vs 4). Flat 4-tori are not spectrally determined; the KK tower cannot fix the hidden T\u2074 in dim \u2265 4. [falsification/S1_schiemann_tori](falsification/S1_schiemann_tori)"
+  },
+  {
+   "file": "FALSIFICATION_V2.md",
+   "line": 72,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "6. ~~**S2**~~ **\u2713 DONE 2026-07-24 \u2014 SURVIVES** (curved-space rung: rest-buzz reads \u221a(n(n+2)) to 0.42%, degeneracy (n+1)\u00b2 measured via the n\u2265\u2113 cutoff; n=3/m\u00b2=15 producible by no unit flat T\u00b3). The instrument is a method, not a flat-space artifact. [falsification/S2_s3_tower](falsification/S2_s3_tower) \u00b7 ~~**S3**~~ **\u2713 DONE 2026-07-24 \u2014 UNDECIDED(gate), postulate SUPPORTED** (identical towers, verti"
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 90,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "- deepstrain's transfer-failure specimen: ringdown **v4 tone-count**, PARKED honest"
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 139,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "own parked verdict** (\"too weak at this SNR; need more data\") by a completely different"
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 773,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "exclusion limits, \u00a708 N=300, \u00a713/\u00a714 more events + \u03b4 SNR wall). Used them to upgrade the bridge:"
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 953,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "and localizing the info-wall to \u03b4 (the 221-overtone deviation)."
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 1044,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "BACKLOG COMPLETE: 10 items DONE, 2 PARTIAL (A1, B1 \u2014 need external inputs), 1 PARKED (A5, data-limited),"
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 1062,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "BACKLOG now: 12 DONE, 0 PARTIAL, 1 PARKED\u2192resolved, A10 RETIRED, B1 the only open (needs GW fluxes)."
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 1105,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "order-exactly-2 on Schwarzschild and ZV \u03b4=1; Kerr/Taub\u2013NUT still wall in the simplifier, so coverage is"
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 1122,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "substitution \u00b7 CK order-1\u2192order-2): every wall hit this campaign had a crossing exhibited or in progress."
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 1124,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "**Open, sister-dependent:** G6's three vacuum-vs-vacuum pairs \u00b7 G1 \u00b7 G5 \u00b7 K6 \u00b7 G4 (parked, needs the"
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 1130,
+   "tags": [
+    "not-determined"
+   ],
+   "g7_boilerplate": false,
+   "context": "Bridge-solo v2 this session: **S1 KILLED** (flat 4-tori not spectrally determined \u2014 same KK tower, different"
+  },
+  {
+   "file": "JOURNAL.md",
+   "line": 1150,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "spatially DISTRIBUTED (0.48 at 4 nodes \u2192 0.73 at 128). K5's wall is **low-rank-in-frequency,"
+  },
+  {
+   "file": "KK_EXTENSION_NOTES.md",
+   "line": 12,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "**ladder**: climbable rung by rung; the walls are *compute* walls."
+  },
+  {
+   "file": "KK_EXTENSION_NOTES.md",
+   "line": 26,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| 4 | **realistic matter** \u2014 chiral fermions, 3 generations, the SM gauge group | **Hard wall, and everyone's wall.** Witten's no-go: no chiral fermions from a smooth KK reduction without extra structure. Not a compute wall we could out-muscle; a stuck research frontier. |"
+  },
+  {
+   "file": "KK_EXTENSION_NOTES.md",
+   "line": 30,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "it hits the same wall the professionals hit."
+  },
+  {
+   "file": "KK_EXTENSION_NOTES.md",
+   "line": 34,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "1. **The evidence wall.** If hidden dimensions exist, they sit at ~10\u00b9\u2075\u201310\u00b9\u2076 GeV (the audited paper's"
+  },
+  {
+   "file": "KK_EXTENSION_NOTES.md",
+   "line": 39,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "2. **The landscape wall (bites even inside pure math).** There isn't *one* way to hide dimensions \u2014 ~10\u2075\u2070\u2070"
+  },
+  {
+   "file": "KK_EXTENSION_NOTES.md",
+   "line": 47,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "GeV) is unreachable, and the math itself does not narrow the menu."
+  },
+  {
+   "file": "KK_EXTENSION_NOTES.md",
+   "line": 58,
+   "tags": [
+    "out-of-reach"
+   ],
+   "g7_boilerplate": false,
+   "context": "because the evidence is ~12 orders out of reach and the math offers 10\u2075\u2070\u2070 options with no selector."
+  },
+  {
+   "file": "KK_EXTENSION_NOTES.md",
+   "line": 66,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "mathematics and physics, guarded by a wall no simulation crosses. The crown jewel is a jewel of"
+  },
+  {
+   "file": "ROUTE5_NOTES.md",
+   "line": 29,
+   "tags": [
+    "in-principle"
+   ],
+   "g7_boilerplate": false,
+   "context": "the inverse route is the only one that could, in principle, be pointed at data whose answer nobody knows."
+  },
+  {
+   "file": "ROUTE5_NOTES.md",
+   "line": 59,
+   "tags": [
+    "in-principle"
+   ],
+   "g7_boilerplate": false,
+   "context": "routes' headline observable. This is why it could in principle distinguish hidden geometries that the"
+  },
+  {
+   "file": "SISTER_REQUESTS.md",
+   "line": 5,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "item that is currently PARTIAL or PARKED. Compiled 2026-06-24.*"
+  },
+  {
+   "file": "SISTER_REQUESTS.md",
+   "line": 39,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "**Ask F: confirmed PARKED** (leg W's verdict stands; relayed to ansatz \u2014 torsion does not enter the engine)."
+  },
+  {
+   "file": "SISTER_REQUESTS.md",
+   "line": 86,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": ">   (partial)**: order-exactly-2 confirmed on Schwarzschild and ZV \u03b4=1; Kerr/Taub\u2013NUT still wall in the"
+  },
+  {
+   "file": "SISTER_REQUESTS.md",
+   "line": 105,
+   "tags": [
+    "cannot"
+   ],
+   "g7_boilerplate": false,
+   "context": "therefore cannot distinguish three hypotheses (legibility tracks KY specifically \u00b7 tracks integrability \u00b7"
+  },
+  {
+   "file": "SISTER_REQUESTS.md",
+   "line": 112,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "that *\"the wall was largely the simplifier, not the chart\"*, plus \u00a7119's `zsimp` escalation, suggests the"
+  },
+  {
+   "file": "SPINE_SUMMARY.md",
+   "line": 15,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "| **2** | tabula \u2194 deepstrain | the legibility law does **not** explain the tone-count sim\u2192real gap \u2014 **no scramble signature**; the gap is **information-limited**, independently reproducing deepstrain's own parked verdict | \u2705 clean, useful negative |"
+  },
+  {
+   "file": "THE_BRIDGE.md",
+   "line": 86,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "This is the pair with the **biggest practical payoff**, because deepstrain's dominant pain is the sim\u2192real domain gap (it parked the ringdown tone-count and capped the PBH learned models), and tabula's whole subject is *when learned codes survive a change in distribution.*"
+  },
+  {
+   "file": "THE_BRIDGE.md",
+   "line": 189,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "field-learning architecture wall \u2014 an enabler for a later \"propose a whole metric\" route."
+  },
+  {
+   "file": "THE_BRIDGE.md",
+   "line": 435,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "exclusion curves), \u00a708 N=300 (the underpowered injection fix), \u00a713/\u00a714 (more events + the \u03b4 SNR wall)."
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 9,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "in-principle instrument upgrade that crosses it.\"* Kill condition on the ledger: *\"First wall proven"
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 14,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "recorded each time as unfalsified. **But every one of those was logged at the moment we crossed a wall.**"
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 22,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "obligations**, not by my prior. Any wall I nominate must survive the same criteria as one I did not."
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 44,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **Strict reading** \u2014 a wall is defined relative to a *fixed question **and** channel*. Then changing the"
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 54,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **A2a \u2014 mechanical census.** A script sweeps every `*.md` in the repo for wall-language and emits candidate"
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 55,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "wall records with `file:line` + context. **The enumeration must be mechanical, not curated by me**, so the"
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 57,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "walls are recovered (below that the audit has no power and is reported as such)."
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 58,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **A2b \u2014 classification.** Every wall in the census gets exactly one label by the frozen definitions, with"
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 62,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **SURVIVES** iff every wall is CROSSED or CROSSABLE."
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 63,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **KILLED** iff \u2265 1 wall is UNCROSSABLE with its proof obligation **discharged**."
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 67,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "die *into* something more useful than it was: a rule for telling, when you hit a wall, which kind you face"
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 76,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "(precision / information / definitional). **If the census turns up walls that contradict this, they are"
+  },
+  {
+   "file": "falsification/A2_wall_audit/PREREGISTRATION.md",
+   "line": 82,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- The census is only as good as the family's own logging: walls we hit and never wrote down cannot be"
+  },
+  {
+   "file": "falsification/G2_adversarial_legibility/FINDINGS.md",
+   "line": 67,
+   "tags": [
+    "in-principle"
+   ],
+   "g7_boilerplate": false,
+   "context": "richer basis (rational, or log-augmented) could in principle make B legible \u2014 that is a well-posed follow-up,"
+  },
+  {
+   "file": "falsification/G2_adversarial_legibility/PREREGISTRATION.md",
+   "line": 57,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "that cannot be constructed, or on which either instrument walls."
+  },
+  {
+   "file": "falsification/G2_adversarial_legibility/SISTER_ASKS.md",
+   "line": 32,
+   "tags": [
+    "cannot"
+   ],
+   "g7_boilerplate": false,
+   "context": "> so the record cannot distinguish three different things legibility might really be tracking \u2014 KY structure"
+  },
+  {
+   "file": "falsification/G2_adversarial_legibility/SISTER_ASKS.md",
+   "line": 64,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "> open (Kerr vs Taub\u2013NUT, Kerr vs ZV \u03b4=1, Taub\u2013NUT vs ZV \u03b4=1), which walled precisely because their matter"
+  },
+  {
+   "file": "falsification/G2_adversarial_legibility/SISTER_ASKS.md",
+   "line": 67,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "> Also worth noting for your own ledger: leg Y concluded **\"the wall was largely the simplifier, not the"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 72,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "## K1d \u2014 the non-circular certification, and a second sighting of leg X's precision wall"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 83,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "the brute-force trace \u2014 the *same wall leg X logged as O4*. The certification toy therefore uses a gentle"
+  },
+  {
+   "file": "falsification/K1_squeezed/FINDINGS.md",
+   "line": 85,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "mpmath dps=60 KILL has no such wall and runs to r = 0.8. Agreement: **1.3\u00d710\u207b\u2079**."
+  },
+  {
+   "file": "falsification/K1_squeezed/PREREGISTRATION.md",
+   "line": 107,
+   "tags": [
+    "in-principle"
+   ],
+   "g7_boilerplate": false,
+   "context": "move the entanglement entropy even in principle. **The SURVIVED verdict stands for the inside-wedge"
+  },
+  {
+   "file": "falsification/K1_squeezed/PREREGISTRATION.md",
+   "line": 135,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "brute-force trace (the same wall leg X logged as O4) \u2014 so the certification toy uses a **gentle squeeze"
+  },
+  {
+   "file": "falsification/K1_squeezed/PREREGISTRATION.md",
+   "line": 137,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "mpmath dps=60 KILL has no such wall and runs r up to 0.8. Result: Fock\u2194Gaussian agree to ~1e-9."
+  },
+  {
+   "file": "falsification/K2_isospectral_drums/FINDINGS.md",
+   "line": 7,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "> triangle, and the strict in-triangle test dropped it. Those dropped lines acted as walls: **each drum was"
+  },
+  {
+   "file": "falsification/K3_clausius_patch/FINDINGS.md",
+   "line": 24,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| **K3e** (precision canary) | float64 vs mpmath at \u2113=8 | rel **2.6\u00d710\u207b\u00b9\u2070** | **PASS** (float64 wall begins at large \u2113) |"
+  },
+  {
+   "file": "falsification/K3_clausius_patch/FINDINGS.md",
+   "line": 70,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "(leg X's O4 wall); K3e confirms float64 = mpmath to 2.6\u00d710\u207b\u00b9\u2070 for small patches (\u2113\u22648) and documents that"
+  },
+  {
+   "file": "falsification/K3_clausius_patch/FINDINGS.md",
+   "line": 71,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "the wall begins only where the patch reaches deep into the wedge \u2014 irrelevant here since \u03a3_\u2113 saturates at"
+  },
+  {
+   "file": "falsification/K3_clausius_patch/PREREGISTRATION.md",
+   "line": 38,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "divides-by-zero on the deep-wedge modular spectrum for large patches \u2014 leg X's O4 wall \u2014 so the exact"
+  },
+  {
+   "file": "falsification/K3_clausius_patch/PREREGISTRATION.md",
+   "line": 71,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "to < 1e-6 (documents where the float64 wall begins \u2014 small patches safe, large patches need mpmath)."
+  },
+  {
+   "file": "falsification/M2_arealaw/FINDINGS.md",
+   "line": 61,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "spectra \u2014 no leg-X modular precision wall here)."
+  },
+  {
+   "file": "falsification/M2_arealaw/PREREGISTRATION.md",
+   "line": 34,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **Precision:** float64 (V2c showed float64 = mpmath to 5e-9 for these shallow ball spectra \u2014 no leg-X wall)."
+  },
+  {
+   "file": "falsification/S1_schiemann_tori/PREREGISTRATION.md",
+   "line": 7,
+   "tags": [
+    "cannot",
+    "in-principle"
+   ],
+   "g7_boilerplate": false,
+   "context": "identical KK mass towers \u2014 so the tower cannot determine the hidden T\u2074, even in principle.*"
+  },
+  {
+   "file": "falsification/S1_schiemann_tori/PREREGISTRATION.md",
+   "line": 43,
+   "tags": [
+    "cannot"
+   ],
+   "g7_boilerplate": false,
+   "context": "**non-isometric (S1b)** \u2014 the mass tower cannot determine the hidden T\u2074. Dimension boundary, now complete:"
+  },
+  {
+   "file": "falsification/S2_s3_tower/FINDINGS.md",
+   "line": 70,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "Both first runs **failed**, and both failures were mine, not the postulate's \u2014 the R4 lesson again (the wall"
+  },
+  {
+   "file": "falsification/S2_s3_tower/PREREGISTRATION.md",
+   "line": 69,
+   "tags": [
+    "undecidable"
+   ],
+   "g7_boilerplate": false,
+   "context": "reading. Live outcome, reported with the spectra that made it undecidable."
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 1,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "# S3 \u2014 Findings: identical mass towers, different vertices \u2014 postulate SUPPORTED, but my frozen gate was unreachable"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 13,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "**+0.007%**, i.e. zero). But **one of my three frozen conditions \u2014 `\u03b4_coup > 10\u00b7\u03b4_spec` \u2014 was unreachable by"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 18,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "A massless scalar on `\u211d^{1,3} \u00d7 D` with Dirichlet walls, `D` a GWW drum. With `\u03a6(x,y) = \u03a3_k \u03c6_k(x) \u03c8_k(y)`"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 61,
+   "tags": [
+    "cannot"
+   ],
+   "g7_boilerplate": false,
+   "context": "drums' 45\u00b0 edges cannot be resolved by a square grid better than O(h). Reaching 10\u00d7 therefore needs"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 63,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "knowable as unreachable *before* I froze it, from K2's own findings. That is a pre-registration error, not a"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/FINDINGS.md",
+   "line": 132,
+   "tags": [
+    "not-determined"
+   ],
+   "g7_boilerplate": false,
+   "context": "leak); companion to [S1](../S1_schiemann_tori) (flat 4-tori not spectrally determined) and"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/PREREGISTRATION.md",
+   "line": 14,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "Concretely: take a massless scalar on `\u211d^{1,3} \u00d7 D` with Dirichlet walls, `D` a GWW drum. Expanding"
+  },
+  {
+   "file": "falsification/S3_drum_compactification/PREREGISTRATION.md",
+   "line": 74,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **A toy compactification.** A drum with Dirichlet walls is not a smooth closed internal manifold, and a"
+  },
+  {
+   "file": "falsification/V2_cft_calibration/FINDINGS.md",
+   "line": 29,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "modular precision wall for interval/ball entropies \u2014 the symplectic spectrum here is shallow). M2 may"
+  },
+  {
+   "file": "falsification/V2_cft_calibration/PREREGISTRATION.md",
+   "line": 40,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "float64 for its per-l-sector eigendecompositions \u2014 no leg-X-style precision wall for ball entropies)."
+  },
+  {
+   "file": "falsification/V3_flat_tori/FINDINGS.md",
+   "line": 49,
+   "tags": [
+    "cannot"
+   ],
+   "g7_boilerplate": false,
+   "context": "genuinely cannot be distinguished) and cleanly distinguishes every pair of flat tori (because they genuinely"
+  },
+  {
+   "file": "leg1_moduli_count/PREREGISTRATION.md",
+   "line": 121,
+   "tags": [
+    "in-principle"
+   ],
+   "g7_boilerplate": false,
+   "context": "*could* in principle try to encode it \u2014 and should fail to, per the prediction)."
+  },
+  {
+   "file": "leg2_domain_gap/FINDINGS.md",
+   "line": 11,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "sim *or* real) \u2014 independently corroborating deepstrain's own parked-negative verdict."
+  },
+  {
+   "file": "leg2_domain_gap/FINDINGS.md",
+   "line": 60,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "- It **independently reproduces deepstrain's own conclusion.** deepstrain parked v4 as"
+  },
+  {
+   "file": "leg2_domain_gap/FINDINGS.md",
+   "line": 84,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **4 checkpoints, narrow transfer spread.** This was a parked honest-negative, so the"
+  },
+  {
+   "file": "leg8_echo_spacing/FINDINGS.md",
+   "line": 124,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| late-time echoes | the two-ring signature | **null** at the Planck-wall \u0394t=0.295 s (ML p=0.62, comb p=0.33) |"
+  },
+  {
+   "file": "leg8_echo_spacing/FINDINGS.md",
+   "line": 125,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| reflectivity | inner-ring wall strength | R_eff \u2272 0.20\u20130.26 (90%) |"
+  },
+  {
+   "file": "leg8_echo_spacing/FINDINGS.md",
+   "line": 128,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "two-ring alternative's *only* generic signature (echoes) cleanly null and its wall bounded to \u227220\u201326%"
+  },
+  {
+   "file": "legJ_integrability_frontier/FINDINGS.md",
+   "line": 373,
+   "tags": [
+    "cannot"
+   ],
+   "g7_boilerplate": false,
+   "context": "where box-counting cannot decide island-of-stability vs thin chaos. We applied the **bridge's"
+  },
+  {
+   "file": "legL_amortization/FINDINGS.md",
+   "line": 29,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "information wall precisely on the *hard* one (\u03b4). The no-hair test is **signal-limited, not"
+  },
+  {
+   "file": "legQ_geometrizes_integrability/FINDINGS.md",
+   "line": 126,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "symbolic-algebra wall."
+  },
+  {
+   "file": "legQ_geometrizes_integrability/FINDINGS.md",
+   "line": 130,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "(rotating, genuinely two-variable) is where the algebra engine walls. Until it is decided, \"three"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 1,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "# Leg V \u2014 Findings: the bridge's box-dimension instrument, transferred from GR orbits to quantum's detector wall"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 6,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "di-hole in leg J, mirroring ansatz's `poincare.box_dimension` \u2014 is pointed at **quantum's QM detector-wall"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 7,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "experiment**. Quantum sent a double-slit interference pattern onto a wall with three absorbing masks along"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 17,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "boundary's **exact fractal dimension** `D = log2/log3 = 0.6309` and the solid wall's `D = 1.0` (V1);"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 18,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "**separates** the Cantor wall from the periodic wall at *identical* 8/27 coverage \u2014 a dimensional axis"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 28,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| uniform (solid) wall | **1.0000** | 1.0 |"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 38,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| wall | D | local per-octave slopes | slope std |"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 44,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "Cantor wall has a *constant* log-log slope across octaves (the definition of a fractal), while the periodic"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 45,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "wall's slope drifts from 1.0 (resolving solid intervals) to 0.47 (coarse gaps). Two walls quantum could"
+  },
+  {
+   "file": "legV_fractal_boundary/FINDINGS.md",
+   "line": 51,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "An independent reimplementation of quantum's 2-D Schr\u00f6dinger double-slit + detector-wall sim (480\u00d7324, 9000"
+  },
+  {
+   "file": "legV_fractal_boundary/PREREGISTRATION.md",
+   "line": 1,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "# Leg V \u2014 Pre-registration: the bridge's box-dimension instrument, transferred from GR orbits to quantum's detector wall"
+  },
+  {
+   "file": "legV_fractal_boundary/PREREGISTRATION.md",
+   "line": 6,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "the di-hole (leg J) \u2014 is pointed at **quantum's QM detector-wall experiment** (`qsim/fractal_boundary.py`)."
+  },
+  {
+   "file": "legV_fractal_boundary/PREREGISTRATION.md",
+   "line": 7,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "Quantum passed a double-slit interference pattern onto a detector wall with three absorbing masks along y"
+  },
+  {
+   "file": "legV_fractal_boundary/PREREGISTRATION.md",
+   "line": 30,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- Uniform wall (all cells occupied): measured `D` within **0.02** of **1.00**."
+  },
+  {
+   "file": "legV_fractal_boundary/PREREGISTRATION.md",
+   "line": 32,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "boundary and the integer dimension of the solid wall \u2014 validated cross-domain, independent of its origin."
+  },
+  {
+   "file": "legV_fractal_boundary/PREREGISTRATION.md",
+   "line": 35,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "segment) **separates** the Cantor wall from the periodic wall:"
+  },
+  {
+   "file": "legV_fractal_boundary/PREREGISTRATION.md",
+   "line": 41,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "fractality.** The bridge **reimplements** quantum's 2-D Schr\u00f6dinger double-slit + detector-wall sim (its"
+  },
+  {
+   "file": "legV_fractal_boundary/PREREGISTRATION.md",
+   "line": 43,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "1. **reproduces quantum's qualitative result independently** \u2014 the three walls gate differently"
+  },
+  {
+   "file": "legV_fractal_boundary/PREREGISTRATION.md",
+   "line": 67,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "det wall at x=430, level-3 Cantor (8 segments of 324/27=12 cells), periodic (8 segments, matched 8/27)."
+  },
+  {
+   "file": "legW_remnant_audit/FINDINGS.md",
+   "line": 54,
+   "tags": [
+    "parked"
+   ],
+   "g7_boilerplate": false,
+   "context": "Jacobson. Recommendation: keep Ask 3 parked."
+  },
+  {
+   "file": "legW_remnant_audit/FINDINGS.md",
+   "line": 335,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "*gap* (Eq. C.7, unreachable in HTML). Neither was taken on trust."
+  },
+  {
+   "file": "legX_entropic_hinge/FINDINGS.md",
+   "line": 33,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "## O4 \u2014 the precision wall (the leg's second finding)"
+  },
+  {
+   "file": "legX_entropic_hinge/FINDINGS.md",
+   "line": 40,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "wall set by the number format, not the physics \u2014 the family's recurring theme, number-format edition."
+  },
+  {
+   "file": "legX_entropic_hinge/FINDINGS.md",
+   "line": 85,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "**float64 wall was measured twice independently** \u2014 bridge 11.5% recovery (O4) vs quantum's 10\u201314% clip"
+  },
+  {
+   "file": "legX_entropic_hinge/FINDINGS.md",
+   "line": 86,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "bands. The precision wall is now a two-instrument fact."
+  },
+  {
+   "file": "legX_entropic_hinge/FINDINGS.md",
+   "line": 108,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "information (measured, twice, blind), and what remains postulate (named). SymPy wall logged by ansatz as"
+  },
+  {
+   "file": "legX_entropic_hinge/PREREGISTRATION.md",
+   "line": 45,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **O4 \u2014 the precision wall (observation, not gated).** The float64 pipeline at x\u2080 = 12 under-reports"
+  },
+  {
+   "file": "legX_entropic_hinge/PREREGISTRATION.md",
+   "line": 47,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "boost weight is *arithmetic-precision-limited*, a wall set by the number format, not the physics."
+  },
+  {
+   "file": "legX_entropic_hinge/PREREGISTRATION.md",
+   "line": 54,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- Lattice \u2260 continuum: Dirichlet walls, dispersion at \u03c3=2.5, half-site cut ambiguity \u2014 hence X2 (slope) is"
+  },
+  {
+   "file": "legX_entropic_hinge/PREREGISTRATION.md",
+   "line": 72,
+   "tags": [
+    "cannot"
+   ],
+   "g7_boilerplate": false,
+   "context": "thermal test cannot distinguish orderings here either. Certification gates, frozen now:"
+  },
+  {
+   "file": "legX_entropic_hinge/PREREGISTRATION.md",
+   "line": 84,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "for their 0.2% rows), and the float64 wall was measured twice independently (bridge O4: 11.5% recovery;"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 14,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "the one pair that most needed proving (**bumpy vs Manko\u2013Novikov**) \u2014 hit the symbolic-algebra wall and"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 23,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| **Y1** full CK on the integrable entries | **10/10 UNDECIDED (wall)** \u2014 6 of 8 signatures exceeded the 600 s budget; Kerr\u2013de Sitter failed on a frame-norm sign (UNDECIDED-procedure, distinguished in the JSON) |"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 25,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "| **Y2** the exposed non-integrable pair | **UNDECIDED (wall)**; MN not attempted \u2014 pre-registered Y3 |"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 30,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "they escape the wall. Differing \u21d2 **rigorous** INEQUIVALENT; matching \u21d2 inconclusive, never evidence of"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 44,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "machinery that walled. These are physically distinct beyond serious doubt (spin, NUT charge), but **that is"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 57,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "## Y3 \u2014 the wall, measured"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 60,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "charts; on **our** catalog, in leg O's rational u = cos \u03b8 Kerr-form coordinates, the procedure walled at"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 63,
+   "tags": [
+    "unreachable"
+   ],
+   "g7_boilerplate": false,
+   "context": "**metric-plus-chart-plus-budget**: the same spacetime is cheap in one chart and unreachable in another."
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 71,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "The first Y1b run returned `AttributeError` on all five entries in 0.1\u201320 s. **Not a wall \u2014 our bug**, and"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 74,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "Both fixed, rerun clean. Logged because a wall and a calling bug look identical in a results table if you"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 79,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- Y1b is a **post-hoc amendment**, written after seeing the wall, and is labelled as such here and in the"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 141,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "### The wall was largely *their simplifier*, not our chart"
+  },
+  {
+   "file": "legY_ck_adjudication/FINDINGS.md",
+   "line": 150,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "chart isn't the villain, so the Y3 finding is refined \u2014 the wall was *implementation*-relative more than"
+  },
+  {
+   "file": "legY_ck_adjudication/PREREGISTRATION.md",
+   "line": 50,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "3. **UNDECIDED** \u21d2 reported as an instrument wall (see below), and leg Q's claim reverts to explicitly"
+  },
+  {
+   "file": "legY_ck_adjudication/PREREGISTRATION.md",
+   "line": 52,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "- **Y3 \u2014 the expected wall, pre-registered as a legitimate outcome.** ansatz's own scope notes: types D and"
+  },
+  {
+   "file": "legY_ck_adjudication/PREREGISTRATION.md",
+   "line": 59,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "Budget: **600 s per CK signature**, timeouts recorded as UNDECIDED(wall) and distinguished in the results"
+  },
+  {
+   "file": "legY_ck_adjudication/PREREGISTRATION.md",
+   "line": 77,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "## AMENDMENT (2026-07-21, **post-hoc \u2014 written AFTER seeing the v1 wall**, before `ricci_route.py` runs)"
+  },
+  {
+   "file": "legY_ck_adjudication/PREREGISTRATION.md",
+   "line": 85,
+   "tags": [
+    "wall"
+   ],
+   "g7_boilerplate": false,
+   "context": "expression-swell wall that stopped the full procedure. \u00a7117 also fixes the logic: *differing invariants are"
+  }
+ ]
+}
