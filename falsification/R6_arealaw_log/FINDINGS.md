@@ -28,6 +28,13 @@
 > above their ≳ 2.5 boundary. R6 was *not* a simulation-design artifact of their kind — which is precisely
 > why the wrong-mechanism problem is the live one.
 >
+> **RESOLVED (the *why*) same day by [R9](../R9_fit_ladder/FINDINGS.md):** the numbers are an artifact of
+> the **M3 truncation**. Extending the fit model (`+d/n`, `+e/n²`) makes `b` **diverge** — up to 14× its own
+> jackknife error between orders, higher-deriv running −0.27 → −11.37 → −45.86 — so there is no limit for
+> b to be a measurement *of*. R6's KILLED was therefore wrong **twice over**, by two independent routes
+> (wrong mechanism, and numbers that do not survive model extension). Honest status: **this instrument
+> cannot extract the subleading log at all** — a species-1 wall, not the species-3 one R6 claimed.
+>
 > **The discipline failure, named:** R6's pre-registration said *"No theoretical value for b is asserted from
 > memory (leg-W discipline)."* The FINDINGS then asserted a *structural* claim from memory anyway. Same
 > failure mode as [M6](../M6_prior_art_gate/FINDINGS.md)'s retraction today — a mechanism asserted without

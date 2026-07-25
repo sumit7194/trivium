@@ -1,0 +1,91 @@
+{
+ "N": 200,
+ "L0": 500,
+ "ns": [
+  6,
+  8,
+  10,
+  12,
+  14,
+  16,
+  18,
+  20,
+  22,
+  24,
+  26,
+  28,
+  30,
+  32,
+  34,
+  36,
+  38,
+  40,
+  42,
+  44
+ ],
+ "ns_r6": [
+  8,
+  12,
+  16,
+  20,
+  24,
+  28,
+  32,
+  36,
+  40
+ ],
+ "R9a": {
+  "b_now": [
+   2.3216062992460835,
+   3.7184807319176487,
+   0.5221135953972313
+  ],
+  "b_r6": [
+   2.3216,
+   3.7185,
+   0.5221
+  ],
+  "max_dev": 2.603983380834379e-05,
+  "pass": true
+ },
+ "ladder": {
+  "M3  +b\u00b7log n  (R6's)": {
+   "b": [
+    2.1714332831111043,
+    3.4423352783035956,
+    -0.268313342831955
+   ],
+   "spread": 3.7106486211355505,
+   "jk_err": 0.12008344029615588,
+   "cond": 27.221222530533094,
+   "reliable": true
+  },
+  "M4  +d/n": {
+   "b": [
+    3.010501216288921,
+    3.091339959692002,
+    -11.368649775962654
+   ],
+   "spread": 14.459989735654656,
+   "jk_err": 0.775136485539186,
+   "cond": 171.10698517199856,
+   "reliable": true
+  },
+  "M5  +e/n\u00b2": {
+   "b": [
+    1.375818528327449,
+    -3.0681787566956067,
+    -45.857080017975626
+   ],
+   "spread": 47.232898546303076,
+   "jk_err": 2.9743865342354012,
+   "cond": 801.6482547800487,
+   "reliable": true
+  }
+ },
+ "stability": {
+  "max_drift_in_errors": 14.32049276510225,
+  "unstable": true
+ },
+ "verdict": "UNDECIDED(extraction unstable) \u2014 b does not CONVERGE as the model is extended: it moves by up to 14\u00d7 its own jackknife error between consecutive orders (bare 2.17\u21921.38, higher-deriv -0.27\u2192-45.86). L12: the spread is above the noise FLOOR at every order but has no LIMIT, so neither 'truncation artifact' nor 'robust measurement' is established. R6 stays UNDECIDED \u2014 and we now know why: this instrument cannot stably extract b at all."
+}
