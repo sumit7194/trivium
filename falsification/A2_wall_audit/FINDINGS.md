@@ -111,7 +111,7 @@ for each species and what to do about it:
 |---|---|---|
 | **1 · precision / instrument** | does the answer converge as you refine? | **keep pushing** — upgrade precision, algorithm, basis, compute. *Watch for conditioning masquerading as structure (tabula ③).* |
 | **2 · information** | do two provably distinct configurations give *identical* data in this channel? | **stop refining, change channel** — no precision helps; find an observable that separates them (this is what K5 did to K2) |
-| **3 · definitional** | do two legitimate conventions give *different* limits, both correct? | **stop measuring** — the quantity is not a quantity; report the scheme-dependence *as* the result (M2, R6). *But check the regime first — this can switch off (quantum ②).* |
+| **3 · definitional** | do two legitimate conventions give *different* limits, both correct? | **stop measuring** — the quantity is not a quantity; report the scheme-dependence *as* the result (M2, R6). *But check the regime first: it may switch off (quantum ②, Λ≈2–4) or **sharpen** ([R8](../R8_regime_scan/FINDINGS.md): κ's spread 51%→67% as the theory gaps). Not inferable either way from one instance.* |
 | **4 · model fidelity** *(added by deepstrain, ①)* | does the error stay put as the measurement improves, while channel and quantity are both sound? | **improve the model, not the measurement** — and locate the **crossover** below which species-1 still applies |
 
 **These are not a partition.** A single wall can be species-1 below a computable crossover and species-4
