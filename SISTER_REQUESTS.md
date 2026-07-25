@@ -59,7 +59,14 @@ See BACKLOG Phase 8. Two things the bridge now owes:
 - **deepstrain G8 — ✅ SURVIVES** (Fisher floor: σ_NPE 0.263 between data-only 0.321 and data+prior 0.215;
   prior-shrinkage proves sub-floor = prior regularization; honesty footnote on "2.6×"). Their own offer, taken up.
 - **tabula R1 — ✅ KILLED, axis named**: legible ⟺ representable in the probe's MOMENTUM basis (log-coordinate
-  is the wrong axis; B's transcendence is in the momenta). **Bridge owes the un-blind** (name B's momentum family).
+  is the wrong axis; B's transcendence is in the momenta). **Un-blind DELIVERED 2026-07-26** →
+  [G2/UNBLIND_B.md](falsification/G2_adversarial_legibility/UNBLIND_B.md): **`I = p_y/p_x − ln(p_x)`**
+  (Galajinsky, Phys. Lett. B 820 (2021) 136483 — from the literature, not invented). Momentum family = two
+  atoms, **a ratio of momenta** `p_y/p_x` (homogeneous degree 0 ⇒ in no graded polynomial sector) and **a log
+  of a momentum** `ln p_x` (their log-*coordinate* basis was the right function on the wrong argument).
+  Includes the **grading theorem** — an integral analytic in `p` decomposes into polynomial KT integrals, and
+  B has none beyond `H,H²` ⇒ *no analytic-in-p basis can emit at any degree* (turns "didn't find" into
+  "cannot") — plus two proposed tests and an **O4 false-positive warning** for the degree ladder.
 - **tabula R5 — ✅ KILLED-as-stated**: low-mode concentration holds, m*≈24 not ~10; signal spatially distributed
   (low-rank-in-frequency, high-rank-in-space).
 - **ansatz R2 (emit⟺span theorem) — RUNNING**; bridge unseals + scores on delivery.
