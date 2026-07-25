@@ -1,5 +1,23 @@
 # M6 — Findings: KILLED by its own gate. The prior-art sweep closes the write-up, and hands us an instrument upgrade
 
+> ## ⚠️ AMENDED same day (2026-07-26) by [R7](../R7_emit_threshold/FINDINGS.md) — one claim below was wrong
+>
+> This document asserted, **from reading the literature and without running anything**, that *"O4 is not an
+> obstruction we discovered — it is our fixed `τ_rel = 1e-6` being the wrong kind of threshold,"* and that a
+> noise-calibrated cutoff would *"dissolve it rather than guard against it."*
+>
+> **R7 tested that and it is false.** The degree-6 false positive passes the noise-calibrated cutoff by
+> **28×** (σ_min 1.07e-5 vs cutoff 2.99e-4). O4's signal sits **five orders of magnitude above the measured
+> noise floor** (ε = 3.8e-10) — it is an *approximation* phenomenon, not a noise phenomenon, so no threshold
+> of the form "is σ_min small enough?" can catch it. Only generalisation can: held-out scoring degrades the
+> degree-6 arm **684×** while the true invariant holds at 8.76e-11.
+>
+> **Retracted:** "the threshold is the defect" and the recommendation to replace `τ` as the fix for O4.
+> **Stands:** everything else — **M6 remains KILLED**, the emit⟺span statement is still prior art, O4's
+> phenomenon is still known to the literature, and Ray 2026's constancy-gate + diversity-filter is still the
+> right answer — now understood as the *only* right answer rather than a belt-and-braces extra.
+> **Corrected below** at both points, with the original wording struck rather than deleted.
+
 *Run 2026-07-26. M6 was entered on the v2 moonshot board as "the family's first candidate for a genuinely
 publishable **methods** result — **prior-art sweep is the gate**." The sweep was run. **The gate is not
 passed.** Recorded as the gate working, not as a disappointment.*
@@ -97,10 +115,15 @@ diversity-filter. Three independent arrivals at one guard — ours (ad-hoc), tab
 literature's (formal) — is strong evidence that this is settled practice, not an open problem. It closes the
 last corner where M6 might have claimed contribution.
 
-**It also relocates the real defect, which is ours.** O4 is not "an obstruction we discovered"; it is **our
-fixed `τ_rel = 1e-6` being the wrong kind of threshold**. tabula's degree-8 in-sample value crossing that
-line is the same wall from the other side. The literature's answer — a **noise-calibrated** cutoff
-(Oellerich & Emelianenko Cor. 4.2) — dissolves it rather than guarding against it, and applies to both repos.
+~~**It also relocates the real defect, which is ours.** O4 is not "an obstruction we discovered"; it is our
+fixed `τ_rel = 1e-6` being the wrong kind of threshold. The literature's answer — a noise-calibrated cutoff
+(Oellerich & Emelianenko Cor. 4.2) — dissolves it rather than guarding against it.~~
+**❌ RETRACTED by [R7](../R7_emit_threshold/FINDINGS.md).** The noise-calibrated cutoff lets O4 through by
+28×. **O4 is a real obstruction of the method**, and tabula's degree-8 crossing is the same real obstruction
+from the other side, not a shared threshold artifact. The correct reading: three independent arrivals at a
+**generalisation** guard (ours ad-hoc, tabula's architectural, Ray's formal) is convergence on the *only*
+defence available, because the approximation/representation distinction is invisible in-sample by
+construction.
 
 ## Correction owed to tabula
 
@@ -110,9 +133,12 @@ Three corrections, all in our direction:
    O4 guard (*constancy gate + diversity filter*). They should be pointed at it rather than reimplementing
    what exists. The R1 physics — B's transcendence lives in the momenta — is unaffected; only the
    "how to build the guard" advice changes.
-2. **The threshold, not the trap, is the defect.** Recommend both repos move off a hand-set `τ = 1e-6` to a
-   noise-calibrated cutoff. tabula's degree-8 in-sample 9.9e-7 is a hair under our line; that line is the
-   problem.
+2. ~~**The threshold, not the trap, is the defect.** Recommend both repos move off a hand-set `τ = 1e-6` to a
+   noise-calibrated cutoff.~~ **❌ RETRACTED by [R7](../R7_emit_threshold/FINDINGS.md) — this advice was
+   wrong and must not be acted on for O4.** The noise-calibrated cutoff is *more* permissive here (it lets
+   the degree-6 arm through by 28×). **tabula's held-out-by-construction harness is the correct primary
+   gate and should be kept.** The noise-calibrated cutoff is still worth having for genuinely noisy data —
+   a different problem.
 3. **A misattribution to correct, in their favour.** tabula credited us with a *"probe with `p_x > 0`"*
    instruction — *"that instruction was doing quiet work."* **We never wrote it.**
    [UNBLIND_B.md](../G2_adversarial_legibility/UNBLIND_B.md) contains no such note, and it should have: both

@@ -1,0 +1,141 @@
+{
+ "tau_old": 1e-06,
+ "R7a": {
+  "pass": true,
+  "harmonic": {
+   "label": "harmonic  poly2",
+   "N": 12006,
+   "p": 5,
+   "sigma_min": 4.711435555992893e-15,
+   "sigma_max": 1.4165080925740563,
+   "ratio_norm": 3.3260915208972414e-15,
+   "ratio_unnorm": 3.3195966806519682e-15,
+   "eps": 3.999591517353518e-10,
+   "sigma_cutoff": 0.00013300294705563605,
+   "emit_new": true,
+   "emit_old": true,
+   "max_gap": 0.6892737704276645
+  },
+  "cos": {
+   "label": "pendulum  poly4+cos",
+   "N": 12006,
+   "p": 15,
+   "sigma_min": 3.796297154855343e-11,
+   "sigma_max": 2.1845529335275886,
+   "ratio_norm": 1.7377913332249313e-11,
+   "ratio_unnorm": 2.408803417547725e-12,
+   "eps": 2.3882184944923335e-10,
+   "sigma_cutoff": 0.0001633531463496838,
+   "emit_new": true,
+   "emit_old": true,
+   "max_gap": 0.26509657196590286
+  }
+ },
+ "R7b": {
+  "pass": false,
+  "poly6": {
+   "label": "pendulum  poly6",
+   "N": 12006,
+   "p": 27,
+   "sigma_min": 1.0656399353822724e-05,
+   "sigma_max": 2.4010008996220993,
+   "ratio_norm": 4.438315435658507e-06,
+   "ratio_unnorm": 2.7014231138960945e-07,
+   "eps": 3.8093148644127717e-10,
+   "sigma_cutoff": 0.00029918900710967634,
+   "emit_new": true,
+   "emit_old": true,
+   "max_gap": 0.20139710505049507
+  }
+ },
+ "R7c": {
+  "pass": false,
+  "picked": "pendulum  poly2",
+  "gaps": {
+   "pendulum  poly2": 0.6004716710468949,
+   "pendulum  poly4": 0.25238149215790634,
+   "pendulum  poly6": 0.20139710505049507,
+   "pendulum  poly4+cos": 0.26509657196590286
+  }
+ },
+ "R7d": {
+  "pass": true,
+  "cos_heldout": 8.760706191728357e-11,
+  "poly6_insample": 4.438315435658507e-06,
+  "poly6_heldout": 0.0030351849749087143,
+  "degradation": 683.8596803019675
+ },
+ "verdict": "postulate FALSE \u2014 O4 is a REAL OBSTRUCTION: it survives noise calibration too, so the hand-set threshold was NOT the defect. M6 OVERSTATED and must be amended; the held-out guard, not the cutoff, is the operative defence.",
+ "libraries": {
+  "harmonic  poly2": {
+   "label": "harmonic  poly2",
+   "N": 12006,
+   "p": 5,
+   "sigma_min": 4.711435555992893e-15,
+   "sigma_max": 1.4165080925740563,
+   "ratio_norm": 3.3260915208972414e-15,
+   "ratio_unnorm": 3.3195966806519682e-15,
+   "eps": 3.999591517353518e-10,
+   "sigma_cutoff": 0.00013300294705563605,
+   "emit_new": true,
+   "emit_old": true,
+   "max_gap": 0.6892737704276645
+  },
+  "pendulum  poly2": {
+   "label": "pendulum  poly2",
+   "N": 12006,
+   "p": 5,
+   "sigma_min": 0.12427885449388247,
+   "sigma_max": 1.4094976131838077,
+   "ratio_norm": 0.08817244763767876,
+   "ratio_unnorm": 0.07890938564847956,
+   "eps": 1.0138733369568012e-10,
+   "sigma_cutoff": 5.327293688872003e-05,
+   "emit_new": false,
+   "emit_old": false,
+   "max_gap": 0.6004716710468949
+  },
+  "pendulum  poly4": {
+   "label": "pendulum  poly4",
+   "N": 12006,
+   "p": 14,
+   "sigma_min": 0.0033626890342160452,
+   "sigma_max": 1.9491177444482246,
+   "ratio_norm": 0.0017252364788090256,
+   "ratio_unnorm": 0.000473411136212393,
+   "eps": 2.3882184944923335e-10,
+   "sigma_cutoff": 0.0001578141324285792,
+   "emit_new": false,
+   "emit_old": false,
+   "max_gap": 0.25238149215790634
+  },
+  "pendulum  poly6": {
+   "label": "pendulum  poly6",
+   "N": 12006,
+   "p": 27,
+   "sigma_min": 1.0656399353822724e-05,
+   "sigma_max": 2.4010008996220993,
+   "ratio_norm": 4.438315435658507e-06,
+   "ratio_unnorm": 2.7014231138960945e-07,
+   "eps": 3.8093148644127717e-10,
+   "sigma_cutoff": 0.00029918900710967634,
+   "emit_new": true,
+   "emit_old": true,
+   "max_gap": 0.20139710505049507
+  },
+  "pendulum  poly4+cos": {
+   "label": "pendulum  poly4+cos",
+   "N": 12006,
+   "p": 15,
+   "sigma_min": 3.796297154855343e-11,
+   "sigma_max": 2.1845529335275886,
+   "ratio_norm": 1.7377913332249313e-11,
+   "ratio_unnorm": 2.408803417547725e-12,
+   "eps": 2.3882184944923335e-10,
+   "sigma_cutoff": 0.0001633531463496838,
+   "emit_new": true,
+   "emit_old": true,
+   "max_gap": 0.26509657196590286
+  }
+ }
+}
