@@ -109,14 +109,83 @@ for each species and what to do about it:
 
 | species | the diagnostic question | what to do |
 |---|---|---|
-| **1 · precision / instrument** | does the answer converge as you refine? | **keep pushing** — upgrade precision, algorithm, basis, compute |
+| **1 · precision / instrument** | does the answer converge as you refine? | **keep pushing** — upgrade precision, algorithm, basis, compute. *Watch for conditioning masquerading as structure (tabula ③).* |
 | **2 · information** | do two provably distinct configurations give *identical* data in this channel? | **stop refining, change channel** — no precision helps; find an observable that separates them (this is what K5 did to K2) |
-| **3 · definitional** | do two legitimate conventions give *different* limits, both correct? | **stop measuring** — the quantity is not a quantity; report the scheme-dependence *as* the result (M2, R6) |
+| **3 · definitional** | do two legitimate conventions give *different* limits, both correct? | **stop measuring** — the quantity is not a quantity; report the scheme-dependence *as* the result (M2, R6). *But check the regime first — this can switch off (quantum ②).* |
+| **4 · model fidelity** *(added by deepstrain, ①)* | does the error stay put as the measurement improves, while channel and quantity are both sound? | **improve the model, not the measurement** — and locate the **crossover** below which species-1 still applies |
+
+**These are not a partition.** A single wall can be species-1 below a computable crossover and species-4
+above it, with a species-3 component throughout (deepstrain's δ). Species membership is a statement about a
+*wall in a regime*, not about a quantity.
 
 **The family's own history validates it.** S3's mis-specified gate was exactly a species confusion: I set a
 convergence bar (species-1 thinking) on `δ_spec`, whose staircase limit K2 had already documented — and the
 apples-to-apples control I *also* built (GWW vs congruent null) was the species-2-aware test that actually
 worked. Had this taxonomy existed two days earlier, S3 would have been pre-registered correctly.
+
+### ⚠️ AMENDED 2026-07-26 (same day) by the Round-11 out-of-sample tests — the taxonomy was incomplete
+
+A2d claimed the taxonomy was the useful replacement for G7. It was immediately pointed at **someone else's**
+walls (Round-11 asks B and C). It survived — **but came back amended twice, by measurement, not argument.**
+
+**① deepstrain found a genuine FOURTH species: model-fidelity walls.**
+They confirmed our species-1 call on the no-hair δ wall and strengthened its reason — `σ(δ) ∝ 1/SNR` with
+slope **−1.0000**, and *analytically forced*: for any amplitude-linear model in Gaussian noise
+`(F⁻¹)_δδ ∝ A⁻²`, so a Fisher floor **cannot** saturate (the only alternative is a singular sub-block giving
+σ=∞ at every SNR — a perfect degeneracy, not a finite floor).
+
+**But the operative wall is elsewhere.** A Cutler–Vallisneri bias from an un-modelled 222 overtone gives
+`δ_bias = 0.072`, **independent of SNR** — because `F⁻¹ ∝ A⁻²` while `⟨∂h|Δh⟩ ∝ A²`, so `Δθ ∝ A⁰`. Total
+error therefore *saturates*:
+
+| SNR | σ_stat | bias_sys | total |
+|---|---|---|---|
+| 25 | 0.320 | −0.073 | 0.329 |
+| 497 | 0.016 | −0.069 | 0.071 |
+| 24,869 | 0.0003 | −0.070 | 0.070 |
+
+This fits **none** of our three species. The instrument is fine, the channel is fine, the quantity is
+well-defined — **the forward model is incomplete**, and that error does not shrink with better measurement.
+
+> **Species 4 · model fidelity.** *Diagnostic:* does the error stay put as the measurement improves, while
+> the channel and the quantity are both sound? *Prescription:* **improve the model, not the measurement.**
+> *And uniquely: it has a computable crossover* — here **SNR ≈ 124**, below which species-1 ("keep pushing")
+> is correct and above which it is not. GW250114 at SNR≈25 is comfortably statistics-limited; a ~5× louder
+> event (plausible in O5) crosses over, and effort should shift from detector sensitivity to waveform
+> completeness.
+
+deepstrain also notes this floor carries a **species-3 flavour on top**: two legitimate start-time
+conventions give different δ limits (their B1 peak-start mass bias, +10%). So species are **not mutually
+exclusive** — a single wall can be species-1 below a crossover and species-4 above it, with a species-3
+component throughout. The original table implied a clean partition. It isn't one.
+
+**② quantum showed species-3 is REGIME-DEPENDENT, not a property of a quantity.**
+Testing whether Barontini's entropic time depends on the coarse-graining choice, they built five legitimate
+clocks on an exact two-mode Bose–Hubbard system and scored ordering agreement by |Kendall τ|. Control
+(same-family schemes): **0.984** — machinery sound. Test (counting clock vs entanglement clock, inside the
+paper's monotonic window): **0.181** — they order events *differently*. Not sub-resolution wiggle: coarsening
+to separations up to 1.6 lab-time units never recovers agreement.
+
+**Then the actual find.** Sweeping the interaction strength `Λ = NU/2J`:
+
+| Λ | 0 | 0.2 | 0.8 | 2 | 4 | 8 | 16 |
+|---|---|---|---|---|---|---|---|
+| min &#124;τ&#124; | 0.013 | 0.004 | 0.165 | 0.863 | **0.990** | 0.935 | 0.788 |
+
+**Scheme-robustness switches on near Λ ≈ 2–4.** In the coherent Josephson regime entropic time is largely
+the experimenter's choice; once interactions dominate, all five clocks converge on one ordering and entropic
+time becomes a property of the system. So "definitional" is **not a label you attach to a quantity** — it is
+a label you attach to a quantity **in a regime**, with a boundary that can be located.
+
+**③ tabula found a species-1 wall that manufactures fake discoveries.** At momentum degree ≥ 4 their
+polynomial library goes numerically rank-deficient — degree 8 carries **8 exact-zero singular values out of
+p = 147**, which are *collinear columns, not conservation laws* — and a calibrated cutoff duly reports 9
+"invariants." Null-space counting of any flavour therefore needs a **library-conditioning gate**. This is the
+same disease that made our own R7c pick `poly2`: conditioning masquerading as structure.
+
+**Net:** the taxonomy survives as a useful instrument but is **four species, not three; not a partition; and
+species membership can depend on regime and on a computable crossover.** That is a better object than we
+shipped this morning, and every amendment came from a sibling measuring rather than from us arguing.
 
 **Proposed successor, G7′** (registered here, not run): *"Every wall the family logs is classifiable into
 {precision, information, definitional}, and the classification predicts whether further effort pays."* That

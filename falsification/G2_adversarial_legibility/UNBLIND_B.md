@@ -77,10 +77,24 @@ you find it the way we did.
 ## Amendment (2026-07-26, after tabula's run) — a condition we should have stated, and did not
 
 **Both atoms are singular at `p_x = 0`.** `p_y/p_x` and `ln p_x` are meaningless there, so the probe orbits
-must keep `p_x` bounded away from zero. **This condition is tabula's, not ours** — they derived and enforced
-it (min `p_x` = 0.046 across their run) and then generously credited it to a "probe with `p_x > 0`" note in
-this document. **No such note existed.** It is recorded here with attribution so the robustness condition
-lands in their instrument's provenance, where it belongs, rather than being absorbed into ours.
+must keep `p_x` bounded away from zero.
+
+**Provenance — resolved, after I got it wrong in both directions.** My first amendment claimed *"this
+condition is tabula's, not ours — no such note existed."* **That was false.** The instruction shipped in our
+own round-8 blind package: [`tabula_package/G2_candidate_B.json`](tabula_package/G2_candidate_B.json) line 50
+— `"domain": "all x, y (det g^ij = x²+1+y² > 0); probe with p_x > 0"` — and line 57 — `"the 2D (x,y) block
+decouples; sample p_x > 0."` I had checked only *this* document, not the handoff. tabula's
+`# probe with p_x > 0 (bridge note)` attribution was correct all along, and they were right to log the
+ambiguity rather than accept my correction.
+
+The honest split, which is the one tabula proposed:
+
+- **the sampling instruction is the bridge's** (round-8 package, above);
+- **the *reason* — that both atoms are singular at `p_x = 0` — is tabula's**, derived today, post-un-blind.
+
+And the two had to be separated at the time: stating the reason in round 8 would have leaked that the
+invariant contains `ln p_x`, so the instruction was necessarily shipped bare. The blind was preserved
+correctly; the explanation simply had to wait for the un-blind.
 
 Also amended: the O4 guard proposed below as "use out-of-sample orbits" has **published machinery** — Ray
 2026, [arXiv:2603.20474](https://arxiv.org/abs/2603.20474), *log-basis Lasso* plus a *constancy gate and

@@ -56,15 +56,26 @@ conditions for one-step support recovery**, which is the same question with rigo
 ### Half 2 — O4 is known, and there is a 2026 paper devoted to defeating it
 
 **Ray**, *From Data to Laws: Neural Discovery of Conservation Laws Without False Positives*
-([arXiv:2603.20474](https://arxiv.org/abs/2603.20474), 20 Mar 2026). Its abstract names our exact failure
-modes as the problem it solves — *"parameter variation, **non-polynomial invariants**, local minima, and
+([arXiv:2603.20474](https://arxiv.org/abs/2603.20474), 20 Mar 2026). Its abstract names failure
+modes adjacent to ours as the problem it solves — *"parameter variation, **non-polynomial invariants**, local minima, and
 **false positives**"* — and its pipeline includes:
 
 - **log-basis Lasso** — the log-augmented basis tabula tried in R1 and that I described to them today as the
   fix for Candidate B. Published.
 - **a constancy gate plus diversity filter to remove spurious laws** — this is precisely the "validate
   out-of-sample" guard I proposed for O4, formalised.
-- reported **FDR = 0.0** across nine systems (Hamiltonian, dissipative, chaotic, PDE).
+- reported **FDR = 0.0 / F1 = 1.0 on the four systems that have true conservation laws** (nine is the
+  benchmark size, not the scored set) — *corrected by ansatz, who pulled the full text; our first
+  wording said "across nine systems" and overstated it.*
+
+**Scope correction (ansatz, from the full text):** Ray targets false positives on chaotic systems
+*generally*, and does **not** address O4's specific mode — a high-degree polynomial hugging a
+*transcendental* invariant over *bounded* data. **O4 is therefore ADJACENT to Ray, not squarely
+covered by it.** This does not revive M6 (the emit⟺span half is independently dead, and O4's *phenomenon*
+is known), but the ledger must say "adjacent" rather than "targets O4 directly." Combined with
+[R7](../R7_emit_threshold/FINDINGS.md) — which showed O4 survives noise calibration and is a real
+obstruction — the honest position on O4 is: **a real, sharply-characterised failure mode that the
+literature brushes past rather than solves.** Not a paper; worth a line in anyone's methods section.
 
 The wider literature is blunter still: overcomplete polynomial libraries are strongly collinear, and
 *"no regularisation tuning can provide a formal guarantee on the rate of false discoveries."* O4 is not an
