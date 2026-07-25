@@ -2,7 +2,7 @@
 
 *Run 2026-07-23; gates frozen in [PREREGISTRATION.md](PREREGISTRATION.md) (+ its addendum) before the code
 was written. First attack on the [Falsification Ledger](../../FALSIFICATION_LEDGER.md). Postulate K1:
-"S_rel = 2π×boost-energy holds for EVERY localized excitation of the vacuum" — the claim that Longo's
+"S_rel = 2π×boost-energy holds for EVERY localized excitation of the vacuum" — the claim that Longo's *[asserted, unverified — attribution not checked; the measurement below is ours (L10c)]*
 coherent-state identity (validated on the lattice by [leg X](../../legX_entropic_hinge)) extends to all
 excitations. **Verdict: KILLED** — but the kill is sharper and more conditional than the ledger anticipated,
 and it MEASURES the correction term, as promised.*

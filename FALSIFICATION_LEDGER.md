@@ -96,7 +96,7 @@ Full write-up: [falsification/K1_squeezed/FINDINGS.md](falsification/K1_squeezed
   spectra), as K1 promised. **Bonus:** leg X's O4 float64 wall reappeared inside the *certification* (the
   brute-force log is float64-limited exactly where leg X's production was; mpmath crosses it) — another
   walls-are-instrument-relative instance (feeds **G7**).
-- **Prior-art note:** the sharp statements (Longo's coherent-state entropy theorem; ΔS = 0 ⟺ local-unitary
+- **Prior-art note:** the sharp statements (Longo's coherent-state entropy theorem; ΔS = 0 ⟺ local-unitary *[asserted, unverified — attribution not checked; the measurement below is ours (L10c)]*
   orbit; displacement factorization across a factor) are standard modular-theory / Gaussian-QFT facts. No
   novelty claimed — this is a worked, Fock-certified demonstration + a clean localization of the hypothesis
   on the family's own instrument, which is exactly Tier K's stated payout.
