@@ -115,3 +115,67 @@ Baseline for the next audit: **6 / 102** mentions currently resolvable.
 `code/mechanism_census.py` (mechanical enumeration; classifies nothing) · `results/mechanism_census.json`
 (123 candidates). Prompted by the same-day retractions of [M6](../M6_prior_art_gate/FINDINGS.md) and
 [R6](../R6_arealaw_log/FINDINGS.md). Follows [A1](../A1_tooclean_audit) and [A2](../A2_wall_audit).
+
+---
+
+# ADDENDUM — the L10 retroactive pass (same day)
+
+*A3 installed L10 and then would have left it unapplied. That is the exact failure mode logged for the emit
+guards ("leaving a tested guard uninstalled is how O4 happened"), so the RELAYED/REMEMBERED row was cleared
+rather than merely named. **Four claims, four different outcomes — which is itself the argument for the rule.***
+
+| claim | site(s) | outcome |
+|---|---|---|
+| **Collinson / Dietz–Rüdiger** — KT ⇒ KY on type-D vacua | L1 + 4 more | ✅ **VERIFIED** (Collinson, *Int. J. Theor. Phys.* **15**, 311–314) · `acceleration-free` qualifier **OPEN** |
+| **Collins–d'Inverno–Vickers** — type-D vacuum CK bound = 2 | G6's verdict | ⚠️ **PARTIALLY VERIFIED — "not in doubt" RETRACTED** |
+| **Witten's no-go** — no chiral fermions from smooth KK | A2, KK notes | ✅ **VERIFIED, and strengthened** |
+| **Longo** — coherent-state entropy theorem | K1, K3, R4, A1 | 🏷️ **`[asserted, unverified]`** — tagged, not checked |
+
+## The one that moved a verdict: G6
+
+G6's row read *"the order-≤2 bound is **theorem-backed (CdV), not in doubt**."* Checking it:
+
+- **Verified:** the paper exists and is correctly identified — Collins, d'Inverno & Vickers, *"The Karlhede
+  classification of type D vacuum spacetimes,"* **Class. Quantum Grav. 7, 2005–2015 (1990)** — and it does
+  *reduce* the upper bound on the covariant-derivative order needed for type-D vacuum.
+- **NOT verified:** the **number**. Accessible secondary sources state the type-D vacuum bound as **three**
+  (via a GHP calculation), not two. That may well be a **counting-convention difference** — order of the
+  *Riemann* derivative vs the *Weyl spinor* derivative, and whether the 0th step counts — which is precisely
+  an **L8** question (*state the units of both sides and confirm they are the same object*). We have not
+  settled it, and the primary text is paywalled.
+
+**What changed:** *"not in doubt"* is retracted. **G6's verdict is re-based on our own REPRODUCED
+measurement** — order-exactly-2 confirmed on Schwarzschild (both masses) and ZV δ=1 — which is the stronger
+backing anyway and needs no convention adjudication. The postulate is about *our catalog*, and our catalog
+was measured. **G6's SURVIVES (partial) verdict is unaffected**; only its stated justification was.
+
+This is L10 working as designed: the claim was neither wrong nor right, it was **unchecked**, and the fix was
+to move the verdict onto the leg that carries its own receipt.
+
+## The one that got stronger: Witten's no-go
+
+A2 classified it **UNCROSSABLE-I** and reasoned it is "crossable only by **changing the setting** (orbifolds,
+fluxes) — which is not an instrument upgrade." Verification supplies the mechanism and confirms the reasoning:
+the obstruction is the **Atiyah–Hirzebruch index theorem** (the character-valued Dirac index vanishes on any
+manifold with a continuous symmetry group), which is why it **survives continuous deformation of the Dirac
+operator, including adding torsion** — and the standard circumventions in the literature are exactly
+**orbifolds and extra gauge fields put in by hand**. Setting changes, not instrument upgrades, as classified.
+
+## The one deliberately left tagged: Longo
+
+The coherent-state entropy theorem is attributed to Longo across K1, K3, R4 and A1. **Not checked, and now
+carrying an explicit `[asserted, unverified]` tag** rather than a silent citation. This is the *correct* use
+of L10's option (c): the tag is cheap and honest, and K1/R4's actual content — `S_rel = Δ⟨K⟩ − ΔS` computed
+exactly on Gaussian states, and R4's root-found ΔS = 0 counterexample — is **our own measurement** and does
+not depend on who proved the theorem. Attribution risk is isolated from result risk by labelling it.
+
+## What the pass shows
+
+Four claims from one risk set: **one clean, one that moved a verdict, one that got stronger, one tagged.**
+A rule that produced four identical outcomes would not have been worth installing. The distribution is the
+evidence that RELAYED/REMEMBERED was the right category to isolate — and note that **none of the four was
+outright false**, which is exactly why the R6-style error is so hard to see without a systematic pass:
+the base rate of correctness is high, so intuition never flags it.
+
+**Baseline moves: 6 → 9 of 102** external-authority mentions now carry a resolvable identifier, plus one
+explicit unverified tag.

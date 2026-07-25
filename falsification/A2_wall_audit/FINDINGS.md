@@ -39,7 +39,7 @@ Full table in [`results/classification.json`](results/classification.json). Tall
 |---|---|---|
 | **CROSSED** | 3 | leg X's float64 wall → mpmath dps=60 · the round-7 trio · the eight self-caught bugs |
 | **CROSSABLE** | 6 | CK simplifier · leg Y's three pairs · G4's integrator · legJ box-counting · S3's staircase grid · leg L's SNR floor |
-| **UNCROSSABLE-I** | 3 | **S1** · K2 · Witten's no-go |
+| **UNCROSSABLE-I** | 3 | **S1** · K2 · Witten's no-go *(verified 2026-07-26: mechanism is the Atiyah–Hirzebruch index theorem, and the known circumventions — orbifolds, extra gauge fields by hand — are exactly SETTING changes, not instrument upgrades, which is what this classification asserted)* |
 | **UNCROSSABLE-D** | 3 | **M2 (κ)** · **R6 (log b)** · the landscape wall |
 | contested | 1 | the evidence wall (see vacuity) |
 

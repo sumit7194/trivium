@@ -227,7 +227,7 @@ Full write-up: [falsification/K4_bumpy_vacuum/FINDINGS.md](falsification/K4_bump
 - **G6 — SURVIVES (partial).** The wall the bridge logged is being crossed: ansatz shipped CK order-2 (§122),
   validated against two published results, and confirmed the type-D-vacuum bound = 2 (= the postulate) on every
   entry that completes (Schwarzschild ×2, ZV δ=1). Kerr and Taub–NUT still wall in the simplifier; the bound is
-  theorem-backed (Collins–d'Inverno–Vickers 1990) so not in doubt, but full machine coverage is pending. The
+  theorem-backed (Collins–d'Inverno–Vickers 1990, *Class. Quantum Grav.* **7**, 2005–2015) — but **"not in doubt" is RETRACTED 2026-07-26 by [A3](falsification/A3_mechanism_audit)**: the paper is verified to exist and to *reduce* the type-D vacuum bound, yet **the number itself (2 vs 3) is NOT verified** — accessible secondary sources quote *three* for a closely-related statement, plausibly a counting-convention difference (Riemann-derivative order vs Weyl-spinor order), which is an L8 units question we have not settled. **G6's verdict now rests on our own REPRODUCED measurement** (order-exactly-2 on Schwarzschild ×2 and ZV δ=1), not on the relayed theorem. Full machine coverage is pending. The
   three vacuum-vs-vacuum pairs leg Y left open await ansatz's follow-up.
 - **G7 fed again:** the CK order-1→order-2 wall is the session's fifth logged crossing (after float64→mpmath,
   ℓ-sum→tail-extrapolation, dsolve→hand-derivation, simplify-thrash→substitution). Every wall hit this round
