@@ -15,15 +15,24 @@ Two guards, each earned rather than assumed:
        in-sample. Only generalisation can. R7 tested the noise-calibrated cutoff (Oellerich & Emelianenko
        Cor. 4.2) and it let O4 through by 28x.
 
-  G-B  LIBRARY-CONDITIONING gate -- contributed by tabula (round 8, commit 4159a1d).
-       At momentum degree >= 4 their polynomial library went numerically rank-deficient: degree 8 carried
-       8 exact-zero singular values out of p=147 -- COLLINEAR COLUMNS, not conservation laws -- and a
-       calibrated cutoff duly reported 9 "invariants". Null-space counting of any flavour manufactures
-       invariants out of collinearity unless the library's conditioning is checked FIRST. Same disease that
-       made our own R7c pick poly2 (a large gap between NON-null singular values).
+  G-B  RANK-DIFFERENCE gate  genuine = null(W) - deficiency(F)  -- tabula's law (round 8, commit 4159a1d),
+       adopted over my own first version, which was worse. Their catch: at momentum degree >= 4 a polynomial
+       library goes rank-deficient (degree 8 carried 8 exact-zero singular values out of p=147 -- COLLINEAR
+       COLUMNS, not conservation laws) and a calibrated cutoff duly reported 9 "invariants". Because
+       centering is linear, every null of F is automatically a null of W, so the EXTRA nulls in W are
+       exactly the conserved combinations.
 
+THE TWO GUARDS CATCH DIFFERENT MECHANISMS, which is why both are kept:
+  * G-B catches COLLINEARITY-manufactured nulls (O1 type): deficiency(F) > 0.
+  * G-A catches APPROXIMATION-manufactured nulls (O4 type): deficiency(F) = 0, yet W carries a genuinely
+    small-but-nonzero singular value. That is invisible to a rank difference at any single tolerance --
+    tabula's deg-8 table is entirely the collinearity case, so their law does not see O4.
 Order matters: G-B runs BEFORE any null-space claim, because a rank-deficient library makes the emit
 question meaningless rather than merely hard.
+
+NOTE on the self-test below: with column normalisation, poly6's ratio rises above tau, so G-B rejects it
+first and G-A is not exercised on that row. G-A's independent competence on O4 is established by R7d
+(884x held-out degradation), not by this run.
 """
 import sys
 from pathlib import Path
@@ -47,31 +56,64 @@ def _design(orbits, basis, normalize=True):
     return M
 
 
-def library_conditioning(orbits, basis, n_gen=800, seed=7):
-    """G-B: is the LIBRARY itself degenerate — independent of the dynamics?
+def _rank(M):
+    n = np.linalg.norm(M, axis=0, keepdims=True)
+    M = M / np.where(n > 0, n, 1.0)
+    s = np.linalg.svd(M, compute_uv=False)
+    tol = max(M.shape) * np.finfo(float).eps * s[0]
+    return int(np.sum(s > tol)), M.shape[1]
 
-    CRITICAL: this must be evaluated on GENERIC OFF-ORBIT points, never on the trajectory design matrix.
-    A true conserved quantity MAKES the orbit design matrix rank-deficient — that null direction IS the
-    invariant. Checking conditioning there would reject every genuine discovery (it did, in this file's
-    first version: it threw out harmonic-poly2 and pendulum-poly4+cos as "degenerate").
 
-    Collinearity of the basis FUNCTIONS is a property of the library alone, so it is measured where the
-    dynamics cannot contribute: scattered points in the same domain the orbits occupy. This is R2's own
-    O1/G1 rank guard, reused for tabula's conditioning catch.
+def _F(orbits, basis, stride=1):
+    """FEATURE matrix: the basis on the data, UNCENTERED. Collinearity lives here."""
+    return np.vstack([np.column_stack([f(o[::stride]) for f in basis]) for o in orbits])
+
+
+def invariant_count(orbits, basis, stride=1):
+    """G-B, in tabula's formulation (their round 8, commit 4159a1d) — strictly better than my first version.
+
+        genuine invariants = null(W) - deficiency(F)
+
+    W is the per-orbit-CENTERED deviation matrix; F is the UNCENTERED feature matrix. Centering is linear,
+    so every null direction of F is automatically a null direction of W. The EXTRA nulls in W are therefore
+    exactly the conserved combinations, and every spurious "invariant" is exactly a rank deficiency of F.
+    No threshold and no ε anywhere.
+
+    THE TRAP, which tabula named and which I fell into first: measuring the conditioning on W deletes the
+    finding — a true invariant IS a rank deficiency of W (that null vector is the invariant). Only F
+    separates "redundant column" from "conserved combination". The conditioning gate belongs on the
+    library, NEVER on the deviation matrix. My first version checked W and rejected every true case.
+
+    THE TOLERANCES DIFFER, and that is L8 (state what each side is), not a fudge:
+      * F's degeneracy is EXACT — algebraic collinearity among basis functions is identically zero, so it
+        is measured at machine tolerance.
+      * W's null is only APPROXIMATE — a real invariant is conserved to integrator accuracy (our pendulum
+        H = ½p² − cos x sits at σ_min/σ_max = 2.4e-12, not at machine zero), so it is measured at τ.
+      Using machine tolerance on W misses every true invariant; this file's previous version did exactly
+      that and lost pendulum-poly4+cos.
     """
-    Z = np.vstack(orbits)
-    lo, hi = Z.min(axis=0), Z.max(axis=0)
-    g = np.random.default_rng(seed).uniform(lo, hi, size=(n_gen, Z.shape[1]))
-    B = np.column_stack([f(g) for f in basis])
-    B = B - B.mean(axis=0, keepdims=True)                     # constants are removed, as in the design matrix
-    n = np.linalg.norm(B, axis=0, keepdims=True)
-    B = B / np.where(n > 0, n, 1.0)
-    s = np.linalg.svd(B, compute_uv=False)
-    cond = float(s[0] / s[-1]) if s[-1] > 0 else float("inf")
-    tol = max(B.shape) * np.finfo(float).eps * s[0]
-    exact_nulls = int(np.sum(s <= tol))
-    return {"cond": cond, "exact_null_dims": exact_nulls, "p": B.shape[1], "on": "generic off-orbit points",
-            "degenerate": bool(cond > COND_MAX or exact_nulls > 0)}
+    rF, p = _rank(_F(orbits, basis, stride))                       # exact: algebraic collinearity
+    W = _design([o[::stride] for o in orbits], basis)
+    sW = np.linalg.svd(W, compute_uv=False)
+    nullW = int(np.sum(sW <= TAU_REL * sW[0]))                     # approximate: numerically conserved
+    defF = p - rF
+    return {"p": p, "rank_F": rF, "deficiency_F": defF, "null_W": nullW,
+            "genuine": nullW - defF}
+
+
+def library_conditioning(orbits, basis):
+    """G-B plus tabula's own stability caveat, implemented rather than assumed.
+
+    Both terms are numerical rank estimates, so their difference inherits their sensitivity: tabula report
+    that at half the time-samples their degree-6 case returns -1 instead of 0. They kept the method out of
+    their regression battery for that reason and told us to check rank(F) is flat before trusting the
+    difference. So we check it: recompute at stride 2 and require rank(F) to agree.
+    """
+    full = invariant_count(orbits, basis, stride=1)
+    half = invariant_count(orbits, basis, stride=2)
+    stable = full["rank_F"] == half["rank_F"] and full["genuine"] == half["genuine"]
+    return {**full, "rank_F_half": half["rank_F"], "genuine_half": half["genuine"],
+            "stable": bool(stable), "degenerate": bool(full["deficiency_F"] > 0)}
 
 
 def emit_guarded(orbits, basis, n_test=2):
@@ -90,18 +132,23 @@ def emit_guarded(orbits, basis, n_test=2):
     out = float(np.linalg.norm(Mte @ c) / (np.linalg.norm(Mte) + 1e-300))
     degrade = out / ins if ins > 0 else float("inf")
 
-    if cond["degenerate"]:
-        verdict, why = False, (f"REJECTED by G-B: library degenerate (cond={cond['cond']:.2e}, "
-                               f"{cond['exact_null_dims']}/{cond['p']} exact-zero σ) — collinear columns, "
-                               f"not invariants; the emit question is meaningless here")
+    if not cond["stable"]:
+        verdict, why = False, (f"UNSTABLE — rank(F) moves under sampling ({cond['rank_F']}→"
+                               f"{cond['rank_F_half']} at stride 2); the rank difference cannot be trusted "
+                               f"(tabula's stated failure mode). Report, do not conclude.")
+    elif cond["genuine"] < 1:
+        verdict, why = False, (f"REJECTED by G-B: null(W)={cond['null_W']} − deficiency(F)="
+                               f"{cond['deficiency_F']} ⇒ **{cond['genuine']} genuine invariants**; any null "
+                               f"is collinearity of the library, not a conserved combination")
     elif not raw["emit"]:
         verdict, why = False, f"no emit: σ_min/σ_max = {raw['ratio']:.2e} > τ = {TAU_REL:.0e}"
     elif degrade >= HELDOUT_MAX:
         verdict, why = False, (f"REJECTED by G-A: passes in-sample ({raw['ratio']:.2e}) but held-out "
                                f"degrades {degrade:.0f}× ({out:.2e}) — APPROXIMATION, not representation (O4)")
     else:
-        verdict, why = True, (f"EMIT: σ_min/σ_max = {raw['ratio']:.2e}, held-out {out:.2e} "
-                              f"({degrade:.1f}× — generalises), library well-conditioned")
+        verdict, why = True, (f"EMIT: {cond['genuine']} genuine invariant(s) "
+                              f"[null(W)={cond['null_W']} − def(F)={cond['deficiency_F']}]; "
+                              f"σ_min/σ_max = {raw['ratio']:.2e}, held-out {out:.2e} ({degrade:.1f}× — generalises)")
     return {"emit": verdict, "why": why, "raw_ratio": raw["ratio"], "in_sample": ins,
             "held_out": out, "degradation": degrade, "conditioning": cond}
 
