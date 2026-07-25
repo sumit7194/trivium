@@ -17,15 +17,19 @@ The whole document rests on one fact you must protect: **these three projects we
 
 ---
 
-## 1. The three oracles — what each repo uniquely gives you
+## 1. The four oracles — what each repo uniquely gives you
 
-Think of these as **three different ways of knowing the same physics.** The bridge is interesting precisely because the three ways are independent.
+*(Updated 2026-07-26 — this table listed three oracles until today; the quantum/vestigium oracle joined
+2026-07-24 per CAPSTONE.md §1 and belonged here from that point.)*
+
+Think of these as **four different ways of knowing the same physics.** The bridge is interesting precisely because the four ways are independent.
 
 | Project | Epistemology | What it produces | Trust profile |
 |---|---|---|---|
 | **ansatz-machine** | Deductive — *what the equations say* | Exact metrics (discovered + proved), exact invariants/moduli, hair-count (three-valued), energy-condition class, thermodynamics (S=A/4), Killing vectors, **exact observables** (shadow, ISCO, light-bending, redshift), stellar structure (TOV/Buchdahl/max-mass), exotic spacetimes. Now has a numeric (finite-difference) track too. | Exact where it returns an answer; honest "UNPROVEN" where it can't. The **ground-truth oracle.** |
 | **tabula-geometrica** | Inductive — *what a net infers from raw observation* | The legibility law (amortized→legible, free→scrambled), the economy race (bit-cost of a force: gravity 0/EM 1), the geometrization criterion (**universal ∧ conservative**), bottleneck invariant-counting, "the horizon is a steerable linear feature," and the curvature atlas (the same lens on markets / hierarchies / neural populations). | Approximate, learned, **architecturally blind to metrics** (sees only observations). The **representation oracle.** |
 | **deepstrain** | Empirical — *what nature actually emitted, through real noise* | No-hair test on real ringdowns (δ, 2.6× tighter than classical, GW250114 Kerr-consistent), echo search (~1.2× edge, on-source null), subsolar/PBH search. Strict ethos: sensitivity from injections, significance from measured background, pre-registration, nulls are results. | Real but noisy; dominated by the **sim→real domain gap**. The **measurement oracle.** |
+| **vestigium (quantum)** | Foundational — *what a verified QM lab reproduces* | A measurement-problem lab (collapse, decoherence, pilot-wave trajectories, Bell/GHZ games), the hidden-dimension projections program, and — inside this bridge — independent re-tests of our own falsification results (e.g. the Round-11 entropic-time regime scan, the R6/R8 log-coefficient re-test). | Every result checked against exact analytics or a real experiment; two of its own bugs caught by those same checks. The **verification oracle.** |
 
 ---
 
