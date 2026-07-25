@@ -1,4 +1,38 @@
-# R6 — Findings: the 3D area-law log coefficient is regulator-dependent — because in odd d there is no universal log
+# R6 — Findings: the 3D area-law log coefficient measured regulator-dependent — MECHANISM RETRACTED
+
+> ## ⚠️ MECHANISM RETRACTED 2026-07-26 — the dimension-parity claim below is INVERTED
+>
+> Prompted by quantum's L9 re-test of this very item. **The rule is even *SPACETIME* dimensions ⇒ universal
+> log** (Casini–Huerta; the coefficient is the conformal anomaly on the sphere), odd spacetime ⇒ a universal
+> constant (F-term). This document says *"in **odd** dimension — here 3D — the universal subleading term is
+> instead a constant"* — conflating **spatial** with **spacetime** dimension.
+>
+> R6 was a **d = 3 spatial** scalar, i.e. **D = 4 spacetime — EVEN**. So a universal log **should** exist
+> here. quantum's independent check makes the error unmissable: their TFIM is d = 1 spatial (D = 2, even) —
+> "odd spatial dimension" by this document's own wording — and they measured the universal log converging on
+> **c/6 to 0.6%**.
+>
+> **Retracted:** the mechanism ("odd d has no universal log, so `b·log n` fits scheme-dependent residue")
+> and the claim that the kill was "the expected physics."
+> **Stands as measurement:** b = 2.32 / 3.72 / 0.52 across the three regulators, across-spread 1.31 ≫
+> within-jackknife 0.29. Those numbers were measured and are unaffected.
+> **Status downgraded:** from *KILLED with a mechanism* to **UNDECIDED** — the measurement now demands an
+> explanation we do not have. R6's own pre-registration listed the leading candidate: *"further subleading
+> terms that a 3-parameter fit may fold into b"*, which it named as a live UNDECIDED cause and which this
+> document then talked past. A second possibility, flagged as **open and not asserted**: the massless
+> *minimally* coupled lattice scalar may not extract the same log as the conformal one. **Neither is claimed
+> here** — that is the point of the retraction.
+>
+> **quantum's ξ/L question, answered:** M2/R6's operators are **massless** (verified while building
+> [R8](../R8_regime_scan) — there is no mass term; I had to add `m²I` myself). So **ξ = ∞, ξ/L = ∞**, far
+> above their ≳ 2.5 boundary. R6 was *not* a simulation-design artifact of their kind — which is precisely
+> why the wrong-mechanism problem is the live one.
+>
+> **The discipline failure, named:** R6's pre-registration said *"No theoretical value for b is asserted from
+> memory (leg-W discipline)."* The FINDINGS then asserted a *structural* claim from memory anyway. Same
+> failure mode as [M6](../M6_prior_art_gate/FINDINGS.md)'s retraction today — a mechanism asserted without
+> being checked — two days older.
+
 
 *Run 2026-07-24; gates frozen in [PREREGISTRATION.md](PREREGISTRATION.md) before code. Falsification v2,
 Tier R — the universal companion to M2's kill. M2 showed the 3D entanglement area-law **coefficient κ is
