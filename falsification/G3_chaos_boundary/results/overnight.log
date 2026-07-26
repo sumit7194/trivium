@@ -3,6 +3,8 @@ G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in t
   drift: parabolic sub-bin FFT (the first run was quantized to 2/N=0.0333 > the 0.027 signal)
 
    delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired
-    1.00 |     5.0000 |   101 |  2.15e-06 |   2.30e-05 |      101 | False | 0  [4504.8s]
-    1.02 |     5.0000 |   101 |  3.59e-06 |   1.67e-05 |       99 | False | 0  [5080.6s]
-    1.05 |     5.0000 |   101 |  1.50e-06 |   1.68e-05 |      101 | False | 0  [4994.5s]
+G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in the ADDENDUM)
+  N=200 crossings, x0 step 0.002, +/-0.1 around the located separatrix
+  drift: parabolic sub-bin FFT (the first run was quantized to 2/N=0.0333 > the 0.027 signal)
+
+   delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired

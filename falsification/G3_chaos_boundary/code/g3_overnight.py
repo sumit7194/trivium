@@ -164,24 +164,62 @@ def drift(series):
     return abs(f1 - f2) / max(f1, f2, 1e-12)
 
 
-def scan(d):
+CKPT = OUT / "g3_overnight.json"
+
+
+def load_ckpt():
+    if not CKPT.exists():
+        return {}
+    try:
+        d = json.loads(CKPT.read_text())
+        return d if d.get("x_step") == X_STEP and d.get("ncross") == NCROSS else {}
+    except Exception:
+        return {}
+
+
+def save_ckpt(rep):
+    tmp = CKPT.with_suffix(".tmp")
+    tmp.write_text(json.dumps(rep, indent=1))
+    tmp.replace(CKPT)                       # atomic — a power cut mid-write cannot corrupt the checkpoint
+
+
+def scan(d, rep):
+    """Scan one delta, checkpointing EVERY orbit.
+
+    WHY PER-ORBIT: the previous version saved only after a whole delta (55-90 min). Three power cuts came
+    faster than that, and run 3 died before completing even delta=2.0 — zero checkpoint, four hours of
+    compute lost. Separatrix edges (82-242s to locate) and every finished orbit are now banked immediately,
+    so an interrupted run resumes almost exactly where it stopped.
+    """
     t0 = time.time()
     f = metric(d)
-    edges = find_separatrix(f)
+    part = rep.setdefault("partial", {}).setdefault(str(d), {})
+
+    edges = part.get("edges")
+    if edges is None:                                    # edge-finding is expensive — cache it
+        edges = find_separatrix(f)
+        part["edges"] = edges
+        save_ckpt(rep)
     if not edges:
         return {"delta": d, "status": "NO TRANSITION FOUND — reported, not faked", "orbits": [], "edges": []}
-    sep = edges
+
     xs = np.unique(np.concatenate([np.arange(e - HALF_WIDTH, e + HALF_WIDTH + 1e-12, X_STEP)
                                    for e in edges]))
-    orbits = []
-    for x0 in xs:
+    orbits = part.setdefault("orbits", [])
+    done = {o["x0"] for o in orbits}
+    if done:
+        print(f"    resuming delta={d}: {len(done)}/{len(xs)} orbits already banked")
+    for i, x0 in enumerate(xs):
+        key = round(float(x0), 5)
+        if key in done:
+            continue
         ser, esc, dH = integrate(f, float(x0))
         dr = drift(ser)
-        if dr is None:
-            continue
-        orbits.append({"x0": round(float(x0), 5), "drift": dr, "escaped": bool(esc),
-                       "ncross": int(len(ser)), "dH": dH})
-    return {"delta": d, "status": "ok", "separatrix": sep, "n_x0": len(xs),
+        if dr is not None:
+            orbits.append({"x0": key, "drift": dr, "escaped": bool(esc),
+                           "ncross": int(len(ser)), "dH": dH})
+        save_ckpt(rep)                                   # every orbit — cuts cost minutes, not hours
+    return {"delta": d, "status": "ok", "separatrix": edges, "n_x0": len(xs),
             "orbits": orbits, "secs": round(time.time() - t0, 1)}
 
 
@@ -206,29 +244,26 @@ def main():
     print(f"  N={NCROSS} crossings, x0 step {X_STEP}, +/-{HALF_WIDTH} around the located separatrix")
     print(f"  drift: parabolic sub-bin FFT (the first run was quantized to 2/N={2/60:.4f} > the 0.027 signal)\n")
     rep = {"E": E, "Lz": LZ, "ncross": NCROSS, "x_step": X_STEP, "half_width": HALF_WIDTH, "scan": {}}
-    # RESUMABLE: two power cuts in two nights is a pattern. Re-load any delta already completed.
-    prior = OUT / "g3_overnight.json"
-    if prior.exists():
-        try:
-            old = json.loads(prior.read_text())
-            if old.get("x_step") == X_STEP and old.get("ncross") == NCROSS:
-                rep["scan"] = old.get("scan", {})
-                if rep["scan"]:
-                    print(f"  RESUMING — reusing {len(rep['scan'])} delta(s) from a prior run: "
-                          f"{sorted(rep['scan'])}\n")
-        except Exception:
-            pass
+    # RESUMABLE at ORBIT granularity — three power cuts is a pattern, not bad luck.
+    old = load_ckpt()
+    if old:
+        rep["scan"] = old.get("scan", {})
+        rep["partial"] = old.get("partial", {})
+        np_ = sum(len(v.get("orbits", [])) for v in rep["partial"].values())
+        print(f"  RESUMING — {len(rep['scan'])} delta(s) complete {sorted(rep['scan'], key=float)}; "
+              f"{np_} partial orbit(s) banked\n")
     print(f"  {'delta':>6} | {'separatrix':>10} | {'clean':>5} | {'floor':>9} | {'max drift':>10} | "
           f"{'distinct':>8} | {'esc?':>4} | fired")
     for d in DELTAS:
         if str(d) in rep["scan"]:
             print(f"  {d:6.2f} |  (already done — skipped)")
             continue
-        res = scan(d)
+        res = scan(d, rep)
         c = classify(res)
         rep["scan"][str(d)] = {"status": res.get("status"), "separatrix": res.get("separatrix"),
                                "secs": res.get("secs"), **c}
-        (OUT / "g3_overnight.json").write_text(json.dumps(rep, indent=1))   # incremental: partial = evidence
+        rep.get("partial", {}).pop(str(d), None)        # delta finished: drop its partial record
+        save_ckpt(rep)
         if c["floor"] is None:
             print(f"  {d:6.2f} | {str(res.get('separatrix')):>10} | {c['n_used']:5d} |   (too few clean orbits)")
             continue
@@ -277,7 +312,7 @@ def main():
     rep.update({"verdict": verdict, "G3a": bool(g3a), "G3b": bool(g3b),
                 "fired_deltas": fired_ds, "quiet_deltas": quiet_ds, "curve": sorted(curve),
                 "escape_conjunct_alive": bool(any_esc)})
-    (OUT / "g3_overnight.json").write_text(json.dumps(rep, indent=1))
+    save_ckpt(rep)
     print(f"\n  wrote results/g3_overnight.json")
 
 
