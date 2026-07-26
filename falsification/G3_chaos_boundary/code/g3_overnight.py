@@ -75,7 +75,7 @@ def integrate(f, x0, n=NCROSS, maxstep=MAXSTEP):
         return None, False, 0.0
     s = [x0, 0.0, p_on_shell(f, x0, 0.0, py, E, LZ) or 0.0, py]
     H0 = H_value(f, s, E, LZ)
-    xs, prev, steps, esc = [], 0.0, 0, False
+    xs, prev, steps, esc, dH = [], 0.0, 0, False, 0.0
     while len(xs) < n and steps < maxstep:
         try:
             s = _rk4(f, s, HSTEP, E, LZ)
@@ -86,8 +86,21 @@ def integrate(f, x0, n=NCROSS, maxstep=MAXSTEP):
             esc = True; break
         if prev < 0.0 <= s[1]:
             xs.append(s[0])
+            # A1 guard, measured ALONG the orbit at each recorded crossing — NOT at the final state.
+            #
+            # BUG THIS FIXES: dH used to be evaluated once, on the state the loop exited with. For an
+            # ESCAPING orbit that state is mid-plunge (x -> 1.3), where fixed-step RK4 loses energy
+            # catastrophically. The layer candidate at x0=8.0369 measured dH = 8.3e-2 that way and was
+            # discarded as "unclean integration" — yet across all 348 of its recorded crossings the true
+            # worst |dH/H| is 1.3e-13, pristine. The guard was therefore rejecting EXACTLY the orbits it
+            # was meant to certify: any orbit that escapes fails an end-state energy check by construction,
+            # so the A1 guard and the escape conjunct could never both be satisfied.
+            #
+            # Fourth instance in this run of one failure mode: a criterion evaluated outside the range of
+            # the thing it is meant to judge (cf. run 1's drift floor above the signal, run 4's escape
+            # window below the documented escape times, and the pgrep pattern that could not match).
+            dH = max(dH, abs(H_value(f, s, E, LZ) - H0) / max(abs(H0), 1e-300))
         prev = s[1]
-    dH = abs(H_value(f, s, E, LZ) - H0) / max(abs(H0), 1e-300) if xs else 0.0
     return (np.array(xs) if xs else None), esc, float(dH)
 
 
