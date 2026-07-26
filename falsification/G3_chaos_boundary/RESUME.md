@@ -3,12 +3,15 @@
 The run checkpoints **after every orbit**, atomically. A power cut costs minutes, not hours.
 Re-running the same command always **resumes** — it never restarts from scratch.
 
-## ⚠️ Run it from YOUR OWN Terminal, not from a Claude session
+## ⚠️ Prefer launching from your own Terminal
 
-A run launched inside a Claude Code session is a child of that session's shell, and **dies when
-the session ends** — even under `nohup`. That, not the power cuts, killed several of these runs.
-Open Terminal.app yourself, paste the command below, and it survives everything except an actual
-reboot.
+The deaths so far have been **mains power loss** (a known issue in Sumit's area), which nothing
+software-side can prevent — the per-orbit checkpoint is the defence, and it works: the last cut
+cost 0 completed orbits.
+
+Separately, a run launched inside a Claude Code session is a child of that session's shell and
+would not survive the session ending. Launching from Terminal.app avoids that second, smaller
+risk. Neither changes the recovery procedure below.
 
 ## Start / resume
 
