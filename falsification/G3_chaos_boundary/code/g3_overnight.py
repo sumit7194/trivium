@@ -38,7 +38,10 @@ OUT = Path(__file__).resolve().parent.parent / "results"
 OUT.mkdir(exist_ok=True)
 
 E, LZ = 0.95, 3.0
-DELTAS = [1.0, 1.02, 1.05, 1.1, 1.2, 1.3, 1.5, 1.7, 2.0]
+# ORDER MATTERS: the gates that can VOID the run go FIRST. G3b (delta=2.0 regression) and G3a
+# (delta=1.0 control) each void everything downstream, yet both previous runs scheduled delta=2.0 LAST
+# and died before reaching it — hours spent on deltas whose verdict a failed G3b would have discarded.
+DELTAS = [2.0, 1.0, 1.7, 1.5, 1.3, 1.2, 1.1, 1.05, 1.02]
 NCROSS = 200                 # s106's record length (vs 60)
 X_STEP = 0.002               # s106's stepping (vs ~0.75)
 HALF_WIDTH = 0.10            # scan +/- this around the located separatrix -> ~100 orbits per delta
@@ -103,25 +106,34 @@ def survives(f, x0, budget=60_000):
     return True
 
 
-def find_separatrix(f, lo=5.0, hi=26.0):
-    """Bisect the plunge->survive transition. THE LAYER LIVES HERE, not in the band interior."""
+def find_separatrix(f, lo=4.0, hi=26.0):
+    """Locate EVERY plunge<->survive transition and bisect each. Returns a list.
+
+    BUG THIS FIXES (run 2, found after the power cut): the old version scanned upward and returned the
+    FIRST surviving x0. If the first grid point already survived it returned that grid EDGE — 5.0000 at
+    delta=1.0/1.02/1.05 — without ever bisecting, so those three deltas scanned x0 in [4.9,5.1], the deep
+    interior of the stable region, ~1000x below the signal. A silent failure returning a plausible number
+    instead of reporting "no transition found" — the same species as every other bug in this campaign.
+
+    It also assumed ONE transition. The probe shows the topology INVERTS with delta: near Schwarzschild
+    orbits survive at small x0 and plunge beyond (S->P), while at delta=2 they plunge at small x0, survive
+    in a band at 10-14, then plunge again (P->S->P). Two edges, not one, and the count changes with delta.
+    """
     grid = np.arange(lo, hi, 0.5)
-    a = b = None
-    for x in grid:
-        if survives(f, float(x)):
-            b = float(x); break
-        a = float(x)
-    if b is None:
-        return None
-    if a is None:
-        return b
-    for _ in range(30):                      # bisect to well below X_STEP
-        m = 0.5 * (a + b)
-        if survives(f, m):
-            b = m
-        else:
-            a = m
-    return b
+    states = [(float(x), survives(f, float(x))) for x in grid]
+    edges = []
+    for (xa, sa), (xb, sb) in zip(states, states[1:]):
+        if sa == sb:
+            continue                                  # no transition in this cell
+        a, b = xa, xb
+        for _ in range(30):                           # bisect to well below X_STEP
+            m = 0.5 * (a + b)
+            if survives(f, m) == sa:
+                a = m
+            else:
+                b = m
+        edges.append(round(0.5 * (a + b), 5))
+    return edges                                      # [] means genuinely no transition — reported, not faked
 
 
 def drift(series):
@@ -155,10 +167,12 @@ def drift(series):
 def scan(d):
     t0 = time.time()
     f = metric(d)
-    sep = find_separatrix(f)
-    if sep is None:
-        return {"delta": d, "status": "no separatrix located", "orbits": []}
-    xs = np.arange(sep - HALF_WIDTH, sep + HALF_WIDTH + 1e-12, X_STEP)
+    edges = find_separatrix(f)
+    if not edges:
+        return {"delta": d, "status": "NO TRANSITION FOUND — reported, not faked", "orbits": [], "edges": []}
+    sep = edges
+    xs = np.unique(np.concatenate([np.arange(e - HALF_WIDTH, e + HALF_WIDTH + 1e-12, X_STEP)
+                                   for e in edges]))
     orbits = []
     for x0 in xs:
         ser, esc, dH = integrate(f, float(x0))
@@ -192,9 +206,24 @@ def main():
     print(f"  N={NCROSS} crossings, x0 step {X_STEP}, +/-{HALF_WIDTH} around the located separatrix")
     print(f"  drift: parabolic sub-bin FFT (the first run was quantized to 2/N={2/60:.4f} > the 0.027 signal)\n")
     rep = {"E": E, "Lz": LZ, "ncross": NCROSS, "x_step": X_STEP, "half_width": HALF_WIDTH, "scan": {}}
+    # RESUMABLE: two power cuts in two nights is a pattern. Re-load any delta already completed.
+    prior = OUT / "g3_overnight.json"
+    if prior.exists():
+        try:
+            old = json.loads(prior.read_text())
+            if old.get("x_step") == X_STEP and old.get("ncross") == NCROSS:
+                rep["scan"] = old.get("scan", {})
+                if rep["scan"]:
+                    print(f"  RESUMING — reusing {len(rep['scan'])} delta(s) from a prior run: "
+                          f"{sorted(rep['scan'])}\n")
+        except Exception:
+            pass
     print(f"  {'delta':>6} | {'separatrix':>10} | {'clean':>5} | {'floor':>9} | {'max drift':>10} | "
           f"{'distinct':>8} | {'esc?':>4} | fired")
     for d in DELTAS:
+        if str(d) in rep["scan"]:
+            print(f"  {d:6.2f} |  (already done — skipped)")
+            continue
         res = scan(d)
         c = classify(res)
         rep["scan"][str(d)] = {"status": res.get("status"), "separatrix": res.get("separatrix"),

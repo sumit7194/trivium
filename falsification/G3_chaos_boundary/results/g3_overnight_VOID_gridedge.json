@@ -1,0 +1,45 @@
+{
+ "E": 0.95,
+ "Lz": 3.0,
+ "ncross": 200,
+ "x_step": 0.002,
+ "half_width": 0.1,
+ "scan": {
+  "1.0": {
+   "status": "ok",
+   "separatrix": 5.0,
+   "secs": 4504.8,
+   "floor": 2.146510143156015e-06,
+   "n_used": 101,
+   "n_fired": 0,
+   "fired_x0": [],
+   "max_drift": 2.302741357580059e-05,
+   "drift_distinct": 101,
+   "any_escape": false
+  },
+  "1.02": {
+   "status": "ok",
+   "separatrix": 5.0,
+   "secs": 5080.6,
+   "floor": 3.5860359407535764e-06,
+   "n_used": 101,
+   "n_fired": 0,
+   "fired_x0": [],
+   "max_drift": 1.672764530410609e-05,
+   "drift_distinct": 99,
+   "any_escape": false
+  },
+  "1.05": {
+   "status": "ok",
+   "separatrix": 5.0,
+   "secs": 4994.5,
+   "floor": 1.5001398832671862e-06,
+   "n_used": 101,
+   "n_fired": 0,
+   "fired_x0": [],
+   "max_drift": 1.6779521434728755e-05,
+   "drift_distinct": 101,
+   "any_escape": false
+  }
+ }
+}
