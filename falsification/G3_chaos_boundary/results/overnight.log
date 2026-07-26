@@ -8,3 +8,11 @@ G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in t
   drift: parabolic sub-bin FFT (the first run was quantized to 2/N=0.0333 > the 0.027 signal)
 
    delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired
+Traceback (most recent call last):
+  File "/Users/sumit/Github/TheBridge/falsification/G3_chaos_boundary/code/g3_overnight.py", line 320, in <module>
+    main()
+    ~~~~^^
+  File "/Users/sumit/Github/TheBridge/falsification/G3_chaos_boundary/code/g3_overnight.py", line 270, in main
+    print(f"  {d:6.2f} | {res['separatrix']:10.4f} | {c['n_used']:5d} | {c['floor']:9.2e} | "
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to list.__format__

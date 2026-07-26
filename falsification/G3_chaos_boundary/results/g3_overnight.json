@@ -1,0 +1,9 @@
+{
+ "E": 0.95,
+ "Lz": 3.0,
+ "ncross": 200,
+ "x_step": 0.002,
+ "half_width": 0.1,
+ "scan": {},
+ "partial": {}
+}

@@ -48,6 +48,7 @@ HALF_WIDTH = 0.10            # scan +/- this around the located separatrix -> ~1
 HSTEP = 0.02
 MAXSTEP = 1_200_000
 DRIFT_FIRE = 3.0
+NCROSS_LONG = 500            # stage-2 record for drift-flagged candidates only
 ESCAPE_MAX = 0.85
 DH_MAX = 1e-4                # A1 integration guard
 
@@ -217,8 +218,28 @@ def scan(d, rep):
         dr = drift(ser)
         if dr is not None:
             orbits.append({"x0": key, "drift": dr, "escaped": bool(esc),
-                           "ncross": int(len(ser)), "dH": dH})
+                           "ncross": int(len(ser)), "dH": dH, "stage": 1})
         save_ckpt(rep)                                   # every orbit — cuts cost minutes, not hours
+
+    # ---- STAGE 2: the escape check, on drift-flagged candidates ONLY.
+    # WHY: s106 documents its layer escaping after 184 and 210 crossings. Our stage-1 cap is 200 and the
+    # fire rule wants escape by 170, so BOTH documented escapes fall outside the window — the escape
+    # conjunct could not fire by construction (same species as run 1's drift floor sitting above the
+    # signal). Raising the cap for every orbit would double a 69-minute delta; almost all orbits are quiet,
+    # so only the drift-flagged few are re-run at the longer record.
+    clean = [o for o in orbits if o["dH"] < DH_MAX]
+    if clean:
+        floor = float(np.median([o["drift"] for o in clean]))
+        cands = [o for o in clean if o["drift"] >= DRIFT_FIRE * max(floor, 1e-9) and not o.get("stage2")]
+        if cands:
+            print(f"    stage 2: {len(cands)} drift-flagged candidate(s) re-run to {NCROSS_LONG} crossings")
+        for o in cands:
+            ser2, esc2, dH2 = integrate(f, o["x0"], n=NCROSS_LONG, maxstep=3_000_000)
+            o["stage2"] = True
+            o["escaped"] = bool(esc2)
+            o["ncross"] = int(len(ser2)) if ser2 is not None else 0
+            o["dH"] = dH2
+            save_ckpt(rep)
     return {"delta": d, "status": "ok", "separatrix": edges, "n_x0": len(xs),
             "orbits": orbits, "secs": round(time.time() - t0, 1)}
 
@@ -231,7 +252,8 @@ def classify(res):
     ds = np.array([o["drift"] for o in orb])
     floor = float(np.median(ds))
     fired = [o for o in orb if o["drift"] >= DRIFT_FIRE * max(floor, 1e-9)
-             and o["escaped"] and o["ncross"] <= ESCAPE_MAX * NCROSS]
+             and o["escaped"]
+             and o["ncross"] <= ESCAPE_MAX * (NCROSS_LONG if o.get("stage2") else NCROSS)]
     return {"floor": floor, "n_used": len(orb), "n_fired": len(fired),
             "fired_x0": [o["x0"] for o in fired], "max_drift": float(ds.max()),
             # conjunct liveness, reported SEPARATELY — the first run's control hid a dead conjunct
@@ -262,12 +284,16 @@ def main():
         c = classify(res)
         rep["scan"][str(d)] = {"status": res.get("status"), "separatrix": res.get("separatrix"),
                                "secs": res.get("secs"), **c}
-        rep.get("partial", {}).pop(str(d), None)        # delta finished: drop its partial record
+        # KEEP the per-orbit data. Popping it lost delta=2.0's 99 orbits on this run, so the
+        # two-stage rerun cannot reuse them. Archive instead of discard.
+        prt = rep.get("partial", {}).pop(str(d), None)
+        if prt:
+            rep.setdefault("orbits_archive", {})[str(d)] = prt
         save_ckpt(rep)
         if c["floor"] is None:
             print(f"  {d:6.2f} | {str(res.get('separatrix')):>10} | {c['n_used']:5d} |   (too few clean orbits)")
             continue
-        print(f"  {d:6.2f} | {res['separatrix']:10.4f} | {c['n_used']:5d} | {c['floor']:9.2e} | "
+        print(f"  {d:6.2f} | {str(res['separatrix']):>10} | {c['n_used']:5d} | {c['floor']:9.2e} | "
               f"{c['max_drift']:10.2e} | {c['drift_distinct']:8d} | {str(c['any_escape']):>4} | "
               f"{c['n_fired']}  [{res.get('secs')}s]")
 
