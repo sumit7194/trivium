@@ -21,8 +21,13 @@ tail -20 /Users/sumit/Github/TheBridge/falsification/G3_chaos_boundary/results/o
 ## Is it still running?
 
 ```bash
-pgrep -fl g3_overnight.py
+pgrep -fl g3_overnight.py | grep -i python
 ```
+
+⚠️ **Use exactly this.** The binary is `Python` with a capital P, so `pgrep -f "python -u ..."`
+returns nothing even when the run is healthy. I made that mistake, read the false negative as
+"it died", and launched a **second** process against the same checkpoint. Always confirm with the
+command above before starting another one — and if two ever appear, `kill` the newer PID.
 
 ## Stop it
 
