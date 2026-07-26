@@ -3,6 +3,13 @@
 The run checkpoints **after every orbit**, atomically. A power cut costs minutes, not hours.
 Re-running the same command always **resumes** — it never restarts from scratch.
 
+## ⚠️ Run it from YOUR OWN Terminal, not from a Claude session
+
+A run launched inside a Claude Code session is a child of that session's shell, and **dies when
+the session ends** — even under `nohup`. That, not the power cuts, killed several of these runs.
+Open Terminal.app yourself, paste the command below, and it survives everything except an actual
+reboot.
+
 ## Start / resume
 
 ```bash
