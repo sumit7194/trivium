@@ -49,3 +49,44 @@ G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in t
   RESUMING — 0 delta(s) complete []; 50 partial orbit(s) banked
 
    delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired
+G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in the ADDENDUM)
+  N=200 crossings, x0 step 0.002, +/-0.1 around the located separatrix
+  drift: parabolic sub-bin FFT (the first run was quantized to 2/N=0.0333 > the 0.027 signal)
+
+  RESUMING — 0 delta(s) complete []; 50 partial orbit(s) banked
+
+   delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired
+G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in the ADDENDUM)
+  N=200 crossings, x0 step 0.002, +/-0.1 around the located separatrix
+  drift: parabolic sub-bin FFT (the first run was quantized to 2/N=0.0333 > the 0.027 signal)
+
+  RESUMING — 0 delta(s) complete []; 98 partial orbit(s) banked
+
+   delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired
+    resuming delta=2.0: 48/202 orbits already banked
+G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in the ADDENDUM)
+  N=200 crossings, x0 step 0.002, +/-0.1 around the located separatrix
+  drift: parabolic sub-bin FFT (the first run was quantized to 2/N=0.0333 > the 0.027 signal)
+
+  RESUMING — 0 delta(s) complete []; 112 partial orbit(s) banked
+
+   delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired
+    resuming delta=2.0: 62/202 orbits already banked
+    stage 2: 38 drift-flagged candidate(s) re-run to 500 crossings
+G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in the ADDENDUM)
+  N=200 crossings, x0 step 0.002, +/-0.1 around the located separatrix
+  drift: parabolic sub-bin FFT (the first run was quantized to 2/N=0.0333 > the 0.027 signal)
+
+  RESUMING — 0 delta(s) complete []; 150 partial orbit(s) banked
+
+   delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired
+    resuming delta=2.0: 100/202 orbits already banked
+    stage 2: 18 drift-flagged candidate(s) re-run to 500 crossings
+G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in the ADDENDUM)
+  N=200 crossings, x0 step 0.002, +/-0.1 around the located separatrix
+  drift: parabolic sub-bin FFT (the first run was quantized to 2/N=0.0333 > the 0.027 signal)
+
+  RESUMING — 0 delta(s) complete []; 150 partial orbit(s) banked
+
+   delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired
+    resuming delta=2.0: 100/202 orbits already banked
