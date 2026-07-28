@@ -90,3 +90,8 @@ G3 OVERNIGHT — separatrix hunt at s106's budget (gates unchanged; upgrade in t
 
    delta | separatrix | clean |     floor |  max drift | distinct | esc? | fired
     resuming delta=2.0: 100/202 orbits already banked
+    stage 2: 17 drift-flagged candidate(s) re-run to 500 crossings
+    2.00 | [8.04893, 18.73141] |   100 |  2.90e-05 |   2.86e-02 |      100 | True | 2  [2023.9s]
+    resuming delta=1.0: 50/101 orbits already banked
+    stage 2: 13 drift-flagged candidate(s) re-run to 500 crossings
+    1.00 |  [9.66667] |    50 |  2.91e-06 |   8.69e-03 |       50 | False | 0  [1279.2s]
