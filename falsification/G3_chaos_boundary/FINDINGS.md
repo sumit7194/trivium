@@ -313,9 +313,15 @@ metrics near δ=1 have a thin chaotic layer remains **open**, exactly as before 
    null is honest and reads as inconclusive, while a well-powered distorted result is confident,
    reproducible, and gets believed.**
 
-1. **Replace the drift estimator — for gain stability, not for floor.** NAFF's gain is flat to 2.5% where
-   the incumbent's varies 2.1×; its floor is *worse* and its SNR is 2.1× worse, and neither of those is the
-   property a cross-δ claim depends on. Do **not** re-gate this on floor or on SNR.
+1. **LONGER RECORDS, not a different estimator — and this was the untested half of the original
+   prescription.** A NAFF replacement was built and **failed its own pre-registered gates**
+   ([PREREG_ESTIMATOR.md](PREREG_ESTIMATOR.md)): it buys gain stability (spread 0.025 vs 0.839) and a 7.4×
+   tighter max/median on an integrable metric, but pays with a 3.6× higher floor, and at n≈22 the floor is
+   what decides discrimination — **the incumbent separates δ=2.0 from δ=1.0 at p=0.040 and NAFF does not
+   (p=0.537).** The incumbent's gain instability remains real and unaddressed; NAFF is not the way to
+   address it. **More crossings attack both defects at once**, since the FFT interpolation bias scales with
+   bin width ~1/N: the floor shrinks *and* the gain variation flattens, with no estimator change and no new
+   failure modes.
 2. **Re-run the control at n ≈ 100** to match the ladder. δ=1.0 is the only δ at n=50, and every
    absolute-scale statement leans on that row. **And recompute the synthetic null at the orbits' actual
    observed frequencies** — the published null was sensitive to an assumed frequency range by 17× and its

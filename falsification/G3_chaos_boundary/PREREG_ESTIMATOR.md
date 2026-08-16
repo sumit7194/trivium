@@ -65,3 +65,85 @@ item's central mistake.
   the fix and the item returns to the sampling-geometry and step-size candidates.
 - **Nothing here revisits G3's verdict.** G3 remains KILLED as stated with the boundary UNMEASURED
   regardless of how this comes out.
+
+---
+
+# RESULTS — 2026-08-16. **The replacement FAILS its own gates. Outcome (c).**
+
+45 fresh orbits (23 at δ=2.0, 22 at δ=1.0), crossing series persisted, **both estimators scored on the
+identical orbits** so every comparison below is like-for-like.
+
+| gate | result |
+|---|---|
+| **E1** — synthetic floor must improve ≥10× | **FAIL** — NAFF 1.22e-05 vs FFT 5.17e-06. *Worse.* |
+| **E2** — must not silence §106's layer | **PASS**, both estimators |
+| **E3** — control must go quiet and the ordering invert | **VOID as specified** — my grid error, see below. Valid only as an estimator comparison. |
+| **E4** — two-sample discrimination (L13) | **FFT PASSES (p=0.0404), NAFF FAILS (p=0.5368)** |
+
+**All four were required. NAFF fails E1 and E4. It is not the fix.**
+
+## E2 — PASS. The positive control holds.
+
+| x₀ | ncross | escaped | FFT | NAFF |
+|---|---|---|---|---|
+| 8.044 | 84 | ✓ | 2.61e-02 | **2.99e-02** |
+| 8.048 | 83 | ✓ | 2.10e-02 | 1.12e-02 |
+| 8.050 | 144 | ✓ | 2.06e-02 | 2.01e-02 |
+
+Three escaping orbits bracketing §106's quoted 0.027. **NAFF reports the layer slightly louder, not
+quieter** — it does not achieve a low floor by going deaf, which was the failure mode E2 existed to catch.
+
+## E3 — VOID as specified. My error, disclosed.
+
+The fine window was placed at x₀ ∈ [9.600, 9.624]. **δ=1.0's separatrix is at 9.66667**, so the dense
+sampling missed it entirely and no orbit above 9.64 survived. The original run sampled ±0.1 around 9.66667
+at step 0.002. **These are not the same population**, so the observed control max/median of 187.3 cannot be
+compared with the run's 2980, and no conclusion about "the control going quiet" is drawn.
+
+What remains valid is the **like-for-like estimator comparison on identical orbits**:
+
+| δ=1.0 (22 orbits, 0 escaped) | median | max | max/median | ≥3× median |
+|---|---|---|---|---|
+| FFT | 6.16e-06 | 1.154e-03 | **187.3** | 7/22 |
+| NAFF | 2.22e-05 | 5.596e-04 | **25.2** | 6/22 |
+
+**NAFF's max/median on an integrable metric is 7.4× tighter** — genuinely less spurious structure where
+true drift is exactly zero. That is real and in NAFF's favour.
+
+## E4 — the decisive failure, and it inverts the expected direction
+
+Two-sample KS on log₁₀ drift, δ=2.0 (contains the layer) vs δ=1.0 (integrable):
+
+```
+FFT :  KS = 0.387,  p = 0.0404   SEPARATES
+NAFF:  KS = 0.217,  p = 0.5368   does NOT separate
+```
+
+**The incumbent discriminates and the replacement does not.** The mechanism is the one already documented:
+NAFF's floor on the control is 3.6× higher (2.22e-05 vs 6.16e-06), because it measures the true incoherent
+error while the FFT peak's coherent bias cancels in the half-split. That inflated floor pushes NAFF's
+control distribution up into the δ=2.0 distribution and destroys the separation.
+
+⚠️ Both p-values are marginal at n≈22 and neither would survive correction for multiple comparisons.
+**E4 should be read as "NAFF does not demonstrate discrimination," not as "FFT is validated."** FFT's
+p=0.0404 is itself a cross-δ comparison and therefore subject to the very gain distortion documented in
+FINDINGS — it cannot be ruled out that part of that separation *is* the artifact.
+
+## What this means
+
+**The two properties are in genuine tension, and NAFF trades the wrong one.** It buys gain stability
+(spread 0.025 vs 0.839) and a tighter control (25 vs 187); it pays with a 3.6× higher floor, and at these
+sample sizes the floor is what decides discrimination. **The incumbent's gain instability remains real and
+unaddressed** — NAFF is simply not the way to address it.
+
+**The untested half of the original prescription is the one that should have gone first.** FINDINGS item 1
+named *"a proper frequency-analysis method **or far longer records**."* Only the first was tried. Longer
+records attack **both** defects at once: the FFT interpolation bias scales with bin width ~1/N, so more
+crossings shrink the floor *and* flatten the gain variation, with no change of estimator and no new
+failure modes. **That is the next thing to try, and it was available all along.**
+
+*Caveat carried forward: E5's gain measurement is synthetic, and gain cannot be measured on real orbits at
+all — measured drift = gain × true drift + noise, and on real data the true drift is unknown by
+construction. Non-escaping orbits have true drift ≈ 0, so gain multiplies nothing and the effect is
+structurally undetectable there. A real-orbit check at δ=2.0 came back ρ = −0.114, p = 0.631, which is
+therefore uninformative rather than refuting.*
