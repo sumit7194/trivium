@@ -88,12 +88,33 @@ Because drift is uninformative, `n_fired` is determined **entirely by escape**. 
 escapes:   0     0    1    2    4    0    3    2
 ```
 
-Integers between 0 and 4, out of ~100 orbits each. At a true rate equal to the largest observed (4/100),
-Poisson gives **P(observe 0) = 1.8%** and **P(≤1) = 9.2%**. δ=1.1 (1 escape) versus δ=1.5 (0) is not a
-distinguishable difference, and even 4-vs-0 is ~2σ on a single uncorrected comparison across eight δ.
+Integers between 0 and 4, out of ~100 orbits each. As binomial proportions with exact 95% intervals:
 
-**δ\* = 1.1 rests on one orbit escaping at δ=1.1 and none at δ=1.05.** That is not a boundary; it is a
-coin landing once.
+| δ | 1.3 | 1.7 | 1.2 | 1.1 | 1.5 | 1.05 |
+|---|---|---|---|---|---|---|
+| escapes | 4/100 | 3/101 | 2/98 | 1/100 | 0/99 | 0/100 |
+| 95% CI | [.011, .099] | [.006, .084] | [.003, .072] | [.000, .055] | [.000, .037] | [.000, .036] |
+
+**Every interval overlaps every other.** And the decisive test — the loudest δ against the silent one,
+the sharpest contrast the ladder contains:
+
+> **δ=1.3 (4/100) vs δ=1.5 (0/99): Fisher exact p = 0.121.**
+
+**The only discriminating conjunct in the detector cannot distinguish its own extremes at p < 0.05.**
+Every other pairwise contrast is weaker still. **δ\* = 1.1 rests on one orbit escaping at δ=1.1 and none
+at δ=1.05** — a difference whose interval spans nearly the whole observed range. That is not a boundary.
+
+The sample size required to do better, at 80% power and α = 0.05, against the ~100 orbits per δ actually
+run:
+
+| effect to detect | orbits per arm needed |
+|---|---|
+| 4% → 2% (escape rate halves) | **1141** |
+| 4% → 1% (quarters) | **424** |
+| 4% → ~0 (total loss) | **191** |
+
+**The escape conjunct is underpowered by roughly an order of magnitude for anything short of total
+signal loss.** This bounds every claim in the item that depends on `n_fired`, which is all of them.
 
 ## G3d's own pre-registered prediction is falsified — and δ=1.02 is why
 
@@ -205,11 +226,29 @@ metrics near δ=1 have a thin chaotic layer remains **open**, exactly as before 
    frequency-analysis method (NAFF/Laskar) or far longer records — not a better integrator.
 2. **Re-run the control at n ≈ 100** to match the ladder. δ=1.0 is the only δ at n=50, and every
    absolute-scale statement leans on that row.
-3. **RK4 step-size sweep — on δ=1.0 for the drift excess, and on the escapes.** Energy and phase are
-   different failure modes; `drift()` measures phase, and the h⁴ energy scaling above says nothing about
-   it. Truncation-driven excess should fall ~16× per halving. **Sweep the escaping orbits too**: escape is
-   the only discriminating conjunct, it is decided in the plunge where energy error reaches 1.7e-3, and if
-   an orbit's escape verdict changes with h then `n_fired` is a step-size artifact.
+3. **RK4 step-size sweep on δ=1.0, for the drift excess.** Energy and phase are different failure modes;
+   `drift()` measures phase, and the h⁴ energy scaling above says nothing about it. Truncation-driven
+   excess should fall ~16× per halving.
+
+   **And on the escapes — but judged on the ensemble fraction, never on individual verdicts.** Escape is
+   the only discriminating conjunct and it is decided in the plunge, where energy error reaches 1.7e-3.
+   ⚠️ **Near a separatrix the escape basin boundary is generically fractal, so individual orbits flipping
+   verdict under a change of h is EXPECTED at any step size — that is the dynamics, not a defect.**
+   Judging on flips would condemn a working detector. The statistic is the escape *fraction* at h vs h/2
+   with binomial errors: stable fraction ⇒ `n_fired` is sound despite flips; systematically moving
+   fraction ⇒ artifact. **Note from the power table above that at ~100 orbits per arm this test can only
+   resolve near-total signal loss**, so it must be run at ≫100 orbits or reported as inconclusive.
+   *(Fractal-basin correction and the fraction statistic contributed by quantum, relayed 2026-08-16;
+   it corrects an earlier draft of this item that proposed the individual-flip criterion.)*
+
+3b. **A narrow, well-aimed integrator fix — escape segment only.** The both-ways measurement above locates
+   the energy failure precisely: fine on the bound arc (1.1–1.3×), blowing up in the terminal plunge. That
+   is the known failure mode of fixed-step methods — the orbit accelerates, the natural timescale
+   collapses, and constant h stops resolving it. The indicated cure is **adaptive stepping or a
+   time-transformed / regularised scheme through the plunge** (the Wu–Deng–Pan time-transformation
+   literature, `[asserted, unverified]` per **L10**), **not** extended precision and **not** symplectic
+   integration for its own sake — neither touches this. This is a much smaller build than a general
+   integrator and it is aimed at the only conjunct that discriminates.
 4. **Persist crossing times** so non-uniform sampling geometry can be tested — the most likely explanation
    for the residual excess, and untestable from the current records.
 5. **Report escaping *fraction* over a fixed phase-space volume**, not a binary per-orbit outcome. Near a
