@@ -21,7 +21,26 @@ amendment over the original proposal.**
 | 1 | **P1(a′) prior-art sweep — AUTHORIZED and RUN** (ansatz) | result below: survives the novelty gate, but **demoted**; a third premise of P1 fell |
 | 2 | **P0 (the simplifier wall) is the first move** | ansatz's #1; unblocks P1(b) + P3 + §122 simultaneously |
 | 3 | **P4 folds into P3** | tabula's recommendation adopted; the emit-on-unknown-data programme is retired in favour of the certify side |
-| 4 | **quantum's scoping accepted: oracle, not engine** | no shared integrator — each frontier keeps its own; vestigium owns reference orbits, exact-invariant monitoring, and the floor protocol |
+| 4 | **quantum's scoping accepted: oracle, not engine** | no shared integrator — each frontier keeps its own; vestigium owns reference orbits, exact-invariant monitoring, and the floor protocol · **partially reversed same day — see below** |
+
+**Decision 4, partially reversed by the data — the integrator ask was right, aimed at the wrong orbits.**
+quantum declined the integrator partly because *bound* chaotic orbits do not need extended precision, and
+that still holds. But G3's both-ways measurement inverts the target: **energy behaviour is fine on the
+bound arc (1.1–1.3×) and blows up in the terminal plunge** — one escape integrated at **|dH/H| = 1.663e-03,
+17× above the threshold it is reported as passing.** Escape is exactly where fixed-step methods are known
+to fail: the orbit accelerates, the natural timescale collapses, and constant h stops resolving it.
+**The cure is neither more digits nor symplectic-for-its-own-sake — it is adaptive stepping or a
+time-transformed / regularised scheme through the plunge** (the Wu–Deng–Pan time-transformation
+literature). ⇒ **a real but narrow build: the escape segment only, not the bound dynamics, not the chaos —
+and aimed at the only conjunct that discriminates.** Much smaller than the one refused, and the refusal's
+independence argument is untouched, since this is one frontier's own integration path rather than shared
+infrastructure.
+
+**And a refinement to the escape h-sweep, before anyone runs it:** near a separatrix the escape basin
+boundary is **generically fractal**, so *some* orbits flipping verdict under h is **expected** and is not
+by itself an artifact. **The decisive statistic is the escape FRACTION beyond binomial error, not "did any
+orbit flip"** — stable fraction ⇒ `n_fired` is sound despite individual flips; systematically moving
+fraction ⇒ step-size artifact. *"Judging on individual flips will condemn a working detector."*
 
 ### The P1(a′) sweep result — *survives the gate, fails the ranking, and kills P1's last premise*
 
@@ -359,12 +378,24 @@ single δ**, spread 7.9 points, *not ordered with fired/silent* (δ=1.5, silent,
 fired, passes 37.0%). A 3×-median cut on a heavy-tailed sample passes ~40% by construction. **The drift
 conjunct contributes no evidence to the AND; the detector is escape-only.**
 
-**② The escape conjunct has no counting statistics.** Escapes per δ are **4, 0, 4, 2, 1, 0, 0** out of
-~100 orbits — the entire "boundary" is integer counts between 0 and 4. Checked here: 4-vs-0 is a
-conditional-binomial **p = 0.125, z = 1.53σ** (the bridge session's "~2σ" was generous), and across 8 δ
-the expected number of contrasts that extreme is **exactly 1.00**, with **P(at least one) = 0.66**. The
-δ=1.1-vs-δ=1.5 contrast (1 vs 0) carries **p = 1.00 — literally no information.** ⇒ **the scan cannot
-support any boundary claim, monotonic or otherwise**, and this survives fixing ①.
+**② The escape conjunct has no counting statistics — and this is now exact, not a hand-wave.** Escapes per
+δ are **4, 0, 4, 2, 1, 0, 0** out of ~100 orbits; the entire "boundary" is integer counts between 0 and 4.
+As binomial proportions with exact 95% intervals — δ=1.3 **4/100 [.011,.099]** · δ=1.7 **3/101
+[.006,.084]** · δ=1.2 **2/98 [.003,.072]** · δ=1.1 **1/100 [.000,.055]** · δ=1.5 **0/99 [.000,.037]** ·
+δ=1.05 **0/100 [.000,.036]** — **every interval overlaps every other.** And the sharpest contrast the
+ladder contains, loudest vs silent:
+
+> **δ=1.3 (4/100) vs δ=1.5 (0/99): Fisher exact p = 0.121.**
+> **The only discriminating conjunct in the detector cannot separate its own extremes at p < 0.05.**
+
+Every other pairwise contrast is weaker still. ⇒ **this bounds every claim in the item that depends on
+`n_fired`, which is all of them — including δ\* = 1.1.**
+
+**And the number that must travel with the proposed escape h-sweep.** Power against ~100 orbits per δ at
+80% power, α=0.05: detecting **4% → 2%** needs **1,141 orbits per arm**; **4% → 1%** needs **424**;
+**4% → ~0** needs **191**. **So the sweep must run at ≫100 orbits per arm or be inconclusive by
+construction** — *"running it at n~100 would produce a null that means nothing and would be easy to
+misread as reassurance."*
 
 **③ The control was never matched.** δ=1.0 was scanned over **one** separatrix band `[9.67]` with **50**
 orbits; every treatment δ used **two** bands (inner 4.1–8.1, outer 10.1–18.7) with 98–101. The control
@@ -548,6 +579,26 @@ manifest invariant measured in the identical harness*, so every implementation s
 Second: `--fast` was trimming trajectory *count*, exactly the resource C4's coverage needs — exposing an
 asymmetry worth carrying: **C4 rejects cheaply and robustly, confirms only with coverage.** For screening
 that is the right way round.
+
+> **⚠️ A correction from ansatz that would otherwise have left P3's screen carrying no information at all.**
+> tabula's draft pre-registration asked whether odd-rank (degree-3) Killing tensors are excluded a priori by
+> the t→−t, φ→−φ symmetries, intending to report that rung **"trivially empty."** **They are not excluded** —
+> the counterexample sits at **degree 1**: `p_t` and `p_φ` are rank-1 invariants and 1 is odd. *The involution
+> grades odd invariants into its odd eigenspace; it does not kill them.*
+>
+> **And the rung is not empty — it is dimension 8**, reducible products of the known invariants. ansatz
+> rank-tested on 400 random Kerr phase-space points: **degree 2 → 5, degree 3 → 8, degree 4 → 14**, all
+> numerically independent. ⇒ **the K0 control must emit 8 at degree 3, not 0**; and *"the count drops by
+> exactly one when Carter dies"* holds **only at degree 2** — the drops are **1, 2 and 5** at degrees 2, 3, 4,
+> because killing K removes every product containing K. **Against a raw known-invariant baseline every rung
+> would ESCALATE and the screen would carry no information.** *(Also flagged: a possible metric mismatch —
+> if tabula's §99 object is Stäckel-separable at ε≠0 it is integrable by construction, so the two halves
+> would answer different questions under one name. ansatz asked them to transcribe §82/§85's
+> `g_tt × (1 + ε(3u²−1)/r³)` instead — not Stäckel-separable at ε≠0, and not a vacuum solution.)*
+>
+> *Relayed sister-to-sister directly — the first direct ansatz↔tabula contact, with the bridge copied rather
+> than routing. Worth noting as a topology change: the read-only rule is unaffected, but the family is no
+> longer star-shaped through here.*
 
 **Their answers to P3's three design questions:**
 1. **The ladder runs over TWO axes, and conflating them is what cost round 9.** (i) coordinate-coefficient
