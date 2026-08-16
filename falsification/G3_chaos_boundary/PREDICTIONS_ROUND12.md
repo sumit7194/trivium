@@ -109,9 +109,13 @@ stated in this file before the data:
 1. **The pre-registration already predicted it.** PREREGISTRATION's own continuity argument says the layer
    must shrink to zero width as δ→1⁺. Silence at δ=1.02 confirms what the frozen document expected.
 2. **The statistic has no power to detect the alternative.** Escape counts across the ladder are
-   0,0,0,1,2,4,0,3,2. At a true rate of 4/100, Poisson gives P(observe 0) = 1.8% and P(≤1) = 9.2%. δ=1.1
-   (1 escape) versus δ=1.02 (0) is not a distinguishable difference. A prediction of "silence" cannot be
-   informative when the instrument cannot separate 0 from 1.
+   0,0,0,1,2,4,0,3,2 per ~100 orbits. **Superseding the Poisson estimate first used here** (P(0) = 1.8%
+   at a true rate of 4/100), the correct instrument is an exact test on the actual counts, and it is
+   harsher: **δ=1.3 (4/100) vs δ=1.5 (0/99) gives Fisher exact p = 0.121** — the conjunct cannot separate
+   the ladder's own extremes, and all six exact binomial intervals overlap. δ=1.1 (1 escape) versus
+   δ=1.02 (0) is far weaker still. **A prediction of "silence" cannot be informative when the instrument
+   cannot separate 0 from 1** — and detecting even a halving of the escape rate would need ~1141 orbits
+   per arm against the ~100 run. See [FINDINGS.md](FINDINGS.md) for the full power table.
 3. **The grouping claim — its actual content, per the pre-data note above — is contradicted.** If δ=1.05
    and δ=1.02 are quiet *because* near-integrability makes the layer exponentially thin, drift should also
    be smallest there. It is not. **δ=1.02, the δ closest to integrable, has max drift 1.78e-02 — larger
