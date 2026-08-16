@@ -144,11 +144,32 @@ frequencies, no metric, no integrator, no force of any kind:
 peak-estimation sampling variance between two 100-point halves. **No integrator change, symplectic method,
 or extended precision touches it.**
 
-**A residual excess above pure-estimator noise does exist and is unexplained.** Null max/median at matched
-n, 2000 replicates: median ~208, 95th ~407, max 750–1001. Every δ **including the control** exceeds it
-(δ=1.0: 2980, p < 0.001). Candidates, none yet tested: non-uniform section sampling (crossings are uniform
-in index, not time, which the synthetic did not model); RK4 phase error over ~1.2M steps; and the control's
-n=50 conditioning. **The synthetic assumes uniform sampling, so ~200 is a lower bound on true noise.**
+**A residual excess above pure-estimator noise does exist**, but ⚠️ **the null percentiles first quoted
+here were not robust and are withdrawn.** They were `median ~208, 95th ~407, max 750–1001`. That null drew
+`f0 ~ U(0.08, 0.30)` with tones at `f0·{1, √2, π/2}`, putting the top tone at up to **0.471 against a
+Nyquist of 0.5** — so the widest draws were aliasing. The null's max/median is highly sensitive to that
+arbitrary choice:
+
+| assumed f₀ range | top tone | null max/median |
+|---|---|---|
+| U(0.08, 0.30) — *as published* | up to 0.471 | **315** |
+| U(0.08, 0.20) | up to 0.314 | 98 |
+| U(0.12, 0.18) — run-like | up to 0.283 | **18** |
+
+**A 17× spread driven entirely by a parameter never matched to the data.** The qualitative conclusion
+survives — δ=1.0's observed 2980 exceeds every variant, and narrowing toward run-like frequencies makes
+the excess *larger*, not smaller — but **no specific null percentile should be quoted from this synthetic**,
+and the p-values derived from it are withdrawn. Self-caught; the criticism that a floor measured on a case
+that does not resemble the run is a floor for a different instrument is the same one this document levels
+at the original FFT-bin null, one level up.
+
+**The correct null must be computed at the orbits' actual observed frequencies.** That was impossible from
+the banked records, which store no series — it is the reason forward-look item 4 exists, and the E2/E3 run
+(see [PREREG_ESTIMATOR.md](PREREG_ESTIMATOR.md)) persists series specifically so it becomes possible.
+
+Candidates for the excess, none yet tested: non-uniform section sampling (crossings are uniform in index,
+not time, which the synthetic does not model); RK4 phase error over ~1.2M steps; the control's n=50
+conditioning; and **frequency-dependent estimator gain** (below).
 
 ## The A1 integration guard is inert
 
@@ -207,6 +228,60 @@ determination is not, and is the natural target of the step-size sweep in item 3
 *Caveat: the terminating orbits sampled here are the bisected separatrix edges, i.e. marginal by
 construction, so the ratios above are not a random sample of the ladder.*
 
+## The estimator's gain depends on frequency — so drift is not comparable across δ
+
+*Added 2026-08-16 from the estimator replacement work, gated in
+[PREREG_ESTIMATOR.md](PREREG_ESTIMATOR.md). This is the sharpest instrument result in the item.*
+
+A NAFF-style estimator (continuous maximisation of the Hanning-windowed Fourier amplitude) was built and
+gated. **E1 failed as frozen** — its drift floor came out *worse* (1.22e-05 vs 5.17e-06) where the gate
+required 10× better. Diagnosing that failure produced the finding.
+
+**NAFF's frequency estimate is 100–10,000× more accurate** than the FFT peak (single tone: 1.98e-07 vs
+1.88e-03; three tones: 1.21e-05 vs 1.77e-03) and it *still* scores worse on drift. The reason is the
+statistic: `drift = |f₁−f₂|/max(f₁,f₂)`, and the FFT peak's error is a **systematic bias set by the
+fractional bin offset**, near-identical in both halves and therefore **cancelling in the difference**.
+The incumbent's floor sits 340× below its own frequency error. **The incumbent's floor is low because it
+is biased, not because it is accurate — a half-split difference statistic rewards a biased estimator over
+an accurate one.**
+
+**Then the response was measured for the first time** (every earlier number in this item is a *noise*
+measurement). Injecting known drifts into series whose halves are generated at known distinct frequencies,
+with fractional bin offset controlled:
+
+| | FFT gain | NAFF gain |
+|---|---|---|
+| on-bin | 0.755 | 1.000 |
+| quarter-bin | 0.924 | 1.004 |
+| **half-bin** | **1.592** | 0.991 |
+| three-quarter | 0.895 | 0.993 |
+| **spread over 32 offsets** | **0.839** | **0.025** |
+
+> **The incumbent's gain varies by 2.1× with where an orbit's frequency sits in the bin grid.** Two orbits
+> with identical true drift and different absolute frequencies do not report the same drift. Different δ
+> means different orbital frequencies, means different bin offsets, means different gain — **so drift
+> values are not comparable across the ladder, and δ-structure can be manufactured with no physics in it
+> at all.** The distortion is worst at low true drift, which is where the ladder lives.
+
+**This is a fifth candidate explanation for δ-dependent structure**, requiring neither chaos, resonance,
+integration error, nor sampling geometry. *(Mechanism predicted by quantum before the test, with a stated
+falsification condition — FFT gain flat and unity — which did not occur and was not close.)*
+
+**Note the incumbent still wins on SNR**: 0.909/5.167e-06 = 175,840 against NAFF's 1.000/1.219e-05 =
+82,032, a factor 2.1. **SNR is the wrong figure of merit here.** It ranks detectors for *is there a signal,
+at one setting*; every G3 claim is a **comparison across δ**, for which the operative property is **gain
+stability along the comparison axis**. The structural reason, and it is decisive: **the floor contributes
+statistical error, which averages down as 1/√N; gain variation contributes systematic error along the
+comparison axis, which does not average down at any N.** Setting them equal gives a crossover true-drift of
+`0.59·d = 5.167e-06` → **d ≈ 8.8e-06 — below every drift value in the ladder.** At d = 1e-03 systematics
+beat statistics by ~110× in a *single* measurement.
+
+⇒ **E1 was gated on the wrong property twice over**: on noise alone (which selects for deafness — an
+estimator returning zero has a perfect floor), and then on SNR (which would have chosen the distorting
+instrument). **Gate an instrument on the property the claim depends on.** A high-SNR instrument with
+parameter-dependent gain is *more* dangerous than a noisy one for cross-parameter work, because it
+produces confident, reproducible, wrong structure.
+
 ## What is and is not established
 
 **Established.** §106's δ=2 layer reproduces at x₀ = 8.03693 and 8.04093 (G3b). Two orbits, both
@@ -222,10 +297,29 @@ metrics near δ=1 have a thin chaotic layer remains **open**, exactly as before 
 
 ## What a real attempt needs, in priority order
 
-1. **Replace the drift estimator.** The floor is peak-estimation variance; the fix is a proper
-   frequency-analysis method (NAFF/Laskar) or far longer records — not a better integrator.
+0. **MORE ORBITS — and this is the cheapest route to a conclusive item, ahead of every instrument fix.**
+   Two power questions were previously conflated here. The **step-size** question (does h shift the escape
+   *fraction*?) is brutal: ~1141 orbits/arm for a halving. The **boundary** question (is 4/100 different
+   from 0/99?) is far easier — at **n ≈ 200–300 per δ** one expects ~8 vs 0, **p ≈ 0.007**. So 2–3× the
+   current orbit count, on existing machinery, would settle whether the boundary exists at all. **If it
+   does not survive that, the estimator and integrator work are moot; if it does, both become worth doing
+   on an effect known to be real.** *(Sequencing contributed by quantum.)*
+
+   ⚠️ **But it must run through the corrected estimator, not before it** — and that is structural, not a
+   preference. More orbits shrink only the *statistical* error; the gain variation documented above is
+   *systematic* along the very axis being compared and does not average down at any N. **Running 200–300
+   orbits per δ on the FFT statistic would deliver a beautifully significant measurement of a quantity
+   whose gain varies 2.1× across the comparison axis — worse than doing nothing, because an underpowered
+   null is honest and reads as inconclusive, while a well-powered distorted result is confident,
+   reproducible, and gets believed.**
+
+1. **Replace the drift estimator — for gain stability, not for floor.** NAFF's gain is flat to 2.5% where
+   the incumbent's varies 2.1×; its floor is *worse* and its SNR is 2.1× worse, and neither of those is the
+   property a cross-δ claim depends on. Do **not** re-gate this on floor or on SNR.
 2. **Re-run the control at n ≈ 100** to match the ladder. δ=1.0 is the only δ at n=50, and every
-   absolute-scale statement leans on that row.
+   absolute-scale statement leans on that row. **And recompute the synthetic null at the orbits' actual
+   observed frequencies** — the published null was sensitive to an assumed frequency range by 17× and its
+   percentiles are withdrawn.
 3. **RK4 step-size sweep on δ=1.0, for the drift excess.** Energy and phase are different failure modes;
    `drift()` measures phase, and the h⁴ energy scaling above says nothing about it. Truncation-driven
    excess should fall ~16× per halving.
