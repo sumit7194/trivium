@@ -1153,3 +1153,128 @@ Sisters reported (bridge verified read-only against their committed JSONs):
 **Still running:** ansatz R2 (the emit⟺span theorem — the flagship). When it lands, the bridge unseals +
 scores. **Bridge follow-up teed up:** R1's un-blind — unseal Candidate B, identify its invariant's actual
 momentum-function family, file the momentum-family-basis ask ("the instant it's named, the boundary moves").
+
+## 2026-08-16 — PROGRAM II proposed: the machinery has never been pointed at an unknown
+
+No compute this session. A full read of all five repos (state, journals, roadmaps, live processes),
+then a strategic question from the user: *where does something substantial come from next?*
+
+**The observation the ledgers do not contain.** 36 gated legs, 27 attacks, 12 kills, 10 self-caught
+instrument bugs — and every single result in the corpus is a reproduction, a cross-check, a consistency
+statement, or an honest null. ansatz says it outright ("rediscoveries… a capability demo, not a novelty
+pillar"); vestigium says it outright ("Nothing in it is new physics"). That was correct discipline —
+verified instruments were the product of the last ten weeks. It is also now complete. **The machinery
+has never once been pointed at a question whose answer nobody knows.**
+
+**[PROGRAM_II.md](PROGRAM_II.md)** written as the proposal, explicitly *upstream* of pre-registration
+and explicitly not a claim: four candidate programmes, each designed so its null is a real output.
+- **P1** (ansatz) — *for which theories does an exact black hole exist?* The EdGB **inversion**: fix a
+  metric family, solve for which scalar–Gauss–Bonnet couplings admit it exactly. Plus 5D stationary
+  vacuum hunted at campaign scale — the machine's own unexplored axis, since every campaign to date ran
+  in minutes on a laptop.
+- **P2** (all four) — *if Kerr is wrong, would we see it?* The successor founding question: exact
+  non-Kerr metrics → dynamics/resonance → waveform signature → detectability in real measured noise →
+  legibility verdict. Deliverable is a deformation → signature → threshold map, wall-species labelled.
+- **P3** (ansatz + bridge) — rank 3–4 Killing-tensor search on deformed Kerr: find a new conserved
+  quantity or certify non-existence to stated order, converting leg J's *diagnosis* into a theorem.
+- **P4** (tabula) — point the discoverability diagnostic at data whose answer is genuinely unknown.
+
+**Live inputs folded in — and my first version of this one was an overclaim, corrected same session.**
+I wrote that G3's boundary is "non-monotonic, with a hole at δ=1.5." That came from reading the **commit
+headline instead of the results table**, and it asserts more than the data supports. The sibling bridge
+session — holding the uncommitted δ=1.05 row — corrected it, and the numbers check out: **two** δ are
+silent (1.5 and 1.05), not one, and in **both** it is the *escape* conjunct that goes quiet while drift
+sits **455× and 511× above floor**. The integrable control δ=1.0 shows **2980× floor with zero escapes**,
+so the drift conjunct alone would false-positive on Schwarzschild — already on the campaign's record.
+Defensible statement: **the escape conjunct fires non-monotonically in δ across the scanned window;
+structure vs separatrix-window artifact is undetermined.** It is exactly the conjunct G3's
+PREREGISTRATION addendum (change 4) flagged as needing independent liveness — the vacuous-conjunct
+failure mode that has now bitten this item three times. Still P2's first sub-question, for a better
+reason than I originally gave. δ=1.02 is running (PID 52691, launched from the sibling session on the
+user's direct instruction). **L10, and an L2-flavoured lesson: a commit headline is a summary, not a
+receipt.**
+
+G4's parked wall, P2's dynamics and P3's chaos boundary are all blocked on the same missing tool
+(symplectic / extended-precision integration) — one build, three frontiers — which is why the quantum
+brief is an *integrator* ask and not a foundations one.
+
+**Round-12 briefs relayed to all four sister sessions the same day, STUDY ONLY** — read, think, form an
+opinion, start nothing. Sisters explicitly invited to answer "wrong / mis-scoped / already done."
+Bridge owes two things before anything starts: the **P1 prior-art sweep** (the "nobody has asked this"
+line is `[asserted, unverified]` and must clear an M6-style gate *first*), and **G3's last δ**.
+
+*(Also running, untouched: deepstrain's L2 deep-background job — 225/727 segments at 13 h.)*
+
+## 2026-08-16 (later) — all four sisters report: the proposal survives, most of my specifics do not
+
+Round-12 closed the same day it opened. **4/4 reported, nothing started anywhere**, and every sister
+refuted or re-scoped something. Full verdicts in [SISTER_REQUESTS.md](SISTER_REQUESTS.md); amendments in
+place in [PROGRAM_II.md](PROGRAM_II.md) with the original wording struck, not deleted.
+
+- **ansatz — P1(a) KILLED at the M6 gate.** The inverted EdGB question has a name (Nojiri–Nashed's
+  *reconstruction procedure*), verified at primary source, **done by hand**. My justification — *"nobody
+  has asked it, because asking it requires a machine that can carry the symbolic load"* — was an assertion
+  dressed as a deduction. **P1(a′) survives** (classification, not construction; no no-go exists), pending
+  its own sweep. They also found the item now filed as **§P0**: the **simplifier wall**, *"one blocker
+  wearing three hats"* (P1b, P3, §122 Kerr order-2 CK), plus the correction that **depth does not scale
+  with wall-clock** — §122 ran unbounded and never completed.
+- **tabula — P4 MIS-SCOPED, fold into P3.** P4 conflated the chaos detector with the invariant screener
+  (the latter has one real-data run); archival single-series data is **structurally blind** by
+  construction; heterogeneous ensembles produce false positives that pass out-of-sample validation
+  perfectly; and the circularity — *"believable only where it isn't needed."*
+- **quantum — no to the engine, yes to the oracle.** Refused on **independence** grounds: one shared
+  integrator would correlate three frontiers' failures, inverting the leg-S pattern. Killed the brief's
+  Yoshida-4 premise (geodesic H is non-separable) and found the likely mechanism behind G3's control
+  anomaly: `geodesic_chaos.py` uses **RK4 + finite-difference Christoffels at h=1e-4 ⇒ ~1e-8 force error**,
+  so extended precision was never the answer. Also: **G4 may dissolve without code** if its question is
+  ensemble structure rather than trajectory accuracy.
+- **deepstrain — P2 re-scoped twice** (FAR-ladder category error; the dynamics link is LISA, not LIGO),
+  **species-4 promoted to P2's central obstruction**, and the number that reframes it: on GW250114 the
+  data-only Fisher error (0.3205) is **worse than the prior** (0.2887) — the posterior is **86% prior**.
+
+**G3's instrument came apart across four exchanges** and the item is now about the detector, not the
+boundary: drift's pass fraction is 35–43% at *every* δ; ten matched KS pairs separate on nothing; escapes
+are integer counts 0–4 (4-vs-0 is z=1.53σ, and 8 δ expect exactly 1.00 such contrast by chance); three δ
+sit at or below the *integrable control's own* absolute drift. tabula's independent calibration required
+**>1e6×** separation before declaring an invariant destroyed — our whole window spans ~6×, all KAM-remnant
+band. quantum filed a **pre-registered prediction with a falsification condition** before δ=1.02 landed,
+and supplied the third option we had both missed: **resonance onset is generically non-monotonic in a
+deformation parameter** (Gair–Li–Mandel 2008; Lukes-Gerakopoulos et al. 2010), testable by **rotation
+number vs δ**.
+
+**Then a sixth, and it was a relay rather than a summary.** I passed quantum's `geodesic_chaos.py`
+finding (RK4 + finite-difference Christoffels at h=1e-4 ⇒ ~1e-8 force error) to the G3 session as
+*"very likely the whole of the 2980×."* **G3 never imports that module.** `g3_overnight.py` takes only
+`_zv_invariant.metric` and `poincare.{_rk4, p_on_shell, H_value}`, and `poincare.build_hamilton` uses an
+exact symbolic matrix inverse and exact symbolic derivatives before lambdifying — so the proposed cure
+*was already what G3 does.* quantum described their own file accurately; **the extension to a code path I
+never checked was mine.** Likewise their E/L_z monitoring suggestion: G3 integrates a 2-DOF reduction with
+E and L_z as *fixed parameters*, so monitoring them certifies nothing, and H is already guarded at
+`DH_MAX = 1e-4`. New failure mode for the ledger: **relaying a sister's correct finding past its stated
+scope is a distinct error from summarising, and it inherits none of the original's verification.**
+
+The bridge session then found what the floor actually is, and the method is the good part: they fed
+`drift()` **pure synthetic quasiperiodic series with true drift identically zero** — no metric, no
+integrator, no force — and reproduced the run's floor to within a factor of 2. **The floor is FFT
+peak-estimation sampling variance.** Their null over 2000 matched replicates still puts every δ *including
+the control* above pure-estimator noise (2980 vs a null max of 1001 at n=50), so a real excess remains —
+aimed at the **RK4 step**, not at differencing that does not exist here. And they closed my own loophole
+by regrouping on |δ−1|, the physical knob: **Spearman ρ = +0.089, Kruskal–Wallis p = 0.265** — drift fails
+to track the perturbation strength, not merely the noise label. Cleanest statement, needing no null and no
+labels: **seven of eight δ sit at or below the integrable control, which has true drift exactly zero.**
+
+**Six overclaims of mine were corrected today**, four by sisters and two by the sibling bridge session.
+Each is struck in place. The pattern is worth the entry: every one came from *summarising or relaying* — a
+commit headline, a remembered roadmap, a plausible chain, a sister's finding carried past its scope —
+rather than from reading the artifact. **L10 held; I
+did not.**
+
+**The convergence, which may be the round's real finding.** ansatz's surviving P1(a′) is a *certified
+classification*; P3 is *certify non-existence to stated order*; tabula's recommendation is to point their
+machinery at *certified basis-relative non-existence* — and they named it: *"the certificate genre is what
+this family is actually good at."* Three repos, no coordination, one shape. The proposal opened by arguing
+the program should point verified instruments at unknown answers; the sisters' collective read is that its
+distinctive product is **the certified null**.
+
+**Awaiting the user on four decisions:** authorize ansatz's P1(a′) sweep · is P0 the first move ·
+fold P4 into P3 · accept quantum's oracle-not-engine scoping.

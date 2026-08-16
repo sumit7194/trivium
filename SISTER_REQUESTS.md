@@ -289,3 +289,225 @@ identical per-metric verdict — the clean, cross-validated version of the §9 c
   testable version of the §9 claim.
 
 </details>
+
+---
+
+## Round-12 (2026-08-16) — PROGRAM II: study-only briefs, no work authorized
+
+Not a round of asks in the usual sense. [PROGRAM_II.md](PROGRAM_II.md) proposes a **change of programme
+shape** — the observation that the machinery has never been pointed at a question whose answer nobody
+knows, and four candidate programmes that would fix that. All four sisters were briefed the same day.
+
+**Every brief was relayed as STUDY ONLY.** No sister is authorized to start, pre-register, or write code
+against any of it until the user says so. Sisters were explicitly invited to answer "this is wrong",
+"this is mis-scoped", or "this is already done" — a brief that comes back refuted is the cheapest
+possible outcome and the one the M6 gate exists to buy.
+
+| brief | to | programme | the question they were asked to think hardest about |
+|---|---|---|---|
+| **P1** — for which theories does an exact black hole exist? (EdGB *inversion* + 5D stationary hunt at campaign scale) | ansatz | P1 primary, P3 secondary | is the inverted EdGB question well-posed; what does the verifier need beyond `G_ab + Λg_ab`; honest cost of weeks-scale vs minutes-scale campaign |
+| **P4** — point the discoverability diagnostic at data whose answer is unknown | tabula | P4 primary, P2 secondary | which real dataset is worth screening; what a *positive* lead must look like before it beats abstention |
+| **P2** — if Kerr is wrong, would we see it? (detectability of non-Kerr signatures in real measured noise) | deepstrain | P2 primary | what deformation size is actually detectable given the deep-FAR ladder + the species-4 model-fidelity wall (crossover SNR≈124) |
+| **the precision integrator** — symplectic / extended-precision geodesic integration | quantum | unblocks P2 + P3 + G4 | is this the same muscle as `hinge_mp.py`'s e⁻¹⁰⁰ modular tails, and would they own it — "not our kind of question" is a legitimate answer |
+
+**Bridge owes, before anything starts:** the P1 prior-art sweep (the "nobody has asked this" claim in
+PROGRAM_II §2 is `[asserted, unverified]` and must clear the M6-style gate *first*), and G3's last δ=1.02
+(running, PID 52691).
+
+**Two corrections to the briefs as relayed — both mine, both caught by sisters within the hour.**
+
+1. **The "hole at δ=1.5" framing was an overclaim**, propagated into three of the four briefs. It came
+   from reading a commit headline instead of the results table. Corrected by the sibling bridge session:
+   **two** δ are silent (1.5 *and* 1.05), and in **both** the *escape* conjunct goes quiet while drift
+   stays 455×/511× above floor; the integrable control δ=1.0 sits at 2980× floor with zero escapes.
+   Defensible statement: **the escape conjunct fires non-monotonically in δ; structure vs
+   separatrix-window artifact undetermined.** Correction relayed to all three affected sisters.
+
+2. **P2's brief mis-scoped two links, per deepstrain's read (below).** The deep-FAR ladder was quoted as
+   a detectability bound for deformations — a **category error**: it is a *detection* threshold for
+   subsolar CBCs, not a *parameter-estimation* bound. And the resonance/frequency-drift dynamics link
+   was presented as testable in deepstrain's noise when it is an **EMRI/LISA** observable. Both removed
+   from P2's scope; see PROGRAM_II §2 P2 as amended.
+
+### deepstrain's verdict on P2 (2026-08-16, same day) — *question right, chain mis-scoped, and a number that reframes it*
+
+Started nothing; L2 untouched (228/727). Their headline, from their own gated artifacts:
+
+| quantity (GW250114, the loudest event recorded) | value |
+|---|---|
+| σ_prior(δ), δ ~ U[−0.5,0.5] | 0.2887 |
+| σ_Fisher(δ) — **data alone** | **0.3205** |
+| σ_NPE(δ) — the posterior | 0.2626 |
+| prior shrinkage fraction | **0.862** |
+
+**The data-only Fisher error is worse than the prior.** Their published δ = −0.16 [−0.45,+0.32] is ~86%
+prior — *"we are not measuring δ on GW250114; we are mostly reporting our prior back, very slightly
+sharpened."* Any non-Kerr constraint built on the δ arc must carry that sentence. Now: 2σ exclusion is
+|δ| ≳ 0.5 — **essentially nothing excluded.** Asymptotically: species-4 floor **δ_sys = 0.0723**,
+crossover **SNR ≈ 124** — ×5 in SNR = ×125 in rate, a next-generation-detector number. Of 12 catalog
+events screened, **1** is informative.
+
+**The reframe, which they place above the taxonomy:** species-4 is not a label applied at the end, it is
+**P2's central obstruction** — searching for a deformation while the Kerr waveform model carries
+systematic error at scale δ_sys makes *"Kerr + small deformation"* and *"slightly wrong Kerr model"*
+**degenerate by construction.** ⇒ **P2's answer is bounded by NR waveform accuracy, not by detectors or
+statistics.** More events don't fix it; better detectors don't fix it.
+
+**Channel ranking for the LIGO band** (theirs): (1) **inspiral spin-induced quadrupole** — enters the PN
+phase, accumulates over hundreds of cycles, plausibly ×10–100 more sensitive than ringdown δ, **and
+nobody in the family owns inspiral PE**; (2) ringdown δ (prior-dominated); (3) echo spacing — real upper
+limits exist but probe *near-horizon/ECO* structure, **a different deformation class, do not merge**;
+(4) EMRI frequency drift — LISA.
+
+**Their three asks, for the link to be runnable at all:** an injectable **time-domain h(t; ε)**; the
+**QNM spectrum ω_lmn(ε)** of the deformed spacetime — *flagged as a likely blocker, since perturbation
+equations on non-Kerr backgrounds generally do not separate, and if it can't be produced the ringdown
+link should be dropped from the map rather than left as an open box*; and the **map ε → δ**, without
+which δ_sys = 0.072 says nothing about ε.
+
+**Methodological note they offered on G3** (independent of the correction above): of three bugs they hit
+this week, the one that nearly escaped was the one that **agreed with their prediction**. A boundary with
+an isolated hole is the shape a per-δ setup artifact makes — worth locating the separatrix by a
+*different* method before believing either answer.
+
+**Then, on the correction itself, they read the control datum and found the real finding — the sharpest
+outside contribution of the round.** *"The integrable control has the highest drift of the three, by ~6×.
+If drift were tracking chaos, the integrable case should sit at the bottom, not the top."* Checked at
+code level (they could not see the code), it is worse than stated: `floor` is **not** a resolution floor
+but `np.median(drift)` over that δ's own orbits, and `DRIFT_FIRE = 3.0` — so on **Schwarzschild,
+provably integrable, the drift conjunct clears its own threshold by ≈993×**, ranking **2nd of 8 δ**,
+above every δ that fired but one. Mechanism: drift is heavy-tailed across orbits at fixed δ, so a
+max/median statistic finds a large outlier regardless of integrability.
+
+⇒ **The drift conjunct contributes no evidence to the AND; G3's detector is effectively escape-only** —
+the very conjunct behaving non-monotonically. The two silent δ are not an anomaly inside a working
+two-part detector; they are *the only informative half of it disagreeing with itself*. Their closing
+point stands on its own: **two points failing on the same conjunct is a stronger artifact signature than
+one isolated hole**, because independent physics rarely fails identically at two separated parameter
+values while a shared setup step does exactly that. Their recommended next check — *why does a regular
+orbit read 993× above threshold?* — is free, needs no new scan, and is **higher-value than δ=1.02**.
+Relayed to the session that owns G3.
+
+**Their closing contribution — the fix, and a confound it exposes.** deepstrain's proposal: δ=1.0 is not a
+sanity-check control, it is a **null distribution**, and the repo's own detection discipline already says
+what to do with one. *"We never use a theoretical threshold; we measure a background and read the
+threshold off it. Your time-slides are the integrable orbits."* So calibrate the fire threshold against an
+upper quantile of the **δ=1.0 orbit population** rather than re-deriving a fresh threshold from the very
+population under test — under which a δ can only be loud *relative to itself*, which is exactly why the
+control clears its own bar by 993×. Sharper still, they propose replacing the max/median outlier test with
+a **two-sample comparison** (KS or rank-sum, δ-population vs δ=1.0 population), converting *"is there an
+outlier"* into *"is this population different from regular motion"* — the whole distribution, and a
+statable null.
+
+**Their point 2 (a max-over-N statistic needs matched N) checked out, and is worse than matched N.** The
+control is **structurally unmatched to every treatment δ**: it was scanned over **one** separatrix band
+`[9.67]` with **50** clean orbits, while every treatment δ used **two** bands and 98–101 orbits. Its
+median — the *denominator* of the ratio — is **2.91e-06, 3.3× smaller than the next smallest**. Two
+consequences: (a) part of the control's inflated 2980 is a **denominator artifact of an unmatched scan**,
+not purely the heavy tail; (b) it is handicapped on an order statistic (E[max] grows with N) and **still
+ranks 2nd of 8**, which strengthens rather than weakens the "drift is uninformative" reading. ⇒ **the
+Schwarzschild calibration deepstrain proposes requires the control rescanned at matched band-count and
+matched N first**, or the null distribution inherits the same asymmetry. Their forecast that a properly
+calibrated threshold may fire on **nothing** — *"a clean null and a genuine result, not a failure"* — is
+recorded as the live possibility it is.
+
+### ansatz's verdict on P1 (2026-08-16) — *P1(a) KILLED at the gate; a new #1 item found*
+
+**P1(a) fails the M6 gate.** The inverted question has a name — the **"reconstruction procedure"** of
+Nojiri & Nashed — verified at primary source (Ernazarov & Ivashchuk,
+[arXiv:2406.01301](https://arxiv.org/abs/2406.01301), abstract read not snippet): *"implicit relations for
+U(φ) and f(φ) which lead to exact solutions … for a given metric"*, **including the Schwarzschild test
+case**. Active genre (Hayward, f(R,G), non-metricity GB, + [arXiv:2603.22517](https://arxiv.org/abs/2603.22517)).
+*"The specific justification is the most wrong part — humans asked it and did it BY HAND."*
+**P1(a′) survives**: the literature does construction, never classification, and no no-go exists — so
+*exhaustive classification to stated order* is defensible, pending its own sweep, which ansatz offered to
+run. One honest note: the 2024 paper's contribution is partly finding a **typo** in Nojiri–Nashed's U(φ)
+— *"a VERIFICATION contribution, not a novelty one, and should be sold as such."*
+
+**Their new #1, now PROGRAM_II §P0 — the simplifier wall.** *"More wall-clock does NOT buy you past a
+simplifier wall"*: §122 ran with the ceiling removed, 4.6 h then 6 h+, never completed — **the blowup is
+per-operation, not per-campaign.** Breadth scales; depth does not. §119: the same seven dot products took
+**>8.5 min** under `simplify` vs **0.3 s** under `cancel(together(expand(·)))`. **P1(b), P3 and §122's
+Kerr order-2 CK all hit the same rotating/two-variable swell — *"not three risks; one blocker wearing
+three hats."*** Their ranking: **fix the wall → P3 → P1(a′) if clean → P1(b) last.** Verifier gap is *"a
+rung, not a rebuild"* — §10 already derives EdGB reduced field equations against Kanti et al. PRD **54**,
+5049. P3 pre-registration note: §98's caveat is that excluding rank ≤4 does **not** exclude rank ≥6 —
+*"certify non-existence must carry its order in the title, not the footnotes."*
+
+### tabula's verdict on P4 (2026-08-16) — *mis-scoped; fold into P3*
+
+**Three corrections.** (1) **P4 conflates two instruments** — the laser/tides/sunspots validation was the
+*chaos-regular detector*; the **invariant screener** has touched real data **once** (§156, Newton from
+ephemerides), and worked because *nature supplied the ensemble*. (2) **Structural blindness, not
+difficulty**: the engine needs N realizations of one law with *different* invariant values; segmenting a
+single series gives every segment the same value ⇒ **the invariant is whitened out by construction**
+(`s99.conserved` drops near-zero total-variance directions) — so turbulence and biological series fail the
+**precondition**. Worse, heterogeneous realizations carry a per-unit nuisance constant (calibration
+offset, subject identity) that is a **guaranteed false positive passing out-of-sample validation
+perfectly** — *"biological oscillators are the worst case here, not the best."* (3) **The circularity**:
+P4 assigns the bridge to adjudicate leads against exact ground truth, but *"if the law is known well
+enough to adjudicate, the answer was in a book — the instrument's output is believable only where it
+isn't needed."* Escape currency is **prospective falsification**, not held-out validation: closed-form
+candidate + pre-registered prediction on not-yet-collected data + the §165 conditioning gate + §162 basis
+disclosure (*"representable in family F"*, never *"exists"*). Abstention: **openness correlates with
+proximity to a decision wall**, and §153 measured sample complexity diverging ~1/δ² there (400 → 409,600).
+
+**Their recommendation — fold P4 into P3.** Point the machinery at its strongest side, **certified
+basis-relative non-existence**, which is P3's question; §160–165's basis ladder + conditioning gate
+cheaply yields *"no invariant representable in family F to order N"* and hands surviving families to
+ansatz's symbolic prover. *"Note this is also the shape of P1's null — the certificate genre is what this
+family is actually good at."* On P2: *"is the signature representable"* is **ill-posed as a binary**
+(§162); it must be a **basis-ladder per deformation** — and P2 is *"a better-posed home for our instrument
+than P4."*
+
+### quantum's verdict (2026-08-16) — *no to the engine on independence grounds; yes to the oracle*
+
+**The brief's technical premise was wrong.** §123's `yoshida4` is labelled *"tiny separable integrators"*
+and is applied to a free particle and a pendulum — **geodesic Hamiltonians are non-separable**, so it does
+not transfer. That correction stands. Precision is also near the wrong tool for chaos: trustworthy time
+~ (1/λ)ln(1/ε), so float64 → dps=60 buys **3.75× in time for 100–1000× runtime**.
+
+> **⚠️ CORRECTED — the Christoffel mechanism does NOT apply to G3, and I relayed it as though it did.**
+> quantum read `geodesic_chaos.py` (**RK4**; Christoffels by finite difference at h=1e-4 ⇒ ~1e-8 force
+> error; Lyapunov at d0=1e-6) and observed *"you cannot integrate a trajectory to better accuracy than the
+> force you feed it."* **True of that file. But G3 does not use it.** The bridge session verified the
+> import path: `g3_overnight.py` imports only `_zv_invariant.metric` and `poincare.{_rk4, p_on_shell,
+> H_value}`, and `poincare.build_hamilton` takes an **exact symbolic matrix inverse and exact symbolic
+> derivatives, then lambdifies** — *"there is no finite differencing anywhere in G3's force evaluation."*
+> So the proposed cure (lambdify exact symbolic Christoffels) **is already what G3 does, and always was.**
+> My relay called it *"very likely the whole of the 2980×"*; that is **false for G3**, and it is the second
+> conclusion this round built on a module G3 never imports. It may still matter for **G4**, which is where
+> `geodesic_chaos.py` actually lives. *(Per the user's instruction not to run anything from this session,
+> the import-path verification is the bridge session's, accepted here without independent re-check —
+> stated rather than glossed.)*
+>
+> **Their ③ likewise does not apply.** E and L_z are **fixed parameters** passed into
+> `_rk4(f, s, h, E, L)`, not evolved state — G3 integrates a 2-DOF reduction in [x, y, p_x, p_y] with them
+> frozen by construction, so they are conserved *trivially* and monitoring them *"would return zero and
+> certify nothing."* The one meaningful per-step invariant, **H**, **is** already monitored via the A1
+> guard at `DH_MAX = 1e-4`.
+
+**Refusal, with a structural reason that should have been anticipated:** *"one build, three frontiers"*
+makes G4, P2's dynamics and P3 all depend on one piece of code — **a correlated single point of failure**,
+in direct tension with §4's independence commitment, and the exact inverse of the leg-S pattern.
+**What they would own: the oracle** — Schwarzschild/Kerr reference orbits with closed-form answers
+(Fujita–Hikida frequencies, matched to the *science* duration), exact E/L_z/norm monitoring in the real
+deformed metric, and a stated precision-floor protocol every claim must clear. *"The integrable control is
+not a sanity check to run once; it is the floor, per δ-ladder, per diagnostic, reported alongside every
+number."* Prior-art gate applies to any build: **Wu/Deng/Pan** (ApJ ~2021–22) explicit symplectic for
+Kerr geodesics, **Tao 2016** extended-phase-space for non-separable H. Their own preferred work: **the
+corner-log thread**, rated above the integrator.
+
+**Two contributions beyond the brief.** (a) **G4 may not need an integrator but a different question** —
+no individual trajectory is trustworthy at long times at any precision (*that is what chaos is*), but
+statistical structure is, by shadowing; if G4 asks *"is this region chaotic, what is its island
+structure"* it is answerable now. *"It may dissolve the oldest parked wall without a line of code."*
+(b) **δ=1.5 is a false dichotomy** — "physics or bug" omits **real and expected**: chaos in near-integrable
+systems switches on at **resonances** (KAM / Poincaré–Birkhoff), and onset is **generically non-monotonic**
+in a deformation parameter, documented for these spacetimes (Gair–Li–Mandel 2008;
+Lukes-Gerakopoulos–Apostolatos–Contopoulos 2010). **Decisive test: rotation number vs δ** — if firing δ sit
+at low-order rationals p/q and δ=1.5 sits between them, it is resonance physics. Also filed a
+**pre-registered prediction with a falsification condition** before δ=1.02 landed. *(They also self-flagged
+asserting an unchecked timeline — "there was no morning" — and disclosed a reply that never transmitted.)*
+
+**Status: 4 of 4 sisters reported. Nothing started.**
