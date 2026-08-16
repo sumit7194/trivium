@@ -284,9 +284,21 @@ def main():
     if old:
         rep["scan"] = old.get("scan", {})
         rep["partial"] = old.get("partial", {})
+        # BUG THIS FIXES: the resume path rebuilt `rep` fresh and carried forward only `scan` and
+        # `partial` — never `orbits_archive`. So every resume SILENTLY DISCARDED the per-orbit records of
+        # every delta already complete, and the next save_ckpt wrote the truncated file over the full one.
+        # It fired twice: the 2026-08-15 resume dropped delta=1.7/1.5/1.3/1.2/1.1 (recovered from git HEAD)
+        # and delta=1.05 (uncommitted, LOST — 100 orbits), and the completing run dropped them again.
+        #
+        # Same species as the pop-instead-of-archive bug on line ~302 that this file already documents:
+        # both destroy the evidence a later re-analysis needs while leaving the summary rows intact, so
+        # nothing downstream looks wrong. Note the summaries survived BOTH losses — which is exactly why
+        # it went unnoticed for two runs.
+        rep["orbits_archive"] = old.get("orbits_archive", {})
         np_ = sum(len(v.get("orbits", [])) for v in rep["partial"].values())
+        na_ = sum(len(v.get("orbits", [])) for v in rep["orbits_archive"].values())
         print(f"  RESUMING — {len(rep['scan'])} delta(s) complete {sorted(rep['scan'], key=float)}; "
-              f"{np_} partial orbit(s) banked\n")
+              f"{np_} partial orbit(s) banked; {na_} archived orbit(s) carried forward\n")
     print(f"  {'delta':>6} | {'separatrix':>10} | {'clean':>5} | {'floor':>9} | {'max drift':>10} | "
           f"{'distinct':>8} | {'esc?':>4} | fired")
     for d in DELTAS:
