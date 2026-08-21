@@ -1,0 +1,34 @@
+{
+ "varied": {
+  "n_traj": 70,
+  "dH_med": 7.983713011293414e-06,
+  "unconditioned": {
+   "best_ratio": 8.596412806837117e-13,
+   "emits": true,
+   "corr_with_H": 0.9999999993678278,
+   "dim": 279
+  },
+  "conditioned": {
+   "best_ratio": 7.706666096647781e-13,
+   "emits": true,
+   "corr_with_H": 0.9999999993677937,
+   "dim": 279
+  }
+ },
+ "pinned": {
+  "n_traj": 70,
+  "dH_med": 8.193705905028612e-06,
+  "unconditioned": {
+   "best_ratio": 0.0007053951734032766,
+   "emits": false,
+   "corr_with_H": 2.4710628699221215e-11,
+   "dim": 279
+  },
+  "conditioned": {
+   "best_ratio": 0.0005204894478054387,
+   "emits": false,
+   "corr_with_H": 4.3533570293632926e-11,
+   "dim": 279
+  }
+ }
+}

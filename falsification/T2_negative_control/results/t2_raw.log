@@ -1,0 +1,2 @@
+   varied: uncond 8.597e-13  cond 8.866e-13  movement 0.97x  emits=True  corr(H)=1.000
+   pinned: uncond 6.079e-04  cond 5.391e-04  movement 1.13x  emits=False  corr(H)=0.000
