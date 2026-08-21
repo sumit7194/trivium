@@ -342,6 +342,13 @@ metrics near δ=1 have a thin chaotic layer remains **open**, exactly as before 
    third uncontrolled variable would not politely converge as 1/N is itself evidence none remains.
    Extrapolation prompted by quantum.)*
 
+   ⚠️ **And the correction went the WRONG WAY, which is the reusable part.** 2.157× is *worse* than the
+   2.11× it replaces, not merely more precise. The instinct when quoting a bound from a finite record is
+   that you are being conservative — finite-N adds scatter, and scatter widens ranges. Here the finite-N
+   range was too **narrow**, so quoting it was **optimistic, not cautious**. *A bound measured at one
+   record length has no defined sign of error.* (Noted by ansatz, who had shipped the 2.11× in their
+   §106.)
+
    ⇒ **NAFF is the instrument of record for any cross-δ drift comparison**, and the reason is now measured
    rather than argued. Its gain spread falls **1.517e-02 → 2.293e-07** over the same 16× — a ratio of
    6.6e4 against 16⁴ = 6.55e4, i.e. **quartic convergence to within 1%**, which retires the Laskar/Hanning
