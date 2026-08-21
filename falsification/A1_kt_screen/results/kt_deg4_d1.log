@@ -1,0 +1,5 @@
+delta=1.0  degree 4  k=2  orbits=40  cols=2205  rows=27500
+  BASIS numerical rank: 1e-8 -> 666, 1e-10 -> 828, 1e-12 -> 966   of 2205 (independent as rational fns; this is the FINITE-SAMPLE rank)
+  tol=1e-08  basis-rank=  666  CONSERVED = 3
+  tol=1e-10  basis-rank=  828  CONSERVED = 3
+  tol=1e-12  basis-rank=  966  CONSERVED = 4

@@ -66,6 +66,41 @@ will not fix it. What would: a coefficient basis constructed to be independent b
 polynomials in the metric functions, or symbolic construction of the degree-4 coefficient span — rather
 than raw products filtered numerically afterwards.
 
+## The 4.5% residual — fully resolved, and it was my bookkeeping
+
+The mass-shell check initially reported H recovered from the 5 conserved directions at **4.245e-02**, and
+the first version of that check was **vacuous**: H = −½ identically on every orbit, and a constant column
+in the fit answered "is H in the span?" by fitting a constant to a constant. Varying the normalisation
+made the test real (H sd 0.0265, control at 99.94%) but left an unexplained 4.5%.
+
+**Four mechanisms were proposed and all four died to measurement:**
+
+| proposed | by | killed by |
+|---|---|---|
+| residual set by H's induced variance | ansatz | 2.5× the spread, residual **flat** (4.245 → 4.697 → 4.607 e-02) |
+| coefficient-space gauge freedom | ansatz | the residual is on function **values**, not coefficients |
+| projection discarding H | bridge | `‖P_disc v‖/‖v‖` = **1.48e-10** at the working tolerance |
+| tolerance sweep would show it | bridge | `kept = 70/80` **identically** at 1e-6/1e-8/1e-10 — the knob never moved |
+
+**The actual cause: a column-scaling mismatch in my own check, twice.** With `Zs = Z·D`,
+`D = diag(1/max|B_j|)`, the right singular vectors of `Zs` live in the *scaled* coordinates, so `D⁻¹v` is
+the object that belongs next to `V2`. I compared the unscaled vector, then made the same error with the
+sign of the exponent inverted in the refit.
+
+```
+overlap(v,      span V2[nz])   = 0.386338     <- the error
+overlap(D⁻¹v,   span V2[nz])   = 1.000000     <- exact
+H residual, D-corrected        = 6.334e-15    <- machine precision
+```
+
+**H's direction is exactly inside the 5-dimensional null space, and H is recovered from those 5 directions
+at machine precision.** The degree-2 result is confirmed rather than merely consistent.
+
+*Resolved by ansatz's three-branch discriminator: compute `r_scaled = ‖Zs(D⁻¹v)‖/‖D⁻¹v‖` alongside the
+overlap, so "wrong vector", "wrong subspace" and "readouts genuinely disagree" separate in one
+computation with no tolerance and no fitting. Both of their own candidate mechanisms were already dead
+when they designed it — the test was built so that their being wrong cost nothing.*
+
 ## Honest scope
 
 - **One rung only.** Degree 2 at both δ. Degree 4 and 6 remain unmeasured by this instrument.
