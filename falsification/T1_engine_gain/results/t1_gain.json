@@ -1,0 +1,257 @@
+{
+ "0": {
+  "dH_med": 0.0006043411576204055,
+  "dH_max": 0.0007545930746749202,
+  "eps": {
+   "0.0": {
+    "true_ratio": 0.0,
+    "recovered_plant_ratio": 1.8105916840695032e-26,
+    "best_overlap": 1.0,
+    "max_overlap": 1.0,
+    "plant_rank": 0,
+    "best_ratio_any": 1.8105916840695032e-26,
+    "gain": null
+   },
+   "0.0001": {
+    "true_ratio": 9.999999900000002e-09,
+    "recovered_plant_ratio": 9.213312314704831e-09,
+    "best_overlap": 0.9950434262977308,
+    "max_overlap": 0.9950434262977308,
+    "plant_rank": 0,
+    "best_ratio_any": 9.213312314704831e-09,
+    "gain": 1.085385967437529
+   },
+   "0.001": {
+    "true_ratio": 9.99999000001e-07,
+    "recovered_plant_ratio": 1.1120234400786409e-06,
+    "best_overlap": 0.0017190629520477231,
+    "max_overlap": 0.9946014943446481,
+    "plant_rank": 1,
+    "best_ratio_any": 1.6355704937437365e-08,
+    "gain": 0.8992607205566471
+   },
+   "0.01": {
+    "true_ratio": 9.999000099990002e-05,
+    "recovered_plant_ratio": 0.00015911072096231753,
+    "best_overlap": 1.7767328250662645e-05,
+    "max_overlap": 0.9850305982117995,
+    "plant_rank": 1,
+    "best_ratio_any": 1.5197188697299916e-08,
+    "gain": 0.6284303181781247
+   },
+   "0.1": {
+    "true_ratio": 0.009900990099009903,
+    "recovered_plant_ratio": NaN,
+    "best_overlap": 5.425719161077387e-06,
+    "max_overlap": 0.06574533609397644,
+    "plant_rank": 16,
+    "best_ratio_any": 1.5279885573622985e-08,
+    "gain": null
+   }
+  }
+ },
+ "1": {
+  "dH_med": 0.0006084990369915693,
+  "dH_max": 0.0007547328533919236,
+  "eps": {
+   "0.0": {
+    "true_ratio": 0.0,
+    "recovered_plant_ratio": -1.7161825339961315e-19,
+    "best_overlap": 0.11671623268980068,
+    "max_overlap": 0.998374007336031,
+    "plant_rank": 1,
+    "best_ratio_any": -9.061332610004566e-17,
+    "gain": null
+   },
+   "0.0001": {
+    "true_ratio": 9.999999900000002e-09,
+    "recovered_plant_ratio": 6.027984882731676e-09,
+    "best_overlap": 3.891298335755028e-08,
+    "max_overlap": 0.9968430028374221,
+    "plant_rank": 1,
+    "best_ratio_any": -1.5381932935151347e-16,
+    "gain": 1.6589291603313285
+   },
+   "0.001": {
+    "true_ratio": 9.99999000001e-07,
+    "recovered_plant_ratio": 9.454967736933977e-07,
+    "best_overlap": 4.655197024764405e-11,
+    "max_overlap": 0.9901377060204426,
+    "plant_rank": 1,
+    "best_ratio_any": -2.4148317551566e-16,
+    "gain": 1.0576440108776892
+   },
+   "0.01": {
+    "true_ratio": 9.999000099990002e-05,
+    "recovered_plant_ratio": NaN,
+    "best_overlap": 3.513732081764e-13,
+    "max_overlap": 0.7241573363527956,
+    "plant_rank": 16,
+    "best_ratio_any": 1.3352967633127082e-16,
+    "gain": null
+   },
+   "0.1": {
+    "true_ratio": 0.009900990099009903,
+    "recovered_plant_ratio": NaN,
+    "best_overlap": 7.703887969279747e-15,
+    "max_overlap": 0.016781937768469177,
+    "plant_rank": 16,
+    "best_ratio_any": -3.3035215874802813e-16,
+    "gain": null
+   }
+  }
+ },
+ "2": {
+  "dH_med": 0.0007702736073267596,
+  "dH_max": 0.0009169427705048055,
+  "eps": {
+   "0.0": {
+    "true_ratio": 0.0,
+    "recovered_plant_ratio": 1.044384590326322e-27,
+    "best_overlap": 1.0,
+    "max_overlap": 1.0,
+    "plant_rank": 0,
+    "best_ratio_any": 1.044384590326322e-27,
+    "gain": null
+   },
+   "0.0001": {
+    "true_ratio": 9.999999900000002e-09,
+    "recovered_plant_ratio": 8.339729464796945e-09,
+    "best_overlap": 0.9999959013649916,
+    "max_overlap": 0.9999959013649916,
+    "plant_rank": 0,
+    "best_ratio_any": 8.339729464796945e-09,
+    "gain": 1.199079651469663
+   },
+   "0.001": {
+    "true_ratio": 9.99999000001e-07,
+    "recovered_plant_ratio": 1.067636902334051e-06,
+    "best_overlap": 0.9988411644100104,
+    "max_overlap": 0.9988411644100106,
+    "plant_rank": 0,
+    "best_ratio_any": 1.067636902334051e-06,
+    "gain": 0.9366470921104526
+   },
+   "0.01": {
+    "true_ratio": 9.999000099990002e-05,
+    "recovered_plant_ratio": 0.00011454991659367122,
+    "best_overlap": 0.9807823803456893,
+    "max_overlap": 0.9807823803456893,
+    "plant_rank": 0,
+    "best_ratio_any": 0.00011454991659367122,
+    "gain": 0.872894577082777
+   },
+   "0.1": {
+    "true_ratio": 0.009900990099009903,
+    "recovered_plant_ratio": NaN,
+    "best_overlap": 0.09496212258056298,
+    "max_overlap": 0.09496212258056298,
+    "plant_rank": 16,
+    "best_ratio_any": 0.009818505499446654,
+    "gain": null
+   }
+  }
+ },
+ "3": {
+  "dH_med": 0.000884825304473928,
+  "dH_max": 0.0010660833471713214,
+  "eps": {
+   "0.0": {
+    "true_ratio": 0.0,
+    "recovered_plant_ratio": 1.1030952963175745e-27,
+    "best_overlap": 1.0,
+    "max_overlap": 1.0,
+    "plant_rank": 0,
+    "best_ratio_any": 1.1030952963175745e-27,
+    "gain": null
+   },
+   "0.0001": {
+    "true_ratio": 9.999999900000002e-09,
+    "recovered_plant_ratio": 6.450863260296315e-09,
+    "best_overlap": 0.9999997241167166,
+    "max_overlap": 0.9999997241167166,
+    "plant_rank": 0,
+    "best_ratio_any": 6.450863260296315e-09,
+    "gain": 1.5501801071412975
+   },
+   "0.001": {
+    "true_ratio": 9.99999000001e-07,
+    "recovered_plant_ratio": 6.407863612905904e-07,
+    "best_overlap": 0.9999997532004853,
+    "max_overlap": 0.9999997532004855,
+    "plant_rank": 0,
+    "best_ratio_any": 6.407863612905904e-07,
+    "gain": 1.560580968026425
+   },
+   "0.01": {
+    "true_ratio": 9.999000099990002e-05,
+    "recovered_plant_ratio": 0.00013683536368371793,
+    "best_overlap": 0.9765574205786752,
+    "max_overlap": 0.9765574205786752,
+    "plant_rank": 0,
+    "best_ratio_any": 0.00013683536368371793,
+    "gain": 0.7307321609567062
+   },
+   "0.1": {
+    "true_ratio": 0.009900990099009903,
+    "recovered_plant_ratio": NaN,
+    "best_overlap": 0.3905532019871517,
+    "max_overlap": 0.3905532019871517,
+    "plant_rank": 16,
+    "best_ratio_any": 0.008626414407357142,
+    "gain": null
+   }
+  }
+ },
+ "4": {
+  "dH_med": 0.000990452859734051,
+  "dH_max": 0.001201335941210912,
+  "eps": {
+   "0.0": {
+    "true_ratio": 0.0,
+    "recovered_plant_ratio": 1.0605023684258188e-27,
+    "best_overlap": 1.0,
+    "max_overlap": 1.0,
+    "plant_rank": 0,
+    "best_ratio_any": 1.0605023684258188e-27,
+    "gain": null
+   },
+   "0.0001": {
+    "true_ratio": 9.999999900000002e-09,
+    "recovered_plant_ratio": 9.741395784020149e-09,
+    "best_overlap": 0.9999999190881723,
+    "max_overlap": 0.9999999190881723,
+    "plant_rank": 0,
+    "best_ratio_any": 9.741395784020149e-09,
+    "gain": 1.0265469263043463
+   },
+   "0.001": {
+    "true_ratio": 9.99999000001e-07,
+    "recovered_plant_ratio": 1.096381451850585e-06,
+    "best_overlap": 0.9999749656931224,
+    "max_overlap": 0.9999749656931223,
+    "plant_rank": 0,
+    "best_ratio_any": 1.096381451850585e-06,
+    "gain": 0.9120904027636543
+   },
+   "0.01": {
+    "true_ratio": 9.999000099990002e-05,
+    "recovered_plant_ratio": 0.0001984765357478933,
+    "best_overlap": 0.9467246175515224,
+    "max_overlap": 0.9467246175515224,
+    "plant_rank": 0,
+    "best_ratio_any": 0.0001984765357478933,
+    "gain": 0.5037875163586503
+   },
+   "0.1": {
+    "true_ratio": 0.009900990099009903,
+    "recovered_plant_ratio": NaN,
+    "best_overlap": 0.093151200579177,
+    "max_overlap": 0.093151200579177,
+    "plant_rank": 16,
+    "best_ratio_any": 0.009454672373709744,
+    "gain": null
+   }
+  }
+ }
+}
