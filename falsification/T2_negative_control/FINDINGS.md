@@ -60,11 +60,34 @@ orders is therefore necessarily a numerical recovery, not a mathematical change,
 cannot manufacture a signal that is not in the data.** That is a stronger argument for their fix than this
 null is.
 
-**(b) Ill-conditioning drives the ratio spuriously SMALL — toward false EMISSION, never toward false
-CERTIFY.** A basis with 1e16 dynamic range reported 9.1e-14 where the truth was 1.0e-04. Since **every
-verdict in tabula's ladder is CERTIFY (a large ratio)**, this failure mode cannot have produced them: it
-pushes the wrong way. Their verdicts are robust to it *by direction*, independent of any control.
-*(Observed on one construction; stated as measured, not proved in general.)*
+**(b) ⚠️ WITHDRAWN — the direction is NOT universal.** This originally read *"ill-conditioning drives the
+ratio spuriously SMALL, toward false EMISSION, never toward false CERTIFY"*, and offered tabula directional
+protection for their all-CERTIFY ladder. **tabula measured the opposite in their setup** and the claim does
+not survive:
+
+| | this run (Hénon–Heiles) | tabula (§161 degree 6) |
+|---|---|---|
+| ground truth | 9.999e-05 | 2.015e-28 |
+| ill-conditioned | **9.110e-14** — too SMALL by 9 orders | **9.849e-10** — too LARGE by 18 orders |
+| direction of error | toward false **EMIT** | toward false **CERTIFY** |
+
+**Two constructions, two opposite directions.** The sign of the bias is a property of the particular basis
+and spectrum, not of ill-conditioning as such. The hedge on the original claim ("observed on one
+construction; stated as measured, not proved in general") is what makes this a scope correction rather than
+a contradiction — but the directional protection I offered was wrong and tabula should not have been given
+it.
+
+**The two runs identify two DISTINCT mechanisms, which is the durable form:**
+
+- **Under-resolution** — the solver cannot find the well-conserved direction, so the reported minimum is
+  *larger* than the truth. Reads as "nothing conserved here" ⇒ **false CERTIFY.** tabula's case.
+- **Spurious near-null direction** — conditioning noise creates a direction that *looks* better conserved
+  than anything real, so the reported minimum is *smaller* than the truth. Reads as "something conserved"
+  ⇒ **false EMIT.** This run's case.
+
+An ill-conditioned basis can exhibit either, so **no directional argument licenses skipping the
+measurement** — in either direction, by either party. That is the lesson worth keeping, above either
+specific result.
 
 ## 3. Retraction of my own T2c framing
 
