@@ -313,15 +313,29 @@ metrics near δ=1 have a thin chaotic layer remains **open**, exactly as before 
    null is honest and reads as inconclusive, while a well-powered distorted result is confident,
    reproducible, and gets believed.**
 
-1. **LONGER RECORDS, not a different estimator — and this was the untested half of the original
-   prescription.** A NAFF replacement was built and **failed its own pre-registered gates**
-   ([PREREG_ESTIMATOR.md](PREREG_ESTIMATOR.md)): it buys gain stability (spread 0.025 vs 0.839) and a 7.4×
-   tighter max/median on an integrable metric, but pays with a 3.6× higher floor, and at n≈22 the floor is
-   what decides discrimination — **the incumbent separates δ=2.0 from δ=1.0 at p=0.040 and NAFF does not
-   (p=0.537).** The incumbent's gain instability remains real and unaddressed; NAFF is not the way to
-   address it. **More crossings attack both defects at once**, since the FFT interpolation bias scales with
-   bin width ~1/N: the floor shrinks *and* the gain variation flattens, with no estimator change and no new
-   failure modes.
+1. ⚠️ **LONGER RECORDS DO NOT WORK EITHER — item 1 as originally written is FALSIFIED.** This slot used to
+   read *"longer records, not a different estimator"*, on the reasoning that FFT interpolation bias scales
+   with bin width ~1/N. **Measured 2026-08-21, and it does not.** Holding the fractional bin offset of
+   *both halves* fixed and sweeping N over 16× (200→3200):
+
+   | offset | N=200 | N=800 | N=3200 | max/min |
+   |---|---|---|---|---|
+   | 0.00 | 0.7550 | 0.7515 | 0.7505 | **1.006** |
+   | 0.50 | 1.5962 | 1.6139 | 1.6169 | **1.013** |
+
+   **Flat to between 0.04% and 1.3%.** The bias is a function of the two half-record offsets alone and is
+   **N-independent**: sixteen times the data buys nothing. A first, confounded version of this test
+   appeared to show a 1.4× improvement — that was the *second* half's offset sliding, since with true drift
+   `d` the second-half offset separation is `(base+off)·d` and `base` grows with N. *(Confound found after
+   quantum asked why the improvement was 1.4× rather than the zero the mechanism predicts.)*
+
+   ⇒ **NAFF is the instrument of record for any cross-δ drift comparison**, and the reason is now measured
+   rather than argued. Its gain spread falls **1.517e-02 → 2.293e-07** over the same 16× — a ratio of
+   6.6e4 against 16⁴ = 6.55e4, i.e. **quartic convergence to within 1%**, which retires the Laskar/Hanning
+   `[asserted, unverified]` claim (**L10**) as verified on our own data. Its floor stays ~3.5× worse than
+   FFT's, and that does not matter: **at N ≥ 800 both floors sit ~6 orders below the ladder's real signals,
+   so floor cannot discriminate anything and gain is the only property left.**
+
 2. **Re-run the control at n ≈ 100** to match the ladder. δ=1.0 is the only δ at n=50, and every
    absolute-scale statement leans on that row. **And recompute the synthetic null at the orbits' actual
    observed frequencies** — the published null was sensitive to an assumed frequency range by 17× and its

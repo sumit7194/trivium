@@ -1,0 +1,8 @@
+delta=1.3: 642 x0 values, 0 already banked
+   25/642  banked=0  escaped=0  [3s]
+   50/642  banked=0  escaped=0  [7s]
+   75/642  banked=0  escaped=0  [10s]
+   100/642  banked=0  escaped=0  [14s]
+   125/642  banked=0  escaped=0  [18s]
+   150/642  banked=0  escaped=0  [23s]
+   175/642  banked=5  escaped=2  [230s]
