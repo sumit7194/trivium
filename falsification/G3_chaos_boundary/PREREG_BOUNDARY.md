@@ -61,3 +61,30 @@ discriminating conjunct in the detector cannot separate the ladder's own extreme
   sessions before starting; ansatz cleared it (their contention is RAM during rank steps, not CPU).
 - **A null is a real outcome and is the more likely one.** 4/100 vs 0/99 may simply be two draws from the
   same small rate.
+
+---
+
+# ADDENDUM — the control must survive BOTH matchings (frozen 2026-08-22, before either finishes)
+
+The δ=1.0 control has **one** separatrix band where every treatment δ has **two**. So it cannot be matched
+to them on orbit count *and* on x₀ spacing simultaneously — halving the step buys matched **n** at half
+the **spacing**; keeping the step buys matched spacing at half the **n**.
+
+**Choosing one would make the headline a fact about my matching choice.** ansatz's §85 precedent is exact:
+their "obstruction grows with ε" was **ensemble composition, not physics**, because the surviving-orbit
+count varied with the swept variable, so the arms differed by construction. *When the selection criterion
+depends on the swept variable, care within an arm cannot fix it — the other matching has to be a second
+arm.*
+
+**FROZEN COMMITMENT, made before either run reports:**
+
+- **Arm A — matched n.** `HALF=0.08, STEP=0.00025`, one edge ⇒ ~320 orbits. *(launched first)*
+- **Arm B — matched spacing.** `HALF=0.08, STEP=0.0005`, one edge ⇒ ~160 orbits, same x₀ spacing as the
+  treatment δ.
+
+> **The FINDINGS headline — "eight of nine δ sit at or below the integrable control" — must hold under
+> BOTH arms.** Holding under both makes it a statement about the spacetimes. Holding under one makes it a
+> statement about my matching choice, and the addendum will say which. **If the arms disagree, the headline
+> is withdrawn**, not reported with a caveat.
+
+Both arms are ~2 h and single-core. This is worth the compute *precisely because it can fail.*

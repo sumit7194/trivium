@@ -1,0 +1,6 @@
+ensemble: 70 chaotic trajectories, SHELL VARIED E0 in [0.1333,0.1633], dt=0.005, 9400 samples each
+
+ order |  dim |  C3 heldout ratio |  verdict | corr(dir,H)
+     2 |   14 |        5.3857e-01 |  CERTIFY |      0.0264
+     3 |   34 |        7.3340e-12 |     EMIT |      1.0000
+     4 |   69 |       -1.0210e-13 |     EMIT |      1.0000
