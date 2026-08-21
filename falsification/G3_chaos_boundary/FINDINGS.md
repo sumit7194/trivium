@@ -329,6 +329,19 @@ metrics near δ=1 have a thin chaotic layer remains **open**, exactly as before 
    `d` the second-half offset separation is `(base+off)·d` and `base` grows with N. *(Confound found after
    quantum asked why the improvement was 1.4× rather than the zero the mechanism predicts.)*
 
+   **The residual is not slop — it is a 1/N finite-size tail with a well-defined limit.** Richardson
+   extrapolation `2g(2N) − g(N)` agrees to **2e-6** across two independent pairs (N=800/1600 and
+   1600/3200), so the bias converges rather than wanders. Extrapolated asymptotic gain curve, 16 offsets:
+
+   ```
+   0.750 0.762 0.791 0.842 0.919 1.029 1.183 1.402 1.618 1.333 1.135 0.994 0.895 0.826 0.781 0.757
+   ```
+
+   ⇒ **asymptotic min 0.7502, max 1.6179, and the bound on any drift-ratio distortion is 2.157×** — the
+   limiting value, superseding the 2.11× measured at N=200, which was itself a finite-N artifact. *(That a
+   third uncontrolled variable would not politely converge as 1/N is itself evidence none remains.
+   Extrapolation prompted by quantum.)*
+
    ⇒ **NAFF is the instrument of record for any cross-δ drift comparison**, and the reason is now measured
    rather than argued. Its gain spread falls **1.517e-02 → 2.293e-07** over the same 16× — a ratio of
    6.6e4 against 16⁴ = 6.55e4, i.e. **quartic convergence to within 1%**, which retires the Laskar/Hanning
