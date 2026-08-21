@@ -37,6 +37,7 @@ def basis4(X, EL, delta, k=2):
 
 if __name__=="__main__":
     delta=float(sys.argv[1]); ntraj=int(sys.argv[2]) if len(sys.argv)>2 else 40
+    ROWS_PER_ORBIT=int(sys.argv[5]) if len(sys.argv)>5 else 344
     f=metric(delta); rng=np.random.default_rng(11)
     Xs,ELs,tid=[],[],[]; t=0; tries=0
     while len(Xs)<ntraj and tries<4000:
@@ -47,18 +48,34 @@ if __name__=="__main__":
         Xs.append(X); ELs.append((E,L)); tid.append(np.full(len(X),t)); t+=1
         if t % 20 == 0:
             print(f"  collected {t}/{ntraj} orbits (tries={tries})", flush=True)
-    print(f"  building basis for {len(Xs)} orbits...", flush=True)
-    cols=np.vstack([basis4(X,el,delta) for X,el in zip(Xs,ELs)]); tid=np.concatenate(tid)
-    print(f"  basis built: {cols.shape}, ~{cols.nbytes/2**30:.2f} GB", flush=True)
-    step=max(1,len(cols)//(12*cols.shape[1])); cols,tid=cols[::step],tid[::step]
+    # SUBSAMPLE PER ORBIT, BEFORE building the basis. The previous version vstacked
+    # the full matrix and subsampled after: at 320 orbits that is 1.76M rows x 2205
+    # cols x 8 B = 31 GB and the job died in the vstack. The progress line "building
+    # basis for 320 orbits..." is the only reason the failure was locatable at all --
+    # the run before it printed nothing and was indistinguishable from hung.
+    NCOL = 35*((DEN[delta][1]+1)*(DEN[delta][2]+1))
+    # ROWS PER ORBIT PINNED, not total rows. The original design pinned TOTAL rows at
+    # ~12*ncols, so rows/orbit fell 1375 -> 687 -> 344 across n=20/40/80 -- meaning the
+    # alpha trend conflated MORE ORBITS with FEWER ROWS PER ORBIT. Holding rows/orbit
+    # fixed makes n the only thing that varies, which is what the trend is meant to measure.
+    per = ROWS_PER_ORBIT
+    print(f"  building basis: {len(Xs)} orbits x ~{per} samples, target ~{12*NCOL} rows "
+          f"x {NCOL} cols (~{12*NCOL*NCOL*8/2**30:.2f} GB)", flush=True)
+    sub=[]; subt=[]
+    for X,el,ti in zip(Xs,ELs,tid):
+        k=max(1,len(X)//per)
+        sub.append(basis4(X[::k],el,delta)); subt.append(ti[::k])
+    cols=np.vstack(sub); tid=np.concatenate(subt); del sub
+    print(f"  basis built: {cols.shape}, {cols.nbytes/2**30:.2f} GB", flush=True)
     print(f"delta={delta}  degree 4  k=2  orbits={len(Xs)}  cols={cols.shape[1]}  "
           f"rows={len(cols)}", flush=True)
+    NC=cols.shape[1]
     C=cols/np.maximum(np.abs(cols).max(0),1e-300)
     del cols
     print(f"  SVD of {C.shape} ...", flush=True)
     sv=np.linalg.svd(C,compute_uv=False); svn=sv/sv.max()
     print(f"  BASIS numerical rank: 1e-8 -> {(svn>=1e-8).sum()}, 1e-10 -> {(svn>=1e-10).sum()}, "
-          f"1e-12 -> {(svn>=1e-12).sum()}   of {cols.shape[1]} "
+          f"1e-12 -> {(svn>=1e-12).sum()}   of {NC} "
           f"(independent as rational fns; this is the FINITE-SAMPLE rank)", flush=True)
     U,s,Vt=np.linalg.svd(C,full_matrices=False)
     for tol in [1e-8,1e-10,1e-12]:

@@ -101,6 +101,42 @@ overlap, so "wrong vector", "wrong subspace" and "readouts genuinely disagree" s
 computation with no tolerance and no fitting. Both of their own candidate mechanisms were already dead
 when they designed it — the test was built so that their being wrong cost nothing.*
 
+## ⚠️ The coverage trend was confounded, and the confound was upstream of the memory bug
+
+The α trend first reported (0.689 → 0.548) **did not measure orbit count alone.** The original code
+pinned **total** rows:
+
+```python
+step = max(1, len(cols)//(12*cols.shape[1]))
+```
+
+so total rows sat at ~26,460 regardless of n, and **rows-per-orbit fell four-fold** across the three
+points that defined α:
+
+| n | raw rows | step | kept | rows/orbit | rank (old) | rank (**pinned 344**) |
+|---|---|---|---|---|---|---|
+| 20 | 110,000 | 4 | 27,500 | 1375 | 413 | **475** |
+| 40 | 220,000 | 8 | 27,500 | 688 | 666 | **741** |
+| 80 | 440,000 | 16 | 27,500 | 344 | 974 | **1049** |
+| 320 | 1,760,000 | 66 | 26,667 | 83 | — | — |
+
+**More orbits and fewer rows per orbit were varying together**, and both move rank. Corrected by pinning
+rows-per-orbit at 344 for every n. Subsampling was costing ~10–15% of rank at the smaller n; correcting
+it **raises every point and leaves the shape intact** — still sublinear, still decelerating
+(α = 0.641 → 0.502).
+
+**The memory bug and the design confound had the same root.** The subsampling rule was written once, for
+one n, and never examined *as a function of n*. One line produced both a 31 GB wall at n=320 and a
+confounded trend. And the cost was invisible at every point where the sweep worked: **the n=40 run at
+3.6 GB was not fine — it was the same defect, passing.** *Nothing in a successful small run reports that
+it is on a trajectory.*
+
+*Caught by ansatz, who flagged that the per-orbit subsampling fix changed the design between arms — §85's
+lesson, which I had applied correctly to the boundary control arms and missed here because it arrived as
+a memory fix rather than as an experimental choice. **Nobody audits a `--subsample` flag for arm
+matching.** Their diagnosis pointed one step short of the actual problem, which was already present in
+the original trend.*
+
 ## Honest scope
 
 - **One rung only.** Degree 2 at both δ. Degree 4 and 6 remain unmeasured by this instrument.
