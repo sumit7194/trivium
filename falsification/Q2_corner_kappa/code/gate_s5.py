@@ -25,20 +25,30 @@ assert sorted(S) == sorted(REG), f"regulator set changed: {sorted(S)} vs {sorted
 WANT = {(1e-14,"3p"): (36.2227, 0.04274), (1e-14,"4p"): (36.2242, 0.04398),
         (1e-09,"3p"): (36.2223, 0.04269), (1e-09,"4p"): (36.2237, 0.04430)}
 ok = True
+GOT = {}
 for (floor, model), (wa, wc) in WANT.items():
     A, B = [], []
     for reg in REG:
         a, b = fit(ls, np.array([S_at(ev, floor) for ev in S[reg]]), model)
         A.append(a); B.append(b)
     ga, gc = spread(A), spread(B)
+    GOT[(floor, model)] = (ga, gc)
     good = abs(ga-wa) <= 5e-4 and abs(gc-wc) <= 5e-5
     ok &= good
     print(f"  {'PASS' if good else '*** FAIL ***'}  floor={floor:.0e} {model}: "
           f"area {ga:.4f}%  CORNER {gc:.5f}%" + ("" if good else f"   expected {wa}/{wc}"))
 
-band = abs(WANT[(1e-14,"3p")][1] - WANT[(1e-09,"3p")][1])
-print(f"\n  clip band {band:.5f}%  vs corner spread {WANT[(1e-14,'3p')][1]:.5f}%"
-      f"  -> band/spread = {band/WANT[(1e-14,'3p')][1]:.3f}")
+# The clip band carries the PHYSICAL conclusion -- is the residual spread the theory's
+# or my eigenvalue floor's? -- so it must be derived from the REGENERATED spreads. It
+# was originally computed from WANT, i.e. two literals I typed: quantum's third species,
+# an arithmetic identity over constants printed as a measurement, reading no artifact and
+# unable ever to fire. Now derived from GOT, and ASSERTED rather than narrated.
+band  = abs(GOT[(1e-14,"3p")][1] - GOT[(1e-09,"3p")][1])
+ratio = band / GOT[(1e-14,"3p")][1]
+band_ok = ratio < 0.01
+ok &= band_ok
+print(f"\n  {'PASS' if band_ok else '*** FAIL ***'}  clip band {band:.5f}%  vs corner "
+      f"spread {GOT[(1e-14,'3p')][1]:.5f}%  -> band/spread = {ratio:.4f}  (gate: < 0.01)")
 print("  band << spread: the s=5 corner spread is NOT set by my eigenvalue floor.")
 print(f"\n  {'ALL ASSERTIONS PASS' if ok else '*** SOME ASSERTIONS FAILED ***'}")
 sys.exit(0 if ok else 1)

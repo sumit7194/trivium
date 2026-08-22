@@ -45,15 +45,21 @@ dh = [v["dH"] for v in list(A.values())+list(B.values())]
 check("orbits", len(dh), 629); check("rejections at DH_MAX=1e-4", sum(1 for x in dh if x>=1e-4), 0)
 
 print("CONTROL RE-MEASUREMENT — the numbers that WITHDREW the headline")
+ctrl = {}
 for f, want_n, want_r in (("g3_control",320,1254), ("g3_control_spacing",160,1238)):
     o = json.load(open(R/f"{f}.json"))["orbits"]["1.0"]
     dr = [v["drift_fft"] for v in o.values() if v.get("drift_fft") and v["drift_fft"]>0]
     r = max(dr)/np.median(dr)
+    ctrl[f] = r
     check(f"{f}: n", len(o), want_n)
     check(f"{f}: max/median", round(r), want_r, 1)
 S = json.load(open(R/"g3_overnight.json"))["scan"]
 lad = {k: v["max_drift"]/v["floor"] for k,v in S.items() if k != "1.0"}
-above = sum(1 for v in lad.values() if v > 1254)
+# Compare against the MEASURED control, not the 1254 literal two lines up. quantum found
+# the same shape in their gate: a typed constant on the right-hand side of the comparison
+# that carries the claim means the claim survives any change to the thing it is about.
+# If a future re-measurement moves the control, this count must move with it.
+above = sum(1 for v in lad.values() if v > ctrl["g3_control"])
 check("deformed delta ABOVE the re-measured control", above, 4)
 check("original control max/median (now known inflated)", round(S["1.0"]["max_drift"]/S["1.0"]["floor"]), 2980, 1)
 print(f"\n  {'ALL ASSERTIONS PASS' if ok else '*** SOME ASSERTIONS FAILED ***'}")
