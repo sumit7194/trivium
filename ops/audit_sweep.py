@@ -60,7 +60,14 @@ def check_silent_shell(root):
     bridge a phantom announcement: a heredoc never ran, `ls file && echo written`
     printed nothing, and the absence of an error was read as success."""
     out = sh("grep", "-rn", "--include=*.sh", "--include=*.zsh", "&& echo", str(root))
-    return [l for l in out.splitlines() if "|| echo" not in l]
+    hits = [l for l in out.splitlines() if "|| echo" not in l]
+    # A CHECK THAT GREPS FOR A PATTERN FLAGS THE COMMENT EXPLAINING WHY THAT PATTERN IS
+    # BAD. Running this on the coordination directory returned exactly one hit: the
+    # comment inside bridge_pulse_stop.sh documenting the silent-failure bug it fixed.
+    # Documenting a fix inline creates a permanent false positive in its own checker --
+    # so strip comment lines, and accept that this now cannot see a `&& echo` a author
+    # has commented out. Stated rather than silently traded away.
+    return [l for l in hits if not re.search(r":\s*#", l)]
 
 def check_buried_caveat(root, docs):
     """A RETRACTION below the fold is a hedge: discoverable, honest, invisible to the
