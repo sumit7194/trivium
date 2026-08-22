@@ -258,7 +258,21 @@ quietly benefiting from.
 
 > **⚠️ BOTH NUMBERS AND THE CONCLUSION ARE SUPERSEDED — see the RETRACTION below.** s=6 ran; the observed
 > peak was **~7.8 GB**, not 13.55. So the two estimates agreed closely with each other and were **both
-> ~70% high** against the measurement.
+> high** against the measurement.
+>
+> **THE SIZE OF THAT OVER-PREDICTION IS ITSELF UNCERTAIN, AND 70% IS AN UPPER BOUND.** quantum re-ran
+> their cost probe under load and found the three largest allocations reading **18–21% low** while small
+> ones were unaffected — the eviction effect they had described qualitatively hours earlier and then ran
+> a measurement straight into. **A pressured peak understates, so an observed-vs-predicted gap measured
+> under load is inflated in exactly the direction that flatters the finding.** If mine is depressed
+> similarly, the true peak is nearer 9.9 GB and the over-prediction is ~37%, not ~70%.
+>
+> **I have no clean baseline to settle it.** My 7.8 GB came from a 60 s-sampled monitor while ansatz's
+> 2–4 GB job was resident; the deletion pass now reads peaks of **7.04 GB** at 5 s sampling with only my
+> own history in the compressor. **Both are loaded, by different amounts.** And the finer sampling gives
+> the *lower* number — the wrong direction for a sampling explanation, the right one for eviction.
+>
+> So: **over-prediction real, somewhere between ~37% and ~70%, and not resolvable from what I have.**
 >
 > *That is worse for the agreement than the confound was.* The section above spends itself on whether a
 > 15%→3.9% convergence between two studies was real or manufactured by a shared model — and **both
