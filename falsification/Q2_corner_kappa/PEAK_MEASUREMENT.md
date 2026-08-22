@@ -110,3 +110,50 @@ box whose best reading all day was 10.1 GB available and 7.0 GB free.
 > and a stated reason that was entirely false.** The conclusion surviving is not evidence the reasoning
 > did — which is the same lesson as the 1.5% coincidence one section above, arriving this time inside the
 > measurement built to avoid it.
+
+---
+
+# Hold-out validation, and the structural law beating the fitted one
+
+The s=6 figure rests entirely on extrapolating one step past the measured range — which is what produced
+my retracted 7.31–9.37 GB, and before that ansatz's 4.75 GiB/prime. So the law is no longer quoted
+without hold-out errors beside it. Method from quantum; in `code/peak_law.py` rather than a heredoc.
+
+**Free power law** — fit exponent and scale, predict the next point:
+
+| fit on | exponent | predicted | measured | error |
+|---|---|---|---|---|
+| l ≤ 60 | 3.45 | 1.557 GB | 1.669 GB | 6.7% |
+| l ≤ 70 | 3.55 | 2.616 GB | 2.808 GB | 6.8% |
+| l ≤ 80 | 3.62 | 6.100 GB | 6.539 GB | 6.7% |
+
+**6.7, 6.8, 6.7 — same size, same direction, every time.** A one-directional error of constant magnitude
+is a **mis-specified model, not measurement scatter**. The fitted exponent keeps landing below the true
+local one because a pure power law has nowhere to put a fixed overhead.
+
+**Structural form** — exponent **fixed at 4** from n = l², fitting only scale and offset:
+
+| fit on | predicted | measured | error |
+|---|---|---|---|
+| l ≤ 60 | 1.671 GB | 1.669 GB | **0.1%** |
+| l ≤ 70 | 2.807 GB | 2.808 GB | **0.0%** |
+| l ≤ 80 | 6.773 GB | 6.539 GB | 3.6% |
+
+`a = 6.474e-08`, `c = +0.094 GB`. Residuals fall from ±0.8 GB to ±0.06 GB.
+
+> **The model with fewer free parameters predicts better.** That is the evidence that l⁴ is the
+> *mechanism* rather than a good fit — a fitted exponent can absorb anything, and this one was absorbing
+> the overhead and paying for it at every extrapolation.
+
+quantum's line is the right statement of what makes this trustworthy: not two numbers matching, but **a
+measurement landing on a structurally derived exponent**. Their n×n with n = l² was derived with no
+measurement at all, in a different study, from different code.
+
+## Three estimates of s=6
+
+    free power law (this study)          12.39 GB
+    structural l^4 (this study)          13.52 GB
+    quantum's study, independent code    14.40 GB
+
+Best box reading of the day: **7.0 GB free / 10.1 GB available.** s=6 misses on every one of them, and
+the hold-out error is nowhere near large enough to close the gap.
