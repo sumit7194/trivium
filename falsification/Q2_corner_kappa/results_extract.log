@@ -1,0 +1,24 @@
+  s=1             nn done [0s]
+  s=1       improved done [0s]
+  s=1   higher_deriv done [0s]
+  s=1        smeared done [0s]
+  s=2             nn done [3s]
+  s=2       improved done [3s]
+  s=2   higher_deriv done [3s]
+  s=2        smeared done [3s]
+
+       | model |  AREA spread % |  CORNER spread %
+   s=1 |    3p |          36.26 |             1.69
+   s=1 |    4p |          36.26 |             3.28
+   s=2 |    3p |          36.24 |             0.25
+   s=2 |    4p |          36.24 |             0.36
+
+Q2b POSITIVE CONTROL — area coefficient must NOT be universal (>10%):
+   3p: area spread at s=1 = 36.26%   PASS (not universal)
+   4p: area spread at s=1 = 36.26%   PASS (not universal)
+
+Q2c PRIMARY — corner spread must fall >=3x; area spread must change <10% relative:
+   3p: corner 1.69% -> 0.25%  = 6.85x fall   |   area 36.26% -> 36.24%  = 0.1% relative change
+        corner falls>=3x: True   area flat<10%: True   => AGREE
+   4p: corner 3.28% -> 0.36%  = 9.07x fall   |   area 36.26% -> 36.24%  = 0.1% relative change
+        corner falls>=3x: True   area flat<10%: True   => AGREE
