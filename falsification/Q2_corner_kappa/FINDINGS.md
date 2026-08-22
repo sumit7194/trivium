@@ -132,6 +132,53 @@ direct measurement supersede their estimate.
 a stronger statement than the one the exercise set out to check, and s=4 was run on a channel nothing had
 contaminated.
 
+## 7. s=5 — quantum's coefficient prediction confirmed, and my own precision claim withdrawn
+
+quantum filed, before this ran: **corner spread 0.0433% at s=5**, from `1.082/s²`, falsified if it missed
+by more than a few percent.
+
+| | measured |
+|---|---|
+| **s=5 corner spread (3p, floor 1e-14)** | **0.04274%** |
+| miss against their 0.0433% | **1.29%** — inside their condition. **CONFIRMED.** |
+| clip band | 5e-05 pp ⇒ **855× margin** *(they predicted ~1100×; their estimate ran 1.3× optimistic)* |
+| area spread | 36.2227% — **flat across a 5× refinement** |
+
+**⚠️ BUT MY OWN PRECISION CLAIM DOES NOT SURVIVE, AND IT WAS MINE.**
+
+```
+spread × s² :   s=3  1.0800    s=4  1.0819    s=5  1.0685
+```
+
+s=3 and s=4 agreed to **1 part in 563**, and I reported that as the law being *exact*. s=5 moves the
+constant, and across s=3/4/5 the spread is **1.25% — twenty times wider** than the agreement that made it
+look settled.
+
+**The law survives comfortably** — a 1.25% wobble in the constant against a spread falling 40×. **The
+precision I quoted for it does not.** That is item 10 of the shared protocol landing on a number I
+presented as settled, one rung after I wrote the item: *a two-point agreement read as a convergence*, which
+is the same error shape as every other extrapolation failure this week.
+
+**And quantum's mechanism finding absorbs it, which neither of us anticipated.** They showed the constant
+is a property of *our four-regulator family*, not of the corner term, because a regulator pair can be
+tuned to cancel. **If the constant were physical, a 1.25% drift across resolutions would need explaining.
+Since it is a family property, a mild drift is unsurprising** — the family's cancellation structure need
+not be resolution-independent. Their qualification, made a day earlier for a different reason, turns out
+to cover this.
+
+**Honest statement, replacing the one in §6:** *for this four-regulator family the corner spread falls as
+approximately s⁻² with a constant near 1.07–1.08, stable to about 1%, extrapolating to zero; the area
+spread is flat at 36.2% across a 5× refinement.* **Not "1.082/s² to a part in 563".**
+
+*Operational note: the sixth power cut hit ~12 minutes after this run finished. Per-regulator
+checkpointing — added after the fifth cut destroyed the first attempt twice — is why all four spectra
+survived. By the shared protocol's §12 the more important half is that they are **auditable**: anyone can
+recompute the spread from `s5_spectra.npz` without trusting that I watched it finish.*
+
+*Known cosmetic defect: the s=5 log labels itself `s=4`, because the parameter line was edited and the
+print statement was not. Parameters are correct (L=800, m=0.002, m·L=1.6, l=20…100); the label is wrong.
+Recorded rather than silently fixed, since two log files now both claim s=4.*
+
 ## Honest scope
 
 - The headline claim **is** reproduced: corner spread falls under refinement, area spread does not, across

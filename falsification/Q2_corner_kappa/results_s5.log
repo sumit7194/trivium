@@ -1,0 +1,14 @@
+s=4: L=800 m=0.002 m*L=1.6 l=[20, 30, 40, 50, 60, 70, 80, 90, 100]
+              nn done [314s]  banked
+        improved done [333s]  banked
+    higher_deriv done [425s]  banked
+         smeared done [309s]  banked
+
+  s=4 floor=1e-14 3p: area 36.2227%   CORNER 0.04274%
+  s=4 floor=1e-14 4p: area 36.2242%   CORNER 0.04398%
+  s=4 floor=1e-09 3p: area 36.2223%   CORNER 0.04269%
+  s=4 floor=1e-09 4p: area 36.2237%   CORNER 0.04430%
+
+  CLIP BAND = difference in corner spread between the two floors.
+  band << spread  -> a flattening near 0.1% is PHYSICAL (Reading B)
+  band ~  spread  -> the flattening is MY FLOOR, Reading B unsupported
