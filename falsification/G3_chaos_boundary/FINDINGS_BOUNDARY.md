@@ -111,3 +111,22 @@ unmatched control invalidates a comparison, while its own unmatched control sat 
 WITHDRAWN, not merely unsupported.** The scientific content is a negative instrument result: a detector
 whose drift conjunct carries no information and whose escape conjunct cannot separate its own extremes at
 3× the sample, guarded by a gate that has never once fired.
+
+---
+
+## Reproducing every number above
+
+```bash
+python code/gate_boundary.py
+```
+
+16 assertions over the banked JSONs — the B1 counts, the Fisher p, both KS p-values, the guard's
+0/629, and the control re-measurement at 1254/1238 that withdrew the FINDINGS headline. Artifact:
+[results/gate_boundary.log](results/gate_boundary.log).
+
+This gate was written **after the fact**, prompted by quantum's audit question — *for every number in a
+docstring or writeup, can the committed code produce it?* Until 2026-08-22 the answer here was **no**.
+The scans were on disk from the start; the summary statistics quoted from them were computed in
+`python -c` one-liners and existed only in this file. A withdrawal that a reader cannot re-derive from
+the repo is worse than an unreproducible claim: the retraction itself becomes something to take on
+trust.

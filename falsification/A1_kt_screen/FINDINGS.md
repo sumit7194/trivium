@@ -179,3 +179,21 @@ fitting one on consecutive pairs assumes exactly the thing it is measuring.
   direction.
 - 40 orbits, ZV via ansatz's `_zv_invariant.metric` read-only, RK4 at h=0.02, orbits rejected if
   `|ΔH|/H > 1e-6`.
+
+---
+
+## Reproducing the degree-2 result
+
+```bash
+python code/kt_screen.py 1.0 2 0 40    # δ=1 (Schwarzschild): 5
+python code/kt_screen.py 2.0 2 0 40    # δ=2:                 4
+```
+
+Artifact: [results/kt_degree2.log](results/kt_degree2.log) — both arms, tolerances 1e-6 … 1e-10, with
+the null(Z) and basis-degeneracy columns that the counts are differences of. Stable from 1e-7 down.
+
+Captured 2026-08-22, later than it should have been. The code always existed and always printed these
+numbers; I ran it interactively and never saved the output, so the **5 and 4 — the numbers ansatz cites
+in their §124 as the external check on the den² region their prover cannot see — lived only in this
+file and in messages.** A cross-session confirmation that the confirming party cannot reproduce on
+demand is not much of a confirmation.
