@@ -208,3 +208,50 @@ checkpointing only arrived after the fifth power cut, which is why s=5 has an `.
 rungs do not. Those two rungs rest on committed-script logs and are reproducible only by re-running,
 roughly 20 minutes each. That is a weaker guarantee than s=5 has, and the difference is an accident of
 when the power failed rather than a judgement about which rung mattered.
+
+---
+
+## The k=0 mode contributes 15% of B — measured, not argued (2026-08-22)
+
+quantum found their corner coefficient was **20.4% zero-mode**, after a defensive sentence in their own
+diagnosis claimed immunity: *"the zero mode contributes a constant ~0.002 independent of l."* The
+amplitude was right and the reasoning was not — **XA is n×n with n = l², so a constant added to every
+entry is rank-1 with eigenvalue c·l², contributing log(c·l²) = 2 log l + const, exactly the form B
+extracts.**
+
+I had a ready-made reason to expect immunity: this study is **massive**, m·L = 1.6 held fixed, so k=0 is
+regulated rather than singular. **That is precisely the kind of unexamined defence their finding was
+about**, so it was measured instead (`code/zeromode_check.py`, l = 30–60, kept small so it could run
+beside the s=6 job).
+
+    regulator        B with k=0    B without      shift
+    nn                -0.046925    -0.039804     15.18%
+    improved          -0.046939    -0.039816     15.18%
+    higher_deriv      -0.046925    -0.039796     15.19%
+    smeared           -0.046921    -0.039795     15.19%
+
+**Mass does not buy immunity.** B is 15.2% zero-mode here.
+
+### Whether the claim survives — and a trap inside the check
+
+All four regulators have `reg(0,0) = m²` **identically** — verified, not assumed: 4.00e-06 each against
+m² = 4.00e-06. That is the property quantum found makes the mode cancel in the difference.
+
+But the naive check answers the wrong question:
+
+    relative spread (max−min)/mean :  0.0384%   ->  0.0528%    +32.9%
+    ABSOLUTE range  max−min        :  1.80e-05  ->  2.10e-05    +17%
+
+**Most of the +32.9% is the denominator.** Removing a common ~0.00712 from every B shrinks |mean| by 15%,
+inflating a relative spread by ~18% with no change in the physics — **my own ratio hazard from this
+morning, sitting inside the statistic I use for the headline.** A ratio may only be trusted where its
+denominator is pinned, and that applies to a diagnostic as much as to a gate.
+
+**The physical quantity is the absolute range, and it still moves +17%.** Not the clean cancellation
+quantum got: their shifts were identical, mine differ in the 4th digit (15.18, 15.18, 15.19, 15.19) while
+the regulator differences live in the 5th. **The mode is common-mode to about one part in 10⁴, and the
+effect being measured is smaller than that.**
+
+*Scope, stated because it limits the conclusion: l = 30–60, below the published fitting range. This
+establishes the contribution is real and roughly common-mode; it does not yet quantify the residual at
+the published resolutions. Open item, not folded into the headline.*
