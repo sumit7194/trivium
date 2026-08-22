@@ -56,3 +56,48 @@ Both directions, every time, because never-fires and always-fires are identical 
 macOS note: `nohup` + `disown` did not survive tool-call teardown — the loop kept dying after ~6 minutes.
 There is no `setsid(1)` on darwin; `subprocess.Popen(..., preexec_fn=os.setsid)` detaches properly and
 the loop reparents to PID 1.
+
+---
+
+## The reader — because enforcement cannot live in the writer
+
+quantum's diagnosis of the near-miss above: **a status file has a read protocol, and nothing enforces
+it.** Every field is equally available, so the natural way to read `state` is to read `state`. They
+suggested nesting the payload under a key whose name is an instruction.
+
+**It cannot be done from the writer.** A file is stale *because* its writer died, and a dead writer
+cannot rearrange its own fields. Enforcement has to sit with the reader — so the easy path has to be the
+correct one. `status_read.py` (shared, in the coordination directory) has **no accessor that returns a
+payload without passing the freshness gate**:
+
+```python
+s = read_status("ansatz")
+if s.unknown: print(s.why)     # UNKNOWN IS NOT IDLE
+elif s.busy:  wait()
+else:         launch()
+```
+
+`s.rss_mb` on a stale file raises rather than returning a number. `s.busy` is **True when unknown** —
+failing toward caution, since the alternative fails toward two sessions launching multi-GB jobs at once.
+
+Ten cases, both directions, in `status_read_test.py` — including both of my own real bugs as fixtures:
+the trailing comma (`[3501,]`) and the 2253-second staleness from power cut #7. Plus the case §6b
+exists for: **fresh timestamp, dead writer.**
+
+### The reader had the same disease it was written to cure
+
+First version looked only for `heartbeat_pid` — my own field name. ansatz and quantum publish
+`writer_pid`; blackhole and tabula publish none. So it **silently skipped token verification on two of
+four peers**: a token was there, I never read it, and the file passed exactly as if it had none.
+Fail-toward-trusting, in a reader written to stop that. Now searches all known names, and **proves the
+path executed** rather than asserting it does:
+
+    ansatz      token=writer_pid(1782) VERIFIED
+    quantum     token=writer_pid(3398) VERIFIED
+    bridge      token=heartbeat_pid(4384) VERIFIED
+    blackhole   no token   | fields absent: mem_free_gb
+    tabula      no token   | fields absent: job_pids, rss_total_mb, mem_free_gb
+
+The second version also nearly over-tightened: verifying the token's *identity* against the string
+`"keepalive"` would have rejected `_coord_status.sh` and `status_heartbeat_loop.sh` — making every
+healthy peer permanently UNKNOWN. The match string has to come from the writer, not from my naming.
