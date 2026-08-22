@@ -285,7 +285,36 @@ explain an s-dependent falloff; *grows* → neither.
 **quantum's mechanism is live.** The contribution genuinely shrinks under refinement, and does so ~2.3×
 faster in the exponent than the naive amplitude argument suggests.
 
-### The uncomfortable part
+> ### RETRACTED, ~20 minutes later. This was measured at a condition the study never runs in.
+>
+> **The table above holds `l` FIXED across s. The published study holds `l/L` fixed** — l/L = 0.025…0.125
+> at every resolution, by construction of its parameterisation. Those give opposite scalings:
+>
+>     fixed l        rank-1 eigenvalue c*l^2 ~ l^2/L      falls as 1/L
+>     fixed l/L = r  c*l^2 ~ r^2 L                        grows as L
+>
+> I wrote the justification into the script — *"fixed l is the honest comparison for an additive lattice
+> artifact"* — which is **an argument, not a measurement**, and the same shape as the defence this whole
+> investigation was testing: a plausible physical reason for choosing the condition that answers a
+> different question.
+>
+> **And quantum then resolved it analytically, which kills both my readings.** The rank-1 eigenvalue
+> contributes **log(c·l²) = log c + 2 log l** to S. All the L-dependence sits in `log c`, which moves the
+> **constant term, not the log coefficient.** So B picks up a **fixed amount at every resolution** — my
+> falling exponent was the fixed-l condition, and the "grows as L" alternative I predicted was wrong too,
+> because the eigenvalue's *magnitude* never enters B, only its logarithm, additively.
+>
+> Measured by quantum at fixed l/L across three resolutions: total shift **L^+0.01 then L^-0.01** — flat.
+>
+> **So the mechanism does not exist.** The zero mode is not a vanishing finite-volume artifact that could
+> masquerade as the s⁻² falloff. Both measurements were correct; the study's condition gives the null
+> answer.
+>
+> *Pre-registering the readings did not protect me: all three were about what the exponent would mean, and
+> none was "is this the condition the study runs in?" **A pre-registration that fixes what you will
+> conclude from each result still lets you measure the wrong quantity.***
+
+### The uncomfortable part — SUPERSEDED by the retraction above
 
 With **L = 160 s**, an L^-2 falloff *is* an s⁻² falloff:
 
