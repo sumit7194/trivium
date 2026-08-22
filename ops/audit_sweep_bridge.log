@@ -1,0 +1,55 @@
+audit_sweep on /Users/sumit/Github/TheBridge   (159 docs)
+
+[1] 'independent' claims — 468 hits (expect mostly false positives)
+      FALSIFICATION_LEDGER.md:29  | K2 | **"The KK mass tower determines the hidden geometry"** ("you can hear the shape of the hidden drum"). |
+      FALSIFICATION_LEDGER.md:53  | M2 | **"The Srednicki area-law coefficient is independent of regulator scheme"** (lattice vs momentum cutoff
+      FALSIFICATION_LEDGER.md:73  5. **K2 → K5 → M4** (the isospectral-drums arc — one build, three postulates) — **K2 ✓ DONE 2026-07-23 — KILLE
+      FALSIFICATION_LEDGER.md:95  - **Payout collected:** the deviation *is* the correction term ΔS (measured independently from the symplectic
+      FALSIFICATION_LEDGER.md:201  independent check of ansatz §119.
+      FALSIFICATION_LEDGER.md:218  metrics with a clean blind split. The bridge independently recomputed the core claims on its own machinery
+      FALSIFICATION_LEDGER.md:261  matrix relabelled, so K2's "exact, resolution-independent isospectrality" was a **triviality, not
+      FALSIFICATION_LEDGER.md:262  transplantation**, and K5 was untestable on it. The bridge confirmed independently (3 components,
+      FALSIFICATION_LEDGER.md:272  bugs were caught the same way — a machine answer contradicted an independently derived one. That is the
+      FALSIFICATION_LEDGER.md:273  entire case for keeping the instruments independent.
+      ... 458 more
+
+[2] fitted parameter absorbing an unmodelled term — 32 hits
+      PROGRAM_II.md:23  | 3 | **P4 folds into P3** | tabula's recommendation adopted; the emit-on-unknown-data pro
+          NEXT LINE (where the defence lives): | 4 | **quantum's scoping accepted: oracle, not engine** | no shared integrator — each fro
+      PROGRAM_II.md:749  "nothing is there" and must not be silently absorbed into the null.* *Never claim:* non-ex
+          NEXT LINE (where the defence lives): outside a named family. **The union over screened families is a map of where we looked, no
+      PROGRAM_II.md:803  > **⇒ Fold into P3.** The certify side, not the emit side: §160–165's basis ladder + condi
+          NEXT LINE (where the defence lives): > cheaply yields **"no invariant representable in family F to order N, conditioning-gated,
+      JOURNAL.md:1221  - **tabula — P4 MIS-SCOPED, fold into P3.** P4 conflated the chaos detector with the invar
+          NEXT LINE (where the defence lives): (the latter has one real-data run); archival single-series data is **structurally blind** 
+      SISTER_REQUESTS.md:437  ### tabula's verdict on P4 (2026-08-16) — *mis-scoped; fold into P3*
+      FALSIFICATION_V2.md:43  | **R9** ✓ DONE 2026-07-26 — **UNDECIDED(extraction unstable); R6's numbers explained** · 
+          NEXT LINE (where the defence lives): | **R8** ✓ DONE 2026-07-26 — **SURVIVES** · **applies L9 (quantum's lesson) to our own ban
+
+[3] shell checks silent on failure (`&& echo` with no `|| echo`) — 1 hits
+      /Users/sumit/Github/TheBridge/ops/bridge_pulse_stop.sh:10:  # `kill $P && echo ...` was silent on failure -- and a stop 
+
+[4] retraction below the fold — 17 hits
+      FALSIFICATION_LEDGER.md:230/293 (78% in)  theorem-backed (Collins–d'Inverno–Vickers 1990, *Class. Quantum Grav.* **7**, 20
+      JOURNAL.md:712/1280 (55% in)  pre-registration, the recipe claim is WITHDRAWN — reported as a clean negative, 
+      THE_BRIDGE.md:384/478 (80% in)  to observation precision). The recipe claim is withdrawn; the failure bought the
+      CAPSTONE.md:247/333 (74% in)  plus convergence; the mechanism was retracted and a connectivity assertion insta
+      FALSIFICATION_V2.md:23/107 (21% in)  | **L10** | **Every mechanism or external-authority claim carries (a) a number f
+      legH_horizon_learnability/FINDINGS.md:44/124 (35% in)  fails"), **the constructive-recipe claim is withdrawn.**
+      legW_remnant_audit/FINDINGS.md:209/335 (62% in)  ### Retraction: the extraction never hallucinated
+      ops/STATUS_FILE.md:300/301 (99% in)  Announcement withdrawn to the peer rather than quietly superseded. The file is n
+
+[5] findings doc with NO artifact of any kind — 9 hits
+      falsification/K5_drum_learnability   (0 .py files)
+      leg4_conjecture_handoff   (1 .py files)
+      leg5_strong_field_curriculum   (1 .py files)
+      leg5b_rotating_curriculum   (1 .py files)
+      leg5c_integrability   (2 .py files)
+      leg6_regime_prediction   (1 .py files)
+      leg7_ringdown_dimension   (3 .py files)
+      leg7b_phase_shift   (2 .py files)
+      leg8b_exotic_templates   (3 .py files)
+
+No check here can certify anything. Each needs triage, and each is cued by
+text rather than by recognising the situation — which is the only reason any
+of them fire on their own author.
