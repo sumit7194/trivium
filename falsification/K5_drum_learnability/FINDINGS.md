@@ -61,3 +61,39 @@ instruments are for.**
 
 tabula round-8 §C · the bridge's [K2](../K2_isospectral_drums) drums build (`code/k2_drums.py`, corrected) ·
 Gordon–Webb–Wolpert 1992 · Kac 1966.
+
+---
+
+## Audit 2026-08-22 — this leg has no code and no artifacts
+
+Found by applying quantum's §16 check across all 31 legs: **K5 is the only one with a FINDINGS and
+neither.** The separations 0.76 and 0.98 are tabula's, correctly attributed here and in the header — but
+**nothing in this repository can produce them**, and if tabula's numbers move or are withdrawn, this file
+will keep asserting them. That is the hazard logged in `DISCLOSURES.md` today, sitting in a leg from a
+month ago: *a cross-check is only as good as the other instrument's current state, and a message freezes
+a snapshot of it.*
+
+**Not fixed by writing code here** — reproducing tabula's net is their work, and duplicating it would
+produce a second instrument sharing my assumptions rather than a check (§2). What is recorded instead:
+these numbers are **relayed, unreproducible from this repo, and should be re-requested rather than
+re-cited** if anything is built on them.
+
+**What WAS fixed is the part that was mine.** This leg claims *"the bridge confirmed this independently
+(3 components, sizes 360/360/120 at n=16)"* — the number justifying K2's grid-offset correction. It was
+**not reproducible from committed code**, because `k2_drums.py` now sets `A_OFF, B_OFF = 0.5, 0.25`:
+running HEAD produces the *fixed* build, and the buggy signature cannot be obtained from it.
+
+> **A repair can erase its own justification.** The evidence for a fix usually lives only in the broken
+> version, and fixing is precisely what removes the broken version from the repo. quantum's §16 does not
+> catch this — the number's producer *was* committed, and then edited so it no longer produces it.
+
+`K2_isospectral_drums/code/bug_regression.py` drives the offsets as a parameter and asserts both
+directions, plus whether the guard added to prevent the regression actually fires:
+
+    equal offsets  (0.5, 0.5 )  -> components [360, 360, 120]     bug signature reproduces
+    distinct       (0.5, 0.25)  -> components [904]                single connected interior
+    connectivity guard fires on the buggy grid     AssertionError: DISCONNECTED into 3 components
+    and does NOT fire on the fixed grid
+
+Both directions, because a guard never shown to fail is a decoration. Artifact:
+`K2_isospectral_drums/results/bug_regression.log`.

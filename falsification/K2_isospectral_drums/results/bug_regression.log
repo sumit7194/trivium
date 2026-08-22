@@ -1,0 +1,9 @@
+  equal offsets  (0.5, 0.5 )  -> components [360, 360, 120]
+  distinct       (0.5, 0.25)  -> components [904]
+
+  PASS  bug signature reproduces: [360, 360, 120] 
+  PASS  fix gives a single connected interior (1 component)
+  PASS  connectivity guard fires on the buggy grid -- AssertionError: discretised drum is DISCONNECTED into 3 components — the gri
+  PASS  and does NOT fire on the fixed grid
+
+  ALL PASS
