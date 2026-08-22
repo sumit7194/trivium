@@ -28,7 +28,23 @@ Ranked by max ÷ median drift, the statistic the fire rule uses:
  455   δ=1.5    fired=0
 ```
 
-**Eight of nine δ sit at or below the integrable control.** Only δ=1.2 exceeds it, and by 23%.
+⚠️ **THIS SECTION'S HEADLINE IS WITHDRAWN — see [FINDINGS_BOUNDARY.md](FINDINGS_BOUNDARY.md).**
+
+It read: *"Eight of nine δ sit at or below the integrable control. Only δ=1.2 exceeds it, and by 23%."*
+That rested on the control's **2980**, measured at **n=50** — the only δ in the ladder not run at ~100.
+Re-measured 2026-08-22 at matched orbit count and at matched x₀ spacing:
+
+| control arm | n | max/median |
+|---|---|---|
+| A — matched n | 320 | **1254** |
+| B — matched spacing | 160 | **1238** |
+| *original* | *50* | *2980* |
+
+**The 2980 was inflated ~2.4× by small-sample bias in the median.** Against the corrected value only
+**4 of 8** deformed δ sit at or below the control — δ=1.02, 1.2, 1.3 and 1.7 are above it. Both arms agree
+exactly, so this is a fact about the spacetimes rather than about the matching choice.
+
+The table below is left standing **as run**, with the control row known to be inflated.
 
 ZV at δ=1 *is* Schwarzschild. Its true frequency drift is not small — it is **zero**. Everything the
 instrument reads there is its own noise, and on this statistic that noise outranks six of the eight
@@ -99,6 +115,10 @@ Integers between 0 and 4, out of ~100 orbits each. As binomial proportions with 
 the sharpest contrast the ladder contains:
 
 > **δ=1.3 (4/100) vs δ=1.5 (0/99): Fisher exact p = 0.121.**
+
+⚠️ **SETTLED 2026-08-22 at ~3× the sample: p = 1.0000, and the direction REVERSED** — 2/312 vs 3/317,
+the silent δ now the louder one. **δ\* = 1.1 is withdrawn outright**, not merely unsupported. See
+[FINDINGS_BOUNDARY.md](FINDINGS_BOUNDARY.md).
 
 **The only discriminating conjunct in the detector cannot distinguish its own extremes at p < 0.05.**
 Every other pairwise contrast is weaker still. **δ\* = 1.1 rests on one orbit escaping at δ=1.1 and none
