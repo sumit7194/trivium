@@ -19,11 +19,14 @@ EVERY CHECK HERE PRODUCES FALSE POSITIVES and says so per-hit. That is deliberat
 the "independent" sweep found 1 real hit in ~12, and the buried-caveat sweep found 2 in
 6. A check that needs triage is still worth running; a check that CANNOT fire is not.
 
-    *** THOSE RATIOS ARE ONE OBSERVATION EACH, NOT CALIBRATION. *** (quantum)
-    Each was measured on the repo that produced the instance the check was derived from,
-    which is the most favourable possible sample. quantum's sweep gave 2 real in 28 on
-    theirs; mine gave 1 in 12 on mine; a third repo will give something else. Do not
-    quote them as properties of the checks.
+    *** THOSE TWO RATIOS ARE NOT COMPARABLE AND SHOULD NOT BE READ TOGETHER. ***
+    (quantum, sharpening a weaker caveat of mine.) "2 real in 28" and "1 real in 12" are
+    measurements of DIFFERENT CHECKS against DIFFERENT CORPORA, each taken on the repo
+    that produced the instance the check was derived from -- the most favourable possible
+    sample. They are closer to two anecdotes than to two data points, and REPORTING THEM
+    IN THE SAME UNITS IS WHAT MAKES THEM LOOK COMPARABLE. Do not average them, do not
+    quote either as a property of a check, and be aware that presenting them side by side
+    in a fixed-width block -- as this comment does -- is itself the invitation.
 
     And the checks themselves are single-instance generalisations. The enumeration
     trigger below is the proof: derived from one real error, its first implementation
