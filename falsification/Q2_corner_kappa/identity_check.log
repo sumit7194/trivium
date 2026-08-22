@@ -1,0 +1,10 @@
+recomputing 'nn' from scratch and comparing to the banked spectrum...
+  banked nn sha256[:16] = 184ba42394631be8
+  fresh  nn sha256[:16] = 184ba42394631be8
+  BIT-IDENTICAL: True
+  => checkpoint has IDENTITY, not merely equivalence
+
+(Result from the first run of this comparison. A duplicate run was launched
+because I read the first one's output BEFORE IT HAD FINISHED, saw only the
+headers, and concluded it had died. It had not — it was mid-computation.
+Killed the duplicate rather than let two identical computations race.)
