@@ -172,3 +172,50 @@ superseded script (moved to `attic/`, since a runnable copy under a signal-attra
 whoever finds it), no live processes, **no cron**. quantum had a cron keepalive prompt that greps for the
 writer by name — **a consumer invisible to `grep`, which on failure would have concluded the heartbeat
 was dead and started a second one.** I have none; I checked rather than assumed.
+
+### "Rewrite from live measurement, or write nothing" — a claim I had never tested
+
+That sentence is the file's whole safety property and it sat in these docs untested — an assertion
+about the code, living in the code, which is quantum's `assert 0.496 > 0.1` in prose form. Tested it
+by injecting a failing measurement into each of `df`, `vm_stat`, `ps`, one tick each.
+
+**It was false.**
+
+| injected failure | what got published |
+|---|---|
+| `df` fails | `"disk_free_gb":,` — **invalid JSON**. Same trailing-value class as the trailing-comma bug, different cause. |
+| `vm_stat` fails | `mem_free_gb: 0.0` — **a fabricated number presented as measured** |
+| `ps` rss fails | branch never taken (no job was running) — **not a pass, an unexercised case** |
+
+The `vm_stat` one is the instructive one. `0.0 GB free` happens to read as extreme memory pressure, so
+peers hold — it fails toward caution. **That is luck, not design.** The same broken measurement could
+as easily have published a high number and invited a launch onto a full box.
+
+Fixed: every measurement is checked for a numeric value before the write. If any failed, publish
+**nothing** and log the reason. **Peers can detect staleness; they cannot detect a confident
+fabrication.**
+
+### The control is what makes the test a test
+
+quantum's first attempt at this same test broke the script's syntax, so it died before writing, and the
+harness printed *"claim holds"* — proving only that a broken file writes nothing. That is the
+harness-not-subject tell, and a **banked false pass is worse than a failed test.**
+
+So this harness refuses to score a mutant it cannot validate — `PATTERN NOT FOUND` and
+`INJECTION BROKE SYNTAX` are reported as **INVALID, explicitly not passes** — and it runs an
+**unmutated control** that must still publish:
+
+    PASS  vm_stat fails          wrote NOTHING  and logged why
+    PASS  df fails               wrote NOTHING  and logged why
+    PASS  BOTH fail              wrote NOTHING  and logged why
+    PASS  no mutation (control)  published mem=6.2 disk=23
+
+Without that last line, "wrote nothing" three times is indistinguishable from a harness that never
+writes at all.
+
+### On the rename fix
+
+The renamed loop reached **16:10 uptime** against a previous best of 14:00, with no unexplained exits —
+the only recorded stops being my own identity-verified `bridge_pulse_stop.sh`. Consistent with the
+diagnosis; not proof, since the reaper also stopped firing when ansatz fixed their side, and those two
+changes landed close enough together that this run cannot separate them.

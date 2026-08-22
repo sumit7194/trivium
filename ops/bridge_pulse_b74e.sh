@@ -71,6 +71,27 @@ while true; do
   # ATOMIC WRITE (blackhole): this machine loses power mid-write. A truncated status
   # file is WORSE than a stale one -- a stale file still parses and expires cleanly
   # through stale_after_s, an unparseable one makes every reader invent a fallback.
+  # VALIDATE BEFORE PUBLISHING -- "rewrite from live measurement OR WRITE NOTHING" was
+  # a claim in my own docs that I had never tested. Tested it by injecting a failing
+  # measurement into each of df / vm_stat / ps, one tick each:
+  #   df fails     -> "disk_free_gb":,   INVALID JSON. Same trailing-value class as the
+  #                   trailing-comma bug, different cause. A reader gets JSONDecodeError.
+  #   vm_stat fails-> mem_free_gb: 0.0   A FABRICATED number presented as measured. It
+  #                   happens to fail toward caution (0 GB reads as pressure), which is
+  #                   luck, not design -- the same measurement could as easily read high.
+  # So: if any measurement did not produce a number, publish NOTHING and let the file go
+  # stale. Peers detect staleness; they cannot detect a confident fabrication.
+  _bad=""
+  for _f in rss free mfree; do
+    _v=${(P)_f}
+    case "$_v" in
+      ''|*[!0-9.]*) _bad="${_bad:+$_bad,}$_f" ;;
+    esac
+  done
+  if [[ -n "$_bad" ]]; then
+    echo "[$now] MEASUREMENT FAILED ($_bad) -- refusing to publish; letting the file go stale" >> $L
+    sleep 60; continue
+  fi
   cat > $D/.bridge.status.tmp <<JSON
 {"session":"bridge","repo":"/Users/sumit/Github/TheBridge","state":"$state","heavy":$heavy,
  "job_pids":[$pids],"rss_total_mb":$rss,"disk_free_gb":$free,"mem_free_gb":$mfree,
