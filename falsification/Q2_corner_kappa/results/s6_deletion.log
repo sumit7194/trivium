@@ -2,3 +2,4 @@ s=6  L=960  m*L=1.60  l/L=[0.025, 0.05, 0.075, 0.1, 0.125]  ->  l=[24, 48, 72, 9
   correspondence: this IS the study's grid, not fixed-l
 
   nn             B  -0.0466932  without  -0.0365548  shift  0.0101384  [3684s]
+  improved       B  -0.0467042  without  -0.0365652  shift  0.0101390  [7405s]

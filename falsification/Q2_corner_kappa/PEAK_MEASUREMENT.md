@@ -342,3 +342,38 @@ committed inside the safeguard for the experiment that disproved the refusal.
 
 Full four-regulator s=6 running. **s=5 is no longer the last rung**, and quantum's s⁻² scatter over
 s=3,4,5 — recorded this afternoon as permanently blocked — is resolvable after all.
+
+---
+
+## The tooth counter was right for the wrong reason
+
+Having got three ETAs wrong by estimating, I built a progress channel and reported a fourth as **counted,
+not estimated** — 63 min per regulator, from 6 completed teeth against a denominator of 10. Regulator 2
+then measured **62.0 min**, and regulator 1 had measured 61.4.
+
+**quantum asked what a tooth is.** The grid has exactly two large *l* per pass and each regulator runs two
+passes, so **exactly four teeth per regulator must exceed ~2.5 GB.** Counted:
+
+    expected per regulator   4 large (l=96,120 x 2 passes) + 6 small = 10
+    observed over ~1 regulator                        8 large + 1 small = 9
+
+    large   8 vs 4   OVER by 4    eviction splits one allocation into two rise-fall events
+    small   1 vs 6   UNDER by 5   never trips a 40% drop off a peak that is already tiny
+
+**Two errors of opposite sign, cancelling to within 10%.** quantum predicted both mechanisms; neither of
+us predicted the cancellation. **The agreement with the measured time was luck, and I had presented it as
+the instrument working** — in the one number I had explicitly labelled *counted rather than estimated*,
+which is what made it least likely to get a second look.
+
+**Survives:** 61–62 min per regulator, measured twice by *completion*. **Does not:** the counter. Its unit
+is not one *l*-value; it is *"one rise-then-fall that happened to clear 40%."*
+
+> **A counter needs its unit validated the same way a measurement needs its referent.** *"What exactly is
+> one tooth"* is the same question as *"what exactly does this number measure"*, with the same failure
+> mode. *(quantum)*
+
+I had run the referent test on fitted parameters the same afternoon and did not think to run it on a
+**count** — because a count feels like it has no referent problem, the unit seeming self-evident. quantum
+made the identical error in the same hour, in the counter they built to catch counting errors: grepping
+their sweep's **printed** lines while the sweep truncates its display with *"… 14 more"*. **Both of us
+counted an artifact of an intermediate representation rather than the thing being counted.**
