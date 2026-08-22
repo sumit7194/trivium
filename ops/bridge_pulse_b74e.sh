@@ -76,13 +76,23 @@ while true; do
   # a number with full measurement-authority and no relationship to the thing it names,
   # and NO freshness, liveness or validity check can see it -- the plumbing works
   # perfectly. Publish all three, named for what they are.
+  # EVERY LABEL MUST BE FOUND, not merely produce a number. quantum's find, and I had
+  # shipped it inside the fix for the PREVIOUS fabrication twenty minutes earlier: awk
+  # treats an absent label as 0, so a vm_stat missing `Pages inactive` published
+  # mem_available 2.29 instead of 7.98 -- 5.7 GB fabricated away, silently. My validator
+  # waved it through because 0.00 IS numeric. A MISSING LINE IS INDISTINGUISHABLE FROM A
+  # ZERO COUNT WHEN YOUR FALLBACK IS ZERO.
+  # Direction note: every component is additive, so a lost label always UNDERSTATES, and
+  # understating reads as caution. That is luck, not design -- and not harmless: an
+  # understatement is what nearly cost ansatz a launch window this morning.
   eval $(vm_stat | awk '
-    /Pages free/      {gsub("\\.","",$3); f=$3}
-    /Pages inactive/  {gsub("\\.","",$3); i=$3}
-    /Pages speculative/{gsub("\\.","",$3); s=$3}
-    /compressor/      {gsub("\\.","",$5); c=$5}
-    END{printf "mfree=%.2f mavail=%.2f mcomp=%.2f", f*16384/1073741824,
-        (f+i+s)*16384/1073741824, c*16384/1073741824}')
+    /Pages free/       {gsub("\\.","",$3); f=$3; hf=1}
+    /Pages inactive/   {gsub("\\.","",$3); i=$3; hi=1}
+    /Pages speculative/{gsub("\\.","",$3); s=$3; hs=1}
+    /compressor/       {gsub("\\.","",$5); c=$5; hc=1}
+    END{ if (!(hf && hi && hs && hc)) { printf "mfree=MISSING mavail=MISSING mcomp=MISSING"; exit }
+         printf "mfree=%.2f mavail=%.2f mcomp=%.2f", f*16384/1073741824,
+                (f+i+s)*16384/1073741824, c*16384/1073741824 }')
   # ATOMIC WRITE (blackhole): this machine loses power mid-write. A truncated status
   # file is WORSE than a stale one -- a stale file still parses and expires cleanly
   # through stale_after_s, an unparseable one makes every reader invent a fallback.
