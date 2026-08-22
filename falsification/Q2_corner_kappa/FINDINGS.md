@@ -5,7 +5,7 @@
 | **Confirmed** | quantum's corner-coefficient result reproduces; their s=3 prediction holds |
 | **Established here** | s=4, s=5, s=6 — three resolutions past where they had run it |
 | **Overturned 2026-08-22** | the s⁻² law is **not exact**. The constant falls 1.082 → 1.045 across s=3→6, ~10× the numerical noise. quantum's 1.3% "scatter" was a truncated trend |
-| **Open** | the k=0 systematic is of the same order as that drift, so the drift is **unresolved against it** |
+| **Open** | the bulk-coupling systematic is of the same order as that drift, so the drift is **unresolved against it** |
 | **Not blind** | their numbers were in my context before I ran — §1, and it changes what the rest is worth |
 | **Not mine** | s=1 and s=2 are quantum's |
 
