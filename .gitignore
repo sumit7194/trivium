@@ -2,6 +2,14 @@
 # JSON results and figures ARE committed; the bulk arrays are not.
 *.npz
 
+# ...EXCEPT arrays a gate READS. ansatz hit this exact class: a .gitignore written
+# for SIZE silently became a judgement about evidentiary value, sweeping 176 KB of
+# run logs out of the repo because they shared a directory with 2.6 GB of pickles.
+# s5_spectra.npz is 1.2 MB and is the sole input to code/gate_s5.py -- ignoring it
+# means a fresh clone gets the gate and not the evidence, so the gate cannot run.
+# ANY artifact a gate reads must be tracked, whatever its extension.
+!falsification/Q2_corner_kappa/s5_spectra.npz
+
 # OS / Python cruft
 .DS_Store
 __pycache__/
