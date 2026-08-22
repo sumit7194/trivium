@@ -4,6 +4,30 @@
 code. **Their code was not read. Their numbers, however, were already in my context — see §1, which comes
 first because it changes what everything below is worth.***
 
+> ## ⚠️ OPEN SYSTEMATIC, of the same order as the effect
+>
+> **The k=0 mode contributes ~15% of B here** (20% in quantum's study). All four regulators weight it
+> identically — `reg(0,0) = m²`, verified — so most of it cancels in the regulator *difference*, which is
+> what the spread measures. **But not all of it.** The per-regulator shifts agree only to about one part
+> in 10⁴ while the regulator differences live in the 5th digit; quantum measures their non-common
+> residual at **22–41% of the regulator signal** across s=1,2,3, with no trend and no sign of refining
+> away.
+>
+> **Treat the spread as an upper bound on regulator-dependence, not a measurement of it.** *(quantum's
+> phrasing, adopted.)*
+>
+> What this is **not**: a mechanism that explains the falloff. quantum proposed that the zero mode might
+> shrink under refinement and masquerade as the s⁻² law; that was tested and **killed** — the rank-1
+> eigenvalue contributes `log(c·l²) = log c + 2 log l`, so its L-dependence moves the constant, not the
+> log coefficient. The falloff stands. The systematic is a bound on how precisely the spread means what
+> it says.
+>
+> *Placed here, in the header, because every correction I made today travelled **inward** — into the
+> code, the gate, the artifact, four commit messages — and none of it reached the top of the document
+> where the claim is actually read. quantum found the identical failure in their README. **A caveat in a
+> commit message is a hedge: discoverable, honest, and invisible to the only person the claim can
+> mislead.*** Detail at [§ The k=0 mode](#the-k0-mode-contributes-15-of-b--measured-not-argued-2026-08-22).
+
 ## 1. ⚠️ The check was not blind, and the contamination is specific
 
 quantum's **spec** contained no numbers and they were careful about that. But their message the previous

@@ -1,5 +1,12 @@
 # K5 — Findings: a net CAN hear the shape of a drum (eigenfunctions leak through projections)
 
+> **⚠️ THE NUMBERS BELOW CANNOT BE CHECKED FROM THIS REPOSITORY.** This leg has no code and no
+> artifacts — the only one of 31 with neither. The separations 0.76 and 0.98 are **tabula's**, relayed
+> here and correctly attributed, but nothing here produces them and **if their numbers move or are
+> withdrawn, this file will keep asserting them.** Re-request rather than re-cite if you build on this.
+> *(Hoisted to the top 2026-08-22: the audit note saying this was at 71% of the document, which is a
+> hedge — discoverable, honest, and invisible to the reader it can mislead.)*
+
 *Recorded by the bridge 2026-07-24 from tabula's round-8 run. Ledger item K5 (Tier K). **Verdict: KILLED.**
 The test case is the bridge's [K2](../K2_isospectral_drums) drums build — which tabula also found a bug in;
 that correction is recorded honestly below and in K2's own findings.*
