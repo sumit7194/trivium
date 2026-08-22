@@ -110,6 +110,9 @@ invented equation number. Because that fabricated number happened to equal the c
 looked *corroborating*, which is precisely why it went unchallenged: **a hallucination that agrees with your
 hypothesis is the hardest kind to catch.**
 
+> **⚠️ RETRACTED — see [Retraction: the extraction never hallucinated](#retraction-the-extraction-never-hallucinated) below. Eq. (47) exists and reads as extracted. Everything in this section describing a hallucination is withdrawn; it is kept because the reasoning about *why such an error would go unchallenged* survives the retraction, and deleting it would erase the record of having been wrong.**
+
+
 Gate **W1a is VOID** — it tested agreement between the formula and a quote that does not exist.
 
 The process lesson, now standing policy for the bridge: **an automated text extraction is not a source.**
