@@ -84,6 +84,27 @@ The headline was the *rhetorically* strongest claim, not the load-bearing one. U
   by power calculation.
 - **§106's δ=2 layer reproduces** — the one solid positive in the item.
 
+## Two methodological failures this run exposed, both mine
+
+**① A pre-registration that enumerates how a result could be AMBIGUOUS is not the same as one that states
+how it could be WRONG.** The frozen commitment was: *the headline must hold under matched-n AND
+matched-spacing; withdrawn if the arms disagree.* Both arms agreed — 4 above, 4 below, exactly — **and
+they agreed the headline was false.** The commitment was satisfied in its letter and the finding died
+anyway, because the outcome that occurred had no rule attached to it. Enumerating more ways to be
+*undecided* never produces the clause you needed. *(Named by tabula.)*
+
+**② A caveat is where you put the thing you have decided not to act on.** [FINDINGS.md](FINDINGS.md)
+records the control as structurally unmatched — one separatrix band against two, n=50 against ~100,
+smallest median in the run by 3.3× — and lists "re-run the control at n ≈ 100" as forward-look item 2.
+**ansatz and quantum both flagged it hours before it was measured.** It sat as an honest note while the
+headline built on it stood, and fixing it took one afternoon and falsified the claim.
+
+> The record was honest and the behaviour was unchanged. **Writing it down feels like handling it.**
+
+That is the same move as burying an exclusion in smaller words at the bottom, and it is worth more as a
+warning than the boundary result is as a finding: *this item spent two runs establishing that an
+unmatched control invalidates a comparison, while its own unmatched control sat in a caveat.*
+
 ## The item's verdict, restated
 
 **G3 is KILLED as stated** (δ=1.02, 1.05, 1.5 are non-integrable and silent). **The boundary δ\* = 1.1 is
