@@ -144,7 +144,23 @@ quartic order** — a second direction needs a sextic term or a different lattic
 internal. The absolute s does not matter; matching does.*
 
 **Held rather than run**, because quantum's s=6 replication has the box, and their job spikes to
-~8.3 GB at its large-*l* calls. **Running now would overcommit exactly as I warned ansatz against this
+~8.3 GB at its large-*l* calls.
+
+> *Superseded text, restored. `0101dca` deleted rather than struck it, and the pre-commit append-only
+> counter flagged a fall I could not afterwards reproduce — **but checking why found this, which is real
+> whatever the counter was doing:***
+>
+>> *"quantum's s=6 replication has the box: available memory is **3.05 GB** against a projected
+>> **2.8 GB** peak, and their job spikes to **~7 GB** at its large-*l* calls."*
+>
+> **Two edits, one disclosed and one not.** The 2.8 GB is corrected at length below and that is fine.
+> **The ~7 GB was silently revised to ~8.3 GB** — a factual figure about *another session's job*, updated
+> inside an edit that was ostensibly about something else, with no note in the document or the commit
+> message. *§23 is about a correction that fails to travel. **This is the mirror: one that travels
+> invisibly, carried inside an unrelated edit.** A reader diffing the two versions would find a peer's
+> measured peak quietly changed and nothing claiming responsibility for it.*
+>
+> *The 3.05 GB was a measurement at that time and is now simply gone from the document. Restored above.* **Running now would overcommit exactly as I warned ansatz against this
 morning.** Queued for when their run finishes.
 
 ### The 2.8 GB in the first version of this note was a projection. Measured instead.
