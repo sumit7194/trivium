@@ -46,10 +46,12 @@ exactly, so this is a fact about the spacetimes rather than about the matching c
 
 The table below is left standing **as run**, with the control row known to be inflated.
 
-ZV at δ=1 *is* Schwarzschild. Its true frequency drift is not small — it is **zero**. Everything the
-instrument reads there is its own noise, and on this statistic that noise outranks six of the eight
-deformed spacetimes, including three that fired. **No null model, no fired/silent labels and no
-methodology are required to read that table**, which is why it is the headline.
+ZV at δ=1 *is* Schwarzschild. Its true frequency drift is not small — it is **zero**, so everything the
+instrument reads there is its own noise. **That much survives the correction.** What does not is the
+*rank*: at the corrected control the noise outranks **four** of the eight deformed spacetimes, not six.
+The point stands qualitatively — an integrable metric reading louder than half the deformed ladder is
+still a statement about the instrument — but it is no longer the clean "eight of nine" it was written as,
+and it is no longer the headline.
 
 ## The gate table
 
