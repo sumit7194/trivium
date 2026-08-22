@@ -78,3 +78,33 @@ the extraction.
 Srednicki 1993 (hep-th/9303048) · Bombelli–Koul–Lee–Sorkin 1986 · Solodukhin 2011 (review) · calibrated by
 [V2](../V2_cft_calibration); reuses the leg X / K1 / V2 covariance-entropy machinery. `code/m2_arealaw.py` ·
 `results/m2_arealaw.json`. Interpreter: conjecture_machine `.venv` (numpy 2.4.6).
+
+---
+
+## Audit 2026-08-22 — κ absorbs a missing term; the headline survives, demonstrated
+
+Applying the day's residual-sign diagnostic to this closed leg, prompted by finding the identical defect
+in Q2's memory law. The method note above already said the residual drift of S/n² was *"absorbed by the
+constant c in the fit S = κn² + c"* — **but if that drift is n-dependent, a constant cannot absorb it and
+κ takes the difference.**
+
+**Residual signs, 6 points, all three regulators:**
+
+    R1 bare NN            -++++-    2 sign changes
+    R2 improved stencil   -++++-    2 sign changes
+    R3 higher-deriv       ++---+    2 sign changes
+
+Smooth arcs, not scatter. **The two-parameter form is missing a term and κ is absorbing part of it.**
+The diagnostic is the sign pattern, not the fit quality — both forms fit well.
+
+**Sensitivity (6 points, 3 parameters — a check, not a new result):** adding an n-linear term moves the
+individual κ by −1.2%, −1.2%, +1.1%, and the **filed relative spread from 0.5120 → 0.5357 (+4.6%)**.
+
+**The claim of this leg is that κ is regulator-dependent — the spread IS the claim.** It grows slightly
+under the better model, so the conclusion survives and the absorbed term is common-mode across
+regulators. **Demonstrated by refitting, not assumed.**
+
+*Self-correction from the audit itself: my first pass printed `"matches the banked 0.5120"` beside a
+computed 0.2092 — the banked figure is the **relative** spread `(max−min)/mean`, mine was absolute. A
+label asserting agreement, printed next to the disagreement it described. Nobody reads the number beside
+the word "matches."*
