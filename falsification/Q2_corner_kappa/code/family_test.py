@@ -9,10 +9,15 @@ THE TEST. Add kernels that break the family, at matched resolution, and see whet
 fraction MOVES:
     out5_sumk4   m^2 + K2 + c(K4 - K2)     perturbs along kx^4 + ky^4   (quantum's)
     out6_mixed   m^2 + K2 + c*a*b          perturbs along kx^2 ky^2     (bridge's)
-The square lattice has exactly two independent quartic invariants, so these SPAN the
-quartic space rather than being two more points in it. Using both tests a direction
-neither session chose alone -- which is quantum's provenance objection answered, not
-merely acknowledged.
+*** These do NOT span two directions -- corrected before the run. *** Modulo the family
+the quartic space has exactly ONE out-of-family direction, because
+kx^4 + ky^4 = |k|^4 - 2 kx^2 ky^2 and |k|^4 ~ K2^2 is in-family; verified as
+D + AB/6 ~ K2^2/12 with spread 0.00%. So out5 and out6 are the SAME direction with
+different in-family admixtures.
+
+That is stronger for the provenance objection than spanning would have been:
+INDEPENDENT CHOOSERS ARE OBLIGED TO LAND ON THE SAME AXIS, so provenance cannot matter
+when the choice is unique. The residual provenance is the lattice and the quartic order.
 
 PRE-REGISTERED, before the run:
     fraction moves on either      -> residual is a property of the FAMILY's structure

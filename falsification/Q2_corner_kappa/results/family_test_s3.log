@@ -1,0 +1,13 @@
+s=3  L=480  m*L=1.60  l=[12, 24, 36, 48, 60]   (the study's grid; resolution matched)
+  nn             B  -0.0466797  shift  0.0101683   [54s]
+  improved       B  -0.0467170  shift  0.0101680   [110s]
+  higher_deriv   B  -0.0466809  shift  0.0101861   [165s]
+  smeared        B  -0.0466604  shift  0.0101642   [222s]
+  out5_sumk4     B  -0.0466982  shift  0.0101667   [277s]
+  out6_mixed     B  -0.0465295  shift  0.0101678   [326s]
+
+  kernels                                 signal   non-common    ratio
+  4 in-family (quantum's spec)         5.664e-05    2.187e-05    38.6%
+  + out5 sum-k^4  (quantum's)          5.664e-05    2.187e-05    38.6%
+  + out6 mixed    (bridge's)           1.876e-04    2.187e-05    11.7%
+  all six, spanning the quartics       1.876e-04    2.187e-05    11.7%
