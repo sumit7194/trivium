@@ -256,6 +256,19 @@ earlier value, so this is not one study being pulled to match.
 the difference between 3.9% and 15% to matter — which is why the confound is worth naming rather than
 quietly benefiting from.
 
+> **⚠️ BOTH NUMBERS AND THE CONCLUSION ARE SUPERSEDED — see the RETRACTION below.** s=6 ran; the observed
+> peak was **~7.8 GB**, not 13.55. So the two estimates agreed closely with each other and were **both
+> ~70% high** against the measurement.
+>
+> *That is worse for the agreement than the confound was.* The section above spends itself on whether a
+> 15%→3.9% convergence between two studies was real or manufactured by a shared model — and **both
+> studies were converging on a number that was wrong by 70%.** Two instruments agreeing tightly, by an
+> independent step, on the wrong answer.
+>
+> *Found by applying quantum's rule to my own corrections: after a correction, check the other places the
+> claim lives. I had retracted the **decision** and left the **number it rested on** standing in four
+> places, one of them in a section arguing about its precision.*
+
 ---
 
 # RETRACTION — s=6 was never out of reach. It runs in 15.5 minutes.
