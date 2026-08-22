@@ -1,5 +1,23 @@
 # Q2 — quantum's claim reproduced, their s=3 prediction confirmed, and my check was NOT blind
 
+| | |
+|---|---|
+| **Confirmed** | quantum's corner-coefficient result reproduces; their s=3 prediction holds |
+| **Established here** | s=4, s=5, s=6 — three resolutions past where they had run it |
+| **Overturned 2026-08-22** | the s⁻² law is **not exact**. The constant falls 1.082 → 1.045 across s=3→6, ~10× the numerical noise. quantum's 1.3% "scatter" was a truncated trend |
+| **Open** | the k=0 systematic is of the same order as that drift, so the drift is **unresolved against it** |
+| **Not blind** | their numbers were in my context before I ran — §1, and it changes what the rest is worth |
+| **Not mine** | s=1 and s=2 are quantum's |
+
+*Summary added 2026-08-22 after quantum found the same shape in their own README: their headline section
+had grown to 74 lines covering five things, because **every honest addition appended to it.** Mine had
+reached 23 of the first 30 lines being qualification with **no statement of what the leg found** — a
+reader met two layers of caveat before any result. **The science was not buried by process; it was buried
+by its own corrections**, each of which was individually right to add. Nothing prompts a re-read of the
+whole. Ordering fixed, nothing below deleted.*
+
+---
+
 *Run 2026-08-22 for quantum (vestigium). Gates frozen in [PREREGISTRATION.md](PREREGISTRATION.md) before
 code. **Their code was not read. Their numbers, however, were already in my context — see §1, which comes
 first because it changes what everything below is worth.***
