@@ -210,3 +210,40 @@ stronger signal. l=20 and l=25 returned INVALID — too fast to sample — which
 time today a conclusion has survived its reasoning: here the survival is *demonstrated* by refitting
 rather than assumed, and the offset term is small compared to the l⁴ term at l=120 — which is why a
 mis-specified `c` cannot move the answer even though it is wrong.
+
+---
+
+# Does the cross-study agreement tighten or drift?
+
+quantum's diagnostic, from catching their own two-routes check as a coincidence: **a real cross-check
+tightens as the data improves; a coincidence drifts.** Theirs went 15% → 32% on more points and they
+withdrew it.
+
+The s=6 decision rests on one agreement — two studies, two codebases, independently estimating the same
+rung. It had never been tested this way.
+
+| stage | bridge | quantum | spread |
+|---|---|---|---|
+| first estimates | 12.39 GB | 14.40 GB | 15.0% |
+| structural form (exponent fixed at 4) | 13.52 GB | 14.30 GB | 5.6% |
+| more points, refit | 13.55 GB | 14.09 GB | **3.9%** |
+
+**It tightens. But most of the tightening does not count, and saying so is the point of running the
+test rather than quoting the endpoints.**
+
+**Step 1 → 2 is confounded.** Both studies switched to the exponent fixed at 4 *at the same time*.
+Adopting a common model is precisely how agreement gets manufactured — §2, code-independence is not
+method-independence — so that step is **not independent evidence**, and it is the step carrying most of
+the headline improvement.
+
+**Step 2 → 3 is the clean one:** each study added points to its own data separately, and the spread went
+5.6% → 3.9%. **A much smaller signal than the headline suggests.**
+
+What stays genuinely independent throughout: different codebases, different physical systems, and an
+exponent **derived from matrix structure rather than fitted** — the one element neither of us negotiated
+with the other. Both estimates also moved *toward* each other rather than one converging on the other's
+earlier value, so this is not one study being pulled to match.
+
+**Conclusion unchanged: 13.55 and 14.09 GB against 7.0 GB free.** The margin was never close enough for
+the difference between 3.9% and 15% to matter — which is why the confound is worth naming rather than
+quietly benefiting from.
