@@ -186,3 +186,25 @@ Recorded rather than silently fixed, since two log files now both claim s=4.*
 - **My check establishes the machinery and the regulators, not the model.** A genuinely blind check needs
   a channel where no figure has been disclosed — which, for quantum and me, no longer exists on this
   quantity.
+
+---
+
+## Reproducing these numbers
+
+```bash
+python code/gate_s5.py
+```
+
+Asserts all four s=5 spreads (both floors × both fit models) against the banked spectra in
+`s5_spectra.npz`, plus the clip-band ratio. Artifact: [results/gate_s5.log](results/gate_s5.log).
+
+**Q2 was the one study that came out clean** in the repo-wide audit prompted by quantum's §16 — every
+spread quoted above is in `results_s*.log`, which is stdout of a committed script. The gate was added
+anyway, because a log is a *record of a run and cannot fail*: it will keep reporting 0.04274% after
+someone edits `S_at()` or `fit()`. The gate announces itself instead.
+
+**What is NOT gated, stated plainly:** the s=3 and s=4 spectra were never banked — per-regulator
+checkpointing only arrived after the fifth power cut, which is why s=5 has an `.npz` and the earlier
+rungs do not. Those two rungs rest on committed-script logs and are reproducible only by re-running,
+roughly 20 minutes each. That is a weaker guarantee than s=5 has, and the difference is an accident of
+when the power failed rather than a judgement about which rung mattered.
