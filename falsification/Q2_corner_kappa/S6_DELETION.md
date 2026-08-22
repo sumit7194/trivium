@@ -119,10 +119,27 @@ between s=1 and s=6 — deletion shrinks the regulator spread at low resolution 
 **The numerator is the term whose behaviour is not stable across resolution, and the numerator is the
 term that disagrees.** Two independent symptoms of the same instability.
 
-**ASSUMPTION, stated because it changes the multiplier and not the conclusion:** this takes their 55.5%
-as `non-common / signal-with-k0`, matching my definition. If their denominator is instead the
-*without-k0* range 1.789e-05, the numerator is 9.93e-06 and the gap is **3.10x**. **Either way the
-disagreement is in the numerator.** Asked rather than assumed.
+**~~ASSUMPTION~~ RESOLVED FROM THEIR SOURCE.** *Asked rather than assumed, and quantum answered from the
+code rather than from recollection:*
+
+    line 207   rng  = max(Bs) - min(Bs)        Bs are B WITH k0
+    line 215   frac = (max-min of shifts) / rng
+
+**Same definition as mine. The gap is 2.4x, not 3.10x** — the alternative reading would have been a
+silent 30% error in a number both studies were about to leave in the record.
+
+### The synthesis, which is quantum's and reconciles today's finding with tonight's
+
+> **The denominator is arbitrary with respect to KERNEL CHOICE and robust with respect to EVERYTHING
+> ELSE.** Substitute a kernel and it moves 3.3x. Hold the kernel set fixed and vary lattice, geometry,
+> code and square-root algorithm, and it survives to **2.6%**.
+
+*Both halves are this study's own evidence and they do not conflict. Together they say what neither said
+alone:* **the fraction is unstable because its NUMERATOR is, not because its denominator is.** *My
+afternoon conclusion had the right complaint pointed at the wrong term.*
+
+*And the 2.6% agreement — the strongest cross-study agreement either session produced today — **was found
+by neither of us looking for it.** We were both looking at the ratio.*
 
 **NOT CONCLUDED, and deliberately:** whether 2.4x is a real geometric difference or two samples of an
 unstable quantity. *What can be said without construction is that the pre-commitment was asymmetric and
