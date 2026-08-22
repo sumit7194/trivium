@@ -107,6 +107,38 @@ quartic order** — a second direction needs a sextic term or a different lattic
 > **REVISED PREDICTION for s=4, weakened before the run rather than after it:** the numerator moves by a
 > **few percent, not zero**, and the denominator still moves several-fold — so **the conclusion survives
 > and the explanation does not.**
+>
+> ### The mechanism, corrected again — half of step 3 was right
+>
+> quantum measured the resolution dependence and it is **not** what my falsifier assumed. I wrote that
+> out6 landing outside would mean *"the coupling difference grows with resolution."* **It shrinks.**
+>
+>          in-family half-width   out6 distance from centre   ratio
+>     s=1       8.526e-05                 7.181e-05           0.84    inside
+>     s=2       2.383e-05                 2.537e-05           1.06    outside
+>
+>     per doubling:   half-width ×0.28     out6 distance ×0.35     ratio ×1.26
+>
+> **Both converge — which is what the gate argument predicts — but the in-family set converges on
+> *itself* faster than out6 converges on it. out6 does not move outward; the range closes on it.**
+>
+> So step 3 splits:
+>
+>     TRUE:   the gate forces every shift to converge          (all shrink)
+>     FALSE:  therefore they converge TOGETHER                 (the rates differ)
+>
+> **The gate explains why all the shifts shrink. It does not explain why they shrink at different rates,
+> and the rate difference is what decides inside-versus-outside.** That is a better outcome than a flat
+> refutation: the reasoning was half right and the half it got wrong is identifiable.
+>
+> **And the cleaner statement needs its qualification:** *"the numerator is fixed by admissibility"* holds
+> **only to the accuracy the couplings have converged** — which is resolution-dependent, and by s=2 is
+> already worse than the in-family spread it is being compared against.
+>
+> **quantum's directional call for s=4, given as a sign and not a value** because a two-point slope has
+> failed them three times today: **expect out6 outside, more clearly than at s=2** (~1.34 half-widths on
+> their rates). *If it comes back inside, their s=1→s=2 rates are not the operative ones and the two
+> geometries differ in more than scale.*
 
 *Setup correspondence: s=4 will run at l/L = 0.025…0.125, the same grid as s=3, so the comparison is
 internal. The absolute s does not matter; matching does.*
