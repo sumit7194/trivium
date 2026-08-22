@@ -1,1 +1,15 @@
 delta=1.0: 321 x0 values, 0 already banked
+   25/321  banked=25  escaped=0  [1246s]
+   50/321  banked=50  escaped=0  [2493s]
+   75/321  banked=75  escaped=0  [3529s]
+   100/321  banked=100  escaped=0  [4507s]
+   125/321  banked=125  escaped=0  [5470s]
+   150/321  banked=150  escaped=0  [6395s]
+   175/321  banked=160  escaped=0  [6721s]
+   200/321  banked=160  escaped=0  [6730s]
+   225/321  banked=160  escaped=0  [6738s]
+   250/321  banked=160  escaped=0  [6747s]
+   275/321  banked=160  escaped=0  [6756s]
+   300/321  banked=160  escaped=0  [6765s]
+delta=1.0: DONE 160 orbits, 0 escaped [6773s]
+done
