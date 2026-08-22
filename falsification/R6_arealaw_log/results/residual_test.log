@@ -1,0 +1,11 @@
+  n = [8, 12, 16, 20, 24, 28, 32, 36, 40]   N=200 L0=500
+
+  regulator                 b  residual signs changes    max|res|
+  R1 bare NN           2.3216  +--++++--          3   6.484e-02
+  R2 improved          3.7185  +-+++---+          4   8.314e-02
+  R3 higher-deriv      0.5221  -++++---+          3   7.518e-01
+
+  9 points. Scatter would give roughly 4 sign changes.
+  -> 2/3 regulators show <=3 changes: SMOOTH ARC, the
+     3-parameter form is missing a term and b is absorbing part of it.
+     That is R6's own pre-registered UNDECIDED cause, now MEASURED.

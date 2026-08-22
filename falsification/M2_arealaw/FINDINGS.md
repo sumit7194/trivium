@@ -97,6 +97,37 @@ constant c in the fit S = κn² + c"* — **but if that drift is n-dependent, a 
 Smooth arcs, not scatter. **The two-parameter form is missing a term and κ is absorbing part of it.**
 The diagnostic is the sign pattern, not the fit quality — both forms fit well.
 
+> ### WITHDRAWN, same day. The sign test has no power at 6 points.
+>
+> Under scatter, sign changes among *n* residuals are **Binomial(n−1, ½)**. For 6 points that is
+> Binomial(5, ½), mean 2.5 — and **P(X ≤ 2) = 0.500.** The "smooth arc" observed in all three
+> regulators is **exactly what a coin flip produces.** There is no evidence here at all.
+>
+> I applied a diagnostic without its null distribution, saw a pattern that looked structured, and
+> committed it as a finding. The threshold ("few sign changes = arc") was mine, chosen after seeing the
+> data, with nothing behind it.
+>
+> **Audit of every use of this diagnostic today:**
+>
+>     Q2 memory law   1 change / 6 pts   P=0.188   weak  — but corroborated independently
+>     M2 kappa R1     2 / 6              P=0.500   none
+>     M2 kappa R2     2 / 6              P=0.500   none
+>     M2 kappa R3     2 / 6              P=0.500   none
+>     R6 b R1/R2/R3   3,4,3 / 9 pts      P=0.36/0.64/0.36   none
+>
+> **Not one clears p < 0.05 on signs alone.** Q2's conclusion survives because it never rested on the
+> signs: its hold-out errors were **+6.7%, +6.8%, +6.7% — one direction, near-identical magnitude, three
+> times** — and fixing the model cut hold-out error from 6.8% to 0.1%. That is the evidence. The sign
+> pattern was decoration I mistook for the argument.
+>
+> **What remains true here:** the leg's own method note says the residual drift of S/n² *is* absorbed by
+> `c`, and if that drift is n-dependent then κ takes the difference. **That is a real structural concern
+> and it is untested** — 6 points cannot settle it. The 3-parameter refit below moves the filed spread
+> +4.6%, which with 6 points and 3 parameters is not evidence either.
+>
+> **Status: the concern is open and unmeasured, not demonstrated.** Settling it needs more n values,
+> which is cheap here — recorded as a to-do rather than a result.
+
 **Sensitivity (6 points, 3 parameters — a check, not a new result):** adding an n-linear term moves the
 individual κ by −1.2%, −1.2%, +1.1%, and the **filed relative spread from 0.5120 → 0.5357 (+4.6%)**.
 
