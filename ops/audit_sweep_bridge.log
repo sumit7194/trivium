@@ -26,8 +26,7 @@ audit_sweep on /Users/sumit/Github/TheBridge   (159 docs)
       FALSIFICATION_V2.md:43  | **R9** ✓ DONE 2026-07-26 — **UNDECIDED(extraction unstable); R6's numbers explained** · 
           NEXT LINE (where the defence lives): | **R8** ✓ DONE 2026-07-26 — **SURVIVES** · **applies L9 (quantum's lesson) to our own ban
 
-[3] shell checks silent on failure (`&& echo` with no `|| echo`) — 1 hits
-      /Users/sumit/Github/TheBridge/ops/bridge_pulse_stop.sh:10:  # `kill $P && echo ...` was silent on failure -- and a stop 
+[3] shell checks silent on failure (`&& echo` with no `|| echo`) — 0 hits
 
 [4] retraction below the fold — 17 hits
       FALSIFICATION_LEDGER.md:230/293 (78% in)  theorem-backed (Collins–d'Inverno–Vickers 1990, *Class. Quantum Grav.* **7**, 20
@@ -36,10 +35,21 @@ audit_sweep on /Users/sumit/Github/TheBridge   (159 docs)
       CAPSTONE.md:247/333 (74% in)  plus convergence; the mechanism was retracted and a connectivity assertion insta
       FALSIFICATION_V2.md:23/107 (21% in)  | **L10** | **Every mechanism or external-authority claim carries (a) a number f
       legH_horizon_learnability/FINDINGS.md:44/124 (35% in)  fails"), **the constructive-recipe claim is withdrawn.**
-      legW_remnant_audit/FINDINGS.md:209/335 (62% in)  ### Retraction: the extraction never hallucinated
+      legW_remnant_audit/FINDINGS.md:113/338 (33% in)  > **⚠️ RETRACTED — see [Retraction: the extraction never hallucinated](#retracti
       ops/STATUS_FILE.md:300/301 (99% in)  Announcement withdrawn to the peer rather than quietly superseded. The file is n
 
-[5] findings doc with NO artifact of any kind — 9 hits
+[5] superlative/universal with an unstated set — 18 hits
+      PROGRAM_II.md:206  > extrapolated from 9 of 16 components. It was wrong by ~15%, and ansatz corrected it themselves: per-
+      PROGRAM_II.md:544  **The byproduct is the larger result: `A1 guard rejections = 0 of 599`.** dH spans 1.672e-13 … 2.158e-12
+      SISTER_REQUESTS.md:513  **Status: 4 of 4 sisters reported. Nothing started.**
+      FALSIFICATION_V2.md:25  | **L13** | **A control that cannot fail is not a control — and the check is trivial and almost never run: wha
+      FALSIFICATION_V2.md:26  | **L14** | **Held-out validation catches overfitting, not confounding — a nuisance constant generalises flawl
+      legQ_geometrizes_integrability/FINDINGS.md:122  - **7 of the 10 integrable-entry pairs are now rigorously proven distinct** (order-0 Ricci/Segre
+      legY_ck_adjudication/PREREGISTRATION.md:79  **Disclosure:** this amendment was made *after* observing that 6 of 8 CK signatures exceeded the 600 s
+      legY_ck_adjudication/FINDINGS.md:13  instrument); **7 of 10** integrable pairs are now **rigorously proven distinct**; and the rest — including
+      ... 10 more
+
+[6] findings doc with NO artifact of any kind — 9 hits
       falsification/K5_drum_learnability   (0 .py files)
       leg4_conjecture_handoff   (1 .py files)
       leg5_strong_field_curriculum   (1 .py files)

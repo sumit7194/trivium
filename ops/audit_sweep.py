@@ -85,6 +85,40 @@ def check_buried_caveat(root, docs):
                 break
     return hits
 
+def check_unstated_enumeration(root, docs):
+    """quantum's trigger, derived from bridge's own error. bridge wrote "the only leg of
+    31 with neither code nor artifacts" -- a sweep of ONE SUBDIRECTORY reported as a
+    repo-wide result. Eight further directories qualified.
+
+        "The only one of 31" is a satisfying sentence and I never asked what the 31 was.
+
+    Not a wrong measurement: a CORRECT measurement over a set whose boundary was never
+    checked. And the count is what makes it sound audited -- a bare "the only one" invites
+    less scrutiny than a number does, because the number implies someone enumerated.
+
+    TRIAGE: fine if the enumeration is stated nearby. A hit is a superlative or a
+    universal whose SET is not defined in the same sentence."""
+    # FIRST VERSION WAS TOO BROAD AND IS RECORDED AS A FAILURE OF THIS TRIGGER. It
+    # matched "the only|all N|every one of|N of N|the first|the sole" and returned 171
+    # hits on one repo -- against quantum's usable threshold, "reading them took under a
+    # minute". Most were legitimate ("all 8 symmetries of the square", "the first move"),
+    # with their sets defined right there. A trigger derived from ONE instance does not
+    # automatically generalise, and a check nobody will read is as inert as one that
+    # cannot fire.
+    #
+    # Narrowed to the shape the original error actually had: a SUPERLATIVE BOUND TO A
+    # COUNT -- "the only one of 31", "1 of 31", "none of the 12". The count is what makes
+    # it sound audited, and it is the part that was wrong.
+    pat = re.compile(r"\b(the only|the sole|none)\b[^.]{0,40}\b(of|in|among)\b\s*"
+                     r"(the\s+)?\d+|\b\d+\s+of\s+(the\s+)?\d+\b", re.I)
+    hits = []
+    for f in docs:
+        for i, line in enumerate(f.read_text(errors="ignore").splitlines(), 1):
+            if pat.search(line):
+                hits.append((rel(f, root), i, line.strip()[:110]))
+    return hits
+
+
 def check_unproduced_numbers(root):
     """quantum's 16: for every number in a doc, can committed code produce it? Weak
     proxy -- flags study dirs holding a findings doc but no artifact at all."""
@@ -121,8 +155,13 @@ def main(root):
     print(f"\n[4] retraction below the fold — {len(h)} hits")
     for f, i, tot, pct, t in h[:8]: print(f"      {f}:{i}/{tot} ({pct}% in)  {t}")
 
+    h = check_unstated_enumeration(root, docs)
+    print(f"\n[5] superlative/universal with an unstated set — {len(h)} hits")
+    for f, i, t in h[:8]: print(f"      {f}:{i}  {t}")
+    if len(h) > 8: print(f"      ... {len(h)-8} more")
+
     h = check_unproduced_numbers(root)
-    print(f"\n[5] findings doc with NO artifact of any kind — {len(h)} hits")
+    print(f"\n[6] findings doc with NO artifact of any kind — {len(h)} hits")
     for d, npy in h: print(f"      {d}   ({npy} .py files)")
 
     print("\nNo check here can certify anything. Each needs triage, and each is cued by\n"
