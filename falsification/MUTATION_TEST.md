@@ -41,3 +41,50 @@ Passing gates on **correct** artifacts, plus failing on **corrupted** ones, show
 the data. It does not show the reduction is the right one — `S_at()` and the Fisher contingency table
 could both be wrong in a way the gate faithfully reproduces. **A gate protects a number against drift; it
 does not make the number true.**
+
+---
+
+# Round 2 — mutating the assertions that carry the *conclusions*
+
+Round 1 mutated the **inputs** and confirmed the gates go red. It never asked whether the specific
+assertions carrying the *claims* were sensitive. quantum found the answer in their own gate:
+
+    check("strip control STILL fails as documented", 0.496, ">", 0.1)
+
+`assert 0.496 > 0.1` — a literal typed against a threshold chosen. Reads no artifact, cannot fire.
+Both of my gates had the same shape.
+
+| where | typed form | now |
+|---|---|---|
+| `gate_s5.py` clip band — *is the residual spread the theory's or my floor's?* | computed from `WANT`, i.e. two constants I typed, and only **printed** | derived from the regenerated spreads, and asserted |
+| `gate_boundary.py` deformed-δ count | compared against the literal `1254`, two lines below the code that **measures** that ratio | compared against the measured `ctrl["g3_control"]` |
+
+## Directional mutation — the test has to be able to falsify
+
+First attempt failed to fire either. Two separate reasons, both worth keeping:
+
+**1. I mutated in the non-falsifying direction.** Lowering the control makes it *easier* for deformed δ
+to exceed it, so `above` stayed at 4. Raising it ×6 gives `4 → 0`. **A mutation that cannot move the
+assertion tests nothing, and looks exactly like a passing test.**
+
+**2. I was testing uncommitted fixes.** The clone came from `HEAD`; the fixes were in the working tree.
+So round 2 ran against the *old* gates and I nearly recorded their behaviour as the new gates'. Same
+class as the `.gitignore` finding — **the artifact under test was not the artifact I had changed.**
+
+## A ratio gate is easiest to pass when its denominator is broken
+
+With both fixed, the G3 check fires (`4 → 0`). The Q2 clip band **still passed on corrupt data**:
+
+    PASS  clip band 0.00006%  vs corner spread 399.97303%  ->  band/spread = 0.0000
+
+Lifting the near-0.5 eigenvalues blew the corner spread to 399.97%, and the inflated denominator drove
+the ratio to zero — which the gate read as healthy. **Sensitivity inverted with the severity of the
+fault: the more damaged the spectrum, the easier the assertion was to satisfy.**
+
+The gate as a whole still went red (the four spread assertions caught it), so nothing was ever
+mis-certified. But the clip-band check in isolation was worthless in exactly the case it existed for.
+Now bounded absolutely (`band < 5e-4`) with the denominator bounded too; the same mutation fires.
+
+> This is the second-order form of quantum's typed literal. Not an assertion that *cannot* fire — one
+> whose sensitivity runs backwards. **Reading would not have caught it: the ratio form looks strictly
+> better than an absolute threshold, which is why I wrote it that way an hour earlier.**
