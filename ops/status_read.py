@@ -152,6 +152,44 @@ def read_status(session, now=None):
     return Status(session, False, note, d)
 
 
+def confirm_writer(session, wait_s=70):
+    """Resolve an UNKNOWN caused by a dead token: is anyone still WRITING the file?
+
+    THE PROBLEM THIS SOLVES (quantum). ansatz's writer restarted with a new PID and did
+    not refresh the published token. Their payload was correct and current -- job alive,
+    1.86 GB, 28 minutes in -- but every peer read them as UNKNOWN, and under the
+    busy-when-unknown default that means HOLD FOREVER. A correct check against a token
+    the writer forgot to refresh is the same deadlock as an over-tight identity check,
+    reached by a different road.
+
+    WHY A SINGLE SAMPLE CANNOT DECIDE IT. mtime freshness does not separate "writer alive
+    with a stale token" from "writer died 30 seconds ago" -- both leave a recently-written
+    file. Only ADVANCE distinguishes them, and advance needs two samples more than one
+    tick apart. That is why this is a deliberate, slow, opt-in call and not folded into
+    read_status: weakening the default would destroy the token's real value, which is
+    detecting death in the window BEFORE staleness can (quantum measured that gap at
+    ~3 minutes, and it is exactly when a peer decides to launch).
+
+    Returns (writer_alive: bool, why: str).
+    """
+    p = D / f"{session}.status"
+    if not p.exists():
+        return False, "no file"
+    try:
+        m1 = p.stat().st_mtime
+    except OSError as e:
+        return False, f"unstattable: {e}"
+    time.sleep(wait_s)
+    try:
+        m2 = p.stat().st_mtime
+    except OSError as e:
+        return False, f"unstattable on resample: {e}"
+    if m2 > m1:
+        return True, (f"file advanced {m2 - m1:.0f}s over a {wait_s}s window -- someone IS "
+                      f"writing it; the published token is stale metadata, not a dead session")
+    return False, f"file did not advance over {wait_s}s -- nobody is writing it"
+
+
 def survey(sessions=None):
     """All peers at once. Sessions default to whatever .status files exist."""
     if sessions is None:
