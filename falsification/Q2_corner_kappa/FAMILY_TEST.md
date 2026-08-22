@@ -79,6 +79,35 @@ quartic order** — a second direction needs a sextic term or a different lattic
 > mean the coupling difference grows with resolution, and the invariance seen at s=3 was a small-l
 > accident.
 
+> ### ⚠️ THE MECHANISM IS ALREADY FALSIFIED — by quantum's replication, before s=4 ran
+>
+> They ran the six-kernel test at s=2 in their own geometry. **The conclusion replicates and the
+> mechanism does not:**
+>
+>     denominator moves 3.5x on out6 alone     (mine 3.3x)   REPLICATES
+>     out5 changes nothing                                    REPLICATES
+>     numerator 4.766e-05 -> 4.920e-05, +3.2%                 DOES NOT
+>
+> **Their out6 shift landed 1.5e-06 OUTSIDE their in-family range.** Mine landed inside.
+>
+> **Which step of my reasoning failed:**
+>
+>     1. Q2a forces agreement with m² + k² as k→0                      right
+>     2. so at k=0 exactly every kernel IS m² — mode identical          right
+>     3. THEREFORE the shift is identical                              *** WRONG ***
+>
+> **The mode is identical; its effect on B is not.** The shift measures how the mode *couples to the
+> rest of the spectrum*, and that coupling is a **bulk** property — which is exactly what out6 perturbs.
+> Step 3 confused the mode with its consequence.
+>
+> **So the invariance was never a consequence of admissibility.** It was the coupling difference being
+> too small to move a max−min over five numbers *in my data*. Theirs is 3% larger and just clears it.
+> As they put it: **a max−min over five numbers is one bad draw from being moved by any of them.**
+>
+> **REVISED PREDICTION for s=4, weakened before the run rather than after it:** the numerator moves by a
+> **few percent, not zero**, and the denominator still moves several-fold — so **the conclusion survives
+> and the explanation does not.**
+
 *Setup correspondence: s=4 will run at l/L = 0.025…0.125, the same grid as s=3, so the comparison is
 internal. The absolute s does not matter; matching does.*
 
