@@ -49,7 +49,15 @@ ratio = band / GOT[(1e-14,"3p")][1]
 # lifting the near-0.5 modes blew the corner spread to 399.97%, which drove band/spread
 # to 0.0000 and the ratio test PASSED on thoroughly corrupt data. Fails safe in exactly
 # the wrong direction. So bound the band ABSOLUTELY as well, and bound the denominator.
-band_ok = ratio < 0.01 and band < 5e-4 and GOT[(1e-14,"3p")][1] < 1.0
+# TWO-SIDED. My first fix bounded the denominator only from ABOVE, because an
+# EXPLODING spread was the failure I had happened to observe. quantum's additive-offset
+# direction shows a COLLAPSING denominator rescues it just as well: a common shift to
+# all four spectra drove the corner spread to 0.00002% and this assertion passed again,
+# on data where every other check was red. spread() is 100*(max-min)/|mean| -- the exact
+# relative form -- so both ends of its denominator are attack surface.
+# quantum's general rule: A RATIO MAY ONLY BE TRUSTED WHERE ITS DENOMINATOR IS PINNED.
+_cs = GOT[(1e-14,"3p")][1]
+band_ok = ratio < 0.01 and band < 5e-4 and 1e-3 < _cs < 1.0
 ok &= band_ok
 print(f"\n  {'PASS' if band_ok else '*** FAIL ***'}  clip band {band:.5f}%  vs corner "
       f"spread {GOT[(1e-14,'3p')][1]:.5f}%  -> band/spread = {ratio:.4f}  (gate: < 0.01)")
