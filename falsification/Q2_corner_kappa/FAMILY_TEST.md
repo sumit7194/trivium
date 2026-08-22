@@ -59,8 +59,29 @@ spanning for the provenance objection: **independent choosers are obliged to lan
 provenance cannot matter when the choice is unique. The residual provenance is **the lattice and the
 quartic order** — a second direction needs a sextic term or a different lattice.
 
-## Not yet checked
+## Not yet checked — with the prediction registered before the run
 
 **One resolution.** The question was whether the fraction *moves*, which is internal to a resolution.
-**Whether the numerator's invariance holds at s=6 is unchecked** — if out6's shift falls outside the
-in-family range at higher resolution, this picture changes. Cheap to test, not claimed.
+**Whether the numerator's invariance holds at higher s is unchecked.**
+
+**PRE-REGISTERED, 2026-08-23, before s=4 runs** (and before the box is free to run it):
+
+> **Prediction: the numerator stays invariant and out6 remains the only kernel that widens the
+> denominator.**
+>
+> Reasoning, so the prediction is falsifiable rather than a hedge: the shift is the zero mode's
+> contribution to B, and the zero mode is `k=0`, where **every admissible kernel reduces to m²** — that is
+> the Q2a gate. So the *mode* is identical across kernels by construction and only its *coupling to the
+> bulk* differs, which is a higher-order effect. **The denominator has no such constraint**: B itself is a
+> bulk quantity and out6 perturbs the bulk in a direction the others do not.
+>
+> **What would falsify it:** out6's shift landing outside the in-family shift range at s=4. That would
+> mean the coupling difference grows with resolution, and the invariance seen at s=3 was a small-l
+> accident.
+
+*Setup correspondence: s=4 will run at l/L = 0.025…0.125, the same grid as s=3, so the comparison is
+internal. The absolute s does not matter; matching does.*
+
+**Held rather than run**, because quantum's s=6 replication has the box: available memory is **3.05 GB**
+against a projected **2.8 GB** peak, and their job spikes to ~7 GB at its large-*l* calls. **Running now
+would overcommit exactly as I warned ansatz against this morning.** Queued for when their run finishes.
