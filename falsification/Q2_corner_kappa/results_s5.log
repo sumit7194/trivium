@@ -1,3 +1,7 @@
+*** LABEL CORRECTION: this run is s=5, not s=4 as the first line says. ***
+*** The parameter line was edited and the print statement was not. Parameters below ***
+*** are correct: L=800, m=0.002, m*L=1.6, l=20..100. results_s4.log is the real s=4. ***
+
 s=4: L=800 m=0.002 m*L=1.6 l=[20, 30, 40, 50, 60, 70, 80, 90, 100]
               nn done [314s]  banked
         improved done [333s]  banked

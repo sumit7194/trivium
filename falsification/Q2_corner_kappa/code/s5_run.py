@@ -51,7 +51,7 @@ def S_at(ev, floor):
 
 if __name__=="__main__":
     L, m, ls = 800, 0.002, list(range(20,101,10))
-    print(f"s=4: L={L} m={m} m*L={m*L} l={ls}", flush=True)
+    print(f"s=5: L={L} m={m} m*L={m*L} l={ls}", flush=True)
     # PER-REGULATOR CHECKPOINT. The first s=5 attempt lost 340s of completed work to
     # the fifth power cut in three days, because it held every spectrum in memory and
     # wrote nothing until all four regulators finished. G3's runs survive cuts because
