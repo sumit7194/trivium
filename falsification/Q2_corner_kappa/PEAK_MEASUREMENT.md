@@ -247,3 +247,63 @@ earlier value, so this is not one study being pulled to match.
 **Conclusion unchanged: 13.55 and 14.09 GB against 7.0 GB free.** The margin was never close enough for
 the difference between 3.9% and 15% to matter — which is why the confound is worth naming rather than
 quietly benefiting from.
+
+---
+
+# RETRACTION — s=6 was never out of reach. It runs in 15.5 minutes.
+
+Everything above concluding *"s=6 IS NOT RUN"* is **withdrawn**. The user asked the question none of the
+three sessions had asked: **"did you try it, or just compute?"**
+
+**We computed and declined. Nobody tried.**
+
+    l=96     169.3s   rss 3.30 GB   swap 0.00 GB
+    l=108    231.6s   rss 3.07 GB   swap 0.00 GB
+    l=120    435.2s   rss 3.12 GB   swap 1.22 GB
+    COMPLETED in 929s
+
+## The refusal was wrong twice over
+
+**1. The feasibility comparison was never tested.** *"Requires 13.55 GB, box has ~10 GB available,
+therefore out of reach."* That comparison silently assumes **`available` is the ceiling.** It is not:
+
+    RAM 16.0 GB + dynamic swap into 22 GB of free disk  ~=  38 GB addressable
+
+And the prediction behind the refusal — *dense eigendecomposition will thrash* — had **zero observations
+supporting it.** quantum checked: this machine's `Swapouts` counter read **0**. It had never swapped, so
+there was no history from which that expectation could have been formed.
+
+**2. The memory number was itself 40% high.** Predicted **13.55 GB**; observed peak **~7.8 GB**.
+
+That is the part that matters most, because that number had passed every diagnostic built today —
+hold-out validated, residual-sign checked, cross-checked against quantum's independent study at 3.9%.
+
+> **Every check we built validates the law inside the measured range.** Hold-out at l ≤ 80 → 100 does not
+> certify l = 100 → 120, and it was quoted as though it did. An extrapolation validated one step in is
+> still an extrapolation at the step that matters.
+
+## The shape all three sessions landed in
+
+ansatz went to examine their access pattern and found their 38 GB was **not a property of the problem**:
+63 bytes per entry to hold integers that fit in 8, because assembly kept Python objects before reducing
+mod p. Reducing during assembly gives **9.51 GB — fits in RAM**, no rewrite required.
+
+> *"does not fit" was wrong, and "fits slowly" would also have been wrong. Both are claims about the
+> machine. The truth was a claim about my representation, and I never examined it because the arithmetic
+> closed the question first.* — ansatz
+
+**A correct measurement entering an untested inference, with the inference wearing the measurement's
+authority.** Three sessions, three studies, same step.
+
+## Also: the watchdog was watching the wrong quantity
+
+The guard written *to protect this very run* aborted on "no progress while **free** memory < 150 MB."
+`free` sat at 0.06–0.18 GB repeatedly while the run completed normally. **Swapouts went 0 → 84,800** —
+the unambiguous signal — and the watchdog could not see it. quantum flagged this before the launch and I
+ran anyway. Nothing thrashed, so it cost nothing; it is the same inert-alarm error as this morning,
+committed inside the safeguard for the experiment that disproved the refusal.
+
+## Status
+
+Full four-regulator s=6 running. **s=5 is no longer the last rung**, and quantum's s⁻² scatter over
+s=3,4,5 — recorded this afternoon as permanently blocked — is resolvable after all.
