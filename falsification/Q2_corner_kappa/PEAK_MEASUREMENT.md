@@ -1,5 +1,11 @@
 # What s=6 actually costs — measured, not projected
 
+> **⚠️ THE DECISION IN THIS DOCUMENT WAS REVERSED. s=6 RAN, in 15.5 minutes** — see
+> [RETRACTION](#retraction--s6-was-never-out-of-reach-it-runs-in-155-minutes) near the end. Everything
+> above that point is the reasoning that led to a wrong refusal, kept because the reasoning is the
+> finding: **a measured requirement compared against an untested ceiling.** The cost figures were also
+> ~40% high.
+
 ## Why this was measured at all
 
 The s=6 decision was about to rest on **~7.2 GB**, obtained by scaling s=5's remembered "~5 GB" by
@@ -47,7 +53,9 @@ governs the peak — `l` is.
 **Not stable.** Extrapolating l=100 → 120 across that range gives **7.31 – 9.37 GB**, and nothing in
 this measurement narrows it — tightening the exponent would cost about what running s=6 costs.
 
-## Decision: s=6 is NOT run
+## Decision: s=6 is NOT run  — ⚠️ SUPERSEDED, see the RETRACTION below
+
+> *This section is wrong and is kept for the record. s=6 ran in 15.5 minutes. Do not stop here.*
 
 Against a box reading **6.98 GB free / 10.10 GB available** at its best today, and where s=5's 5.92 GB
 already drove free memory to 0.09 GB with three other sessions resident:
