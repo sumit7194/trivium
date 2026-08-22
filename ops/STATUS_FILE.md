@@ -260,3 +260,42 @@ compressor and 846 pageouts. **The box was under real pressure the entire time t
 calm**, because a guard is only as meaningful as the quantity it watches. This is L13's inert-gate family
 reached by a new route: not a threshold set too loose, but **a threshold set correctly against the wrong
 measurement.**
+
+### An allowlist of my own scripts omits every script I write next
+
+The probe matched `pgrep -f "s5_run.py|g3_overnight.py|kt_screen.py"` — **an allowlist.** I wrote a new
+script, `peak_probe.py`, and my status would have published `idle, 0 MB` while it held gigabytes,
+**immediately after I told a peer the status would carry it.**
+
+Same shape as the inert alarm, one level over: that watched the wrong **quantity**, this watched the
+wrong **set**. Honest mechanism, void coverage, and no test *of the mechanism* can reveal either —
+everything already on the list keeps working perfectly.
+
+Replaced with the criterion that needs no maintaining: **any python process whose cwd is inside this
+repo is my job, whatever it is called.** Verified with a decoy no allowlist could ever have matched — a
+bare `python -c "time.sleep(90)"` with no script name at all:
+
+    state running | job_pids [13411] | rss 9 MB
+
+Testing the enumeration caught a third mistake in passing: `pgrep -x -f '.*[Pp]ython.*'` matched shells,
+and `pgrep -f python` found two processes when three were running. Now enumerated from
+`ps -eo pid=,comm=`. **Three guesses; I checked one, and the other two would have shipped.**
+
+### A check that ran, said nothing, and was scored as a pass
+
+I announced to a peer that I was taking the box for a ~5 GB measurement. **Nothing ran.** The heredoc
+writing the probe was chained behind a `cd` that failed *because I was already in that directory* — `&&`
+short-circuited and the file was never written.
+
+The verification was the interesting part:
+
+    ls .../peak_probe.py && echo "  (written to the right place)"
+
+`ls` failed, `&&` short-circuited, **no output at all** — and I read the absence of an error as success.
+
+> **A check that produces no output on failure is indistinguishable from one that produces no output on
+> success.** I had built a control for exactly this an hour earlier, in a Python harness, and then wrote
+> a shell check with no control in it.
+
+Announcement withdrawn to the peer rather than quietly superseded. The file is now verified by `ls -l`,
+a line count, and an `ast.parse` — three positive signals, none of which can be satisfied by silence.

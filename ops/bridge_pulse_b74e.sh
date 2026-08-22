@@ -50,7 +50,17 @@ while true; do
   #   (b) its cwd is inside my repo     -- from lsof, not inferred from the name
   REPO=/Users/sumit/Github/TheBridge
   pids=""
-  for _p in $(pgrep -f "s5_run.py|g3_overnight.py|kt_screen.py" 2>/dev/null); do
+  # DO NOT ENUMERATE SCRIPT NAMES. That pattern was an ALLOWLIST, and an allowlist of
+  # my own scripts silently omits every script I write next. I launched peak_probe.py
+  # and my status published `idle, 0 MB` while the job held gigabytes -- after I had told
+  # a peer the status would carry it. The guard was watching the wrong SET, which is the
+  # same shape as watching the wrong QUANTITY: honest mechanism, void coverage.
+  # The criterion that does not need maintaining is the one already used for scoping:
+  # a python process whose cwd is inside this repo IS my job, whatever it is called.
+  # Enumerate from ps, not from a pgrep pattern. `pgrep -x -f '.*python.*'` matched shells
+  # and `pgrep -f python` matched two processes when three were running -- I tested both
+  # before trusting either, which is the only reason this line is not a third guess.
+  for _p in $(ps -eo pid=,comm= | awk 'tolower($2) ~ /python/ {print $1}'); do
     case "$(ps -o comm= -p $_p 2>/dev/null)" in
       *python*) ;;
       *) continue ;;
