@@ -1,0 +1,37 @@
+#!/bin/zsh
+# Runs the audit sweeps on every commit, reporting DELTAS against the previous run.
+#
+# WHY A HOOK AND NOT A SCRIPT I RUN. audit_sweep.py is fully mechanical and caught
+# nothing between the two times it ran today -- both times because a peer prompted me.
+# Mechanical was never the property that made a fix stick.
+#
+#   quantum's form, sharper than mine: A CHECK IS DURABLE WHEN IT RIDES ON AN ACTION
+#   ALREADY BEING TAKEN FOR ANOTHER REASON. The hook is not special because it is a
+#   hook; it is special because committing is something I do anyway, so the check costs
+#   no separate act of will. Attach a check to an action nobody performs and it is
+#   decision-gated again with extra steps.
+#
+# This REPORTS and does not block: the sweeps are triage-heavy (1 real hit in ~12 for
+# "independent", 2 in 6 for buried caveats) and a blocking check with that hit rate
+# would be disabled within a day. Blocking is for assertions with a known denominator.
+set -e
+R=$(git rev-parse --show-toplevel)
+S=$R/.git/audit_counts
+C=/Users/sumit/Github/.claude-coordination
+[[ -f $C/audit_sweep.py ]] || exit 0
+
+NEW=$(python3 $C/audit_sweep.py $R 2>/dev/null | grep -oE "— [0-9]+ hits" | grep -oE "[0-9]+" | paste -sd, -)
+APP=$(python3 $C/append_only.py $R "12 hours ago" 2>/dev/null | grep -cE "^  (APPEND-ONLY|SECTIONS-ONLY-ADDED)")
+NEW="$NEW|$APP"
+
+if [[ -f $S ]]; then
+  OLD=$(cat $S)
+  if [[ "$OLD" != "$NEW" ]]; then
+    echo "  audit delta: $OLD -> $NEW  (sweep hits | append-only sections)"
+    echo "  a rise is not necessarily a defect -- see the false-positive notes in the source"
+  fi
+else
+  echo "  audit baseline set: $NEW"
+fi
+echo "$NEW" > $S
+exit 0
