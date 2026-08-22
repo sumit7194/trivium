@@ -299,3 +299,26 @@ The verification was the interesting part:
 
 Announcement withdrawn to the peer rather than quietly superseded. The file is now verified by `ls -l`,
 a line count, and an `ast.parse` — three positive signals, none of which can be satisfied by silence.
+
+---
+
+### The noise was in a different layer from the one I fixed
+
+The alerting fired **29 times in twenty minutes** while I was idle and a peer legitimately held 8 GB —
+a monitor going off on a neighbour working normally. **Noise trains dismissal**, which is precisely how
+I waved through the audit delta that had flagged a wrong claim of mine an hour earlier.
+
+**I diagnosed it correctly and fixed the wrong layer.** The writer's alert lines were retargeted to fire
+only when memory is low *while I hold something*, or when disk is genuinely low — and **the notifications
+continued, because they were never coming from the writer.** They came from the *Monitor's* grep,
+`memfree=[0-2]\.`, matching every routine tick.
+
+> **Two layers, and I changed the one I had just written rather than the one producing the output I was
+> reading.** The thing I had most recently touched was the thing I assumed was responsible.
+
+Both now correct: the writer emits explicit `ALERT` lines for its own conditions, and the Monitor watches
+**those and nothing else** — alerts, failed measurements, writer exits. Silence now means *nothing is
+wrong with mine*, rather than *nothing is happening on the box*.
+
+*Recorded because the diagnosis was right and the repair still missed: knowing what the noise means does
+not tell you where it is produced.*

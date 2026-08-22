@@ -142,6 +142,22 @@ JSON
   sig="$state/$rss"
   if [[ "$sig" != "$prev" ]]; then
     echo "[$now] bridge $state  rss=${rss}MB  memfree=${mfree}GB  disk=${free}GB"
+  fi
+  # ALERT LINE, separate from the state-change line above. A monitor that fires on a
+  # PEER's legitimate footprint is noise, and noise trains dismissal -- which is exactly
+  # how I waved through the delta that had flagged my spanning error. So the alert fires
+  # only on conditions that are MINE or genuinely wrong:
+  #   - my own job running (state change already covers it)
+  #   - free memory low WHILE I HOLD SOMETHING  (my problem)
+  #   - disk nearly full                        (everyone's problem)
+  # It does NOT fire on low memory while I am idle: that is a neighbour working.
+  if [[ "$state" == "running" ]] && (( $(echo "$mfree < 0.3" | bc -l) )); then
+    echo "[$now] ALERT mine-running-and-low-memory rss=${rss}MB free=${mfree}GB"
+  fi
+  if (( free < 5 )); then
+    echo "[$now] ALERT disk-low ${free}GB"
+  fi
+  if false; then
     prev="$sig"
   fi
   echo "[$now] tick $state rss=${rss}MB memfree=${mfree}GB" >> $L
