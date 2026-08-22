@@ -157,3 +157,56 @@ measurement at all, in a different study, from different code.
 
 Best box reading of the day: **7.0 GB free / 10.1 GB available.** s=6 misses on every one of them, and
 the hold-out error is nowhere near large enough to close the gap.
+
+---
+
+# The fitted offset fails quantum's two-routes check — it is a fudge, not a measurement
+
+quantum ran the structural model on their own data and found **no improvement**: their fitted exponents
+were already 3.90–3.99, because their ~30 MB overhead was *measured off an `init` phase and subtracted
+before fitting*, so their exponent was never asked to absorb it. **The fix matters in proportion to how
+much unmodelled overhead the exponent is being made to swallow** — a sharper statement than either of us
+had, and it came from a failed replication.
+
+Then they did the check that matters: fitting the offset as a **free parameter** recovered
+**c = +35.7 MB** against **30.4 MB measured independently** from the phase label. Two routes, no shared
+arithmetic, 15% apart.
+
+**I ran the same check and mine fails.**
+
+My fitted `c` is **+93.5 MB** (or +79.4 MB refitting with two more points). The independently measurable
+quantities from my own phase labels are: correlators `after_corr − base` = **5–6 MB**, and the
+interpreter baseline **47–48 MB**, which is already subtracted. **Nothing measurable equals 79–94 MB.**
+
+The prediction it makes at small `l` also fails:
+
+| l | model | measured | |
+|---|---|---|---|
+| 30 | 0.146 GB | 0.106 GB | **+38%** |
+| 35 | 0.191 GB | 0.157 GB | **+21%** |
+
+And the residuals across the whole range are **structured, not scattered**:
+
+    l=30  -26 MB    l=50   -8 MB    l=80  +68 MB
+    l=35  -20 MB    l=60   +7 MB    l=100 -35 MB
+    l=40  -17 MB    l=70  +30 MB
+
+A smooth arc through zero and back. **`a·l⁴ + c` is still mis-specified for this study** — `c` is
+absorbing an `l`-dependent term (working arrays that scale below l⁴), which is exactly the error I had
+just diagnosed in the *free power law*, one level down. I wrote "a fitted overhead of +94 MB" in a commit
+message as though it were a physical quantity. **It is a fitted fudge that matches nothing.**
+
+*Caveat on the two new points: l=30 and l=35 collected only 3 and 6 samples. They are at the edge of the
+validity guard and are weak evidence individually; the residual structure across all eight points is the
+stronger signal. l=20 and l=25 returned INVALID — too fast to sample — which is precisely the
+`0.0 MB in ?` failure quantum found in their probe, and it also means the original sequential run's
+"l=20: 0.05 GB, l=30: 0.05 GB" readings were never measurements at all.*
+
+## What survives
+
+    s=6 (l=120):  13.52 GB  ->  13.55 GB on the refit
+
+**The decision is insensitive to the defect.** That is worth stating precisely, because it is the third
+time today a conclusion has survived its reasoning: here the survival is *demonstrated* by refitting
+rather than assumed, and the offset term is small compared to the l⁴ term at l=120 — which is why a
+mis-specified `c` cannot move the answer even though it is wrong.
