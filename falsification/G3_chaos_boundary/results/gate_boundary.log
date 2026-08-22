@@ -1,0 +1,22 @@
+B1 — the decisive test
+  PASS  delta=1.3 orbits                               312
+  PASS  delta=1.3 escapes                              2
+  PASS  delta=1.5 orbits                               317
+  PASS  delta=1.5 escapes                              3
+  PASS  Fisher exact p                                 1.0
+    -> BOUNDARY NOT SUPPORTED  (frozen rule: p>=0.05)
+B3 — drift still separates nothing at 3x the sample
+  PASS  KS p (drift_fft)                               np.float64(0.9944)
+  PASS  KS p (drift_naff)                              np.float64(0.884)
+B4 — A1 guard inert
+  PASS  orbits                                         629
+  PASS  rejections at DH_MAX=1e-4                      0
+CONTROL RE-MEASUREMENT — the numbers that WITHDREW the headline
+  PASS  g3_control: n                                  320
+  PASS  g3_control: max/median                         1254
+  PASS  g3_control_spacing: n                          160
+  PASS  g3_control_spacing: max/median                 1238
+  PASS  deformed delta ABOVE the re-measured control   4
+  PASS  original control max/median (now known inflated) 2980
+
+  ALL ASSERTIONS PASS

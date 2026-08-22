@@ -1,0 +1,17 @@
+delta=1.0  momentum-degree=2  coord-degree=0  orbits=40  basis-dim=80  samples=961
+   tol=1e-06  conserved =   3   (null(Z)=15, basis-degenerate=12)
+   tol=1e-07  conserved =   5   (null(Z)=15, basis-degenerate=10)
+   tol=1e-08  conserved =   5   (null(Z)=15, basis-degenerate=10)
+   tol=1e-09  conserved =   5   (null(Z)=15, basis-degenerate=10)
+   tol=1e-10  conserved =   5   (null(Z)=15, basis-degenerate=10)
+   smallest 12 normalised singular values:
+     1.16e-01  1.04e-01  7.99e-02  7.41e-02  4.97e-02  4.26e-02  1.88e-02  5.62e-14  9.74e-15  6.00e-15  3.18e-16  2.02e-16
+
+delta=2.0  momentum-degree=2  coord-degree=0  orbits=40  basis-dim=80  samples=961
+   tol=1e-06  conserved =   3   (null(Z)=14, basis-degenerate=11)
+   tol=1e-07  conserved =   4   (null(Z)=14, basis-degenerate=10)
+   tol=1e-08  conserved =   4   (null(Z)=14, basis-degenerate=10)
+   tol=1e-09  conserved =   4   (null(Z)=14, basis-degenerate=10)
+   tol=1e-10  conserved =   4   (null(Z)=14, basis-degenerate=10)
+   smallest 12 normalised singular values:
+     1.78e-01  1.63e-01  1.45e-01  1.18e-01  1.13e-01  6.22e-02  4.27e-02  2.04e-03  4.76e-13  1.03e-14  4.14e-16  3.42e-16
