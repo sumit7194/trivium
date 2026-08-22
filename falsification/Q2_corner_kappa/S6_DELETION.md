@@ -86,3 +86,47 @@ would have propagated.**
 *The outcome landed in their bucket 1 (20–45%, "method-intrinsic"), which was uncontaminated. The
 leak-informed bucket 2 is not where the answer fell, so their pre-registration retains its value where it
 was tested — by luck, not by design.*
+
+
+---
+
+## quantum's s=6 lands at 55.5%, and decomposing it inverts the day's story
+
+**Received with the bucket named first and no interpretation attached, as they pre-committed.**
+*Bucket 3: "much larger — then mine is optimistic and the open systematic is worse than recorded."*
+
+    my s=6            23.0%          their s=1,2,3   21.6 / 41.5 / 27.5%
+    their s=6         55.5%          2.4x apart at matched resolution, same four kernel specs
+
+**They declined to interpret it, on the grounds that any explanation would be constructed after seeing
+the disagreement. Correct — so here is the one step that is arithmetic rather than explanation.**
+They sent an absolute alongside the ratio, which is what `family_test.py` pre-registered as the thing to
+always report. **Decomposing both sides into their two terms:**
+
+    signal      (max-min of B, k0 kept)   mine 1.390e-05   theirs 1.355e-05    2.6% APART
+    non-common  (max-min of the shift)    mine 3.200e-06   theirs 7.520e-06    2.35x APART
+    fraction                              mine    23.0%    theirs    55.5%
+
+> **The denominators agree to 2.6% across two lattices. The whole 2.4x sits in the numerator.**
+
+**That is the reverse of what this study concluded today.** The Q2 finding all afternoon was that the
+*denominator* is arbitrary — it moved 3.3x on a single kernel substitution — and that the ratio is
+therefore not a quantity. **At s=6 with matched kernel specs the denominator turns out to be the STABLE
+term, agreeing across square and triangular geometry to 2.6%, and the numerator is what disagrees.**
+
+*And that fits their other result rather than fighting it.* The sign of the zero-mode effect **flips**
+between s=1 and s=6 — deletion shrinks the regulator spread at low resolution and widens it 32% at s=6.
+**The numerator is the term whose behaviour is not stable across resolution, and the numerator is the
+term that disagrees.** Two independent symptoms of the same instability.
+
+**ASSUMPTION, stated because it changes the multiplier and not the conclusion:** this takes their 55.5%
+as `non-common / signal-with-k0`, matching my definition. If their denominator is instead the
+*without-k0* range 1.789e-05, the numerator is 9.93e-06 and the gap is **3.10x**. **Either way the
+disagreement is in the numerator.** Asked rather than assumed.
+
+**NOT CONCLUDED, and deliberately:** whether 2.4x is a real geometric difference or two samples of an
+unstable quantity. *What can be said without construction is that the pre-commitment was asymmetric and
+its own logic supplies half the reading:* quantum committed in advance that **a MATCH would not have
+upgraded the claim to method-intrinsic, because the kernel family is shared.** The mirror holds — the
+shared set could not have produced a match, so **a mismatch points at the unshared set** (lattice
+geometry, code, square-root algorithm), which is where §2 says to look anyway.
