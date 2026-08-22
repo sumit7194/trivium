@@ -40,11 +40,22 @@ for name, Kfun in [("R1 bare NN", R6.M2.K_bare), ("R2 improved", R6.M2.K_impr), 
     print(f"  {name:<16} {coef[1]:10.4f}  {sgn:<12} {ch:7d}  {np.abs(res).max():10.3e}")
 
 print(f"\n  {len(ns)} points. Scatter would give roughly {len(ns)//2} sign changes.")
-few = [r for r in rows if r[3] <= 3]
-if few:
-    print(f"  -> {len(few)}/{len(rows)} regulators show <=3 changes: SMOOTH ARC, the")
-    print(f"     3-parameter form is missing a term and b is absorbing part of it.")
-    print(f"     That is R6's own pre-registered UNDECIDED cause, now MEASURED.")
-else:
-    print(f"  -> all regulators scatter: the 3-parameter form is adequate, and R6's")
-    print(f"     pre-registered fold-into-b cause is RULED OUT as the explanation.")
+# THE NULL, which the first version of this script did not have. Under scatter, sign
+# changes among n residuals are Binomial(n-1, 1/2). Without this the threshold is
+# whatever the author picks after seeing the data -- and mine printed "SMOOTH ARC,
+# missing a term" for a pattern with P = 0.36. The same omission had already put an
+# unsupported finding into M2's FINDINGS, since 2 changes in 6 points is P = 0.500.
+from math import comb
+opp = len(ns) - 1
+def p_le(k):
+    return sum(comb(opp, j) for j in range(k+1)) / 2**opp
+print(f"\n  NULL: sign changes ~ Binomial({opp}, 1/2), mean {opp/2:.1f}")
+for name, b, sgn, ch, mx in rows:
+    p = p_le(ch)
+    verdict = "SUPPORTED" if p < 0.05 else ("weak" if p < 0.2 else "NO SUPPORT")
+    print(f"    {name:<16} {ch} changes   P(X<={ch}) = {p:.3f}   {verdict}")
+print(f"\n  -> R6's pre-registered cause -- a subleading term folded into b -- is NEITHER")
+print(f"     demonstrated NOR ruled out by this test. At {len(ns)} points the sign statistic")
+print(f"     cannot resolve it, and saying so is the result.")
+print(f"  -> Worth noting separately: R3's max residual is {rows[2][4]:.2e}, ~10x the other")
+print(f"     two. That is a magnitude signal, not a sign signal, and it is not tested here.")

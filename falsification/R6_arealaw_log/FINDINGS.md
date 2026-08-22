@@ -117,3 +117,34 @@ is to resolve, because the protected 3D subleading term is a constant, not a log
 Reuses `M2_arealaw/code/m2_arealaw.py` (`extract_kappa`, `K_bare/K_impr/K_hd/K_mid`). No sister — the
 free-scalar EE instrument is bridge-local. Companion kill to M2 (κ scheme-dependent); together they say:
 **of {exponent, κ, log}, only the exponent is universal — and in 3D the log was never going to be.**
+
+---
+
+## Audit 2026-08-22 — the pre-registered "folded into b" cause: still untestable at 9 points
+
+R6's PREREGISTRATION named the leading candidate for its result being wrong — *"further subleading terms
+that a 3-parameter fit may fold into b"* — and the status was downgraded to UNDECIDED partly on that
+basis, with the note that *"the measurement now demands an explanation we do not have."*
+
+The residual-sign diagnostic tests exactly that, and did not exist when R6 was written. **It does not
+resolve it.**
+
+    regulator             b      residual signs   changes   P(X<=changes)
+    R1 bare NN       2.3216      +--++++--            3        0.363
+    R2 improved      3.7185      +-+++---+            4        0.637
+    R3 higher-deriv  0.5221      -++++---+            3        0.363
+
+Under scatter, sign changes among n residuals are **Binomial(n−1, ½)** — here Binomial(8, ½), mean 4.
+**Nothing observed is distinguishable from noise.** The cause is neither demonstrated nor ruled out, and
+at 9 points the sign statistic cannot resolve it. *Saying so is the result*: R6 stays UNDECIDED, and now
+one specific candidate explanation is recorded as **tested-and-inconclusive** rather than untested.
+
+**The first version of this script had no null and printed "SMOOTH ARC, the form is missing a term"** for
+P = 0.36. The same omission had already put an unsupported finding into M2's FINDINGS, where 2 sign
+changes in 6 points is **P = 0.500** — a coin flip. Both corrected; the null is now in the script so the
+threshold cannot be chosen after seeing the data.
+
+**One thing worth following, not tested here:** R3's maximum residual is **7.52e-01, roughly 10× the
+other two regulators**. That is a *magnitude* signal rather than a sign signal, it is not what this test
+looks at, and R3 is also the regulator whose fitted b (0.5221) sits furthest from the others. Recorded as
+an open lead.

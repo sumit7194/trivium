@@ -6,6 +6,14 @@
   R3 higher-deriv      0.5221  -++++---+          3   7.518e-01
 
   9 points. Scatter would give roughly 4 sign changes.
-  -> 2/3 regulators show <=3 changes: SMOOTH ARC, the
-     3-parameter form is missing a term and b is absorbing part of it.
-     That is R6's own pre-registered UNDECIDED cause, now MEASURED.
+
+  NULL: sign changes ~ Binomial(8, 1/2), mean 4.0
+    R1 bare NN       3 changes   P(X<=3) = 0.363   NO SUPPORT
+    R2 improved      4 changes   P(X<=4) = 0.637   NO SUPPORT
+    R3 higher-deriv  3 changes   P(X<=3) = 0.363   NO SUPPORT
+
+  -> R6's pre-registered cause -- a subleading term folded into b -- is NEITHER
+     demonstrated NOR ruled out by this test. At 9 points the sign statistic
+     cannot resolve it, and saying so is the result.
+  -> Worth noting separately: R3's max residual is 7.52e-01, ~10x the other
+     two. That is a magnitude signal, not a sign signal, and it is not tested here.
