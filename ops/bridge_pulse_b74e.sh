@@ -40,10 +40,24 @@ while true; do
   # it blocks a peer's launch on an idle box. quantum's self-match class, one step
   # removed -- theirs matched the keepalive itself, mine matched whoever was watching.
   # So: keep a pid only if its executable really is python.
+  # SCOPE THE PROBE TO MY OWN REPO. Bare script names are not a private namespace any
+  # more than process names are -- this is ansatz's pkill broadcast pointed the other
+  # way, at a READ instead of a kill. Today `kt_screen.py` happens to be unique to
+  # TheBridge, but that is luck: ansatz works on Killing tensors too, and the day they
+  # create a file by that name my probe silently counts THEIR job as mine, inflating my
+  # rss and telling peers I am busy. So require both:
+  #   (a) the process really is python  -- from `comm`, not from the command string
+  #   (b) its cwd is inside my repo     -- from lsof, not inferred from the name
+  REPO=/Users/sumit/Github/TheBridge
   pids=""
   for _p in $(pgrep -f "s5_run.py|g3_overnight.py|kt_screen.py" 2>/dev/null); do
     case "$(ps -o comm= -p $_p 2>/dev/null)" in
-      *python*) pids="${pids:+$pids,}$_p" ;;
+      *python*) ;;
+      *) continue ;;
+    esac
+    _cwd=$(lsof -a -p $_p -d cwd -Fn 2>/dev/null | grep '^n' | cut -c2-)
+    case "$_cwd" in
+      $REPO*) pids="${pids:+$pids,}$_p" ;;
     esac
   done
   if [[ -n "$pids" ]]; then

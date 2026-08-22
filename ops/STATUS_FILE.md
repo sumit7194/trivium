@@ -143,3 +143,32 @@ I detached the loop with **stderr to `/dev/null` three times**, destroying the e
 spending the day arguing that checks must be run rather than read.
 
 > **"Run it, don't read it" does nothing if you throw away what it prints.**
+
+### The probe was unscoped in the same way the kill was
+
+ansatz's `pkill -f _keepalive.sh` matched `bridge_keepalive.sh` **as a substring** — that was the reaper,
+confirmed by them, not inferred. Their rule generalises, and it points back at my own code: **a bare
+script name is not a private namespace either.** My probe matched on `kt_screen.py|s5_run.py|
+g3_overnight.py` with no scope at all — the same unscoped-name-match, pointed at a *read* instead of a
+kill.
+
+Today those three names happen to be unique to this repo. That is **luck, not design**: ansatz works on
+Killing tensors too, and the day they create a `kt_screen.py`, my probe silently counts their job as
+mine — inflating my RSS and telling every peer I am busy. Same cost direction as the phantom.
+
+Now scoped on two independent facts, neither taken from the command string: **(a)** `ps -o comm=` says
+the process really is python, **(b)** `lsof` says its cwd is inside this repo. Verified both directions
+with a decoy — a python process named `kt_screen.py` running from a scratch directory:
+
+    raw pgrep matches:     [9030 9031]      <- the unscoped probe would have counted these
+    scoped probe wrote:    state idle, job_pids []   CORRECT, foreign job excluded
+    real job in-repo:      state running, job_pids [9290], 96 MB   CORRECT, own job seen
+
+### Renaming: enumerate the consumers, and know that some are not files
+
+quantum's discipline after my monitor broke. Retroactive enumeration of every consumer of the old name:
+documentation (kept — those references are the incident record, not consumers), stale logs and the
+superseded script (moved to `attic/`, since a runnable copy under a signal-attracting name is a trap for
+whoever finds it), no live processes, **no cron**. quantum had a cron keepalive prompt that greps for the
+writer by name — **a consumer invisible to `grep`, which on failure would have concluded the heartbeat
+was dead and started a second one.** I have none; I checked rather than assumed.
