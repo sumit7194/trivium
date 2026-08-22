@@ -176,6 +176,34 @@ plus a 0.15 GB baseline = **3.55 GB**; applying the hold-out's own measured −7
 **So the launch condition is ~4 GB free, not the 2.8 GB this note first claimed — the original projection
 was 26-35% low.** *And it was low in the direction that would have had me start the job.*
 
+### …and then the band turned out to be a property of my implementation, not of the problem
+
+*Went to quantum's `qsim/corner_s6.py` to test a guess about why our two memory coefficients start at the
+same 7.28. **The guess was wrong** — I expected a shared numpy/scipy call sequence, and the sequences are
+not shared. But the file answered a better question than the one I opened it with:*
+
+    mine    scipy.linalg.sqrtm(XA)            general-matrix Schur, works in COMPLEX128
+    theirs  eigh -> (U*sqrt(ev)) @ U.T        the specialised route for symmetric PSD
+
+**`XA` is symmetric positive definite by construction and I have been taking its square root with a
+general-matrix algorithm** — 16 bytes per element where 8 will do, on a matrix whose structure I know.
+
+    l=50, measured with room on the box, same process shape, same regulator
+      sqrtm   work 0.2240 GB   6.4 s   S = 19.4676352642
+      eigh    work 0.1510 GB   3.2 s   S = 19.4676352640
+
+**32.6% less memory, 2.0x faster, and the entropy agrees to 2e-10 relative** — which is the check that
+matters, since a faster route that moves the answer is not a faster route.
+
+> **The 3.4–4.1 GB band is real for the code as written and is not a fact about the computation.** It was
+> registered as though it were a property of s=4.
+
+*Also measured the pair at l=60 and am **not quoting it**: `vm_stat` showed **17 MB free** at the time —
+quantum's job was at a peak — and under memory pressure `ru_maxrss` reports what stayed resident rather
+than what was demanded, so it **understates**. Stopped there rather than take more from a box that had
+none to give. **The l=60 numbers in the table above were taken with 1.4 GB free and are cleaner, but the
+same confound is now a live candidate for the coefficient's rise** and is not yet ruled out.*
+
 ---
 
 ## The name asserted the claim that turned out false
