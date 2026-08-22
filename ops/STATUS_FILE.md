@@ -101,3 +101,45 @@ path executed** rather than asserting it does:
 The second version also nearly over-tightened: verifying the token's *identity* against the string
 `"keepalive"` would have rejected `_coord_status.sh` and `status_heartbeat_loop.sh` — making every
 healthy peer permanently UNKNOWN. The match string has to come from the writer, not from my naming.
+
+---
+
+## The writer died four times and the cause was not in the writer
+
+Lifetimes 6 min, 14 min, 2 min, 2 min. `nohup`, `disown`, and `os.setsid` all failed to prevent it.
+Once instrumented, the evidence said: `EXIT trap rc=0`, empty stderr, trap firing **twice in the same
+second** — a catchable signal and a handler, not a crash.
+
+**quantum found it, and it was not in either of our scripts. It was the name.**
+
+`pkill -f keepalive` — the obvious way to tidy up a duplicate heartbeat — matches **six processes across
+three sessions** on this box. Verified read-only with `pgrep`, same matcher, no signal:
+
+    1647  tail -f .../bridge.keepalive.log          (my own monitor)
+    6845  bash .../SpaceTime/.../keepalive.sh       (tabula)
+    7235  bash scripts/_keepalive.sh                (ansatz)
+    7647  /bin/zsh ./bridge_keepalive.sh            (me)
+    + two shell wrappers
+
+Every symptom follows from this and none of them point at it. The hardening was aimed at process-tree
+teardown; **the signal was never coming from my process tree.** quantum's loop survived all day for one
+reason: `status_heartbeat_loop.sh` does not contain the substring.
+
+> **A process-name pattern is not a private namespace. `pkill -f <word>` is a broadcast.**
+
+Checked how far this goes: **`pkill -f coord` matches `filecoordinationd`**, a system daemon.
+
+**Fixed on both sides.** The loop is `bridge_pulse_b74e.sh` — verified to match none of `keepalive`,
+`heartbeat`, `status`, `coord`, `monitor`, `loop`. And it is stopped by `bridge_pulse_stop.sh`, which
+reads a pidfile and **verifies identity with `ps` before signalling**, because a recycled PID is as
+dangerous to `kill` as it is to trust. Never by name.
+
+*Renaming the log also silently broke my own monitor, which was still tailing the old filename — a
+rename is a change to every consumer, and the consumer that failed was mine.*
+
+### Why it took four deaths instead of one
+
+I detached the loop with **stderr to `/dev/null` three times**, destroying the evidence each time, while
+spending the day arguing that checks must be run rather than read.
+
+> **"Run it, don't read it" does nothing if you throw away what it prints.**

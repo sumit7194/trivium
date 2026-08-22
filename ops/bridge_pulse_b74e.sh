@@ -5,7 +5,23 @@
 # tabula's point (PROTOCOL 6): a silent monitor is indistinguishable from a dead one.
 # So the log gets a timestamped heartbeat even when nothing is emitted upstream.
 D=/Users/sumit/Github/.claude-coordination
-L=$D/bridge.keepalive.log
+L=$D/bridge.pulse.log
+PIDFILE=$D/bridge.pulse.pid
+# NAME CHOSEN TO COLLIDE WITH NOTHING. This loop was killed four times today by
+# `pkill -f keepalive` run in ANOTHER session -- that pattern matches six processes
+# across three sessions here. nohup/disown/os.setsid were all irrelevant: none of them
+# protect against being signalled by name, and the signal was never coming from my
+# process tree. (quantum's diagnosis; the decisive asymmetry was that their loop
+# survived only because its name lacks the substring.)
+#   A PROCESS-NAME PATTERN IS NOT A PRIVATE NAMESPACE. `pkill -f <word>` IS A BROADCAST.
+# Verified before adopting: 'pkill -f coord' would match filecoordinationd, a system
+# daemon. Stop this loop with ./bridge_pulse_stop.sh, which kills by PID from PIDFILE
+# after verifying identity with ps -- never by name.
+echo $$ > $PIDFILE
+# EXIT INSTRUMENTATION. This loop has now died three times and I had no idea why,
+# because I detached it with stderr to /dev/null -- discarding exactly the evidence
+# needed to diagnose it. Log the exit and the signal.
+trap 'echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] EXIT trap: last rc=$? " >> "$L.exit"; exit' EXIT TERM INT HUP
 prev=""
 DECL_AT=$(date +%s)          # when DETAIL was last SET BY A HUMAN DECISION, not by the loop
 while true; do
