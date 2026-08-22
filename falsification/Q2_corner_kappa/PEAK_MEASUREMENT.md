@@ -60,3 +60,53 @@ already drove free memory to 0.09 GB with three other sessions resident:
 **Recorded as a resource limit on the instrument, not as a result about the physics.** s=5 stands as the
 last rung; the corner-coefficient convergence question stays open at that resolution rather than being
 answered by a run that pages.
+
+---
+
+# CORRECTION — the "unstable exponent" was my instrument, and s=6 costs ~12.7 GB not 7.3–9.4
+
+quantum found two defects in their equivalent probe that mine shared **by construction**, and both fed
+the table above.
+
+**`ru_maxrss` never falls.** My per-l numbers were the running maximum over the whole process. I argued
+this was harmless because the true peak rises with `l` — an **assumption I did not test**, while the
+quantity being derived from those numbers *was* the exponent.
+
+**Python does not return freed memory promptly.** After a large `l` the process keeps the arena, so
+later points read the plateau rather than their own demand. That produces exactly the signature I
+reported as a finding: **an apparent exponent that decays with l.**
+
+## Re-measured: one point per fresh process, current RSS, baseline subtracted
+
+| l | entropy peak | | contaminated exponent | clean exponent |
+|---|---|---|---|---|
+| 40 | 0.229 GB | 40→60 | 4.02 | 40→50 · **3.29** |
+| 50 | 0.477 GB | 50→70 | 4.14 | 50→60 · **3.65** |
+| 60 | 0.928 GB | 60→80 | 3.58 | 60→70 · **3.81** |
+| 70 | 1.669 GB | 70→90 | 2.23 | 70→80 · **3.90** |
+| 80 | 2.808 GB | 80→100 | **1.16** | |
+
+The contaminated series **decays**; the clean series **rises toward 4** — and 4 is the structural answer,
+independently derived by quantum in a different study: the matrices are n×n with n = l², so memory goes
+as n² = **l⁴**. What I had published as a property of the algorithm ("the exponent is not stable") was a
+property of my measurement.
+
+## The extrapolation was then validated where it could be checked
+
+Fitting only l ≤ 80 predicts **6.29 GB** at l=100. Measured in a fresh process: **6.54 GB — 4% out.**
+The old contaminated single-process run reported 5.92 GB *total* for that point, i.e. it **understated**
+the true entropy peak.
+
+## Corrected answer
+
+    s=6, l=120, validated law (exponent 3.66):   12.74 GB
+
+**Superseding the 7.31 – 9.37 GB range recorded above — that range was 36% below the truth at its own
+high end.** The decision does not change; the margin does, and it changes in the direction that matters:
+s=6 was never a borderline call requiring a judgement about reclaim. It misses by roughly 3 GB against a
+box whose best reading all day was 10.1 GB available and 7.0 GB free.
+
+> **The wrong instrument produced a number close enough to the right one to support the same decision,
+> and a stated reason that was entirely false.** The conclusion surviving is not evidence the reasoning
+> did — which is the same lesson as the 1.5% coincidence one section above, arriving this time inside the
+> measurement built to avoid it.
