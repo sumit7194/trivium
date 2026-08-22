@@ -146,3 +146,37 @@ internal. The absolute s does not matter; matching does.*
 **Held rather than run**, because quantum's s=6 replication has the box: available memory is **3.05 GB**
 against a projected **2.8 GB** peak, and their job spikes to ~7 GB at its large-*l* calls. **Running now
 would overcommit exactly as I warned ansatz against this morning.** Queued for when their run finishes.
+
+---
+
+## The name asserted the claim that turned out false
+
+Called *"the zero-mode systematic"* all day, in both repos. **The name is the error**, and quantum drew
+the consequence I had missed:
+
+    1. Q2a forces agreement with m² + k² as k→0        right
+    2. at k=0 exactly, every kernel IS m²              right
+    3. therefore the shift is identical                WRONG
+
+**The mode is identical; its effect on B is not.** Deleting it measures how the mode **couples to the
+rest of the spectrum**, and that coupling is a bulk property — exactly what out6 perturbs. So the old
+name picks out **the part that is provably common** and, by naming it that, **asserts the invariance that
+was falsified.** Renamed throughout to a **bulk-coupling systematic**.
+
+## And my own hook fired on this and I waved it through
+
+quantum's pre-commit sweep reported `38 hits (UP from 37)` on the commit where their `22–41%` figure
+survived in two more places. **The delta fired, they read it, and moved on.**
+
+**Mine did the same and I did the same.** The hook reported `470 → 471` on the commit that added *"two
+independently chosen spanning directions."* That claim was **wrong** — out5 and out6 are one direction —
+and I corrected it forty minutes later **for an unrelated reason**, because quantum did the algebra.
+
+> **The hook was right, fired on the right line, and I did not read it.**
+
+Everything built today rides on an action so it cannot be *forgotten*. **None of it survives being read
+and dismissed** — and a delta of +1 is exactly the size that invites dismissal, since most hits are false
+positives and both of us had trained ourselves on that.
+
+**No fix.** A hook that fires cannot compel action, and making it block would train the bypass. *The
+sweep's value depends on a judgement it cannot compel — the same ceiling as the stranger-read.*
