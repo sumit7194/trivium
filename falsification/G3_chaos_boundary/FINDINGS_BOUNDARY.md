@@ -120,7 +120,7 @@ whose drift conjunct carries no information and whose escape conjunct cannot sep
 python code/gate_boundary.py
 ```
 
-16 assertions over the banked JSONs — the B1 counts, the Fisher p, both KS p-values, the guard's
+15 assertions over the banked JSONs — the B1 counts, the Fisher p, both KS p-values, the guard's
 0/629, and the control re-measurement at 1254/1238 that withdrew the FINDINGS headline. Artifact:
 [results/gate_boundary.log](results/gate_boundary.log).
 

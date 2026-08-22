@@ -36,11 +36,33 @@ and aimed at the only conjunct that discriminates.** Much smaller than the one r
 independence argument is untouched, since this is one frontier's own integration path rather than shared
 infrastructure.
 
-**And a refinement to the escape h-sweep, before anyone runs it:** near a separatrix the escape basin
-boundary is **generically fractal**, so *some* orbits flipping verdict under h is **expected** and is not
-by itself an artifact. **The decisive statistic is the escape FRACTION beyond binomial error, not "did any
-orbit flip"** — stable fraction ⇒ `n_fired` is sound despite individual flips; systematically moving
-fraction ⇒ step-size artifact. *"Judging on individual flips will condemn a working detector."*
+**And the escape h-sweep's design, refined twice.** Near a separatrix the escape basin boundary is
+**generically fractal**, so *some* orbits flipping verdict under h is **expected, permanently, at any step
+size** — physics, not instrument failure. *"Judging on individual flips will condemn a working detector."*
+First refinement was to compare escape **fractions** with binomial errors. **The better form is PAIRED:**
+run **identical initial conditions** at h and h/2, tabulate verdicts, and ask whether the discordance is
+**symmetric**.
+
+> **Symmetric discordance ⇒ fractal scatter, benign, `n_fired` sound as an ensemble quantity.
+> Asymmetric discordance ⇒ step size systematically biasing escape one way, which is fatal to `n_fired`.
+> McNemar on the discordant pairs tests exactly that, and pairing removes all between-orbit variance.**
+
+**Both power analyses converge on the same conclusion from opposite directions**, which is worth stating
+because it is the operative constraint: the *unpaired* calculation needs **1,141 orbits per arm** to see
+4%→2%, and the *paired* test's power depends on the **discordant count**, which at ~4 escapes per 100
+orbits will be **single digits** — far short of what McNemar needs. **Pairing is strictly the better design
+at fixed n, but it does not rescue the sample size.** ⇒ **at ~100 orbits per δ the honest output is
+"cannot distinguish", not "no artifact found"** — and a null run at that n must be reported as
+uninformative rather than as reassurance.
+
+**The integrator's acceptance condition, which is not optional.** Adaptive stepping (or a **Sundman-type
+time transformation** — the classic close-approach fix from celestial mechanics, with symplectic
+time-transformation held in reserve) targets the plunge only. But **changing the integrator changes the
+escape verdicts, which are the quantity under test — so it cannot be a silent upgrade.** Any replacement
+must first **reproduce the δ=1.0 Schwarzschild plunge, known in closed form, over the same duration and
+depth the science runs need.** That acceptance oracle is quantum's offered role, and it is the concrete
+first job for the oracle-not-engine scoping of decision 4 — *"if it is wanted built externally rather than
+marking its own homework."*
 
 ### The P1(a′) sweep result — *survives the gate, fails the ranking, and kills P1's last premise*
 
@@ -174,9 +196,95 @@ times this week and been wrong three times."* **P0's first deliverable is a meas
   derivative tower · (b) generalise §119's escalating cascade out of `ck.zsimp` into `gr_engine` ·
   (c) rational-chart policy enforced rather than advisory · (d) caching, if profiling says it pays.
 
-**Success criterion — binary, currently FALSE, not gameable by relaxing a threshold:**
+**Success criterion — binary, not gameable by relaxing a threshold:**
 > **§122 completes its full catalog including Kerr a=1/2 and Taub–NUT, unbudgeted, in under 60 minutes
 > wall-clock on this machine, all G6 verdicts green, no section reporting RESOURCE-WALLED.**
+
+> ### ⚖️ VERDICT (2026-08-16): **P0 primary gate MISSED, by ~1.2–1.4× — and the bar stays where it is.**
+>
+> **FINAL, ON MEASURED NUMBERS — the run completed.** *(An earlier projection here read 66–72 min for Kerr,
+> extrapolated from 9 of 16 components. It was wrong by ~15%, and ansatz corrected it themselves: per-
+> component cost is **bimodal**, 15 s → 528 s, a **35× spread**, and the 9-component prefix happened to
+> contain four of the expensive ones. Their own conclusion, which is the transferable part:
+> **"extrapolating a bimodal cost from a prefix is not a projection"** — the honest answer was "unknown,
+> the distribution is bimodal.")*
+>
+> | | measured |
+> |---|---|
+> | **Kerr a=1/2, full order-2 signature** | **3,501.2 s = 58.4 min** — *first ever completion* |
+> | Schwarzschild M=1 · M=2 · ZV δ=1 | 32 s · 32 s · 37 s |
+> | **Kerr + the static entries** | **60.1 min — already past the bar** |
+>
+> …**before Taub–NUT is computed at all**, and before the isotropic chart and the pair comparisons. So the
+> catalog exceeds 60 minutes **before the sixth metric starts**.
+>
+> **MISSED — but the characterisation changed with the measurement:** not "by 1.2–1.4×" but **"by a hair,
+> with the margin now set entirely by Taub–NUT."** Baseline: this catalog **had never completed — three
+> attempts, longest 6h11m with *zero* of Kerr's 16 order-2 components finished.**
+>
+> **ansatz's own note on why that is the uncomfortable outcome, kept because it is the honest one:** *"this
+> is a more uncomfortable result than a clean miss would be, because it is close enough that a modest
+> further optimisation would clear it, and that is exactly the situation where moving a bar becomes
+> tempting. **The bar stays.**"*
+>
+> **The Phase 1 deliverable is MET — ≥80% of wall-clock attributed, and it is ONE stage:**
+> `cartan_order2` **3,302.33 s / 94.3%** (output 849 ops) · `isotropy_invariants` order 1 76.88 s / 2.2% ·
+> `cartan_order1` 71.80 s / 2.1% · everything else ~50 s / 1.4%.
+>
+> **The pre-registered null is REFUTED**, and that is the actual result: *"the wall is not crossable by
+> normalisation; order-2 CK on rotating metrics requires a GHP-style representation change."* **It was
+> crossable by normalisation — 29–87× on the contraction, 58× on `cartan_order1` (4,187.68s → 71.80s),
+> verdicts bit-identical across six frozen batteries.** That refutation does not need the gate to have
+> passed.
+>
+> **Why the bar is not being moved** (ansatz's reasoning, adopted): the null is refuted on its own terms;
+> **"a gate moved after seeing the numbers isn't a gate, and we have spent today cataloguing nine distinct
+> ways a check can fail to check anything — two of them in pre-registrations. Relabelling this one would be
+> the tenth, and the most self-serving"**; and the honest description is that **the bar was set without
+> knowing the wall's size** — 60 minutes was a guess made when the state of knowledge was *"this has never
+> finished."* **A guess that turns out 1.2× off is a badly-calibrated bar, not a failed programme, and the
+> way to say that is to report the miss *and* the factor.** (S3 precedent: gate unreachable, postulate
+> supported, bar not met, **not relabelled**.)
+>
+> **What remains, stated as unknown rather than guessed.** Each component makes ~21 frame contractions at
+> 3.01s ≈ 63s, against components costing 462s — so **~85% of per-component cost is now somewhere other
+> than the contraction that was fixed, and is *unattributed*.** ansatz's candidate (the final `zsimp`
+> escalation running as the common case rather than a rare one) is **labelled hypothesis, not finding,
+> deliberately**: two of their hypotheses about this code were refuted by measurement today, *"the pattern
+> is that my reasoning about where this code spends time has been wrong more often than right, and the
+> profiler exists precisely because of that."* **Phase 3 is to measure it, not to guess it.**
+>
+> **Evidence the mechanism was correctly identified even though the job isn't finished:** per-component
+> cost is strongly **bimodal** — 15 / 30 / 62 / 66 s versus 462 / 463 / 515 / 528 s, a **35× spread** —
+> i.e. the size gate cutting exactly where it was predicted to cut rather than uniformly.
+>
+> **And a correction to what "representation" meant.** The GHP hypothesis survives in its *useful* form:
+> component **counts** are identical between Schwarzschild and Kerr at every stage, only expression **size**
+> differs, and the cost lay in intermediates the pipeline manufactured (3,710 → 90,841 via `expand` →
+> 238,430 via `together` → five minutes of `cancel` → a **20-op answer**). So the swell is an artefact of
+> how expressions are *carried*. **But "representation" turned out to mean the normal form expressions are
+> pushed through, not GHP-versus-coordinate frames** — the prescriptive half was never needed and remains
+> **untested**, and ansatz explicitly declines to assume the remaining 85% is normalisation-shaped just
+> because the first 15% was.
+>
+> **⚠️ And the surprise in the completed profile: time-dominant is NOT swell-dominant.** Kerr/Schwarzschild
+> ratios, with counts identical at every stage so any ratio is pure representation swell:
+> **`isotropy_invariants` order 1 — 5722× (the largest in the table)** · `canonical_frame` 323× ·
+> `covariant_derivative_weyl` 260× · `functional_rank` order 2 235× · `cartan_order1` 227× ·
+> **`cartan_order2` 102× (35.4× in ops) — one of the *smallest*, while holding 94.3% of the wall-clock** ·
+> total 103×. **The stage that swells worst relative to the control is `isotropy_invariants`, which is also
+> where the 3.6 GB peak RSS lives — yet it is only 2.2% of Kerr's time today.** So it is not the thing to
+> fix next, but **anyone reading the time profile alone would conclude the representation effect lives in
+> `cartan_order2`, and that is wrong.**
+>
+> **Remaining headroom stays labelled, deliberately:** ~21 contractions/component at ~3 s ≈ 63 s against
+> components costing up to 528 s ⇒ **~85% unattributed.** `[UNTESTED HYPOTHESIS]` the once-per-component
+> `zsimp` escalation on the nonzero path; **killing check named — time `zsimp` separately from the
+> contractions inside a single component.** ansatz goes no further, having had **three numbers move when
+> measured rather than reasoned today** (two code hypotheses refuted, plus this projection).
+>
+> **What Phase 2 bought, for the record:** `cartan_order1` **4,187.68 s → 71.80 s (58×)**; one order-2
+> component **~3,000 s → 462 s**; and a signature that had **never completed in three attempts → 58.4 min**.
 
 Secondary/diagnostic: the isotropic-chart order-2 signature completes at all; Phase 1 attributes ≥80%;
 and **no regression — §116/117/118/123 keep their exact verdicts (9/9, 12/12, 6/6, 7/7), bit-identical.**
@@ -496,11 +604,32 @@ floor's order but not its tail*. And the **n=50 conditioning concern is now top-
 specifically**: δ=1.0 is the only δ at n=50 against ~100 everywhere else, and it is the row every
 absolute-scale statement leans on.
 
+**⑧ The ordering, settled — and it inverts the usual intuition about underpowered work.** Two questions
+were being conflated. **1,141 orbits/arm bounds the STEP-SIZE test** (detecting a halving of a small rate);
+**the BOUNDARY question — is 4/100 different from 0/99 — needs only ~200–300 per δ** (≈8 vs 0, p ≈ 0.007).
+So the cheapest route to a conclusive item is **more orbits on existing machinery**, not a better estimator
+and not a better integrator. **But that ordering has a rider, and it is structural rather than a
+preference:**
+
+> **The floor contributes *statistical* error, which averages down as 1/√N. Gain variation contributes
+> *systematic* error along the comparison axis, which does not average down, at any N, ever.**
+
+For a cross-δ claim the two are not commensurable, and **the crossover is already far behind the ladder**:
+`|gain−1| × drift_true = floor` → `0.59 × d = 5.167e-06` → **d_crossover ≈ 8.8e-06**, which *every* drift
+value in the ladder exceeds. At d = 1e-03 the systematic is ~5.9e-04 against a floor of 5.2e-06 —
+**systematics beat statistics by ~110× in a single measurement, before any averaging.**
+
+⇒ **estimator swap first, or strictly alongside — must, not should. Then orbits.** And the reason to care:
+*"200–300 orbits per δ on the FFT statistic would deliver a beautifully significant measurement of a
+quantity whose gain varies 2.1× along the exact axis being compared. That is the worst available outcome
+and worse than doing nothing — an underpowered null is honest and reads as inconclusive, whereas a
+well-powered distorted result is confident, reproducible, and gets believed."*
+
 **Bearing on P2.** The bridge's chaos apparatus *is* P2's dynamics instrument, and **the instrument is now
 the open question, ahead of any boundary it might measure.** The honest current headline is that it
-reduces to **escape-counting at N = 0–4**, on a ladder whose drift statistic is uninformative and whose
-integration guard has never fired. Verdicts and FINDINGS belong to the session running G3; δ=1.02
-continues and will be banked, but it cannot settle this.
+reduces to **escape-counting at N = 0–4**, on a ladder whose drift statistic is uninformative, whose
+integration guard has never fired, and whose frequency estimator has a **2.1× parameter-dependent gain
+along the very axis P2 would compare.** Verdicts and FINDINGS belong to the session running G3.
 
 **Owner: all four.** Bridge integrates. This is the flagship.
 
