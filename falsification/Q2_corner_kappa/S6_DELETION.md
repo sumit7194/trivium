@@ -1,4 +1,10 @@
-# s=6 zero-mode deletion: the non-common residual is 23.4% of the regulator signal
+# s=6 zero-mode deletion: two studies, 23.0% and 55.5%, and the disagreement is in the numerator
+
+*Title corrected at the end of the night. It read **"the non-common residual is 23.4% of the regulator
+signal"** — a headline asserting a single value for a quantity a second study puts at 55.5%. **This repo
+recorded the identical defect in `FAMILY_TEST.md` today** ("the name asserted the claim that turned out
+false") and the correction did not reach here. §19a: **a correction travels only as far as its filed
+abstraction**, and mine was filed as a fact about that one document's name.*
 
 **The number this run existed to produce.** It bounds the systematic against which the s⁻² drift found
 earlier today is or is not resolvable.
