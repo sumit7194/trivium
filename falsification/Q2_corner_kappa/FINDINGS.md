@@ -90,6 +90,48 @@ likely fall short of an s^−2.76 extrapolation**, and the headline claim — *c
 refinement* — is unaffected either way, since it needs the direction and not the rate. **The rate should
 not be quoted as a power law from three points.**
 
+## 6. s=4 SETTLES IT — Reading A confirmed, Reading B refuted
+
+quantum could not separate two physically different readings of the deceleration, and said so:
+
+- **A:** corner coefficient **exactly universal**; the wobble is subleading terms around an asymptotic
+  **s⁻²** set by the regulators agreeing at O(k⁴).
+- **B:** universal **to ~0.1% and no further**; a falling local exponent is what approaching a floor
+  looks like.
+
+They could not tell them apart from three points — fitting `A·s⁻² + F` gave an unphysical **F = −0.23%**,
+and any three-parameter form fits three points exactly. **s=4 (L=640, m=0.0025, l=16…80) separates them.**
+
+```
+corner spread:  1.6900%  ->  0.2500%  ->  0.1200%  ->  0.0676%
+   exponent:        2.76        1.81        1.99
+```
+
+**The spread went straight through 0.1% and kept falling. Reading B is refuted.** And the exponent did not
+continue to decelerate — it returned to **1.99**, which is the **s⁻² Reading A predicts from the O(k⁴)
+regulator agreement.** The 2.76 and 1.81 are wobble around it, exactly as A says.
+
+**And it is not my numerical floor.** Per quantum's ask, the corner spread was recomputed with the
+symplectic-eigenvalue floor swept five decades:
+
+| floor | corner spread (3p) |
+|---|---|
+| 1e-14 | 0.06762% |
+| 1e-9 | 0.06765% |
+
+> **Clip band 3e-05 percentage points against a spread of 0.0676% — the band is 2254× smaller.**
+
+quantum's scaling probe extrapolated a band of ~5e-06 relative against a ~8e-06 requirement, a factor 1.5,
+and warned it was itself a four-point power-law extrapolation. **Measured directly, the margin is three
+orders better than their extrapolation feared** — which is the outcome they asked for by insisting the
+direct measurement supersede their estimate.
+
+**The area spread is flat across a 4× refinement**: 36.26 → 36.24 → 36.23 → 36.2249%.
+
+⇒ **The corner coefficient is universal, with no measurable floor down to 0.068%, falling as s⁻².** That is
+a stronger statement than the one the exercise set out to check, and s=4 was run on a channel nothing had
+contaminated.
+
 ## Honest scope
 
 - The headline claim **is** reproduced: corner spread falls under refinement, area spread does not, across
