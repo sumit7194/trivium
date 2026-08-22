@@ -98,7 +98,24 @@ def _alive(pid, want=None):
 
 
 def read_status(session, now=None):
-    """Read one peer's status. Returns Status; never raises on a bad/missing file."""
+    """Read one peer's status. Returns Status; NEVER raises.
+
+    'Never raises' was a docstring claim, not a tested property. Four of five malformed
+    fixtures raised: stale_after_s as a string or null, updated as a list, a bare int at
+    top level. Peers changed their schemas twice today, so these are reachable, not
+    theoretical -- and quantum's point is the sharp one: A TRACEBACK IS NOT A DECISION.
+    This is a precondition tool; a caller who reads output rather than exit codes gets
+    no answer, and one `|| true` upstream converts the crash into a launch.
+    NO INFORMATION IS NOT PERMISSION.
+    """
+    try:
+        return _read_status(session, now)
+    except Exception as e:                                    # noqa: BLE001 -- deliberate
+        return Status(session, True, f"reader failed on this file ({type(e).__name__}: {e}); "
+                                     f"refusing to guess -- no information is not permission")
+
+
+def _read_status(session, now=None):
     p = D / f"{session}.status"
     now = now if now is not None else time.time()
 
@@ -118,7 +135,12 @@ def read_status(session, now=None):
         return Status(session, True, f"malformed JSON ({e}); a file that only breaks when "
                                      f"busy must NOT be read as idle")
 
+    if not isinstance(d, dict):
+        return Status(session, True, f"top-level JSON is {type(d).__name__}, not an object")
     up = d.get("updated")
+    if not isinstance(up, str):
+        return Status(session, True, f"'updated' is {type(up).__name__}, not a timestamp string"
+                      if up is not None else "no 'updated' field -- freshness unknowable")
     if not up:
         return Status(session, True, "no 'updated' field -- freshness unknowable")
     try:
@@ -127,6 +149,10 @@ def read_status(session, now=None):
         return Status(session, True, f"unparseable 'updated' ({up}): {e}")
 
     limit = d.get("stale_after_s", DEFAULT_STALE_S)
+    if not isinstance(limit, (int, float)) or isinstance(limit, bool) or limit <= 0:
+        # A peer publishing a non-numeric threshold is not a peer we can time out.
+        # Fall back to the default rather than crashing OR trusting them indefinitely.
+        limit = DEFAULT_STALE_S
     if age > limit:
         return Status(session, True, f"stale: updated {int(age)}s ago, limit {limit}s")
 
@@ -188,6 +214,41 @@ def confirm_writer(session, wait_s=70):
         return True, (f"file advanced {m2 - m1:.0f}s over a {wait_s}s window -- someone IS "
                       f"writing it; the published token is stale metadata, not a dead session")
     return False, f"file did not advance over {wait_s}s -- nobody is writing it"
+
+
+def read_status_confirmed(session, wait_s=70, now=None):
+    """read_status, but resolve a DEAD-TOKEN unknown via confirm_writer, safely.
+
+    THE TRAP THIS EXISTS TO CLOSE, and it is my fault rather than its victim's. I shipped
+    confirm_writer() as a bare primitive with no guidance on composing it, and quantum
+    wrote the obvious thing:
+
+        if confirm_writer(name): notes.append("writer alive"); continue
+
+    ...which SKIPPED THE PAYLOAD. Their preflight reported CLEAR TO LAUNCH while ansatz
+    ran a 2.28 GB job whose own file said `state: running` in plain text.
+
+    CONFIRMING A WRITER IS ALIVE ANSWERS A DIFFERENT QUESTION FROM WHETHER THE PEER IS
+    BUSY. The rescue is written in the mood of "this one is fine, get out of the way",
+    and that mood is where fail-open lives. Holding on every UNKNOWN was safe and
+    useless; the exit path made it useful and unsafe.
+
+    So: confirmation waives EXACTLY ONE gate -- the token -- because observed mtime
+    advance over a full tick is strictly stronger evidence than a PID the writer may
+    simply have forgotten to refresh. Every other gate is re-applied: present, non-empty,
+    parseable, dict, fresh against its own threshold. And the payload is then consulted.
+    """
+    st = read_status(session, now=now)
+    if not st.unknown or "does not resolve to a live process" not in st.why:
+        return st                       # nothing to rescue, or unknown for another reason
+    alive, why = confirm_writer(session, wait_s)
+    if not alive:
+        return Status(session, True, f"{st.why}; and {why}")
+    fresh = read_status(session)         # re-read: it has advanced since the first sample
+    if fresh.unknown and "does not resolve to a live process" not in fresh.why:
+        return fresh                     # some OTHER gate failed -- do not waive it
+    d = json.loads((D / f"{session}.status").read_text())
+    return Status(session, False, f"token stale but writer confirmed by mtime advance ({why})", d)
 
 
 def survey(sessions=None):
