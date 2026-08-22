@@ -255,3 +255,59 @@ effect being measured is smaller than that.**
 *Scope, stated because it limits the conclusion: l = 30–60, below the published fitting range. This
 establishes the contribution is real and roughly common-mode; it does not yet quantify the residual at
 the published resolutions. Open item, not folded into the headline.*
+
+---
+
+## The zero-mode contribution falls at ~the same rate as the published falloff (2026-08-22)
+
+quantum's hypothesis, and the first mechanism anyone has proposed that would produce the observed s⁻²
+falloff **without** the coefficient becoming universal:
+
+> The zero-mode amplitude is 1/(2mL²) — **it shrinks under continuum refinement.** If its non-common
+> residual carries part of the spread, some of the falloff may be a finite-volume artifact vanishing.
+
+With m·L = 1.6 held fixed, m = 1.6/L, so the amplitude 1/(2mL²) = **1/(3.2 L) ∝ 1/L**. Readings were
+pre-registered in `code/zeromode_scaling.py` before the run: *falls ~1/L* → mechanism live; *roughly
+constant* → the rank-1 term contributes to the log-coefficient independently of its amplitude and cannot
+explain an s-dependent falloff; *grows* → neither.
+
+     s     L   amplitude      B with k=0    B without      shift
+     3   480   6.510e-04       -0.046458    -0.032571    0.013887
+     4   640   4.883e-04       -0.046921    -0.039803    0.007118
+     5   800   3.906e-04       -0.047094    -0.042797    0.004298
+
+**The shift falls, and faster than the amplitude:**
+
+    L 480->640   L^-2.32          amplitude falls as L^-1
+    L 640->800   L^-2.26
+    global       L^-2.30
+
+**quantum's mechanism is live.** The contribution genuinely shrinks under refinement, and does so ~2.3×
+faster in the exponent than the naive amplitude argument suggests.
+
+### The uncomfortable part
+
+With **L = 160 s**, an L^-2 falloff *is* an s⁻² falloff:
+
+    published corner falloff       s^-2  =  L^-2.00
+    zero-mode shift in B                =  L^-2.30
+
+**The same rate to within 15%.** A contaminating component that decays at the same rate as the signal is
+not separable from the signal by watching it decay — which is precisely the artifact quantum proposed.
+
+### What this does and does not establish
+
+**Does:** the zero mode's *total* contribution to B falls at approximately the rate the published
+universality claim is built on. That is a real coincidence of exponents and it was not known this
+morning.
+
+**Does not:** show the *spread* falloff is caused by it. The spread is a difference across regulators, so
+any **common-mode** part cancels exactly; only the **non-common residual** can contaminate it. At s=5 the
+per-regulator shifts agree to about one part in 10⁴ while the regulator differences live in the 5th
+digit — so the non-common residual is small but *not* negligible against the signal, and its own
+s-dependence is unmeasured.
+
+**That residual's s-dependence is the number that settles it**, and it is being measured at s=6 in a
+separate k=0 deletion pass, alongside quantum's independent measurement in a different codebase.
+Until then this is an **open systematic of the same order as the effect**, recorded as such and not
+folded into any headline.
