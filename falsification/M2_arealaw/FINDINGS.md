@@ -139,3 +139,35 @@ regulators. **Demonstrated by refitting, not assumed.**
 computed 0.2092 — the banked figure is the **relative** spread `(max−min)/mean`, mine was absolute. A
 label asserting agreement, printed next to the disagreement it described. Nobody reads the number beside
 the word "matches."*
+
+---
+
+## Audit 2026-08-23 — same denominator shape as Q2, opposite consequence
+
+Q2's headline fraction was withdrawn today: adding one admissible kernel widened its denominator 3.3×
+and the quoted percentage fell from 38.6% to 11.7% with the systematic untouched. **The absolute
+quantity was stable; the ratio was an artifact of which kernels were included.**
+
+**M2 reports the same shape** — `kappa_spread = (max−min)/mean` over **three** chosen regulators, filed
+at **51.2%**, gated by M2b as *"κ spread across regulators > 20%"*.
+
+**Checked whether it matters here. It does not, and the reason is the direction of the claim.**
+
+Q2's fraction shrank when the denominator grew. M2's gate would only be threatened if a fourth regulator
+raised the **mean** without widening the **range** — i.e. landed inside [0.3014, 0.5107]. Solving for the
+κ that would push the spread below the 0.20 gate with `max−min` held fixed:
+
+    need mean > 1.047   ->   fourth κ > 2.96
+    that is 5.8x the largest κ in the study — and OUTSIDE the range, so it would widen
+    max−min as well. The requirement is self-defeating.
+
+> **M2's inequality is robust to adding regulators. The value 51.2% is not** — it remains a ratio over a
+> chosen set — **but the claim is "spread > 20%", and adding kernels moves that claim in the safe
+> direction.**
+
+**Q2's claim was a fraction quoted as a magnitude, so the same shape was fatal. Same structure, opposite
+consequence, decided by which way the claim points.**
+
+*Recorded because the shape is worth flagging even where it is harmless: the next reader who finds
+`(max−min)/mean` in this repo should know it was checked and why it survived, rather than having to
+re-derive that.*
