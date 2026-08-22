@@ -20,8 +20,40 @@ earlier today is or is not resolvable.
 
 ## What it means, and what it does not
 
-**The systematic does not shrink at higher resolution.** 23.4% at s=6 sits inside quantum's 21.6–41.5%
-across s=1,2,3 — four resolutions in two codebases, no trend, no sign of refining away.
+> ### ⚠️ THE AGREEMENT WITH quantum IS MANUFACTURED BY A SHARED STEP
+>
+> Their pre-committed refusal — *"if their number and mine agree I will not report it as confirmation
+> without checking whether a shared step manufactured it"* — asked one question: **do we use the same
+> regulators?**
+>
+>     nn            m² + K2
+>     improved      m² + K4                  (4th-order)
+>     higher_deriv  m² + K2 + 0.25·K2²       (+cK²)
+>     smeared       m² + K2·exp(0.15·K2)     (K·exp(bK))
+>
+> **Structurally identical to theirs. And the set came from their spec** — this leg's own
+> `regulators.py` docstring cites quantum's gate, and §1 records the study as reproduced rather than
+> independently constructed.
+>
+> **So this is not two studies converging. It is one regulator family measured twice.** The lattice, the
+> geometry, the resolution and the implementation all vary; **the one thing held fixed is the thing most
+> likely to be causing the residual.**
+>
+> **The honest claim is narrower:** *for this regulator family*, the non-common zero-mode residual is
+> ~20–40% of the regulator signal across four resolutions, two lattices, two geometries and two
+> codebases. **It does not establish that the residual is method-intrinsic.**
+>
+> **What would test it:** a fifth regulator from outside the family — not another `m² + f(K2)`. If the
+> fraction survives that, it is intrinsic; if it moves, both studies have been measuring a property of
+> four specific kernels.
+>
+> *Two further weakenings, both raised by quantum before I could:* the resolutions are **not matched**
+> (theirs s=1,2,3, mine s=6), and **21.6 / 41.5 / 27.5 is not a range** — it is three scattered points
+> they had already withdrawn as a trend, so *"23.4 sits inside it"* is close to saying it sits inside
+> 21–42, which almost anything would.
+
+**The systematic does not shrink at higher resolution** — within that family. 23.4% at s=6 sits among
+quantum's 21.6–41.5% across s=1,2,3, with no trend and no sign of refining away.
 
 **So the s⁻² drift stays unresolved against it.** The drift is **3.4%** in the constant, ~10× the
 numerical noise; the contamination available to produce it is **23.4% of the regulator signal**. The
