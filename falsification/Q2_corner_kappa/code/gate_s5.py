@@ -45,7 +45,11 @@ for (floor, model), (wa, wc) in WANT.items():
 # unable ever to fire. Now derived from GOT, and ASSERTED rather than narrated.
 band  = abs(GOT[(1e-14,"3p")][1] - GOT[(1e-09,"3p")][1])
 ratio = band / GOT[(1e-14,"3p")][1]
-band_ok = ratio < 0.01
+# A RATIO GATE IS EASIEST TO PASS WHEN ITS DENOMINATOR IS BROKEN. Found by mutation:
+# lifting the near-0.5 modes blew the corner spread to 399.97%, which drove band/spread
+# to 0.0000 and the ratio test PASSED on thoroughly corrupt data. Fails safe in exactly
+# the wrong direction. So bound the band ABSOLUTELY as well, and bound the denominator.
+band_ok = ratio < 0.01 and band < 5e-4 and GOT[(1e-14,"3p")][1] < 1.0
 ok &= band_ok
 print(f"\n  {'PASS' if band_ok else '*** FAIL ***'}  clip band {band:.5f}%  vs corner "
       f"spread {GOT[(1e-14,'3p')][1]:.5f}%  -> band/spread = {ratio:.4f}  (gate: < 0.01)")
