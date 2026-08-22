@@ -1,1 +1,14 @@
-/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/sumit/Github/TheBridge/falsification/Q2_corner_kappa/code/peak_probe.py': [Errno 2] No such file or directory
+s=5 L=800 m*L=1.60 regulator=nn l=[20, 30, 40, 50, 60, 70, 80, 90, 100]
+  baseline rss 0.048 GB
+  correlators done [0s]  peak so far 0.05 GB
+  l=20   peak 0.05 GB  (0s)
+  l=30   peak 0.05 GB  (0s)
+  l=40   peak 0.32 GB  (0s)
+  l=50   peak 0.76 GB  (2s)
+  l=60   peak 1.63 GB  (8s)
+  l=70   peak 3.06 GB  (25s)
+  l=80   peak 4.57 GB  (64s)
+  l=90   peak 5.36 GB  (142s)
+  l=100  peak 5.92 GB  (288s)
+
+  TRUE PEAK 5.92 GB, reached during: entropy l=100
