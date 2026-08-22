@@ -352,8 +352,23 @@ metrics near δ=1 have a thin chaotic layer remains **open**, exactly as before 
    quantum asked why the improvement was 1.4× rather than the zero the mechanism predicts.)*
 
    **The residual is not slop — it is a 1/N finite-size tail with a well-defined limit.** Richardson
-   extrapolation `2g(2N) − g(N)` agrees to **2e-6** across two independent pairs (N=800/1600 and
-   1600/3200), so the bias converges rather than wanders. Extrapolated asymptotic gain curve, 16 offsets:
+   extrapolation `2g(2N) − g(N)` agrees to **2e-6** across two pairs (N=800/1600 and 1600/3200),
+   so the bias converges rather than wanders.
+
+   > **CORRECTION 2026-08-22 — these pairs were described as "independent" and are not: they share
+   > g(1600).** Found by sweeping the repo for the word *independent*, after quantum found a six-day-old
+   > gate asserting "two independent extractions agree" where both ran on the same array.
+   >
+   > **Working out the sign makes the check stronger than the label claimed, not weaker.** g(1600) enters
+   > R₁ = 2g(1600) − g(800) with coefficient **+2** and R₂ = 2g(3200) − g(1600) with **−1**, so an error ε
+   > in the shared point moves the difference R₁−R₂ by **3ε** — it pushes them *apart*. Agreement to 2e-6
+   > therefore **bounds the error in g(1600) at ~7e-7**, which genuinely independent pairs could not have
+   > done.
+   >
+   > **What it does NOT establish is the stated conclusion.** g(800) and g(3200) each appear in exactly
+   > one pair and are unconstrained by this comparison. *"The bias converges rather than wanders"* is a
+   > claim about the sequence; this anchors one interior point of it. The convergence claim rests on the
+   > 1/N form holding, which is assumed here rather than tested. Extrapolated asymptotic gain curve, 16 offsets:
 
    ```
    0.750 0.762 0.791 0.842 0.919 1.029 1.183 1.402 1.618 1.333 1.135 0.994 0.895 0.826 0.781 0.757
