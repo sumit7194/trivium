@@ -143,9 +143,38 @@ quartic order** — a second direction needs a sextic term or a different lattic
 *Setup correspondence: s=4 will run at l/L = 0.025…0.125, the same grid as s=3, so the comparison is
 internal. The absolute s does not matter; matching does.*
 
-**Held rather than run**, because quantum's s=6 replication has the box: available memory is **3.05 GB**
-against a projected **2.8 GB** peak, and their job spikes to ~7 GB at its large-*l* calls. **Running now
-would overcommit exactly as I warned ansatz against this morning.** Queued for when their run finishes.
+**Held rather than run**, because quantum's s=6 replication has the box, and their job spikes to
+~8.3 GB at its large-*l* calls. **Running now would overcommit exactly as I warned ansatz against this
+morning.** Queued for when their run finishes.
+
+### The 2.8 GB in the first version of this note was a projection. Measured instead.
+
+*My last projection — s=6 — came in **40% high**, and the reason was extrapolating a memory law I had
+never validated one step out. Measured `entropy()` at s=4's `L=640` for the l values that fit in the
+free memory beside quantum's job, one process per l (`ru_maxrss` is a high-water mark and never falls),
+with the byte-vs-KiB unit checked in-process against a deliberate 64 MiB allocation before any number
+was reported.*
+
+    l      n=l^2     peak GB   work=peak-baseline   work/n^2 (1e-8)
+    30      900       0.2099        0.0590              7.284
+    40     1600       0.3530        0.2023              7.902
+    50     2500       0.6300        0.4791              7.666
+    60     3600       1.2272        1.0750              8.295
+
+**The law is not a clean n².** The coefficient rises across the range, so the extrapolation has a bias —
+**and this time it was measured rather than assumed:**
+
+> **HOLD-OUT: fit on l=30/40/50, predict l=60 → 0.997 GB against 1.075 GB measured, −7.3%.**
+> *The single-power fit under-predicts one step out. It is the same defect that made the s=6 projection
+> wrong, caught before the run instead of after it.*
+
+**PRE-REGISTERED, for checking when the run happens:** four-point fit gives 3.40 GB of work at l=80,
+plus a 0.15 GB baseline = **3.55 GB**; applying the hold-out's own measured −7.3% bias gives **≈3.8 GB**.
+
+    registered band for the s=4 peak:  3.4 - 4.1 GB
+
+**So the launch condition is ~4 GB free, not the 2.8 GB this note first claimed — the original projection
+was 26-35% low.** *And it was low in the direction that would have had me start the job.*
 
 ---
 
