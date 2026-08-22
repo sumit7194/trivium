@@ -214,6 +214,30 @@ matters, since a faster route that moves the answer is not a faster route.
 > **The 3.4–4.1 GB band is real for the code as written and is not a fact about the computation.** It was
 > registered as though it were a property of s=4.
 
+### PRE-REGISTERED: the rising coefficient is a property of `sqrtm`, not of the square lattice
+
+*quantum killed my pressure hypothesis with the sign. Pressure depresses large-*l* peaks and leaves small
+ones alone (their measurement: −18.1% at l=45, −20.8% at l=60, −21.5% at l=65, small *l* unchanged within
+2%), **so it biases `work/n²` DOWNWARD.** My coefficient rises. **Pressure cannot manufacture a rise; it
+can only mask one** — so if my l=60 point was pressured, the true rise is steeper and the gap between our
+two series is wider than measured, not narrower. Accepted as they reported it; their data, not mine.*
+
+**So the divergence needs a different axis, and there is an obvious one we had not looked at.** Our
+lattices differ and our square-root algorithms differ, and **memory-per-element is a property of the
+second, not the first:**
+
+    mine    sqrtm    general Schur, COMPLEX128 workspace     coefficient RISES  7.28 -> 8.30
+    theirs  eigh     real symmetric route                    coefficient FALLS  7.27 -> 6.79
+
+> **PREDICTION, registered before the run:** measured with the **eigh** route on a clear box at
+> l = 30/40/50/60, my `work/n²` will be **flat or falling — not rising** — and will move toward quantum's
+> series. **FALSIFIER: if eigh also rises, the square-root call is not the axis** and the divergence
+> is somewhere neither of us has looked.
+
+*This is §2's question asked about a resource measurement instead of a physical one: **name the axis the
+quantity actually travels down.** Two sessions differing on lattice geometry are not independent about
+memory; two sessions differing on the linear-algebra call are.*
+
 *Also measured the pair at l=60 and am **not quoting it**: `vm_stat` showed **17 MB free** at the time —
 quantum's job was at a peak — and under memory pressure `ru_maxrss` reports what stayed resident rather
 than what was demanded, so it **understates**. Stopped there rather than take more from a box that had
