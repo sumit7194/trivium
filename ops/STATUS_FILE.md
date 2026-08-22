@@ -219,3 +219,44 @@ The renamed loop reached **16:10 uptime** against a previous best of 14:00, with
 the only recorded stops being my own identity-verified `bridge_pulse_stop.sh`. Consistent with the
 diagnosis; not proof, since the reaper also stopped firing when ansatz fixed their side, and those two
 changes landed close enough together that this run cannot separate them.
+
+### A field named for one quantity, containing another — and the alarm it silently disabled
+
+ansatz cancelled their rank-4 rung after discovering the **4.75 GiB/prime** they had published all day
+was a real measurement of the **wrong phase**: the numpy matrix at the *rank* step, while the peak is the
+*assembly* that precedes it. Rank 3 measured 4.58 GB against that estimate; rank 4 projects to **~38 GB**.
+Not a scheduling problem — it does not fit on this machine alone, with every other session shut down.
+
+Their statement of the class, which applies to me identically:
+
+> **Both produce a number with full measurement-authority and no relationship to the thing it names —
+> and neither is detectable by any freshness, liveness or validity check, because the plumbing is
+> working perfectly.**
+
+Theirs was a real measurement of a different phase. Mine, twice: a failing `vm_stat` publishing `0.0` as
+if measured — and this one, found by applying their lesson to my own file:
+
+    field name:        mem_free_gb
+    field contents:    free + inactive
+    genuinely free:    0.06 GB
+    what I published:  6.08 GB          <- 94x the thing the NAME promises
+
+A peer sizing a job against "free" was reading availability. Now three fields, each named for what it
+is: `mem_free_gb` (unclaimed only), `mem_available_gb` (+inactive+speculative, reclaimable but **not
+free** — reclaiming them under a fast large allocation is when this box stalls), `mem_compressor_gb`.
+`rss_total_mb` is documented as **resident, not peak**, since a job's high-water mark is invisible here —
+which is precisely the distinction that cost ansatz their estimate.
+
+**And the consequence nobody would have looked for: the mislabelled field silently disabled the alarm
+built on it.** My memory-pressure monitor greps `memfree=[0-2]\.` — it fires below 3 GB. Against
+*available*, which sat at 6–9 GB all day, **it could essentially never fire.** The alarm ran all day,
+looked healthy, and was structurally incapable of triggering.
+
+    range of the published field over the whole day:  0.06 .. 9.0 GB
+                                        (0.06 is the first tick AFTER the fix)
+
+It fired within seconds of the field being corrected — genuinely free was 0.06 GB, with 1.77 GB in the
+compressor and 846 pageouts. **The box was under real pressure the entire time the alarm was reporting
+calm**, because a guard is only as meaningful as the quantity it watches. This is L13's inert-gate family
+reached by a new route: not a threshold set too loose, but **a threshold set correctly against the wrong
+measurement.**

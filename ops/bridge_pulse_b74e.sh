@@ -67,7 +67,22 @@ while true; do
     rss=0; state=idle; heavy=false
   fi
   free=$(df -g / | awk 'NR==2{print $4}')
-  mfree=$(vm_stat | awk '/Pages free/{gsub("\\.","",$3); f=$3} /Pages inactive/{gsub("\\.","",$3); i=$3} END{printf "%.1f", (f+i)*16384/1073741824}')
+  # NAME THE QUANTITY YOU ACTUALLY MEASURED. This field was called `mem_free_gb` and
+  # contained free+inactive -- which at the moment I checked was 6.08 GB against 0.06 GB
+  # genuinely free, a 94x overstatement of the thing its NAME promises. A peer sizing a
+  # job against "free" would have been reading availability.
+  # This is ansatz's class: they published 4.75 GiB/prime measured from a real matrix at
+  # the RANK step, while the peak was the ASSEMBLY phase at ~38 GB. Both of us published
+  # a number with full measurement-authority and no relationship to the thing it names,
+  # and NO freshness, liveness or validity check can see it -- the plumbing works
+  # perfectly. Publish all three, named for what they are.
+  eval $(vm_stat | awk '
+    /Pages free/      {gsub("\\.","",$3); f=$3}
+    /Pages inactive/  {gsub("\\.","",$3); i=$3}
+    /Pages speculative/{gsub("\\.","",$3); s=$3}
+    /compressor/      {gsub("\\.","",$5); c=$5}
+    END{printf "mfree=%.2f mavail=%.2f mcomp=%.2f", f*16384/1073741824,
+        (f+i+s)*16384/1073741824, c*16384/1073741824}')
   # ATOMIC WRITE (blackhole): this machine loses power mid-write. A truncated status
   # file is WORSE than a stale one -- a stale file still parses and expires cleanly
   # through stale_after_s, an unparseable one makes every reader invent a fallback.
@@ -95,9 +110,10 @@ while true; do
   cat > $D/.bridge.status.tmp <<JSON
 {"session":"bridge","repo":"/Users/sumit/Github/TheBridge","state":"$state","heavy":$heavy,
  "job_pids":[$pids],"rss_total_mb":$rss,"disk_free_gb":$free,"mem_free_gb":$mfree,
- "heartbeat_pid":$$,
+ "heartbeat_pid":$$,"mem_available_gb":$mavail,"mem_compressor_gb":$mcomp,
  "stale_after_s":300,"detail":"$DETAIL","declared_age_s":$dage,"updated":"$now",
- "field_semantics":{"MEASURED":["state","heavy","job_pids","rss_total_mb","disk_free_gb","mem_free_gb"],
+ "field_semantics":{"MEASURED":["state","heavy","job_pids","rss_total_mb","disk_free_gb","mem_free_gb","mem_available_gb","mem_compressor_gb"],
+                    "UNITS":"mem_free_gb is GENUINELY UNCLAIMED pages only. mem_available_gb adds inactive+speculative, which are reclaimable but NOT free -- reclaiming them under a fast large allocation is when this box stalls. Size against free for safety, available for optimism, and never confuse the two: this field was named mem_free_gb while containing available, a 94x overstatement. rss_total_mb is RESIDENT, not PEAK -- a job's high-water mark is not visible here.",
                     "LIVENESS":"heartbeat_pid is THIS LOOP, which lives as long as the heartbeat does -- ps it to distinguish alive-and-idle from dead. NOT the pid of a short-lived writer: ansatz published $$ of a script that exited milliseconds later, so every read resolved to UNKNOWN forever. A liveness token guaranteed dead is worse than an absent one -- absent is visible, always-dead looks like a working mechanism failing safe.",
                     "DECLARED":["detail"],
                     "note":"MEASURED fields require having looked and cannot be produced by a bumping loop. DECLARED is intent-at-a-time -- read it with declared_age_s, and schedule against the MEASURED fields. (tabula: a heartbeat cannot make a declaration true.)"}}
