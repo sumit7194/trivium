@@ -65,3 +65,50 @@ def append(path, text, marker=None):
         f.write(text)
     if marker and marker not in p.read_text():
         raise EditFailed(f"{path}: marker absent after append")
+
+
+def bulk_replace(paths, old, new, expect, protect):
+    """Rename across many files, refusing the failure modes a bulk loop invites.
+
+    quantum's finding: safe_edit refuses a silent no-op for a SINGLE edit, because
+    old==new or a missing anchor is unambiguous. A LOOP reporting "changed 0 files" is a
+    legitimate outcome, so nothing refuses it -- and a case-sensitivity mismatch produces
+    exactly that. THE TOOL'S GUARANTEE DOES NOT EXTEND TO THE LOOP WRAPPED AROUND IT.
+    I hit it: a case-sensitive rename reported 0 files while grep -i found two.
+
+    And bridge's: A RENAME MUST NOT BE APPLIED TO THE TEXT THAT DOCUMENTS THE RENAME.
+    That text is the only place the old term legitimately survives, so a global replace
+    is *guaranteed* to destroy precisely the record you just added. The two operations
+    conflict directly and a bulk tool loses one in either order.
+
+      expect   required number of files to change. A mismatch RAISES -- so "0 files"
+               and "more files than I meant" are both errors rather than outcomes.
+      protect  substrings marking text that must keep the OLD term. Any file
+               containing one is skipped and reported, not silently edited.
+
+               *** REQUIRED, not defaulted. *** With a default of (), a caller who
+               forgets it gets the destructive behaviour and a success message -- the
+               decision-gated failure one level down, in the guard itself. Passing
+               protect=() must be a deliberate statement that nothing documents the
+               rename, not an omission. THE GUARD RIDES ON THE CALL ONLY IF THE CALL
+               CANNOT OMIT IT.
+    """
+    from pathlib import Path
+    changed, skipped = [], []
+    for p in map(Path, paths):
+        s = p.read_text()
+        if old not in s:
+            continue
+        if any(m in s for m in protect):
+            skipped.append(str(p)); continue
+        p.write_text(s.replace(old, new))
+        if new not in p.read_text():
+            raise EditFailed(f"{p}: replacement absent after write")
+        changed.append(str(p))
+    if len(changed) != expect:
+        raise EditFailed(
+            f"expected {expect} file(s) to change, {len(changed)} did"
+            f"{' (skipped as protected: ' + ', '.join(skipped) + ')' if skipped else ''}."
+            f" A bulk rename that changes the wrong NUMBER of files has failed even when"
+            f" every individual edit succeeded.")
+    return changed, skipped

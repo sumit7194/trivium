@@ -58,9 +58,25 @@ def corr(fn, drop):
 print(f"s={S}  L={L}  m*L={m*L:.2f}  l={LS}   (the study's grid; resolution matched)", flush=True)
 B, SH = {}, {}
 t0 = time.time()
+# PER-l OUTPUT, in BOTH loops. quantum found their per-l printing present in the main
+# entropy loop and absent from the k=0 deletion loop FORTY LINES BELOW IT IN THE SAME
+# FUNCTION -- so half of every regulator ran with no position, which is exactly the
+# defect the per-l output existed to fix. Not another file, not another document: the
+# next loop.
+# Mine was worse: these were LIST COMPREHENSIONS with the only print outside both, so
+# there was no per-l output at all. And my grep-based check reported "reports" because
+# it counted prints file-wide rather than in-loop -- a check measuring the wrong thing,
+# which is why reading the code found it and the check did not.
 for name, fn in ALL.items():
-    S1 = np.array([entropy(*corr(fn, False), l, L) for l in LS])
-    S2 = np.array([entropy(*corr(fn, True ), l, L) for l in LS])
+    S1 = []
+    for l in LS:
+        S1.append(entropy(*corr(fn, False), l, L))
+        print(f"    {name:<14} keep-k0  l={l:<4} [{time.time()-t0:.0f}s]", flush=True)
+    S2 = []
+    for l in LS:
+        S2.append(entropy(*corr(fn, True ), l, L))
+        print(f"    {name:<14} drop-k0  l={l:<4} [{time.time()-t0:.0f}s]", flush=True)
+    S1 = np.array(S1); S2 = np.array(S2)
     _, b1 = fit(LS, S1, "3p"); _, b2 = fit(LS, S2, "3p")
     B[name], SH[name] = b1, b2 - b1
     print(f"  {name:<14} B {b1:11.7f}  shift {b2-b1:10.7f}   [{time.time()-t0:.0f}s]", flush=True)
