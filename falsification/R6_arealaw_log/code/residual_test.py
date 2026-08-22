@@ -22,6 +22,10 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                 "..", "..", "M2_arealaw", "code"))
 import r6_log as R6
 
+sys.path.insert(0, "/Users/sumit/Github/.claude-coordination")
+from signtest import sign_test          # the null lives inside the verdict function
+
+
 def signs_of(res):
     s = "".join("+" if x > 0 else "-" for x in res)
     return s, sum(1 for i in range(1, len(s)) if s[i] != s[i-1])
@@ -36,8 +40,10 @@ for name, Kfun in [("R1 bare NN", R6.M2.K_bare), ("R2 improved", R6.M2.K_impr), 
     coef, *_ = np.linalg.lstsq(A, S, rcond=None)
     res = S - A @ coef
     sgn, ch = signs_of(res)
+    verdict, pval, detail = sign_test(res)
     rows.append((name, coef[1], sgn, ch, np.abs(res).max()))
-    print(f"  {name:<16} {coef[1]:10.4f}  {sgn:<12} {ch:7d}  {np.abs(res).max():10.3e}")
+    print(f"  {name:<16} {coef[1]:10.4f}  {detail}")
+    print(f"  {'':<16} {'':>10}  -> {verdict}")
 
 print(f"\n  {len(ns)} points. Scatter would give roughly {len(ns)//2} sign changes.")
 # THE NULL, which the first version of this script did not have. Under scatter, sign
