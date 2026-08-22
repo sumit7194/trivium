@@ -137,6 +137,36 @@ a memory fix rather than as an experimental choice. **Nobody audits a `--subsamp
 matching.** Their diagnosis pointed one step short of the actual problem, which was already present in
 the original trend.*
 
+## n=320 — saturation is STRONGER than either prediction. Degree 4 stays closed.
+
+ansatz filed, before the run and on disk: **1900–2100 if saturating, ~3900 if linear, target 2205**, to be
+judged against the α trend rather than the gap. My own clean-design extrapolation gave 1957–2104.
+
+**Measured, n=320, 344 rows/orbit, x₀ ∈ [4,24]:**
+
+| tol | basis rank of 2205 | conserved |
+|---|---|---|
+| 1e-8 | **1364** | 4 |
+| 1e-10 | 1799 | 6 |
+| 1e-12 | 2081 | 7 |
+
+**1364 against a predicted 1900–2100. Both extrapolations were wrong, and in the same direction.**
+α from n=80→320 is **0.189**, down from 0.502 over 40→80 — the deceleration is far steeper than the
+trend implied, so the curve was still bending where we fitted it.
+
+**Conserved = 4 at the working tolerance, against the required 14.** Degree 4 does not calibrate at
+n=320, at 8× the orbits and 16× the rows of the arm that first failed.
+
+⇒ **The finding is ansatz's framing, and it is now stronger than the version they proposed: no affordable
+orbit count reaches full rank with this sampling design.** Not "needs more orbits" — the per-orbit yield
+is collapsing faster than the deficit closes. What would help is a different sampling design (orbits
+chosen to spread over the (x,y) domain rather than drawn from a radial window), not more of this one.
+
+**Note what this does to the α method itself.** Extrapolating a decelerating exponent from two consecutive
+pairs overestimated by ~40%, and it did so *after* the design confound was corrected — so the error is in
+the extrapolation, not in the inputs. **A decelerating trend has no stable exponent to extrapolate**, and
+fitting one on consecutive pairs assumes exactly the thing it is measuring.
+
 ## Honest scope
 
 - **One rung only.** Degree 2 at both δ. Degree 4 and 6 remain unmeasured by this instrument.

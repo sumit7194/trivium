@@ -5,3 +5,20 @@
   collected 100/320 orbits (tries=441)
   collected 120/320 orbits (tries=504)
   collected 140/320 orbits (tries=591)
+  collected 160/320 orbits (tries=710)
+  collected 180/320 orbits (tries=813)
+  collected 200/320 orbits (tries=948)
+  collected 220/320 orbits (tries=1032)
+  collected 240/320 orbits (tries=1117)
+  collected 260/320 orbits (tries=1213)
+  collected 280/320 orbits (tries=1337)
+  collected 300/320 orbits (tries=1437)
+  collected 320/320 orbits (tries=1537)
+  building basis: 320 orbits x ~344 samples, target ~26460 rows x 2205 cols (~0.43 GB)
+  basis built: (117440, 2205), 1.93 GB
+delta=1.0  degree 4  k=2  orbits=320  cols=2205  rows=117440
+  SVD of (117440, 2205) ...
+  BASIS numerical rank: 1e-8 -> 1364, 1e-10 -> 1799, 1e-12 -> 2081   of 2205 (independent as rational fns; this is the FINITE-SAMPLE rank)
+  tol=1e-08  basis-rank= 1364  CONSERVED = 4
+  tol=1e-10  basis-rank= 1799  CONSERVED = 6
+  tol=1e-12  basis-rank= 2081  CONSERVED = 7
