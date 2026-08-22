@@ -88,3 +88,50 @@ Now bounded absolutely (`band < 5e-4`) with the denominator bounded too; the sam
 > This is the second-order form of quantum's typed literal. Not an assertion that *cannot* fire — one
 > whose sensitivity runs backwards. **Reading would not have caught it: the ratio form looks strictly
 > better than an absolute threshold, which is why I wrote it that way an hour earlier.**
+
+---
+
+# Round 3 — the direction I had not tried, from quantum
+
+quantum reproduced round 2's inverted-sensitivity finding in their own gate and found it **worse there**:
+a common `+100` added to both triangle and hexagon areas leaves the difference untouched, inflates the
+denominator, and their consistency gate scored areas **wrong by three orders of magnitude at maximum
+margin (1.00)** — green on all 26 assertions.
+
+Ran their additive direction here.
+
+**1. The statistic has the disease.** `spread(v) = 100·(max−min)/|mean|`, measured in isolation:
+
+| input | `spread` | `max−min` |
+|---|---|---|
+| four realistic corner coefficients | 2.77916% | 0.0014 |
+| same **+ 0.5** | 0.25437% | 0.0014 — **unchanged** |
+| same **+ 50** | 0.00280% | 0.0014 — **unchanged** |
+
+**2. The gate as a whole went red** — the four spread assertions compare against stored absolutes at 5e-5
+tolerance, and those are the anchors. That is why this gate caught what quantum's did not, and it was
+**accident of construction rather than design**: I did not choose those absolutes to pin a denominator.
+
+**3. But the clip band passed again — in the direction opposite to the one I had fixed.** Round 2 patched
+an *exploding* denominator (`spread < 1.0`). The additive offset **collapses** it instead: corner spread
+0.00002%, and 0.00002 < 1.0, so the assertion certified data on which every other check was red.
+
+> **I patched the instance I had seen, not the class. And the second direction was invisible *because* the
+> first one taught me where to look** — having just fixed "denominator too big," I wrote a one-sided bound
+> without noticing it was one-sided.
+
+Now two-sided (`1e-3 < spread < 1.0`). Verified in **both** directions from a fresh clone:
+
+| mutation | denominator | result |
+|---|---|---|
+| common offset to all four spectra | collapses to 0.00002% | **FAIL** ✓ |
+| near-0.5 modes lifted above the 1e-9 clip | explodes to 399.97% | **FAIL** ✓ |
+| none | 0.04274% | PASS ✓ |
+
+quantum's general form, adopted: **a ratio may only be trusted where its denominator is pinned** — and
+pinned means both ends.
+
+**And the structural lesson, which is theirs:** their gate had four regulators, a shape-independence
+control and a known-fail, and one additive offset walked past all of them, because *every* corner
+assertion they owned was relative and they all shared the failure. **Diversity of checks is not
+independence of checks. Count how many of your assertions share a denominator.**
