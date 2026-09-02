@@ -8,26 +8,74 @@
 #   quantum's form, sharper than mine: A CHECK IS DURABLE WHEN IT RIDES ON AN ACTION
 #   ALREADY BEING TAKEN FOR ANOTHER REASON. The hook is not special because it is a
 #   hook; it is special because committing is something I do anyway, so the check costs
-#   no separate act of will. Attach a check to an action nobody performs and it is
-#   decision-gated again with extra steps.
+#   no separate act of will.
 #
 # This REPORTS and does not block: the sweeps are triage-heavy (1 real hit in ~12 for
 # "independent", 2 in 6 for buried caveats) and a blocking check with that hit rate
 # would be disabled within a day. Blocking is for assertions with a known denominator.
-set -e
+#
+# ---------------------------------------------------------------------------
+# 2026-09-02: THIS HOOK WAS BLOCKING EVERY COMMIT, SILENTLY, AND THE COMMENT
+# DIRECTLY ABOVE SAID IT COULD NOT.
+#
+#   APP=$(... | grep -cE "^  (APPEND-ONLY|...)")
+#
+# `grep -c` exits 1 when it counts ZERO. Under `set -e` that aborted the hook
+# before any output, and git reported nothing at all -- no message, no diff, the
+# commit simply did not happen. Three separate attempts read as "the command
+# produced no output".
+#
+# It went to zero because append_only.py measures a window RELATIVE TO NOW
+# ("12 hours ago"). Once the last commit aged past that window the tool correctly
+# reported "fewer than 2 revisions -- nothing to compare", the grep counted 0, and
+# `set -e` did the rest.
+#
+# TWO DEFECTS, AND THE SECOND IS WORSE THAN THE CRASH:
+#   1. a zero count is a legitimate measurement, not an error
+#   2. "0 sections" and "the check could not run" produced THE SAME NUMBER, so the
+#      stored delta would have read 5 -> 0 as five documents ceasing to be
+#      append-only. A false alarm of the worst kind, from a check that had merely
+#      run out of input. This is the silent-null shape the sweep exists to find,
+#      in the sweep itself.
+#   3. and a delta against a SLIDING window measures the clock as much as the repo.
+#
+# Fixed: sweep failures are reported and never block; an uncomparable window is
+# recorded as "-" and is never differenced against a number.
+# ---------------------------------------------------------------------------
 R=$(git rev-parse --show-toplevel)
 S=$R/.git/audit_counts
 C=/Users/sumit/Github/.claude-coordination
 [[ -f $C/audit_sweep.py ]] || exit 0
 
-NEW=$(python3 $C/audit_sweep.py $R 2>/dev/null | grep -oE "— [0-9]+ hits" | grep -oE "[0-9]+" | paste -sd, -)
-APP=$(python3 $C/append_only.py $R "12 hours ago" 2>/dev/null | grep -cE "^  (APPEND-ONLY|SECTIONS-ONLY-ADDED)")
-NEW="$NEW|$APP"
+SW=$(python3 $C/audit_sweep.py $R 2>&1); SW_RC=$?
+if (( SW_RC != 0 )); then
+  echo "  audit: audit_sweep.py FAILED (rc=$SW_RC) -- not blocking, but the sweep did not run"
+  echo "$SW" | tail -3
+  HITS="ERR"
+else
+  HITS=$(print -r -- "$SW" | grep -oE "— [0-9]+ hits" | grep -oE "[0-9]+" | paste -sd, -)
+  [[ -z "$HITS" ]] && HITS="ERR"     # parsed nothing: the format changed, not "zero hits"
+fi
+
+AO=$(python3 $C/append_only.py $R "12 hours ago" 2>&1); AO_RC=$?
+if (( AO_RC != 0 )); then
+  echo "  audit: append_only.py FAILED (rc=$AO_RC) -- not blocking"
+  APP="ERR"
+elif print -r -- "$AO" | grep -q "nothing to compare"; then
+  APP="-"                            # NOT zero. The window holds too few revisions.
+else
+  APP=$(print -r -- "$AO" | grep -cE "^  (APPEND-ONLY|SECTIONS-ONLY-ADDED)" || true)
+fi
+
+NEW="$HITS|$APP"
 
 if [[ -f $S ]]; then
   OLD=$(cat $S)
   if [[ "$OLD" != "$NEW" ]]; then
     echo "  audit delta: $OLD -> $NEW  (sweep hits | append-only sections)"
+    if [[ "$OLD" == *"|-"* || "$NEW" == *"|-"* ]]; then
+      echo "  '-' means the append-only window held too few revisions to compare — NOT a fall to zero"
+    fi
     echo "  a rise is not necessarily a defect -- see the false-positive notes in the source"
   fi
 else

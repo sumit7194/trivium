@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is the Carter Constant an Accident?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+
+<style>
+html { color-scheme: light dark; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+:root {
+  --ground:    #F1F3EF;
+  --surface:   #FFFFFF;
+  --surface-2: #E8EBE5;
+  --ink:       #1A1D22;
+  --ink-soft:  #4A5058;
+  --muted:     #6B727C;
+  --rule:      #D3D8CE;
+  --rule-soft: #E2E6DD;
+  --closed:    #2C6E63;
+  --closed-bg: #DCE9E5;
+  --open:      #9A6410;
+  --open-bg:   #F2E6CE;
+  --wall:      #7C3A3A;
+  --wall-bg:   #EFDCDA;
+  --code-bg:   #22262C;
+  --code-ink:  #DCE0DA;
+  --code-dim:  #7E8792;
+
+  --f-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --f-body:    "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:    "IBM Plex Mono", "SF Mono", Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:    #14171A;
+    --surface:   #1B1F23;
+    --surface-2: #232830;
+    --ink:       #E4E7E2;
+    --ink-soft:  #B4BAC0;
+    --muted:     #878E97;
+    --rule:      #2E343B;
+    --rule-soft: #262B31;
+    --closed:    #6FB6A6;
+    --closed-bg: #1D3230;
+    --open:      #D6A44C;
+    --open-bg:   #32291A;
+    --wall:      #D08B85;
+    --wall-bg:   #33211F;
+    --code-bg:   #0E1114;
+    --code-ink:  #D3D8D1;
+    --code-dim:  #6C757F;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ground:    #14171A;
+  --surface:   #1B1F23;
+  --surface-2: #232830;
+  --ink:       #E4E7E2;
+  --ink-soft:  #B4BAC0;
+  --muted:     #878E97;
+  --rule:      #2E343B;
+  --rule-soft: #262B31;
+  --closed:    #6FB6A6;
+  --closed-bg: #1D3230;
+  --open:      #D6A44C;
+  --open-bg:   #32291A;
+  --wall:      #D08B85;
+  --wall-bg:   #33211F;
+  --code-bg:   #0E1114;
+  --code-ink:  #D3D8D1;
+  --code-dim:  #6C757F;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 78ch;
+  margin: 0 auto;
+  padding: 0 28px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ---------- masthead ---------- */
+
+header.mast {
+  padding: 64px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 32px;
+}
+
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+}
+.eyebrow b { color: var(--closed); font-weight: 600; }
+
+h1 {
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: clamp(2.1rem, 6vw, 3.15rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 em { font-style: italic; color: var(--ink-soft); }
+
+.standfirst {
+  font-family: var(--f-display);
+  font-size: clamp(1.05rem, 2.4vw, 1.24rem);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+/* ---------- instrument strip ---------- */
+
+.instruments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.inst {
+  background: var(--surface);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.inst .n {
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.inst .r {
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--closed);
+}
+.inst .d { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+
+/* ---------- sections ---------- */
+
+section { display: flex; flex-direction: column; gap: 18px; }
+
+h2 {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 1.55rem;
+  line-height: 1.22;
+  margin: 0;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  padding-top: 12px;
+  border-top: 2px solid var(--ink);
+}
+
+h3 {
+  font-family: var(--f-body);
+  font-weight: 600;
+  font-size: 0.94rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: var(--ink);
+}
+
+p { margin: 0; max-width: 68ch; text-wrap: pretty; }
+p.lede { font-size: 1.06rem; color: var(--ink-soft); }
+
+strong { font-weight: 600; }
+em { font-style: italic; }
+
+a { color: var(--closed); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:focus-visible, .chip:focus-visible { outline: 2px solid var(--open); outline-offset: 2px; }
+
+code {
+  font-family: var(--f-mono);
+  font-size: 0.88em;
+  background: var(--surface-2);
+  padding: 0.1em 0.36em;
+  border-radius: 2px;
+}
+
+/* ---------- verdict chips ---------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.chip.closed { background: var(--closed-bg); color: var(--closed); }
+.chip.open   { background: var(--open-bg);   color: var(--open); }
+.chip.wall   { background: var(--wall-bg);   color: var(--wall); }
+
+/* ---------- ledger ---------- */
+
+.ledger {
+  background: var(--code-bg);
+  color: var(--code-ink);
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  line-height: 1.75;
+  padding: 18px 20px;
+  overflow-x: auto;
+  border-radius: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.ledger .cap {
+  display: block;
+  color: var(--code-dim);
+  font-size: 10.5px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.ledger .hit { color: #E8B75C; font-weight: 600; }
+.ledger .nil { color: #7FC4B4; font-weight: 600; }
+.ledger .dim { color: var(--code-dim); }
+
+pre.sh {
+  background: var(--code-bg);
+  color: var(--code-ink);
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  line-height: 1.7;
+  padding: 16px 20px;
+  overflow-x: auto;
+  border-radius: 3px;
+  margin: 0;
+}
+pre.sh .c { color: var(--code-dim); }
+
+/* ---------- callout ---------- */
+
+.note {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--open);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.note.hard { border-left-color: var(--wall); }
+.note.good { border-left-color: var(--closed); }
+.note h3 { font-size: 0.86rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.note p { font-size: 0.95rem; }
+
+/* ---------- sequence ---------- */
+
+ol.seq {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  counter-reset: step;
+}
+ol.seq > li {
+  background: var(--surface);
+  padding: 16px 20px 16px 58px;
+  position: relative;
+  counter-increment: step;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+ol.seq > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-family: var(--f-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--closed);
+}
+ol.seq h3 { font-size: 0.95rem; }
+ol.seq p { font-size: 0.93rem; color: var(--ink-soft); }
+
+/* ---------- alternates ---------- */
+
+.alts { display: flex; flex-direction: column; gap: 14px; }
+.alt {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.alt .hd { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.alt .hd h3 { font-family: var(--f-display); font-size: 1.12rem; font-weight: 600; }
+.alt p { font-size: 0.94rem; }
+
+/* ---------- file map ---------- */
+
+table.map {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.map th {
+  text-align: left;
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  padding: 0 12px 8px 0;
+  border-bottom: 1px solid var(--rule);
+}
+table.map td {
+  padding: 9px 12px 9px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  vertical-align: top;
+}
+table.map td:first-child { font-family: var(--f-mono); font-size: 12px; white-space: nowrap; }
+table.map td:last-child { color: var(--muted); }
+.tablewrap { overflow-x: auto; }
+
+ul.plain { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 8px; }
+ul.plain li { max-width: 66ch; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+  font-size: 12.5px;
+  color: var(--muted);
+  font-family: var(--f-mono);
+  line-height: 1.7;
+}
+
+@media (max-width: 560px) {
+  .page { padding: 0 18px 64px; gap: 32px; }
+  header.mast { padding-top: 40px; }
+  ol.seq > li { padding-left: 20px; padding-top: 38px; }
+  ol.seq > li::before { top: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+
+</head>
+<body>
+<div class="page">
+
+<header class="mast">
+  <div class="eyebrow">
+    <span>Session briefing</span>
+    <span>·</span>
+    <span>trivium / conjecture_machine</span>
+    <span>·</span>
+    <span><b>read this before running anything</b></span>
+  </div>
+  <h1>Is the Carter constant<br><em>an accident of Kerr?</em></h1>
+  <p class="standfirst">Kerr has a hidden symmetry that makes orbits integrable. Almost nothing else does, and nobody knows whether that is structural or a coincidence. You are inheriting the only validated exact instrument I know of that can turn that question into a theorem instead of a screen — and a rank ceiling it cannot cross on its own.</p>
+</header>
+
+<section>
+  <h2>The four instruments you are inheriting</h2>
+  <p>Four sibling repos, built with independent roots <em>on purpose</em>, cross-validated read-only by a fifth. The point is epistemic disjointness: when two agree it is evidence rather than echo, and when they disagree that is a finding.</p>
+  <div class="instruments">
+    <div class="inst"><span class="n">ansatz</span><span class="r">deductive</span><span class="d">conjecture_machine — exact symbolic GR over GF(p). A null here is a theorem.</span></div>
+    <div class="inst"><span class="n">tabula</span><span class="r">inductive</span><span class="d">SpaceTime — neural geometry from observation. Never shown a metric.</span></div>
+    <div class="inst"><span class="n">deepstrain</span><span class="r">empirical</span><span class="d">BlackHole — real O3a/O4 strain. Background measured, not assumed.</span></div>
+    <div class="inst"><span class="n">quantum</span><span class="r">foundational</span><span class="d">vestigium — verified QM lattice numerics, entanglement entropy.</span></div>
+  </div>
+  <p><strong>Three rules are load-bearing, not decorative.</strong> The four source repos are read-only — the bridge imports from them and never modifies them, and they are kept ignorant of each other. Every leg pre-registers its prediction and its agreement criterion <em>before</em> the compute runs. Verdicts are three-valued: killed, survives, undecided. The program's running total is 12 kills against 6 survivals, including its own flagship claim; a scoreboard that cannot lose is not a scoreboard.</p>
+</section>
+
+<section>
+  <h2>The question, stated precisely</h2>
+  <p class="lede">Does the quadrupole-deformed Kerr metric admit an irreducible Killing tensor of rank 3 or rank 4 — and more ambitiously, of <em>any</em> rank?</p>
+  <p>A rank-<em>r</em> Killing tensor is exactly a conserved quantity <code>F = K^{a₁…a_r} p_{a₁}…p_{a_r}</code>, homogeneous of degree <em>r</em> in the momenta, satisfying <code>{H, F} = 0</code>. Kerr carries one at rank 2 — the Carter constant — and that single object is why Kerr geodesics separate. Strip it away and orbits stop being integrable: resonance crossings appear, and the waveform models LISA will rely on for extreme-mass-ratio inspirals assume they are not there.</p>
+  <p>So this is not a curiosity about a metric. <strong>It is the question of whether the mathematical convenience the entire EMRI modelling programme is built on survives contact with a spacetime that is not exactly Kerr.</strong></p>
+</section>
+
+<section>
+  <h2>What is already proved, and by what</h2>
+  <p>Two results from the last few days matter more than anything else in the repo, because between them they establish that the instrument works in <em>both</em> directions. A checker that has only ever returned "nothing" has not been shown able to say "something".</p>
+
+  <div class="ledger">
+    <span class="cap">Positive control — Kerr M=1, a=1/2, rank 2, den¹, box 8×8 (81 funcs), 64 points</span>
+sampled 5   exact 5   reducible 4   →  <span class="hit">IRREDUCIBLE 1</span>   <span class="dim">both primes</span>
+
+<span class="dim">Generators [p_t, p_φ, H]; Lsq correctly REJECTED — Kerr is not spherically symmetric.
+Direction identified, not merely counted: constructing the textbook</span>
+Q = p_θ² + y²[a²(μ² − E²) + L_z²/(1−y²)]  <span class="dim">gives {H,Q} = 0 exactly, and
+adjoining Q raises the reducible span's rank 4 → 5, matching the measured dimension.</span>
+  </div>
+
+  <div class="ledger">
+    <span class="cap">Zipoy–Voorhees δ=2 — an exact vacuum deformation, verified Ricci-flat before use</span>
+rank                     1    2    3    4    5    6
+prover dimension         2    4    6    8   10   12
+representable reducible  2    4    6    8   10   12
+independent rank         2    4    6    8   10   12
+<span class="nil">IRREDUCIBLE              0    0    0    0    0    0</span>
+
+<span class="cap" style="margin-top:14px">δ=1 is Schwarzschild in the same coordinate family — a free on-substrate control</span>
+prover dimension         2    5    8   11   14   17
+<span class="nil">IRREDUCIBLE              0    0    0    0    0    0</span>
+  </div>
+
+  <p>The δ=1 row is the part to appreciate. Zipoy–Voorhees at δ=1 <em>is</em> Schwarzschild, expressed in prolate spheroidal coordinates where nothing looks like <code>1 − 2M/r</code>. So the prover has to recover Schwarzschild's Killing algebra in the same coordinate family and the same denominator structure as the δ=2 run. The control is free, and it is on-substrate by construction — which an ε=0 control for deformed Kerr is <em>not</em>, since ε=0 is Kerr and therefore a different substrate entirely.</p>
+</section>
+
+<section>
+  <h2>Why this is hard, and where it actually stops</h2>
+  <div class="note hard">
+    <h3>The ceiling</h3>
+    <p><strong>Every result above is rank-bounded.</strong> Closing ranks 1–6 computationally is not the same statement as "no irreducible Killing tensor exists." Each rank is an independent finite linear problem — that is what makes the computation tractable, and it is also exactly why no finite number of them adds up to a theorem about all ranks. Turning a ladder of computational nulls into a <em>rank-unbounded structural obstruction</em> requires an actual argument, and the repo does not have one.</p>
+  </div>
+  <p>The live, nearer target is deformed Kerr at ranks 3 and 4, named in the repo's own §85 caveat: <em>"a higher-order quartic Killing tensor isn't excluded."</em> A prior-art sweep found nothing excluding rank-3 or rank-4 for Kerr or deformed Kerr, and Cariglia–Galajinsky (<code>arXiv:1503.02162</code>) <em>construct</em> Ricci-flat metrics that carry irreducible rank-3 and rank-4 tensors. The objects exist. There is no theorem saying deformed Kerr cannot have one.</p>
+  <p>An earlier attempt at this is marked <strong>DEAD END</strong> in the repo — 7.5 hours, no output, an expand-everything blow-up. The obstruction was the normalizer, not the mathematics. The momentum-space formulation the grading theorem licenses is what made it tractable; the system size is measurable up front rather than discovered by hanging.</p>
+</section>
+
+<section>
+  <h2>The sequence, which is not optional</h2>
+  <p>This is a real dependency order, not a checklist. Step 3 produces a number that is worth nothing without steps 1 and 2, and the repo has already paid for learning that.</p>
+  <ol class="seq">
+    <li>
+      <h3>Measure the system size and confirm the bracket builds</h3>
+      <p>Before any physics. The failure mode being avoided is a nine-hour hang that hides a malformed target.</p>
+    </li>
+    <li>
+      <h3>Validate the prover on known-nonzero cases</h3>
+      <p>Kerr rank 2 must yield Carter — already done, shown above. Cariglia–Galajinsky must yield its rank-3/4 tensor. The control already exists as <code>scripts/_kt_cg5d.py</code>, and it carries a warning worth reading in full: <em>derive</em> the target from their Eq. (24), do <strong>not</strong> transcribe Eq. (29). PDF-to-text collapsed an index there — <code>K_ttxw</code> read as <code>K_tttw</code> — and the transcribed tensor is not conserved, drift 0.30. A silently wrong target reads as "the control failed" or, far worse, as "no rank-4 KT exists."</p>
+    </li>
+    <li>
+      <h3>Only then, deformed Kerr</h3>
+      <p>A null from an unvalidated prover is worthless. This ordering is the whole reason the ZV zeros are citable.</p>
+    </li>
+  </ol>
+  <pre class="sh"><span class="c"># the local gate — every battery, both directions, one verdict.
+# run before any "done" claim.</span>
+cd /Users/sumit/Github/conjecture_machine && ./verify.sh
+
+<span class="c"># the prover; --metric accepts zv:&lt;delta&gt; and kerr[:M[:a]]</span>
+.venv/bin/python scripts/_kt_exact.py --metric kerr:1:1/2 --rank 2 --denpow 1</pre>
+</section>
+
+<section>
+  <h2>Failure modes this program has already paid for</h2>
+  <p>These are not general advice. Each one is an error that was actually made here, cost real time, and is the reason a specific guard exists in the code.</p>
+  <ul class="plain">
+    <li><strong>A correct computation answering the wrong question.</strong> The §124 error. A mis-transcribed metric solves no field equation, and "no Killing tensor survives" on it is guaranteed and meaningless. Verify a transcribed metric is Ricci-flat <em>before</em> calling it a spacetime.</li>
+    <li><strong>A control that cannot fail is not a control.</strong> Contributed by tabula, from nine catalogued ways a bug reads as a result. Its companion: a threshold tested in one direction only is not tested.</li>
+    <li><strong>Residuals that vanish exactly where the fit was made are a fit artifact, not a physics failure.</strong> This nearly condemned a correct sGB metric — fitting constants as pure numbers at m=1 made every residual proportional to (m⁴ − 1). Solving for c(m) symbolically recovered the dimensional relation instead of discarding it.</li>
+    <li><strong>Proxies masquerade as laws on homogeneous catalogs.</strong> The program's flagship — <em>legible ⟺ Killing–Yano integrable</em>, 8/8 agreement, φ = 1.0 — died exactly this way. All eight metrics were found rather than designed, and a 1976 theorem forces the implication on type-D vacua. The measurement was real; the law read off it was not.</li>
+    <li><strong>A relayed claim is repeated, not corroborated.</strong> The originating repo must tag it. Attribution drifts to the last speaker unless someone logs the middle hop.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Two alternates, if this one closes or stalls</h2>
+  <div class="alts">
+    <div class="alt">
+      <div class="hd"><h3>Is the astrophysical black hole Kerr?</h3><span class="chip wall">floor measured</span></div>
+      <p>All four oracles already meet here and the spine closes: proof, representation-learning and measurement independently give a black hole as a 2-number object, with GW250114 at δ = −0.16. What makes it live is that the program <em>measured its own wall</em> — σ(δ) ∝ 1/SNR is an exact analytic identity, but total error saturates at an SNR-independent waveform-systematic floor. More data cannot cross it; better waveforms can.</p>
+      <p>And the EdGB field-equation setup was validated four days ago against Ayzenberg &amp; Yunes: fit <code>c₁ = −2m⁴, c₂ = +2m⁴</code> on the tt component, then <em>require</em> the same constants to reproduce rr, θθ, φφ — all four residuals zero. So beyond-GR corrections can now be <strong>derived</strong> rather than transcribed. The chain exists end to end: exact O(χ) and O(χ²) sGB corrections → QNM spectrum → ringdown templates → injection into real O4b noise against the measured background → a statement of what deviation would actually be detectable.</p>
+    </div>
+    <div class="alt">
+      <div class="hd"><h3>Does geometry emerge from entanglement?</h3><span class="chip open">observable unstable</span></div>
+      <p>Biggest question of the three in physics terms, weakest as a test of a model. Tabula's Phase J already recovered geometry, curvature and an AdS-like radial direction from entanglement alone; quantum measures entanglement corner coefficients, which are genuine CFT observables. The holographic dictionary is the bridge between them.</p>
+      <p><strong>But last night is a direct warning about attempting it.</strong> At matched resolution and with matched kernel specifications, the corner residual's numerator disagrees <strong>2.4×</strong> between the square and triangular lattices, and the sign of the zero-mode effect <em>flips</em> between s=1 and s=6. The denominators agree to 2.6% across both geometries; the whole disagreement sits in the numerator. Before this bridges anything, someone has to establish whether the corner coefficient is a well-defined observable in these hands. That is the honest first move and it is not a small one.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Where everything is</h2>
+  <div class="tablewrap">
+  <table class="map">
+    <thead><tr><th>path</th><th>what it is</th></tr></thead>
+    <tbody>
+      <tr><td>conjecture_machine/scripts/_kt_exact.py</td><td>the prover — <code>--metric</code>, <code>--rank</code>, <code>--denpow</code>, <code>--box</code></td></tr>
+      <tr><td>conjecture_machine/scripts/_kt_metrics.py</td><td>the single place that knows what a substrate is; degrees measured from <code>g^ab</code>, not inferred</td></tr>
+      <tr><td>conjecture_machine/scripts/_kt_cg5d.py</td><td>the rank-4 positive control, with the transcription hazard documented</td></tr>
+      <tr><td>conjecture_machine/scripts/_kt_nullvec.py</td><td>identity checker — validates "is this F a solution", <em>not</em> the dimension pipeline</td></tr>
+      <tr><td>conjecture_machine/RESULTS.md</td><td>§124 ZV closure · §126 δ=2 rank 4 · §127 the Kerr control</td></tr>
+      <tr><td>conjecture_machine/docs/ROADMAP.md</td><td>the open question in the repo's own words, and the dead end that preceded it</td></tr>
+      <tr><td>TheBridge/CAPSTONE.md</td><td>program scoreboard, five load-bearing results, honest-miss ledger</td></tr>
+      <tr><td>TheBridge/FALSIFICATION_V2.md</td><td>the twelve standing lessons, each bought by a named failure</td></tr>
+      <tr><td>SpaceTime/writeups/silent_nulls.md</td><td>nine measured ways a bug reads as a result</td></tr>
+      <tr><td>SpaceTime/writeups/representability_frontier.md</td><td>the five-verdict discoverability diagnostic</td></tr>
+      <tr><td>BlackHole/README.md</td><td>real-data searches; the δ wall and the model-fidelity floor</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note good">
+    <h3>One thing to preserve</h3>
+    <p>The read-only rule between repos is the reason agreement between them counts as evidence. It looks like friction and it is the asset. Do not let a capable session optimise it away.</p>
+  </div>
+</section>
+
+<footer>
+  Assembled 2026-09-02 from the four oracle repos at their current HEADs.<br>
+  Every number here traces to a gated leg and its commit; where this page and a leg's FINDINGS.md disagree, the leg wins.
+</footer>
+
+</div>
+</body>
+</html>
