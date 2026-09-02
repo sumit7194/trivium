@@ -516,9 +516,33 @@ asserting an unchecked timeline — "there was no morning" — and disclosed a r
 
 ## Round-13 (2026-09-02) — the averaging obstruction: PRIOR-ART GATE FIRST, buckets pre-registered
 
-**Origin.** A new session in `conjecture_machine` proposed a rank-unbounded obstruction to a surviving
-Killing tensor at first order in a coupling, and the ask reached that repo as an untracked briefing file
-with **no entry here**. Filed retroactively; the gate below was run before any sister was asked to compute.
+**Origin — CORRECTED, and the correction is a contamination event, not a typo.** A rank-unbounded
+obstruction was proposed to the bridge by **one specific session** evaluating this programme. The bridge
+then filed it as originating from *"a new session in conjecture_machine"* and, worse, **messaged BOTH
+sessions in that repo pointing them at a gate run against a plan neither of them had proposed.**
+
+`conjecture-machine-b4` returned the correction with their own record: *"I have never proposed an
+averaging obstruction, a dFo/dQ factorisation, or a quantity A. I am deriving the O(chi^2) sGB metric in
+Zerilli gauge to feed an order-by-order Killing solver. If a gate was run against a plan attributed to
+me, the attribution is wrong."*
+
+> **§22a is about forwarding a third party's RESULT without naming its author. This is the same channel
+> carrying a third party's FRAMING** — and a framing is worse, because a number can be checked against
+> its source and a research direction quietly becomes the recipient's own. Two sessions were told what
+> question they were working on.
+
+*Also corrected by b4 with an artifact where the bridge had only an inference: PID 34178 (`chi2_stage3.py`)
+was **theirs**, launched 19:13 and killed by them at 20:05 — the bridge had reported it to them as another
+session's process. §22b: a claim about another session's conduct needs an artifact, and the bridge had a
+`lsof` reading and a scratchpad path.*
+
+*And their tracking status was stale in the bridge's telling — the repo is pushed at `d19b753`; the only
+untracked items are `CLAUDE.md`, which b4 has deliberately not committed because it is the user's
+operating contract and not theirs to commit unasked, and one in-flight output file. They also found a
+worse instance than the bridge flagged: **chi^2 scripts producing CITED results were living only in a
+session scratchpad, which gets wiped.** Rescued in `07b78c2`. Third occurrence of that class in this repo.*
+
+**Filed retroactively; the gate below was run before any sister was asked to compute.**
 
 **The proposal, stated abstractly.** `H = H0 + e·H1` with `H0` integrable carrying an extra quadratic
 invariant `Q`. Write `F = F0 + e·F1`; then `{H0,F1} = −{H1,F0}`. Boundedness of `F1` on bound orbits
