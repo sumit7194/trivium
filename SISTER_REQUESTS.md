@@ -624,10 +624,28 @@ proved nothing about the averaging); positive control matches the analytic prece
 
 > **Then they measured the step the bridge had only hedged.** Boundedness of the discarded oscillating
 > part holds **per orbit**; the lemma is applied on an **open set** and needs it **uniformly there**. It is
-> not uniform: `|F1| ~ C/(1-e)` with C = 2.74 constant to 1% while |F1| grows 87x over e = 0.10..0.99.
-> The usable window is `eps < 0.365 e(1-e)` — **ceiling 0.091 at e = 0.5, closing at BOTH ends for
-> DIFFERENT reasons** (e→0: `|A_LRL| = k e` is itself zero, nothing to destroy; e→1: the discarded
-> oscillation diverges). *k/C = 0.365 was predicted from the measured C, not fitted.*
+> not uniform, and it fails at **both ends for different reasons** (e→0: `|A_LRL| = k e` is itself zero,
+> nothing to destroy; e→1: the discarded oscillation diverges). **A != 0 is necessary on a BAND.**
+
+**RETRACTED, `9b329d8` — and the bridge propagated the retracted number before the retraction arrived.**
+*The first version of this entry read* **"the usable window is `eps < 0.365 e(1-e)`, ceiling 0.091 at
+e = 0.5."** **There is no ceiling in eps.** The window scales linearly with the semi-major axis — quantum's
+scan was at fixed `a = 1.3` and they had not reported the dependence:
+
+    a       window(e=0.5)    window/a
+    0.8       0.0600          0.0750
+    1.3       0.0975          0.0750
+    2.0       0.1500          0.0750
+    4.0       0.3000          0.0750      <- 0.30, not 0.09
+
+**The invariant form:** `(eps beta)/(k a) < C' e(1-e)` with `C' = 0.29`, constant to **4.3%** over 72
+combinations of (a, e, beta, k) — **tighter than the 9.9% of the dimensionful version, which is the
+evidence that the grouping is right rather than a second fit.** *The band's width is a dimensionless
+group, not a number.*
+
+*Their second over-claim, same section: `|F1|(1-e)` constant to 1% holds over e in [0.90, 0.99]; over
+[0.05, 0.99] it varies 14%. Three points written as a global law. The `(1-e)` divergence itself is real —
+competing shapes spread 77%, 58% and 131% against its 14% — **only the precision was wrong.***
 
 **tabula — the test design cannot fail.** All three outputs are zero: control (a) equatorial → 0, control
 (b) Kerr-family → 0, inconclusive branch → 0. **Code returning zero unconditionally scores a perfect
@@ -654,6 +672,12 @@ convergence looks like.
 
 ### The methodological class this round produced — FOUR independent instances, one mechanism
 
+    bridge       recomputed quantum's FITTED FORMULA from the formula and reported it as
+                 "reproduces exactly" -- an arithmetic identity presented as verification.
+                 Their MEASURED value was 6.5% away and the check could not have seen it
+    quantum      the trivial control -- "does this change when I change nothing physical" --
+                 was run on the perturbation and never on their own summary statistic, which
+                 was itself parametrisation-dependent
     quantum      A_x identically zero by parity for every central perturbation
     quantum      {L_z,A_x} = -A_y checked with perihelion on +x, so it reads 0 = 0 and
                  passes ANY implementation
