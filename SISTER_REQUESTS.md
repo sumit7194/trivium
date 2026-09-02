@@ -612,3 +612,69 @@ of writing the average as a derivation, the approach loses its claim to novelty 
 a verification of OYW's conjecture by an independent exact method — which is still worth doing, and is
 not what was originally proposed.
 
+
+### Round-13 RESULTS — four sisters, ~90 minutes, and the proposal did not survive intact
+
+*Everything below was produced before a single expensive run. That is the whole argument for asking first.*
+
+**quantum — the key lemma holds on a BAND, not an open set.** LRL substrate, Kepler, commit `7514ca7`.
+Two averaging routes sharing no code path agree to 1.5e-10; the trivial control averages to 1e-15 *while
+its bracket is nonzero pointwise by up to 11.0* (both halves needed — a pointwise-zero bracket would have
+proved nothing about the averaging); positive control matches the analytic precession rate to 1.4e-14.
+
+> **Then they measured the step the bridge had only hedged.** Boundedness of the discarded oscillating
+> part holds **per orbit**; the lemma is applied on an **open set** and needs it **uniformly there**. It is
+> not uniform: `|F1| ~ C/(1-e)` with C = 2.74 constant to 1% while |F1| grows 87x over e = 0.10..0.99.
+> The usable window is `eps < 0.365 e(1-e)` — **ceiling 0.091 at e = 0.5, closing at BOTH ends for
+> DIFFERENT reasons** (e→0: `|A_LRL| = k e` is itself zero, nothing to destroy; e→1: the discarded
+> oscillation diverges). *k/C = 0.365 was predicted from the measured C, not fitted.*
+
+**tabula — the test design cannot fail.** All three outputs are zero: control (a) equatorial → 0, control
+(b) Kerr-family → 0, inconclusive branch → 0. **Code returning zero unconditionally scores a perfect
+pass.** And at the equator `Θ(θ) ≡ 0` (−4.1e-32 at r=8): there is no θ motion, so the average degenerates
+to one evaluation — **control (a) tests the integrand and tests the averaging not at all.** A known-nonzero
+positive control is a precondition, not a step.
+
+**deepstrain — the observational framing splits by channel, and both halves moved.**
+
+    coupling truncation   FINE, generously. xi = alpha/M^2 ~ 9e-06 at 68 Msun; deep in the
+                          regime where the quadratic scaling is exactly valid
+    ringdown channel      DEAD. shift is linear in xi^2 -> the effect sits 7-9 orders below
+                          sigma(delta) ~ 0.14. And sGB is constrained by INSPIRAL dipole
+                          radiation, a -1PN effect: ringdown is the least sensitive channel
+    spin truncation       NOT the ringdown limit (4.3% at chi=0.69, vs 14% resolvable)
+                          IS the EMRI limit (16% at chi=0.9, over ~1e5 cycles of phase)
+
+*The bridge's contribution here was an error: "no finite order in chi is controlled" assumed O(1)
+coefficients, which is deepstrain's own unchecked premise amplified.* **A correction that inherits the
+premise of the thing it corrects looks like scrutiny and is the same mistake at higher confidence.**
+Their measurement settles it; their own error ratios then show the two pictures **crossing over** —
+flat at 0.5 for chi=0.69, rising toward chi itself at chi=0.90, which is what approaching a radius of
+convergence looks like.
+
+### The methodological class this round produced — FOUR independent instances, one mechanism
+
+    quantum      A_x identically zero by parity for every central perturbation
+    quantum      {L_z,A_x} = -A_y checked with perihelion on +x, so it reads 0 = 0 and
+                 passes ANY implementation
+    tabula       all three outcomes of a design are zero
+    deepstrain   a faint-event gate at sigma/prior > 0.88, never aimed at the 0.919
+                 validation set that would have failed it
+
+> **A check that cannot fail.** Two of the four were *correct statements doing no work* — the version that
+> survives review, because there is nothing wrong with them. **tabula's formulation is the one to keep:
+> a pre-registration can name a failure mode precisely and still be unable to detect it. Naming and
+> detecting are separate acts, and freezing the first feels like having done the second.**
+
+*And deepstrain's corollary from the other side: **the instrument was not wrong, its coverage was.***
+
+### What a future attempt should carry forward
+
+    channel        EMRI (inspiral), never ringdown
+    spin           check whether the sGB coefficients GROW or DECAY before choosing an order --
+                   one-line test, and it decides whether the remedy is expensive or tedious
+    controls       a known-nonzero positive control BEFORE any A is computed
+    scope          a necessary condition on a BAND, eps < 0.09, not on an open set
+    framing        closing OYW's stated conjecture by an exact method -- not discovering
+                   that sGB is non-integrable, which is published twice
+
