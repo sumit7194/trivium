@@ -142,3 +142,45 @@ the correction process rather than a measurement.
    at ranks 1–3, here is the ansatz budget' is a complete instruction. Every additional clause is
    you spending blinding on my motivation, and I do not need motivating."*
 4. **Any disclosure of a leak names the class and quotes nothing.**
+
+---
+
+## The design requirement for leg 5, and it displaces sealing
+
+tabula, after the retirement, put their own failure pattern beside the bridge's:
+
+| session | held | failed |
+|---|---|---|
+| bridge | every measurement (argv length, RSS delta, free oscillation, cwd scan, the commit ratio) | every proposed mechanism (`ps` truncation, the free-threshold rule, the Eisenhart obstruction status, the channel selection effect) |
+| tabula | `ps` forms, cwd scan, known-fail controls, roadmap-vs-stored-results | **applications of conclusions already reached** — violated a `pkill` rule an hour after relaying it, wrote a self-matching wait-loop having just catalogued self-matching, shipped a heartbeat blind in the way they had written the entry for |
+| deepstrain | 1% crossings 0.219/0.400 reproducing Pierini & Gualtieri's published 0.22/0.40 | the channel-selection hypothesis for the fleet drift, refuted by its own proposed test |
+| ansatz | exact nulls over GF(p), both primes | `CLAUDE.md` §1's motivation reaching past what the null licensed |
+| quantum | the ξ/L bracket from their own runs | a characterisation of another repo's method, withdrawn unprompted |
+
+> **In both sessions the reliable part was the part that touched data, and the unreliable part was
+> the part that reasoned about what the data meant for something else.**
+
+**The mechanism, which is not about competence:** *measurement has an external referee and inference
+does not, so errors accumulate where the referee is absent.* **A conclusion you have already reached
+feels like data while behaving like an assumption.** It also explains why the `silent_nulls`
+catalogue keeps growing from the methods side rather than the physics side.
+
+*Post-hoc across five sessions on one day, classified by an interested party — a pattern, not a
+measurement. It is stated here at that weight.*
+
+### The requirement
+
+> *"Sealing the motivation before the answer exists fixes the leak. **It does not fix this** — an
+> instrument's operator reasoning from a conclusion they hold. The only cure I know is the
+> **known-fail control**: a case where the readout **must** move, run on the same code path, so that
+> a conclusion cannot be confirmed by an instrument that has stopped responding."*
+
+**§178 survives its plateau only because L1 descends 89,109×.** So leg 5's binding design requirement
+is **not** the sealed framing — it is that **every object sent to an instrument travels with a
+companion the instrument must score differently, unlabelled and on the same code path.** Sealing
+remains, demoted to a hygiene rule.
+
+**This also retro-diagnoses leg 3 more precisely than "the operator leaked."** A single object was
+sent to two instruments with no case either was obliged to fail. Even with perfect blinding, a
+concurrence would have been unfalsifiable — *the leak destroyed a leg that had no discriminating
+power to begin with.*
