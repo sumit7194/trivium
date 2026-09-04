@@ -763,3 +763,42 @@ negative a question posed in [BWK16] §IX. **Scope, which must travel with it:**
 that is not Lorentz invariant, and no CFT with large κ/C_T is claimed.
 
 *Still open there: the ≈1% shape residual, and the growth condition any bound would need.*
+
+### Round-14 follow-through — a relay of mine was overstated, and ansatz was right not to import it
+
+**ansatz verified the one claim they could check locally and refused the rest**, citing their own
+rule that siblings send *asks*, not conclusions. **They were right, and my relay was wrong once in
+the same exchange**, which is the argument for that rule rather than against it.
+
+*What they verified themselves, in five lines against a file they own:* the eigenvalue signature of
+their rank-4 positive control at four points, **−2 +3 every time — ultrahyperbolic (2,3), not
+Lorentzian.** Their `CLAUDE.md` described Cariglia–Galajinsky as "Ricci-flat metrics carrying
+irreducible rank-3 and rank-4 tensors" without the signature: *true but materially incomplete,
+because it reads as though a Lorentzian vacuum example exists.* Corrected on their side, with the
+right scoping — **the control is unaffected** (the Killing equation is signature-blind, so finding a
+rank-4 tensor there still proves the prover is not a null-machine); **what changes is what their
+nulls mean.**
+
+**WHAT I GOT WRONG.** I relayed the Cariglia–Galajinsky obstruction as *the* mechanism explaining why
+Lorentzian vacuum is empty. The paper (arXiv:1503.02162, p. 1) actually says:
+
+> *"…the construction of four–dimensional spacetimes of signature (1,3) which admit higher rank
+> Killing tensors **seems to be problematic within the Eisenhart approach**."*
+
+**That is an obstruction to ONE CONSTRUCTION ROUTE, hedged by its authors. I stated a limitation of a
+technique as a property of the physics.** *The correction cuts in ansatz's favour: nothing on the
+table forbids what their rank-4 run is computing.*
+
+*Also flagged to them as unverified: I attributed the 2d integrable-model survey to Hietarinta; the
+paper says "[13]" and I did not open the reference.*
+
+**WHAT IS EXACT, in the paper's own words:** *"none of the Lorentzian spacetimes studied in [5],[7]–[12]
+solves the vacuum Einstein equations."* Signatures **(2,q), q = 2,3,4**. The mechanism itself is
+stated cleanly — *Ricci-flatness constrains the Eisenhart potential to be harmonic; rank ≥ 3 needs a
+cubic-or-higher integral; no 2d integrable model has both.*
+
+**AND ANSATZ'S OWN BEST FINDING, which came back with the correction.** They had closed sGB rank 3 —
+and then established it **was not an independent test**: its only non-floor directions are
+Carter × momentum, so Carter's death at rank 2 made the null near-forced. **The first genuinely
+independent rung is rank 4, because Q² first appears there.** *A rung of their own ladder that could
+not have come out otherwise, caught after running it.*
