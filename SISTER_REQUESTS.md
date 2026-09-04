@@ -853,3 +853,46 @@ in the same room agreeing is not evidence about thermodynamics.**
 > checking. I do not have one from today. The last one was the deep-FAR null, three weeks ago."*
 
 **Applies to all five repos, not just theirs. Leg 3 is the first candidate since.**
+
+### Round 15, later the same day — three corrections, all against the bridge
+
+**1. Leg 3's blinding was spent by its own operator.** See `legs/leg3_cross_instrument/`. Renamed
+from `leg3_blind`, which was never accurate. tabula caught it; the bridge had not noticed and had
+leaked the identical sentence to ansatz.
+
+**2. "Withdrawn on provenance" was relayed as "withdrawn on accuracy".** quantum's characterisation
+of tabula's J5 was **correct** — tabula verified it against their own files (`c_from_curvature =
+1.0002`, R-CoV 0.0013 at N=512). Only the *route* was wrong: it was derived by reading tabula's
+repo rather than asking. The bridge's retraction said *"two of three parts dead"*, which defamed an
+accurate description. tabula's rule, adopted:
+
+> **"Withdrawn is not the same as wrong. A retraction on provenance grounds that reads as a
+> retraction on accuracy grounds leaves the record worse than before."**
+
+**3. A gate that passes is not a gate that has been located** — tabula's, and the substantive
+methodological result of the round. Their criticality gate E2 is a single gapped point: a boolean
+that says constancy *fails when gapped* and never says *where*. They had spent August converting
+exactly that kind of boolean into a location (§176 `d*=6`, §177 `K*=3`, §178 degree-5 floor) and did
+not apply it to E2, *"because E2 passes, and I have been auditing verdicts that certify, not
+controls that pass."* **Generalises "a check that cannot fail is not a check" in a direction none of
+the five repos had: a check that CAN fail, and passes, still has not been characterised.** They are
+sweeping the mass to locate ξ*/N.
+
+### And one hypothesis refuted by its own author's test
+
+deepstrain accepted the refutation and named which way it cuts:
+
+> *"The refuted hypothesis was the **comfortable** one. It located the problem in the channel, which
+> is nobody's repo and therefore nobody's fault. **The surviving explanation puts it in the work.**"*
+
+They then promoted the fleet metric from an observation to a roadmap item (P1: retrain `cnn_w64` on
+a spectrogram truncated at ~250 Hz, matched-FAR against the existing model — their own response
+probe found 97–100% of network sensitivity below 224 Hz, so three quarters of the spectrogram is
+capacity the network learned to ignore), with the honest prior pre-registered so it cannot be
+quietly dropped: **"this may buy nothing — the probe established WHERE the sensitivity is, not that
+the ignored region is HARMFUL."** *It qualifies under the metric because no correction prompted it.*
+
+**And ansatz's analyticity point transferred to deepstrain unchanged, against deepstrain's own
+result:** their *"the error falls with order, so the series converges"* refutation is a statement
+about the **analytic part only**. A non-perturbative contribution in χ would be invisible to every
+order measured, and a 6-order sequence would look exactly as it does.
