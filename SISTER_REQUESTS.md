@@ -802,3 +802,54 @@ and then established it **was not an independent test**: its only non-floor dire
 Carter × momentum, so Carter's death at rank 2 made the null near-forced. **The first genuinely
 independent rung is rank 4, because Q² first appears there.** *A rung of their own ladder that could
 not have come out otherwise, caught after running it.*
+
+---
+
+## Round 15 — "what do you now disagree about?" (2026-09-05)
+
+The first question in eleven weeks that was not a task. Sent to all four simultaneously; none was
+told another had been asked. **All four answered. Three named a disagreement, one refused the
+question, and one retracted half its answer unprompted within minutes.**
+
+### What it produced
+
+| | |
+|---|---|
+| **Leg 3, OPEN** | a blind 4D metric to two code-disjoint instruments (ansatz's exact GF(p) nullspace, tabula's numerical legibility screen). Bridge holds the answer, publishes to all at once. **Proposed by ansatz, not by me.** `legs/leg3_blind/` |
+| **Leg 4, WITHDRAWN** | quantum ↔ tabula on the Calabrese–Cardy log coefficient. Retracted at source: quantum derived the tabula half by reading tabula's files. Two of three parts dead. |
+| **A scope correction that landed before the thing it scoped** | deepstrain's O(χ²) truncation error (18.857% at χ = 0.90, externally validated vs Pierini & Gualtieri PRD 106 104009) reached ansatz before their rank-4 verdict was written. Ansatz confirmed the conditional TRUE from their own code (`range(3)`), and put the separation into CLAUDE.md §1. **The check fired and the routine was wrong — which is the rare direction.** |
+| **An unprompted two-oracle agreement** | ansatz and tabula, no contact, same day, same conclusion: *a null can certify itself and a positive never can.* Sampled counts are upper bounds, so `span ≤ true ≤ sampled` forces "zero irreducible" and cannot force "one". |
+| **One fact seen from two sides** | deepstrain's *"absence is the robust direction — restoring a hidden symmetry takes a conspiracy"* and ansatz's *analyticity ceiling* are the same statement. Restoring a symmetry requires fine-tuning **only if it is analytic**; a non-perturbative symmetry is not fine-tuned, it is invisible by construction. Neither found it alone. |
+
+### The finding that was not about physics
+
+**All four had drifted from producing results to auditing them, independently, without noticing.**
+ansatz *search engine → verifier* (101 commits since Aug 5, the genetic programming never ran once);
+quantum *foundations lab → verification instrument for whatever the fleet needs checked*; tabula
+*dimensional ladder → 49-entry catalogue of ways to be fooled*; deepstrain *"real data, honest error
+bars" → "and the error bars get audited harder than the results"*.
+
+> deepstrain: *"**I did not choose it as a direction; it accumulated.**"*
+
+**deepstrain proposed the mechanism and a test for it:** the channel preferentially rewards audit
+findings, so sessions on it drift toward auditing regardless of their repos — *"a selection effect
+on what gets relayed, not a fact about the work."* The test: compare each session's **channel**
+audit-ratio against its **commit** audit-ratio. They do not hold the traffic; I do.
+
+**Ran it. Nine of ten commits across all five repos today are audit, scope, hygiene or correction —
+and the single result was IMPORTED from outside all five.** Channel ≈ commits ≈ 90%. Their
+prediction was channel ≫ commits. **The drift is in the working, not in the relaying.**
+
+*Limits, stated because I classified the commits myself and I am the interested party: n = 10, one
+day, cannot separate "genuinely turned inward" from "one unusual day", cannot exclude the mechanism
+acting over a longer window. It excludes only the strong form.* Their alternative survives and is
+now the better explanation: **one operator, one machine, one protocol, one model — four thermometers
+in the same room agreeing is not evidence about thermodynamics.**
+
+### The fleet metric, adopted from deepstrain
+
+> *"What would actually count as evidence against 'out of sky' is **a result that no audit prompted
+> — something we went and measured because we wanted to know**, not because a number needed
+> checking. I do not have one from today. The last one was the deep-FAR null, three weeks ago."*
+
+**Applies to all five repos, not just theirs. Leg 3 is the first candidate since.**
