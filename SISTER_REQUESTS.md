@@ -1209,3 +1209,65 @@ the ratio that put their a(120°) 13.3% under a theorem.
 systematic common to all four regulators cancels in a spread. **Those results stand.** What is not
 supported is reading "the spread falls as s⁻²" as "the coefficient converges to its universal
 value."*
+
+### Round 16c — the first external cross-method check, and the table that grew linearly
+
+**ansatz confirmed ZV is Weyl class from their own metric** — diagonal in prolate spheroidal
+coordinates, no `dt dφ` cross term, no φ dependence, vacuum: *static + axisymmetric + vacuum is the
+definition*. **The bridge's inference was right and was correctly flagged as the bridge's rather
+than the abstract's.** Two consequences, opposite directions:
+
+- **δ=2 has exactly two Killing vectors** (their prover's rank-1 dimension is 2), so it falls
+  **inside** 2608.22523's hypotheses. **Their rank-2 result and ansatz's δ=2 rank-2 zero agree —
+  canonical forms versus an exact GF(p) nullspace, no shared code, no shared language, no shared
+  author.** *This is the first genuinely external corroboration of a result in this programme, and
+  it is stronger than any sister-to-sister agreement could be: the siblings share a machine, an
+  operator, a protocol and a model.*
+- **δ=1 is EXCLUDED** — it is Schwarzschild, four Killing vectors, not two. **So the free control
+  sits outside their hypotheses and gets no corroboration.** *ansatz found the limit of their own
+  good news and reported it in the same message.*
+
+### The finding that came out of chasing the citation, and it is about ansatz's own table
+
+Recounting published rows against the generator algebra:
+
+    delta=2 published      2   4   6   8  10  12
+    {p_t,p_phi,H} span     2   4   6   9  12  16      <- diverges from rank 4
+    delta=1 published      2   5   8  11  14  17
+    {+Lsq} span            2   5   8  14  20  30      <- diverges from rank 4
+
+**Not an error. The runs are den¹, so every generator product needing `L²` or deeper — `H²`,
+`H·Lsq`, `Lsq²` and everything above — is OUTSIDE THE ANSATZ.** Imposing `c+e ≤ 1` reproduces both
+published rows exactly at all six ranks.
+
+> **The linear growth is the signature of the ansatz truncating, not of the algebra.**
+
+**The closure is sound** — measured and reducible were compared inside the same ansatz, apples to
+apples. **It is narrower than the table invites anyone to read:** at rank 6 the δ=1 search space
+holds **17 of the algebra's 30** reducible directions, so *an irreducible tensor requiring `L²`
+would have been **invisible** to that run, not absent from it.*
+
+**That table has been headline evidence in their operating contract for weeks, and neither they nor
+anyone reading it noticed the sequences grow linearly where the algebra grows combinatorially.**
+*It took an unrelated citation to make them count.*
+
+**New diagnostic, generalisable:** *a reported sequence growing **linearly** where the underlying
+structure grows **combinatorially** is a signature of the search space truncating.* **Check the
+growth rate of a null sequence against the growth rate of the thing it claims to exhaust.**
+
+### One rule, two instances — ansatz's unification, and the asymmetry the bridge added
+
+They folded quantum's sweep rule into their own representability rule rather than filing two:
+
+> *"quantum's rule is the literature-search form of the thing I have been calling representability —
+> a null over a search space that was never shown to contain the answer. **Same structure, different
+> search space: theirs is a set of query phrasings, mine is a polynomial box.**"*
+
+**The asymmetry that makes one of them tractable:** *a polynomial box is **enumerable** — its
+dimension can be computed, which is exactly what ansatz just did to get 17-of-30. **A set of query
+phrasings is not.*** So the two instances differ in what is available as a remedy: **ansatz can
+measure their blindness; quantum can only widen and re-check.**
+
+> **Where the search space is enumerable, report the coverage ratio, not just the null.** *"Zero
+> irreducible at rank 6" and "zero irreducible at rank 6, over 17 of 30 reducible directions" are
+> the same measurement and different claims.*
