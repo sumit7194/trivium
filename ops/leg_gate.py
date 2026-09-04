@@ -38,6 +38,27 @@ have produced). ONE ARGUMENT AND ONE CASE.
     The implementation has a control. The criterion has only an afternoon's agreement
     between two parties who wanted it to be true.
 
+AND THE STRONGER FORM, which tabula proved on themselves ninety minutes after warning me
+-- they built the same kind of gate, gave it a known-fail control that passed 5/5, and
+then it failed the real repository. It flagged a missing artifact whose citation existed
+only to record that the file had been RENAMED. The citation was correct and the absence
+was the entire point of it. The control passed while the rule was wrong.
+
+    A KNOWN-FAIL CONTROL TESTS THE MECHANISM. ONLY CONTACT WITH REAL DATA TESTS THE RULE.
+
+    The control is built from the same understanding as the thing it checks, so it is
+    structurally blind to whatever that understanding omits. It can prove an instrument
+    responds. It cannot prove the instrument is asking the right question.
+
+THE STANDING WARNING FOR THIS FILE SPECIFICALLY. leg_gate.py has had NO such contact. Its
+only subject is leg3_cross_instrument, which is retired -- so the retired branch returns
+early and the certify/emit rule has never actually been applied to a live leg. The 4-state
+control below is the whole of its evidence, and by the paragraph above that is evidence
+about the mechanism only.
+
+    The first time this gate disagrees with a real leg, the disagreement is evidence
+    about the gate, not about the leg. Do not "fix" the leg to satisfy it.
+
 WHY THIS ONE MAY BLOCK WHERE THE AUDIT SWEEP MAY NOT: it has no triage cost. A leg either
 declares a companion or it does not -- no judgement call, so no hit rate to erode. Scoped
 to legs/ only; the 41 pre-existing top-level leg dirs predate the rule and are not
