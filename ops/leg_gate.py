@@ -59,34 +59,66 @@ about the mechanism only.
     The first time this gate disagrees with a real leg, the disagreement is evidence
     about the gate, not about the leg. Do not "fix" the leg to satisfy it.
 
+THE SECOND FAULT, AND IT IS THE DANGEROUS ONE -- tabula again, an hour after the first,
+in their own gate, and it had been PASSING:
+
+    "A gate that is right by an accident of formatting is indistinguishable, from the
+     outside, from a gate that is right. Both print PASS. The green tells you nothing
+     about which one you have."
+
+THIS GATE HAD IT, TWICE, AND THE FIRST THREE PROBES MISSED BOTH. The original used
+re.search on the raw text:
+
+    D)  a live leg whose prose said "It is NOT \n retired = true" -- the phrase landed at
+        a line start after a wrap, ^retired matched, the leg was skipped entirely. PASS.
+    E)  a superseded 'expected = "emit"' line above the live 'expected = "certify"' --
+        re.search takes the FIRST match, so a certify leg was judged as an emit and
+        excused from needing a companion. PASS. This is tabula's fault exactly.
+
+Three earlier probes had passed. They passed because of where words happened to sit, not
+because the rule was enforced -- which is the whole point of the quotation above.
+
+FIXED BY GOING TO REAL SEMANTICS, not by tightening the pattern: LEG.toml is now parsed
+with tomllib. A prose field can no longer be read as a directive, and a superseded key is
+overridden by the live one the way TOML says it is. **Never regex this file.**
+
 WHY THIS ONE MAY BLOCK WHERE THE AUDIT SWEEP MAY NOT: it has no triage cost. A leg either
 declares a companion or it does not -- no judgement call, so no hit rate to erode. Scoped
 to legs/ only; the 41 pre-existing top-level leg dirs predate the rule and are not
 retro-judged by it.
 """
-import sys, pathlib, re
+import sys, pathlib, tomllib
 
 LEGS = pathlib.Path(__file__).resolve().parent.parent / "legs"
 
 def check(leg):
-    out, cfg = [], leg / "LEG.toml"
+    """Parse LEG.toml with a real TOML parser. NEVER regex it -- see the docstring:
+    regex matching made this gate right by an accident of where words sat on lines."""
+    cfg = leg / "LEG.toml"
     if not cfg.exists():
         return [f"{leg.name}: no LEG.toml -- expected verdict class undeclared"]
-    txt = cfg.read_text()
-    m = re.search(r'^\s*expected\s*=\s*"(certify|emit)"', txt, re.M)
-    if not m:
-        return [f'{leg.name}: LEG.toml declares no expected = "certify"|"emit"']
-    if re.search(r'^\s*retired\s*=\s*true', txt, re.M):
+    try:
+        d = tomllib.loads(cfg.read_text())
+    except tomllib.TOMLDecodeError as e:
+        return [f"{leg.name}: LEG.toml does not parse ({e}) -- cannot be trusted"]
+
+    exp = d.get("expected")
+    if exp not in ("certify", "emit"):
+        return [f'{leg.name}: expected must be "certify" or "emit", got {exp!r}']
+    if d.get("retired") is True:
         return []
-    comp = re.search(r'^\s*companion\s*=\s*"([^"]+)"', txt, re.M)
-    if m.group(1) == "certify":
-        if not comp or not comp.group(1).strip():
-            out.append(f"{leg.name}: expected=certify with NO known-fail companion. A null "
-                       f"is the default output of a stalled instrument, so a concurrence "
-                       f"would be unfalsifiable.")
-        elif not (leg / comp.group(1)).exists():
-            out.append(f"{leg.name}: companion {comp.group(1)!r} does not exist")
-    return out
+    if exp == "emit":
+        return []
+
+    comp = d.get("companion")
+    if not isinstance(comp, str) or not comp.strip():
+        return [f"{leg.name}: expected=certify with NO known-fail companion. A null is the "
+                f"default output of a stalled instrument, so a concurrence would be "
+                f"unfalsifiable."]
+    if not (leg / comp).exists():
+        return [f"{leg.name}: companion {comp!r} does not exist"]
+    return []
+
 
 def main():
     if not LEGS.is_dir():
