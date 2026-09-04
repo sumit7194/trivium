@@ -19,6 +19,25 @@ asymmetry the known-fail companion is MANDATORY for a certify and advisory for a
      is the default output of both. A broken instrument does not emit a specific closed
      form with matching coefficients."
 
+WHAT THIS GATE DOES NOT CHECK -- tabula, on the day it shipped, and it is the sharpest
+thing said about it:
+
+    "leg_gate.py encodes a distinction -- certify-vs-emit -- that we settled by ARGUMENT
+     this afternoon and have never tested against a case designed to break it. It is a
+     gate whose own criterion is an inference, and its known-fail control tests that the
+     gate FIRES, not that the criterion is RIGHT."
+
+The four-state control below proves the implementation moves. It says nothing about
+whether "companion mandatory for certify, advisory for emit" is the correct rule. That
+rule rests on one argument -- a stalled instrument's default output is a null, not a
+specific closed form with matching coefficients -- and on one supporting case (tabula's
+K0 rediscovering Carter at cosine 0.975, held-out 3.1e-26, which no stalled engine could
+have produced). ONE ARGUMENT AND ONE CASE.
+
+    So when a leg surprises you, revisit the CRITERION first, not the implementation.
+    The implementation has a control. The criterion has only an afternoon's agreement
+    between two parties who wanted it to be true.
+
 WHY THIS ONE MAY BLOCK WHERE THE AUDIT SWEEP MAY NOT: it has no triage cost. A leg either
 declares a companion or it does not -- no judgement call, so no hit rate to erode. Scoped
 to legs/ only; the 41 pre-existing top-level leg dirs predate the rule and are not

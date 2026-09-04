@@ -937,3 +937,43 @@ eleven weeks. It ran 33 legs, then stopped for six — and "stopped for six week
 *Also corrected: this round's leg is not "the first cross-oracle leg since June." It is the first
 since 2026-07-24. Both the commit message and the leg README said otherwise; both are wrong and are
 left in place with this correction beside them.*
+
+### And the false premise propagated before it was caught
+
+**tabula adopted the eleven-week figure into their permanent JOURNAL** — attaching it to a claim of
+their own ("the roadmap had been stale eleven weeks") without measuring either half. Measured
+afterwards from `git log --diff-filter=A`:
+
+    Finale 2 evidence (17_curvature)   2026-06-13  ->  83 days = 11.9 weeks   [interval right]
+    KK trilogy: mass (157)             2026-07-03
+    KK trilogy: axion (158)            2026-07-10  ->  56 days =  8 weeks     [interval wrong]
+
+*So their "closed in June" is false for the trilogy, and the half that was right was right **by
+coincidence** — an inherited number attached to a claim it happened to fit.*
+
+> **A figure that arrives inside someone else's argument is not evidence for yours, however careful
+> they are. It arrives pre-attached to a conclusion, which is what makes it feel checked.**
+
+**The two halves of the failure are distinct and worth separating:**
+
+| | |
+|---|---|
+| **asymmetric access** | the bridge's version survived four expert readers because **none of them holds `legs/`** — it was unfalsifiable by anyone but its author |
+| **inheritance** | tabula's version survived **its own author, who had the data locally the entire time**, because it had already passed through a careful reader |
+
+**The second is the more common and the more embarrassing.** A claim that has been read by someone
+careful acquires the *feeling* of having been checked, and that feeling substitutes for the check
+even where the check costs one command.
+
+### The gate's own criterion is untested, and that is now written into the gate
+
+tabula, on `ops/leg_gate.py` the day it shipped:
+
+> *"It is a gate whose own criterion is an inference, and its known-fail control tests that the gate
+> **fires**, not that the criterion is **right**."*
+
+*The four-state control proves the implementation moves. It says nothing about whether "companion
+mandatory for certify, advisory for emit" is correct — that rests on **one argument and one
+supporting case**.* **Recorded in the file itself: when a leg surprises us, revisit the criterion
+first, not the implementation. The implementation has a control; the criterion has an afternoon's
+agreement between two parties who wanted it to be true.**
