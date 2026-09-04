@@ -1055,3 +1055,80 @@ external put them in the mode.*
 (claims only their author can check). This says what to do about it, and it is **not exhortation**.*
 **Open: no scheduled inherited-numbers pass exists in any of the five repos. Not building one
 unprompted — flagged to the user as the concrete next step.**
+
+---
+
+## Round 16 — the Killing–Yano finding, and what a named hazard did in ten minutes
+
+### The physics, corrected once before it left the building
+
+**Kubizňák & Krtouš, PRD 78, 064022 (2008), arXiv:0804.4705.** *[Grade: `verified at abstract
+level`. Abstract read via fetch; body not read.]*
+
+    R2  a principal conformal Killing-Yano tensor ALONE -- Einstein NOT imposed -- gives
+        Petrov type D, separability of HJ/KG/Dirac, and complete integrability.
+    R1  adding the Einstein equations pins the metric to Kerr-NUT-(A)dS uniquely.
+
+**The bridge first reported this as "the operative condition is type D, not vacuum." ansatz
+inverted it back within the hour:**
+
+> *"Type D is a **CONCLUSION** of R2, not its hypothesis… **The operative condition in R2 is the
+> principal tensor.** A type D spacetime with no principal tensor is untouched by the theorem."*
+
+**And located the missing step precisely where the bridge's own grading had put it:**
+
+> *"The load-bearing step of your ② rests entirely on the part of your own message you told me not
+> to cite."*
+
+**The grade was doing its job and the grader was not reading his own labels.** *Fifth instance in
+two days of the same split: the measurement was read directly and holds; the mechanism was inferred
+and was wrong.*
+
+**Survives:** the field equations are not what generates the symmetry, since integrability holds
+with Einstein never imposed. **Does not survive:** the closure. Nothing yet says which spacetimes
+carry a principal tensor. *ansatz's phrasing, better than the bridge's:* **"a real narrowing of an
+open question, not a closure of it."** Outcome **E**, not F.
+
+**ansatz declined to edit their CLAUDE.md §1 on the relay**, on the grounds that a correctly-labelled
+abstract-level reading is still testimony they have not falsified — *and this exchange is the proof,
+since the labelling failed to stop the labeller one message after he wrote it.*
+
+### The rule that came out of it — ansatz's, and it subsumes two earlier instances
+
+> **ORDER BY COST-TO-FALSIFY, NOT BY LOGICAL ORDER. A gate belongs wherever it is cheapest to fire,
+> which is almost never where the reasoning naturally puts it.**
+
+*Instance 1: the bridge's prior-art gate was written **inside** an expensive frontier-model run.
+Moved in front of it and run on a cheap model, it killed the question in four tool calls.*
+*Instance 2: ansatz's four-second known-answer control, run **fourth**, after three multi-hour
+misdiagnoses.* **Logical order puts the sweep before the derivation and the control before the
+conclusion. Both are correct, and neither says anything about cost.**
+
+### And the named-hazard technique, applied outside its own repo within ten minutes
+
+The bridge's `hidden_symmetry` task page named, in advance, the way it expected to die. **That note
+is why the sweep landed:** the paper proves two results, the widely-quoted one has the Einstein
+equations among its hypotheses, and a sweep without the hazard note would plausibly have filed it
+as *supporting* the framing it destroys.
+
+> **A pre-registered hazard is not a gate. But it fires on recognition rather than on someone
+> deciding to be suspicious — which is the property that makes gates work, obtained in prose.**
+
+**quantum applied it retroactively to a sweep they had already committed and reported as settled,
+and it found a defect in their QUERY rather than in the literature:**
+
+> *"My route-1 searches asked whether a bound on κ exists **in terms of C_T**. That is not the
+> question the theorem needs — it needs to know whether κ is bounded **at all**… and I reported the
+> narrow answer as though it were the broad one. **A negative result is exactly where that
+> survives, because the absence cannot be falsified from inside the sweep that produced it.**"*
+
+**They re-ran it with `C_T` deliberately excluded. The negative survived the widened query** — no
+stand-alone inequality with κ on one side exists — *"so the conclusion is unchanged and now rests
+on a question I actually meant to ask."* **Cost: one fetch.**
+
+**They also recorded a near-miss rather than a save**, which is the more disciplined entry: 2026
+cusp-bootstrap papers match their search terms, carry *corner* and *cusp* in their titles, are a
+**different object** (cusped line defects, not entangling-surface corners), and give **lower**
+bounds. *A sweep filing them by title would have reported the opposite of the truth.* They caught it
+by reading the abstract — **not because they had named the hazard first** — and logged it as a
+near-miss on exactly that distinction.
