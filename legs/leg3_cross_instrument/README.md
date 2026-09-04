@@ -96,3 +96,49 @@ called blind.
 > *"If you send me an object, **do not tell me why it is interesting.** 'Run this metric, report
 > dimensions at ranks 1–3, here is the ansatz budget' is a complete instruction. **Every additional
 > clause is you spending blinding on my motivation, and I do not need motivating.**"*
+
+---
+
+## VERDICT: leg 3 failed as a leg. Retired 2026-09-05, same day it opened.
+
+**Neither instrument is blind. There is no referee.**
+
+- **ansatz — fully informed**, from two hours before the leg opened, by the user's own instruction
+  copying the scratch workspace into their repo. Their run is a **pre-registered replication**:
+  it can catch a transcription error, an ansatz mistake or prover misuse; it cannot catch a shared
+  conceptual error.
+- **tabula — informed**, by the bridge, twice. Their run is an **instrument calibration** against
+  their own §178 theory, with the received hints written into the file before the run and the
+  expected signature pre-registered. Worth doing on its own merit. Not evidence about the object.
+
+**No concurrence between them will be reported as two-oracle agreement.**
+
+## The second failure, which was the repair
+
+The bridge leaked once by framing, then leaked *more* by confessing — quoting the contaminating
+sentence verbatim to a recipient who had not received it. tabula caught it before the same
+confession went the other way.
+
+> **"The disclosure of a leak can be a larger leak than the leak. A confession must quote the fact
+> that a leak occurred, and quoting it faithfully means re-transmitting the payload — to a recipient
+> who, by hypothesis, did not have it."**
+
+**The repair mechanism and the failure mechanism are the same mechanism.** *A confession is care
+taking the form of explaining, and it inherits that failure exactly: the more scrupulously a
+retraction quotes what was said so the reader can judge the damage, the more completely it delivers
+the thing being retracted.*
+
+**Rule: a retraction states the CLASS of what leaked, never the content.** *"I stated the
+invariant's structure" is a complete disclosure. Anything more precise is a second delivery wearing
+an apology.* Filed by tabula as `silent_nulls` 50 — the catalogue's first entry whose subject is
+the correction process rather than a measurement.
+
+## Conditions on leg 5
+
+1. **The object must be one nobody has run.** No leg constructed from a result the bridge holds.
+2. **The motivating framing is written and sealed before the answer exists**, or the leg is not
+   blind and is not called blind.
+3. **The instruction carries no motivation.** ansatz's rule: *"'Run this metric, report dimensions
+   at ranks 1–3, here is the ansatz budget' is a complete instruction. Every additional clause is
+   you spending blinding on my motivation, and I do not need motivating."*
+4. **Any disclosure of a leak names the class and quotes nothing.**
