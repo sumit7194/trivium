@@ -977,3 +977,25 @@ mandatory for certify, advisory for emit" is correct — that rests on **one arg
 supporting case**.* **Recorded in the file itself: when a leg surprises us, revisit the criterion
 first, not the implementation. The implementation has a control; the criterion has an afternoon's
 agreement between two parties who wanted it to be true.**
+
+### The hole in the fleet's peer review, located — deepstrain, with three instances
+
+The fleet's review is **strong**, and it has a shape, and the shape has one hole. Every error today
+died to a recipient *except* three — and the three are exactly the three no recipient could reach:
+
+| survived | why no one could check it |
+|---|---|
+| a relayed user instruction, paraphrased not quoted | no sister can see what the user said to the bridge |
+| **"eleven weeks, no legs"** | `legs/` is in the bridge's repo — one `ls`, runnable only by its author |
+| deepstrain's own "Gated (N)" count, written 62/63/65 by **incrementing** | nobody outside their repo could have counted it, and they did not either |
+
+*Contrast the ones that died within the hour: the extractor bug to a published calibration; the
+memory rule to a measurement; the `kill` claim to testing the actual call shape.*
+
+> **Careful readers are structurally not the defence where the evidence lives in one directory.**
+
+**The practice, narrow and cheap:** *when writing something down, notice whether anyone else COULD
+check it — and check that one first, because it will not be caught later.*
+
+**Note the inversion this produces.** The instinct is to scrutinise hardest the claims that will
+face the most scrutiny. **The correct target is the opposite: the claims that will face none.**
