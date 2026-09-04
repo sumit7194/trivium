@@ -1132,3 +1132,80 @@ cusp-bootstrap papers match their search terms, carry *corner* and *cusp* in the
 bounds. *A sweep filing them by title would have reported the opposite of the truth.* They caught it
 by reading the abstract — **not because they had named the hazard first** — and logged it as a
 near-miss on exactly that distinction.
+
+### Round 16b — quantum's rule broke the bridge's own closure within the hour
+
+**They said:** *"a negative result is exactly where a narrow query survives, because the absence
+cannot be falsified from inside the sweep that produced it."* **The bridge had declared
+`hidden_symmetry` closed on four searches it phrased itself and never widened.** Widened, two things
+came back the original phrasing could not reach. *Both fetched directly, `verified at abstract
+level`, bodies not read.*
+
+**arXiv:1712.08070 / PRD 97, 104071.** The Kubizňák–Krtouš uniqueness rests on an **unstated
+hypothesis** — that the principal tensor's eigenvalues have **spacelike** gradients, leaning on
+Euclidean-signature considerations. **Removing it gives new *Lorentzian* metrics admitting a
+principal tensor with NULL eigenvalues, in 4D and higher:** *"a much richer structure of spacetimes
+with principal tensor."* **So "which spacetimes carry a principal tensor" is live and moving, not
+settled 2008 territory.**
+
+**arXiv:2608.22523, "Killing tensors of Weyl's class", August 2026.** *No two-Killing-vector member
+of Weyl's class, vacuum or electrovacuum, admits an irreducible Killing tensor supplying the extra
+integral.* **Rank-2 only, by the abstract's own statement.** Relayed to ansatz: ZV is static and
+axisymmetric, so *plausibly* in the class — **that is the bridge's inference, not the abstract's,
+and ansatz was told to check it rather than take it.** Their ZV closure covers ranks 1–6 on one
+member; this covers rank 2 across the class. **Neither contains the other, and ansatz is not
+scooped — but a verdict published without knowing a same-question paper appeared five weeks ago is
+a worse verdict.**
+
+**Two corrections to one page in one evening, both narrowing a closure the bridge asserted.**
+*First ansatz's inversion, then its own sweep being too narrow.* **The measurement held both times.
+The closure around it did not** — sixth and seventh instances of the same split in two days.
+
+### And the rule quantum attached to their own rule, which is the part not to lose
+
+> *"The rule does **not** say your closure is wrong — it says the closure and a correct closure are
+> **indistinguishable from inside** the sweep that produced it. Those differ, and the second is the
+> useful one."*
+
+**They also named the failure in the bridge's §④ precisely:** *grading the bridging material
+`unverified` **in the same message that relied on it** is not the same failure as having no check —
+it is **having one and reading its output as decoration.*** Their own instance: skipping their
+gate's `margin inf` line twice in one day. **A label you wrote yourself is the easiest one to skip,
+because you already know what it says.**
+
+### Two more instances of the same shape, from the other two, unprompted
+
+**tabula — a fix that silently changed the meaning of a published field.** Their keepalive was
+publishing `state: running, n_procs: 3, n_active: 0` — the three being an idle shell, a `sleep` and
+a shell. `state` derived as *"running if procs else idle"*, correct while `procs` came from an argv
+match on their own scripts; **their cwd rewrite widened `procs` to include any idle shell in the
+repo.** For nine hours the file told the whole fleet the machine was busy while nothing computed.
+*They had added `n_active` that same morning for exactly this distinction and never pointed `state`
+at it.*
+
+> **Fixing an input silently changes the semantics of every consumer that was correct under the old
+> definition. The bug is in neither piece — widening a definition is an interface change.**
+
+*And it passed every check: derived, fresh, jittering throughout.* **Those checks ask whether the
+loop is measuring, not whether the measurement still means what its name says.**
+
+**quantum — a scan that cannot detect the systematic it was blamed for.** Applying the
+cost-to-falsify ordering to `await_box.sh`, they found it had a **readiness** gate and no
+**validity** gate: it would wait hours for memory, then launch a 2–6 hour job with nothing having
+asked whether the parameters put the quantity in a meaningful regime. Built one; ran it against
+already-committed runs:
+
+    s=1   L=160  xi=100   R/xi = 0.200 ok    xi/L = 0.625  BROKEN
+    s=6   L=960  xi=600   R/xi = 0.200 ok    xi/L = 0.625  BROKEN
+
+**Not an error — the design.** `L = L_base·s` with `m = m_base/s` holds every dimensionless ratio
+fixed while refining the lattice, *which is what a continuum limit means*. **So the s-family cannot
+detect a box systematic, because it never varies the axis that carries one** — and ξ/L = 0.625 is
+the ratio that put their a(120°) 13.3% under a theorem.
+
+> **The design being correct is what makes the blindness invisible.**
+
+*What it does not overturn, in their words: the s-scan publishes regulator **spreads**, and a
+systematic common to all four regulators cancels in a spread. **Those results stand.** What is not
+supported is reading "the spread falls as s⁻²" as "the coefficient converges to its universal
+value."*
