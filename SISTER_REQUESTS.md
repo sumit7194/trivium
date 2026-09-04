@@ -702,3 +702,64 @@ convergence looks like.
     framing        closing OYW's stated conjecture by an exact method -- not discovering
                    that sGB is non-integrable, which is published twice
 
+
+---
+
+## Round-14 (2026-09-05) — two evaluation workspaces consolidated; four asks distributed
+
+**Origin.** Two workspaces were run outside the four oracles as frontier-model evaluations —
+`../corner_function` (3d CFT corner entanglement) and `../high_rank_killing` (high-rank Killing
+tensors). Both are **outside** the read-only set and neither modified a sibling. Their results are
+relayed here with provenance attached; **the bridge has not independently verified them**, and each
+sister was told so.
+
+### → quantum: a lattice number that fails a theorem  ⟶ SENT
+
+    a(120 deg) = 0.0038955                       qsim/corner_angles.json, real scalar, triangular
+    a_min(120) = (1/32) log(2/sqrt3) = 0.004495  [BWK16] eq (II.2), no free parameter
+
+**13.3% BELOW the bound on the 3-parameter fit, 20–22% below on the 4-parameter.** The bound follows
+from SSA + Lorentz invariance + `σ = π²C_T/24` alone, so **the lattice is the suspect and not the
+bound**. Extraction parameters, the passing controls, and three undiagnosed candidate causes
+(finite-size 1/size, zero-mode contamination at ~20% of B per their own README, and a `ln R` range of
+only 1.2 making B degenerate with C and D) were sent in full. *Their shape-independence control
+passed at <0.05% — it constrains the area coefficient, not the log coefficient, which is the point.*
+
+### → ansatz: a sweep that reframes their nulls  ⟶ SENT
+
+> **No Lorentzian Ricci-flat or Einstein spacetime with an irreducible Killing tensor of rank ≥ 3 is
+> known in ANY dimension** (Cariglia–Galajinsky 2015; Fordy–Galajinsky 2019 state it open).
+
+*Their nulls are not about awkward metrics. Nobody has found one anywhere.* Also relayed: the known
+Ricci-flat examples are all **ultrahyperbolic (2,q)**, so their own rank-4 positive control is a
+(2,3) metric; **Vollmer 2017 is three metrics, not one** (ZV ≤ 11, Tomimatsu–Sato ≤ 7, C-metric ≤ 9),
+correcting their D39; **no rank bound exists in 4D**, so it is the field equations doing the killing
+and not the rank; and CG's named mechanism — *the Eisenhart lift is vacuum iff the base potential is
+harmonic, and no harmonic potential with a cubic-or-higher integral is in Hietarinta's list.*
+
+### → tabula: four silent-null instances, one a new species  ⟶ SENT
+
+> **A blow-up announces itself; a plateau recruits you.**
+
+Three extraction methods failing at the same orders, each in its own costume; **two of five ratios
+were fit artifact, swinging by 8× and 170× on a non-physical parameter**, with an argument built on
+them. Plus the verification/inference distinction (*three real coefficients and two convincing
+fictions from the same data*), an instance of their own naming-vs-detecting rule, and §24.
+
+### → deepstrain: no physics transfer, said plainly  ⟶ SENT
+
+Their own χ² exchange became §24 and §24a. One live item unchanged: **the coefficient-decay check on
+the actual sGB spin expansion rather than on Kerr 220**, which decides whether the spin-truncation
+remedy is tedious or expensive.
+
+### What the corner workspace established, for the record
+
+**The general entropic constraints do not localise κ/C_T.** Every value in (0, ∞) is admissible under
+the six known constraints; a(θ)/C_T is unbounded above at every angle; **no inequality that is a
+consequence of reflection positivity can ever bound κ.** Mechanism: *σ is the total mass of a
+positive measure and κ is its exponential tail; positivity is blind to tails.* This answers in the
+negative a question posed in [BWK16] §IX. **Scope, which must travel with it:** "admissible" means
+*satisfies the constraints*, **not** *is a unitary CFT* — one endpoint function is a Lifshitz shape
+that is not Lorentz invariant, and no CFT with large κ/C_T is claimed.
+
+*Still open there: the ≈1% shape residual, and the growth condition any bound would need.*
