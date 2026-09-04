@@ -82,4 +82,22 @@ else
   echo "  audit baseline set: $NEW"
 fi
 echo "$NEW" > $S
+# --- leg gate (added 2026-09-05) -----------------------------------------------
+# Encodes the leg design requirement so it is checked by execution rather than by
+# being read. tabula: "visibility is a weaker referee than executability, and I
+# would rather be corrected by my own suite than by my own prose."
+#
+# WHY IT REPORTS AND DOES NOT BLOCK, despite having no triage cost and therefore
+# qualifying to block under this hook's own stated standard: on 2026-09-02 a
+# blocking check in this same hook silently killed every commit in the repo for
+# hours, and the comment above it said it could not. The risk is asymmetric --
+# a missed leg warning costs one bad leg; a wedged hook costs the whole record.
+# Revisit once this gate has run clean for a week.
+if [[ -f $C/leg_gate.py ]]; then
+  LG=$(python3 $C/leg_gate.py 2>&1); LG_RC=$?
+  echo "$LG"
+  [[ $LG_RC -ne 0 ]] && echo "  ^ leg gate FAILING -- not blocking, but fix before the leg is run"
+fi
+
+
 exit 0
