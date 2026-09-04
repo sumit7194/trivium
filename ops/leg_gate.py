@@ -79,8 +79,24 @@ Three earlier probes had passed. They passed because of where words happened to 
 because the rule was enforced -- which is the whole point of the quotation above.
 
 FIXED BY GOING TO REAL SEMANTICS, not by tightening the pattern: LEG.toml is now parsed
-with tomllib. A prose field can no longer be read as a directive, and a superseded key is
-overridden by the live one the way TOML says it is. **Never regex this file.**
+with tomllib. A prose field can no longer be read as a directive. **Never regex this file.**
+
+THIRD INSTANCE, IN THIS VERY PARAGRAPH. The sentence above originally continued "...and a
+superseded key is overridden by the live one the way TOML says it is." THAT IS FALSE. TOML
+FORBIDS duplicate keys outright; tomllib raises TOMLDecodeError ("Cannot overwrite a value
+at line 2"). Case E therefore passes through the MALFORMED-TOML branch, not through any
+override semantics -- the right verdict for a reason I had not checked and had written
+down as if I had.
+
+    So the fix for "right by an accident of formatting" was itself documented by a
+    guess about semantics. The failure survived into its own repair, one level up,
+    exactly as tabula's did: their first two fixes both kept a positional guess and
+    merely narrowed it.
+
+The behaviour is correct and is now correct for a stated, verified reason: a LEG.toml with
+a superseded key does not parse, and an unparseable file is untrusted. If a leg ever needs
+to record a superseded classification, it must use a distinct key (e.g. previously_expected),
+because a second `expected` will hard-fail the file.
 
 WHY THIS ONE MAY BLOCK WHERE THE AUDIT SWEEP MAY NOT: it has no triage cost. A leg either
 declares a companion or it does not -- no judgement call, so no hit rate to erode. Scoped
