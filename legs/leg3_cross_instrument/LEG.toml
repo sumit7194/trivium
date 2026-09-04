@@ -1,0 +1,4 @@
+# Leg 3 -- RETIRED 2026-09-05, the day it opened. See README.md.
+expected  = "certify"   # certify-relative-to-basis: a descending, non-converging ladder
+companion = ""          # NONE -- the design fault, and it predated the leak
+retired   = true

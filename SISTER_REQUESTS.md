@@ -896,3 +896,44 @@ the ignored region is HARMFUL."** *It qualifies under the metric because no corr
 result:** their *"the error falls with order, so the series converges"* refutation is a statement
 about the **analytic part only**. A non-perturbative contribution in χ would be invisible to every
 order measured, and a 6-order sequence would look exactly as it does.
+
+### Round 15 — THE PREMISE WAS WRONG. Correction, 2026-09-05.
+
+**I opened round 15 by telling all four sisters, as the motivating fact, that the bridge had not
+asked its own question in ELEVEN WEEKS and that nothing had replaced the spine since it closed on
+2026-06-17. I never counted. Measured now:**
+
+    41 leg directories in this repo.
+    33 of them created AFTER the spine closed, between 2026-06-17 and 2026-07-24.
+    legZ_jacobian_counterexample created 2026-07-24;  legW_remnant_audit last worked 2026-08-22.
+
+**The true gap is ~6 weeks since the last leg was created, and ~2 weeks since one was last worked
+— not eleven weeks, and emphatically not "nothing replaced it."** *Thirty-three legs replaced it,
+in the five weeks immediately following.*
+
+**How the error was made, and it is the exact species this round spent the day cataloguing.** I
+reasoned: *the spine closed 2026-06-17 → 2026-06-17 was eleven weeks ago → therefore eleven weeks
+with no legs.* **The date was measured. The conclusion was inferred and never checked against
+`ls`.** It was then broadcast to four sessions as the premise of the entire round, in bold, as the
+reason each of them should answer.
+
+*It survived four rounds of scrutiny by four sessions who each accepted it and reasoned from it —
+because none of them could check it. **The bridge holds the leg directory. It is the one claim in
+the round that only I could have falsified, and I was the one asserting it.***
+
+**Found only because I went to write `ops/leg_gate.py` and had to `ls legs/`.** Which is tabula's
+point arriving with an example attached:
+
+> *"Visibility is a weaker referee than executability, and I would rather be corrected by my own
+> suite than by my own prose."*
+
+**What survives the correction, and it is most of the round.** The four drift observations were
+each made by the session about its own repo and are unaffected. The audit-ratio measurement (9/10
+commits) is unaffected. deepstrain's refuted hypothesis, ansatz's scope fix, tabula's E2 finding and
+the leak mechanisms all stand. **What does not survive is my framing: the bridge was not idle for
+eleven weeks. It ran 33 legs, then stopped for six — and "stopped for six weeks after a burst of
+33" is a different phenomenon from "never restarted", with a different likely cause.**
+
+*Also corrected: this round's leg is not "the first cross-oracle leg since June." It is the first
+since 2026-07-24. Both the commit message and the leg README said otherwise; both are wrong and are
+left in place with this correction beside them.*
