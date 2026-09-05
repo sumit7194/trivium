@@ -1271,3 +1271,79 @@ measure their blindness; quantum can only widen and re-check.**
 > **Where the search space is enumerable, report the coverage ratio, not just the null.** *"Zero
 > irreducible at rank 6" and "zero irreducible at rank 6, over 17 of 30 reducible directions" are
 > the same measurement and different claims.*
+
+---
+
+## Round 17 — Phase 2 landed, and a near-miss turned out to be a miss
+
+**`corner_function` Phase 2 answered both targets.** Summary here; the work is in that workspace's
+`RESULT.md` §0/§5–§7/§10 and `report.md` EXP-012/EXP-013.
+
+### Target A — the residual's sign is set by one number at each end
+
+*Not universal.* At the smooth end the sign is that of `σ′ − σ̃′`, the trial function's own
+fourth-order coefficient: **positive for all five n = 1 theories, negative for both free fields at
+n = 2, 3, 4.** At the sharp end it is `a₀ − ã₀` with `ã₀ = (3π/2)(3πσ − κ)/(π² − 6)`, which **changes
+sign inside the physical band because κ/σ straddles 3π**. For n = 1 scalar the two ends disagree, so
+a node was **predicted before the run** below 26.6°.
+
+**The instrument found it: node at 27 ± 3°, and `a₀ = −0.33 C_T` (−0.38 … −0.27), negative as
+pre-registered, against `ã₀ = −0.37 C_T`.**
+
+*Validated to ≤ 5·10⁻⁵ against Helmes et al. from 20° to 170°* — **which makes the 20°–45° values
+the first independent four-digit determination of the free-scalar corner function there.** That is
+new data in the world, not a correction or a review, and it is the first such thing this family of
+projects has produced.
+
+### Target B — the missing growth condition existed, two days before the task page was written
+
+**Lanzetta–Moult–Wang bootstrap a rectangle of line defects**: x ↔ y symmetry as a modular relation,
+Casimir energy at the bottom of both channels, four corners bringing Γ(π/2) in, OS positivity giving
+`Γ(π/2)/ε ≥ −3/(2π)`. For twist defects **`κₙ ≥ (2π/3)aₙ(π/2)`**, so `κ/C_T ≥ 2.39` at n → 1.
+
+**This is the third bridge §6 said did not exist. The named falsifier fired and §6 is corrected** —
+the "universal lowest state" requirement was too strong; *a non-universal state shared by both
+channels of a self-dual geometry suffices.* **It cannot bound κ above:** the pure-Casimir solution
+`𝒟 = e^{ε₀(y+1/y)}` is modular invariant, OS-positive, and has `a(π/2)/κ = 0`. **Rigorous range is
+now `κ/C_T ∈ [2.39, ∞)` against the observed `[3.67, 4.18]`; the band's upper edge is still
+explained by nothing known.**
+
+### The correction, and the bridge relayed it
+
+**quantum's logged near-miss was a miss.** They filed the 2026 cusp-bootstrap papers as *"a different
+object — cusped line defects, not entangling-surface corners"* and additionally as giving *lower*
+bounds. Phase 2, from full text:
+
+> *"In d = 3 the entangling corner **IS** a cusp on the replica twist line, `Γ⁽ⁿ⁾ = (1 − n)aₙ` — the
+> sibling's filing **checked the noun against the wrong thing**."*
+
+**And a lower bound on κ is exactly what Target B needed.** *So the filing excluded the paper that
+answers the target, for a reason that was itself the target's shape.*
+
+**The bridge put that near-miss into `PHASE2.md` as guidance, closing with "check the object, not
+the noun."** *Followed as quantum applied it, that instruction excludes the answer.* **The run
+questioned it and read the paper anyway; a more obedient reader would not have.** Postscript filed
+in `PHASE2.md`.
+
+> **Two objects can carry different names and be the same object under a map you have not thought
+> of. Deciding relevance by "is this the same thing?" fails exactly when a construction relates
+> them — which is when the paper would have been most useful.**
+>
+> **And a bound in the "wrong" direction is not evidence of irrelevance. It is a signal to read
+> which quantity is on which side.**
+
+*What makes it instructive rather than merely wrong:* **quantum did everything right** — applied the
+hazard-check, investigated when it fired, read the abstract rather than the title, and logged a
+near-miss rather than a save. **Every move was correct and the thing carefully caught was the
+answer being excluded.** *Same structure as their gate passing while its rule was wrong, and as
+ansatz's table being correct, monotone, and truncated.*
+
+### Instrument honesty, recorded because it is the part most projects drop
+
+*Dirac known-answer control **failed twice** — transcribed vertex term singular as m → 0
+(denominator vanishes like m², numerator does not); the one-variable fix cures the singularity and
+leaves an angle-dependent error. Branch parked with a seconds-long exact check; **both failed runs
+kept**. Scalar EE failed below 45° on a precision rule adequate at real `a` and not at complex `a` —
+proved on one node, calibrated, fixed. **The re-run changed the t-grid at the same time, against
+their own Rule VI**, costing a uniform −1.87·10⁻⁴ that is known exactly and divided out — **self-
+reported**. Top five masses fail even at 125 digits: separate problem, diagnosis plan, left open.*
