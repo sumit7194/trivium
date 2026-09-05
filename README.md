@@ -28,13 +28,14 @@ disagree, that disagreement is a finding, not a bug.
 | **tabula-geometrica** | [github.com/sumit7194/tabula-geometrica](https://github.com/sumit7194/tabula-geometrica) | **inductive** — neural bottleneck/MDL counting; the legibility law. Blind to metrics by design. The representation oracle. |
 | **deepstrain** | [github.com/sumit7194/DeepStrain](https://github.com/sumit7194/DeepStrain) | **empirical** — no-hair δ on real O3a/O4 ringdowns, echo search, PBH search. Sensitivity from injections, significance from measured background. The measurement oracle. |
 | **vestigium** | [github.com/sumit7194/vestigium](https://github.com/sumit7194/vestigium) | **foundational** — a verified QM-foundations lab (measurement problem, entanglement, Kaluza–Klein projections). Every result checked against exact analytics or a real experiment. Joined 2026-07-24. |
+| **cuspis** | [github.com/sumit7194/cuspis](https://github.com/sumit7194/cuspis) | **single-problem** — the entanglement-entropy corner function `a(θ)` in 3d CFTs. Not an oracle with a general method: one question, an analytic result and an arbitrary-precision instrument. Began as an evaluation workspace and was promoted. Joined 2026-09-05. |
 
-This repo (*trivium* — "three roads," predating the fourth oracle) contains **only**
-the bridge: the cross-validation code, pre-registrations, and findings. It reads from
-the four repos above but never modifies them, and never makes them aware of each
-other. To reproduce, check out the four repos as siblings of this one (local dirs
-`conjecture_machine`, `SpaceTime`, `BlackHole`, `quantum` respectively) — the bridge
-scripts import their engines read-only.
+This repo (*trivium* — "three roads," predating everything after the third oracle)
+contains **only** the bridge: the cross-validation code, pre-registrations, and
+findings. It reads from the repos above but never modifies them, and never makes them
+aware of each other. To reproduce, check them out as siblings of this one (local dirs
+`conjecture_machine`, `SpaceTime`, `BlackHole`, `quantum`, `corner_function`
+respectively) — the bridge scripts import their engines read-only.
 
 ## Operating rules (non-negotiable for this workspace)
 
