@@ -76,12 +76,23 @@ fi
 # 31.9 -> 33.0 per 100KB, i.e. essentially flat -- the delta I have been reading as a
 # signal was corpus growth.
 #
-# AND IT IS WORSE THAN AN UNMADE INSTRUMENT. tabula's two columns were both in their
-# results file, so the ratio was merely unbuilt. Here the denominator was DISCARDED at
-# write time, so every historical delta is uninterpretable AND PERMANENTLY SO. An unmade
-# instrument whose inputs were not retained is not unmade, it is unmakeable.
+# I THEN CLAIMED THIS WAS PERMANENTLY UNMAKEABLE. THAT WAS FALSE, and checkable in one
+# command -- which I did not run before asserting it, inside this very comment, in a
+# commit whose whole subject was that I had been reading unchecked levels.
 #
-# Fixed forward only. The record before this commit cannot be repaired.
+# The corpus is IN GIT. `git ls-tree` recovers the denominator at any past revision and
+# `git archive` re-runs the sweep there. tabula's corrected taxonomy is the right one:
+# the denominator does not have to be STORED, it has to be RECOVERABLE -- and recoverable
+# in principle is worth nothing unless something actually re-runs it. The real split is
+# deterministic-and-gated versus deterministic-but-never-checked. This hook is the second:
+# regenerable, not orphaned. Their category 3, not category 4.
+#
+# Rebuilt the history that was supposedly lost:
+#     2026-08-23   474 hits  1397 KB   33.9 per 100KB
+#     2026-09-05   483 hits  1447 KB   33.4 per 100KB
+#     2026-09-21   500 hits  1513 KB   33.0 per 100KB
+# The RATE HAS BEEN FALLING while the levels rose. Every delta ever read off this hook as
+# a rise was a fall in the quantity that means anything.
 KB=$(git ls-files '*.md' | xargs wc -c 2>/dev/null | tail -1 | awk '{printf "%d", $1/1024}')
 DOCS=$(git ls-files '*.md' | wc -l | tr -d ' ')
 [[ -z "$KB" || "$KB" == "0" ]] && KB="MISSING"      # never fabricate a denominator

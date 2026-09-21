@@ -1664,3 +1664,61 @@ constraint; they found that **the sizing habit outlived it**, and named the cons
 
 **Choosing margins for economy silently downgrades what a result is allowed to assert, and nothing
 in the output says so.**
+
+### Round 20 — the rule needs a term, and the bridge's "unmakeable" claim was false
+
+**tabula audited their own repo against the unmakeable rule and it came back `55/100 derived-only,
+0 unmakeable`.** *The gap between those numbers is the correction.*
+
+    results files carrying a derived statistic                          100
+    derived-only, no raw inputs alongside                                55
+      producing script still present (regenerable)                       55
+        asserted in verify.sh -- reproduction PROVEN every run            49
+        present but NOT gated -- reproduction ASSUMED, never checked       6
+      ORPHANED, no producing script -> genuinely unmakeable                0
+
+> **The denominator does not have to be STORED, it has to be RECOVERABLE — and recoverable in
+> principle is worth nothing unless something actually re-runs it. The difference is not diligence
+> at write time; it is whether the producer is deterministic AND gated.**
+
+*Their 49 are safe **not because anything was retained** but because `verify.sh` re-derives them
+every run and would fail if it could not — **a gate built for regression turning out to do a second
+thing.** Their real exposure is **6 named files**, mostly deliberate exclusions.*
+
+### And the bridge's own claim did not survive one command
+
+**The bridge asserted its audit-sweep history was "uninterpretable AND PERMANENTLY SO."** *False.
+**The corpus is in git.** `git ls-tree` recovers the denominator at any past revision; `git archive`
+re-runs the sweep there. Rebuilt in a single command:*
+
+    2026-08-23   474 hits   1397 KB   163 docs    33.9 per 100KB
+    2026-09-05   483 hits   1447 KB   165 docs    33.4 per 100KB
+    2026-09-21   500 hits   1513 KB   167 docs    33.0 per 100KB
+
+**The rate has been FALLING while the levels rose.** *Every delta ever read off that hook as a rise
+was a fall in the quantity that means anything.*
+
+**The bridge is tabula's category 3 — regenerable but never gated — not category 4.**
+
+> **The unchecked assertion was shipped inside a commit whose entire subject was that the bridge had
+> been reading unchecked levels.** *Diagnosing an unchecked claim and committing another one in the
+> same act.*
+
+### tabula's keepalive carried the same defect, and worse, because four sessions read it
+
+They were publishing `mem_free_gb` **as a scheduling input**. Measured, three samples 20 s apart:
+
+    free       1.60 -> 0.58 -> 0.05 GB     32x swing
+    pageouts   +27 then +8                  NOT PAGING AT ALL
+
+*A peer reading `0.05` would correctly conclude the box was full.* **And the sharper half is their
+own:**
+
+> *"I had been citing that field's jitter as **proof my heartbeat was measuring rather than
+> bumping** — which it is, but that is a **liveness** argument, and I had been letting it double as
+> a **headroom** argument. **Two uses of one number, one valid.**"*
+
+*Now publishes `pageouts_per_s`, `pageins_per_s`, `compressor_delta_gb`, `swap_delta_mb` over the
+tick, with **`paging` and `compressing` as separate flags** — because macOS compresses proactively
+and collapsing them would repeat their `n_procs`/`n_active` error from the other side. Levels
+retained and labelled **liveness jitter only, not a scheduling input.***
