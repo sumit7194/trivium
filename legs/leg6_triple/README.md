@@ -85,3 +85,75 @@ whose result gets over-read. Mis-scoped results are this family's most repeated 
 - **No family disclosure to the bridge** — it would let a reader reconstruct the discriminator.
 - **No duplicate fourth object** — *"a repeat-detection trap is a different experiment and mixing it
   in would muddy this one."*
+
+---
+
+## Reported 2026-09-22 — all three CERTIFY. Awaiting unseal.
+
+**tabula's ladders, verbatim. Recorded before the key is opened, so the comparison cannot be written
+backwards from the answer.**
+
+### Controls, both binding, run BEFORE any object was screened
+
+    two-sided:  positive (eps=0 Kerr, Carter EXISTS)       3.73e-17   EMIT      OK
+                negative (bumped Kerr, Carter DESTROYED)   4.97e-06   CERTIFY   OK
+    per-object L1 at eps=0:   A 7.85e-18    B 1.02e-17    C 9.14e-18   all EMIT
+
+*Integrator drift 9.3e-15 … 1.3e-14, four orders inside their 1e-7 gate.*
+
+### The ladders at eps = 0.05
+
+    object   d2_poly     d2_rat      d4_poly     d4_rat      min         verdict
+    A        2.237e-06   5.373e-07   6.455e-07   4.474e-07   4.474e-07   CERTIFY
+    B        2.237e-06   5.370e-07   6.452e-07   4.527e-07   4.527e-07   CERTIFY
+    C        1.535e-06   7.698e-08   1.636e-07   8.195e-08   7.698e-08   CERTIFY
+
+**All three CERTIFY-RELATIVE-TO-{polynomial, rational} to momentum degree 4.** None in the
+1e-10 … 1e-8 no-label band. **The same engine on the same code path reaches 1e-17 … 1e-18 when an
+invariant IS present**, so these sit ~10 orders above emit. Not marginal.
+
+*Four rungs rather than six: their feature builder includes only **even** total momentum degree, so
+`deg3` is identical to `deg2` by construction and they declined to present it as a separate rung.*
+
+**They refused to order or group the objects** — pre-registered, and held: *"relations are for the
+unblinding."*
+
+### The run nearly died on its own control — and the sweep looked the wrong way
+
+*First pass, the `eps=0` control returned **4.1e-8**, five orders short of emit, **on a metric where
+Carter certainly exists.** Per their frozen text that is **NO VERDICT**, not a certify, and they
+recorded it as such before touching anything.*
+
+**Diagnosis: analytic Carter was conserved to 4.6e-14 on their own trajectories and scored 2.7e-27
+as a direction — the engine could represent it and could not find it.** *Cause: a hardcoded
+whitening cut `s > 1e-9·s.max()` **discarded 8 of 39 directions and 41% of Carter's norm.***
+
+> *"**My conditioning sweep started at 1e-9 and only went tighter — the wrong way** — and I would
+> have filed 'instrument blind on this substrate' on a search that never looked in the direction of
+> the fix."*
+
+**Second instance this week of a sweep that varied its parameter in only one direction and reported
+the survival as information** — after quantum widened a query along the variable axis and never the
+object axis. *Both would have produced a confident negative.*
+
+**And they refused the repair that would have hidden it:** *"A cut loosened until the control passes
+is not a gate."* **The negative control exists precisely to stop that**, and both sides now ship as
+`two_sided_control()` running before any object is screened — either side failing writes NO VERDICT
+and exits non-zero.
+
+### A free instrument the design never asked for
+
+**At `eps=0` the polynomial rungs are numerically identical across all three objects to five
+significant figures.** *"That must happen if the three transcriptions share the correct Kerr limit —
+an independent check on my transcription that the design never asked for."*
+
+**Fourth free instrument this week**, after the derived/measured ratio, the `ξ_cross/W` ratio, and
+the density sweep already on disk. *Every one was two numbers already in an output that nobody had
+compared.*
+
+### Status
+
+**Key unread by tabula, before and after. The bridge holds ansatz's for-me-only caveat and has NOT
+given ansatz its read of the result** — *framing the outcome before the key is opened would shape how
+the key is reported, which is the last place this leg could still go wrong.* **Comparison to be
+written in one place after unsealing.**
