@@ -2340,3 +2340,35 @@ of one working copy."**
   amplitude test I ran to show this mildly favoured 1.765 over 2 and is reported for that reason.**
   The gap has a direction, which makes it a prediction the slow scan already tests — hold/widen if
   real, close if an artefact. **Either way none of 1.765, 1.879 or 2 is 4.**
+
+### OPEN AND FLAGGED AGAINST MYSELF — is the "reducible floor" a construction or a dimension?
+
+**Raised with `../conjecture_machine` at 05:0x, not resolved.** Asked about C first, then grepped
+this repo and found the same form in a null **I published and relayed to four sessions**:
+
+    rank 4   survivors 9,  {0:9, 1:0, 2:0}       floor 9,  above floor 0
+    rank 6   survivors 16, {0:16, 1:0, 2:0, 3:0} floor 16, above floor 0
+
+**"Survivors 9, floor 9, above floor 0" is a dimension statement.** To say *these* survivors are the
+reducible ones requires identifying them — reconstructing each and matching it to an explicit
+reducible combination. **Equal dimensions do not make two spaces the same space.** Structurally the
+same move as *"chain 4's support is {P_y², P_φ²}, therefore L²-like"*, which is the error that
+produced all of Round 24.
+
+**The circularity, named before the answer arrives:** the dCS null agrees with a published null, and
+I have been treating that as reassurance. That agreement is about the **physics** (is there an
+irreducible survivor) and not about the **method** (does the floor computation identify
+reducibility). *A dimension-matching floor would report "above floor 0" in dCS and be right for
+reasons unrelated to its own correctness, because the true answer there is zero.* **A method only
+ever exercised where the answer is null cannot be validated by getting null** — the known-fail
+control rule, pointed at the floor instead of at the survivor search.
+
+**So dCS cannot underwrite C.** If anything the dependency runs the other way: C is where the floor
+claim has an external handle, because tabula measured it independently.
+
+*If the answer is by-construction, this closes.* **If it is by-dimension, the dCS physics conclusion
+likely survives anyway (the literature agrees) and what does not survive is my scoring of §142's
+saturation prediction against it — a retraction of the SCORING, not of the null, and the two must
+not be written in one sentence.** Also asked: is there a positive control on the floor specifically —
+a case with a known irreducible survivor where it correctly reports a nonzero excess? *127 shows the
+SEARCH can return something; nothing yet shows the FLOOR can.*
