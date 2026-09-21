@@ -39,6 +39,19 @@ rules about stating assumptions. *The writing is not the artefact; the gate is.*
                   << chi = 0.6 gives chi^4 = 0.13: a 13% truncation held FIXED while
                      the exact parameter was swept to zero. Nobody asked. >>
 
+    VALID RANGE   ...and it is not only the expansion parameters. A correction can
+                  diverge in a COORDINATE, shrinking its radius of validity in space.
+                  << K1 has a genuine simple pole at the horizon, r = 2M -- residue
+                     64*chi^2*P_t^2*y^2, verified, not cancelled. So first-order theory
+                     fails near the horizon and the expansion is uniform only for
+                     eps << (r - 2M). This was visible in the object's own denominator
+                     from the moment it shipped. Three parties read that denominator
+                     for other reasons without asking what a pole at r=2 meant. It was
+                     the SIXTH scope statement of the night and the first that nobody
+                     knew -- the other five were things the author knew and had not
+                     written down. A form catches both kinds; a habit of stating what
+                     you know catches only one. >>
+
     CONVENTIONS   every definition that could differ between repos, spelled out:
                   is H halved? is Q Carter or total angular momentum? what are the
                   coordinates, the signature, the mass normalisation?

@@ -2923,3 +2923,22 @@ screen did not find it, and the reason is the one the operator's scope line name
 message. **Not a miss; the boundary, with the missing function class identified.** §161's
 biconditional sharpens to **`legible ⟺ integrable with a representable invariant`**, with a concrete
 witness rather than a hypothetical.
+
+### The sixth scope statement, and the first that nobody knew
+
+**`K₁` has a genuine simple pole at the horizon, r = 2M** — residue `64·χ²·P_t²·y²`, verified here,
+not cancelled, and not a chart artefact of the `y²−1` kind. **So `chain4 + εK₁` is conserved to
+O(ε) while the correction diverges as the horizon is approached: the first-order expansion has a
+shrinking radius of validity in `r`, uniform only for `ε ≪ (r − 2M)`.** *Nothing measured is
+affected — every test ran on orbits well outside it — and no radius of validity in the spatial
+coordinate had been stated anywhere.*
+
+> **The other five omissions were things the author knew and had not written down. This one nobody
+> knew.** *It was visible in the object's own denominator from the moment it shipped, and three
+> parties read that denominator for other reasons without asking what a pole at r = 2 meant.*
+
+**A form catches both kinds. A habit of stating what you know catches only one.** *Added to the
+manifest's VALID RANGE field as the worked example.*
+
+**And the same fact is simultaneously a limit on ansatz's object and an exact characterisation of the
+gap in tabula's screen.** *Neither would have been found without looking for the other.*
