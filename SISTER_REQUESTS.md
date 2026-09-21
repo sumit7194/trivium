@@ -2439,3 +2439,95 @@ return PASS unless at least one level was informative.**
 *Convention, settled:* their `hamiltonian()` carries the ½; the identity above is in unhalved units;
 in their code's units it is `112·χ²·H_code + 56·χ²·P_t²`. **The two pieces scale differently, which
 is what bites — a single global factor would have been harmless.**
+
+---
+
+## Round 25 — two correct results that contradict each other, and the gap is χ⁴ (2026-09-22)
+
+**`../conjecture_machine` verified in exact rational arithmetic that
+`{H_deformed, chain4 + ε·K₁} = 0` at O(ε).** Its ε⁰ part says **chain4 is exactly conserved on
+Kerr**. **`../SpaceTime` measured chain4 drifting `2.2140e-03` at ε = 0, on pure Kerr** — so TEST 1
+returned exponent −0.027, which is meaningless: *you cannot measure how well a correction restores
+conservation of an object that was never conserved.*
+
+**Both are right.** The symbolic check is **exact in ε and truncated at χ²**. The Kerr inverse metric
+is **not polynomial in `a`** — `Σ = r² + a²cos²θ` sits in denominators, so
+
+    1/Sigma = (1/r^2)(1 - a^2 cos^2/r^2 + a^4 cos^4/r^4 - ...)
+
+carries genuine χ⁴ terms. So `{H_Kerr, chain4}` vanishes at χ⁰, χ¹, χ² — **everything ansatz checked
+and all they could check** — while being nonzero at χ⁴, and tabula evaluates against the *exact*
+metric at **χ = 0.6, where χ⁴ = 0.13.** *Their χ² level being INFORMATIVE is not reassurance about
+χ⁴; there is no χ⁴ order to be informative about.*
+
+### The design fault, named by tabula, shared by all three
+
+> **The objects are exact in ε and perturbative in χ, and every test in this thread swept ε at fixed
+> χ = 0.6 — shrinking the parameter that was already exact while holding the truncated one large.**
+
+*The bridge relayed three rounds of ε-scans without once asking what χ they sat at.*
+
+**Predicted χ-sweep at ε = 0**, anchored on the single measured point:
+
+    chi      H4: chi^4       H2: chi^2      separation
+    0.600    2.2140e-03      2.2140e-03        1.0x
+    0.300    1.3837e-04      5.5350e-04        4.0x
+    0.150    8.6484e-06      1.3837e-04       16.0x
+
+**And χ = 0 exactly is a free control that was not in the sweep**: there chain4 reduces to
+`−8·L_total² + P_φ²`, and `L_total²` is exactly conserved on Schwarzschild by spherical symmetry, so
+the drift must be at integrator noise. **The only point whose answer is known from symmetry rather
+than from anyone's code.**
+
+### Fifth instance of the label error, now one level above the object it was meant to fix
+
+Tabula found the header's `L²` is **total** angular momentum, not Carter. Verified here: standard
+Carter at `a = 0` is `Q = L² − P_φ²`, so
+
+    chain4|chi^0 = -8 L_total^2 + P_phi^2  =  -8Q - 7 P_phi^2
+
+against the correction formula's χ⁰ part `−8Q + P_φ²`. **Difference −8P_φ², exactly tabula's measured
+discrepancy.** The `Q` in the correction formula is `L_total²`.
+
+**It breaks no conservation statement — `P_φ²` is exactly conserved either way. It breaks the label,
+which is the whole of what has gone wrong.**
+
+    chain 4 mislabelled "Carter"      support was read as identity
+    the correction formula            L^2 was read as Q
+
+### The signed scan: the cleanest single result of the night
+
+    minimum at exactly c = -0.125,  1.24e-04,  57x better than bare Q,  EXPONENT 1.044
+
+**The bridge's `−1/8` prediction landed and was meaningless as an invariant, in one table.** *A
+minimum that deep with an exponent that flat is the entire argument for keying the verdict on the
+exponent — the two readings disagree on exactly this row, and the minimum is the one that would have
+been believed.*
+
+### K₁ is correct at source; the failure was delivery
+
+Three attempts, three bugs, none physics, **and only one announced itself**:
+
+    mod-p chain coeffs bracketed against a rational K1   -> confident FAIL, nearly reported as physics
+    bracket_raw_coeffs returns a scalar, not a list      -> crash (the only self-announcing one)
+    sympify creates FRESH symbols named P_t, ...  which
+    are not the solver's momenta (real=True)             -> both objects parsed to ZERO, 3 green levels
+
+**The VACUOUS/INFORMATIVE guard, added after the second, caught the third — a failure it was not
+designed for.** *Ansatz: "the only argument for guards that I find fully convincing."*
+
+### The (r+1)² floor formula is now in their code, and needed a second caveat
+
+Derived here from the isometries alone and verified against every floor the repo has published
+(4, 9, 16, 25 at ranks 2, 4, 6, 8). **Their rank-4 grading is also confirmed independently:** the
+product algebra of `{p_t, p_φ, H, L²}` graded by power of `L²` is forced combinatorially to
+`{(r+1)², r², …, 1}`, totalling `Σk²` = 5, 14, 30, 55 — matching A (14, complete algebra, Carter
+survives), B (9, floor, nothing), C (10, excess 1).
+
+**Second caveat added:** the formula assumes `p_t`, `p_φ`, `H` are the **only** surviving generators.
+**That is false on undeformed Kerr, where Carter also survives and the floor is larger** — called
+there, `(r+1)²` under-reports and every excess computed against it is inflated.
+
+**Still open:** C's grading is `{0:9, 1:0, 2:1}` — **grade 1 empty, grade 2 occupied.** Nothing
+linear in `Q` survives yet something quadratic does, although every grade-2 product contains a
+grade-1 factor. *Not yet explained, and not yet raised with either sister.*
