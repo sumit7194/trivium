@@ -98,6 +98,31 @@ DOCS=$(git ls-files '*.md' | wc -l | tr -d ' ')
 [[ -z "$KB" || "$KB" == "0" ]] && KB="MISSING"      # never fabricate a denominator
 [[ -z "$DOCS" ]] && DOCS="MISSING"
 
+
+# LIVE-CHECKPOINT GUARD. deepstrain, 2026-09-22: `git add -A` swept a 19 MB mid-run
+# checkpoint into their repo -- it rewrites every 50 templates -- and it landed under a
+# commit message about something else. "Right message, wrong content, and the diff
+# nobody reads is where that hides."
+#
+# A NAME PATTERN CANNOT CATCH THIS. This repo tracks three *_ckpt.json files that are
+# resume caches read by scripts that still exist, committed once in July and never
+# rewritten. Same names, opposite situation. The property that separates them is not
+# what the file is called but WHETHER A JOB IS WRITING IT RIGHT NOW.
+#
+# So: warn when a staged file is checkpoint-shaped AND was modified in the last 10
+# minutes. Static caches never trip it; live state always does.
+STAGED_LIVE=$(git diff --cached --name-only --diff-filter=ACM 2>/dev/null \
+  | grep -iE 'ckpt|checkpoint|\.npz$|\.pkl$|_state\.|resume' \
+  | while read -r f; do
+      [[ -f "$f" ]] && [[ -n "$(find "$f" -newermt '10 minutes ago' 2>/dev/null)" ]] && echo "$f"
+    done)
+if [[ -n "$STAGED_LIVE" ]]; then
+  echo "  !! LIVE CHECKPOINT STAGED -- modified in the last 10 min, so a job may be writing it:"
+  print -r -- "$STAGED_LIVE" | sed 's/^/       /'
+  echo "     Committing crash-survival state pins a moment nobody chose. Untrack unless it"
+  echo "     is a finished artifact that backs a claim."
+fi
+
 NEW="$HITS|$APP|${KB}KB|${DOCS}d"
 
 if [[ -f $S ]]; then
