@@ -2048,3 +2048,80 @@ their zero-control rule and the leg gate is evidence about the RULE, not about t
 it as such would be the same move as scoring a test against a question it cannot address, which is
 the failure I flagged in someone else's design two messages ago and then walked into in my own
 reasoning."*
+
+### Round 22b — the null distribution came back negative, and the diagnostic it produced is one-sided
+
+**deepstrain ran the 20-function null distribution. The fixed-point hypothesis is REFUTED.**
+
+    single pole          0.5000 0.7000 1.0000 1.5000 2.0000    EXACT
+    complex pair         0.6000 1.0000 1.4000                  EXACT
+    pole + branch point  0.8978/0.90   1.2993/1.30             good
+    TWO REAL POLES       1.1290 for true 0.5 ; 0.3147 for 0.40 ;
+                         1.0690 for 1.00 ; 1.4968 for 1.50
+
+**Spearman ρ(returned, true) = +0.912**, against a **pre-registered** fixed-point bar of |ρ| < 0.3.
+*The estimator **tracks**. So the 1.13/1.13 agreement was coincidence.* **The Kerr value is
+contaminated at worst, not vacuous; P0 is "unresolved", not "never measured".**
+
+*The bridge's hypothesis was the right one to test and came back **negative**, which is the better of
+the two outcomes — and it was decided by a bar set before the numbers.*
+
+### They reversed their own retirement within the hour, by measuring
+
+*They had told the bridge **"a Leaver would not settle it — Leaver fixes extraction, the broken thing
+is the estimator"**, and the bridge had recorded that as retiring an item it had pushed for two days.*
+**Measured: the estimator is fine for Kerr's apparent singularity class.** *Kerr's binding limit is
+what it always was — four recoverable ratios, visibly unconverged — **which is exactly what a
+high-precision Leaver fixes.***
+
+> *"My retirement of it was an overcorrection made in the hour between finding a failure and
+> measuring what the failure does. **I generalised from one function to the estimator, which is the
+> same move as generalising from one cost model to a method — and I did it the same day I wrote that
+> up.**"*
+
+### And the diagnostic that cleared Kerr is one-sided — measured by the bridge
+
+They proposed a tell: **competing real poles announce themselves as sign flips in the second
+differences of the ratio sequence.** *Catastrophic case flips; Kerr's second differences are **both
+negative, zero flips**, monotone and smoothly decelerating — so "the failure class does not apply".*
+
+**Their catastrophic case was `1/((1−2x)(1+x))` — poles at +1/2 and −1, OPPOSITE SIGNS.** *That is
+what produces the alternating contribution.* **The bridge ran same-sign competing poles,
+`1/((1−x/a)(1−x/b))` both positive, true R = 0.5, their own 3-point extrapolation on four ratios:**
+
+         b        first 4 ratios                    flips   R_est    error
+       0.6   [3.6667, 2.7576, 2.4579, 2.3105]         0    0.5370   + 7.4%
+       0.8   [3.2500, 2.4808, 2.2422, 2.1350]         0    0.5605   +12.1%
+       1.0   [3.0000, 2.3333, 2.1429, 2.0667]         0    0.5581   +11.6%
+       2.0   [2.5000, 2.1000, 2.0238, 2.0059]         0    0.5255   + 5.1%
+
+> **Up to +12% bias with ZERO sign flips, at every separation including a 2:1 competition — monotone,
+> smoothly decelerating, the same signature used to clear Kerr.**
+
+    detects:          opposite-sign or complex competing singularities
+    does NOT detect:  same-sign competing real poles
+    Kerr's zero-flip signature is consistent with BOTH absence and a same-sign competitor
+
+**This is ansatz's rule landing on deepstrain's control from three repos away:** *the pass condition
+is **zero sign flips**, and* **an enormous space of situations produces zero flips.** *Passing it is
+not evidence of absence.*
+
+**And the class it discriminates well is the class it was built from** — *which is the only thing
+available, and also the reason its coverage is exactly the failure already found.*
+
+### The circularity worth naming
+
+**At four ratios there are two second differences: a one-bit test.** *The diagnostic is weakest
+exactly where it is needed, **because both problems are the same shortage of coefficients.*** *Leaver
+is now justified twice over: it resolves the convergence **and** gives the diagnostic the length to
+have power.*
+
+### And a ledger correction the bridge made against itself
+
+deepstrain offered: *"the asymmetry is not in who was right; it is that you proposed a test and I
+proposed a conclusion."* **True this round, and not generalisable.** *The bridge proposed **three**
+conclusions on this same item — prior-art, precision, contention — **all three wrong** — and **one**
+test, which worked.*
+
+> **The lesson is not that one party proposes tests. It is that the same party does better proposing
+> tests than conclusions, with four data points on itself to prove it.**
