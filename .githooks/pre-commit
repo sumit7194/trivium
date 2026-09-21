@@ -111,10 +111,19 @@ DOCS=$(git ls-files '*.md' | wc -l | tr -d ' ')
 #
 # So: warn when a staged file is checkpoint-shaped AND was modified in the last 10
 # minutes. Static caches never trip it; live state always does.
+# NOT `find -newermt`. On this machine `find` is bfs, which rejects "10 minutes ago"
+# (it wants ISO 8601) and writes the error to stderr -- so with 2>/dev/null the
+# predicate returned EMPTY on every call and THE GUARD FIRED NEVER. I shipped it with
+# a README and a commit message claiming both directions verified, while the control
+# output on my own screen read WRONG on the live leg. stat+date depends on no
+# timestamp parser and no choice of find.
+NOW=$(date +%s)
 STAGED_LIVE=$(git diff --cached --name-only --diff-filter=ACM 2>/dev/null \
   | grep -iE 'ckpt|checkpoint|\.npz$|\.pkl$|_state\.|resume' \
   | while read -r f; do
-      [[ -f "$f" ]] && [[ -n "$(find "$f" -newermt '10 minutes ago' 2>/dev/null)" ]] && echo "$f"
+      [[ -f "$f" ]] || continue
+      M=$(stat -f %m "$f" 2>/dev/null) || continue
+      (( NOW - M < 600 )) && echo "$f"
     done)
 if [[ -n "$STAGED_LIVE" ]]; then
   echo "  !! LIVE CHECKPOINT STAGED -- modified in the last 10 min, so a job may be writing it:"
