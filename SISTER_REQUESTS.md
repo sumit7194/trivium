@@ -3131,3 +3131,53 @@ measured?"*** — the strongest candidate for an eighth field in `ops/SCOPE_MANI
 *All three are a failure to look at what the thing actually says. The first two the bridge caught by
 reading its own output; the third tabula caught by running the test and reporting that it got worse
 — the part that most invites being left out, and they said so.*
+
+### The fork was malformed — the pole is four orders below even the EMIT threshold
+
+Chaining the measured factors through to the screened object:
+
+    basis misses 1/(r-2) by  4.2e-05 of itself
+    pole is                  1.6%    of K1
+    eps*K1 is                3.7%    of chain4 + eps*K1
+    => residual amplitude    d = 2.5e-08     variance 6.2e-16
+
+    EMIT threshold           1e-10 variance  (d = 1.0e-05)
+    MEASURED margin          6.7e-04 amplitude
+
+> **The pole accounts for about 1 part in 27,000 of the margin — and is four orders BELOW the EMIT
+> threshold, so it would never have blocked an EMIT at all.**
+
+**The bridge's earlier fork — *"either your tolerance is tighter than 1.6% or the obstruction is not
+the pole"* — compared the pole's share of `K₁` against the threshold without carrying it through the
+two factors between `K₁` and the screened object. Both branches were wrong and the answer was outside
+the fork.**
+
+### The next candidate, offered as something to exclude rather than as an answer
+
+`K₁`'s momentum structure over the sampled region:
+
+    P_t^2  99.6%    P_y^2  0.2%    P_phi^2  0.1%    P_x P_y  0.1%    P_x^2  0.0%
+
+**`K₁` uses five of the ten quadratic monomials, including the cross term `p_r·p_θ`.** *Does
+`d2_rat`'s ansatz carry it, or only the diagonal squares?*
+
+**Unlike the pole, this one has no domain escape hatch: a missing momentum monomial is not
+approximable by any coordinate function on any region** — the pole was a coordinate function that
+happened to be analytic where they looked, but `p_r p_θ` is a different function *of the momenta*.
+
+*Flagged honestly at the same time:* **the cross term is 0.1% of `K₁`, giving 3.7e-05 through the ε
+factor — still below the 6.7e-04 margin. So it does not close the gap either.** *After tonight, not
+assuming a small component explains a margin without carrying it through the same two factors that
+just failed.*
+
+**Nothing identified reaches within an order of magnitude of the margin. Conditioning is the leading
+suspect by elimination, and elimination is not a measurement.**
+
+### What confidence predicted
+
+*Tabula withdrew three things tonight — the 845×, the two-point `c` power law, and the §161 witness —
+and notes each was the thing they were most confident about when they wrote it. The bridge's three
+were the 845× argument, the χ⁴ prediction, and the pole.*
+
+> **Confidence at the moment of writing carried no information about what survived. The only thing
+> that predicted correctly all night is whether anyone went back and looked.**
