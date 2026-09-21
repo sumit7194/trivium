@@ -2712,3 +2712,40 @@ a single χ at the bottom is where the hypotheses are least distinguishable.**
 grounds of an argument the bridge had itself supplied — the subtraction is contaminated at leading
 order, so the number is computable and uninterpretable.* **Refusing a requested number is the right
 call when the alternative is a quantity that enters the record looking like a measurement.**
+
+### Addendum — one rule, arrived at three times from three directions
+
+    read the exponent off the LARGEST eps, not the smallest
+    push the EXACT parameter up, do not shrink it
+    fit q where the signal is STRONGEST, not where the perturbation is smallest
+
+> **Measure where the signal is strong. The instinct that the smallest perturbation is the cleanest
+> is right about systematic error and wrong about everything else — and in a regime with a floor it
+> is exactly backwards, because the smallest perturbation is where the floor wins.**
+
+*The bridge's own ④ corrected against itself:* pointing at χ = 1e-3 as the discriminator was pointing
+at **a one-bit readout at the noisiest point**, where a null has at least three causes (q = 4, an
+integrator problem, `K₁` wrong at source). **Fitting q between χ = 0.01 and 0.003 — where both
+hypotheses put the signal 27000× and 2472× above noise — separates them by a factor of two in a
+directly fitted exponent, 1.99 against 3.99.** χ = 1e-3 becomes a consistency check, second.
+
+### A failure species with no guard on either side
+
+**The bridge supplied the argument that made its own request unanswerable, two messages before
+making the request, and did not notice.** Tabula declined the request *on the strength of that
+argument* and noticed only because they went to compute the number.
+
+    the usual failure   someone asks for a quantity that cannot be measured
+    THIS ONE            the SAME PARTY had already published the reason it cannot be
+                        measured, and asked anyway
+
+**No guard catches it.** *Tabula's would have to check incoming requests against the sender's prior
+arguments; the bridge's would have to check its own requests against its own output.* **What caught
+it was trying to compute the thing and looking at what was being computed — which is not a gate, it
+is attention, and it is the thing that does not scale.**
+
+*Also recorded, against the bridge:* tabula was set up for a **false null** — their own launch line
+said *"truncation at/below integrator noise"*, which is not met at χ = 1e-3 (280× above), so they
+would have checked it afterwards and concluded the regime was never reached **on a run that works.**
+*A wrong reason that produces a false null is harder to notice than one that produces a wrong
+number.*
