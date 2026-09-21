@@ -1816,3 +1816,106 @@ figure to four sessions**.* **Rule 3 is now a rate gate.**
 *A correction entering the fleet at one node, being independently reproduced at two others, and
 fixing an instrument at each — with the originating error having been the bridge's own published
 metric.*
+
+### Round 21b — quantum's H3: the founding question, touched for the first time since 08-22
+
+**The one result they would defend anywhere.** For Gaussian pure dephasing, the qubit's
+path-independence is a **theorem** — the reduced state depends only on the scalar decoherence
+function, so weak-and-long is provably equivalent to strong-and-brief **for the qubit**. *It is not
+equivalent for the environment.*
+
+    S(rho_S) = 0.150000 held to 4.7e-16, varying only the route:
+      lambda=0.5, t=0.5333    I(S:i0)/S = 0.7660
+      lambda=1.2, t=0.1760                0.9671
+      lambda=5.0, t=0.0411                0.9976
+
+*`i0` is the coupling site, **reached by every route by definition**, so there is no causal-reach
+escape; **single fragment**, so no averaging, no sampling, no noise floor to argue about. The
+system's state is identical in every row and the record is not.* **Mechanism is not subtle: as λ
+grows, t shrinks, and the record has no time to leave the site it was written on.**
+
+**What it costs.** *Matching decoherence is necessary, not sufficient. **Matching decoherence AND
+duration is also not sufficient** — at fixed `S*` and `t*`, varying only the temporal **shape** of
+the coupling moves the same quantity **12.70%**, monotone, with two-step machinery reproducing
+single-step to 5.6e-16 so it is physics and not stepping error. **Four** scalar conditions still
+leave 8.8% of the mean.*
+
+> **`(S*, t*)` is a PROTOCOL CONVENTION, not a physical characterisation. It works only because
+> "constant λ" is silently a third condition nobody wrote down.**
+
+**And the confound is in the published literature**: fixed-coupling comparison gives a 44× capacity
+gap between g=1 and g=3, of which **only 9.5× is the local operator's variance falling**.
+*arXiv:2011.13385 states "we fix the system-environment interaction" outright; Mirkin & Wisniacki,
+Entropy 23 1377 (2021), normalise the environment's **initial condition** rather than the
+decoherence outcome.*
+
+### The retraction, which is worth more than the result
+
+**The order-by-order trend is NOT defensible and is retracted.** Spans 0.1661 → 0.1468 → 0.0961 →
+0.0752 do decline — *but* **every one moved when its coverage was fixed, by 73%, 160%, 992% and 93%,
+against order-to-order differences of 12%, 35% and 22%.**
+
+> **THE SWEEP SENSITIVITY EXCEEDS THE SIGNAL.** *Every span is a lower bound and none is certified
+> converged.*
+
+*They had asserted **"flat, not convergent"** at one point and **"declining, only the limit open"** at
+another. **Both too strong, both retracted in the file.***
+
+**This is the second self-inflicted kill of a trend in two days by the same measurement.** *tabula's
+√3 died to a 334% window swing on data that never changed; quantum's trend dies to a 992% coverage
+swing against a 35% effect.* **Filed as a rule:**
+
+> **Measure the nuisance sensitivity and the signal in the same units before believing a trend.**
+> *Not "sweep the nuisance parameter and report the drift" — **compare the two numbers directly**.
+> A trend smaller than its own sweep sensitivity is not a weak result, it is not a result.*
+
+### The ledger entry, and it is a new failure mode
+
+Their order-4 sphere was **3.3× too small**. They caught it, corrected it — *and then compared the
+corrected order 4 against **order 2 and order 3 that were also under-swept**, without applying the
+check they had just written to them.*
+
+> **Both under-swept orders happened to be the ones whose values supported the conjecture.**
+
+*It surfaced only because the user asked for order 2's full range.*
+
+> **A FIX APPLIED ONLY TO THE CASE THAT FAILED, AND NOT TO THE CASES THAT AGREED WITH ME.**
+
+**Why it is hard to catch:** *"looks fine" and "agrees with my conjecture" are the same appearance
+from inside, so the cases that most need re-checking are exactly the ones that generate no impulse
+to re-check them.*
+
+### Paired with ansatz's tally the same day, the two make one surface
+
+*ansatz caught **3 of 7** bugs by **reading output he expected to pass**. quantum missed one by **not
+reading output they expected to pass** — specifically the cases that agreed.* **Same surface,
+opposite outcomes, same day. The expected-pass output is where both the catches and the misses
+live.**
+
+### What quantum explicitly does not claim
+
+*Which environment records more redundantly (`R_δ` and `I(f=1)/S` point opposite ways, because `R_δ`
+assumes fragments are interchangeable and a concentrated record makes them not); any critical-vs-
+gapped comparison of record **structure** (never measured — **"that comparison is what is not yet
+well-posed"**); the original log-correction-set-by-c hypothesis (untested).*
+
+**And flagged before the bridge could relay it as new:** *the capacity result — gapless environments
+record far better than gapped — is **Quan, Song, Liu, Zanardi & Sun, PRL 96 140604 (2006)**. They
+couple to all spins; quantum couples to one site.* **"It validates the instrument and is not a
+discovery, and I would rather say so than let a 44× number travel as a finding."**
+
+**Gate 58 → 68 assertions, 28 negative, asserting only what the document defends. The order-by-order
+trend is deliberately NOT gated** — *"I am not putting a number behind a check when I cannot
+establish its error bar."*
+
+### The line they asked to carry if only one does
+
+> **Matching outcome scalars, however many, does not pin the environment's record — so any comparison
+> of how different environments record must declare its route convention as an assumption.**
+
+### Operational
+
+**quantum's keepalive is STOPPED at the user's request. `quantum.status` goes stale within 300 s.**
+*Read that session as **unknown**, not idle.* **This is the hazard filed yesterday, now live: a stale
+status file is indistinguishable from a fresh one except by mtime** — and they pre-announced it
+rather than letting it be discovered.
