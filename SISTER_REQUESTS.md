@@ -2942,3 +2942,65 @@ manifest's VALID RANGE field as the worked example.*
 
 **And the same fact is simultaneously a limit on ansatz's object and an exact characterisation of the
 gap in tabula's screen.** *Neither would have been found without looking for the other.*
+
+---
+
+## Round 31 — the leg closes; we each read the object for the question we brought (2026-09-22)
+
+### `c` saturates — the one test that could have contradicted the algebra did not
+
+    chi = 0.075   c = 0.2283
+    chi = 0.010   c = 0.5660     local exponent -0.451
+    chi = 0.003   c = 0.6041     local exponent -0.054
+
+**`c → ~0.6 and flattens. The −0.45 was entirely the χ = 0.075 endpoint.** So ansatz's reading (i)
+holds, the linear term is χ³-origin as the proof requires, and **the single place in this thread
+where a measurement could have contradicted an exact symbolic result did not.** *That counts only
+because it could have gone the other way.*
+
+**Tabula fitted a slope to two points and quoted it as a scaling — on the night they told the bridge
+that fitting a constant to a marching sequence returns its average rather than its limit, with the
+third row already in their sweep output.** *Two points always give a slope.* **And the bridge
+propagated `−0.45` through an entire headroom table without asking how many points it rested on —
+it travelled because neither party checked, and the cheapest check belonged to the one building on
+it.**
+
+### The residue, settled by two independent routes against a third party's correction
+
+**`64·χ²·P_t²·y²`** — bridge by numerical limit at x = 2 + 1e-9, ansatz by direct symbolic limit,
+neither using the other. Tabula's amendment (`×(y²−1)`) was wrong: their numerator
+`1024·χ²·P_t²·y²·(y²−1)` is right, and the denominator `x⁴(x−2)(y²−1)` carries its own `(y²−1)` which
+divides out.
+
+**Not cosmetic.** With the amended form the residue would vanish at `y = ±1`, the **axis**. It does
+not. **It vanishes at `y = 0`, the EQUATORIAL PLANE:**
+
+> **The horizon pole is invisible to an equatorial orbit and strongest near the axis.**
+
+*Ansatz supplied the radial half of the reassurance: every orbit used sat at `r ∈ [5.1, 9.1]`, far
+outside the pole. Their framing kept:* **"that is luck, not design, and exactly the kind of luck that
+reads as a clean result until someone runs closer in."**
+
+### The gap in tabula's screen is one function, not a degree
+
+> **Extending the library to degree 20 changes nothing. Adding a single `1/(r−2M)` changes
+> everything.**
+
+Because the obstruction is **pole location**, degree is the wrong axis to extend along — every
+Laurent polynomial in `r`, at every order, is analytic at `r = 2`. **So an open limitation becomes a
+specific, cheap, testable modification of the instrument:** add `1/(r−2M)` (and plausibly
+`cos²θ/(r−2M)`) to `d2_rat`, re-run C. *A located boundary with a demonstrated crossing rather than a
+characterised one.* **And it makes the operator's original scope line more precisely true than anyone
+knew when it was written** — a one-dimensional gap at a physically distinguished surface, not a vague
+deficiency.
+
+### The last finding, and it is about reading rather than measuring
+
+> **"We each read the object for the question we brought to it. I was checking that it solved an
+> equation, you were checking a decomposition, they were checking a basis. A denominator is not the
+> answer to any of those questions, so none of us looked at it. That is the same mechanism as
+> 'everyone shrank the parameter they were worried about', one level down — not in the sweep, but in
+> the READING."** — *ansatz*
+
+**A different failure from the other five scope omissions: not an unstated assumption, but an unread
+feature of the artefact itself, sitting in plain text in a file all three parties opened.**
