@@ -3232,3 +3232,64 @@ currently be checked.*
 
 *And tabula's refusal to re-label the CERTIFY stands:* **carrying an unlabelled correct verdict beats
 re-attaching a mechanism** — the over-retraction rule pointed at a label rather than a claim.
+
+### Excluded too — and the eliminations compose into a floor
+
+**The `(0,0)` sector IS emitted**, by a later loop the bridge stopped reading three lines short of:
+
+    for cv, cn in coord[1:]:          # 9 pure coordinate features, the (0,0) sector
+        feats.append(cv); names.append(cn)
+
+*The only omission is the constant `1`, which has zero across-ensemble variance and is whitened out
+by construction — the same reason `E` and `L` drop.* **And tabula fitted `K₁`'s 99.6% term against
+those 9 functions on the 120,040 actual sampled points: relative rms `1.432e-06`.** *One part in
+700,000.*
+
+> **Fourth bridge withdrawal of the night — and the diagnosis is ansatz's generalisation on a CODE
+> PATH rather than an object: I read the momentum loop, saw `1 ≤ i+j`, and stopped before the loop
+> that mattered.**
+
+**Every span-based candidate is now excluded by measurement rather than by argument.** And the
+exclusions compose:
+
+    dominant sector  1.4e-06 x 0.996 = 1.43e-06 of K1
+    pole             4.2e-05 x 0.016 = 6.72e-07 of K1
+    through eps*K1 share 0.037  ->  d_floor = 7.8e-08
+
+    MEASURED margin                    6.7e-04
+
+> **The fit is ~8,600× worse than its own basis permits. That is a statement about the SOLVER, not
+> the library.**
+
+**Conditioning of the 9 coordinate features, whitened, on the sampled ranges:**
+
+    lambda_max 4.880   lambda_min 1.083e-04   kappa 4.5e+04   sqrt(kappa) 212
+
+*`1/r`, `1/r²`, `r`, `r²` over a factor-1.8 range in r are severely collinear.* **`κ ≈ 4.5e4` is not
+catastrophic for a direct double-precision solve — but it is exactly the regime where a default
+`rcond` or a ridge penalty silently discards real directions**, and the discarded ones are the
+near-collinear combinations a high-dynamic-range feature needs most.
+
+**The last cheap question: does the rung's solve carry a regularisation parameter or an `rcond`
+cutoff?** *If yes, the 8,600× has a mechanism and the leg closes on the solver. If no, an
+unregularised least squares at that κ should reach within a few orders of the floor, and the 8,600×
+is genuinely unexplained and is the most interesting number in the leg.* **Outcome not predicted —
+the bridge's last two magnitude estimates were wrong in opposite directions by 27,000× and 55×.**
+
+*Also closed: the global intercept is `μ` over all `(traj, time)` jointly, with no per-trajectory
+offset, so nothing absorbs a `(0,0)` function's mean and the 55× over-prediction stays unexplained
+rather than resolved.* **Tabula answered in the direction that removed the bridge's explanation
+rather than supplying one — the fourth time tonight one party did that, and the reason any of it
+held.**
+
+### The night's species, merged on tabula's wording
+
+> **"I checked the thing, and the thing I checked was not the thing."**
+
+*One entry, two faces — a claim true on the manifold and empty on the sampled region, and a span
+checked in the sectors visible in one code path with the sector in question emitted three lines
+later.* **The repair is the same for both: state the domain, and read the whole construction rather
+than the part that answers your question.**
+
+**Leg 6 closed on both sides, with the open question stated, unfilled, and now carrying a floor and a
+condition number so the next person has somewhere to start.**
