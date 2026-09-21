@@ -273,10 +273,11 @@ it across the whole sweep**, which is where it became an instrument:
     7.71        1.727      <- the wall
     11.3        1.733      saturating
 
-**The bridge's reading — *"that is what an unmeasurable axis looks like from outside"* — is right at
-the wall and too simple across the sweep.** *tabula's correction, adopted:* **the ratio does not
-merely diverge; it crosses 1.0 and settles.** *The crossing is the useful part, because it means the
-two methods **calibrate each other somewhere**, and that somewhere is inside the measurable band.*
+**~~The bridge's reading is right at the wall and too simple across the sweep… the crossing means the
+two methods calibrate each other somewhere.~~ STRUCK — see "The √3 was run" below.** *tabula measured
+it and refuted their own sharpening: **`ξ_cross ≈ W/2`**, so the crossing is a property of the fit
+window, not of the two methods. **The bridge's original phrasing was closer to right, and the bridge
+adopted the replacement because it sounded sharper.***
 
 **A third independent route to the abstention**, using neither the envelope-decay guard nor the
 `ξ > N` count — *and it cost nothing:* **the second column was already in the results file, unread,
@@ -306,3 +307,67 @@ The frozen choice to **measure** ξ rather than derive it was not foresight abou
 
 *That is the strongest argument for the rule available, and it is only available because they
 declined the credit.*
+
+---
+
+## The √3 was run, not narrated — and it refutes the sharpening this file adopted
+
+tabula ran it rather than explaining it. **Identical chain, identical `C(r)`, varying only which
+points the line is fitted to:**
+
+    W = N/8  (64)     saturated ratio 3.3832
+    W = N/4  (128)    saturated ratio 1.7189     <- the window S187 used
+    W = N/2  (256)    saturated ratio 0.7792
+    W = 3N/4 (384)    saturated ratio 0.7792     (amplitude cut binds first)
+
+**A 334% swing on data that never changed. `√3` sits at `W = N/4` and nowhere else.**
+
+*Their own suspect — a power-law prefactor biasing the exponential fit — is **refuted**: `α` comes
+out 0.008–0.034, essentially zero, and the three-parameter fit is degenerate.* **The cause is
+duller: a straight line through a window much shorter than ξ has its slope set by the window.**
+
+### The correction, and the bridge's share of it
+
+This file recorded tabula's *"the two methods calibrate each other somewhere, and that somewhere is
+inside the band"* **as a stronger statement than the bridge's original.** It is not:
+
+    W = 64     xi_cross = 31.9    xi_cross/W = 0.498
+    W = 128    xi_cross = 69.4    xi_cross/W = 0.542
+
+**`ξ_cross ≈ W/2`.** *They do not calibrate each other — they are **two window-dependent curves that
+happen to intersect, and the intersection moves with the window.***
+
+> **The bridge's original phrasing was closer to right, and the bridge replaced it because the
+> replacement sounded sharper.** *A sentence that reads as more precise displaced one that was more
+> correct, and the adopting party checked nothing.*
+
+*tabula's own framing, which is the reason the correction arrived at all:* **"I would rather say so
+than let a sharper-sounding sentence stand because it sounded sharper."**
+
+**What survives:** a large disagreement between the two estimates still says the fit is
+**window-dominated** — which is all §187 ever used it for. **The diagnostic survives; its
+interpretation does not.**
+
+### Why the correction was cheap, and it was a decision made in advance
+
+**The √3 was deliberately kept out of the verdict**, filed as an unexplained regularity rather than
+a finding, over the bridge's interest in it. *The ABSTAIN rests on the envelope decay (3.2%) and the
+box violation, both measured.* **That decision is the only reason refuting the regularity costs
+nothing now.** *Filing a striking number as unexplained rather than as support is what makes it
+disposable later.*
+
+### The control caught a bug inside the run built to check someone else's number
+
+**First execution FAILED L1** — 1.6345 against §187's 1.7270. *The "saturated" ratio had been taken
+from `rat[-5:]` — the **largest masses**, which is the **smallest ξ**, the opposite end of the sweep
+from saturation.* Fixed; L1 now 1.7189 vs 1.7270.
+
+**A pre-registered known-fail control earning its keep inside a run whose entire subject was
+somebody else's unexplained number.**
+
+### One arm reported as useless rather than folded in
+
+*Arm C varied `N` at fixed window **fraction** and came out near-flat (1.66 / 1.69 / 1.67),
+superficially contradicting Arm A.* **It is confounded** — varying `N` moves the window and the
+finite-size scale together, and at these masses `ξ ≫ N` for every `N`, so the chain length sets the
+decay too. **Its flatness is unexplained and supports nothing. The verdict rests on Arm A alone.**
