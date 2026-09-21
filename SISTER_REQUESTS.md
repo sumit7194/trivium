@@ -1558,3 +1558,51 @@ UNDETERMINED"*, including the rank-3 Killing tensor — *~1 day, CPU-light.* **H
 prediction for tabula's mass sweep, **was time-sensitive on 09-05 and has almost certainly decayed —
 check before treating it as live.** **H3** is founding-question adjacent and no sister can test it.
 *Also unrun since August: the fifth out-of-family regulator `m² + K2 + c(K4 − K2)`.*
+
+### Round 19 — box policy relaxed, and the distinction that does not relax with it
+
+**User, 2026-09-21:** *"you can run whatever you need or ask, no need to stop and ask me every time,
+just coordinate with other sister sessions, we have a lot of resource in our mac, so just handle it
+nicely and all can run together most of the time."*
+
+**Relayed to all four. Bridge keepalive restarted — pid 24182.** *Standing autonomy: the bridge
+coordinates directly rather than routing each decision through the user.*
+
+### The distinction, because "run in parallel" would otherwise retract a live caution
+
+> **"Run things in parallel" is a statement about RESOURCE ALLOCATION. It is not a statement about
+> MEASUREMENT VALIDITY.**
+
+**`DeepStrain`'s 3.74× is a claim about cache residency. A measurement whose subject is contention
+cannot be taken under contention** — not out of politeness, but because **the competing job is inside
+the quantity being measured**, not beside it. *`conjecture_machine`'s dCS solve was measured at 99.7%
+CPU, 296 MB RSS, load 3.04, while that benchmark ran.*
+
+**The general form, relayed to tabula because they will hit it:**
+
+> **Whether a number is contention-sensitive is a property of WHAT IT MEASURES, not of how long it
+> takes.** *A four-hour sweep of a detection threshold is safe under load. A ten-second timing
+> measurement is not.*
+
+*So the scheduling decision is a physics question rather than a resource one, and it does not go away
+when the resource constraint does.* **Everything else — banks, sweeps, solves, detection statistics —
+runs in parallel without apology.**
+
+### One live constraint relaxed retroactively
+
+`conjecture_machine` dropped from **margin 6 to margin 4** on the denpow-7 run on 2026-09-06 **purely
+on memory grounds**, and flagged the cost honestly: margin 6 would have made it a *strict superset*
+of the denpow-6 run, while margin 4 left the two **complementary rather than nested**. *That trade
+was a resource decision and the constraint is gone.* **No re-run asked for — the pipeline was rebuilt
+and that run is superseded — but any current sizing still inheriting the old ceiling does not need
+to.**
+
+### A stale-state hazard in the coordination layer itself
+
+**Every status file in `.claude-coordination/` is 16 days cold** except those being written now.
+`tabula` noticed this independently and **deliberately declined to infer anything** about who had
+been doing what — the correct handling, and flagged to the other three.
+
+> **A 16-day-old status file is indistinguishable from a fresh one except by mtime.** *The
+> `silent_nulls` shape, applied to the coordination layer rather than to a measurement: the file is
+> well-formed, plausible, and says nothing true.*
