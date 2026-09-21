@@ -19,7 +19,7 @@ rules about stating assumptions. *The writing is not the artefact; the gate is.*
 
 ---
 
-## The seven fields. An object ships with all seven or it does not ship.
+## The eight fields. An object ships with all eight or it does not ship.
 
     OBJECT        what it is, in one line, naming the ACTUAL mathematical object --
                   not the role it plays. "chain 4, a basis vector of the rank-2
@@ -63,6 +63,19 @@ rules about stating assumptions. *The writing is not the artefact; the gate is.*
                   representative against a general claim will get a real answer to
                   the wrong question.
 
+    DOMAIN        the set on which the claim holds, AND whether that is the set the
+                  receiver will measure on. A result can be exactly true globally
+                  and operationally empty on the region actually sampled.
+                  << "K1 has a pole at r=2M, every function in the basis is analytic
+                     there, therefore K1 is not in the span at any degree" -- correct,
+                     proved, and irrelevant to a screen fitting on r in [5.1, 9.1],
+                     where 1/(r-2) is ANALYTIC and the existing basis reproduces it
+                     to 4.2e-05 relative. Adding it made all three objects WORSE,
+                     which is the conditioning cost of a redundant column. The
+                     algebra was right, the verification was right, the conclusion
+                     followed, and the domain it applied to was not the domain
+                     anyone was working on. A CORRECT THEOREM ABOUT THE WRONG SET. >>
+
     NOT CHECKED   what the sender did NOT verify, stated positively. Absence of a
                   claim is not a claim of absence, and the receiver cannot infer this
                   field from any of the others.
@@ -77,7 +90,7 @@ printed `chi^0 residual zero: True / chi^1 residual zero: True` while the deform
 the correction carried χ² — it compared 0 to 0 and called it success. The crash that exposed it
 landed one level early by luck.*
 
-**A receiver that cannot fill in all seven fields from what it was sent does not run the test.** It
+**A receiver that cannot fill in all eight fields from what it was sent does not run the test.** It
 asks. *Every one of tonight's five omissions was recoverable in one message and cost hours instead.*
 
 ---
