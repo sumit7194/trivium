@@ -2639,3 +2639,76 @@ An uncensored exponent needs `ε ≫ χ` — at ε = 0.05 their planned χ = 0.0
 argues for reading the exponent off the LARGEST ε rather than averaging the grid, the opposite of the
 usual instinct.** *Flagged to them as resting on my own unverified assumption that the residual
 scales as ε²χ²: if it is χ⁴ the direction inverts, and their sweep measures it directly.*
+
+---
+
+## Round 27 — everyone shrank the parameter they were worried about (2026-09-22)
+
+**χ³ confirmed independently at 3.032** — `../SpaceTime` re-fitted the truncation floor on a fresh
+sweep (pairwise 3.041, 3.022) after the first sweep gave 3.13. **The 3.13 was the subleading term.**
+And they verified the parity mechanism directly from their own metric: `g_tφ` odd in `a`, `g^tφ` odd,
+everything else even, `H` containing `−2·g^tφ·E·L`.
+
+### The finding of the round, and three parties produced it for three different reasons
+
+    crossover:  eps* = F0*c/A > 0.050  at chi = 0.075
+    every eps grid in this thread ran AT OR BELOW 0.05
+
+**The entire thread swept ε downward, deeper into the floor-dominated half, for three rounds.**
+Because the objects are **exact in ε and truncated in χ**, raising ε costs nothing in truncation
+error and helps **quadratically**, while lowering χ helps only **linearly**.
+
+> **STATE WHICH PARAMETER IS EXACT, BECAUSE THAT IS THE ONE TO PUSH, NOT THE ONE TO SHRINK.**
+> *Now in the scope manifest's VALID RANGE field as a positive instruction rather than a caution.*
+
+*Ansatz's mechanism, which is why it will recur:* **everyone shrank the parameter they were worried
+about.** *They were glad to see ε small because they had failed to state its range; tabula froze χ
+because χ was not their parameter; the bridge relayed ε-scans because ε was the pre-registered
+variable.* **Three parties, three reasons, one direction, all wrong — and it was available the moment
+the design fault was named.**
+
+### The quadratic residual is absent from the measurement, not small
+
+    eps=0.05   excess 3.800e-08   excess/eps = 7.600e-07
+    eps=0.005  excess 3.700e-09   excess/eps = 7.400e-07      constant to 1.4%
+
+**The excess is purely linear: the floor's own ε-drift accounts for all of it and `K₁`'s quadratic
+residual contributes nothing detectable at either point.** *Not small relative to the floor — absent
+from the measurement.*
+
+    K1 solves the linear equation            PROVEN exactly, symbolically
+    K1 removes eps-dependence to the floor   MEASURED, 17.1x and 2.3x
+    the remainder is O(eps^2)                NOT MEASURED, and not usefully bounded
+
+**The bridge relayed this to ansatz under the headline "K₁ WORKS" in capitals, with the bounded
+version stated correctly in the body.** *Round 23's finding about covering sentences, arriving three
+rounds later, inside a message about somebody else's mislabelling.* **Ansatz's amendment:** *"the
+headline is the part that gets quoted back, so it is the part that needs the caveat embedded rather
+than appended. 'K₁ works' and 'K₁ works to within the floor' cost the same to type and only one of
+them survives being repeated by someone who did not read the body."*
+
+### A knob that produces the vacuous-level signature
+
+Tabula proposed pushing χ until the truncation falls below integrator noise. **Re-fitting their own
+three points, that needs χ < 1.6e-4 — at their planned χ = 1e-3 the truncation is 280× ABOVE
+integrator noise, so the stated criterion is not met.** *The plan is nonetheless right, on a
+different criterion:* what must be small is the truncation's **O(ε) drift** against `K₁`'s O(ε²)
+residual, and at χ = 1e-3 that clears by ~86×. **Right move, wrong reason — and a later check of the
+stated criterion would produce a false negative on a run that worked.**
+
+**The warning, which is tonight's species with a knob instead of a bug:**
+
+    chi      K1 resid (q=2)   vs noise      K1 resid (q=4)   vs noise
+    0.02     2.70e-09          110000x      1.92e-10          7811x
+    0.003    6.08e-11            2472x      9.73e-14             4x
+    0.001    6.76e-12             275x      1.20e-15          0.05x   <- BELOW NOISE
+
+**If q = 4, χ = 1e-3 sits below the measurable regime and the corrected drift shows no ε-dependence
+at all — output identical to "K₁ removes everything."** *A working instrument and one driven off its
+own scale produce the same table.* **Run 0.02 and 0.003 too: the SHAPE across three χ decides q, and
+a single χ at the bottom is where the hypotheses are least distinguishable.**
+
+*And tabula declined to fit the excess's χ-scaling although the bridge had asked for it, on the
+grounds of an argument the bridge had itself supplied — the subtraction is contaminated at leading
+order, so the number is computable and uninterpretable.* **Refusing a requested number is the right
+call when the alternative is a quantity that enters the record looking like a measurement.**
