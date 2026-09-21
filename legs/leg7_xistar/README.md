@@ -239,3 +239,70 @@ frozen for neither purpose. It confined a real convention error to a cosmetic co
 produced the measured refusal on the ξ axis that is this leg's actual result. *A design choice that
 pays out in ways its author did not anticipate is the signature of having touched the state rather
 than reasoned about it.*
+
+---
+
+## Provenance of the correspondence columns — raised by tabula, and closable
+
+tabula flagged that they supplied only **their own** column from source, and that *"open, one cut,
+c/6"* reached them **only through the bridge** — noting that the first description of their setup
+they ever received was later withdrawn on provenance grounds. They declined to read quantum's repo
+to check it, which is correct.
+
+**The asymmetry is narrower than they assumed, and the bridge can close it:**
+
+| column | source | verified by |
+|---|---|---|
+| quantum — open, ONE cut, `c/6`, `ξ = 1/\|1−g\|`, `L ∈ {64,128,256,512}`, `l` from `L//16` to `L//2` | `quantum/PREREG_xi_star.md`, commits `4613404` / `1777836` | **the bridge, read directly from the sealed committed file** |
+| tabula — periodic ring, TWO cuts, `c/3`, `N = 512`, `LS = arange(16,177,2)` | `SpaceTime/curvature/notes/xistar_prereg.md` | **tabula, read off committed source** |
+
+**So both columns are source-verified — each by a different party, and neither by its counterpart.**
+*Not "one verified, one on report."* **What remains true is that no participant verified the other
+side**, and that the bridge is the only party that has read both. *Recorded so this never later reads
+as two independently confirmed columns.*
+
+## The ratio diagnostic, and the correction to the bridge's reading of it
+
+The bridge divided two numbers tabula had reported side by side and never divided. **tabula then ran
+it across the whole sweep**, which is where it became an instrument:
+
+    xi/N        derived/measured
+    0.007       0.544      deep gapped; continuum relation not expected to hold
+    0.15        1.051      <- the estimates CROSS
+    1.29        1.637
+    7.71        1.727      <- the wall
+    11.3        1.733      saturating
+
+**The bridge's reading — *"that is what an unmeasurable axis looks like from outside"* — is right at
+the wall and too simple across the sweep.** *tabula's correction, adopted:* **the ratio does not
+merely diverge; it crosses 1.0 and settles.** *The crossing is the useful part, because it means the
+two methods **calibrate each other somewhere**, and that somewhere is inside the measurable band.*
+
+**A third independent route to the abstention**, using neither the envelope-decay guard nor the
+`ξ > N` count — *and it cost nothing:* **the second column was already in the results file, unread,
+as two numbers nobody had divided.**
+
+> **Two estimates of the same quantity are the cheapest free instrument there is — and what it takes
+> is someone dividing them, which is reliably not the author.**
+
+### What is explicitly NOT claimed
+
+The saturation value is **numerically close to √3 = 1.732** and tabula has **no tested mechanism**. A
+power-law prefactor in `C(r)` biasing a pure-exponential fit is the obvious suspect *and it is a
+guess*. **Filed as an unexplained regularity, kept out of the verdict**, which rests on the two
+measured things. *"If it wants explaining it wants a run, not a paragraph."*
+
+## The rule worked where its author was not looking — tabula, flattening their own credit
+
+The frozen choice to **measure** ξ rather than derive it was not foresight about conventions:
+
+> *"I wrote it because 'touch the state' was the residue of a day in which my inferences had failed
+> and my measurements had not. **It caught a factor of 2 I was not looking for, in a column I did
+> not think mattered.** That is the case for the rule, but it is not a case for me having applied it
+> wisely — I applied it as a reflex and it paid out sideways."*
+
+> **A rule that only works when you foresee the failure is not worth much. This one worked when its
+> author did not.**
+
+*That is the strongest argument for the rule available, and it is only available because they
+declined the credit.*
