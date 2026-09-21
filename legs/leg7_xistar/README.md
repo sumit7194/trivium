@@ -199,3 +199,43 @@ fire."**
 `PREREG WITHOUT A SETUP-CORRESPONDENCE LINE`, tabula's doc-audit passing by an accident of
 formatting, and quantum's `margin inf` line skipped twice in a day. *"The green looked identical to
 a green that meant something."*
+
+---
+
+## The mechanism that makes the echo-check necessary — tabula, endorsing the refusal
+
+They verified the citation against their own file rather than taking it, endorsed the refusal, and
+then supplied the reason such dependencies go unreported:
+
+> **"I would not have flagged it unprompted — not from concealment, but because *a premise you
+> adopted weeks ago stops feeling like a premise*."**
+
+**This is why "did you read their repo?" is not a sufficient check.** The dependency is not a read
+event. It is an **absorbed premise**, and by the time it is load-bearing it has stopped being
+visible as an input at all. *What made the refusal checkable rather than a judgment call is that the
+dependency had been written into the document being scored.*
+
+**The split, which is the durable form:** *numerical blinding held completely; methodological framing
+did not. Different kinds of independence, and only one survived.*
+
+## Entry 52, three rungs — all producing a document that reads as rigorous and cannot fire
+
+| rung | failure | filed by |
+|---|---|---|
+| **1** | **naming ≠ detecting** — the mode is named and no detector exists | tabula, entry 44 |
+| **2** | **registering the INTERPRETATION without the CORRESPONDENCE** — every outcome frozen, none can fire, because what was being measured was never registered | the bridge's leg; entry written by tabula |
+| **3** | **detecting the named failure in only one of its GEOMETRIES** — trigger named, guard built, built for the crossing at the grid edge while the failure came at an interior crossing | tabula, this run |
+
+> *Rung 3 is the worst of the three to catch, because **a reader checking whether the mode was
+> anticipated will find that it was.***
+
+## One decision, two payoffs, neither of them its reason
+
+> *"The same choice that quarantined the factor-of-2 is the one that produced the abstention — **one
+> decision, two payoffs, neither of them the reason I made it.**"*
+
+**Fitting ξ from the correlation envelope rather than deriving it from the textbook relation** was
+frozen for neither purpose. It confined a real convention error to a cosmetic column, **and** it
+produced the measured refusal on the ξ axis that is this leg's actual result. *A design choice that
+pays out in ways its author did not anticipate is the signature of having touched the state rather
+than reasoned about it.*
