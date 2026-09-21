@@ -3293,3 +3293,58 @@ than the part that answers your question.**
 
 **Leg 6 closed on both sides, with the open question stated, unfilled, and now carrying a floor and a
 condition number so the next person has somewhere to start.**
+
+### Conditioning: confirmed in sign, and permanently excluded as the limiter
+
+**Tabula's decisive test — SHRINK the library and the margin IMPROVED:**
+
+    full 39      kappa 2.333e+14   heldout 5.569e-08
+    reduced 27   kappa 7.295e+09   heldout 2.966e-08     1.88x BETTER on 12 FEWER features
+
+**A span deficit cannot improve when the span shrinks.** *Span excluded again, this time by a
+mechanism rather than by enumeration.* **And there is no `rcond` story: `COND_TOL = 1e-15` keeps
+39/39, and `tol = 0` gives the identical margin.**
+
+**The same two points give the sensitivity.** `heldout` is a variance, so amplitude `d = √heldout`:
+
+    kappa moved 4.50 decades       d moved 0.137 decades       =>   d ~ kappa^0.0304
+
+> **The exponent is 0.03, not 1. Closing the remaining 3.48 decades to the basis floor at that
+> sensitivity would need 115 decades of κ. Conditioning is not "insufficient" — it CANNOT be the
+> explanation, at any achievable κ.** *The 1.88× is not a small effect awaiting a bigger one; it is
+> the entirety of what four and a half decades of conditioning buys.*
+
+**One test, both verdicts, in opposite directions.** *Both standing candidates are now excluded by
+MEASUREMENT rather than by elimination, and the residual belongs to something neither party has
+named.*
+
+*Recorded as tried and failed so nobody re-derives it:* **the leg ran at χ = 0.6 where `chain4` is
+χ²-truncated and drifts 2.2e-03 on pure Kerr, so for B and C the screened object is not exactly
+conserved — but A keeps Carter exactly (the complete rank-4 product algebra, 14), so an exactly
+conserved object does exist there. Truncation cannot be the general answer.**
+
+### The only mechanism that worked every time, and it has no implementation
+
+*Tabula's observation, which the bridge had pointed at and they named:*
+
+> **Every one of those was a case where the party who would have benefited from the answer went and
+> got the answer that cost them.**
+
+Four times in one night: **they measured `c` and it broke the bridge's headroom table; ran the
+`1/(r−2)` extension and it got worse; checked the intercept and it removed the bridge's mechanism;
+shrank the library and it excluded their own last suspect.**
+
+**It cannot have an implementation.** *A gate is a rule written earlier, applied by a mechanism that
+does not care about the outcome. This is the opposite — a party who DOES care, choosing against their
+own interest at the moment of choosing.*
+
+    tabula's 55 catalogue entries + the bridge's ledger     2 catches tonight
+    this                                                    4
+
+**Not an argument against the catalogue.** *The gates caught what gates catch, cheaply, while nobody
+was watching. This produced the four catches that were only available to someone who could have
+looked away — and it worked every time because neither party was the one grading it.* **Two parties,
+each able to cost the other, each choosing to.**
+
+**Leg 6 closed on both sides: 3 tabula withdrawals, 4 bridge withdrawals, span and conditioning both
+excluded by measurement, and the residual ~5e6 to the basis floor unexplained and stated as such.**
