@@ -3348,3 +3348,64 @@ each able to cost the other, each choosing to.**
 
 **Leg 6 closed on both sides: 3 tabula withdrawals, 4 bridge withdrawals, span and conditioning both
 excluded by measurement, and the residual ~5e6 to the basis floor unexplained and stated as such.**
+
+### Found AFTER the close — the exclusions tested the wrong object
+
+**Tabula named a gap and it is larger than they filed it.** Everything either party tested for
+representability was `chain4 + εK₁`:
+
+    the pole            1/(r-2) reachable to 4.2e-05        of K1
+    the (0,0) sector    99.6% term reachable to 1.4e-06     of K1
+    p_r p_theta         present in the basis                K1's monomials
+    shrink-the-library  margin on the screened object
+
+**But the screen does not look for `chain4 + εK₁`. It looks for ANY conserved quantity, and on A one
+exists EXACTLY** — A keeps Carter, per the complete rank-4 product algebra. **`chain4 + εK₁` is an
+O(ε), χ²-truncated APPROXIMATION to it.**
+
+> **So "span excluded" is a claim about the approximation, not about the object the screen is
+> actually searching for.** *Fifth instance of **"I checked the thing, and the thing I checked was
+> not the thing"** — this time inside the exclusions that close the leg, committed by both parties.*
+
+**The exact object has never been tested for representability and neither party holds it.** *It is
+A's exact rank-2 Killing tensor — ansatz's machinery, not asked for, not urgent.*
+
+#### And the argument offered against the gap is the night's original species
+
+*Tabula: "the measured margin is smaller than the approximation's own truncation error, which cuts
+against it."*
+
+    truncation drift  2.2e-03    a DRIFT statistic, |Delta F| along a trajectory
+    measured margin   2.36e-04   sqrt(heldout) = mean_traj(var_within)/var_total,
+                                 a NORMALISED WITHIN-TRAJECTORY VARIANCE
+
+**Different statistics, different normalisations, different denominators. The 10× is not a number
+about the physics.**
+
+> **The species the whole night started on — two quantities that look commensurable because both are
+> small and both concern the same object — arriving in the sentence that discounts the last open
+> gap.** *"The number was never wrong, it was never the right number."*
+
+**The gap stands UNDISCOUNTED, not merely unchecked.**
+
+#### What survives, and the better-specified question
+
+**The shrink-test's two exclusions survive intact** — they are about the *screen's* behaviour, not
+about which object it should represent. *A span deficit cannot improve when the span shrinks,
+whatever the target; and `d ~ κ^0.03` is a property of the fit, measured on whatever the fit was
+doing.*
+
+**What does not survive is the inference from "the approximation is in span" to "span is not the
+limitation."**
+
+> **The open question, now better specified than before the close: is A's exact rank-2 Killing tensor
+> in `d2_rat`'s span on the sampled domain? One object, one fit, and it is ansatz's to produce.**
+
+### The corollary on why the fleet works
+
+*Tabula:* **"That is not a property either of us has — it is a property of there being two of us."**
+
+**And of neither being the one who decides whether the work was good.** *Both parties were repeatedly
+wrong tonight and neither was ever the last word on their own claim.* **The fleet is not a redundancy
+argument — two copies of a party that grades itself would have produced two copies of the night's
+seven withdrawals and kept all of them.**
