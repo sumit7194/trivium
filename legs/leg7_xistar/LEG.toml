@@ -1,0 +1,3 @@
+# Leg 7 -- sealed prediction vs blind measurement. SCORED: not comparable.
+expected  = "emit"     # a specific threshold value was predicted; the outcome was an abstention
+retired   = true
