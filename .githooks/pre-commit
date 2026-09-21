@@ -67,7 +67,27 @@ else
   APP=$(print -r -- "$AO" | grep -cE "^  (APPEND-ONLY|SECTIONS-ONLY-ADDED)" || true)
 fi
 
-NEW="$HITS|$APP"
+# STORE THE DENOMINATOR. Found 2026-09-21, prompted by tabula's rule that the ratios
+# BETWEEN a tool's outputs are the part nobody is assigned to build.
+#
+# This hook has published six raw hit-counts on every commit and read DELTAS ON LEVELS.
+# It never stored the corpus size, so "483 -> 500" cannot be separated from "the corpus
+# got bigger". Measured today: 1,579 markdown lines added while hits rose 17. Rate went
+# 31.9 -> 33.0 per 100KB, i.e. essentially flat -- the delta I have been reading as a
+# signal was corpus growth.
+#
+# AND IT IS WORSE THAN AN UNMADE INSTRUMENT. tabula's two columns were both in their
+# results file, so the ratio was merely unbuilt. Here the denominator was DISCARDED at
+# write time, so every historical delta is uninterpretable AND PERMANENTLY SO. An unmade
+# instrument whose inputs were not retained is not unmade, it is unmakeable.
+#
+# Fixed forward only. The record before this commit cannot be repaired.
+KB=$(git ls-files '*.md' | xargs wc -c 2>/dev/null | tail -1 | awk '{printf "%d", $1/1024}')
+DOCS=$(git ls-files '*.md' | wc -l | tr -d ' ')
+[[ -z "$KB" || "$KB" == "0" ]] && KB="MISSING"      # never fabricate a denominator
+[[ -z "$DOCS" ]] && DOCS="MISSING"
+
+NEW="$HITS|$APP|${KB}KB|${DOCS}d"
 
 if [[ -f $S ]]; then
   OLD=$(cat $S)
@@ -77,6 +97,14 @@ if [[ -f $S ]]; then
       echo "  '-' means the append-only window held too few revisions to compare — NOT a fall to zero"
     fi
     echo "  a rise is not necessarily a defect -- see the false-positive notes in the source"
+    # Read the RATE, not the level: hits per 100KB. A rise in raw hits that tracks
+    # corpus growth is not a finding.
+    if [[ "$KB" != "MISSING" && "$OLD" == *"KB"* ]]; then
+      OKB=${${(s:|:)OLD}[3]%KB}; OHITS=${${(s:|:)OLD}[1]%%,*}; NHITS=${HITS%%,*}
+      if [[ -n "$OKB" && "$OKB" != "0" ]]; then
+        print -r -- "  rate: $(( OHITS * 102400.0 / (OKB * 1024) )) -> $(( NHITS * 102400.0 / (KB * 1024) )) hits/100KB  <- READ THIS, not the level"
+      fi
+    fi
   fi
 else
   echo "  audit baseline set: $NEW"
