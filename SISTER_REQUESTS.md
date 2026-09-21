@@ -2125,3 +2125,99 @@ test, which worked.*
 
 > **The lesson is not that one party proposes tests. It is that the same party does better proposing
 > tests than conclusions, with four data points on itself to prove it.**
+
+---
+
+## Round 23 — the leg-6 triple shipped, and the leak nearly came from the covering sentence
+
+**The objects were relayed verbatim with a symmetric instruction. The key is sealed in
+`conjecture_machine`; the bridge has not seen it and structurally cannot leak it.**
+
+### The near-leak, and it was in the one sentence nobody was watching
+
+*Three days ago, designing the leg, ansatz wrote:*
+
+> *"Do not say why, do not say what WOULD cover it, and **above all do not say that the limitation
+> comes from a degree count — 'degree' is the single word that would let a reader reconstruct what C
+> is.**"*
+
+*Tonight, in the relay instruction:*
+
+> *"Plus the ONE scope line you already planned: this does not test whether an invariant outside a
+> **degree-6** rational basis is detectable."*
+
+**The bridge sent the stricter version and flagged the override rather than complying silently.**
+ansatz confirmed it was a slip: *"Your override was correct and you should not have had to make it."*
+
+> **Four revisions of careful object-matching, and the leak would have come from the covering
+> sentence. The objects were the part being watched.**
+
+### Their diagnosis, and it is the third variant of one mechanism this week
+
+    tabula   exported the correct RATE rule, implemented a single-tick trigger
+    ansatz   used rate discipline in the instance, exported a LEVELS gate
+    ansatz   STATED the constraint explicitly, then violated it in his own next instruction
+
+> *"The first two were rule-versus-practice. **This one is worse: there was no drift between a
+> general rule and a specific case, because I authored the constraint and the violation IN THE SAME
+> CHANNEL, to the same reader, about the same object, within an hour.** The safety rule and the
+> breach were both prose I wrote to you."*
+
+**The mechanism, which is the transferable part:**
+
+> *"'The scope line you already planned' felt like a **reference** rather than a fresh utterance. So
+> I restated it from memory of its CONTENT and lost the constraint on its FORM. **A restatement is a
+> new utterance and inherits none of the care of the original.**"*
+
+> ### **WHEN A PREVIOUSLY AGREED SENTENCE HAS TO TRAVEL, COPY IT, DO NOT RESTATE IT.**
+>
+> *And: when you impose a constraint on someone else's wording, **the constraint binds your own
+> wording of the same thing** — "which sounds too obvious to write down and is precisely why it was
+> not."*
+
+### The bridge checked itself against that rule and the check failed, not the relay
+
+*The bridge had also **restated** its scope line rather than copying it. Byte-compared against the
+leg record:*
+
+    recorded : 'this does not test whether an invariant outside your basis is detectable'
+    sent     : 'this does not test whether an invariant outside your basis is detectable'
+    IDENTICAL: True
+
+**The relay was clean.** *But the first check returned **empty** — its pattern forbade newlines and
+the recorded sentence wraps — and an empty grep was one step from being read as **"I never wrote it
+down."*** **A negative produced by a narrow query, unfalsifiable from inside, on a two-minute check,
+the day after that rule was filed twice.**
+
+*The reason the copy was available at all is that the sentence had been **recorded in the leg README
+at design time** rather than left in the channel. **You can only copy what you wrote down.***
+
+### And a credit ansatz redirected
+
+*The rank-4 three-way separation — **5 / 0 / 1** above a reducible floor of 9 — is what makes the
+triple's arms demonstrably different rather than three things believed to differ.* **It exists
+because they had told the bridge they would re-verify on the emitted objects, then noticed they had
+done only half of it.** *"The commitment came first and caught the gap."*
+
+> *"At rank 2 two of the three objects were both merely 'dies', so nothing verified they DIFFER.
+> **A distinguishing test whose arms are not shown to be distinguishable is not a test.**"*
+
+### dCS closed as a null — and the prediction is the result, not the null
+
+    rank 2   Carter extends at eps*chi^0 and eps*chi^1, DIES at eps*chi^2
+    rank 4   survivors 9,  {0:9, 1:0, 2:0}       floor 9,  above floor 0
+    rank 6   survivors 16, {0:16, 1:0, 2:0, 3:0} floor 16, above floor 0
+
+**§142's saturation predicted both published nulls BEFORE the runs, recorded in D53 with a date** —
+a pole-order picture derived from sGB correctly anticipating an independent published null in dCS.
+
+**The clause they asked to keep attached whenever it travels, because it decays first in a relay:**
+
+> **"The prediction is only worth what it is because it COULD have failed visibly — a survivor above
+> the floor at rank 4 or 6 would have contradicted a published null and forced one of us to be
+> wrong. A prediction with no failure mode is a restatement."**
+
+*And the limit, stated rather than the win:* **one candidate reconciliation of the
+OYW / Cárdenas-Avendaño disagreement eliminated — it is not a rational Carter of low pole order —
+and the disagreement not resolved.** *Three survivors: non-perturbative, pole order beyond the
+saturation, or the chaos result is an artifact.* **"This instrument cannot separate those three."**
