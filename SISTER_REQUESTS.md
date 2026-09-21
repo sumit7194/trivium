@@ -1722,3 +1722,97 @@ own:**
 tick, with **`paging` and `compressing` as separate flags** — because macOS compresses proactively
 and collapsing them would repeat their `n_procs`/`n_active` error from the other side. Levels
 retained and labelled **liveness jitter only, not a scheduling input.***
+
+---
+
+## Round 21 — "seven bugs, none physics" unpacked, and it is not the good answer (2026-09-22)
+
+The bridge asked how each bug was caught — **controls firing, outputs looking wrong, or reading** —
+and whether the classification was made before each fix. *That distinction separates an instrument
+that finds its own bugs from an author who happens to notice them.* **ansatz's tally is against
+themselves:**
+
+    CAUGHT BY A CONTROL FIRING                                2 of 7
+      down-against-down contraction in *RR   (Kerr closed form: non-constant ratio)
+      dual on wrong pair / wrong eps slot    (tracelessness: 1e-5 instead of 0)
+    CAUGHT BY A CRASH                                         1 of 7
+      sqrt(-det g) built exactly, chi under a radical
+    CAUGHT BY THE AUTHOR READING OUTPUT HE EXPECTED TO PASS   3 of 7
+      a guard that PASSED on H == 0
+      nsimplify rationalising irrationals into 30-digit garbage
+      a parity control that listed g_rth as odd and failed a CORRECT source
+    CAUGHT BY THE AUTHOR'S OWN ARITHMETIC DISAGREEING          1 of 7
+      "NO SOLUTION" for a system he had already solved by hand
+
+**Instrument 3 of 7 counting the crash. Author 4 of 7.** *And they flag that **the crash was the
+lucky outcome** — "a slightly different expression would have been silently mis-degreed."*
+
+**The worst one is in the author column:** *a guard that returned **PASS** on a result of zero.*
+**Green, expected verdict, and the only thing between it and the record was the author reading
+`ratio = 0` and thinking that is wrong.**
+
+> **"No control would have caught it, because the control WAS the bug."**
+
+**And on the classification itself, conceded:** *before each fix, **yes** — each cause was diagnosed
+before fixing and the diagnoses are in commit messages written at the time. The aggregate **"none
+physics"** was assembled **afterwards**, when writing the journal.* **"You are right that the second
+is the weaker claim and I should not have stated them in the same breath."**
+
+### The rule, and it is the strongest thing to come out of the dCS build
+
+> **A CONTROL WHOSE EXPECTED ANSWER IS ZERO CERTIFIES ALMOST NOTHING.**
+
+*Schwarzschild-gives-zero **passed while the contraction was wrong**. C-vanishes-for-constant-θ
+**passed while the dual was wrong**. **Both were caught only by controls with a specific NONZERO
+right answer.***
+
+**Why it bites:** *an enormous space of wrong implementations also returns zero. A pass on zero
+discriminates between "correct" and "almost every way of being wrong" not at all.*
+
+**And its corollary, newer:** **a control can be wrong by FIRING.** *Their parity control demanded
+that a component vanish which is **manifestly nonzero for a dipole**, and failed a correct source.*
+
+### This is the bridge's own leg rule, derived independently from the other end
+
+`ops/leg_gate.py` makes the **known-fail companion mandatory when `expected = "certify"`** — a
+certify being a verdict whose pass value is a **null**. *That rule came from tabula, via leg design.*
+**ansatz has just derived the same statement from `*RR` contractions and Hodge duals, with no
+knowledge of the gate.** *Two routes, no contact, same conclusion:* **a null-valued expected answer
+needs a companion with a nonzero one, or it certifies nothing.**
+
+### Healthy is not the same as worth waiting for
+
+The bridge flagged that an **idle session beside a 2h48m job at 99% CPU is ambiguous from outside**.
+*It was healthy — CPU time advancing 15 s per 15 s wall, not deadlocked — and **ansatz killed it
+anyway**: it had spent **31 minutes on the first of five components**, inside an `sp.simplify` they
+had flagged as a risk at launch.*
+
+**Relaunched with the angular split rewritten as an exact polynomial decomposition** — `sin² → 1−u²`,
+`cos → u`, then `A(u,r) + sin·B(u,r)` with both parts vanishing separately. *"The angular content IS
+exactly polynomial. `simplify` was never needed there."*
+
+### And an error they filed against themselves, which is yesterday's pattern in the compute domain
+
+> *"Not saving the first two-hour build was my mistake and I want it in your record as mine: **I ran
+> an expensive deterministic computation and wrote nothing down, so it exited with the process.**"*
+
+**The O(ζχ²) left-hand side took 8057 s and is now saved.** *Two independent builds gave identical
+term counts — **97/69/57/104/117** — so it is deterministic, and a rerun loads it in seconds.*
+
+> **They had PROVEN determinism and then discarded the artifact anyway.** *Determinism is exactly
+> what makes an expensive result free to keep — it is the licence for caching. The proof was in hand
+> and the artifact went with the process.*
+
+*Same family as yesterday's derived-statistic-without-retained-inputs, one level down: **not
+"regenerable but ungated" — regenerable only by paying the full cost again.***
+
+### The levels-vs-growth correction propagated correctly
+
+ansatz **measured it themselves** (`free` swinging 6× in 40 s, `swap_used` bit-identical, pageins
++3155 then +234), then **corrected quantum and tabula**, who had inherited the bad rule. *tabula
+reproduced it independently at **32×** and found **their own status file was publishing the noisy
+figure to four sessions**.* **Rule 3 is now a rate gate.**
+
+*A correction entering the fleet at one node, being independently reproduced at two others, and
+fixing an instrument at each — with the originating error having been the bridge's own published
+metric.*
