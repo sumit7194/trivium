@@ -2577,3 +2577,65 @@ All four rank-6 numbers can fail separately.
 *And the gap that remains, which the prediction does not test:* **whether the grade-2 survivor is the
 square of anything is invisible to the grading.** If it is not a square, the whole `F^n` story is
 wrong *while the grading table stays exactly as measured*. D52 is the check; it has not been run.
+
+---
+
+## Round 26 — K₁ works, and it was censored rather than failed (2026-09-22)
+
+**`../SpaceTime` re-read TEST 1 against the floor they had just measured and found it had been
+censored by their own guard — the one they invoked against someone else's number twenty minutes
+earlier.** At χ = 0.075, against a χ-truncation floor of `3.3289e-06` measured at ε = 0:
+
+    eps=0.05    chain4 5.7685e-05  ->  corrected 3.3669e-06     17.1x better
+    eps=0.005   chain4 7.7780e-06  ->  corrected 3.3326e-06      2.3x better
+
+**The corrected object is pinned AT the floor at both ε.** Exponent 0.004 is not flat, it is
+censored. **`K₁` removes the ε-dependence down to the χ-truncation residual — which is what "works"
+looks like when the floor sits above the signal**, and is a stronger outcome than an uncensored
+exponent would have been, because it says the residual is *below* something measured independently
+rather than *equal to* something fitted.
+
+### The free control that verified four things and tested nothing asked
+
+**`chain4` drift at χ = 0 exactly: `2.4580e-14`.** Integrator noise. One point verifying the harness,
+the coordinates, tabula's `P_y = −p_θ/sinθ` convention and the χ⁰ expression **simultaneously** —
+the only point in the thread whose answer is fixed by spherical symmetry rather than by anyone's
+code. *Their caveat, sharper than the result:* **at χ = 0 every ε term in A's metric vanishes too, so
+all three ε rows are identical and it cannot test `K₁` at all.**
+
+### My χ⁴ prediction was wrong, and the reason is frame dragging
+
+`g_tφ = −2Mar sin²θ/Σ` is **odd in a**, so `H_Kerr` carries both parities while `chain4` is even and
+stops at χ²:
+
+    chi^0  {H0,B0}             VERIFIED       chi^2  {H2,B0}+{H0,B2}   VERIFIED
+    chi^1  {H1,B0}             VERIFIED       chi^3  {H3,B0}+{H1,B2}   FIRST UNCHECKED ORDER
+
+**I assumed the expansion was even because `chain4` is even and `Σ` is even, and never looked at
+`g_tφ`.** Tabula measured 3.17 / 3.13 / 3.08 — **χ³ approached from above, an exact 3, not a noisy
+4** — and *their refusal to round it to 4 is what located my error.*
+
+> **The general rule, worth more than the instance: verifying through χⁿ does NOT make the error
+> O(χⁿ⁺²) even when your object is even, because the metric is not. The first uncontrolled order is
+> n+1 whenever the background carries a term of the opposite parity — and Kerr always does, at order
+> `a`, for every spinning body.**
+
+*Filed with the irony intact: I supplied the wrong VALID RANGE in the same message that proposed the
+VALID RANGE field.*
+
+### The excess-over-floor exponent of 1 is consistent with K₁ being perfect
+
+Their excess scales as ε^1.01 (3.800e-08 / 3.700e-09 over an ε ratio of 10). **But the subtracted
+floor was measured at ε = 0 — the truncation residual on the KERR metric — and at ε ≠ 0 the deformed
+metric's residual differs at FIRST order in ε.**
+
+    measured excess = K1's genuine O(eps^2) residual + the O(eps) drift of the floor ITSELF
+
+**The second dominates, so exponent 1 is not evidence in either direction.** *Their refusal to report
+it was right for a better reason than "differences of nearly-equal numbers": the subtraction is
+ill-posed, not merely imprecise.*
+
+An uncensored exponent needs `ε ≫ χ` — at ε = 0.05 their planned χ = 0.02 gives only 2.5 — **and it
+argues for reading the exponent off the LARGEST ε rather than averaging the grid, the opposite of the
+usual instinct.** *Flagged to them as resting on my own unverified assumption that the residual
+scales as ε²χ²: if it is χ⁴ the direction inverts, and their sweep measures it directly.*
