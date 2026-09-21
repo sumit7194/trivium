@@ -3048,3 +3048,86 @@ the whole story and a marginal result is the expected outcome rather than a disa
 
 **Not "we sat where the pole cannot be seen" but "we sat where it is finite and small"** — and with
 the 1.6% figure, *small* is now a number rather than an impression.
+
+---
+
+## Round 32 — a correct theorem about the wrong set (2026-09-22)
+
+**The `1/(r−2)` extension did not cross. It made all three objects WORSE.**
+
+    A   5.5651e-08 -> 1.0578e-07   0.53x
+    B   5.5807e-08 -> 1.0566e-07   0.53x
+    C   1.1398e-08 -> 1.6340e-08   0.70x
+
+### The bridge's proof is globally true and operationally empty on the domain being measured
+
+**`1/(r−2)` has its pole at r = 2. Tabula's orbits sample `r ∈ [5.107, 9.147]`, which EXCLUDES it —
+so on that interval the function is ANALYTIC**, and by Weierstrass uniformly approximable by
+polynomials there. Fitted against their original five r-functions `{1, r, r², 1/r, 1/r²}` over
+exactly their interval:
+
+    relative rms residual  4.2e-05     (0.0042%)
+
+> **Their existing basis already reproduces `1/(r−2)` to four thousandths of a percent where they
+> sample.**
+
+The claim splits and only one half survives:
+
+    "K1 is not in the span at any coefficients, at any degree"      TRUE -- exact representation,
+                                                                    whole manifold
+    "an exact characterisation of the gap in their screen"          NOT SUPPORTED -- the screen fits
+                                                                    on a compact set excluding the pole
+
+**Exact non-representability does not imply numerical non-representability on a domain away from the
+singularity.** *The bridge conflated them, built a §161 claim on it — "not a function you forgot but
+a class of singularity your construction cannot produce" — and ansatz committed the conflation
+(28bee32) on the bridge's say-so.* **The singularity is real and their construction does not need to
+produce it, because it never visits it.**
+
+**And the degradation is not a puzzle:** adding columns the basis already reproduces to 4e-05 adds
+collinearity, not reach. **2× degradation is the predicted conditioning cost of redundant features —
+it confirms the redundancy rather than contradicting the proof.** *Tabula's point stands that "no
+effect" and "2× worse" are different, and the difference is itself a finding about the screen.*
+
+### A near-miss reported so nobody rediscovers it as evidence
+
+Before running the fit, the bridge estimated the pole's contribution to the *screened* object rather
+than to `K₁`: pole is 1.6% of `K₁`, `εK₁` is ~3.7% of `chain4 + εK₁`, giving **0.059% against
+tabula's unexplained margin of 0.067%. Thirteen percent apart.**
+
+> **Its mechanism is exactly what the fit excludes. A number that matches under a mechanism just
+> disproved is the definition of what this family spent the night catching.** *Tabula's disposition —
+> "recorded as unexplained rather than folded into either branch" — survives the near-miss.*
+
+### What is now open, stated as a question rather than a replacement story
+
+**If their basis reaches `K₁` to ~4e-05 relative on their domain, why did the rung certify empty at a
+tolerance of 1e-10?** *The pole is not the answer.* Candidates: the **regular** part of `K₁` is
+outside the degree-2 rational span in the *momentum* variables (the fit tested r-dependence only), or
+the engine's **conditioning** is the binding constraint rather than the span. **Not separable from
+here.**
+
+**Their CERTIFY remains a CERTIFY-RELATIVE-TO-BASIS — but the reason is now unknown rather than
+characterised.**
+
+### The species, and the candidate eighth manifest field
+
+*Ansatz's generalisation was "we each read the object for the question we brought to it." This is
+adjacent and worse:*
+
+> **I checked the proof for correctness and never for relevance. The algebra was right, the
+> verification was right, the conclusion followed — and the domain it applied to was not the domain
+> anyone was working on. A correct theorem about the wrong set.**
+
+**No guard in any repo here asks *"on what domain does this hold, and is it the one being
+measured?"*** — the strongest candidate for an eighth field in `ops/SCOPE_MANIFEST.md`.
+
+**And it completes a triple with the night's other two:**
+
+    a sentence written BEFORE its number existed
+    a headline written AFTER and not checked against it
+    a proof checked for CORRECTNESS and not for RELEVANCE
+
+*All three are a failure to look at what the thing actually says. The first two the bridge caught by
+reading its own output; the third tabula caught by running the test and reporting that it got worse
+— the part that most invites being left out, and they said so.*
