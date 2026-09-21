@@ -2531,3 +2531,49 @@ there, `(r+1)²` under-reports and every excess computed against it is inflated.
 **Still open:** C's grading is `{0:9, 1:0, 2:1}` — **grade 1 empty, grade 2 occupied.** Nothing
 linear in `Q` survives yet something quadratic does, although every grade-2 product contains a
 grade-1 factor. *Not yet explained, and not yet raised with either sister.*
+
+### PRE-REGISTERED, before the run — rank-6 C must be (21, {0:16, 1:0, 2:4, 3:1})
+
+**Recorded 2026-09-22 while `../conjecture_machine`'s rank-6 C run was in progress. Timestamped by
+this commit.**
+
+C's rank-4 grading `{0:9, 1:0, 2:1}` has **grade 1 empty and grade 2 occupied** — nothing linear in
+Q survives, yet something quadratic does, although every grade-2 product contains a grade-1 factor.
+
+**The pole-order reading.** If the true survivor is `F = Q + ε·K/(2Q^m)` then
+
+    F^n = Q^n + (n/2)*eps*K*Q^(n-1-m) + O(eps^2)     POLYNOMIAL  <=>  n >= m+1
+
+so **the lowest occupied grade is exactly m+1 and every grade below it is empty.** C's lowest is 2,
+giving **m = 1, a simple pole** — and the m = 1 case is exact with no fine-tuning: `F² = Q² + εK`,
+the pole cleared precisely by the 2 from the square.
+
+**Consequence:** C's grading is A's complete algebra **with grade 1 deleted**, since grade 1 is the
+only one needing a single power of the rational F.
+
+    rank 4   A {0:9,  1:4, 2:1}      14      C {0:9,  1:0, 2:1}      10   <- MEASURED, matches
+    rank 6   A {0:16, 1:9, 2:4, 3:1} 30      C {0:16, 1:0, 2:4, 3:1} 21   <- PREDICTED
+    rank 8   A {0:25,1:16,2:9,3:4,4:1} 55    C {0:25,1:0,2:9,3:4,4:1} 39
+
+**The rank-4 total of 10 follows from "F^n polynomial iff n ≥ 2" alone and was not fitted to it.**
+All four rank-6 numbers can fail separately.
+
+#### Three corrections to my own framing, all from ansatz and all accepted
+
+- **C was CONSTRUCTED as d1, §140's pole-order-1 direction.** *m = 1 is the label it was built with.
+  I did not discover it — I recovered it.* **What is not tautological is that the grading, computed
+  by `breakdown_single` on the nullspace rather than read off the construction, agrees with the
+  label.** That validates the **dictionary**, not C.
+- **The actual finding is ansatz's and it is that the grading measures pole order directly** — m is
+  read off the first nonempty row from *one* run, where §142 inferred it by scanning ranks and
+  watching where new directions appear. *If rank-6 lands on 21, the ladder becomes a convenience
+  rather than the instrument.*
+- **It is TWO legs, not three.** Their algebra and the grading are two readings of one computation on
+  one object from one pipeline; only tabula's measurement is external. **This is exactly the 09-05
+  error — calling a concurrence "the first genuinely external cross-method check" when both results
+  sat inside what was already proven — walked back into four rounds later with a different object,
+  and caught by the sister rather than by me.**
+
+*And the gap that remains, which the prediction does not test:* **whether the grade-2 survivor is the
+square of anything is invisible to the grading.** If it is not a square, the whole `F^n` story is
+wrong *while the grading table stays exactly as measured*. D52 is the check; it has not been run.
