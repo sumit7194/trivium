@@ -3181,3 +3181,54 @@ were the 845× argument, the χ⁴ prediction, and the pole.*
 
 > **Confidence at the moment of writing carried no information about what survived. The only thing
 > that predicted correctly all night is whether anyone went back and looked.**
+
+### The sector that holds 99.6% of K₁ is the one the builder does not emit
+
+**`d2_rat`'s builder emits every `(i,j)` with `1 ≤ i+j ≤ deg` and `i+j` even — at degree 2, `i+j = 2`
+only. There is no `(0,0)`.**
+
+`K₁`'s `P_t²` term simplifies to
+
+    8*chi^2 * E^2 * (3xy^2 + 24x + 2y^2 - 48)/(x-2)
+
+**and with `E` whitened, `P_t²` is a constant — so the term has no `p_r` and no `p_θ` dependence
+whatever. It is a pure coordinate function, living entirely in the `(0,0)` sector. And it is 99.6%
+of `K₁` over the sampled region.**
+
+> *The momentum span IS complete — for the sectors the builder emits. The one it does not emit is the
+> trivial one, and that is where `K₁` sits.*
+
+    the pole          a coordinate function, analytic where they sample  -> approximable to 4e-05
+    p_r * p_theta     a momentum monomial -- and it IS in the basis      -> excluded, checked
+    the (0,0) sector  a momentum monomial NOT in the basis, carrying
+                      99.6% of K1                                        -> no domain escape hatch
+
+**Magnitude fails in the other direction and the claim is not made:** `0.996 × 0.037 = 3.7%` against
+a measured margin of `0.067%` — **over-predicts by 55×.** *The pole under-predicted by 27,000×.*
+**Neither matches, and 55× is not "close enough to be the mechanism."** But the two are different
+situations: *one is a candidate that cannot matter; the other should have mattered more than
+observed.*
+
+**So the over-prediction is the informative part, and it is one line to check.** `heldout` is
+`mean_traj(var_within)/var_total` — a *within*-trajectory variance. **A fit carrying a free
+per-trajectory intercept absorbs a `(0,0)` function's mean and leaves only its variation**, cutting
+3.7% by the ratio of variation to mean. *Does the fit carry an intercept, and is it per-trajectory or
+global?* **Computable from trajectories already in hand.**
+
+### The audit this opens in `../SpaceTime`, which is larger than the eighth field
+
+*Their own observation, and it is the biggest item either of us produced tonight:* **every
+impossibility certificate in that repo — §160's basis ladder, §167's screened-to-degree-4, §178's
+flat margin — states "not representable in basis X" and is applied to a screen fitting on a compact
+region. None states its domain.** *They do not think any is wrong; the point is that none can
+currently be checked.*
+
+**The twin the bridge would add:**
+
+> **"On what set does this hold" and "in what space is the object represented" fail the same way.**
+> *Tonight's first error was a claim true on the manifold and empty on the sampled region. Tonight's
+> last may be a span checked for the sectors present and never for the one absent.* **One about the
+> domain of the argument, one about the domain of the basis.**
+
+*And tabula's refusal to re-label the CERTIFY stands:* **carrying an unlabelled correct verdict beats
+re-attaching a mechanism** — the over-retraction rule pointed at a label rather than a claim.
