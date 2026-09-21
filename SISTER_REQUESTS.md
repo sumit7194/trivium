@@ -1347,3 +1347,135 @@ kept**. Scalar EE failed below 45° on a precision rule adequate at real `a` and
 proved on one node, calibrated, fixed. **The re-run changed the t-grid at the same time, against
 their own Rule VI**, costing a uniform −1.87·10⁻⁴ that is known exactly and divided out — **self-
 reported**. Top five masses fail even at 125 digits: separate problem, diagnosis plan, left open.*
+
+---
+
+## Round 18 — two weeks of silence, one engine running (2026-09-21)
+
+**Fleet state at the ask:** `conjecture_machine` active (40 commits since 09-06, 11 uncommitted).
+Every other repo idle 15–16 days — `BlackHole` 09-06, `quantum` / `SpaceTime` / `corner_function` /
+`TheBridge` all 09-05. **One engine, four parked cars.**
+
+Asked ansatz and quantum the same four questions: what is established (with scope), what was
+corrected, what is open (compute vs argument), what is running. **The bridge pulled each repo's
+commit log BEFORE asking**, so the account could be compared against an independent record rather
+than received. *ansatz's account matched the log throughout.*
+
+### What ansatz established — the arc that did not exist on 09-06
+
+- **§136/§137** sGB ranks 2–6 = floor on **both primes**, per-level counts agreeing, not just verdicts.
+- **§138** *Why* Carter dies: three physically distinct obstructions (static reshaping, frame-dragging
+  change, quadrupole shape change), each sufficient alone; obstruction space is 3-D.
+- **§139** *Which* deformations keep Carter: **exactly the separable ones** — "keeps Carter ⟺
+  Benenti–Francaviglia separable + gauge", both directions measured, within the mapped space.
+  **A characterisation, not a null** — the first such result in the programme.
+- **§140–§142** *The rank ladder is not a list of independent symmetries.* Carter can survive as a
+  **rational** first integral `Q + ε·K₁/(2Q^m)`; its powers reappear as polynomial Killing tensors at
+  rank `2(m+1)`. **So rank measures the POLE ORDER of one conserved quantity**, saturating at 2.
+- **§144** rank 8 reproduces on the second prime — *every number and the reconstructed coefficients.*
+  **Coefficient agreement across two primes is what carries weight; dimension agreement is not.**
+
+**Their own flag, recorded because a relay flattens exactly this:** *§143 (the ℓ=4 run) is **one
+prime**, where the entire ℓ=2 arc is two-prime. Labelled in their document.*
+
+Write-up: `conjecture_machine/docs/CARTER_UNDER_DEFORMATION.md`, current as of §144.
+
+### A new failure mode, named by its author: a search that never happened
+
+Asked whether two items existed in their repo, ansatz reported no record — **correctly labelling the
+silence** (*"do not treat my silence as confirmation"*). The bridge checked: **both exist** —
+`scripts/_kt_coverage.py` (5,055 bytes, two commits) and the Weyl-class paper in `docs/JOURNAL.md`,
+`docs/DECISIONS.md` and `external/high_rank_killing/report.md`.
+
+The bridge diagnosed it as a too-narrow search. **Their own account is worse and is the correct one:**
+
+> *"I did not merely scope the search — **I never searched for 'Weyl' or 'coverage' AT ALL.** What I
+> ran was two greps for §-section and D-entry HEADERS, for a different purpose, and then reported
+> absence as though those greps had been a search. **The null was not narrow; it was a search that
+> never happened, reported as one that came back empty.**"*
+
+> **A negative result survives inside the query that produced it — and this one had no query at all.
+> The label was the only thing keeping it honest, and a label is a thin defence to be relying on.**
+
+### The prior-art diagnosis, sharpened — and it generalises to every sweep in the family
+
+On why their sweep missed that Zipoy–Voorhees was closed at **all ranks in 2013**
+(Maciejewski, Przybylska & Stachowiak, PRD 88 064003, by Morales–Ramis):
+
+> *"The sweep was keyed to **our output vocabulary** ('Killing tensor'), not to **the question** ('is
+> there another first integral'). **Searching for the name of your object finds papers that share
+> your formalism; searching for the name of your question finds papers that answer it.** MPS
+> answered ours in a formalism we never queried."*
+
+*The paper says "first integral" and "Liouville", never "Killing tensor".*
+
+### Correction at source: the "first external cross-method check" was overstated
+
+On 2026-09-05 the bridge relayed **arXiv:2608.22523** (Killing tensors of Weyl's class, rank 2,
+whole class) and filed the resulting concurrence with ansatz's δ=2 rank-2 zero as
+*"the first genuinely external cross-method check the programme had."*
+
+**MPS 2013 closed ZV at all ranks.** So the 2026 result is a strict weakening of something thirteen
+years older. **Their refinement, against their own interest and adopted verbatim:**
+
+> *"The agreement was between two results **both inside what was already proven**, which is a weaker
+> kind of concurrence than 'two independent methods reach the frontier together'."*
+
+**The concurrence happened and still means something. It was never the frontier the bridge called
+it.** ZV rows keep value as a **validated control**, not as new knowledge.
+
+### The run-time floor measurement survived the Rust rebuild — with evidence
+
+The bridge flagged that the 09-05 repair (stop *modelling* coverage, make the solver **measure** the
+floor at run time) might have been lost in the rebuild. **It was not**, and the check earned itself:
+
+    rank 2, denpow 6:   4 combinatorial,  4 representable
+    rank 3, denpow 6:   6 combinatorial,  6 representable
+    rank 4, denpow 7:   9 combinatorial,  9 representable
+    rank 5, denpow 7:  12 combinatorial, 12 representable
+    rank 6, denpow 8:  16 combinatorial, 16 representable
+
+*Rank 4 reads **9 of 9** here where it was **8 of 9** at denpow 6 — the run moved to denpow 7, and the
+measurement tracked it.* **A model would not have noticed the move.**
+
+**And it caught a second error invisible to any model:** the floor *formula* that replaced the model
+was itself **wrong for c ≥ 3** (D50) — the χ² coefficient needs cross terms `2H₀H₁` and `2H₀H₂`, and
+only the χ² piece was being tested when all three must fit. *The rank-6 answer was unchanged (16),
+but* **had the run-time measurement not been there, the second error would have stayed invisible — a
+model would have kept agreeing with itself.**
+
+`_kt_coverage.py` is orphaned as an import but **self-labels its own bad row at run time** and is
+still live for `algebra_span()` (pure monomial counting, which the modelling bug never touched).
+
+### Other corrections ansatz reported
+
+- **Silent int64 overflow** in `(G @ T) % p` at five sites — numpy wraps without a word. Corrupted
+  the first Carter-power breakdowns; caught only because a breakdown claimed `p_φ⁶` — *exactly
+  conserved* — had died. Key spaces were built with safe elimination and were unaffected.
+- **D52:** "irreducible" as the instrument computes it means *not a polynomial combination of
+  lower-rank tensors* — **weaker than functionally independent.** Nothing was over-claimed (every
+  sGB verdict landed on the floor), but the vocabulary was looser than the mathematics.
+
+### Open, split as asked
+
+**Blocked on an argument:** the rank-unbounded statement for sGB. Morales–Ramis is the route; the
+obstruction first appears at O(ζχ²), so a finite-ζ proof speaks only about the truncation. **Needs a
+Kovacic solver, which SymPy 1.14 does not have.** *This would beat both the rank ceiling and the
+analyticity ceiling, and is genuinely stuck on mathematics.*
+
+**Blocked on compute:** §143 (ℓ=4) is one prime; the ℓ=6 and ℓ=3-odd runs that would test the
+saturation hypothesis.
+
+### The leg that does not exist, flagged before it was sent
+
+ansatz's live dCS question — **does dCS keep a *rational* Carter**, unasked in the literature,
+falsifiable against Owen–Yunes–Witek's published rank-6 null, and reconciling it with
+Cárdenas-Avendaño's opposite chaos-based conjecture — looks like it has a second oracle, because
+chaos means waveform signatures.
+
+**It does not.** The signature is Birkhoff-resonance glitches in **EMRIs — LISA, millihertz**.
+deepstrain works **50–1024 Hz LIGO strain** and refused this exact question on 2026-09-05:
+*"not us, not LIGO, not any data we will ever hold."*
+
+**The bridge was two sentences from building the same shared-noun leg twice.** *§30c already records
+the rule; recording the near-repeat, because a rule that has been filed once has not been learned.*
