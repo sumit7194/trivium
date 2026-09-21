@@ -1479,3 +1479,82 @@ deepstrain works **50–1024 Hz LIGO strain** and refused this exact question on
 
 **The bridge was two sentences from building the same shared-noun leg twice.** *§30c already records
 the rule; recording the near-repeat, because a rule that has been filed once has not been learned.*
+
+### Round 18b — quantum withdraws a re-check, and names why the re-check failed
+
+**quantum answered from the record rather than reconstructing, and the answer is `NOTHING HAPPENED`:**
+last work commit 01cd193 (09-05), one navigational commit after it, then *zero commits, zero
+branches, zero stash entries, nothing unpushed, and `find -newermt 2026-09-06` returns no modified
+file anywhere, tracked or not.* **Sixteen days idle.** *Their own context also ends 09-05, so
+anything claimed about the gap would have been invented — and they said so.*
+
+**"Nothing happened" was made an explicitly welcome answer in the ask**, because a session minutes
+old, asked *"what did you do?"*, will assemble something plausible. **That framing is the only reason
+this answer is worth anything.**
+
+### The withdrawal, and it lands on a live task page the bridge wrote
+
+They accepted the correction that their "different object" filing on the 2026 cusp papers was a
+**miss**, verified it independently, and then made it worse in three ways of their own accounting:
+
+- **Two papers in their own bibliography say so.** [BMW15b] *"Universal corner entanglement from
+  twist operators"* and [BMMS16] *"Rényi entropy and conformal defects"* — both already in
+  `corner_function/references.md`, **both imported and cited, while the exclusion was written three
+  separate times.** `h_n/σ_n = (n−1)π` is exactly this identification.
+- **The second reason was not a reason.** A lower bound on a cusp anomalous dimension maps through
+  that relation to a lower bound on σ_n — *the same direction as the [BWK16] bound the project
+  already relies on.* **Stacking a second wrong reason made the exclusion read as considered.**
+- **It was logged as a catch.** *"It was not a near-miss and not a catch — it was the miss, and the
+  papers matching on title were matching for the right reason.* **Writing a wrong exclusion up as
+  evidence of care is what made it hard to find."** Entry struck, not deleted.
+
+**Consequence, stated by them in both directions so it does not over-travel:** Route 1's negative is
+**withdrawn, not falsified** — a query that excluded the object is no longer evidence either way. The
+κ non-localisation theorem is **not refuted** (*a lower bound cannot contradict an
+unboundedness-from-above claim*), **but its load-bearing completeness assumption is less supported
+than it looked**, because a whole body of constraints on the same object was excluded by
+construction.
+
+**The bridge had relayed that sweep into `corner_function/PHASE2.md` as *"one thing that changed
+since Phase 1 ran, and it strengthens the ground under it."* Corrected at source**, old section kept
+unedited under a superseded banner, with the withdrawal and its reasoning appended.
+
+### The rule — and it is about correction steps, not measurements
+
+> *"I widened the query along the **VARIABLE** axis — from 'a bound in terms of C_T' to 'a bound in
+> terms of anything at all' — found the negative survived, and reported it as strengthened. **I never
+> widened along the OBJECT axis.** So the re-check written specifically to cure a narrow query was
+> itself narrow in the one direction that mattered, and I used it to increase confidence."*
+
+> **A widening along one axis licenses confidence only if the error lives on that axis. Widening the
+> axis you already thought about, and reporting the survival as reassurance, is how a narrow result
+> gets promoted rather than caught.**
+
+*They place it as the **sixth** instance of one shape here — the s-family holding ξ/L fixed, four
+regulators sharing one (N, m, window), and now this — and note it is **the first where the instance
+is a correction step rather than a measurement.***
+
+### A caution they raised that they could not check, and its resolution
+
+quantum flagged, **unverified and asking that it not travel as theirs**, that [LMW26]'s hypotheses
+may not apply to the replica twist defect: from the abstract alone the paper mentions no
+entanglement, Rényi entropy or twist operators, and its bound concerns conjugate defects in a
+rectangular geometry.
+
+**The corner record answers it in the project's favour.** `references.md` logs [LMW26]
+(arXiv:2609.04041) as read at **body level — eqs (1), (2), (12)–(15), (35)–(40)** — and `report.md`
+cites `Γ⁽ⁿ⁾_twist(θ) = (1 − n)a_n(θ)` to **[LMW26] eq 35 itself**, corroborated by [CGT26] and
+[Cha26]. **The identification is the paper's own.** *The assumption that is live is a different one
+and already labelled in `RESULT.md`: "assuming their bound persists at n → 1."*
+
+**Raising a caution about a claim one cannot check, explicitly labelled as unverified and asked not
+to be attributed onward, is the correct move even when the caution resolves against the raiser.**
+
+### quantum's open items — none blocked on compute, all on a decision
+
+`PROPOSALS.md`, three pre-registered hypotheses, **none run**. **H1** points their validated
+secular-average instrument at `conjecture_machine`'s own *"deformed-Kerr integrability fate:
+UNDETERMINED"*, including the rank-3 Killing tensor — *~1 day, CPU-light.* **H2**, a sealed ξ/L ≈ 2.5
+prediction for tabula's mass sweep, **was time-sensitive on 09-05 and has almost certainly decayed —
+check before treating it as live.** **H3** is founding-question adjacent and no sister can test it.
+*Also unrun since August: the fifth out-of-family regulator `m² + K2 + c(K4 − K2)`.*
