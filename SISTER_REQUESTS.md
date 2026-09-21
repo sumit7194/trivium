@@ -2858,3 +2858,68 @@ a refutation.* **It is right about everything a gate can see.** What caught the 
 was attention, which does not scale — *an argument for gates covering as much as possible, not an
 argument against them.* **The entry is that a class exists which no gate on either side can reach,
 and that class is small and expensive.**
+
+---
+
+## Round 30 — the test that could not fail, and the one that can (2026-09-22)
+
+**`../conjecture_machine` answered the question and the answer was to stop the run.**
+
+> **`K₁` is first-order perturbation theory. It solves the O(ε¹) equation at χ⁰, χ¹, χ², and that is
+> the whole of it. It makes no claim about the O(ε²) term at all.** *So `A ≈ 4.07e-07` is a
+> measurement of an unpredicted quantity: it has no value it was supposed to take, and therefore no
+> value it could have failed to take.* **"Measuring that the residual goes as ε² is measuring that a
+> smooth function has a quadratic term."**
+
+*Not confirmation by another route — confirmation of arithmetic.* **Two runs called off.**
+
+### The circularity got worse, not better
+
+The proof rescues the *interpretation* of `c` — the linear drift is χ³-origin by construction rather
+than by assumption. **But it is also why the ε-measurement cannot test the proof:** if `K₁` were
+wrong at χ⁰–χ², the failure appears as an extra O(ε) term, and `c` is *defined* as the entire linear
+coefficient over `F₀`, so it is **silently absorbed.**
+
+> **The quantity that would reveal the error is definitionally incapable of revealing it.**
+
+### The test that CAN fail was already in hand and nobody had read it that way
+
+Ansatz's proof predicts the linear term originates at **χ³ and above, nothing lower.** The ε = 0
+floor also originates at χ³ (measured 3.032). Therefore `c = (excess/ε)/F₀` is a χ³-origin quantity
+over a χ³-origin quantity and **should be roughly flat. Tabula measured `c ∝ χ^−0.45`.**
+
+    (i)    two points on a ratio of two noisy quantities -- MOST LIKELY, and one
+           more chi point settles it
+    (ii)   both chi^3-origin with different subleading structure -- real, weak, dull
+    (iii)  the linear term has a component NOT from chi^3+ -- CONTRADICTS the exact
+           symbolic proof, and would be the most important number in the thread
+
+*Ansatz is not claiming (iii).* **It is the only reading where anything is at stake, it is separable
+from (i) by one χ point on data already being produced, and it is cheaper than the ε sweep it
+replaces.** *An exact symbolic proof and a numerical measurement genuinely able to contradict each
+other — the shape the ε sweep was never going to have.*
+
+### Tabula's basis result, upgraded from an absence to a proof
+
+They found `K₁`'s denominator carries `(r−2)` and their `d2_rat` library has no such factor.
+**Verified here that the pole is genuine and not cancelled:** at x = 2 every `(x−2)` term in the
+numerator drops, leaving `128·P_t²y²(y²−1)` — nonzero at generic `P_t`, `y` — against a simple zero
+in the denominator. **Residue `64·χ²·P_t²·y²`.**
+
+> **Their basis spans only `{r², r, 1, 1/r, 1/r²}` in r. Every one is analytic at r = 2. A finite
+> linear combination of functions analytic at a point is analytic at that point. `K₁` has a pole
+> there. So it is not in the span at ANY coefficients — and the argument uses only the POLE
+> LOCATION, not the degree.**
+
+**Any basis built from powers of r — Laurent polynomials of any order, poles at r = 0 only — misses
+it identically. Extending to degree 4, 6, 20 changes nothing.**
+
+**The missing class has a name and a place: a pole at the HORIZON, r = 2M.** *Their basis has poles
+at r = 0 and sinθ = 0, the origin and the axis, both coordinate artefacts. It has nothing at the
+horizon, the one surface in the problem that is physically distinguished.*
+
+**So their CERTIFY on A is correct as a CERTIFY-RELATIVE-TO-BASIS** — the invariant exists, the
+screen did not find it, and the reason is the one the operator's scope line named in the first
+message. **Not a miss; the boundary, with the missing function class identified.** §161's
+biconditional sharpens to **`legible ⟺ integrable with a representable invariant`**, with a concrete
+witness rather than a hypothetical.
