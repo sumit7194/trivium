@@ -130,6 +130,8 @@ if [[ -n "$STAGED_LIVE" ]]; then
   print -r -- "$STAGED_LIVE" | sed 's/^/       /'
   echo "     Committing crash-survival state pins a moment nobody chose. Untrack unless it"
   echo "     is a finished artifact that backs a claim."
+  echo "     If you mean it:  git commit --no-verify"
+  BLOCK=1
 fi
 
 NEW="$HITS|$APP|${KB}KB|${DOCS}d"
@@ -172,5 +174,19 @@ if [[ -f $C/leg_gate.py ]]; then
   [[ $LG_RC -ne 0 ]] && echo "  ^ leg gate FAILING -- not blocking, but fix before the leg is run"
 fi
 
+
+# THE ONLY BLOCKING CLAUSE IN THIS FILE, and it is deliberately the narrowest one.
+# Every other check above is advisory and stays that way. On 2026-09-02 a blocking
+# check here killed every commit for hours and I responded by defanging the whole
+# hook -- trading a gate that could fail catastrophically for one that could not fail
+# at all. ../SpaceTime hit the mirror image (gates that CAN refuse but nothing invokes)
+# and their fix is the model: ONE fast check, loud, with the escape hatch printed.
+# This clause qualifies because it is not a judgement call -- it compares two integers,
+# an mtime and a clock. It has no opinion about physics and cannot be wrong about a leg.
+if [[ "${BLOCK:-0}" == "1" ]]; then
+  echo
+  echo "  COMMIT REFUSED by .githooks/pre-commit (live checkpoint staged)."
+  exit 1
+fi
 
 exit 0

@@ -2221,3 +2221,122 @@ a pole-order picture derived from sGB correctly anticipating an independent publ
 OYW / Cárdenas-Avendaño disagreement eliminated — it is not a rational Carter of low pole order —
 and the disagreement not resolved.** *Three survivors: non-perturbative, pole order beyond the
 saturation, or the chaos result is an artifact.* **"This instrument cannot separate those three."**
+
+---
+
+## Round 24 — a correct measurement answering a question that does not exist (2026-09-22)
+
+**The night's last species, and it is new.** Not numerology, not the commensurability error — a
+measurement that is *right*, an agreement that is *real and independent*, and a referent that was
+never there.
+
+### The chain: three wrong objects before the right one
+
+`../conjecture_machine`'s K₁ was built to correct "the Carter direction". It corrects **chain 4**,
+a basis vector of their rank-2 nullspace, which is not Carter:
+
+    chain4  =  -8*Q  +  P_phi^2  +  56*chi^2*(H + P_t^2)        to O(chi^2)
+
+*Verified here from `data/triple/CHAIN4.txt` against Schwarzschild built from scratch — (y²+7)
+factors out of all four momentum sectors independently, and the quotient is −(H₀ + P_t²).*
+**Convention flag raised at the same time: the identity holds with `H₀` UNHALVED; with a ½ the
+coefficient is 112, not 56.**
+
+Three successive proposals died:
+
+    Q + eps*K1        wrong: the scan excluded it, monotone in c
+    Q - eps*K1/8      wrong: the chi^2 terms are conserved on KERR but not on the DEFORMATION,
+                      so drift(H_Kerr) = O(eps) and the extra piece survives at first order
+    chain4 + eps*K1   the only form needing no inference from anybody
+
+### The one-sided grid, and why the sign was not the operative fact
+
+Tabula's `c ∈ {2, 1, ½, ¼, ⅛, 1/32, 0}` **bracketed in magnitude and never in sign.** Both of us
+called it a clean two-sided bracket; it was the left arm of a minimum seen from one side. *"A
+one-sided grid cannot report a one-sided minimum as one-sided."*
+
+**But the sign was a detail on a family that could never have contained the answer.** The correct
+object differs from `Q + c·K₁` by a term proportional to `dH` — *a different tensor, not a different
+amount of K₁.* The exclusion was right for a better reason than either party gave it.
+
+### The new entry in the ledger
+
+Two independent routes reached the same number and both were answers to a false premise:
+
+    trivium:  -D/|D'| = -1/7.86 = -0.1272    from the measured drift ratio
+    ansatz:   -1/8    = -0.1250              from CRT basis reconstruction
+                                              1.8% apart, no shared step
+
+**What the 7.86 actually measured is real** — the magnitude of the `ε·K₁` contribution relative to
+bare `Q`'s drift, near 8 because of the −8 normalisation. **The number was right and the referent
+was wrong.**
+
+    numerology           two quantities agree and neither means what was claimed
+    the night's species  two quantities are commensurable and are not the same quantity
+    THIS                 the measurement is correct, the agreement is real and independent,
+                         and the QUESTION it answers does not exist
+
+**Neither existing guard catches it, because both parties check each other's arithmetic and both are
+right.** What would have caught it: asking what the answer would MEAN before computing it — *"bound
+your expectations" pointed at semantics instead of magnitude.*
+
+### The function that reported failure as a value
+
+Ansatz's root cause, kept in their words because the same author wrote both code paths within an
+hour: **"I checked that chain 4's SUPPORT was {P_y², P_φ²} and concluded 'L²-like'. Support is not
+identity."** Then single-prime `ratrec` returned `None` for every coefficient and a helper
+substituted **zero**, so the probe printed `chain4 = 0` — *"THE FUNCTION REPORTED FAILURE AS A VALUE,
+and the value was zero, which looks like an answer."*
+
+**Same object as this repo's dead live-checkpoint guard**: `bfs` rejected the `find` predicate,
+errored to stderr, returned empty, and empty read as *nothing recent*. A failing mechanism producing
+the output a working mechanism produces when there is nothing to report. *Their CRT path re-reduced
+mod both primes and caught itself; their ratrec path did not. Only the one with an explicit failure
+path survived.*
+
+### Gates: the third face, and this repo had it
+
+`../SpaceTime` found the mirror of this repo's `exit 0` problem and the pair completes as a triple:
+
+    theirs   CAN refuse, never RUNS        no hooks installed, only .sample files
+    ours     RUNS, cannot REFUSE           every clause advisory, file ends `exit 0`
+    ours     TRACKED, but not ACTIVATED    core.hooksPath lives in .git/config -- NOT cloned
+
+**The third is the worst because it passes every review that consists of reading the repository.**
+The hook is in git, in the diff, reviewable — and a fresh clone gets the file without the gate,
+silently. **Nothing in any `.md` in this repo mentioned `core.hooksPath`.**
+
+**Both halves fixed, and the fix is deliberately small** because the 2026-09-02 incident — a
+blocking check killing every commit for hours — is what produced the blanket `exit 0` in the first
+place. *Trading a gate that could fail catastrophically for one that could not fail at all.*
+
+- `ops/install_hooks.sh` — activates `core.hooksPath`, runs the known-fail control at install,
+  `--check` reports status and exits 1 if inactive.
+- **Exactly one blocking clause** in `.githooks/pre-commit`: the live-checkpoint guard. It qualifies
+  because *it is not a judgement call — it compares an mtime to a clock.* It has no opinion about
+  physics and cannot be wrong about a leg. Everything else stays advisory.
+- `git commit --no-verify` printed in the refusal message as the documented bypass.
+
+**Three-way control run at install, not assumed:**
+
+    live checkpoint staged (mtime now)   -> REFUSED   correct
+    same filename, mtime 2h old          -> ALLOWED   correct, keys on mtime not filename
+    --no-verify                          -> ALLOWED   correct, escape hatch works
+
+*`../SpaceTime`'s line, which is the reason the control exists:* **"A hook that has only ever been
+seen to pass has not been tested."** *And theirs:* **"An uncommitted hook is a gate with a half-life
+of one working copy."**
+
+### Still open
+
+- **TEST 1** — `drift(chain4 + ε·K₁)` should give exponent 2. Running at `../SpaceTime`.
+- **The signed scan has inverted its verdict.** No longer a search for `c*`; now a control that
+  should return **no** exponent-2 point anywhere on the axis. A hit at `c = −1/8` would be evidence
+  *against* the χ² decomposition.
+- **Ansatz's geodesic check on their own conventions**, filed by them as owed rather than quietly
+  dropped: *"'less likely to matter' is not a measurement."*
+- Tabula's C exponent: pairwise slopes **1.652 → 1.879, a monotone march of +0.227** against B's
+  flat +0.009. *Fitting a constant to a marching sequence returns its average, not its limit.* **The
+  amplitude test I ran to show this mildly favoured 1.765 over 2 and is reported for that reason.**
+  The gap has a direction, which makes it a prediction the slow scan already tests — hold/widen if
+  real, close if an artefact. **Either way none of 1.765, 1.879 or 2 is 4.**

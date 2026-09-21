@@ -56,6 +56,22 @@ respectively) — the bridge scripts import their engines read-only.
    source actually read, or an explicit `[asserted, unverified]` tag — REPRODUCED
    beats CITED. Two same-day self-corrections (2026-07-26) are why this rule exists.
 
+## After cloning: activate the hooks
+
+```bash
+./ops/install_hooks.sh
+```
+
+**This is not optional boilerplate.** `.githooks/pre-commit` is tracked and arrives with the clone,
+but `core.hooksPath` — the setting that makes git *run* it — lives in `.git/config`, which is local
+and **is not cloned**. So a fresh clone has the hook as a file and not as a gate, and nothing
+announces the difference: it is in git, in the diff, and reviewable. Run
+`./ops/install_hooks.sh --check` to find out which you have (exit 1 if inactive).
+
+The installer runs a known-fail control on activation, because *a hook that has only ever been seen
+to pass has not been tested*. Exactly one clause blocks — the live-checkpoint guard, which compares
+an mtime to a clock and has no opinion about physics. Bypass with `git commit --no-verify`.
+
 ## Bootstrapping order (historical)
 
 The program started with a single spine (ansatz's exact moduli-count vs tabula's
