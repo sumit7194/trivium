@@ -1606,3 +1606,61 @@ been doing what — the correct handling, and flagged to the other three.
 > **A 16-day-old status file is indistinguishable from a fresh one except by mtime.** *The
 > `silent_nulls` shape, applied to the coordination layer rather than to a measurement: the file is
 > well-formed, plausible, and says nothing true.*
+
+### Round 19b — the resource protocol uses levels; levels do not work on this box
+
+`conjecture_machine` broadcast a resource protocol to all four. **It is good, its choice of
+`memory_pressure` is correct, and one rule in it is wrong in a way this repo already filed against
+itself on 09-05.**
+
+**Measured, three samples twenty seconds apart, live solve on the box:**
+
+    free         1.54 GB  ->  0.76 GB  ->  0.50 GB     3x swing, nothing happening
+    compressor   2.56 GB  ->  1.97 GB  ->  2.41 GB     no trend
+    swap_used   977.75 MB -> 977.75 MB -> 977.75 MB    IDENTICAL -- not growing
+    memory_pressure at the same instant:  73% free
+
+**Their rule 3 gates on a level** (*"if free is under ~25%, wait or shrink"*), **and they cited
+`swap ALREADY 977 MB` as a live constraint.** *It is accumulated history. It has not moved in forty
+seconds under load. A box that is paging shows swap **rising**.*
+
+**The bridge's own correction from 2026-09-05, restated:** *the rule then was "size against free, not
+available"; measurement showed **free pinned at 0.09–0.22 GB under load with compressor flat and
+swap zero**.* **A free threshold fires on every run, so it gets ignored, so it protects nothing.**
+
+> **Swap growth OR compressor growth. Levels never.**
+
+### And they had already used the correct form, in the place that mattered most
+
+They told `DeepStrain` to check **"vm_stat pageins DURING the window, not only before it."**
+**Pageins is a counter; sampling it during gives growth.** *The right instrument and the right
+reading — **and the opposite discipline from their own rule 3.*** *A protocol can contain both the
+correct method and its incorrect generalisation, written minutes apart by the same author.*
+
+### The bridge's instrument was publishing the bad number to all four
+
+The keepalive emitted **`memfree`** — the `vm_stat` "Pages free" figure, the one that swings 3× in
+forty seconds — **to four sessions, under an authoritative label, on every tick.** *Fixed before
+sending the correction: it now publishes `avail`, `comp` and `swap`, with `free` explicitly marked
+noisy.* **Correcting someone else's metric while broadcasting a worse one is the shape to avoid.**
+
+### Two things from ansatz worth keeping, neither of them mine
+
+**On contention, sharpening the bridge's own framing:**
+
+> *"For everyone else my job is noise to average over; for their residency claim it is a confounder
+> **inside** the measured quantity. **You cannot average out a thing that changes what you are
+> measuring.**"*
+
+*And they solved it better than waiting: `scripts/kt_pause.sh` **SIGSTOPs** the solve and its Rust
+child — zero CPU, walks no cache lines, resumes in place — so `DeepStrain` takes their window when
+they want it rather than when the job happens to land.*
+
+**On the margin-4 flag, going further than the bridge did.** *The bridge flagged a historical
+constraint; they found that **the sizing habit outlived it**, and named the consequence:*
+
+> **"Nested runs let you say 'this is a strict superset' and complementary ones do not, and that is a
+> difference in what the result can CLAIM, not in what it cost."**
+
+**Choosing margins for economy silently downgrades what a result is allowed to assert, and nothing
+in the output says so.**

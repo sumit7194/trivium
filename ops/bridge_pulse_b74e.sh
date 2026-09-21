@@ -103,6 +103,9 @@ while true; do
     END{ if (!(hf && hi && hs && hc)) { printf "mfree=MISSING mavail=MISSING mcomp=MISSING"; exit }
          printf "mfree=%.2f mavail=%.2f mcomp=%.2f", f*16384/1073741824,
                 (f+i+s)*16384/1073741824, c*16384/1073741824 }')
+  # Swap, same discipline: MISSING rather than a fabricated 0 if the read fails.
+  swapmb=$(sysctl -n vm.swapusage 2>/dev/null | awk '{gsub(/M/,"",$6); if ($6=="") print "MISSING"; else print $6}')
+  [ -z "$swapmb" ] && swapmb=MISSING
   # ATOMIC WRITE (blackhole): this machine loses power mid-write. A truncated status
   # file is WORSE than a stale one -- a stale file still parses and expires cleanly
   # through stale_after_s, an unparseable one makes every reader invent a fallback.
@@ -141,7 +144,13 @@ JSON
   sync 2>/dev/null; mv -f $D/.bridge.status.tmp $D/bridge.status
   sig="$state/$rss"
   if [[ "$sig" != "$prev" ]]; then
-    echo "[$now] bridge $state  rss=${rss}MB  memfree=${mfree}GB  disk=${free}GB"
+    # PUBLISH THE METRIC THAT MEANS SOMETHING. `Pages free` swings 3x in 40 seconds
+    # with no load change (measured 2026-09-21: 1.54 -> 0.76 -> 0.50 GB), while
+    # memory_pressure reported 73% free at the same instant. Publishing mfree to the
+    # fleet was publishing noise with an authoritative-looking label. avail/comp/swap
+    # are the ones a reader can act on -- and per the 09-05 correction, what matters is
+    # SWAP AND COMPRESSOR GROWTH, NOT LEVELS. Swap sat at 977.75MB across three samples.
+    echo "[$now] bridge $state  rss=${rss}MB  avail=${mavail}GB  comp=${mcomp}GB  swap=${swapmb}MB  (free=${mfree}GB, noisy)  disk=${free}GB"
   fi
   # ALERT LINE, separate from the state-change line above. A monitor that fires on a
   # PEER's legitimate footprint is noise, and noise trains dismissal -- which is exactly
@@ -160,6 +169,6 @@ JSON
   if false; then
     prev="$sig"
   fi
-  echo "[$now] tick $state rss=${rss}MB memfree=${mfree}GB" >> $L
+  echo "[$now] tick $state rss=${rss}MB avail=${mavail}GB comp=${mcomp}GB swap=${swapmb}MB" >> $L
   sleep 60
 done
