@@ -1,0 +1,4 @@
+# Leg 6 -- sealed triple, bridge blind. See README.md.
+expected  = "certify"   # tabula's screen returns representability verdicts, whose null is "nothing found"
+companion = "README.md" # A/B ARE the known-fail companion: same family, differing only in the property
+                        # under test. Documented here; the objects arrive from ansatz.
