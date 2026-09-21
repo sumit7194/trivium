@@ -3004,3 +3004,47 @@ deficiency.
 
 **A different failure from the other five scope omissions: not an unstated assumption, but an unread
 feature of the artefact itself, sitting in plain text in a file all three parties opened.**
+
+### Quantifying the missing piece — and a conclusion written before its data
+
+**Partial fractions in x separate the unrepresentable component exactly:**
+
+    K1  =  64*chi^2*P_t^2*y^2/(x-2)   +   [part regular at x=2]
+
+*The regular part has poles only at x = 0 and y² = 1, which is where tabula's library lives. The
+pole piece is precisely what their basis cannot reach.*
+
+**Over their sampled region** (χ = 0.6, `x ∈ [5.107, 9.147]`, `y ∈ [−0.653, 0.604]`, bound-orbit
+momenta):
+
+    |pole / total|   median 1.6%,   range 0.1% - 2.2%
+
+> **The bridge had written *"the pole piece is a large fraction of K₁ exactly where they sample"* as
+> the conclusion of the script BEFORE running it. It is 1.6%.** *The printed conclusion contradicted
+> the printed data by a factor of thirty, and nothing caught it but reading the output.*
+
+**This is the inverse of the covering-sentence failure:** *there the headline over-claimed what the
+body supported; here the conclusion was written before the body existed.* **Both are a sentence that
+did not come from the number underneath it.** *Third time tonight the only working guard was looking
+at the thing.*
+
+#### What the number changes
+
+**The exactness argument is untouched** — a 1.6% component that cannot be represented *at all* still
+puts `K₁` outside the span, and that remains a proof. **But size matters for a screen.** A basis
+missing 1.6% could still represent the object to ~98%, and a screen with tolerance looser than that
+**should have found an approximate survivor. Theirs certified empty.**
+
+> **So either their tolerance is tighter than ~2%, or the obstruction is not the pole piece.**
+
+*A one-line fork, settleable before the `1/(r−2)` extension is interpreted:* **if the tolerance is
+≪1.6% the pole alone explains the null and the extension should cross; if ≫1.6% the pole cannot be
+the whole story and a marginal result is the expected outcome rather than a disappointment.**
+
+#### And the inclination answer was the interesting one, not the reassuring one
+
+    y^2 median 0.097, max 0.426      -> the pole IS sampled in inclination
+    1/(r-2) in [0.14, 0.32]          -> finite throughout, purely because of radius
+
+**Not "we sat where the pole cannot be seen" but "we sat where it is finite and small"** — and with
+the 1.6% figure, *small* is now a number rather than an impression.
