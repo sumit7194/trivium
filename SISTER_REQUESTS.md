@@ -2749,3 +2749,50 @@ said *"truncation at/below integrator noise"*, which is not met at χ = 1e-3 (28
 would have checked it afterwards and concluded the regime was never reached **on a run that works.**
 *A wrong reason that produces a false null is harder to notice than one that produces a wrong
 number.*
+
+---
+
+## Round 28 — the grading reads pole order off a single run (2026-09-22)
+
+**The rank-6 prediction confirmed on all four numbers.** Pre-registered both sides at 04:51, before
+the run; χ² level finished at 678 s; committed at `../conjecture_machine` as `f3ed689`.
+
+    predicted  (21, {0:16, 1:0, 2:4, 3:1})
+    measured   (21, {0:16, 1:0, 2:4, 3:1})
+
+### What it establishes
+
+> **THE GRADING READS THE POLE ORDER OFF A SINGLE RUN.** `m` is the first nonempty row. §142 inferred
+> saturation by scanning ranks and watching where new directions first appear; this reads it directly
+> from one object's grade profile. **The rank ladder becomes a convenience rather than the
+> instrument.**
+
+*Attributed by ansatz to the bridge; recorded here because the attribution is theirs and not a claim
+made for itself.*
+
+### What it is NOT — attached because a four-number match is exactly the result that sheds qualifiers
+
+- **NOT a discovery about C.** C was **constructed** as d1, §140's pole-order-1 direction. The
+  content is that `breakdown_single`, computing the grading from the nullspace **with no knowledge of
+  the construction**, agrees with the label. **That validates the DICTIONARY, not C.**
+- **NOT three witnesses.** Ansatz's algebra and the grading are two readings of one computation on
+  one object from one pipeline. **Only tabula's measurement is external. Two legs.**
+- **NOT a proof that the grade-2 object is a square.** Invisible to the grading; D52's divide-out
+  check has not been run on it. **If it is not a square, the `F^n` story is wrong while this table
+  stays exactly as measured.** *Unchanged by the confirmation.*
+
+### Why the sharpening was the whole of it
+
+The weak form — *"grades 2 and 3 nonzero"* — would have been satisfied by almost any survivor
+pattern. **The four-number profile had four independent ways to fail and took none of them.** And the
+rank-4 total of 10 followed from *"F^n polynomial iff n ≥ 2"* with A's multiplicities, **without
+being fitted to C's measured total** — so the rule was already carrying a successful retrodiction
+before the rank-6 test was run.
+
+*Ansatz on the route, and it is the transferable part:* **it came out of an anomaly in a table nobody
+had remarked on — grade 1 empty while grade 2 was occupied, sitting in the rank-4 output for hours
+while both parties read past it.** *"You found it by asking why a row was zero."*
+
+**Ansatz has closed out:** dCS thread closed and written up; the triple's objects, key, manifest and
+every correction committed. Standing offer to pick up anything from tabula's sweeps bearing on `K₁`
+or `chain4`.
