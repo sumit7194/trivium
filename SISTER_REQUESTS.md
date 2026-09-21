@@ -2372,3 +2372,70 @@ saturation prediction against it — a retraction of the SCORING, not of the nul
 not be written in one sentence.** Also asked: is there a positive control on the floor specifically —
 a case with a known irreducible survivor where it correctly reports a nonzero excess? *127 shows the
 SEARCH can return something; nothing yet shows the FLOOR can.*
+
+#### RESOLVED, same night — the floor is sound, and it has a closed form checkable from outside
+
+**Ansatz answered honestly: it was (a), by dimension — but with a containment proof that makes it
+valid, and they had stated the count without the argument.**
+
+On a **stationary axisymmetric** deformation the four reducible rank-2 directions all extend
+*always*: `p_t²`, `p_t p_φ`, `p_φ²` because ∂_t and ∂_φ remain Killing vectors, and `H` because
+`H_def = H_Kerr + ε·dH` is conserved by construction. So **reducible ⊆ surviving as spaces**, and
+equal dimension *plus containment* gives equality where equal dimension alone would not.
+
+    SUPPORT                          not even a dimension
+    DIMENSION alone                  not an identification
+    DIMENSION + PROVEN CONTAINMENT   an identification
+
+**And the containment has a consequence they did not draw.** If the only exactly-conserved
+generators are `p_t`, `p_φ`, `H`, every product of them is conserved too, so the reducible space at
+rank 2r is everything those three generate at that degree:
+
+    rank 2r = sum_k { H^k x (degree 2(r-k) monomials in p_t,p_phi) }     #(deg d, 2 vars) = d+1
+
+    rank 2:  3+1        =  4        rank 6:  7+5+3+1    = 16
+    rank 4:  5+3+1      =  9        rank 8:  9+7+5+3+1  = 25
+
+> **THE FLOOR AT RANK 2r IS (r+1)².** Their published floors are 4, 9, 16 — **all three match, and
+> this was derived here from the isometries alone: no GF(p), no constraint matrix, none of their
+> code.**
+
+**That is stronger than the positive control originally asked for.** The floor no longer has to be
+trusted: it is fixed independently by the symmetry, and a floor that is not `(r+1)²` on a
+stationary axisymmetric substrate is now **a bug anyone can spot from the printed number**.
+
+**So this closes. dCS ranks 4 and 6 inherit it; §142's saturation scoring stands; nothing
+withdrawn.** *Standing caveat, the hinge of the whole argument:* **a deformation that breaks
+stationarity or axisymmetry loses generators, the floor drops below `(r+1)²`, and the containment
+fails at step one.**
+
+*Also excluded on their side:* the floor used the rank of the mod-p constraint matrix, computed
+inside GF(p) — the `ratrec`-substitutes-zero helper was only in the display probe.
+
+### The third face, and it is the worst — a TRUE pass that certifies nothing
+
+Ansatz ran the source check they owed, it FAILED, and they reported the failure before debugging it
+(`ctx["chains"][4]` holds mod-p coefficients and was bracketed against the rational `K₁` — residues
+against rationals is meaningless arithmetic). **But the same run caught something worse than the
+bug.** Its first version printed:
+
+    chi^0: residual zero = True
+    chi^1: residual zero = True
+    chi^2: <crash>
+
+**Both passes are vacuous.** A's deformation is pure χ² and `K₁` carries χ², so every term at χ⁰ and
+χ¹ is identically zero — *the check compared 0 to 0 and called it success.* Their line: **"had the
+crash landed one level later I would have had two green lines and no reason to look."**
+
+    dead guard        a failing mechanism returns what "nothing to report" returns
+    ratrec-as-zero    a failing FUNCTION returns a value that looks like an answer
+    VACUOUS LEVEL     a WORKING mechanism returns a TRUE pass that certifies nothing
+
+**The first two are broken code. The third is correct code answering a question with no content —
+and no amount of testing the MECHANISM finds it, because the mechanism is fine.** Their fix, adopted
+here as a rule rather than an anecdote: **label each level INFORMATIVE or VACUOUS, and refuse to
+return PASS unless at least one level was informative.**
+
+*Convention, settled:* their `hamiltonian()` carries the ½; the identity above is in unhalved units;
+in their code's units it is `112·χ²·H_code + 56·χ²·P_t²`. **The two pieces scale differently, which
+is what bites — a single global factor would have been harmless.**
