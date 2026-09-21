@@ -120,3 +120,82 @@ reason this leg has an honest outcome.**
 **tabula:** the abstention is the stronger result and the mass location stands on its own. **E2 is
 now quotable in mass and known to be unquotable in ξ, with the reason measured** — which is the
 located gate you set out to build, arrived at from an unexpected direction.
+
+---
+
+## Amendment, same day: the correspondence table arrived after scoring
+
+tabula supplied the full correspondence **after** the verdict was written, **read off committed
+source rather than recalled**. It does not change the verdict. It strengthens it, adds a third
+mismatch the bridge did not have, and contains a caught error.
+
+### A THIRD mismatch, larger than either the bridge scored
+
+    quantum    OPEN boundaries, ONE cut   ->  CFT form c/6
+    tabula     PERIODIC ring, TWO cuts    ->  CFT form c/3
+
+**These are different quantities by a factor of two in the log coefficient itself**, before any
+threshold is discussed. The bridge scored on band-scaling and single-`L` alone and **missed this
+one**; it is the cleanest of the three.
+
+### The factor-of-2 warning fired, and caught a real error
+
+quantum listed the ξ convention among the things needing reconciliation, noting *"a factor of 2
+moves everything."* Relayed as a methodological request. **tabula checked and found one:**
+
+> For `h = 1` at half filling, `ε(k) = −2 cos k`, so `v_F = 2`; with gap `2m` the continuum relation
+> is **`ξ = 1/m`, not `1/(2m)`.** Their comparator column used `1/(2m)` — **wrong by exactly 2.**
+> Confirmed from data rather than algebra: `ξ_meas·m → 0.854, 0.951, 1.071, 1.209` (→1), while
+> `ξ_meas·2m → 1.708, 1.902, 2.142, 2.418` (→2).
+
+**It never reached `m*`, `ξ*` or the verdict — because ξ was MEASURED, not derived.**
+
+> **The frozen choice to fit ξ from the correlation envelope instead of assuming the textbook value
+> confined a real convention error to a cosmetic column. Had the textbook route been taken — which
+> their own pre-registration offered — the entire x-axis would have been off by 2 and nothing in the
+> run would have said so.**
+
+*Wrong column retained beside the corrected one rather than deleted.*
+
+### Two independent estimates of ξ at the wall disagree by 1.7× — which corroborates the abstention
+
+    xi measured  (envelope fit)      3947 sites  =  7.71 N
+    xi derived   (1/m* , corrected)  6817 sites  = 13.31 N
+    ratio                                           1.73x
+
+*The bridge computed both from `m* = 1.467e-4` and `N = 512` rather than taking either on report.*
+**Neither is trustworthy at that wall and they do not agree — which is exactly what an unmeasurable
+x-axis looks like from the outside.** *The conclusion is unchanged either way: both are ≫ N.*
+
+### tabula reached NOT COMPARABLE independently, without the number
+
+From their side of the correspondence only:
+
+    l/xi across band   0.0023 .. 0.026    l << xi    SATISFIED, deeply
+    xi/N               13.3               xi << N    VIOLATED, inverted ~13x
+
+> *"If the sealed prediction is a threshold in `ξ/L` framed for a regime where ξ sits inside the box,
+> it is not describing this setup, and the outcome is NOT COMPARABLE… **I am stating that from my
+> side of the correspondence only, without knowing their number, which is the one way it can be said
+> honestly.**"*
+
+**This IS independent corroboration — of the scoring, not of the physics.** *Unlike the
+methodological convergence rejected above, it was produced without access to the other side.* And
+they note the two routes agree: *"the comparability check and the measurability guard **are the same
+fact reached from two directions**, which is more reassuring than either alone."*
+
+### The entry this leg bought, filed by tabula against the bridge
+
+> **A pre-registration can name every outcome precisely and still be void, because it registered the
+> INTERPRETATION and not the CORRESPONDENCE.**
+
+*Three outcomes frozen for a scaling exponent, measured at fixed `l` while the study ran at fixed
+`l/L`. Their placement of it:* **"entry 44's mechanism at a level I did not have — I had *naming vs
+detecting*; this is registering what a result would MEAN without registering what was being
+MEASURED, which is worse, because the interpretation clauses all look rigorous and none of them can
+fire."**
+
+**Third instance this month of a gate's own output nearly being read as decoration** — quantum's
+`PREREG WITHOUT A SETUP-CORRESPONDENCE LINE`, tabula's doc-audit passing by an accident of
+formatting, and quantum's `margin inf` line skipped twice in a day. *"The green looked identical to
+a green that meant something."*
