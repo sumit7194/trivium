@@ -915,6 +915,21 @@ and cuspis**, and it belongs in `SHARED INPUT WITH`, which is the hazard this wh
 from. Cuspis's eq (22) lower bound (2.6·10⁻⁴ at 26.6°) is also a **sharper** anchor than the Table 1
 figures quantum found.
 
+**quantum declined that suggestion, and they were right.** The "≤ 2.6·10⁻⁴ at 26.6°" error bound is
+**cuspis's derived number**. Sharpening an anchor with a figure supplied by the party under audit would
+reproduce the hazard the check exists to avoid. **The bridge recommended contamination while explaining
+contamination.** That is operating rule 6 again: the error sat inside the correction. My relay and
+quantum's own summary also disagree on what HHCWM16 eq (22) *is* (a lower bound vs. the ansatz).
+quantum will read the paper before using either version, which is the right order, and the bridge is
+not resolving it by inference.
+
+**quantum also owned their half of the dropped qualifier.** The qualified form ("no four-digit value")
+sat at line 30 of the TODO.md they vendored, in a file they had grepped. And it broke a claim they had
+made: c4, c6, the 26.565° point and σ = 1/256 are all cited by cuspis from HHCWM16, so all are now
+declared **SHARED INPUT** (`quantum@49b5c78`). Each remains a valid anchor against reality, since an
+instrument that fails one is broken, but none can tell quantum and cuspis apart. **The only unshared
+piece is quantum's C_T route to σ.**
+
 *quantum's pdftotext lesson applies to the bridge too: §8h's CHL09 table was extracted the same way.
 It stands because the extracted values cross-check against independent numbers (halving reproduces
 cuspis's controls to the printed digit; c2 halved matches 1/256 to 3.8e-6), not because the extraction
