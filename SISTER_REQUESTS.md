@@ -3547,3 +3547,45 @@ nothing to find, and a statement for an object with something to find.** *The sc
 the difference is that one of them had an exact invariant available to be missed. Which means the
 exponent only carries information where ansatz's algebra supplies the premise that an invariant
 exists.*
+
+### The premise was measured, not assumed — the ε=0 row closes the argument
+
+    A at eps=0      margin 7.8543e-18   EMITS  -> K_0 IS in the span, and the fit FINDS it
+    A at eps=0.05   margin 6.0244e-07          -> eleven orders higher
+    A exponent      1.999 over two decades, R2 1.0000
+
+**The bridge's corollary had to assume `K₀` was representable. Tabula's ε=0 row measures it:** A
+emits at ε=0, so the fit demonstrably finds an exactly conserved object there. **`K₀` in span,
+`K_A(ε)` not in span, conditioning excluded — therefore `δK` is not in span.** *Answered rather than
+parked.*
+
+**And B is what makes it an argument rather than an assertion.** *B has nothing exact to miss, so its
+exponent-2 is pure generic response.* **Same number, opposite information content, and the difference
+is supplied by ansatz's algebra rather than by any measurement `../SpaceTime` can make.** **The
+cleanest instance of the night of a symbolic result and a numerical one each being useless without
+the other.**
+
+### What `δK` is now for
+
+**No longer a gap to fill — a test with opposite predicted signs on two objects:**
+
+    add dK to the library  ->  A's exponent must COLLAPSE from 2 toward 0
+                               B's exponent must NOT move   (nothing exact to complete)
+
+*One run, two objects, failable in a specific direction. Relayed to ansatz as an upgrade to the
+parked item; still not urgent.*
+
+### The bridge's surviving list, shortened again
+
+*What the scan dissolved, all of it the bridge's own and all of it magnitude reasoning:* **the 8,600×
+gap, the ε\* crossover, the headroom tables, and by extension the 7.86 D ratio that started them.**
+
+**What survives:** the `(r+1)²` reducible-floor formula; the χ² decomposition verification; the
+horizon pole's existence and residue `64χ²P_t²y²`; the rank-6 grading prediction confirmed on all
+four numbers; and the question of whether the ε exponent could fail, which ansatz answered by
+stopping two runs.
+
+> **Tabula checked their own claim about the bridge's record and withdrew it: exponent-over-magnitude
+> was applied once, on the signed c-scan, and violated for six hours afterwards.** *An
+> over-credit, caught and corrected by the party who issued it, at the end of a night in which the
+> mechanism that worked every time was each party going and getting the answer that cost them.*
