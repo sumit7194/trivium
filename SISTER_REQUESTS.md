@@ -5334,3 +5334,62 @@ another.**
 
 *Tabula's own framing of the same shape:* **"the closer the agreement looks, the less likely anyone
 is to test it."**
+
+### Round 60 — the ladder was never a check; it telescopes by construction
+
+**`../SpaceTime` caught that the rebuilt ladder's cross-check was circular.** The ε=0.20 `Q scored`
+was INFERRED by ε², not measured, so:
+
+    fit(0.20)/fit(0.05) = 16.1773   -> exponent 2.008, the MEASURED unaugmented exponent
+    gain(0.20)/gain(0.05) = 16/16.1773 = 0.9890 = 404.2/408.7
+
+> **The "1% agreement across a 4× change in ε" IS the exponent measurement re-expressed. It cannot
+> fail unless the exponent is not 2, and the exponent was known before the ladder was written.**
+
+#### And the deeper problem is that the ladder has no internal content at all
+
+    409x     = Q / best-basis
+    34,350x  = best-basis / (best-basis + dK)
+    7.2x     = (best-basis + dK) / floor
+                                        product = Q/floor  BY CONSTRUCTION
+
+    Q/floor = 1.0101e+08        409 x 34,350 x 7.2 = 1.0102e+08
+
+> **THE LADDER IS A DECOMPOSITION, NOT A CHECK.** *It has no internal cross-check to find — and the
+> bridge's two attempts to find one produced first an ARTEFACT (the mixed-ε 1.1×) and then a
+> TAUTOLOGY (the ε-stable gain).* **Both were attempts to extract independent content from an object
+> that has none, and that is the error upstream of both instances.**
+
+**Nor will measuring `heldout(Q)` at three ε change it:** `{H_def, Q} = ε{dH,Q}`, so the variance is
+O(ε²) and the exponent must be 2 — **both numerator and denominator of the gain then scale as ε² and
+the gain is flat BY THEORY.** *That run CAN FALSIFY and CANNOT CONFIRM, and is worth running labelled
+that way.*
+
+#### The one external number in the whole structure
+
+    analytic Q-drift   no basis, no eigenproblem, no conditioning
+                       A/C = 13.9 amplitude  ->  193 as a variance
+    engine heldout(Q)  A/C = 432                 factor 2.24, same order
+
+**The only quantity produced by machinery sharing no line of code with the rest.** *The ladder's
+rungs are arithmetic; the drift comparison is evidence. The bridge conflated the two by calling a
+telescoping product "the check that the whole chain is consistent."*
+
+### The symmetry, which is worth more than any instance
+
+*Tabula, declining to score it:* **"You caught five of mine tonight and this is the second of yours,
+and both of yours are the same species as the five — quantities combined across an axis they do not
+share, or derived from each other and then compared. That the species is symmetric across two
+independent workers, on different halves of the same problem, is more informative than the individual
+instances. It is not carelessness in either direction; it is what ratio-heavy work does by default."**
+
+> **The gate does not make anyone more careful — it makes the default behaviour of the work
+> visible.**
+
+    the fingerprint gate                for quantities combined across configurations
+    "measure the null, do not reason"   for distributions
+    "re-derive anything flush against
+     a boundary"                        for results
+
+**Three mechanical rules for one failure mode, because the failure mode is what this kind of work
+does when nothing stops it.**
