@@ -5286,3 +5286,51 @@ restated scope rather than one of them dying. Offered as a third statistic, not 
 
 **Every step accounted for, and the final row landing 1.1× above an independently measured floor is
 the check that the whole chain is consistent.**
+
+### Round 59 — the sixth borrowed ratio, and the first one is the bridge's
+
+**`../SpaceTime` caught it: the ladder in Round 58 combined a baseline from one ε with a ratio from
+another.**
+
+    what was written:  4.907e-10 / 230,837 = 2.126e-15  ->  "1.1x above the floor"
+                       ^ eps=0.05 baseline   ^ eps=0.20 suppression
+
+     eps      A unaug  suppression         A+dK   /floor
+    0.05   4.9073e-10        34350   1.4286e-14     7.2x
+    0.20   7.9387e-09       230837   3.4391e-14    17.3x
+
+**The ε=0.05 chain lands 7.2× above the floor, not 1.1×. Off by 6.7×.**
+
+> **A ratio carried across an axis the two quantities do not share. Sixth instance today, and the
+> first one that is the bridge's — written into a paragraph that also contained "every step
+> accounted for, nothing left over."**
+
+#### The ladder rebuilt at a single ε, and the check that was actually available
+
+    eps = 0.05                                eps = 0.20  (Q inferred by eps^2)
+      Q scored     2.0054e-07                   Q scored     3.2086e-06
+      best basis   4.9073e-10   409x            best basis   7.9387e-09   404x
+      + dK         1.4286e-14   34,350x         + dK         3.4391e-14   230,837x
+      A's floor    1.9853e-15   7.2x above      A's floor    1.9853e-15   17.3x above
+
+> **The corrector gain is ε-STABLE: 409× at 0.05 against 404× at 0.20.** *That is the consistency
+> check that should have been offered — a WITHIN-configuration ratio reproducing across ε, rather
+> than a coincidence manufactured by mixing two.* **The real version was sitting next to the fake
+> one.**
+
+#### And the artefact was more conclusive-looking than the truth
+
+**`1.1×` reads as "lands exactly on the floor" and stops further checking. The correct `7.2×` and
+`17.3×` read as "comfortably above the floor" and invite the next question.**
+
+    the 13.5-against-13.9 dissolution      a 3% agreement that was wrong
+    the "2.8x two-instrument agreement"    wrong power AND wrong object
+    the 1.1x floor coincidence             two configurations mixed
+
+> **Third time today the artefact looked more conclusive than the truth. So the operational form is
+> sharper than "check the arithmetic": WHEN A NUMBER LANDS SUSPICIOUSLY FLUSH AGAINST A BOUNDARY,
+> THAT IS WHEN TO RE-DERIVE IT — flush-against-a-boundary is what mixing two configurations produces
+> and what a real measurement rarely does.**
+
+*Tabula's own framing of the same shape:* **"the closer the agreement looks, the less likely anyone
+is to test it."**
