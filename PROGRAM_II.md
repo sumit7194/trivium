@@ -845,8 +845,11 @@ question," that is a legitimate answer and should be said.
 - **Not a reordering of the ledgers.** FALSIFICATION_LEDGER and FALSIFICATION_V2 keep their standing
   items. G3 finishes, G4 stays parked until the integrator exists, the sister rounds continue.
 - **Not a licence to relax independence.** P2 in particular routes results between all four repos.
-  Read-only stays read-only; the sister-ask pattern stays the channel; agreement stays evidence only
-  because the repos stay ignorant of each other. (**Rule 2 / L5.**)
+  Read-only stays read-only; the sister-ask pattern stays the channel; ~~agreement stays evidence only
+  because the repos stay ignorant of each other.~~ **STRUCK 2026-09-22 by A4** — the repos are *not*
+  ignorant of each other and never were; the sister-ask pattern is also **not** the only channel
+  (four sisters message each other directly, and the user relays parallel sessions). Agreement is
+  evidence where the **data** are independent. (**Rule 2 / L5, as amended by A4.**)
 
 ---
 

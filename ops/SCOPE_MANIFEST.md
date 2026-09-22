@@ -105,3 +105,28 @@ The night produced three faults that ordinary review cannot see:
 
 **All three are invisible to a reader and all three are trivial for a form to catch**, because a form
 asks a question the author would not have thought to ask. That is the entire argument.
+
+---
+
+## Field 9 — SHARED INPUT WITH *(added 2026-09-22 by [A4](../falsification/A4_independence_dag))*
+
+**Every object carries the list of other repos that supplied, or scored, or targeted it.**
+`none, checked` is the answer. A blank is not — a blank is the state that let leg Q publish
+*"two independent repos, identical verdict"* about two readings of one supplied catalog.
+
+    SHARED INPUT WITH:  <repo>: supplied the object / scored the same object /
+                        stated the target before measurement / supplied the code
+                        -- or: none, checked <how>
+
+**Three ways this field gets filled that are easy to miss:**
+
+- **The target counts, not just the object.** A known answer in a docstring contaminates a stopping
+  rule even when every line of code is your own.
+- **A shared *validation target* needs no shared code.** Two repos checking against the same published
+  values correlate their errors with nothing crossing between them.
+- **Shared method is independent for confirmations and correlated for omissions** — two parties using
+  one method agree about what that method cannot see. *(tabula, with the `1/√d_eff` vs `1/√40` instance
+  where both signs were wrong and the empirical null was 3 orders away.)*
+
+**If the field is non-empty, you may claim a CHECK. You may not claim a REPLICATION** unless the
+construct was sealed and the score was blind — G2's protocol, which is the standing fix.

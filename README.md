@@ -43,8 +43,23 @@ respectively) — the bridge scripts import their engines read-only.
    All notes, new docs, all code, all results. Nothing bridge-related is written
    into the four source repos.
 2. **The four source repos are read-only.** We import from them and read their
-   data, but never modify them. They are kept ignorant of each other so that when
-   two oracles agree, the agreement is *evidence and not an echo* (THE_BRIDGE.md §2).
+   data, but never modify them. ~~They are kept ignorant of each other so that when
+   two oracles agree, the agreement is *evidence and not an echo*.~~ **STRUCK
+   2026-09-22 by [A4](falsification/A4_independence_dag) — this was false as written
+   and had never once been measured.** `BlackHole` is a fission product of `SpaceTime`
+   (split 2026-06-13; three docs still byte-identical), four sisters message each other
+   on channels this repo cannot see, and two of CAPSTONE's five load-bearing results
+   rest on contaminating edges. **The replacement, in deepstrain's words:**
+   > **Independent *data*, entangled *methodology*.** Agreement is evidence because the
+   > **data** never touched — not because the repos never touched. Methodological
+   > cross-contamination has been *good* for this program and should continue. What must
+   > stop is counting it as independence.
+
+   **Independence is a property of inputs, not of repositories.** Two repos agreeing
+   about an object one of them supplied is one measurement. A known target contaminates
+   a stopping rule: independent implementation is not independent measurement if the
+   answer was in the docstring. The standing fix is G2's **sealed-construct / blind-score**
+   protocol — use it by name.
 3. **Any source code reused here is additive.** When adapting code we bring over,
    add comments explaining the change and **never delete the original lines** —
    old code stays alongside new, clearly marked.

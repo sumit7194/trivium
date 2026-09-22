@@ -1,0 +1,2233 @@
+[
+ {
+  "file": "BACKLOG.md",
+  "line": 133,
+  "repos": [
+   "bridge",
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **box-dim instrument \u2192 quantum's detector wall** | **leg V (new)** | cross-domain instrument transfer (leg-R shape): the bridge's GR box-counting dimension (from leg J) pointed at quantum's `fractal_boundary` QM experiment. V1 recovers the Cantor wall's exact D=log2/log3=0.6309 and the solid wall's 1.0; V2 separates cantor (D=0.631, scale-invariant slopes std 0.000) from periodic at *identical* "
+ },
+ {
+  "file": "BACKLOG.md",
+  "line": 148,
+  "repos": [
+   "ansatz",
+   "quantum",
+   "tabula"
+  ],
+  "n_nonbridge": 3,
+  "independence_language": false,
+  "text": "| **round-6 asks relayed** | SISTER_REQUESTS | tabula: discover-the-axion (five-route leg U prize) \u00b7 quantum: 6D twisted tower + blind X-b twin \u00b7 ansatz: flux atlas (seconding quantum's #1) + Jacobson machine-verification; conditional 7D-torsion ask now formally PARKED per leg W's verdict |"
+ },
+ {
+  "file": "BACKLOG.md",
+  "line": 160,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Phase-7 close (2026-07-10, late):** ansatz delivered C/D (`5d97d5b`, 99/99) \u2014 **round 6 CLOSED, 6/6 asks"
+ },
+ {
+  "file": "BACKLOG.md",
+  "line": 191,
+  "repos": [
+   "bridge",
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**deepstrain `0b33652`** \u2014 reproducibility fix in a source the bridge cites: `bank_build.py` imported"
+ },
+ {
+  "file": "CAPSTONE.md",
+  "line": 198,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "All three sisters then tested it out-of-sample and **two amended it**: deepstrain contributed species 4 (an"
+ },
+ {
+  "file": "CAPSTONE.md",
+  "line": 297,
+  "repos": [
+   "ansatz",
+   "tabula"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "relayed to that sibling's own session (this is how ansatz's \u00a777/\u00a7101/\u00a7111\u2013\u00a7113 and tabula's \u00a7127/\u00a7157 and"
+ },
+ {
+  "file": "CAPSTONE.md",
+  "line": 306,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "the physical regime *(quantum)* \u00b7 **L10** every claim carries a receipt \u00b7 **L11** a relayed claim is repeated,"
+ },
+ {
+  "file": "FALSIFICATION_LEDGER.md",
+  "line": 72,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "4. **G2** (adversarial legibility \u2014 needs an ansatz ask to construct the attack metrics)"
+ },
+ {
+  "file": "FALSIFICATION_LEDGER.md",
+  "line": 215,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### Round 8 (2026-07-23 evening) \u2014 G2 ansatz-half received & verified \u00b7 G6 CK order-2 delivered"
+ },
+ {
+  "file": "FALSIFICATION_LEDGER.md",
+  "line": 230,
+  "repos": [
+   "ansatz",
+   "quantum"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "theorem-backed (Collins\u2013d'Inverno\u2013Vickers 1990, *Class. Quantum Grav.* **7**, 2005\u20132015) \u2014 but **\"not in doubt\" was RETRACTED 2026-07-26 by [A3](falsification/A3_mechanism_audit), then SETTLED the same day by ansatz: it was a counting convention and BOTH numbers are right** \u2014 McNutt, Coley et al., [arXiv:1709.03362](https://arxiv.org/abs/1709.03362) \u00a74 works Kerr (a type-D vacuum) explicitly and f"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 22,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **L12** | **\"Is the residual real?\" is not a yes/no \u2014 it needs BOTH a numerical-floor probe (is it above noise?) AND a continuum/refinement probe (does it survive the limit?).** quantum needed three passes on the 2D \u03ba-vs-I(A:B) build: pass 1 said \"vanishing\" and would have been *lucky*; pass 2 established the residual sat five orders above the numerical floor (1.25e-6 %) and even *rose* past g~1"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 24,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "| **L11** | **A claim relayed from a sister is not corroborated \u2014 it is repeated.** L1's theorem entered our first lesson in one hop from ansatz's sealed record with no verification step, and looked like two repos agreeing when it was one asserting and one repeating. Independence only pays if the receiving repo *checks*. **Refinement contributed by ansatz (2026-07-26), and it puts the burden the r"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 25,
+  "repos": [
+   "deepstrain",
+   "quantum",
+   "tabula"
+  ],
+  "n_nonbridge": 3,
+  "independence_language": true,
+  "text": "| **L13** | **A control that cannot fail is not a control \u2014 and the check is trivial and almost never run: what is the observed distribution of the guarded quantity relative to its threshold?** *If no run comes within orders of magnitude of the gate, the gate is decoration.* **Six instances across three repos, found in one week (2026-08-16).** G3 alone produced four: run 1's drift conjunct returne"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 26,
+  "repos": [
+   "ansatz",
+   "deepstrain",
+   "tabula"
+  ],
+  "n_nonbridge": 3,
+  "independence_language": true,
+  "text": "| **L14** | **Held-out validation catches overfitting, not confounding \u2014 a nuisance constant generalises flawlessly *because* it is genuinely constant.** tabula planted a per-realization nuisance channel with **zero dynamical meaning** (a calibration-offset stand-in) and their invariant engine found it at held-out ratio **4.2e-17 \u2014 more conserved than the genuine invariant's 1.2e-16 \u2014 passing out-"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 27,
+  "repos": [
+   "bridge",
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **L15** | **Gate an instrument on the property the claim depends on. A single-setting claim needs SNR; a CROSS-PARAMETER claim needs GAIN STABILITY ALONG THE COMPARISON AXIS** \u2014 because a gain that varies across that axis *manufactures exactly the structure being hunted*. **Both halves were bought by getting this wrong twice in one night.** *First half:* the bridge's E1 gate read *\"10\u00d7 better fl"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 28,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **L8** | **Before gating on a number, state the units of both sides and confirm they are the same object.** Three instances across two repos in one week: the bridge's S3 threshold (`\u03b4_coup > 10\u00b7\u03b4_spec` \u2014 a converging-to-zero artifact measure against a converging-to-nonzero signal), tabula's \"gap \u2265 10\u00d7\" proxy, and tabula's \u03b5 units (a normalised-feature 6.1e-3 compared against state-unit ~1e-13, a"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 29,
+  "repos": [
+   "bridge",
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **L9** | **When probing definitional robustness, scan the physical regime \u2014 the interesting answer is usually a boundary, not a yes/no.** The bridge framed quantum's ask as \"agree \u21d2 robust / diverge \u21d2 artifact.\" The real answer was neither: scheme-robustness *switches on* at \u039b \u2248 2\u20134. A single-setting test would have returned whichever branch the setting happened to sit in. *Lesson contributed by"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 38,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **R1** \u2713 DONE 2026-07-24 (tabula) \u2014 **KILLED, axis named** \u00b7 ~~\"B legible with augmented basis\"~~ B stays ILLEGIBLE across polynomial/rational/**log-coordinate**/exp(quadratic-momentum); log-coord *helps* (2.6e-5\u21921.3e-5) but never emits. Sharpening: B's transcendence is in the **momenta**, so log-*coordinate* is the wrong axis \u21d2 **legible \u27fa representable in the probe's MOMENTUM basis**, not coor"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 39,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "| **R2** \u2713 DONE 2026-07-24 \u2014 **CROSS-GATE CLOSED + new obstruction O4** \u00b7 ansatz proved it (\u00a7123, 6/6); bridge **independently reimplemented** the emit criterion (own code, no import) and reproduced all four teeth (\u27f8 no false negatives; the pendulum illegible\u2192legible flip on adding a cos atom; G1/G2 catch O1/O2; scales match \u00a7123). **Found O4** \u2014 a deg-6 poly FALSELY emits (2.7e-7<\u03c4) approximating"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 45,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "| **R7** \u2713 DONE 2026-07-26 \u2014 **postulate FALSE; M6 AMENDED** \u00b7 A2's taxonomy prescribed a species-1 instrument upgrade, so it was **run as a test rather than assumed** \u2014 and the decisive gate failed. The O&E noise-calibrated cutoff **lets the O4 degree-6 false positive through by 28\u00d7** (\u03c3_min 1.07e-5 vs cutoff 2.99e-4). Mechanism: O4's signal sits **5 orders ABOVE the measured noise floor** (\u03b5=3.8"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 74,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "| **M6** \u2717 **KILLED 2026-07-26 by its own gate** \u2014 the prior-art sweep was the admission condition, and it is not passed. **Half 1** (\"emit \u27fa span\") is stated in Oellerich & Emelianenko [arXiv:2403.04889](https://arxiv.org/abs/2403.04889) as an explicit failure trichotomy, on *the same instrument* (library\u2192design matrix\u2192SVD\u2192near-null \u03c3), **with a noise-calibrated cutoff `\u03c3=\u221a(Np)\u2016\u03b5\u2016^{2/3}` (Cor. 4."
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 79,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "2. **R1** \u2014 file the drafted tabula ask (sister-side; zero bridge compute)"
+ },
+ {
+  "file": "FALSIFICATION_V2.md",
+  "line": 96,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "relay to ansatz \u00b7 sister-dependent items G6/G1/G5/K6/G4 \u00b7 G7 (standing meta-claim, fed seven times, still"
+ },
+ {
+  "file": "JOURNAL.md",
+  "line": 29,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "bridge code importing ansatz's engine read-only."
+ },
+ {
+  "file": "JOURNAL.md",
+  "line": 49,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- `gen_dataset.py` \u2014 imports ansatz's exact `photon_sphere_shadow`/`isco` READ-ONLY,"
+ },
+ {
+  "file": "JOURNAL.md",
+  "line": 189,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- `kerr_observables.py` (session 5) \u2014 imports ansatz's `kerr_delta_metric` READ-ONLY,"
+ },
+ {
+  "file": "JOURNAL.md",
+  "line": 273,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- `gen_ringdowns.py` \u2014 imports deepstrain's `rdlib` read-only, and generates three ringdown datasets (Locked Kerr, Free Kerr, and Noise Injected)."
+ },
+ {
+  "file": "JOURNAL.md",
+  "line": 1063,
+  "repos": [
+   "ansatz",
+   "tabula"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "SISTER_REQUESTS: A1, A5 marked fulfilled; B1 (ansatz GW-flux) + A10 (tabula reframe) remain."
+ },
+ {
+  "file": "JOURNAL.md",
+  "line": 1225,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "- **quantum \u2014 no to the engine, yes to the oracle.** Refused on **independence** grounds: one shared"
+ },
+ {
+  "file": "JOURNAL.md",
+  "line": 1245,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Then a sixth, and it was a relay rather than a summary.** I passed quantum's `geodesic_chaos.py`"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 23,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| 3 | **P4 folds into P3** | tabula's recommendation adopted; the emit-on-unknown-data programme is retired in favour of the certify side |"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 27,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "quantum declined the integrator partly because *bound* chaotic orbits do not need extended precision, and"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 43,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "run **identical initial conditions** at h and h/2, tabulate verdicts, and ask whether the discordance is"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 240,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> **Why the bar is not being moved** (ansatz's reasoning, adopted): the null is refuted on its own terms;"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 267,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> **untested**, and ansatz explicitly declines to assume the remaining 85% is normalisation-shaped just"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 356,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*One honest note from ansatz, labelled as what it is:* the 2024 paper's contribution is partly finding a"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 404,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> **(i) The deep-FAR ladder does not belong in P2.** My brief asked deepstrain what deformation is"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 571,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> **quantum's bounded-oscillation reading is the surviving explanation and takes the credit**: error is"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 663,
+  "repos": [
+   "ansatz",
+   "bridge",
+   "quantum"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "**Owner: ansatz (symbolic) + bridge (the discovery front-end).** Integrator: see the quantum ask below."
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 713,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> tabula's draft pre-registration asked whether odd-rank (degree-3) Killing tensors are excluded a priori by"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 725,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> would answer different questions under one name. ansatz asked them to transcribe \u00a782/\u00a785's"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 728,
+  "repos": [
+   "ansatz",
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "> *Relayed sister-to-sister directly \u2014 the first direct ansatz\u2194tabula contact, with the bridge copied rather"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 826,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **deepstrain** (`BlackHole`) | **P2** \u2014 detectability thresholds for non-Kerr signatures in real measured noise | finish L2 (running) and L4's remaining rungs | Given the deep-FAR ladder and the species-4 model-fidelity wall (crossover SNR\u2248124), *what deformation size would actually be detectable* \u2014 and is that number embarrassing or encouraging? |"
+ },
+ {
+  "file": "PROGRAM_II.md",
+  "line": 829,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**On the quantum ask specifically.** This is deliberately not a foundations question, and that is the"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 15,
+  "repos": [
+   "ansatz",
+   "bridge",
+   "quantum",
+   "tabula"
+  ],
+  "n_nonbridge": 3,
+  "independence_language": true,
+  "text": "| **A. Discover the axion** \u2014 twisted-T\u00b2 wave data \u2192 does the bottleneck find 3 latents (2 radii + twist \u03c7), the (1,\u00b11) mass split, and the SL(2,\u211d)/SO(2) latent geometry? (= quantum's direction #5 + our leg-U four-route note; two projects converged on this ask independently) | tabula | \u2705 fully | bridge joins vs leg U + ansatz \u00a7113 \u2192 **five-route leg U** |"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 20,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **F. 7D Einstein\u2013Cartan reduction check** (Pin\u010d\u00e1k G\u2082-remnant paper) | ansatz | \u26d4 **WAITS on bridge leg W** (arithmetic audit) \u2014 only relayed if W survives | leg W-b |"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 21,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| \u2014 deepstrain | \u2014 | no ask this round (honest: neither paper-of-the-week has observational purchase); standing optional A1-decisive item unchanged | \u2014 |"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 25,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Round-6 status (same day, 2026-07-10 evening):** asks A, B, E \u2014 \u2705 **FULFILLED** (tabula 158 `3c84ef2`:"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 29,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "logged the round. Ask C/D (ansatz flux atlas + Jacobson): \u2705 **FULFILLED** (2026-07-10 late, ansatz `5d97d5b`, 99/99 green) \u2014"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 39,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Ask F: confirmed PARKED** (leg W's verdict stands; relayed to ansatz \u2014 torsion does not enter the engine)."
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 44,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## Round-7 note (2026-07-21) \u2014 ansatz built Cartan\u2013Karlhede (no ask was filed; they took the recommendation)"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 64,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **A. Prior-art STOP + reframe on R2** \u2014 the emit\u27faspan theorem is already in the literature (Oellerich & Emelianenko arXiv:2403.04889 states the trichotomy on the *same* SVD-null-space instrument, with a noise-calibrated cutoff we lack; Ray 2026 arXiv:2603.20474 covers O4). **Do not spend more effort on the numerical statement.** The reframe: ansatz is the only sibling that can do the **exact sym"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 65,
+  "repos": [
+   "bridge",
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **B. Is the \u03b4 wall species-1 or species-2?** A2 classified deepstrain's no-hair \u03b4 limit as **CROSSABLE** (more SNR moves the Fisher floor) under the conservative rule \u2014 explicitly *against* the bridge's prior. Test it: inject at escalating SNR and ask whether \u03c3(\u03b4) scales as 1/SNR (**species-1, precision**) or **saturates at a nonzero floor** as SNR\u2192\u221e (**species-2, information** \u2014 a genuine in-ba"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 66,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "| **C. Does entropic time depend on the coarse-graining?** Barontini (arXiv:2509.07745, PRR 8 L022047) builds a relational \"entropic time\" whose entropy reduces to *atom number in the bright sector*. Our M2/R6 lesson says coarse-graining is a **scheme choice**. Build a bipartite time-independent-H sim (their detector-wall machinery from leg V suffices), construct entropic time under **2\u20133 legitima"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 107,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> - **A (ansatz, build the adversaries)** \u2014 \u2705 FULFILLED (\u00a7120, \u00a7121). Both metrics delivered with a clean"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 109,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> - **B (tabula, blind legibility)** \u2014 \u2705 FULFILLED. **A LEGIBLE** (exact quadratic invariant, 2.2e-19);"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 112,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> - **C (tabula, K5 drums)** \u2014 \u2705 FULFILLED. **K5 KILLED** (0.76 position-blind, 0.98 modal, tower at chance)."
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 119,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> **Next ask worth filing (tabula):** G2's corrected claim is explicitly *basis-relative*. Does a"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 129,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **B. Blind legibility on those two metrics** \u2014 emit-or-certify as in \u00a7132/\u00a7144, **without** being told KY/integrability status | tabula | \u2705 (blindness is the asset) | the frozen G2 decision table |"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 151,
+  "repos": [
+   "ansatz",
+   "tabula"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "runs the sister-ask pattern itself (3 asks \u2192 ansatz \u00a7111\u2013\u00a7113 KK proofs + trap; tabula \u00a7157 KK-mass"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 153,
+  "repos": [
+   "ansatz",
+   "deepstrain"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "No open asks this round \u2014 the sisters' autonomous output (deepstrain \u00a722/\u00a723 referee + follow-up A; ansatz"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 180,
+  "repos": [
+   "bridge",
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## \u2192 deepstrain (BlackHole): A1 (amortization \u2192 transfer) \u2014 \u2705 FULFILLED (2026-06-24): \u00a719 artifact delivered; bridge verdict in leg L (amortization does NOT predict transfer, corr\u22480). Decisive follow-up (more variants/injections, C2ST) optional."
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 210,
+  "repos": [
+   "bridge",
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## \u2192 deepstrain (BlackHole): A5 (precise multi-event no-hair) \u2014 \u2705 FULFILLED (2026-06-24): \u00a718 raw tone fits delivered; bridge result in leg B (220 cross-check across 5 events; 221 info-limited)."
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 228,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## \u2192 ansatz (conjecture_machine): B1 + FD-fix + chaos launcher \u2014 \u2705 ALL FULFILLED (2026-06-26, \u00a7101 commit b05e2b3)"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 240,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "1. **Reliable inclined-orbit flux on the strong bump** \u2014 \u2705 **FULFILLED (2026-06-26, ansatz `f4cc1b1`)**: two"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 259,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "## \u2192 deepstrain (BlackHole): echo \u0394t \u2194 Abedi \u2014 \u2705 FULFILLED (2026-06-26): \u00a718 `18_abedi_crosscheck.json` \u2192 leg 8 (`abedi_crosscheck.py`); the formula reproduces Abedi 2017 Table I to 98.5\u201399.7%, the literature anchor."
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 261,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "## \u2192 tabula (SpaceTime/curvature): ZV \u03b3-metric legibility \u2014 \u2705 FULFILLED (2026-06-26): \u00a7132 `132_zv_gamma_metric.json` \u2192 leg Q; legible\u27faKY-integrable now 7/7 (\u03c6=1.0), a 2nd independent non-integrable case."
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 286,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- *tabula ask:* run the geometrization/legibility probe on observations from each catalog metric"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 310,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **P2** \u2014 if Kerr is wrong, would we see it? (detectability of non-Kerr signatures in real measured noise) | deepstrain | P2 primary | what deformation size is actually detectable given the deep-FAR ladder + the species-4 model-fidelity wall (crossover SNR\u2248124) |"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 391,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Their closing contribution \u2014 the fix, and a confound it exposes.** deepstrain's proposal: \u03b4=1.0 is not a"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 667,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "coefficients, which is deepstrain's own unchecked premise amplified.* **A correction that inherits the"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 716,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### \u2192 quantum: a lattice number that fails a theorem  \u27f6 SENT"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 728,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### \u2192 ansatz: a sweep that reframes their nulls  \u27f6 SENT"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 740,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### \u2192 tabula: four silent-null instances, one a new species  \u27f6 SENT"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 749,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### \u2192 deepstrain: no physics transfer, said plainly  \u27f6 SENT"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 767,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### Round-14 follow-through \u2014 a relay of mine was overstated, and ansatz was right not to import it"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 769,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**ansatz verified the one claim they could check locally and refused the rest**, citing their own"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 819,
+  "repos": [
+   "quantum",
+   "tabula"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "| **Leg 4, WITHDRAWN** | quantum \u2194 tabula on the Calabrese\u2013Cardy log coefficient. Retracted at source: quantum derived the tabula half by reading tabula's files. Two of three parts dead. |"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 849,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### The fleet metric, adopted from deepstrain"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 863,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**2. \"Withdrawn on provenance\" was relayed as \"withdrawn on accuracy\".** quantum's characterisation"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 867,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "accurate description. tabula's rule, adopted:"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 943,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**tabula adopted the eleven-week figure into their permanent JOURNAL** \u2014 attaching it to a claim of"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1014,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Propagated by the bridge to tabula in round 15** as *\"the box outranking the mass\"*. Corrected at"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1034,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### Do not take the credit \u2014 deepstrain, refusing a compliment on the evidence"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1036,
+  "repos": [
+   "bridge",
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "The bridge praised deepstrain for auditing their own docs for the inherited eleven-week figure where"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1037,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "tabula had not. They refused it:"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1092,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**ansatz declined to edit their CLAUDE.md \u00a71 on the relay**, on the grounds that a correctly-labelled"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1153,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "integral.* **Rank-2 only, by the abstract's own statement.** Relayed to ansatz: ZV is static and"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1155,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "and ansatz was told to check it rather than take it.** Their ZV closure covers ranks 1\u20136 on one"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1355,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Fleet state at the ask:** `conjecture_machine` active (40 commits since 09-06, 11 uncommitted)."
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1359,
+  "repos": [
+   "ansatz",
+   "quantum"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "Asked ansatz and quantum the same four questions: what is established (with scope), what was"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1362,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "than received. *ansatz's account matched the log throughout.*"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1385,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "Asked whether two items existed in their repo, ansatz reported no record \u2014 **correctly labelling the"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1477,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "deepstrain works **50\u20131024 Hz LIGO strain** and refused this exact question on 2026-09-05:"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1502,
+  "repos": [
+   "cuspis"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "`corner_function/references.md`, **both imported and cited, while the exclusion was written three"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1518,
+  "repos": [
+   "bridge",
+   "cuspis"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**The bridge had relayed that sweep into `corner_function/PHASE2.md` as *\"one thing that changed"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1581,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**The general form, relayed to tabula because they will hit it:**"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1603,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "`tabula` noticed this independently and **deliberately declined to infer anything** about who had"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1635,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "They told `DeepStrain` to check **\"vm_stat pageins DURING the window, not only before it.\"**"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 1812,
+  "repos": [
+   "quantum",
+   "tabula"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "+3155 then +234), then **corrected quantum and tabula**, who had inherited the bad rule. *tabula"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 2195,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### And a credit ansatz redirected"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 2346,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Raised with `../conjecture_machine` at 05:0x, not resolved.** Asked about C first, then grepped"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 2683,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**The bridge relayed this to ansatz under the headline \"K\u2081 WORKS\" in capitals, with the bounded"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 2711,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*And tabula declined to fit the excess's \u03c7-scaling although the bridge had asked for it, on the"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 2735,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "making the request, and did not notice.** Tabula declined the request *on the strength of that"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 2961,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Tabula fitted a slope to two points and quoted it as a scaling \u2014 on the night they told the bridge"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3178,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*Tabula withdrew three things tonight \u2014 the 845\u00d7, the two-point `c` power law, and the \u00a7161 witness \u2014"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3233,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*And tabula's refusal to re-label the CERTIFY stands:* **carrying an unlabelled correct verdict beats"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3371,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "A's exact rank-2 Killing tensor \u2014 ansatz's machinery, not asked for, not urgent.*"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3447,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "tabula's amendment to it withdrawn); **the rank-6 grading prediction** (21, {0:16, 1:0, 2:4, 3:1}),"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3500,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*Tabula credited the bridge with pushing exponent-over-magnitude from the first message.* **Declined"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3575,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*One run, two objects, failable in a specific direction. Relayed to ansatz as an upgrade to the"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3588,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> **Tabula checked their own claim about the bridge's record and withdrew it: exponent-over-magnitude"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3655,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**`../SpaceTime` is running the premise row first \u2014 A at \u03b5 = 0, at \u03c7 = 0.075 \u2014 and will not ask for"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3678,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "both pass                  ask ansatz for dK; there is a signal to collapse"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3682,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*Three over-credits were offered tonight and none survived.* **Two were tabula's to the bridge and"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3683,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "they withdrew both themselves; one was ansatz's and they withdrew it before the bridge finished"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3720,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**Two of the three were tabula's to the bridge and they withdrew both themselves; the third was"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3721,
+  "repos": [
+   "ansatz",
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "ansatz's and they withdrew it before the bridge finished declining.** *Tabula's addition, which is"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3749,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "### And `../SpaceTime` asked whether MY heartbeat had a path equivalent to their TTL bug"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 3947,
+  "repos": [
+   "bridge",
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*Tabula corrected the bridge's credit for the exponent anti-correlation, against their own interest:*"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 4009,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*Tabula checked the A\u2083 arithmetic rather than taking it, withdrew, and pushed. Their own diagnosis is"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 4823,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**At O(\u03c7\u00b2), for this deformation, that is false \u2014 they differ by a scalar.** *Tabula inherited it and"
+ },
+ {
+  "file": "SISTER_REQUESTS.md",
+  "line": 5113,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**And the dissolution ansatz relayed at the time \u2014 \"C's deformation is ~13.5\u00d7 smaller in coefficient"
+ },
+ {
+  "file": "THE_BRIDGE.md",
+  "line": 59,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- **deepstrain** *tests* it on reality \u2014 ringdown QNM spectroscopy asks whether tone #1 and tone #2 imply a *consistent* (M, spin); \u03b4 is the measured deviation; GW250114 came back Kerr-consistent."
+ },
+ {
+  "file": "THE_BRIDGE.md",
+  "line": 107,
+  "repos": [
+   "ansatz",
+   "deepstrain",
+   "tabula"
+  ],
+  "n_nonbridge": 3,
+  "independence_language": false,
+  "text": "- **The strong-field frontier.** All three care about the same region \u2014 the light ring at r=3M. ansatz computes it *exactly*; tabula learns it *imperfectly* (the shadow-edge / QNM-frequency error); deepstrain *measures* it (ringdown frequencies are sourced from exactly there). Two new questions only the triangle can ask: (a) is tabula's strong-field weakness in the regime real ringdowns actually c"
+ },
+ {
+  "file": "THE_BRIDGE.md",
+  "line": 129,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "- **Overclaiming novelty.** The physics under all of this is mature: no-hair, QNM spectroscopy, shadows, echoes, the equivalence principle \u2014 all textbook or established-active. The contribution is **methods + the unusual end-to-end ownership + cross-validation**, framed honestly. deepstrain's no-hair result is a fine independent re-analysis, not a new physics claim; LVK does the frontier version."
+ },
+ {
+  "file": "falsification/A3_mechanism_audit/FINDINGS.md",
+  "line": 54,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "It **originated in ansatz's sealed record** and we propagated it verbatim. Not one instance carries a"
+ },
+ {
+  "file": "falsification/A3_mechanism_audit/FINDINGS.md",
+  "line": 83,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "rather than *relays*. Round 8 imported ansatz's justification into our ledger's first lesson in one hop, with"
+ },
+ {
+  "file": "falsification/G2_adversarial_legibility/FINDINGS.md",
+  "line": 92,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "`tabula_package/` (the blind package as sent)."
+ },
+ {
+  "file": "falsification/G2_adversarial_legibility/PREREGISTRATION.md",
+  "line": 34,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## The two adversarial candidates (what ansatz is asked to build)"
+ },
+ {
+  "file": "falsification/G2_adversarial_legibility/PREREGISTRATION.md",
+  "line": 93,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## ADDENDUM (2026-07-23, evening) \u2014 ansatz's half received, verified, and sealed; the \"KY-integrable\" reading fixed"
+ },
+ {
+  "file": "falsification/G2_adversarial_legibility/SISTER_ASKS.md",
+  "line": 79,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> purpose. **All 8 entries were found, not designed**; we have asked ansatz to *design* two metrics specifically"
+ },
+ {
+  "file": "falsification/G2_adversarial_legibility/SISTER_ASKS.md",
+  "line": 82,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> **B \u2014 the G2 blind run.** ansatz is building two adversarial metrics. When they arrive (the bridge will relay"
+ },
+ {
+  "file": "falsification/G2_adversarial_legibility/SISTER_ASKS.md",
+  "line": 120,
+  "repos": [
+   "ansatz",
+   "tabula"
+  ],
+  "n_nonbridge": 2,
+  "independence_language": false,
+  "text": "1. Seal ansatz's symbolic verdicts; relay **metrics only** to tabula."
+ },
+ {
+  "file": "falsification/G2_adversarial_legibility/UNBLIND_B.md",
+  "line": 112,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- **Credit where due:** tabula named the axis (momentum, not coordinate) from the blind side, before this"
+ },
+ {
+  "file": "falsification/G3_chaos_boundary/FINDINGS.md",
+  "line": 328,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "on an effect known to be real.** *(Sequencing contributed by quantum.)*"
+ },
+ {
+  "file": "falsification/G3_chaos_boundary/FINDINGS.md",
+  "line": 352,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "quantum asked why the improvement was 1.4\u00d7 rather than the zero the mechanism predicts.)*"
+ },
+ {
+  "file": "falsification/G3_chaos_boundary/FINDINGS.md",
+  "line": 412,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*(Fractal-basin correction and the fraction statistic contributed by quantum, relayed 2026-08-16;"
+ },
+ {
+  "file": "falsification/G3_chaos_boundary/FINDINGS.md",
+  "line": 448,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- Bridge-solo; imports ansatz read-only (`_zv_invariant`, `poincare`); ansatz unmodified. Analysis in this"
+ },
+ {
+  "file": "falsification/G3_chaos_boundary/PREDICTIONS_ROUND12.md",
+  "line": 19,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## \u2460 quantum's prediction (relayed via the repo-context session)"
+ },
+ {
+  "file": "falsification/G3_chaos_boundary/PREREGISTRATION.md",
+  "line": 31,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "ZV metric from ansatz's `_zv_invariant.metric(delta)` (read-only import; `sigma = 1/delta` fixes M = 1),"
+ },
+ {
+  "file": "falsification/G3_chaos_boundary/PREREGISTRATION.md",
+  "line": 70,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "Lukes-Gerakopoulos PRD **86**, 044013 *[reference relayed from ansatz's \u00a7106 header \u2014_"
+ },
+ {
+  "file": "falsification/G3_chaos_boundary/PREREGISTRATION.md",
+  "line": 83,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- Bridge-solo; imports ansatz read-only; no sister dependency."
+ },
+ {
+  "file": "falsification/K5_drum_learnability/FINDINGS.md",
+  "line": 9,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> regenerable in principle; none has been regenerated. K5 is unique only in having no code either.)* The separations 0.76 and 0.98 are **tabula's**, relayed"
+ },
+ {
+  "file": "falsification/K5_drum_learnability/FINDINGS.md",
+  "line": 83,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**nothing in this repository can produce them**, and if tabula's numbers move or are withdrawn, this file"
+ },
+ {
+  "file": "falsification/M6_prior_art_gate/FINDINGS.md",
+  "line": 112,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "Received the same day (tabula \u00a7164, commit `f9a8205`), and it sharpens the kill rather than softening it."
+ },
+ {
+  "file": "falsification/M6_prior_art_gate/FINDINGS.md",
+  "line": 153,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "3. **A misattribution to correct, in their favour.** tabula credited us with a *\"probe with `p_x > 0`\"*"
+ },
+ {
+  "file": "falsification/MUTATION_TEST.md",
+  "line": 131,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "quantum's general form, adopted: **a ratio may only be trusted where its denominator is pinned** \u2014 and"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/FAMILY_TEST.md",
+  "line": 34,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "s=6 gave **23.4%**; quantum has 21.6 / 41.5 / 27.5% at s=1,2,3. **Those are ratios whose denominator is"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/FAMILY_TEST.md",
+  "line": 138,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> **quantum's directional call for s=4, given as a sign and not a value** because a two-point slope has"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/FINDINGS.md",
+  "line": 27,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "> **The k=0 mode contributes ~15% of B here** (20% in quantum's study). All four regulators weight it"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/FINDINGS.md",
+  "line": 73,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "quantum's sharpening, and it is stronger than my own account: **this quantity is deterministic.** Given the"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/FINDINGS.md",
+  "line": 156,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**And it is not my numerical floor.** Per quantum's ask, the corner spread was recomputed with the"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/FINDINGS.md",
+  "line": 177,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## 7. s=5 \u2014 quantum's coefficient prediction confirmed, and my own precision claim withdrawn"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/FINDINGS.md",
+  "line": 327,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**quantum's mechanism is live.** The contribution genuinely shrinks under refinement, and does so ~2.3\u00d7"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/PEAK_MEASUREMENT.md",
+  "line": 354,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**quantum asked what a tooth is.** The grid has exactly two large *l* per pass and each regulator runs two"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/PEAK_MEASUREMENT.md",
+  "line": 392,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "agreement is much tighter than quantum's 22\u201341%, sending the fraction when all four land\"** carries the"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/S6_DELETION.md",
+  "line": 77,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "numbers to quantum **in the sentence saying I was not sending them.** They computed 5.5% within a minute"
+ },
+ {
+  "file": "falsification/Q2_corner_kappa/S6_DELETION.md",
+  "line": 128,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**~~ASSUMPTION~~ RESOLVED FROM THEIR SOURCE.** *Asked rather than assumed, and quantum answered from the"
+ },
+ {
+  "file": "falsification/R2_emit_theorem/FINDINGS.md",
+  "line": 17,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "any fixed floor. To be relayed to ansatz."
+ },
+ {
+  "file": "falsification/R2_emit_theorem/FINDINGS.md",
+  "line": 78,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- O4 is offered to ansatz as a scope note, not asserted as a defect \u2014 \u00a7123's theorem is correct *given* its"
+ },
+ {
+  "file": "falsification/R2_emit_theorem/FINDINGS.md",
+  "line": 83,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "ansatz \u00a7123 `scripts/123_emit_theorem.py` (the theorem, verified read-only, not imported) \u00b7 `code/emit_reproduce.py`"
+ },
+ {
+  "file": "falsification/R2_emit_theorem/PREREGISTRATION.md",
+  "line": 15,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "literature). The theorem is ansatz's \u00a7123; the bridge's contribution is an **independent reproduction** of"
+ },
+ {
+  "file": "falsification/R8_regime_scan/FINDINGS.md",
+  "line": 4,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "Tier R. **This applies [L9](../../FALSIFICATION_V2.md) \u2014 quantum's lesson, adopted the same afternoon \u2014 to"
+ },
+ {
+  "file": "falsification/R8_regime_scan/FINDINGS.md",
+  "line": 80,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "[A2](../A2_wall_audit/FINDINGS.md)'s species-3 caveat. Applies L9, contributed by quantum in Round-11."
+ },
+ {
+  "file": "falsification/R8_regime_scan/PREREGISTRATION.md",
+  "line": 4,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "[L9](../../FALSIFICATION_V2.md) \u2014 quantum's lesson, adopted the same day \u2014 to our own banked result.***"
+ },
+ {
+  "file": "falsification/R9_fit_ladder/FINDINGS.md",
+  "line": 43,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "R9c pre-registered a **condition-number** gate (>10\u00b9\u2070 \u21d2 unreliable), borrowed from tabula's catch that"
+ },
+ {
+  "file": "falsification/S3_drum_compactification/PREREGISTRATION.md",
+  "line": 82,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- **Inherits K2's corrected build**, including the bug that tabula caught (equal grid offsets disconnected"
+ },
+ {
+  "file": "falsification/T2_negative_control/FINDINGS.md",
+  "line": 24,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "Independent substrate (H\u00e9non\u2013Heiles near E=1/6), independent implementation. That is what tabula asked for."
+ },
+ {
+  "file": "falsification/T2_negative_control/FINDINGS.md",
+  "line": 77,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "a contradiction \u2014 but the directional protection I offered was wrong and tabula should not have been given"
+ },
+ {
+  "file": "falsification/T2_negative_control/FINDINGS.md",
+  "line": 94,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "I reported the movement figures (1.12\u00d7, 1.36\u00d7) as independently corroborating tabula's 12%. **Withdrawn.**"
+ },
+ {
+  "file": "falsification/T2_negative_control/PREREGISTRATION.md",
+  "line": 21,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "tabula asked for the null alone. **This runs the same substrate BOTH ways**, which their setup cannot do:"
+ },
+ {
+  "file": "leg1_moduli_count/FINDINGS.md",
+  "line": 91,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "Kerr is reachable in a later leg via new bridge code importing ansatz's engine."
+ },
+ {
+  "file": "leg1_moduli_count/FINDINGS.md",
+  "line": 100,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- `code/gen_dataset.py` \u2014 ansatz observables \u2192 `.npz` (imports ansatz read-only)."
+ },
+ {
+  "file": "leg1_moduli_count/PREREGISTRATION.md",
+  "line": 28,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "bridge code* that imports ansatz's engine read-only (not by editing ansatz)."
+ },
+ {
+  "file": "leg1_moduli_count/PREREGISTRATION.md",
+  "line": 114,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "never imports ansatz, never sees the metric or `(M,Q,P)`."
+ },
+ {
+  "file": "leg1_moduli_count/PREREGISTRATION.md",
+  "line": 184,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- `code/` \u2014 additive bridge code: an ansatz-observable generator (imports"
+ },
+ {
+  "file": "leg1b_kerr/FINDINGS.md",
+  "line": 104,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- `code/kerr_observables.py` \u2014 imports ansatz's `kerr_delta_metric` READ-ONLY; derives"
+ },
+ {
+  "file": "leg2_domain_gap/PREREGISTRATION.md",
+  "line": 13,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "THE_BRIDGE.md \u00a74B asks: *is deepstrain's learned ringdown code **amortized**"
+ },
+ {
+  "file": "leg2_domain_gap/PREREGISTRATION.md",
+  "line": 132,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "labelled batches, write `(code, labels)` `.npz`. Imports deepstrain `sbilib/rdlib`"
+ },
+ {
+  "file": "legA_symmetry_discovery/FINDINGS.md",
+  "line": 41,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "Tabula was never given the spin `a`, the charge `Q`, the cosmological constant `\u039b`, or the"
+ },
+ {
+  "file": "legA_symmetry_discovery/PREREGISTRATION.md",
+  "line": 34,
+  "repos": [
+   "ansatz",
+   "bridge"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "committed `code/` (additive bridge code that imports ansatz's tensor engine read-only)."
+ },
+ {
+  "file": "legJ_integrability_frontier/FINDINGS.md",
+  "line": 291,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "We relayed the FD-noise finding and the bound-chaos gap to ansatz; both came back resolved (ansatz \u00a7101 +"
+ },
+ {
+  "file": "legJ_integrability_frontier/FINDINGS.md",
+  "line": 361,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "anywhere.\" Exhibiting MN's own thin layer needs those exact moderate-q ICs (relayed to ansatz). The detector"
+ },
+ {
+  "file": "legJ_integrability_frontier/FINDINGS.md",
+  "line": 406,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## Update (2026-07-02) \u2014 the detector flows UPSTREAM: ansatz adopts it natively (\u00a7105) and closes ZV with it (\u00a7106)"
+ },
+ {
+  "file": "legL_amortization/FINDINGS.md",
+  "line": 5,
+  "repos": [
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "ringdown \u2014 where leg 2 had only the information-limited tone-count. Imports deepstrain's `sbilib` + trained"
+ },
+ {
+  "file": "legL_amortization/PREREGISTRATION.md",
+  "line": 24,
+  "repos": [
+   "bridge",
+   "deepstrain"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "deepstrain repo read-only (import sbilib + load the trained posterior; never modify). Bridge code only."
+ },
+ {
+  "file": "legM_emri_resonance/FINDINGS.md",
+  "line": 90,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "(|dE/d\u03c4| inflated, `dQ/d\u03c4` sign-flipping). Relaying the exact failing case triggered two ansatz fixes:"
+ },
+ {
+  "file": "legQ_geometrizes_integrability/FINDINGS.md",
+  "line": 74,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "tabula learns a geometry from observed geodesics and asks whether a distillation head can emit a verified"
+ },
+ {
+  "file": "legT_mercury_anomaly/PREREGISTRATION.md",
+  "line": 28,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "Measurement floor: tabula's total is off the known total by |568.4 \u2212 575.0| = 6.6 \u2033/cy (~1.1%) \u2014 adopt"
+ },
+ {
+  "file": "legU_kk6_tower/PREREGISTRATION.md",
+  "line": 5,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "two-hidden-loop (T\u00b2) projection simulator and asks two things ansatz has just **proven symbolically** but"
+ },
+ {
+  "file": "legV_fractal_boundary/FINDINGS.md",
+  "line": 7,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "experiment**. Quantum sent a double-slit interference pattern onto a wall with three absorbing masks along"
+ },
+ {
+  "file": "legV_fractal_boundary/PREREGISTRATION.md",
+  "line": 13,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**reimplements** the wave sim in its own code; it does not import or modify quantum's files).*"
+ },
+ {
+  "file": "legV_fractal_boundary/PREREGISTRATION.md",
+  "line": 64,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "does **not** import quantum's module (which would execute and write into the source repo)."
+ },
+ {
+  "file": "legW_remnant_audit/FINDINGS.md",
+  "line": 50,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- **Conditional round-6 Ask 3 (ansatz, 7D Einstein\u2013Cartan reduction check): now unlocked but demoted in"
+ },
+ {
+  "file": "legW_remnant_audit/PREREGISTRATION.md",
+  "line": 52,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**conditional ansatz ask (round-6 Ask 3)** gated on this leg's outcome."
+ },
+ {
+  "file": "legX_entropic_hinge/FINDINGS.md",
+  "line": 50,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "- **quantum's blind twin is in flight** (round-6 Ask 2, relayed 2026-07-10): an independent implementation"
+ },
+ {
+  "file": "legX_entropic_hinge/FINDINGS.md",
+  "line": 61,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- Interpreter borrowed read-only from ansatz's venv (mpmath 1.3.0), precedented in leg J."
+ },
+ {
+  "file": "legX_entropic_hinge/FINDINGS.md",
+  "line": 95,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "ansatz machine-verified Jacobson 1995 (round-6 Ask D; `scripts/115_jacobson.py`, commit `5d97d5b`, 99/99"
+ },
+ {
+  "file": "legX_entropic_hinge/FINDINGS.md",
+  "line": 105,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| **ASSUMED** | S = A/4 (\u03b7 = 1/4G input; the constants chain \u03ba-cancellation \u2192 c = 8\u03c0G verified given it) | ansatz \u00a7115 (J2) + Dorau\u2013Much's own statement |"
+ },
+ {
+  "file": "legX_entropic_hinge/PREREGISTRATION.md",
+  "line": 56,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "- Cross-implementation: quantum's blind twin (round-6 Ask 2) gates later; this leg stands alone."
+ },
+ {
+  "file": "legY_ck_adjudication/FINDINGS.md",
+  "line": 119,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "ansatz asked that their verdict not be rounded up, and it won't be. The three non-integrable classes are"
+ },
+ {
+  "file": "legs/leg3_cross_instrument/README.md",
+  "line": 15,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "knows it \u2014 in one sentence. **Both instruments received a version of it.** tabula caught it and"
+ },
+ {
+  "file": "legs/leg3_cross_instrument/README.md",
+  "line": 18,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## The rule this bought \u2014 tabula's, adopted fleet-wide"
+ },
+ {
+  "file": "legs/leg3_cross_instrument/README.md",
+  "line": 119,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "sentence verbatim to a recipient who had not received it. tabula caught it before the same"
+ },
+ {
+  "file": "legs/leg3_cross_instrument/README.md",
+  "line": 155,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| tabula | `ps` forms, cwd scan, known-fail controls, roadmap-vs-stored-results | **applications of conclusions already reached** \u2014 violated a `pkill` rule an hour after relaying it, wrote a self-matching wait-loop having just catalogued self-matching, shipped a heartbeat blind in the way they had written the entry for |"
+ },
+ {
+  "file": "legs/leg3_cross_instrument/README.md",
+  "line": 158,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "| quantum | the \u03be/L bracket from their own runs | a characterisation of another repo's method, withdrawn unprompted |"
+ },
+ {
+  "file": "legs/leg6_triple/README.md",
+  "line": 76,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "and low degree.\"* **tabula will be told that much at relay time, as class and not content:** *\"this"
+ },
+ {
+  "file": "legs/leg6_triple/README.md",
+  "line": 157,
+  "repos": [
+   "ansatz"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "given ansatz its read of the result** \u2014 *framing the outcome before the key is opened would shape how"
+ },
+ {
+  "file": "legs/leg7_xistar/README.md",
+  "line": 50,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "*quantum asked for exactly this outcome in advance:* **\"I would rather this die on a convention"
+ },
+ {
+  "file": "legs/leg7_xistar/README.md",
+  "line": 55,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "**tabula's instrument declined to produce the quantity.** `\u03be` is fitted from the correlation envelope"
+ },
+ {
+  "file": "legs/leg7_xistar/README.md",
+  "line": 82,
+  "repos": [
+   "cuspis"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "was relayed on 09-05 and sits in `corner_function/PHASE2.md`. **The NUMERICAL blinding held"
+ },
+ {
+  "file": "legs/leg7_xistar/README.md",
+  "line": 144,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "moves everything.\"* Relayed as a methodological request. **tabula checked and found one:**"
+ },
+ {
+  "file": "legs/leg7_xistar/README.md",
+  "line": 205,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": true,
+  "text": "## The mechanism that makes the echo-check necessary \u2014 tabula, endorsing the refusal"
+ },
+ {
+  "file": "legs/leg7_xistar/README.md",
+  "line": 249,
+  "repos": [
+   "quantum"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "they ever received was later withdrawn on provenance grounds. They declined to read quantum's repo"
+ },
+ {
+  "file": "legs/leg7_xistar/README.md",
+  "line": 296,
+  "repos": [
+   "tabula"
+  ],
+  "n_nonbridge": 1,
+  "independence_language": false,
+  "text": "## The rule worked where its author was not looking \u2014 tabula, flattening their own credit"
+ }
+]

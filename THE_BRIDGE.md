@@ -13,6 +13,8 @@
 
 This is a **map, not a script.** Do not execute it top-to-bottom. Pick the spine (§3), build the smallest honest version, let results redirect. Most of what's below is optional menu.
 
+> **⚠️ CORRECTED 2026-09-22 by [A4](falsification/A4_independence_dag).** The sentence below was restated three times across this repo and **measured zero times**. It is false as written: `BlackHole` was split out of `SpaceTime` on 2026-06-13 and three files are byte-identical today. What survives is narrower and is the version worth defending — **the independence is in the DATA, not in the repositories.** Read A4's §7 before relying on any agreement claim in this document.
+
 The whole document rests on one fact you must protect: **these three projects were built with independent roots on purpose** — no project's assumptions were allowed to leak into another, so that when two of them agree, the agreement is *evidence* and not an echo. This session is where they finally meet. Read §2 before doing anything; meeting them carelessly throws away the thing that makes meeting them worth it.
 
 ---

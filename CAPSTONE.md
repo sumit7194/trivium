@@ -147,7 +147,7 @@ claim, and it belongs here on merit: the replacement is sharper than what it rep
    did its job twice: it surfaced the systematic, then it accounted for it.
 
 4. **The KK ladder, 5D → 6D → curved (legs S + U + S2).** The KK mass tower `m_n=n/R` established across **four repos by
-   four failure-mode-disjoint routes** (symbolic proof / direct numerics / independent FDTD / neural
+   four ~~failure-mode-disjoint~~ **[A4: at least one NON-BLIND — tabula's scripts 157/158 state the bridge's target in the docstring before measuring, and the match was counted as replication. Independent code, known target: a measurement whose stopping rule knew the answer]** routes** (symbolic proof / direct numerics / independent FDTD / neural
    discovery, leg S) — then extended to **6D** where the bridge's own T² simulator reproduces the
    sum-of-two-squares tower and shows the **twist χ is a measurable axion**, splitting the degeneracy exactly
    per the SL(2,ℝ)/SO(2) coset metric (leg U) — then shown to be a **method, not a flat-space artifact**:

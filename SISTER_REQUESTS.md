@@ -487,7 +487,7 @@ not transfer. That correction stands. Precision is also near the wrong tool for 
 > certify nothing."* The one meaningful per-step invariant, **H**, **is** already monitored via the A1
 > guard at `DH_MAX = 1e-4`.
 
-**Refusal, with a structural reason that should have been anticipated:** *"one build, three frontiers"*
+**Refusal, with a structural reason that should have been anticipated** — **[A4 2026-09-22: the quotation marks below are the BRIDGE'S PARAPHRASE, not quantum's words. quantum searched all 95 commits and found 0 hits for "three frontiers", "G4", "single point of failure" and "independence commitment". Read this paragraph as the bridge's rendering of a verdict relayed by the user, and do not cite it as quantum's.]** — the bridge's rendering: *"one build, three frontiers"*
 makes G4, P2's dynamics and P3 all depend on one piece of code — **a correlated single point of failure**,
 in direct tension with §4's independence commitment, and the exact inverse of the leg-S pattern.
 **What they would own: the oracle** — Schwarzschild/Kerr reference orbits with closed-form answers
