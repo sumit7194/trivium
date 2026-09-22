@@ -4793,3 +4793,68 @@ factor is the readable statistic and it is five orders clear of the sham.*
 > sham turned what was left into a finding. I would not have run any of them — the pair check I
 > thought was a formality, the censoring I had asserted from one point, and without the sham I would
 > have written up 'both collapsed, cannot tell' and been wrong about why."**
+
+### Round 52 — one summand is identically zero, and the K₁ ≠ δK claim is withdrawn on both sides
+
+    A's deformation of the inverse metric:  chi^0 none   chi^1 none   chi^2 nonzero
+    its Hamiltonian contribution:           dH[0] ZERO   dH[1] ZERO   dH[2] 115 ops
+
+**`56χ²·dH` truncated to O(χ²) keeps only `χ²·dH[0]`, and `dH[0] = 0`. The whole term vanishes** —
+confirmed here by order-counting alone: `dH` starts at χ², so `56χ²·dH` starts at χ⁴.
+
+> **To O(χ²), `δK = −K₁/8`. A basis spans scalar multiples, so as SPAN COLUMNS they are the same
+> object.**
+
+**The bridge's `dH`-absorption mechanism is REFUTED** — *not because `dH` fails to absorb the
+deformation, but because at this order `δK` does not contain `dH` at all.* **And by the bridge's own
+pre-registration: `K₁` carries it, therefore the non-discrimination is a real puzzle rather than an
+artefact of construction.** *The split test is answered analytically: `A+K₁` must reproduce `A+δK`
+exactly, and `A+dH` is an empty column.*
+
+#### An inherited claim, repeated by both parties, uncaught longest because it was load-bearing
+
+*From ansatz's recipe commit, quoted by tabula in their pre-registration and by the bridge when
+proposing the split:*
+
+    K1  corrects  chain4    chi^2-TRUNCATED
+    dK  corrects  CARTER    exact in chi
+    "Different objects. K1's representability says nothing about dK's."
+
+**At O(χ²), for this deformation, that is false — they differ by a scalar.** *Tabula inherited it and
+used it as the reason the span test was worth running; the bridge inherited it and used it as the
+reason the split test was worth running.* **Neither checked the orders.**
+
+> **Entry 51 on both sides of one relay — and the claim that went uncaught longest today, because it
+> was load-bearing for a test both parties wanted to run.**
+
+#### Drift vs span: the cleanest illustration of `within=True`, found by accident
+
+**The drift control had `Q + εK₁` at 0.11× (worse) and `Q + εδK` at 623.7×.** *A drift test adds the
+object with coefficient exactly ε, so it is normalisation-sensitive and was measuring that `−1/8` is
+the right coefficient while `+1` is not. A span test is scale-invariant.*
+
+> **The same two objects are distinguishable by the drift test and identical to the span test, and
+> both results are correct.**
+
+#### What is left, and it is free
+
+**`K₁` is determined by A's deformation, suppresses B by 187,115×, and the sham — same shape — does
+nothing. So `K₁`'s specific CONTENT helps B.**
+
+*Write `A = Kerr + ε(D_common + D_A)` and `B = Kerr + ε(D_common + D_B)`.* **If `D_A`, `D_B` are
+small against `D_common`, the CARTER property lives in the small differing part while the MARGIN and
+the O(ε) violation are both dominated by `D_common` — so `K₁` works for B and no span test can
+separate them.**
+
+> **A design-level finding with an irony in it: the triple was built to ISOLATE the Carter property,
+> which makes A and B maximally similar apart from it — and that same similarity is exactly what
+> makes them indistinguishable to the screen. A good contrast pair for the ALGEBRAIC question is a
+> bad contrast pair for the SCREEN question.**
+
+**Test: compare A's and B's deformations component by component, symbolically. `‖D_A − D_B‖` against
+`‖D_A‖`. No runs.**
+
+*And what is NOT evidence, flagged before either party reaches for it:* **the unaugmented margins
+agree to 3.4%, so amplitudes agree to ~1.7% — consistent with similarity and not establishing it,
+since two ORTHOGONAL deformations of equal amplitude give equal margins.** *Exactly the kind of
+near-coincidence this family has spent the day withdrawing.*
