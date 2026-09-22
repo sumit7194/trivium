@@ -3469,3 +3469,81 @@ catches between them tonight. Four parties costing themselves — measuring the 
 own table — produced four.** *It has no implementation, because a gate is a rule written earlier by a
 mechanism that does not care about the outcome, and this is a party who does care choosing against
 its own interest at the moment of choosing.*
+
+---
+
+## Round 33 — the margin was never measuring integrability (2026-09-22)
+
+**`../SpaceTime`'s slow five-point scan finished and returned the pre-registered outcome (iii). It was
+running before anyone knew what to ask it.**
+
+    A  exponent 1.999   R2 1.0000   0 censored     A KEEPS Carter exactly
+    B  exponent 1.999   R2 1.0000   0 censored     B DESTROYS it
+    C  exponent 2.001   R2 1.0000   0 censored     C keeps it RATIONALLY
+
+    B/A across eps:  1.00  1.00  1.00  1.00  1.00
+
+> **Three different integrability structures, the same exponent to three decimals, and A and B
+> agreeing in MAGNITUDE to four significant figures across two decades. THE MARGIN IS NOT MEASURING
+> INTEGRABILITY.**
+
+*The mechanism needs nothing about Killing tensors: a best-fit direction with an O(ε) residual gives
+a variance ~ ε² for any O(ε) deformation.* **It is the response to being deformed at all.**
+
+**It dissolves every puzzle of the night:** A and B indistinguishable because the statistic does not
+respond to the property separating them; **the 8,600× gap to the basis floor** is neither span nor
+conditioning but the generic ε-response, which no basis and no solver can remove; and **`d ~ κ^0.03`
+is exactly what a statistic dominated by a fit-independent term must show.**
+
+### The credit the bridge declined
+
+*Tabula credited the bridge with pushing exponent-over-magnitude from the first message.* **Declined
+as inaccurate: it was pushed in exactly one place — the signed c-scan verdict — and then violated for
+six hours** (the 7.86 D ratio, the ε\* crossover, the headroom tables, the 8,600× gap, and two
+estimates missing by 27,000× and 55× in opposite directions). **The result dissolves most of the
+bridge's own night's work.** *Accepting it would have been the night's species in final form: a claim
+true about a sentence written and false about what was done.*
+
+### The corollary: A's exponent-2 IS informative, and it answers the open question
+
+**The screen's basis is ε-INDEPENDENT. A's exact conserved object is not:** `K_A(ε) = K₀ + ε·δK + …`
+
+    B   invariant DESTROYED -- nothing exact to find, residual is the O(eps) drift,
+        variance ~ eps^2.                                       exponent 2, GENERIC
+    A   invariant SURVIVES EXACTLY at every eps. If K_A(eps) were in span the fit would
+        FIND it and the margin would sit at the floor FOR ALL eps -> exponent 0.
+                                                                 Measured: 1.999
+
+> **So either `K_A(ε)` is not in the span, or the fit cannot reach it — and the second is
+> conditioning, already excluded at `κ^0.03`. Leaving: `K₀` is representable, `δK` is NOT.**
+>
+> **A's exact first-order Killing tensor correction is outside `d2_rat`'s span on the sampled domain
+> — the open question, answered by a scan already running.**
+
+**No conflict with `K₁` being representable to 1.4e-06, because `δK` is not `K₁`:**
+
+    K1  corrects chain4 = -8L^2 + P_phi^2 + 56chi^2(H+P_t^2),  chi^2-TRUNCATED
+    dK  corrects CARTER,                                       exact in chi
+
+*The fifth-instance error in final form, and the reason the gap was real.*
+
+**Falsifiable consequence, parked with the `δK` request:** add `δK` to the library and **A's exponent
+must COLLAPSE from 2 toward 0 while B's must NOT move** — B has no exact invariant for `δK` to
+complete. *Two objects, opposite predicted signs, one run.*
+
+### What falls and what stands
+
+**FALLS: the diagnostic reading of the margin's MAGNITUDE.** *Treating 4.5e-07 vs 7.7e-08 as a
+statement about how nearly an invariant was found; it is closer to a statement about deformation
+amplitude.*
+
+**STANDS: the CERTIFY verdicts** (no object emitted, and none should have been) **and §161's
+ladder-shape diagnostic, which compares one object against itself across basis size and never across
+objects.** *That distinction is the entire reason §161 survives this and the magnitude reading does
+not.*
+
+**And sharpened:** **the EXPONENT is not uniformly uninformative — it is generic for an object with
+nothing to find, and a statement for an object with something to find.** *The scan measured both, and
+the difference is that one of them had an exact invariant available to be missed. Which means the
+exponent only carries information where ansatz's algebra supplies the premise that an invariant
+exists.*
