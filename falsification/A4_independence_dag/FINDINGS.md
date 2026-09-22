@@ -398,6 +398,36 @@ moves log₁₀BF by −0.454. **Not the decorrelation doing the work, the prior
 paper's are compatible, and theirs names which half is load-bearing. It exists because an outside
 reviewer was wrong in an interesting way.
 
+## 8b. Methods integrity of A4's own numbers, audited after a near-miss
+
+tabula's `5` for the ringdown files was wrong because they had piped the search through `head -5` and
+then **reported the length of the list they got back**. Their diagnosis is better than the
+correction:
+
+> *"`head` is a **DISPLAY limit**: it leaves no marker, produces a well-formed list, and a well-formed
+> list of five things answers 'how many' with total confidence. The person most likely to misread a
+> display limit as a count is **whoever applied it**, because they have already forgotten it."*
+
+Entry 57's shape — *a mechanism that did nothing looks identical to one that ran and found nothing* —
+relocated into a shell history. **Their rule: if a number will be quoted, produce it with something
+that counts, not something that displays.**
+
+**It was a near-miss on this repo and the audit was lucky.** A4's `7` came from
+`grep -ril ... | head -10`. Seven is under ten, so nothing truncated — **had the true answer been
+twelve, this document would say ten and nothing would have marked it.** Re-run without any limit:
+`7` files, `0` `.py` hits. Confirmed, and confirmed for the wrong reason the first time.
+
+**A4's quoted numbers, audited:**
+
+| number | provenance | safe? |
+|---|---|---|
+| 217 candidates · 52 multi-repo · 19 independence-language | `census.py`, `len()` over the full list | ✅ counted |
+| 7 ringdown files · 0 `.py` hits | re-run with `wc -l`, no limit | ✅ now counted |
+| 3 byte-identical docs | `md5` on each, exhaustive | ✅ |
+| **19 refused / declared-null edges** | **hand-tallied from four prose messages** | ⚠️ **not machine-counted; treat as ±1** |
+
+*(The two 19s are unrelated quantities that coincide; do not read one as corroborating the other.)*
+
 ## 9. Honest scope
 
 - An audit of our own record. It prices the evidence everything else here is quoted in; it is not
