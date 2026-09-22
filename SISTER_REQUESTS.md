@@ -3727,3 +3727,64 @@ clean.**
 > arguing that the gate is the artefact and the writing is not. Tonight the gates caught nothing and
 > two parties checking each other caught everything — and I would rather have that in the file than
 > the result."*
+
+---
+
+## Round 35 — δK premise passed, and three faults in my own heartbeat (2026-09-22)
+
+### Both premise rows PASSED, and the pre-registered exponent held
+
+    row 1  chi=0.075, eps=0 margin 8.2238e-15 EMITS vs 4.9073e-10 at eps=0.05 -- 60,000x headroom
+           (honest number alongside: that floor is ~300x worse than chi=0.6's 2.8517e-17,
+            so the separation is 60,000x here against 2e9 there. K_0 in span at both.)
+    row 2  eps 0.05/0.0158/0.005 -> 4.9073e-10 / 5.1566e-11 / 5.5446e-12
+           fitted exponent 1.947, pairwise 1.956 / 1.938
+
+**Against the bridge's pre-registration at `32d9de0`: 2.00 ± 0.05. Inside it.** *So there is a 2 to
+collapse and the `δK` test is live — with tabula running it under three of their own
+pre-registrations (a two-χ truncation discriminator, a known-fail control banked on `Q + εK₁`'s
+0.11x, and a reading rule that makes a numerically-negligible bridge map register as VACUOUS rather
+than as a verdict).*
+
+### And `../SpaceTime` asked whether MY heartbeat had a path equivalent to their TTL bug
+
+**It did not have theirs — it has no TTL at all. It had three others, all found by going to look.**
+
+**① `prev` was never updated.** Lines 169–171 read `if false; then prev="$sig"; fi`, so the
+state-change test `[[ "$sig" != "$prev" ]]` compared against a permanently empty string and **the
+line this file documents as firing "ONLY on a state change worth waking the session for" fired on
+EVERY tick — about 1040 times in the 17h run where it was found.**
+
+*Introduced in `2fd10b4`, a commit about retargeting ALERT lines whose message never mentions it.*
+**Same species as this repo's `exit 0` hook: the FORM of a conditional and the FORCE of an
+unconditional** — and undetectable, because an always-true guard and a working guard produce
+identical output whenever the condition holds, which for a state-change test on a mostly-idle box is
+almost always.
+
+    isolated reproduction, 6 ticks with 2 real changes:   as shipped 6 emits, fixed 3
+    verified live over 190s:   heartbeat ticks 3 (always on), state lines 0 (was 3)
+
+**② The stop script reported success before the process was dead.** `kill` returning 0 means *the
+signal was delivered*, not that the process exited — the loop sits in `sleep 60` and zsh runs the
+TERM trap only after the child returns. **Measured: 25 s, then 20 s, then 50 s from signal to exit.
+For that whole window the script printed "stopped" while the writer was still writing** — *precisely
+the two-writers state its own comment says it exists to prevent.* **The check nobody writes, because
+`kill` succeeding feels like the process dying.** *Now waits up to 90 s and reports the confirmed
+exit time.*
+
+**③ The exit log double-counted every death.** `trap ... EXIT TERM INT HUP` with a handler calling
+`exit`: SIGTERM fires the trap, `exit` fires the EXIT trap again, **two lines with the same
+timestamp.** *An instrument whose job is to record deaths recorded each death twice, and the
+duplicate is indistinguishable from two real exits a second apart.* **Made idempotent; control run:
+1 line per stop, was 2.**
+
+### And tabula's own-goal alongside, filed by them
+
+*Asked whether their heartbeat was up, they grepped `ps` for "keepalive", found a 17-hour-old
+process and reported it as theirs.* **It was BlackHole's.** *Identity by string rather than by
+ownership — their entry 46 in its most embarrassing form:* **a monitor-liveness check that matches
+any monitor on the machine returns success whenever anyone at all is monitoring.**
+
+*The bridge checked its own by PID and by `lsof` cwd for exactly this reason, and the listing showed
+three pulse processes in three different repos — the 17-hour one being BlackHole's, at
+`/Users/sumit/Github/BlackHole`.*

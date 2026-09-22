@@ -21,7 +21,13 @@ echo $$ > $PIDFILE
 # EXIT INSTRUMENTATION. This loop has now died three times and I had no idea why,
 # because I detached it with stderr to /dev/null -- discarding exactly the evidence
 # needed to diagnose it. Log the exit and the signal.
-trap 'echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] EXIT trap: last rc=$? " >> "$L.exit"; exit' EXIT TERM INT HUP
+# IDEMPOTENT. SIGTERM fires this trap, the trap calls `exit`, and `exit` fires the EXIT
+# trap again -- so every signalled stop wrote TWO lines with the same timestamp. Verified
+# in the log at 2026-09-22T08:26:14Z. An instrument whose job is to record deaths that
+# records each death twice will double any stability count taken from it, and the
+# duplicate is indistinguishable from two real exits a second apart.
+_EXITED=0
+trap '[[ $_EXITED == 1 ]] || { _EXITED=1; echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] EXIT trap: last rc=$? " >> "$L.exit"; }; exit' EXIT TERM INT HUP
 prev=""
 DECL_AT=$(date +%s)          # when DETAIL was last SET BY A HUMAN DECISION, not by the loop
 while true; do
@@ -166,9 +172,20 @@ JSON
   if (( free < 5 )); then
     echo "[$now] ALERT disk-low ${free}GB"
   fi
-  if false; then
-    prev="$sig"
-  fi
+  # prev MUST be updated here or the state-change test above can never be false.
+  # This assignment sat inside `if false; then ... fi` from 2fd10b4 until 2026-09-22 --
+  # an undocumented side effect of a commit about retargeting ALERT lines, whose message
+  # never mentions it. The consequence: `[[ "$sig" != "$prev" ]]` compared against a
+  # permanently-empty prev, so the line documented at the top of this file as firing
+  # "ONLY on a state change worth waking the session for" fired on EVERY tick -- about
+  # 1040 times in the 17h run where it was found.
+  # Same species as this repo's `exit 0` pre-commit hook: the FORM of a conditional and
+  # the FORCE of an unconditional. Nothing detects it, because an always-true guard and
+  # a working guard produce identical output whenever the condition happens to hold, and
+  # for a state-change test on a mostly-idle box that is almost always.
+  # Found by ../SpaceTime asking whether MY heartbeat had a path equivalent to the TTL
+  # bug in theirs. It did not have theirs; it had this one.
+  prev="$sig"
   echo "[$now] tick $state rss=${rss}MB avail=${mavail}GB comp=${mcomp}GB swap=${swapmb}MB" >> $L
   sleep 60
 done
