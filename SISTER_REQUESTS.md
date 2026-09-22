@@ -4437,3 +4437,68 @@ would have shipped something that refuses every comparison and passes its own su
 
 > **A test whose only observed outcome is the one it was built to produce has not been tested.**
 > *Three times, in three different places, in one night.*
+
+### Round 47 — the bridge's pre-registration failed on both halves, and the gate made its first catch
+
+    A-alone floor (borrowed)   8.2238e-15
+    A+dK   floor (its own)     1.9853e-15     4.14x LOWER
+
+    predicted A+dK margin      1.2606e-15
+      vs borrowed floor        0.153x   headroom 6.52x   <- what was quoted all night
+      vs ITS OWN floor         0.635x   headroom 1.57x   <- correct
+    room in f: 1.25x, not the 2.55x reported
+
+**Standing correction to every headroom figure given tonight: 6.5× and 2.55× were computed against a
+floor belonging to a different basis. The real numbers are 1.57× and 1.25×.**
+
+#### The pre-registration, scored
+
+    predicted  A+dK floor within ~2x of 8.2238e-15     measured 4.14x lower      FAILED
+    predicted  CLEAN collapse (needs floor > 3.78e-15) measured 1.9853e-15       FAILED
+               -- landing in the MARGINAL band the bridge had defined itself
+
+**Where the reasoning broke:** the bridge argued the floor could not be span-limited **"because
+A-alone EMITS at ε=0."**
+
+> **The emit threshold is 1e-10. The floor is 8.2e-15. Emitting at 1e-10 says nothing about whether
+> the representation is exact at 1e-15 — five orders of magnitude of slack between the criterion used
+> and the conclusion drawn from it.**
+
+**A COARSE CRITERION LICENSING A FINE CONCLUSION.** *The span-limited alternative was named in the
+same message and then argued away with a test too blunt to see it — not excluded, merely checked
+against the wrong thing.*
+
+**And the 4.14× is informative rather than generic:** *one extra column in a ~39-column fit reduces
+residual variance by a fraction of a percent, not 4.1×.* **`δK` is capturing real structure the base
+basis was missing at ε=0.**
+
+    DOES NOT break the exponent-2 argument -- "K_0 in span" only needs to hold at the EMIT
+    threshold, and 8.2e-15 is five orders below it.
+    DOES change what "the floor" IS -- a FIT-QUALITY floor, not a precision floor. So
+    "pinned at the floor" is a statement about the BASIS, and the floor moves again for
+    any arm whose basis differs. Instance 1 all the way down.
+
+#### The verdict's power, and why B carries it
+
+*Tabula:* **"A collapse verdict that survives by 1.57× on a quantity whose predicted value rests on a
+two-point fit is not a strong verdict even if it lands."** *`f` would need to be 25% larger for there
+to be no collapse, and 25% is inside what a truncated recipe can be wrong by.* **To be reported as
+"consistent with collapse at 1.6×", not as a clean pass.**
+
+> **B is not merely the cleaner discriminator — it is the only one whose answer does not depend on a
+> floor at all.** *An exponent holding at ~2 versus collapsing is a shape comparison WITHIN each arm:
+> no cross-arm normalisation, no absolute threshold.* **Everything that has gone wrong in the last
+> three hours has gone wrong in a denominator. B's verdict has no denominator.**
+
+#### THE GATE MADE THE FIRST INSTRUMENT CATCH OF THE NIGHT
+
+    Mismatch: cannot compare 'A-alone margin(eps=.05)' with 'A+dK floor':
+    declared axis ['eps'], but configurations differ on ['basis'] -> 'base' vs 'base+dK'
+
+**It refused the comparison before returning an answer — stopped at the point of use rather than
+after a peer read it.**
+
+    caught by a PERSON reading someone else's work     5
+    caught by an INSTRUMENT at the moment of the error 1
+
+> **And the instrument has existed for two hours while the documents have existed for months.**
