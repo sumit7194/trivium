@@ -3908,3 +3908,56 @@ to prevent the fault it prevented.**
 
 > **A near-miss that depends on an unchosen property is not a control, and writing it up as one
 > converts luck into false confidence exactly where the next instance will land.**
+
+### Round 38 — the free consistency check passes, and its interpretation points the wrong way
+
+    0.075   bare Q   4.8231e-05   exponent 1.000      vs chi=0.6's 2.8715e-03  ->  ratio 59.5
+
+**`../SpaceTime` read the 7% shortfall from 64 as "the direction a positive A₃ admixture would put
+it", making the model's assumption measured rather than assumed. Checked here: it is the opposite
+direction.**
+
+With `drift = A₂χ² + A₃χ³`, a positive A₃ contributes relatively more at the LARGER χ and therefore
+**raises** the ratio:
+
+       A3/A2    predicted ratio
+      -0.133          59.50   <- what the measurement actually needs
+      +0.000          64.00   <- pure chi^2
+      +0.021          64.71   <- what their improvement anchor implies
+
+> **Measured 59.5 is BELOW 64. Their improvement anchor's `A₃/A₂ = +0.02126` predicts 64.71. Solving
+> for 59.5 needs `A₃/A₂ = −0.133` — negative, and ~6× larger in magnitude. The two routes to the same
+> coefficient disagree in SIGN.**
+
+    SURVIVES        bare Q is A2-DOMINATED. 59.5 against 64 is a 7% deviation from pure chi^2,
+                    which is what a subleading term of EITHER sign looks like -- and that is
+                    the assumption the whole 1/chi argument rests on. The row does check the
+                    thing it was meant to check.
+    DOES NOT        the attribution of the 7% to a POSITIVE A3, and with it "measured rather
+                    than assumed".
+
+**Likely resolution, and it is why neither route measures A₃ cleanly: a two-term model is inadequate
+at χ=0.6, where χ⁴ = 0.1296 is not small.** *Same shape as the chain4 floor's 3.13 that resolved to
+3.032 — a two-point fit across a wide range returns a blend, not a coefficient.*
+
+**The `a·χ + b` split survives intact, because it does not require knowing A₃ — it FITS it.**
+
+### The sharpest formulation of why this family's agreements are usually worth less than they look
+
+*Tabula corrected the bridge's credit for the exponent anti-correlation, against their own interest:*
+
+> **"I did not notice it and reason from it. I saw 1.039 and 0.984 while reading the improvement
+> column you had told me to read, and it registered only BECAUSE your message had just said the
+> exponent was not diagnostic. A measurement that only becomes visible after someone tells you what
+> to look at is not an independent check of what they told you."**
+
+**The general case of the independent-roots rule, applied not to repos but to a single observation
+inside one message.** *The bridge had banked it as confirmation; it is illustration. Corrected.*
+
+### And who should write up a near-miss
+
+*Tabula's third clause on the two luck-instances:* **both were written up by the person the fault
+nearly caught — the party least able to tell a control from a coincidence, because from inside both
+feel like the system working.**
+
+> **Which means the catalogue entry should be written by the other party, and neither of ours was.**
