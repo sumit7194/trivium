@@ -5514,3 +5514,46 @@ five-mismatch known-fail suite and the per-axis numbers in its docstring, both t
 *The line that separates this from a story about it, theirs:* **"A gate carrying a false premise is
 worse than no gate, because it is trusted."** *The concept is fixed in the code, not recorded beside
 it — the only form that survives both parties forgetting the conversation.*
+
+---
+
+## Round 61 — the sGB spin-truncation item, closed on the real objects (2026-09-22)
+
+**Provenance, checked rather than recalled:** relayed by the bridge in Round 14 (`89c4d51`,
+**2026-09-04**) — deepstrain's date is right. Closed by deepstrain today, measured on the **actual
+sGB objects** rather than the Kerr proxy the relay had carried. Commits verified to exist:
+`BlackHole@cadfed9`, `BlackHole@7fd4c55`. *All numbers below are deepstrain's; the bridge re-ran
+none of them.*
+
+**① Background metric** (script 38) — METRICS' 40-order supplement (arXiv:2406.11986, per deepstrain's own files),
+parsed behind five gates including a published Yunes–Stein coefficient reproduced exactly. O(a²)
+truncation at a = 0.69: metric functions 1–6% at 3M and 6M, **degrading toward the hole** — H4 goes
+6% at 1.5 r₊ → 17% at 2.2M → **88% at r₊**. Horizon quantities: κ⁽¹⁾ 22.6%, **Ω⁽¹⁾ 84.6%**.
+*Exploratory:* both horizon corrections diverge ~1/√(1−a²) at extremality. ansatz has adopted the
+near-horizon version into their §1 caveat, labelled *"relayed, not verified here"* — correctly.
+
+**② The QNM correction itself** (script 39) — Pierini & Gualtieri's published O(a²) series against
+METRICS' tabulated non-perturbative ω⁽¹⁾, **no fitting**. O(a²) error at a = 0.69: 022 polar 12.4%
+*(not blind — hand-evaluated while scoping)*, **033 polar 15.4% (blind)**, **021 polar 9.8% (blind)**.
+Kerr's own figure is 6.36%, so **the sGB correction truncates ~2× worse than the frequency it
+corrects.** Blind prediction 5–20%: held.
+
+**③ Three errata in METRICS, each with its own verification status:**
+
+| erratum | verified by |
+|---|---|
+| reprint of PG flips the sign of the linear imaginary coefficient (−0.05664 vs PG's own +0.05664) | deepstrain, against PG's Table V; caught by their small-spin golden test failing first on 033P |
+| "fitting polynomials truncated at a⁴" are degree-8 least-squares coefficients, not Taylor — miss the paper's own table by **383%** at a = 0.2 (022P) | deepstrain only — **not independently checked** |
+| Kerr Ω⁽⁰⁾ printed as a/(2Mb), off by (1+b)/b | deepstrain **and** ansatz, independently, against the textbook value |
+
+*The second is the same species as deepstrain's own "31 polyfit bug" — a fit reported as a series.*
+
+**Scope, stated so this is not quoted as something it is not.** Polar modes only. **This measures
+truncation MAGNITUDE, not pole STRUCTURE.** It does **not** answer the outside reviewer's question of
+whether a same-sign competing singularity biases the sGB spin series — "2× worse than Kerr" is
+consistent with a nearby singularity and does not diagnose one. That question stays open.
+
+**Why it matters for the record:** anyone about to quote Kerr's 6%/19% as the sGB number was about to
+be wrong by ~2×. And ③ is the **first item today that points outward** — errata in a published paper,
+one of them confirmed by two repos independently. Whether to contact the authors is the user's call,
+not the fleet's.
