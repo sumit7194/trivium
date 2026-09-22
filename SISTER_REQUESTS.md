@@ -4935,3 +4935,65 @@ and the direct comparison is what settled it.**
 
 **Every other correction today arrived after the claim had travelled. That is the difference between
 a flag and a withdrawal, and it happened once in about sixty exchanges.**
+
+### Round 54 — the identity check failed, and it bounds the instrument better than the seed scatter
+
+**`δK = −K₁/8` and span columns are scale-invariant, so `A+δK` and `A+K₁` must be identical. They are
+not:**
+
+    A + dK   1.4286e-14  1.6678e-14  3.4391e-14   exponent 0.634
+    A + K1   1.8949e-14  3.5865e-14  7.5913e-14   exponent 1.001
+
+*Diagnosed rather than filed. First suspect — an ABSOLUTE regulariser `sd = flat.std(0) + 1e-9`
+breaking scale invariance for a small column — excluded by measurement: the column stds are
+`3.9651e-03` and `3.1721e-02`, ratio exactly 8.0, both seven orders above the regulariser.*
+
+    columns retained          dK 40       K1 40            identical
+    smallest gen. eigenvalue  -1.16e-15   +2.17e-15        both numerically ZERO
+    next eigenvalues          7.40561e-06 / 7.41004e-06    agree to 6e-6
+    heldout 2nd..5th smallest 1.97507e-02 / 1.97351e-02    agree to ~1e-3
+    heldout MINIMUM           1.4286e-14 / 1.8949e-14      differ by 1.326x
+
+> **EVERYTHING TRANSFERS EXCEPT THE SINGLE STATISTIC THE EXPERIMENT READS.** *Its generalized
+> eigenvalue straddles zero, so the conserved direction belongs to a numerically-null eigenvalue —
+> and a minimum over near-degenerate directions is the least stable functional available.* **The
+> pipeline is exactly scale-invariant everywhere except in the quantity being reported.**
+
+**The span statistic is reproducible to ~1.33× under an exact algebraic rescaling** — *and this is a
+better instrument bound than the seed scatter, because it is measured under an IDENTITY: there is no
+physics difference at all to confound it. Seed scatter conflates instrument with ensemble; this
+isolates the instrument.*
+
+#### Which makes the A/B result unreadable twice over
+
+**The measured A-vs-B suppression ratio is 1.23, BELOW the 1.33× reproducibility bound.**
+
+    once   by the pair's 0.03% separation -- 48x below dK's own residual
+    once   by the instrument's reproducibility under an identity
+
+*Two independent reasons, neither needing the seed scatter that had been quoted.* **The identity
+bound is the better one to lead with, because it requires no physics argument: the instrument cannot
+distinguish a thing from itself at 1.23×.**
+
+#### Pre-registered for A-vs-C, before the run
+
+*In a span test the scale is free, so `best-scale 3.5732` drops out and only the SHAPE residual
+matters.*
+
+    C's orthogonal-to-A component  0.1157   ->  residual fraction 1.339e-02
+    PREDICTED  C + dK suppression  ~75x
+    MEASURED   A + dK suppression   230,837x
+    PREDICTED  ratio               ~3090x      -- 2300x above the 1.33x bound
+
+**And A's number is a measurement, not a ceiling:** at ε=0.2, `A+δK` sits `17.1×` above its own floor
+against a dynamic-range ceiling of `3.95e+06×` — *uncensored, with 17× to spare.*
+
+**CAVEAT: the 11.57% is measured in DEFORMATION space; what matters is the angle in VIOLATION space,
+and that map need not preserve angles.** *So 75× is an order of magnitude, not a number.* **The
+prediction commits to: C + δK's suppression is 2–4 ORDERS below A + δK's.** *Near 230,000× means δK
+is generic and the sham needs re-examining; tens-to-hundreds means δK is specific and the instrument
+works. 75 versus 200 does not discriminate.*
+
+*And running `A+δK` inside the same job as A-vs-C is the fingerprint discipline applied BEFORE the
+fact rather than as a gate:* **the gate catches a mismatch; designing the job so no mismatch is
+possible is strictly better, and it is the first time today that has happened by construction.**
