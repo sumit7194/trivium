@@ -4378,3 +4378,62 @@ stopping the rest — a distinction no convention document can express.*
 *And the case for C's row is stronger than when it was made:* **two measurements of one quantity have
 just differed by 136× for reasons neither party could see, so two agreeing genuinely cannot separate
 "correct" from "same systematic."**
+
+### Round 46 — the reference reproduces bit-for-bit, and the decisive floor is pre-registered
+
+    quoted reference floor                    8.2238e-15
+    their harness, seed 0 + min(4,.) readout  6.0405e-17    136x off
+    their harness, seed 1 + all-cols, 40/3000 8.2238e-15    EXACT, all four digits
+
+> **`6.0405e-17` was never a rival measurement of the floor — it was the same quantity in a different
+> configuration.** *A discrepancy that vanishes EXACTLY is more informative than one that shrinks,
+> because it excludes every other cause simultaneously.*
+
+#### But it is still the wrong floor, and the bridge committed instance 1 one message after naming it
+
+**`8.2238e-15` is A-ALONE's floor. The collapse verdict is about A+δK, which carries an extra basis
+function.** *The bridge's arithmetic — `1.260e-15` against `8.2238e-15` — is a comparison across the
+BASIS axis.*
+
+    using a supplied number without its configuration   TABULA's, at the point of supply.
+                                                        "A reader cannot ask for a fingerprint they
+                                                        have no reason to think is missing, and
+                                                        treating a supplied number as a constant of
+                                                        the apparatus is the correct default --
+                                                        which is exactly why the gate attaches
+                                                        config at CONSTRUCTION."
+    comparing across the BASIS axis                     THE BRIDGE's, entirely. Instance 1 of five,
+                                                        committed by the party who named it.
+
+*Each declined the other's share.*
+
+#### Pre-registered before A+δK's floor lands
+
+    clean collapse needs floor > 3.78e-15    (a drop of LESS than 2.2x)
+    marginal                     1.26e-15 .. 3.78e-15
+    flips                  floor < 1.26e-15  (a drop of MORE than 6.5x)
+
+> **PREDICTION: A+δK's floor stays within a factor of ~2 of `8.2238e-15`, so the collapse is CLEAN.**
+
+**Both legs are existing numbers rather than assumptions:** *(a) the floor is not span-limited at
+ε=0 — A-alone EMITS there, so Carter on undeformed Kerr is already in the base span, and an extra
+column cannot improve a fit that is already finding the object; (b) conditioning cannot do it, since
+`d ~ κ^0.03` and four and a half decades of κ moved the margin by 1.37×.* **The two mechanisms by
+which an added basis function could lower a floor are both excluded.**
+
+**The outcome that costs more than it settles:** *if A+δK's floor comes back near 1e-16, A-alone's
+floor WAS span-limited — the base basis did not quite represent Carter on undeformed Kerr — which
+complicates "K₀ is in the span", the premise the entire exponent-2 argument rests on.* **A finding
+rather than a nuisance, and the one result that reopens something already closed.**
+
+#### Third instance in one night of a test whose only observed outcome is the one it was built to produce
+
+*Tabula nearly shipped the fingerprint suite without its must-NOT-raise clause:* **"without it I
+would have shipped something that refuses every comparison and passes its own suite."**
+
+    the chi^0 / chi^1 residual-zero passes     comparing 0 to 0 and calling it success
+    the installer's dead plant                 appended after sys.exit(0), never ran
+    the fingerprint suite, nearly              only failing cases, all of which raise
+
+> **A test whose only observed outcome is the one it was built to produce has not been tested.**
+> *Three times, in three different places, in one night.*
