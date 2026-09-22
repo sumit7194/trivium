@@ -5557,3 +5557,8 @@ consistent with a nearby singularity and does not diagnose one. That question st
 be wrong by ~2×. And ③ is the **first item today that points outward** — errata in a published paper,
 one of them confirmed by two repos independently. Whether to contact the authors is the user's call,
 not the fleet's.
+
+**Version check (deepstrain, same day, `BlackHole@4a7687e`):** scripts 38/39 read **arXiv v2**, the
+latest version (the unversioned `/src` main.tex is byte-identical to the v2-pinned source by `cmp`, and
+the rendered v2 HTML shows Ω⁽⁰⁾ = a/(2Mb) directly). **All three errata are live on arXiv.** The
+journal version (PRD 110, 064019) is paywalled and **unchecked**. No outward action, per the user.
