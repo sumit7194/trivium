@@ -4645,3 +4645,73 @@ Killing equation.**
 
 > **Without it the verdict is "both collapsed, so we cannot tell" — true, and silent on whether `δK`
 > did anything. One arm separates "the test cannot see it" from "there was nothing to see."**
+
+### Round 50 — the void was measured on a grid that could not have returned anything else
+
+**Exponents, on the noise-immune statistic:**
+
+          chi   A-alone   B-alone   A + dK   B + dK
+        0.075     1.947     1.955   -0.504   -0.081
+        0.0375    2.180     2.268    0.287    1.202
+
+*A free check: all four unaugmented exponents are ~2 — the exponent-2 behaviour reproduces across
+metric AND across χ, a stronger statement of leg 6's "the margin measures deformation amplitude" than
+leg 6 itself made.*
+
+#### The bridge's "neither arm is pinned" was checked at one ε and generalised to three
+
+         eps    A+dK proj  /floor_A        B+dK proj  /floor_B
+      0.0500   1.4286e-14      7.20       3.1139e-14      6.02
+      0.0158   1.4265e-15      0.72 *     3.1094e-15      0.60 *
+      0.0050   1.4286e-16      0.07 *     3.1139e-16      0.06 *
+
+> **Both augmented arms clear their own floor ONLY at the largest ε. The three-point exponent fit is
+> one signal point and two censored ones.**
+
+**The negative exponent is the tell: `−0.504` says the margin GROWS as the deformation shrinks, which
+is not physics — it is floor scatter fitted as a slope.**
+
+    VERDICT      right
+    STATED REASON not quite -- "both collapsed, so the column absorbs deformation generically"
+                 may be true and THIS RUN CANNOT SHOW IT. What it shows is that the eps GRID
+                 sits below the floor for both augmented arms at 2 of 3 points, so neither
+                 exponent is readable and THE DISCRIMINATOR NEVER RAN.
+
+*"The test cannot see it" — and specifically, cannot see it because of the GRID, not the objects.*
+
+#### Which resolves the χ=0.0375 nuance without measuring floors there
+
+**Tabula was right not to lean on the 0.915 gap, and the reason is sharper than "I cannot show the
+statistic is readable":** at smaller χ the floors are lower, so *more* of the ε grid clears them —
+**which is exactly why A+δK reads 0.287 there instead of −0.504.** *The gap appears at the χ where
+less of the grid is censored.* **Evidence that censoring drove the χ=0.075 numbers, not evidence for
+the claim.**
+
+*Their own discipline on it, recorded:* **"A gap in the predicted direction, at the χ I did not fully
+instrument, after a void verdict I did not want — that is the configuration in which people find
+rescues. The reason it is not one is not that the number is small; it is that I cannot demonstrate
+the statistic is readable at that χ."**
+
+#### The fix is the day's lesson for the third time: push the EXACT parameter up
+
+         eps         A+dK  /floor_A             B+dK  /floor_B
+       0.050   1.4286e-14      7.2        3.1139e-14      6.0
+       0.100   5.7144e-14     28.8        1.2456e-13     24.1
+       0.200   2.2858e-13    115.1        4.9822e-13     96.3
+
+**`ε ∈ {0.05, 0.1, 0.2}` puts both augmented arms 7×–115× above their own floors at every point, and
+the discriminator actually gets to run.** *ε is exact; raising it costs nothing in truncation.*
+
+> **Three times today the answer has been "you are sweeping the wrong parameter in the wrong
+> direction."**
+
+#### And the sham inherits the same defect
+
+**A+SHAM and B+SHAM at χ=0.075 on the same ε grid will both read ~0 too** — *which will look like
+"sham collapses both, so the collapse is generic" when it is "everything collapses on this grid."*
+**The sham is the right control and it needs the extended ε grid to say anything.**
+
+*Built as specified: dK's 45-term numerator with every monomial and the denominator kept, numeric
+coefficients permuted under a fixed seed — same momentum degree, χ² scaling, coordinate degrees and
+magnitude class, outside `d2_rat` for the same structural reason, and verified not accidentally
+identical to δK.*
