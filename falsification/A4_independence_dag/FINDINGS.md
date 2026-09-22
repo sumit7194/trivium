@@ -54,6 +54,12 @@ about co-location**, as deepstrain put it.
     3plus1_vs_2plus1.md     870996709cef17e47fb5fac275a101b3   IDENTICAL
     BlackHole first commit  ab3c0f9  2026-06-13
     `git log --all` in SpaceTime for *no_hair* / *ringdown* / *tonefit*  -> EMPTY, never existed
+    BUT the STRING `ringdown` appears in 7 SpaceTime files -> 0 EXECUTABLE LINES (0 in any .py).
+      `verify.sh:3` is the migration comment; `dashboard.html` holds vestigial display labels
+      and a tab filter from before the split; the rest is prose. *Flagged by tabula and
+      re-verified here, because "grep finds it in 7 files" and "the pipeline never existed"
+      are BOTH TRUE and only one of them is visible from outside.* A future auditor running the
+      obvious grep gets a false positive on this finding; state it this way or not at all.
     parameter-count language in the three shared docs                   -> 0 hits in all three
 
 So **E1 is met and E2 is not**: the repos were one, and the spine's subject never crossed. Shared
@@ -294,8 +300,14 @@ null by the bridge's. None of that should stop. What must stop is **counting it 
 2. **A known target contaminates a stopping rule.** Independent implementation is not independent
    measurement if the answer was in the docstring. Blind the target or label the result a *check*,
    not a *replication*.
-3. **When content leaks before a measurement, withdraw the independence claim the same day.** This is
-   the only receiving-side mechanism in the audit with a demonstrated success (§4c).
+3. **When content leaks before a measurement, withdraw the independence claim the same day** —
+   **but scoped, because its author says it was timing and not virtue.** tabula: *"the withdrawal got
+   written down the same day because I was mid-writeup and the leak invalidated a sentence I was in
+   the act of composing. Had the magnitudes arrived a week earlier, or between arcs, I do not think
+   anything would have caught it."* **The honest form: the mechanism works when the affected claim is
+   actively being written, and we have no evidence it works otherwise.** The only demonstrated
+   receiving-side success in this audit is therefore narrower than it reads, and a leak that arrives
+   between arcs has nothing pointing at it. *That gap is unfilled.*
 4. **Shared hygiene is independent for confirmations, correlated for omissions.** (tabula)
 4a. **Score methodological edges separately — framings, conventions, hazard lists, what-to-check-first
    — with no requirement that a number crossed.** A shared *frame* contaminates an agreement exactly as
@@ -307,6 +319,28 @@ null by the bridge's. None of that should stop. What must stop is **counting it 
    agreeing. Check where it came from, not whether you'd have guessed it. (tabula)
 6. **A sealed-construct / blind-score protocol restores independence.** G2 already does this and was
    never credited for it. **It is the standing fix; use it by name.**
+
+## 7a. PROSE HAS NO DEPENDENCY GRAPH — tabula's mechanism, and it is a new species
+
+Their own scope statement had gone false **through their own later action**, and nothing announced it:
+
+> *"I promoted files out of a scratchpad into the repo, which is **filing rather than claiming**, and
+> it silently falsified 'their solver is not being imported into any SpaceTime script' three sections
+> up. **Prose has no dependency graph.**"*
+
+**An act that is not a claim can falsify a claim elsewhere in the same document, and no link exists
+between them.** Code has imports, tests have fixtures, and a build breaks when a dependency moves.
+A scope statement in prose has none of that: it keeps asserting whatever it asserted on the day it
+was written, and moving a file is not an edit to it.
+
+This is why A4 found what it found. **Every claim corrected in §8 was true when written.** *"Kept
+ignorant of each other"* was true before the repo split; *"two independent repos"* was true of the
+intent; *"four failure-mode-disjoint routes"* was true of the design. They went false through later
+action, and prose does not recompile.
+
+**Weapon:** a claim about the state of the world needs a re-check trigger attached, or a date and a
+scope narrow enough that staleness is visible. `SHARED INPUT WITH: none, checked <how>` is
+re-checkable; *"kept ignorant of each other"* is not.
 
 ## 8. What must change in this repo
 
