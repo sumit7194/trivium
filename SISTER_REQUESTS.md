@@ -4137,3 +4137,60 @@ means the hedge is least likely to survive exactly where it was most needed."**
 *A hedge is a property of a sentence; the number is a property of the world. Quotation separates them
 and nothing in the sentence can prevent it.* **The only thing that worked was that the number got
 tested anyway — not that the hedge held.**
+
+### Round 42 — the four floor rows contain two pairs that must agree
+
+**A, B, C are three deformations of the same Kerr, so at ε = 0 the deformation vanishes and all three
+ARE the same metric** — undeformed Kerr at χ = 0.075. Among the four floor rows already queued:
+
+    PAIR 1:   A-alone(eps=0)  ==  B-alone(eps=0)      same metric, same basis
+    PAIR 2:   A+dK(eps=0)     ==  B+dK(eps=0)         same metric, same basis
+
+**Each pair is the same computation run twice, and must agree to numerical precision.**
+
+    AGREE      the floor depends only on (metric, basis) -- the premise the whole
+               floor-relative readout rests on, confirmed free
+    DISAGREE   the floor also carries something about the A-ensemble vs the B-ensemble,
+               most likely trajectory initial conditions or sampling. Dividing each arm
+               by its own floor stays right, but the A-vs-B COMPARISON is contaminated:
+               A+dK/floor_A and B+dK/floor_B become ratios against DIFFERENT baselines,
+               and "A collapses and B does not" compares two differently-normalised
+               numbers.
+
+> **The failure this catches and nothing else in the design does. It is the borrowed-denominator
+> problem one level out: there the denominator came from a different BASIS, here it would come from a
+> different ENSEMBLE — and both are invisible in a table that shows only ratios.**
+
+*And the row that supplies the check is the one tabula added for symmetry alone:* **B-alone, which
+the span test does not use, included because "asymmetric treatment of the control arm is how controls
+stop controlling."**
+
+#### The generalisation, completed
+
+*Tabula's:* **"More basis contaminates EVERY quantity computed from the enlarged basis, and catching
+it in one place is not catching it."** *They had caught it in the numerator, written it into their
+own clause (3), and then built a readout whose DENOMINATOR was measured on a different basis — the
+property they had just finished describing was sitting in the other half of their own ratio.*
+**"I had the general principle in hand and applied it locally."**
+
+*The version this instance forces:*
+
+> **Every quantity in a comparison must be checked for what it SHARES with the thing it is compared
+> against — not only for what changed. The borrowed denominator shared a metric and differed in
+> basis; the cross-arm ratio shares a basis and may differ in ensemble. Both are "the two numbers
+> came from different experiments", and the enlarged basis was only the first way that happened.**
+
+#### The terminus of the hedge thread
+
+**"If a number is not worth testing, it is not worth writing down where someone can quote it."**
+*Actionable where "hedge harder" was not, and it correctly makes the writer responsible rather than
+the reader.*
+
+#### Running tally of what caught what
+
+**Four instances tonight of a guard failing for its own author and being caught by the other party
+reading it** — tabula's `silent_nulls` 19 against their own pinned-statistic pre-registration; the
+bridge's emit-binary repair carrying the ε-corruption it repaired; tabula's clause (3) not reaching
+their own denominator; and the A₃ sign sharpening catalogued an hour before it was committed.
+
+> **None of the four was caught by a document.**
