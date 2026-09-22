@@ -4502,3 +4502,76 @@ after a peer read it.**
     caught by an INSTRUMENT at the moment of the error 1
 
 > **And the instrument has existed for two hours while the documents have existed for months.**
+
+### Round 48 — the floor is set by rounding, and the check invalidated the readout it was checking
+
+**BOTH PAIR CHECKS FAIL.**
+
+    A unaugmented  8.2238e-15    B unaugmented  2.9502e-15    PAIR 1  ratio 2.79
+    A + dK         1.9853e-15    B + dK         5.1712e-15    PAIR 2  ratio 2.60
+
+*A and B at ε=0 are the same metric — verified symbolically before the rows ran. Cause measured, not
+inferred:*
+
+    launch inputs bitwise-identical        True
+    H, ith, dHdr, dHdth bitwise-identical  True
+    irr   max|A-B| 2.220e-16   rel 2.86e-16      <- ONE ULP
+    trajectories max|diff| 1.041e-17
+
+**`_A()` and `_B()` are different expression trees that are mathematically equal at ε=0, so
+`lambdify` rounds one component differently by a single ulp. That propagates through 3000 RK4 steps
+and a generalized eigenproblem into a 2.8× difference in the floor.**
+
+> **THE FLOOR IS NOT A PROPERTY OF (metric, basis). It is not a property of anything stable — it is
+> set by rounding.**
+
+**Every headroom figure produced tonight — 6.52×, the corrected 1.57×, `f`-room 2.55× and 1.25× —
+was computed against a quantity with 2.8× of intrinsic scatter. None were ever resolvable.** *The
+collapse verdict cannot be read from the floor comparison at all; it is below the noise.*
+
+**And the bridge's 4.14× inference is withdrawn on the noise level rather than on its logic.** *4.14×
+sits 1.5× above a 2.7× noise floor — not a signal.* **The shape, named by tabula:** *a fine
+conclusion drawn from 4.14× for the same reason a fine conclusion was licensed from the 1e-10 emit
+threshold — both times the number was real and the precision it could support was not, and both
+times it was supplied without an uncertainty.* **Three quantities supplied tonight, none with an
+error bar; all three used without asking for one.**
+
+#### The unification, now measured rather than heuristic
+
+    floor       an ABSOLUTE number -- a MINIMUM over near-degenerate directions, the least
+                stable functional there is.                              2.8x scatter
+    exponent    d log M / d log eps -- a RATIO within one arm; a multiplicative,
+                eps-independent perturbation CANCELS.                    4 digits
+    f = a*chi+b ratios of drifts within single runs; survived two relaunches that
+                invalidated every absolute number it was combined with.
+
+> **Same property, three times, under two noise mechanisms with nothing to do with each other —
+> configuration drift and ULP rounding. A within-configuration ratio survives both. An absolute
+> number survives neither.**
+
+*`within=True` arriving as a physical result rather than a bookkeeping convenience — and it
+retroactively explains why `f` is the only quantity that never needed withdrawing.*
+
+#### The gap that remains under the one readout still standing
+
+**The exponent's stability is demonstrated WITHIN one expression tree** — A-unaugmented reproducing
+the banked A reference, same `_A()`, same seed, which shows the harness is deterministic. **It does
+not show stability ACROSS trees, and the ulp difference lives precisely between `_A()` and `_B()`.**
+
+**The span test's verdict is "A's exponent collapses while B's does not" — an across-tree comparison,
+in the exact place the 2.8× was found.** *The exponent cancels a multiplicative, ε-INDEPENDENT
+perturbation; nobody has checked that this one is ε-independent.* **And the pair check cannot test
+it, because A and B are the same metric only at ε=0, where there is no exponent.**
+
+> **Proposed, and to run BEFORE B+δK: A-alone's exponent at two or three SEEDS.** *If the exponent is
+> stable across seeds while the floor is not, that is direct evidence the ratio cancels the
+> perturbation. Three single-arm runs — and if the exponent does carry scatter, B+δK is
+> uninterpretable and the expensive arm would have been spent to learn it.*
+
+#### And the decision band was narrower than the noise it partitioned
+
+*The bridge's marginal band ran 1.26e-15 to 3.78e-15 — a factor of 3.0 — against a quantity with 2.8×
+of scatter.*
+
+> **A decision band narrower than the noise of the quantity it partitions is a coin flip with three
+> outcomes.**
