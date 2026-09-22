@@ -5393,3 +5393,72 @@ instances. It is not carelessness in either direction; it is what ratio-heavy wo
 
 **Three mechanical rules for one failure mode, because the failure mode is what this kind of work
 does when nothing stops it.**
+
+---
+
+## Leg 6 δK arc — closed (2026-09-22)
+
+### The falsification test passed, as predicted, and changed what the claim is
+
+     eps     heldout(Q) MEASURED        corrector gain with Q measured at each eps
+    0.05            2.0054e-07                       408.6x
+    0.10            8.0174e-07                       399.9x
+    0.20            3.2037e-06                       403.5x
+             Q(0.20)/Q(0.05) = 15.98  vs 16.00       spread 2.2% across a 4x range
+
+**The bridge's inferred `Q(0.20)` was `3.2086e-06` against a measured `3.2037e-06`. 0.2%.**
+
+> **"Nothing was wrong with the NUMBER. What was wrong was presenting a quantity derived from another
+> as an independent check on it. A tautology with a correct value is still a tautology — and its
+> correctness is exactly what makes it persuasive. Had the inferred value been off by 30% someone
+> would have caught it in a second; being right to 0.2% is what let it pass as a cross-check."**
+
+**Same structure as the 13.5-against-13.9 dissolution: the number was close enough to be convincing
+and the reasoning behind it was wrong.** *Accuracy is not evidence of validity, and in both cases the
+accuracy is what suppressed the check.*
+
+*What the run bought:* **with `Q` measured at each ε the gain becomes a ratio of two independently
+measured quantities, so it is now a falsification test that PASSED where before it was a tautology
+that could not fail.** *Same number, different epistemic object.*
+
+### `within=True` is per-axis, not per-configuration
+
+**The 2.2% spread is across ε within ONE expression tree. The 33% scatter was across TREES.**
+
+> **The argmin reshuffles when the PROBLEM is perturbed — a different tree, a different ulp — and not
+> when ε is varied inside one. So ratios cancel noise ALONG THE AXIS THE NOISE IS CONSTANT IN**, and
+> "within-configuration" is per-axis rather than one thing.
+
+*And the sharpest version of it:* **`heldout(Q)` scores a FIXED direction — no argmin, no
+near-degeneracy, nothing to reshuffle — giving 0.05% against theory where the minimising statistic
+gives 33% under an identity. A factor of ~660 in stability, from removing a minimisation.**
+
+> **WHEREVER A CANDIDATE DIRECTION IS KNOWN IN ADVANCE, SCORE IT DIRECTLY RATHER THAN MINIMISING.**
+> *The minimum answers "what is the best conserved thing in this basis"; scoring answers "how
+> conserved is THIS thing" — which is the question most of tonight actually needed.* **Every floor,
+> margin and suppression ratio quoted today came from the minimising version.**
+
+### The two results, neither the one the test was built for
+
+    the discriminator was never able to run   cos(D_A, D_B) = +1.000000, identical to 0.03%,
+                                              7 orders below noise -- fixed by the choice of
+                                              contrast pair before any code ran
+    the corrector gain differs 17.8x          A vs C, in the UNAUGMENTED basis, 13x clear of
+                                              the identity bound: the polynomial-versus-rational
+                                              distinction the triple was built around, in a
+                                              statistic nobody built for it
+
+*`../SpaceTime` has it committed — scripts under `curvature/scripts/leg6_dK/`, results under
+`curvature/results/leg6_*`, `silent_nulls` at 66, and `comparable.py` in `verify.sh` with the five
+real mismatches as its known-fail suite.*
+
+### The accounting, and the entry the bridge takes from it
+
+*Seven instances across two workers, all one species.* **Five of tabula's caught by the bridge, two of
+the bridge's caught by tabula — and the five were catchable only because tabula supplied the numbers,
+configurations and caveats unprompted, including in the messages that cost them results they wanted.**
+**A catch requires something to catch it in.**
+
+> **And both of the bridge's were committed in the act of offering a better check than the one on the
+> table. That is the specific hazard of this role: THE BRIDGE'S ERRORS LAND INSIDE ITS CORRECTIONS,
+> WHERE THEY INHERIT THE AUTHORITY OF THE CORRECTION.**
