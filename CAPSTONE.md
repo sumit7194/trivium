@@ -109,9 +109,9 @@ Pre-register → attack → **three-valued verdict** (KILLED / SURVIVES / UNDECI
 | **V** (validation) | expected to survive; harden instruments | V1, V2, V3 **all SURVIVE** — the instrument canaries held |
 | **R** (refinements) | bred from v1 corpses | R1–R9: 4 killed, 1 postulate-true, 3 undecided, 1 cross-gate + a new obstruction (**O4**) |
 | **S** (spectral/KK) | the drums→tori→curved arc | **S1 KILLED** (flat 4-tori not spectrally determined); **S2 SURVIVES**; S3 supported |
-| **A** (self-audit) | **the bridge's own record** | **A1 SURVIVES** · **A2 KILLED G7** · **A3 KILLED** (a load-bearing citation was never verified) |
+| **A** (self-audit) | **the bridge's own record** | **A1 SURVIVES** · **A2 KILLED G7** · **A3 KILLED** (a load-bearing citation was never verified) · **A4 KILLED the independence claim** — stated 3×, measured 0×; `BlackHole` is a fission product of `SpaceTime` (3 docs byte-identical today). Replaced by deepstrain's *independent data, entangled methodology* |
 
-**Running total: 12 kills, 6 survivals, 4 undecided, 1 postulate-true — and 10 self-caught instrument bugs,
+**Running total: 13 kills, 6 survivals, 4 undecided, 1 postulate-true — and 10 self-caught instrument bugs,
 every one a silent failure that looked like a result.**
 
 ---
