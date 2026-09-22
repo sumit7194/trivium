@@ -572,17 +572,36 @@ also live" passed under a dead scanner — because the edge name still appeared 
 stale list**. A substring assertion satisfied by the wrong occurrence. Now requires the live status
 row, which only a live edge emits.
 
-**Final matrix — five arms, each failing for its own cause:**
+**The matrix — and the first version published here was wrong in a way worth keeping.**
+
+tabula corrected the rule I had stated: *"each arm must fail for its own cause"* is **one step too
+strong**, and their own matrix violates it. The correct form:
+
+> **Every MUTATION must produce a distinct SIGNATURE — not every arm map to exactly one fault.**
+> *"The matrix discriminates where the individual arm cannot."*
+
+Applying their rule to my own table exposed that **I had published a composite.** Rows M3 and M4 were
+run *before* the arm-2 pairing fix and M1 *after*; the fix changed arm 2's sensitivity to the path
+scanner, so M3's published row was stale. **Two code states presented as one measurement** — the same
+species as everything else today, this time in the table certifying the controls. Re-run, every row at
+one state:
 
     mutation                      arm1  arm2  arm3  arm4  clean
     healthy                        ok    ok    ok    ok    ok
-    scan() dead                   FAIL  FAIL   ok*  FAIL  FAIL
-    namespace scanner dead          ok    ok  FAIL  FAIL  FAIL
-    path pattern dead             FAIL    ok    ok  FAIL  FAIL
-    prefix resolution removed       ok    ok    ok  FAIL    ok     <- arm 4 ALONE
+    M1  scan() dead               FAIL  FAIL   ok*  FAIL  FAIL
+    M2  namespace scanner dead      ok    ok  FAIL  FAIL  FAIL
+    M3  path pattern dead         FAIL  FAIL   ok*  FAIL  FAIL
+    M4  prefix resolution removed   ok    ok    ok  FAIL    ok     <- arm 4 ALONE
 
-*arm 3's pass under a dead `scan()` is correct discrimination, not hollowness: the two scanners are
-independent, and arm 3 fails under the mutation that targets its own.*
+**Four distinct signatures across five rows: M1 and M3 collapse.** Under the corrected rule that is a
+failure to discriminate — and it is **correct** here rather than a defect, because M1 and M3 are *the
+same fault by two routes*: killing `scan()` and killing its regex both disable path detection
+entirely, so no instrument downstream can tell them apart, and none should claim to. **Stated rather
+than papered over, because a matrix that claims five signatures and delivers four is exactly the
+over-claim this audit has been about.**
+
+*arm 3's pass under M1/M3 is correct discrimination: the two scanners are independent and arm 3 fails
+under M2, the mutation targeting its own.*
 
 **The bottom row is why the arm was worth adding.** Removing prefix resolution is caught by **arm 4
 and nothing else** — every other arm passes and the gate returns 0. That is the fault that was live
