@@ -545,6 +545,54 @@ logic and does not exercise the scanners — it passes under all three mutations
 what it tests. It is **tabula's exact shape, contained to one arm, known rather than hidden**, and the
 docstring says not to read it as evidence about the scanners.
 
+### A third mechanism, an arm I did not have, and a live bug it found on its first run
+
+tabula mutated their own control and found a mechanism distinct from mine:
+
+> *"Mine was **structurally vacuous**: arm 3 is a MUST-NOT-FLAG assertion, and a dead scanner flags
+> nothing, which satisfies it perfectly. **A negative assertion is satisfied by the absence of the
+> machinery that would falsify it.** Any arm phrased 'X must not appear' is vacuous exactly when the
+> thing producing X is broken — which is the failure the control exists to detect."*
+
+**I did not have that arm at all** — and my namespace signal matches an `_kt_` *prefix*, so a local
+module sharing it is precisely the false positive I had nearly shipped. Added, with their fix applied
+in the same step (paired with a positive from the same sweep so a dead scanner cannot satisfy it).
+
+**It failed on its first honest run, and it was right.** The prefix match had **no local resolution**:
+I built the twelve *exact* module names empirically, and never resolved the *prefix family* — so a
+local `_kt_*` module would have been counted as an ansatz edge. I had told tabula my list was built
+empirically. True of the names, false of the prefix.
+
+**The count did not move — still 69.** No local `_kt_*` module exists here today, so the bug was
+**latent, not active.** The number was right and the method producing it was unsound: **the fourth
+instance today of a correct result with no surface to check.**
+
+**And the fix to arm 2 contained the fifth.** Pairing the stale-declaration arm with "a real edge is
+also live" passed under a dead scanner — because the edge name still appeared in the output, **in the
+stale list**. A substring assertion satisfied by the wrong occurrence. Now requires the live status
+row, which only a live edge emits.
+
+**Final matrix — five arms, each failing for its own cause:**
+
+    mutation                      arm1  arm2  arm3  arm4  clean
+    healthy                        ok    ok    ok    ok    ok
+    scan() dead                   FAIL  FAIL   ok*  FAIL  FAIL
+    namespace scanner dead          ok    ok  FAIL  FAIL  FAIL
+    path pattern dead             FAIL    ok    ok  FAIL  FAIL
+    prefix resolution removed       ok    ok    ok  FAIL    ok     <- arm 4 ALONE
+
+*arm 3's pass under a dead `scan()` is correct discrimination, not hollowness: the two scanners are
+independent, and arm 3 fails under the mutation that targets its own.*
+
+**The bottom row is why the arm was worth adding.** Removing prefix resolution is caught by **arm 4
+and nothing else** — every other arm passes and the gate returns 0. That is the fault that was live
+one hour ago, reporting a clean bill of health.
+
+**tabula's rule, stronger than "write controls":** *a control that passed tells you nothing until you
+have seen it fail on purpose. "It passed" is a fact about today's code; "it can fail, and for its own
+reason" is a fact about the control. Only the second is worth having, and it costs three deliberate
+breakages.*
+
 **Converging rule, from three instances in one hour:** *an edge census earns belief or it earns
 nothing, and every false positive is drawn from the same account.* Resolve on **file identity**, never
 on a name pattern — `grep -v grep` deletes any neighbour that happens to be a grep.

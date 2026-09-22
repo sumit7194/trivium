@@ -66,6 +66,10 @@ def classify(line):
         return "DATA"
     return "REF"
 
+def _local_provides(mod):
+    """True if THIS repo supplies the module -- then it is not a sibling edge."""
+    return any(q.name == f"{mod}.py" for q in ROOT.rglob(f"{mod}.py") if ".git" not in q.parts)
+
 def scan_namespace():
     """Files importing a sibling MODULE. Split by whether a path also appears:
     with a path -> already covered; WITHOUT -> the case paths cannot see."""
@@ -82,6 +86,14 @@ def scan_namespace():
             mod = m.group(1).split(".")[0]
             for sib, mods in SIBLING_MODULES.items():
                 pre = SIBLING_PREFIXES.get(sib, [])
+                # A PREFIX IS NECESSARY, NEVER SUFFICIENT. Resolve it: a module is a
+                # sibling edge only if nothing in THIS repo provides it. Found by the
+                # arm-4 control failing on its first honest run -- the exact-name list
+                # was built empirically, but the prefix family never was, so a local
+                # `_kt_*` module would have been counted as an ansatz edge.
+                if any(mod.startswith(x) for x in pre) and mod not in mods:
+                    if _local_provides(mod):
+                        continue
                 if mod in mods or any(mod.startswith(x) for x in pre):
                     key = f"NAMESPACE:{sib}" + ("" if has_path else ":NO-PATH")
                     hits.setdefault(key, []).append(f"{p.relative_to(ROOT)}")
@@ -158,23 +170,41 @@ def selftest():
         # scanners; do not read arm 2 as evidence about them.
         d = json.loads(orig); d["DATA:no_such_repo"] = "stale"
         ALLOWLIST.write_text(json.dumps(d))
-        arms.append(("stale declaration", _fires("DATA:no_such_repo")))
+        # PAIRED (tabula's fix): stale entry must be named AND a real edge must still
+        # be live. Unpaired, a dead scanner makes EVERY declaration stale and satisfies
+        # this arm perfectly -- hollow.
+        arms.append(("stale declaration",
+                     _fires("DATA:no_such_repo", also_live="IMPORT:conjecture_machine")))
         # arm 3: the invisible file -- sibling import, no path anywhere
         ALLOWLIST.write_text(orig)
         ctl.write_text("from poincare import build_hamilton  # control\n")
         arms.append(("no-path sibling import",
                      _fires("NAMESPACE:conjecture_machine:NO-PATH")))
+        # arm 4: PREFIX DISCRIMINATION. A local module sharing the `_kt_` prefix must
+        # NOT be counted as a sibling edge. Adopted from tabula, WITH their own fix for
+        # it: a bare must-not-flag assertion is satisfied by a dead scanner, which is
+        # the failure the control exists to detect. So it is paired with a positive
+        # from the same sweep.
+        ALLOWLIST.write_text(orig)
+        ctl.write_text("import _kt_local_decoy  # control: LOCAL, must not flag\n")
+        (ROOT / "ops" / "_kt_local_decoy.py").write_text("# local module, sibling prefix\n")
+        code, out = _quiet(capture=True)
+        arms.append(("local module w/ sibling prefix NOT flagged",
+                     code == 0 and "IMPORT:conjecture_machine" in out))
     finally:
         ALLOWLIST.write_text(orig)
         if ctl.exists():
             ctl.unlink()
+        decoy = ROOT / "ops" / "_kt_local_decoy.py"
+        if decoy.exists():
+            decoy.unlink()
     for name, passed in arms:
         print(f"  {'PASS' if passed else 'FAIL'}  arm fires on: {name}")
         ok &= passed
     print(f"  {'PASS' if _quiet() == 0 else 'FAIL'}  clean state returns 0")
     return 0 if ok and _quiet() == 0 else 1
 
-def _fires(expect):
+def _fires(expect, also_live=None):
     """An arm passes only if the gate fails AND NAMES THE PLANTED CLASS.
 
     Found by mutation test 2026-09-22: arms asserting only `exit == 1` passed
@@ -185,7 +215,15 @@ def _fires(expect):
     failure", which is tabula's hollow-control fault one level up.
     """
     code, out = _quiet(capture=True)
-    return code == 1 and expect in out
+    if code != 1 or expect not in out:
+        return False
+    # Pairing: the sweep must also have PRODUCED that edge AS LIVE. Matching the
+    # bare name anywhere is unsound -- under a dead scanner the name still appears,
+    # in the STALE list, which satisfied this check for the wrong reason. Require
+    # the status-table row (`<class> ... declared --`), which only a live edge emits.
+    if also_live is None:
+        return True
+    return any(also_live in ln and "declared --" in ln for ln in out.splitlines())
 
 def _quiet(capture=False):
     import io, contextlib
