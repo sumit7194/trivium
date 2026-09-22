@@ -3409,3 +3409,63 @@ limitation."**
 wrong tonight and neither was ever the last word on their own claim.* **The fleet is not a redundancy
 argument — two copies of a party that grades itself would have produced two copies of the night's
 seven withdrawals and kept all of them.**
+
+---
+
+## Leg 6 — final state (2026-09-22, ~06:00)
+
+**Closed, reopened on a check neither party had run, closed again at a better-specified boundary.**
+
+### The open item, parked with `../conjecture_machine`
+
+> **Is A's exact rank-2 Killing tensor in `d2_rat`'s span on the sampled domain?**
+> *One object, one fit. The object is ansatz's to produce; the fit is tabula's. Not urgent; both
+> sessions closed out.*
+
+### Settled by measurement
+
+    conditioning     EXCLUDED -- shrink 39->27 features IMPROVED the margin 1.88x (no span
+                     deficit can), and d ~ kappa^0.0304, so closing the gap needs 115
+                     decades of kappa. Not insufficient -- cannot be.
+    rcond cutoff     EXCLUDED -- COND_TOL=1e-15 keeps 39/39; tol=0 gives an identical margin.
+    span             RETURNED TO OPEN, better specified: every test ran on the APPROXIMATION.
+
+### Withdrawn, by author
+
+    tabula (3)   the 845x argument; the two-point c power law; the §161 witness
+    bridge (4)   the 845x argument; the chi^4 prediction; the horizon-pole §161 claim
+                 (committed by ansatz as 28bee32 before retraction); the (0,0) sector
+
+**Seven withdrawals and not one was the author's own last word.**
+
+### What survives from the bridge's side, stated narrowly so it is not over-credited
+
+**The `(r+1)²` reducible-floor formula** (derived from the isometries alone, matching all four
+published floors, now in ansatz's code with both caveats); **the χ² decomposition verification**
+(`(y²+7)` factoring in all four momentum sectors, quotient `−(H₀+P_t²)`, convention flagged);
+**the horizon pole's existence and residue** `64χ²P_t²y²` (confirmed independently by ansatz, and
+tabula's amendment to it withdrawn); **the rank-6 grading prediction** (21, {0:16, 1:0, 2:4, 3:1}),
+pre-registered and confirmed on all four numbers; and **the observation that the ε exponent could not
+fail** — *which was a question, and ansatz answered it.*
+
+### The night's species, final form
+
+> **"I checked the thing, and the thing I checked was not the thing."**
+> *One entry, five instances. A claim true on the manifold and empty on the sampled region; a span
+> checked in one code path with the sector emitted three lines later; a conclusion written before its
+> data; a headline written after and not checked against it; and four exclusions run against an
+> approximation to the object actually being searched for.*
+
+### Why it worked, and it is not redundancy
+
+*Tabula:* **"It is a property of there being two of us."**
+*Bridge:* **"And of neither being the one who decides whether the work was good."**
+
+> **Two copies of a party that grades itself would have produced two copies of tonight's seven
+> withdrawals and kept all of them.**
+
+*The count that makes the case:* **tabula's 55-entry catalogue and this repo's ledger produced two
+catches between them tonight. Four parties costing themselves — measuring the thing that broke their
+own table — produced four.** *It has no implementation, because a gate is a rule written earlier by a
+mechanism that does not care about the outcome, and this is a party who does care choosing against
+its own interest at the moment of choosing.*
