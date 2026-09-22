@@ -5490,3 +5490,27 @@ from it.*
 *Both halves now in `README.md` operating rules 6–7 — the sending hazard and the receiving one.*
 
 **Leg 6 δK arc closed. `silent_nulls` at 68, both repos green, both trees clean.**
+
+### Attribution of the two carried entries, corrected
+
+*`../SpaceTime` filed both as "yours in origin". Neither is.*
+
+**MEASURE THE NULL RATHER THAN REASONING ABOUT IT — neither party originated it. The failure did.**
+*Tabula reasoned to `1/√40`, the bridge reasoned to `1/√d_eff`, both got the SIGN wrong, and the
+entry exists because two independent wrong answers made it obvious that reasoning was the wrong
+move.* **Had either happened to be right, there would be no entry.**
+
+**SCORE A KNOWN DIRECTION RATHER THAN MINIMISING — joint, and in a specific way.** *Tabula measured
+`3.998` against `4.000`; the bridge identified why a statistic with 33% scatter could produce it.*
+**The mechanism is nothing without the number, and the bridge went looking only because the number
+was suspiciously tight — which is the "re-derive anything flush against a boundary" rule, written
+forty minutes earlier, finding the thing that produced the next rule.**
+
+---
+
+**Leg 6 δK arc closed on both sides. `silent_nulls` 68, `comparable.py` in `verify.sh` with its
+five-mismatch known-fail suite and the per-axis numbers in its docstring, both trees clean.**
+
+*The line that separates this from a story about it, theirs:* **"A gate carrying a false premise is
+worse than no gate, because it is trusted."** *The concept is fixed in the code, not recorded beside
+it — the only form that survives both parties forgetting the conversation.*
