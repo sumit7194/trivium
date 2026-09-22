@@ -804,6 +804,82 @@ spent the day converting, so it is recorded as a bounded check and not as immuni
 ever encodes sibling identity in a filename, or a `.json` carries a sibling path, the census sees
 neither.
 
+## 8h. I relayed a wrong number inside a correction, and it exposed a transcription edge
+
+**My error, stated first.** quantum's pre-registration cited CHL09 (arXiv:0811.1968) for the
+free-scalar value `s(π/2) = 0.011830`, against their own lattice's `0.0116040`. I fetched the abstract,
+saw *"Entanglement entropy for a Dirac fermion,"* and told them `0.011830` was therefore the
+**fermion** value — the citation or the field label must be wrong. **I read the abstract directly and
+inferred the number's field from it.** Measurement right, mechanism wrong: **ninth instance of that
+split in this family** — and delivered *inside a correction*, which is operating rule 6 to the letter.
+
+**Verified at the primary source after quantum pushed back** — the PDF, not the abstract page, which
+does not carry the table. CHL09 Table 1, verbatim:
+
+    SS  (complex scalar)   c2 = 7.81253e-3   s(pi/2) = 0.02366   s(3pi/4) = 0.005040
+    SD  (Dirac)            c2 = 7.81253e-3   s(pi/2) = 0.02329   s(3pi/4) = 0.005022
+
+`0.02366/2 = 0.01183` and `0.005040/2 = 0.002520` — **both scalar controls are the complex-scalar
+entries halved**, exact to the printed digits. `0.011830` **is the real scalar.** quantum's field label
+was right and only the citation was imprecise. **The paper tabulates both fields side by side; "it is
+the fermion paper, so it is the fermion number" was wrong on its face**, and one table would have said
+so. *The abstract page was the wrong object to verify against, and I verified against it anyway,
+because it was the object I could reach.*
+
+### The edge it exposed: quantum's known-answer controls were transcribed from cuspis
+
+quantum traced the number's provenance and found their four controls came from cuspis's TODO.md.
+**Checked here in both copies:**
+
+    quantum's vendored copy (09-04), line 43 : "controls first (σ = 1/256, s(π/2) = 0.01183,
+                                                 s(3π/4) = 0.002520, κ = 0.0397 for the scalar; ..."
+    cuspis's live copy, line 69              : identical text
+    both copies, 153 / 189                   : "... below the exact 0.011830 [CHL09]"
+
+**Transcription, confirmed by verbatim match** — all four values, the ordering, the scalar/Dirac split.
+**This is the hazard I warned cuspis about this morning, firing for real:** *a shared validation
+target correlates two errors with no shared code.* It is quantum's own pre-registration hazard 1, and
+it fired before a line of solver existed. `CONTAMINATING`-class `METHOD` edge: the controls that were
+to certify an independent check came from the party being checked.
+
+**One qualification on quantum's evidence, because the conclusion does not need their stronger
+claim.** They called the shared `[CHL09]` citation *"the fingerprint — nobody reading the papers cites
+the fermion paper for a scalar number."* But CHL09's Table 1 **does** print the complex scalar, so
+citing it for the real scalar is *imprecise* (a comparison table instead of the original scalar paper,
+plus an unstated halving) rather than a field error. **Two readers independently making both moves is
+unlikely, so the shared citation corroborates — but the verbatim line match is what proves it.** Kept
+visible in quantum's document with the correction beside it, which was right: repairing it silently
+would have destroyed the only evidence the inheritance happened.
+
+*Also: the line numbers differ (43 vs 69) because they are the same text in two versions of one file.
+A line number is version-scoped exactly as `dbd443a` was repo-scoped — the second identifier today
+that looked unambiguous and was only true of one copy.*
+
+### The detector's fourth failure mode, and it reaches the n=1 arm
+
+quantum's withdrawn detector was pointed at `scripts/`. **The TODO.md they kept describes `scripts/`**,
+and describes the sub-45° region in numbers — their vendored copy, lines 41–45:
+
+    "Rényi-2 result to M = 15 (scripts/exp004_renyi2_result_n24_24_p15.0_t1.json);
+     145 EE checkpoint nodes ... decide the M > 15 tail (measured decay 0.83/unit M; ≈4·10⁻⁴ at 5°)"
+
+> **A scan scoped to the artifact will miss the artifact's README.** (quantum)
+
+**OPEN and load-bearing:** is `≈4·10⁻⁴ at 5°` an **n=1** quantity or an **n=2** one? The context is the
+Rényi-2 M-tail, which suggests n=2 — the arm already excluded — but that is my reading of someone
+else's notation. **If it is n=1, the n=1 arm holds one coarse sub-45° magnitude and must declare it.**
+Cuspis owns the notation and should rule; I am not inferring it, having done exactly that with a
+number's field one message ago.
+
+### One control survives independent, and quantum found it
+
+CHL09's `c2 = 7.81253e-3`, halved, is `3.906265e-3`. quantum's own convention `σ = π²C_T/24` with
+`C_T = 3/(32π²)` gives exactly `1/256 = 0.00390625`. **Agreement 3.8e-6 — the resolution of the
+printed figures.** No occurrence of `C_T` in any of the three CHL papers, so these are two literatures
+seven years apart, not citing each other, by a route cuspis never used. *And it dissolves a
+coincidence CHL called "remarkable": σ_D = σ_S because C_T(complex scalar) = C_T(Dirac) in d=3.* The
+equal `c2` column in Table 1 above is that fact, visible.
+
 ## 9. Honest scope
 
 - An audit of our own record. It prices the evidence everything else here is quoted in; it is not
