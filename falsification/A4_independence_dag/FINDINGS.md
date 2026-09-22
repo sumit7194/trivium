@@ -702,6 +702,70 @@ repository, so `git show` recovers it. **Values sealed, implementation not, and 
 the axis the check runs on.** The fresh build must be written from the published equations *without
 consulting the vendored copy in quantum's own history*, and must say so.
 
+## 8f. A4's instrument has ONE-SIDED ERROR, so its edge count is a bound and not a census
+
+quantum asked the question that reframes the whole audit, and it was aimed at me:
+
+> *"Worth asking whether the DAG has a systematic bias toward under-recording edges, since two
+> independent instruments erring the same way is not obviously coincidence."*
+
+**Tested rather than agreed with. It is not coincidence, and it is unanimous.**
+
+    edges found by the bridge's own census/testimony :  9
+    edges found ONLY via sister replies              : 12
+    -> 57% OF THE DAG WAS INVISIBLE TO THE AUDITOR
+
+**Every correction A4 has taken runs the same direction — seven for seven:**
+
+| direction | correction |
+|---|---|
+| coupling **under**-stated | `BlackHole`/`SpaceTime` shared origin — absent entirely |
+| coupling **under**-stated | five classes of unlogged channel — all absent |
+| coupling **under**-stated | quantum's 218-file vendoring — absent until they disclosed it |
+| coupling **under**-stated | tabula's `leg6_dK` code edge — absent |
+| coupling **under**-stated | edge 21, quantum's 09-04 verification of cuspis — absent |
+| coupling **under**-stated | edge 17 dated 17 days late (older ⇒ longer in play) |
+| discipline **over**-stated | the Round-12 refusal, withdrawn (20 → 19 refused edges) |
+
+**Not one correction ever found less coupling or more discipline.**
+
+**And the mechanism is structural, not bad luck.** A4's instrument was a census of *sends* plus four
+self-reports. **Neither can over-report.** A send you did not recognise as a send is never logged; a
+coupling you do not remember is never reported. There is no failure mode in this design that invents
+an edge. **An instrument whose error is one-sided produces a BOUND, not a measurement.**
+
+> **RESTATEMENT: A4's edge count is a LOWER BOUND on the fleet's coupling, and its refused-edge count
+> is an UPPER BOUND on the fleet's discipline.** Every "we found no X" in this document should be read
+> as "our instrument, which cannot over-report, did not surface an X."
+
+**What this does and does not touch.** The **kill stands and is strengthened** — more edges cannot
+un-kill a claim that died from edges, and the `BlackHole`/`SpaceTime` strand rests on hashes rather
+than testimony. What weakens is every *clean* finding: "no `:NO-PATH` class appeared," "zero invisible
+files," "19 refused edges." Those are now bounds. The one clean finding that survives intact is
+deepstrain's spine check, because it was a **positive** measurement — grep for a parameter count and
+find none — rather than an absence of reports.
+
+*quantum's own zero ran the same direction as my 17-day error, which is what prompted the question.
+Two instruments, independently built, erring the same way, because both were built to detect
+something and neither was built to detect its own silence.*
+
+## 8g. The path-as-data hole, tested here
+
+quantum's root cause was sharper than the symptom cuspis reported: their detector read **prose** while
+the values sat in **JSON**, and read file **contents** while `exp004_nodes/` encodes its parameters
+**in the filenames** to ten decimal places. *"A content-scanner is structurally blind to a tree that
+stores data in its paths."* They flagged it as a hole any mechanical artifact-diff would inherit.
+
+**Checked here rather than assumed.** `ops/cross_repo_census.py` reads the contents of `*.py`:
+
+    sibling names appearing in any bridge PATH            : 0
+    non-.py data files (json/txt/csv) naming a sibling path: 0
+
+**So the hole is not live today** — and that is a scope statement of exactly the kind this audit has
+spent the day converting, so it is recorded as a bounded check and not as immunity. If bridge data
+ever encodes sibling identity in a filename, or a `.json` carries a sibling path, the census sees
+neither.
+
 ## 9. Honest scope
 
 - An audit of our own record. It prices the evidence everything else here is quoted in; it is not
