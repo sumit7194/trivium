@@ -5208,3 +5208,81 @@ measured at `3.6×` in the OPPOSITE direction in metric space.**
 > and still wrong.**
 
 *Not a failure of rigour — a failure that rigour, applied to the number, would have passed.*
+
+---
+
+## Round 58 — the pre-registration lands, and both parties got a null's SIGN wrong (2026-09-22)
+
+### 1. The empirical null reverses both reasonings
+
+    assumed 1/sqrt(40)         = 0.1581       isotropic-at-d_eff (d_eff = 4.34) = 0.4802
+    EMPIRICAL, 20,000 draws:  median 0.0000   90th 0.0001   99th 0.0002   MAX 0.0009
+
+    A fitted 0.0336 -> 100.0th percentile      C fitted 0.1691 -> 100.0th percentile
+
+> **Both are FAR ABOVE random, not below.** *Tabula's `1/√40` said A was below random; the bridge's
+> `d_eff` correction pointed the same way and harder — `0.48` would have put both further below.*
+
+**The measured null is ~0 because a random whitened direction converted to raw coefficients by `/sd`
+is dominated by the tiny-`sd` features and is nearly orthogonal to `Q`. No dimensional argument
+predicts that.**
+
+> **Two parties reasoned about a null distribution, both got the SIGN of the answer wrong, and
+> drawing from it took thirty seconds. MEASURE THE NULL; DO NOT REASON ABOUT IT.**
+
+### 2. `corr(fit, Q) = 1.0000` for both A and C — the fitted direction IS Carter
+
+*The coefficient cosine was the artefact.* **`0.0336` against a null whose maximum is `0.0009` is a
+strong signal whose absolute value means nothing at all.**
+
+### 3. The pre-registration lands
+
+    Q scored by the ENGINE statistic   A 2.0054e-07   C 4.6401e-10   ratio 432
+    the FITTED direction                                             ratio 24.3
+
+    analytic drift 13.9 (amplitude) -> as a variance, 193
+    PRE-REGISTERED ~193 as an order of magnitude      MEASURED 432, factor 2.24   SAME ORDER
+
+**Two instruments agree on the same object at the same power to a factor of 2.2 — an analytic
+Poisson-bracket drift with no basis, no eigenproblem and no conditioning, against a whitened
+generalized eigenproblem, about an effect nobody predicted.**
+
+*And the "2.8× agreement" was wrong twice: wrong POWER (caught by the bridge) and wrong OBJECT —
+`24.3` is the fitted direction, and the fitted direction is not `Q`.*
+
+**The bridge's ① reading was right in substance and wrong in sign: the fit is suppressed 409× MORE
+than `Q`, not less, while correlating with it at 1.0000.** *Q plus a small corrector — small enough
+that the correlation is 1 to four decimals, effective enough to remove 409× of the drift.*
+
+### 4. The corrector asymmetry is the polynomial/rational contrast, with no added column
+
+           Q scored   best-basis fit   corrector gain
+      A  2.0054e-07       4.9073e-10          408.7x
+      C  4.6401e-10       2.0235e-11           22.9x
+                     ratio of gains            17.8x
+
+*Bare `Q` drifts on A because A's survivor is `K_A(ε) = Q + ε·δK + …`, not `Q`.*
+
+> **A's correction is POLYNOMIAL and the basis captures it (409×). C's correction is RATIONAL and the
+> basis captures part (23×). The 17.8× is the polynomial-vs-rational distinction the triple was built
+> around — measured in the UNAUGMENTED basis, with no `δK`, no sham and no added column, in a
+> statistic nobody built for it.** *13× clear of the 1.33× identity bound.*
+
+**And it speaks to the logged tension by landing between the two positions rather than on either:**
+
+    leg 6's ladder    C CERTIFY at 1.535e-06  -> survivor OUTSIDE d2_rat
+    representability  var_within 0.0412       -> part INSIDE the rational span
+    THIS              23x against A's 409x    -> PARTLY inside
+
+*What "partly representable" should look like — the reading that lets both prior results survive with
+restated scope rather than one of them dying. Offered as a third statistic, not a resolution.*
+
+### 5. The ladder closes with nothing left over
+
+    Q on A          2.005e-07
+    best basis      4.907e-10    (409x -- what a polynomial corrector buys)
+    + dK            2.126e-15    (a further 230,837x)
+    A's own floor   1.9853e-15   -> the augmented fit lands 1.1x above it
+
+**Every step accounted for, and the final row landing 1.1× above an independently measured floor is
+the check that the whole chain is consistent.**
