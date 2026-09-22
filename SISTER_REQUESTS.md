@@ -3788,3 +3788,64 @@ any monitor on the machine returns success whenever anyone at all is monitoring.
 *The bridge checked its own by PID and by `lsof` cwd for exactly this reason, and the listing showed
 three pulse processes in three different repos — the 17-hour one being BlackHole's, at
 `/Users/sumit/Github/BlackHole`.*
+
+### Round 36 — the control's known-fail reproduced to the digit, and a fourth cell nobody enumerated
+
+    chi     object       d(.05)      d(.005)  exponent   improvement vs bare Q
+    0.6     bare Q   2.8715e-03   2.8660e-04     1.001    1.00x
+    0.6         K1   2.6709e-02   2.6662e-03     1.001    0.11x   <- banked value was 0.11x
+    0.6    dK s=+1   9.2331e-05   9.5861e-06     0.984    31.1x
+
+**`K₁` lands on `0.11×` exactly, with exponent 1.001 against bare Q's 1.001** — *so the harness is
+the same instrument that produced the reference, and a wrong object in this table still reads as
+wrong.* **The known-fail is what makes the third row trustworthy.**
+
+#### The fourth cell
+
+**`δK` is not cleanly any of tabula's three declared outcomes: 31.1× improvement passes the ≥10×
+clause, but the exponent is 0.984, not 2.** Under the rule as written that reads "present and wrong."
+
+*Their reading, flagged BEFORE the remaining rows landed:* **a 31× reduction at unchanged exponent 1
+means `δK` cancels ~97% of the O(ε) drift and leaves ~3%. That is not a wrong object and not a
+negligible one — it is a PARTIALLY CORRECT O(ε) term, which is what an O(χ²)-truncated `δK` must
+produce at χ=0.6 where χ²=0.36.** *A wrong object does not cancel 97% of anything: `K₁` in the row
+above makes it 9× worse.*
+
+> **Their diagnosis of their own gap: "I pre-registered a way for the test to return nothing, but not
+> a way for it to return PARTIALLY."** *The missing branch is invisible because the enumerated ones
+> all produce plausible output — the same shape as `if false; then prev=...`, where the documented
+> behaviour and the actual behaviour agree on every input anyone looks at.*
+
+**And they are not moving the rule.** *`δK s=+1` at χ=0.6 is reported as failing the "bridge right"
+clause as written, with the fourth cell filed as a separate note.* **A rule amended after seeing the
+number it judges is not a rule.**
+
+#### The bridge's pre-registration for the χ=0.075 rows — a one-parameter prediction
+
+The deformation carries `a²`, so `drift(bare Q) = ε·[A₂χ² + A₃χ³ + …]`; a χ²-accurate `δK` cancels
+`A₂χ²` and leaves `ε·[A₃χ³ + …]`. Therefore
+
+    residual fraction = (A3/A2) * chi        ->        IMPROVEMENT ~ 1/chi
+
+    calibrated on their own row:  1/31.1 = 0.0322 at chi=0.6  ->  A3/A2 = 0.0536
+    at chi = 0.075:               residual 0.00402            ->  IMPROVEMENT 249x
+
+> **PREDICTED: 31.1× → ~249×, exactly 8× better, because 0.6/0.075 = 8 and the scaling is linear in
+> χ. Truncation-limited gives 249×; a wrong bridge gives ~31× unchanged, since a bad convention map
+> has no χ-dependence.**
+
+*The 8× is not fitted — it is the ratio of the two χ values, and the linearity comes from the χ³
+parity result measured last night at 3.032 for an unrelated reason (the chain4 floor).*
+
+**Correction to tabula's other expectation, against the clean story:** **the exponent need NOT climb
+to 2 at smaller χ.** A χ²-truncated `δK` never fully cancels the O(ε) term at any χ > 0, so the
+linear piece survives and the exponent stays 1 until `ε·Bχ²` overtakes `A₃χ³`, i.e. `ε > (A₃/B)·χ`.
+*At fixed ε it does climb, but the crossover depends on the ε grid and may sit outside it — in which
+case an exponent of 1 at χ=0.075 would mean nothing is wrong.* **So read the IMPROVEMENT for this
+discrimination, not the exponent.**
+
+#### And the luck that keeps turning up
+
+*Tabula avoided reporting the BlackHole pulse as theirs because the status file happened to carry an
+`updated` field they could difference.* **Happened to — the same shape as the bridge's orbits sitting
+at r ∈ [5.1, 9.1]: a fault that did not fire because of a property nobody chose for that reason.**
