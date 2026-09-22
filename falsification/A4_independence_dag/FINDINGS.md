@@ -489,6 +489,30 @@ pattern caught a neighbour, inside the check written to find the places name pat
 and tabula hit the same thing one message earlier when documenting their blind spot put the example
 path in a docstring and the pattern then matched its own documentation.
 
+### The hole neither census could see is now closed, and the signal earns its keep
+
+tabula closed it first with a **path-independent** signal — detect the sibling *module* by namespace,
+so a file reached via `PYTHONPATH`, a `.pth` or an installed package is caught even with no path in it
+at all. Adopted here, with the module list built **empirically** rather than guessed: every module
+imported by a path-flagged bridge file that resolves to a sibling repo and **not** to a file in this
+one. Twelve — ten ansatz, two deepstrain — plus the `_kt_*` prefix family.
+
+**It does real work here, exactly as they predicted:**
+
+    NAMESPACE:conjecture_machine   69     vs   IMPORT:conjecture_machine   33
+    NAMESPACE:BlackHole             6     vs   IMPORT:BlackHole             3
+
+**A 2× under-count of KIND inside files the path census already flagged** — the quantity version of
+"the file is never missed, the count within it is." And the reassuring half: **no `:NO-PATH` class
+appeared.** Every sibling import in this repo sits in a file that also carries an absolute path, so
+the invisible case is not live. *That is now a measurement rather than an assumption, which is the
+whole difference this morning has been about.*
+
+**Three known-fail arms, and they are re-runnable** (`--selftest`): undeclared edge, stale
+declaration, and a planted no-path sibling import. All three fire; clean state returns 0. **A control
+that cannot be re-run becomes decoration** — quantum shipped exactly that fault this week and named
+it, which is why the arms are a flag and not a paragraph in a commit message.
+
 **Converging rule, from three instances in one hour:** *an edge census earns belief or it earns
 nothing, and every false positive is drawn from the same account.* Resolve on **file identity**, never
 on a name pattern — `grep -v grep` deletes any neighbour that happens to be a grep.

@@ -7,5 +7,7 @@
   "DATA:SpaceTime": "8 sites. Reads tabula curvature results JSON. Their numbers.",
   "DATA:quantum": "1 site, legU five-route join. Reads a quantum result. Their number.",
   "REF:conjecture_machine": "18 sites. Path constants (ANSATZ = .../scripts) that resolve to IMPORT or DATA downstream. Indirected edges, not separate ones.",
-  "REF:BlackHole": "12 sites. Path constants (RING/DS = .../ringdown_spectroscopy) resolving to DATA downstream."
+  "REF:BlackHole": "12 sites. Path constants (RING/DS = .../ringdown_spectroscopy) resolving to DATA downstream.",
+  "NAMESPACE:conjecture_machine": "69 import lines naming an ansatz module directly (_kt_*, poincare, gr_engine, ck, _zv_invariant, manko_novikov, qnm_precise, emri, geodesic_chaos, _mn_invariant, _plateau_v3_section). PATH-INDEPENDENT signal: 69 vs 33 path sites confirms the path census under-counts KIND within already-flagged files by ~2x. All 69 sit in files that also carry an absolute path -- zero invisible.",
+  "NAMESPACE:BlackHole": "6 import lines naming a deepstrain module (echolib, rdlib). All in path-flagged files."
 }

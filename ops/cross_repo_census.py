@@ -42,6 +42,21 @@ PATH_RE = re.compile(r"/Users/sumit/Github/(" + "|".join(SIBS) + r")(/[\w./\-]*)
 
 ALLOWLIST = pathlib.Path(__file__).parent / "cross_repo_allowlist.json"
 
+# PATH-INDEPENDENT SIGNAL (tabula's fix, adopted 2026-09-22).
+# The case BOTH path-censuses miss entirely: a file importing a sibling module with
+# NEITHER an absolute path NOR an in-file sys.path.insert -- reached via PYTHONPATH,
+# a .pth, or an installed package. Paths cannot see it; the NAMESPACE can.
+# List built empirically: every module imported by a path-flagged bridge file that
+# resolves to a sibling repo and NOT to a file in this one.
+SIBLING_MODULES = {
+    "conjecture_machine": ["_mn_invariant", "_plateau_v3_section", "_zv_invariant", "ck",
+                           "emri", "geodesic_chaos", "gr_engine", "manko_novikov",
+                           "poincare", "qnm_precise"],
+    "BlackHole": ["echolib", "rdlib"],
+}
+SIBLING_PREFIXES = {"conjecture_machine": ["_kt_"]}
+IMPORT_RE = re.compile(r"^\s*(?:from|import)\s+([\w.]+)")
+
 def classify(line):
     if ".venv/bin/python" in line:
         return "VENV"
@@ -50,6 +65,27 @@ def classify(line):
     if re.search(r"\.(json|npz|txt|csv|h5)\b", line):
         return "DATA"
     return "REF"
+
+def scan_namespace():
+    """Files importing a sibling MODULE. Split by whether a path also appears:
+    with a path -> already covered; WITHOUT -> the case paths cannot see."""
+    hits = {}
+    for p in sorted(ROOT.rglob("*.py")):
+        if ".git" in p.parts or p.name == "cross_repo_census.py":
+            continue
+        txt = p.read_text(errors="replace")
+        has_path = bool(PATH_RE.search(txt))
+        for ln in txt.splitlines():
+            m = IMPORT_RE.match(ln)
+            if not m:
+                continue
+            mod = m.group(1).split(".")[0]
+            for sib, mods in SIBLING_MODULES.items():
+                pre = SIBLING_PREFIXES.get(sib, [])
+                if mod in mods or any(mod.startswith(x) for x in pre):
+                    key = f"NAMESPACE:{sib}" + ("" if has_path else ":NO-PATH")
+                    hits.setdefault(key, []).append(f"{p.relative_to(ROOT)}")
+    return hits
 
 def scan():
     edges = {}
@@ -65,8 +101,9 @@ def scan():
             edges.setdefault(key, []).append(f"{p.relative_to(ROOT)}:{i}")
     return edges
 
-def main():
+def _run():
     edges = scan()
+    edges.update(scan_namespace())
     declared = json.loads(ALLOWLIST.read_text()) if ALLOWLIST.exists() else {}
 
     live = {k: v for k, v in edges.items() if not k.startswith("VENV:")}
@@ -98,4 +135,48 @@ def main():
         print(f"\nPASS: {len(live)} edge class(es), all declared; none stale.")
     return 1 if fail else 0
 
+def main():
+    return _run()
+
+def selftest():
+    """Three known-fail arms. A gate only ever seen to pass has not been tested,
+    and a control that cannot be re-run becomes decoration (quantum's, 2026-09-22)."""
+    import json, tempfile, os
+    orig = ALLOWLIST.read_text()
+    ctl = ROOT / "ops" / "_selftest_nopath_TMP.py"
+    arms, ok = [], True
+    try:
+        # arm 1: undeclared edge must fail
+        d = json.loads(orig); d.pop("IMPORT:conjecture_machine", None)
+        ALLOWLIST.write_text(json.dumps(d))
+        arms.append(("undeclared edge", _quiet() == 1))
+        # arm 2: stale declaration must fail
+        d = json.loads(orig); d["DATA:no_such_repo"] = "stale"
+        ALLOWLIST.write_text(json.dumps(d))
+        arms.append(("stale declaration", _quiet() == 1))
+        # arm 3: the invisible file -- sibling import, no path anywhere
+        ALLOWLIST.write_text(orig)
+        ctl.write_text("from poincare import build_hamilton  # control\n")
+        arms.append(("no-path sibling import", _quiet() == 1))
+    finally:
+        ALLOWLIST.write_text(orig)
+        if ctl.exists():
+            ctl.unlink()
+    for name, passed in arms:
+        print(f"  {'PASS' if passed else 'FAIL'}  arm fires on: {name}")
+        ok &= passed
+    print(f"  {'PASS' if _quiet() == 0 else 'FAIL'}  clean state returns 0")
+    return 0 if ok and _quiet() == 0 else 1
+
+def _quiet():
+    import io, contextlib
+    buf = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(buf):
+            return _run()
+    except SystemExit as e:
+        return e.code
+
+if "--selftest" in sys.argv:
+    sys.exit(selftest())
 sys.exit(main())
