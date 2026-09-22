@@ -4997,3 +4997,89 @@ works. 75 versus 200 does not discriminate.*
 *And running `A+δK` inside the same job as A-vs-C is the fingerprint discipline applied BEFORE the
 fact rather than as a gate:* **the gate catches a mismatch; designing the job so no mismatch is
 possible is strictly better, and it is the first time today that has happened by construction.**
+
+---
+
+## Round 55 — the instrument works, and the pair requirement is measured (2026-09-22)
+
+       eps       A supp     C supp     ratio |  A+dK/floor  C+dK/floor
+      0.05      34,350x        55x      622x |       7.2x        5.7x
+      0.10     120,200x       145x      829x |       8.4x       11.4x
+      0.20     230,837x       192x    1,204x |      17.3x       32.6x
+
+    PREDICTED  C+dK ~75x as an ORDER OF MAGNITUDE       MEASURED 55x..192x    IN BAND
+    PREDICTED  ratio ~3090x                             MEASURED 1,204x       SAME ORDER
+
+**Both arms uncensored — minimum `margin/floor` 7.2× and 5.7× — and the ratio is 905× clear of the
+1.33× identity bound. `C+δK` is monotone, exponent 1.255.**
+
+> **`δK` suppresses the deformation it was derived from by ~2e5× and a different deformation by
+> ~1e2×. Three orders of separation. The screen is not generic and it CAN discriminate once the pair
+> is actually separated.**
+
+### What it settles
+
+**The instrument can return a positive, so a null from it is interpretable at all — which it was not
+before this ran.** *`δK` is specific to A's deformation, shown from both sides: the sham says same
+shape, no effect; C says different deformation, 1000× less effect.*
+
+**And the A/B null is a property of the PAIR, demonstrated within one instrument, one column, one
+grid:**
+
+    0.03%  separation  ->  ratio     1.23
+    11.57% separation  ->  ratio 1,204
+
+*The pair requirement measured rather than argued.*
+
+### What it does not settle
+
+**C keeps Carter RATIONALLY, so this is polynomial-survivor versus rational-survivor, not survivor
+versus none. The leg's original question is untouched.**
+
+### On the prediction's weak leg
+
+*The bridge committed to an order of magnitude because the 11.57% is an angle in DEFORMATION space
+while the relevant angle lives in VIOLATION space.* **Measured 1,204× against predicted ~3090× is a
+factor of 2.6 — well inside an order, so the angle is approximately preserved.**
+
+> *Tabula, filing it correctly:* **"That is a bonus finding about the map. The prediction was never
+> entitled to it, and I have recorded it as such rather than as the prediction being sharper than
+> claimed."** *A prediction that lands inside its stated band has earned exactly its stated band and
+> nothing more.*
+
+### The loose end, logged rather than rationalised — and it splits on two prints
+
+**C's deformation is 3.6× LARGER than A's yet its unaugmented margin is 24× SMALLER.** *Amplitude²
+predicts C should be 12.9× larger, so the total discrepancy is `315×`.*
+
+`heldout = mean_traj(var_within)/var_total` is a ratio, and the two explanations live in different
+halves of it:
+
+    (1) REPRESENTABILITY  part of C's invariant is already in the rational span, the fit is
+                          genuinely better, the NUMERATOR is small.
+                          PREDICTS var_within(C) ~24x SMALLER than A's.
+    (2) NORMALISATION     a larger deformation gives a larger across-ensemble spread, the
+                          DENOMINATOR is larger, and the ratio falls with no representability.
+                          PREDICTS var_within(C) ~13x LARGER, var_total ~315x larger still.
+
+> **They point in opposite directions — one says `var_within` falls, the other says it rises 13×.
+> Report numerator and denominator separately for A and C: two prints, no run.**
+
+**And if (1) holds there is a tension with the leg-6 record.** *Leg 6's CERTIFY-RELATIVE-TO-BASIS
+found "C's rational rung scales like something with NO survivor in the degree-2 rational basis" —
+C's survivor OUTSIDE `d2_rat`. Hypothesis (1) says part of it is INSIDE.* **Different statistics, not
+formally contradictory, pointing opposite ways about one question — and whichever survives, the other
+needs its scope restated.** *If (1) holds it is the more interesting outcome, because the leg-6 C
+conclusion is one of the few things from that leg still standing.*
+
+### Where the arc closes
+
+> **"The leg-6 claim stands exactly where it stood before any of this: on `K₀` being in the span at
+> ε=0 with the margin rising as ε². What changed is that we now know why the test built to check it
+> could not, that the instrument built to run it works, and what a pair would have to look like for
+> the test to mean anything — a requirement on the MATERIAL rather than on the method."**
+
+*And the result itself is the one thing from today that needed no qualification: both arms
+uncensored, 905× clear of the identity bound, monotone, three orders of separation.* **After a day of
+censored statistics, borrowed denominators and 1-ulp scatter — a measurement with nothing wrong with
+it.**
