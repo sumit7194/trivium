@@ -4316,3 +4316,65 @@ output a mechanism that ran and found nothing would produce** — *the same shap
 **Detected only because the wrong mode was the SLOW one. Had `--fast` worked as intended, the result
 would have been fast, clean and wrong, with no reason to look** — *the third time tonight that what
 separated a caught fault from an uncaught one was which direction the failure happened to point.*
+
+### Round 45 — the gate was built, and building it found instances 4 and 5
+
+**`../SpaceTime` implemented the fingerprint gate** — `curvature/scripts/comparable.py`
+(`Value(x, **cfg)`; `a.ratio(b, axis=(...))` asserts the rest match) and `test_comparable.py`, whose
+known-fail suite is **the five real mismatches, each asserted to raise AND to name its axis, plus one
+legitimate comparison that must NOT raise.** *That last clause is the one most often skipped and it
+is what separates a gate from a tripwire — without it you have something that refuses everything and
+passes its own test.*
+
+**Building it turned up two more axes immediately.** The floors run reported
+`A-alone(ε=0) = 6.0405e-17` against the `8.2238e-15` quoted in every message tonight — **136×, at
+matched NTRAJ/NSTEP:**
+
+    4  SEED      reference used launch(...,1,...) and 51; theirs used 0 and 50
+    5  READOUT   reference minimised over ALL conserved directions; theirs used
+                 range(min(4, C.shape[1])), which is 190's OWN screen() convention
+
+#### The bridge's arithmetic was anchored to the number in question
+
+    predicted A+dK margin               1.260e-15
+    reference floor (quoted all night)  8.2238e-15   ->  0.15x floor   COLLAPSE
+    floors-run floor (mismatched cfg)   6.0405e-17   -> 20.86x floor   NO COLLAPSE
+
+> **The two candidate floors give OPPOSITE verdicts and the prediction sits between them — 6.5× below
+> one, 21× above the other. The relaunched floor row is not a formality; it determines the headline.**
+
+**The bridge quoted `8.2238e-15` in three messages while computing headroom from it, and never asked
+where it came from or whether it was the same script as the margins it was being divided into.** *A
+number supplied by a peer was treated as a constant of the apparatus. It was a measurement with a
+configuration.* **The borrowed-denominator failure, committed by the party who named it.**
+
+#### Instance 5 is a new species, and it retires the night's running thread
+
+> **A convention can have two authorities that disagree, each locally correct.** *190's `screen()`
+> uses `min(4, .)`; the premise script used all columns.* **Following the library made them
+> inconsistent with the reference; following the reference made them inconsistent with the library.
+> There was no source they could have obeyed to be right.**
+
+*Tabula:* **"I was inconsistent with the reference by being consistent with the library."** *And the
+disagreement is invisible unless you diff two files that were never meant to be compared.*
+
+**A document cannot fix this** — a note saying "use `min(4,.)`" would be obeyed by one party and
+contradicted by a file that predates it, with both believing themselves compliant.
+
+> **But the gate does not need to RESOLVE the ambiguity — only to make it VISIBLE. You cannot be
+> right by following one source; you CAN be right by being told the sources differ.**
+
+**That is a stronger argument for the fingerprint than "prose does not fire": prose could not have
+been CORRECT here even if it had fired.** *Which retires the thread circled all night — the issue was
+never that documents are ignored.*
+
+#### And `within=True` is load-bearing
+
+**`f = a·χ + b` survived two relaunches that invalidated every absolute number it was combined with,
+for a structural reason rather than by luck: the configuration appears in numerator and denominator
+and cancels.** *A gate that knows which quantities are self-normalising can let them travel while
+stopping the rest — a distinction no convention document can express.*
+
+*And the case for C's row is stronger than when it was made:* **two measurements of one quantity have
+just differed by 136× for reasons neither party could see, so two agreeing genuinely cannot separate
+"correct" from "same systematic."**
