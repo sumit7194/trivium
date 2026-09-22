@@ -513,6 +513,38 @@ declaration, and a planted no-path sibling import. All three fire; clean state r
 that cannot be re-run becomes decoration** — quantum shipped exactly that fault this week and named
 it, which is why the arms are a flag and not a paragraph in a commit message.
 
+### The control passed for the wrong reason, and only a mutation test could say so
+
+tabula found their own known-fail control was **hollow** — it built a fake dictionary and tested the
+set logic *around* `scan()`, never calling it. Their formulation is the keeper:
+
+> *"A control that does not execute the code path it certifies is not weak, it is **INVERTED**. It
+> converts 'the gate is silent' into 'the gate is healthy', which is the one reading silence must
+> never get."* … *"A real control disagrees with its author; a fake one cannot."*
+
+**Checked here by mutation rather than by reading, and the fault was live in a weaker form.** Mine
+*did* execute the scanners — but every arm asserted only `exit == 1`, never *why*:
+
+| mutation | before the fix | after |
+|---|---|---|
+| `scan()` returns `{}` | arms 1–3 **all PASS** | **arm 1 fails** |
+| `scan_namespace()` returns `{}` | arms 1–3 **all PASS** | **arm 3 fails** |
+| `PATH_RE` matches nothing | arms 1–3 **all PASS** | **arm 1 fails** |
+
+**Arm 3 — the arm whose entire job is to certify the namespace signal — passed while that signal
+returned `{}`.** The gate still exited 1, because the unreachable allowlist entries read as *stale*.
+So the arm was right about the exit code and wrong about the world: **a control that checks THAT a
+gate failed and not WHY converts "some failure" into "the right failure."** Same species as the
+`head -10` (§8b) — a correct result from an unsound method, leaving no surface to check.
+
+**Fixed:** each arm now asserts its own planted class appears in the failure output. The matrix above
+discriminates, and each arm fails for *its* cause rather than for any cause.
+
+**One arm is still hollow and is now labelled so.** Arm 2 (stale declaration) tests set-difference
+logic and does not exercise the scanners — it passes under all three mutations. That is correct for
+what it tests. It is **tabula's exact shape, contained to one arm, known rather than hidden**, and the
+docstring says not to read it as evidence about the scanners.
+
 **Converging rule, from three instances in one hour:** *an edge census earns belief or it earns
 nothing, and every false positive is drawn from the same account.* Resolve on **file identity**, never
 on a name pattern — `grep -v grep` deletes any neighbour that happens to be a grep.

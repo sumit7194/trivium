@@ -149,15 +149,21 @@ def selftest():
         # arm 1: undeclared edge must fail
         d = json.loads(orig); d.pop("IMPORT:conjecture_machine", None)
         ALLOWLIST.write_text(json.dumps(d))
-        arms.append(("undeclared edge", _quiet() == 1))
-        # arm 2: stale declaration must fail
+        arms.append(("undeclared edge", _fires("IMPORT:conjecture_machine")))
+        # arm 2: stale declaration must fail.
+        # STATED: this arm tests the SET-DIFFERENCE logic and does NOT exercise the
+        # scanners -- it passes under all three scanner mutations. That is correct for
+        # what it tests and is exactly tabula's hollow-control shape, contained to one
+        # arm and known rather than hidden. Arms 1 and 3 are the ones that certify the
+        # scanners; do not read arm 2 as evidence about them.
         d = json.loads(orig); d["DATA:no_such_repo"] = "stale"
         ALLOWLIST.write_text(json.dumps(d))
-        arms.append(("stale declaration", _quiet() == 1))
+        arms.append(("stale declaration", _fires("DATA:no_such_repo")))
         # arm 3: the invisible file -- sibling import, no path anywhere
         ALLOWLIST.write_text(orig)
         ctl.write_text("from poincare import build_hamilton  # control\n")
-        arms.append(("no-path sibling import", _quiet() == 1))
+        arms.append(("no-path sibling import",
+                     _fires("NAMESPACE:conjecture_machine:NO-PATH")))
     finally:
         ALLOWLIST.write_text(orig)
         if ctl.exists():
@@ -168,14 +174,28 @@ def selftest():
     print(f"  {'PASS' if _quiet() == 0 else 'FAIL'}  clean state returns 0")
     return 0 if ok and _quiet() == 0 else 1
 
-def _quiet():
+def _fires(expect):
+    """An arm passes only if the gate fails AND NAMES THE PLANTED CLASS.
+
+    Found by mutation test 2026-09-22: arms asserting only `exit == 1` passed
+    under three separate scanner mutations -- including arm 3 passing while the
+    namespace scanner it certifies returned {}. The gate still exited 1, because
+    the now-unreachable allowlist entries read as stale. A control that checks
+    THAT a gate failed and not WHY converts "some failure" into "the right
+    failure", which is tabula's hollow-control fault one level up.
+    """
+    code, out = _quiet(capture=True)
+    return code == 1 and expect in out
+
+def _quiet(capture=False):
     import io, contextlib
     buf = io.StringIO()
     try:
         with contextlib.redirect_stdout(buf):
-            return _run()
+            code = _run()
     except SystemExit as e:
-        return e.code
+        code = e.code
+    return (code, buf.getvalue()) if capture else code
 
 if "--selftest" in sys.argv:
     sys.exit(selftest())
