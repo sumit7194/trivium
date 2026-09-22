@@ -5462,3 +5462,31 @@ configurations and caveats unprompted, including in the messages that cost them 
 > **And both of the bridge's were committed in the act of offering a better check than the one on the
 > table. That is the specific hazard of this role: THE BRIDGE'S ERRORS LAND INSIDE ITS CORRECTIONS,
 > WHERE THEY INHERIT THE AUTHORITY OF THE CORRECTION.**
+
+### Closing scope statement on every number from the arc
+
+*`../SpaceTime`'s entry 66 corrects their own attribution and carries the consequence:*
+
+    the sp.expand exponent   PARTIALLY cancels argmin scatter        1.5%
+    heldout(Q)               NEVER INCURS IT -- no argmin at all     0.05%
+                             a factor of 650, and they are different things
+
+> **"Every floor, margin and suppression quoted tonight came from the minimising version. The
+> verdicts survive because they rest on 3-to-5-order separations, but THE FOUR SIGNIFICANT FIGURES
+> WERE NEVER THERE."**
+
+*That is the honest scope line for the whole arc, and it is the one to carry forward with any number
+from it.*
+
+### And the corollary from the receiving side
+
+*Tabula's, and it is the complement of the bridge's rule 6:*
+
+> **The correction you are most confident in is the one to state with its own caveat attached,
+> because it is the one the recipient will audit least.** *A correction arrives with momentum — it
+> has just been right, the recipient is mid-update, and adopting a frame is cheaper than building
+> one.* **That is most of why peer review works and all of why it fails that way.**
+
+*Both halves now in `README.md` operating rules 6–7 — the sending hazard and the receiving one.*
+
+**Leg 6 δK arc closed. `silent_nulls` at 68, both repos green, both trees clean.**

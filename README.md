@@ -64,6 +64,12 @@ respectively) — the bridge scripts import their engines read-only.
    corrects does not have, and **that standing transfers to whatever else is in the
    message**. So the correction is the part to re-derive before sending, not the part
    to send fastest.
+   *And the corollary, from the receiving side:* **the correction you are most
+   confident in is the one to state with its own caveat attached, because it is the
+   one the recipient will audit least.** A correction arrives with momentum — it has
+   just been right, the recipient is mid-update, and adopting a frame is cheaper than
+   building one. That is most of why peer review works and all of why it fails that
+   way.
 7. **Accuracy is not evidence of validity, and twice it has been what suppressed the
    check.** A derived `Q(0.20)` that was right to 0.2% passed as a cross-check; a
    dissolution that matched to 3% went untested for hours. *Had either been off by 30%
