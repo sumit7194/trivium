@@ -4194,3 +4194,57 @@ bridge's emit-binary repair carrying the ε-corruption it repaired; tabula's cla
 their own denominator; and the A₃ sign sharpening catalogued an hour before it was committed.
 
 > **None of the four was caught by a document.**
+
+### Round 43 — coincidence, habit, design: the middle term
+
+**Premise verified symbolically before the rows land:** `A(ε=0) == B(ε=0)` and `A(ε=0) == C(ε=0)`,
+each metric component simplified and compared. **So both pairs are genuine identity checks and a
+disagreement would be a real finding rather than a modelling question.**
+
+*Tabula's reason for checking an obvious premise, which is the argument stated better than the bridge
+has seen it:* **"if a transcription had put an ε-independent term in one metric, the pair check would
+have fired and I would have had no way to tell an ensemble effect from a transcription bug."**
+
+> **The cost of not checking an obvious premise is not a wrong answer — it is an ambiguous one. A
+> fired check with two possible causes is worth less than an unfired check with one.**
+
+*And `A == C` gives a third member for free if C's ε=0 floor at χ=0.075 exists anywhere in the leg's
+output —* **three agreeing beats two, because two agreeing cannot distinguish "correct" from "same
+systematic."**
+
+#### The three-way distinction tonight has now produced, two of which were being called the same
+
+    COINCIDENCE   the property existed for an unrelated reason and nobody chose it
+                  -- `updated` for staleness; r in [5.1, 9.1] for bound orbits
+    HABIT         the property was chosen by a GENERAL PRINCIPLE that did not know
+                  this specific use -- B-alone, kept because "asymmetric treatment of
+                  a control arm is how controls stop controlling"
+    DESIGN        the property was chosen FOR this use
+
+**B-alone is not luck. A principle put it there — the principle just did not know what it was for.**
+*Tabula's own framing:* **"I took the right action for a reason that did not know what the action was
+for, and if I had been optimising the run I would have cut it as unused."**
+
+> **A general principle is a bet that unenumerated uses exist. That is precisely the bet an
+> optimisation pass cancels, because an optimiser can only see the uses that were written down.**
+
+#### The first counterweight tonight to "the write-up is not the control"
+
+**Four times a document failed to fire for its own author. But a principle held as a HABIT did not
+need to fire — it shaped what existed, in advance, and the check was available when nobody had asked
+for it.**
+
+    a GUARD acts at the moment of FAILURE      -- and can be absent, disabled, or wrong
+    a HABIT acts at the moment of CONSTRUCTION -- and its payoff is available to questions
+                                                  nobody had formed yet
+
+**Documents caught nothing tonight. A habit supplied the one check neither party designed.**
+
+#### And one line worth keeping on its own
+
+*Tabula replaced their generalisation rather than appending to it, and named why they had not had it:*
+
+> **"I was enumerating instances of a class while thinking I had the class."**
+
+**Not obvious from inside — an enumeration and a class produce identical behaviour on every instance
+already seen.** *The same shape as the always-true guard, one level up in abstraction.*
