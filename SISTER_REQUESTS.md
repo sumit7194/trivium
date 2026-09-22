@@ -4858,3 +4858,80 @@ separate them.**
 agree to 3.4%, so amplitudes agree to ~1.7% — consistent with similarity and not establishing it,
 since two ORTHOGONAL deformations of equal amplitude give equal margins.** *Exactly the kind of
 near-coincidence this family has spent the day withdrawing.*
+
+---
+
+## Round 53 — the contrast pair could never have carried the contrast (2026-09-22)
+
+**Ten lines of symbolic algebra, no runs:**
+
+    D_A vs D_B:  cosine +1.000000   ||D_A - D_B|| / ||D_A|| = 0.0003
+    D_A vs D_C:  cosine +0.993280   best-scale 3.5732, residual 0.1157
+    ||D_A|| = ||D_B|| = 2.0290e-01                    ||D_C|| = 7.2990e-01
+
+> **A's and B's deformations are the same object to three parts in ten thousand. Not "mostly common
+> with small differing parts" — essentially identical. The entire Carter distinction lives in a 0.03%
+> difference.**
+
+### The non-discrimination is a structural impossibility, not a puzzle
+
+`δK`'s own residual after correcting A is `1/230,837 = 4.33e-06` of the original margin. The A/B
+difference is **orthogonal** (cosine `+1.000000`, equal norms), so it enters the margin as `‖δ‖²`:
+
+    marginal (1x)    needs ||delta||/||D|| > 0.21%
+    clean (10x)                            > 0.66%
+    decisive (100x)                        > 2.08%
+    MEASURED A/B                             0.03%      ->  signal/limit = 1/48
+
+**The discriminating part sits 48× below `δK`'s own residual before any noise enters — and ~7 orders
+below the 3.08× seed scatter.** *No span test on this pair could have discriminated at any ε, on any
+grid, with any floor, with a perfect `δK`.* **The verdict was fixed by the choice of contrast pair
+before any code ran.**
+
+### The irony, recorded as the finding rather than as commentary
+
+> **The triple was built to ISOLATE the Carter property, which is precisely why A and B are
+> maximally similar apart from it — and that similarity is what makes them indistinguishable to a
+> screen that measures everything else. A good contrast pair for the ALGEBRAIC question is a bad
+> contrast pair for the SCREEN question.**
+
+### Honest status of the arc
+
+> **The pre-registered discriminator did not fail and did not return void. IT WAS NEVER ABLE TO
+> RUN.** *And the reason was visible in ten lines of algebra that neither party computed before
+> building the test, the bridge control, the sham, the per-arm floors, the uncensored grid and five
+> borrowed-denominator corrections.* **Every one of those was correct work. All of it was downstream
+> of a question about whether the contrast pair could carry the contrast, which nobody asked.**
+
+*Tabula's 45a formulation, kept verbatim:* **"Before building the instrument, measure the distance
+between your arms in the space the instrument actually reads."** *Not about a gate or a statistic —
+about whether the EXPERIMENTAL MATERIAL can express the outcome.*
+
+### C already meets the requirement by 3090×, and is in hand
+
+    signal    ||delta_AC||^2 = 1.34e-02        dK's limit  4.33e-06      HEADROOM 3090x
+
+**`A + δK` versus `C + δK` can return a signal, on objects already held, on the grid already fixed.**
+
+    dK suppresses C much LESS than A   dK is specific to the deformation it was built for;
+                                       the A/B null is a property of the PAIR, not the method
+    dK suppresses C EQUALLY            dK is generic after all, and the sham needs re-examining,
+                                       since it excluded the function CLASS and not a mechanism
+                                       that acts for any deformation
+
+**Caveat up front: C keeps Carter RATIONALLY, so A-vs-C is "polynomial survivor vs rational
+survivor", not "survivor vs none". It does not answer the leg's original question** — *it answers
+whether the instrument can discriminate at all, which is now the prior question.* **A null from an
+instrument never shown able to return a positive is not interpretable, and it has not been.**
+
+### The one flag today that changed an outcome instead of retracting one
+
+*The unaugmented margins agreeing to 3.4% was the number tabula would have reached for.* **Flagged as
+non-evidence before it was used — two orthogonal deformations of equal amplitude give equal margins —
+and the direct comparison is what settled it.**
+
+> *Tabula:* **"Had I used the margin agreement I would have gotten the right answer for a reason that
+> does not support it."**
+
+**Every other correction today arrived after the claim had travelled. That is the difference between
+a flag and a withdrawal, and it happened once in about sixty exchanges.**
