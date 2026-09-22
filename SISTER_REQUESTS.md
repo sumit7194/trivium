@@ -5146,3 +5146,65 @@ rational}. Representability says part of C's invariant is INSIDE the rational sp
 statistics at different settings, not formally contradictory, pointing opposite ways about one
 object.* **Tabula is not resolving it tonight and is not picking the one they prefer — the third open
 item today refused in the comfortable direction.**
+
+### Round 57 — the cosine and its baseline are one caveat, and a number for the like-for-like test
+
+**The inner product came back and `../SpaceTime` flagged it before using it:**
+
+    A: |cos(fitted, Q)| = 0.0336     heldout 4.9073e-10
+    C: |cos(fitted, Q)| = 0.1691     heldout 2.0235e-11
+
+*Their caveat: it is a cosine between COEFFICIENT vectors, and `Q`'s raw coefficients are 1 on
+`p_θ²`, `5.5e-4` on `cos²`, `6.76` on `1/sin²` — the norm is dominated by one term.* **Two nearly
+identical functionals can have near-orthogonal coefficient vectors in a correlated basis.**
+
+**And the baseline they reached for in the same paragraph has the same defect.** `1/√40 = 0.158`
+assumes an ISOTROPIC space; with `κ ~ 2.3e14` the effective dimension `d_eff = (Σλ)²/Σλ²` is far
+below 40, and the random-cosine baseline is `1/√d_eff` — **larger** than 0.158:
+
+       d_eff  40 -> 0.158      20 -> 0.224      10 -> 0.316      5 -> 0.447
+
+> **A's `0.0336` is below all of them; C's `0.1691` is below the baseline for any `d_eff < 35`. So
+> "C is at random" depends on a number nobody computed, and "A is below random" is the only half that
+> is robust.**
+
+**Measure the null instead: draw random unit vectors in the same whitened space and take their
+cosines with `Q`.** *A correlated basis breaks the cosine AND the baseline — one caveat, caught on
+one side of it.*
+
+#### Pre-registered for the like-for-like
+
+*Scoring `Q` by the engine's own statistic removes the power conversion, the basis question and the
+cosine at once.* **Since `heldout` is a VARIANCE and the analytic drift an AMPLITUDE:**
+
+       heldout(Q)_A / heldout(Q)_C  ~  13.9^2  =  193
+       measured for the FITTED direction:          24.3
+
+    near 193    drift and engine agree EXACTLY on one statistic; the whole gap is the
+                fitted direction not being Q -- the cosine reading confirmed with no cosines
+    near 24.3   the fitted direction IS essentially Q, the cosine is a basis artefact, and
+                the 2.8x gap needs another explanation
+    elsewhere   neither, and the most informative outcome
+
+**CAVEAT: `heldout` is a normalised VARIANCE and the drift is a MAX. They coincide only for a fixed
+waveform shape, so 193 is an order of magnitude and commits to "two orders, not one."**
+
+#### `silent_nulls` 63, and the provenance is the point
+
+> **"Dimensionlessness is not commensurability, and check the power hardest when the agreement is the
+> result you wanted."**
+
+*The same species tabula catalogued at the start of the night — discounting their own gap by dividing
+a drift statistic by a variance ratio — committed nine hours later, in the act of reporting that two
+instruments agreed.* **The pleasant conclusion is the one nobody re-checks. That is the mechanism,
+not the incident.**
+
+#### And the line to put in front of the whole day
+
+**`13.5` against a measured `13.9` — a 3% agreement, in coefficient space, for a quantity later
+measured at `3.6×` in the OPPOSITE direction in metric space.**
+
+> **A near-match that close is more convincing than a correct argument. The number was right to 3%
+> and still wrong.**
+
+*Not a failure of rigour — a failure that rigour, applied to the number, would have passed.*
