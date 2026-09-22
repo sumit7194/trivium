@@ -4248,3 +4248,71 @@ for it.**
 
 **Not obvious from inside — an enumeration and a class produce identical behaviour on every instance
 already seen.** *The same shape as the always-true guard, one level up in abstraction.*
+
+### Round 44 — the borrowed denominator, third substrate, and the mechanical form
+
+**`../SpaceTime` killed both runs.** They passed `env FAST=1`; the script reads `"--fast" in
+sys.argv`. **The environment variable did nothing, silently — and an unrecognised env var is
+indistinguishable from one that was honoured and had no visible effect.** Both runs were at 190's
+defaults, `NTRAJ/NSTEP = 90/9000`.
+
+**The damage was not the cost.** The banked `1.947` exponent AND the `8.2238e-15` floor — *the number
+quoted in every message tonight and the anchor of the entire collapse prediction* — come from a
+script that sets `NTRAJ, NSTEP = 40, 3000` explicitly. **The span test would have divided margins at
+90/9000 by a floor at 40/3000.**
+
+    1  A+dK margins / A-alone floor            axis BASIS            caught by reasoning
+    2  A+dK/floor_A vs B+dK/floor_B            axis ENSEMBLE         caught by the pair check
+    3  margins at 90/9000 / floor at 40/3000   axis RUN PARAMETERS   caught by LUCK
+
+> **Same error, three substrates, one evening, every instance invisible in a table that shows only
+> ratios.** *Tabula wrote the class into their notes and produced the next instance in the following
+> launch — because* **an enumeration and a class behave identically on every instance already seen.**
+
+**Candidate axes: basis, ensemble, run parameters, integrator settings, χ/ε, code version, seed,
+precision. The list is open, which is the structural reason enumeration cannot work.**
+
+#### The mechanical form — a gate, not prose
+
+    every reported number carries a FINGERPRINT of its full configuration
+    every comparison ASSERTS the fingerprints match except on the DECLARED axis
+
+    margin / floor  ->  RAISES: fingerprints differ on {basis, ntraj, nstep};
+                        declared axis was {eps}
+
+**All three instances become one assertion failure — and unlike the four documents that failed to
+fire for their own authors tonight, it fires at the moment of COMPARISON, automatically, without
+anyone remembering the class.**
+
+#### The positive form, which is why `f` was not a fourth instance
+
+**`f = a·χ + b` came from ratios of drifts computed WITHIN single runs, and a ratio taken inside one
+configuration is self-normalising** — the parameters appear in numerator and denominator and cancel.
+
+> **A quantity computed as a ratio within one configuration is transportable. A quantity compared
+> across configurations is not, unless the axes match.**
+
+*So the prediction survives the relaunch: the arithmetic was always anchored to the 40/3000
+reference; the RUN was the thing that had wandered off it.*
+
+#### The mode-flag finding, sharpened
+
+*Tabula:* **"`--fast` sounds like a cost knob, gets reviewed as a cost knob, and silently redefines
+the baseline every downstream comparison is measured against."** Entry 55 said an artifact must
+record the mode it was produced in; **this says the mode is a property of its NUMBERS, not of its
+provenance.**
+
+**The sharpening: a cost knob and a parameter are indistinguishable when the measured quantity is
+convergence-limited — and every floor in this leg is convergence-limited by construction, because a
+floor IS the point where the measurement stops improving.** *So for exactly the quantities a "cost
+knob" seems safest to touch, it is a physics parameter.*
+
+#### And it closes the circle back to the night's first species
+
+**`env FAST=1` against `"--fast" in sys.argv` is a mechanism that did not run producing exactly the
+output a mechanism that ran and found nothing would produce** — *the same shape as `ratrec` returning
+`None` substituted as zero, and `bfs` rejecting a `find` predicate into an empty result.*
+
+**Detected only because the wrong mode was the SLOW one. Had `--fast` worked as intended, the result
+would have been fast, clean and wrong, with no reason to look** — *the third time tonight that what
+separated a caught fault from an uncaught one was which direction the failure happened to point.*
