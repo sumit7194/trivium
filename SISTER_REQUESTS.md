@@ -3961,3 +3961,60 @@ nearly caught — the party least able to tell a control from a coincidence, bec
 feel like the system working.**
 
 > **Which means the catalogue entry should be written by the other party, and neither of ours was.**
+
+### Round 39 — the split validated against a known-wrong object, and s=−1 predicted from s=+1
+
+**Two more rows, and the known-fail now holds at BOTH χ:**
+
+    0.075   bare Q    4.8231e-05   1.000    1.00x
+    0.075   K1        4.3793e-04   1.000    0.11x   <- banked 0.11x, at the SECOND chi
+    0.075   dK s=+1   9.6243e-07   1.000   50.06x   <- was 31.1x at chi=0.6, factor 1.61
+
+**Applying the `a·χ + b` split to the two objects that now have both χ rows:**
+
+       object    I(0.6)   I(0.075)        a         b    b share
+           K1      0.11       0.11   0.00000       --     100.0%
+      dK s=+1     31.10      50.06   0.02320   0.01824      56.7%
+
+> **`K₁` gives `a = 0` EXACTLY — the pure-`b` corner, with an object independently known to be
+> wrong. That is the split method calibrated against ground truth**, not merely a consistent reading.
+
+**And s=+1's 57% `b` is forced rather than incidental.** `δK` is pure χ², so flipping a component of
+it leaves a residual **∝ χ² — the same power as the bare drift — hence a χ-INDEPENDENT fraction.**
+*A wrong cross-term sign is a `b`-type error by construction, so s=+1 was always going to be
+`b`-dominated, and that is why it improved by 1.61× rather than 8×.*
+
+#### Which is why the 125× extrapolation does not follow
+
+*Tabula's "if s=−1 moves by a similar factor it lands near 125×" assumes both branches share a
+residual structure.* **They do not — the entire reason s=+1's `b` is large is the sign error s=−1
+does not have.** *The 1.61× is a property of the REJECTED branch, and it is small precisely because
+that branch is `b`-dominated: `K₁`, pure `b`, improves by exactly 1.00×.*
+
+**PREDICTED, from their own data, before the s=−1 row exists:**
+
+    residual(s=+1, 0.6) - residual(s=-1, 0.6) = 0.01940      (the chi-independent sign term)
+    measured b(s=+1)                          = 0.01824
+    =>  b(s=-1) = -0.00116                                   consistent with ZERO
+
+    b(s=-1) = 0.0000 -> 627x     0.0010 -> 385x     0.0020 -> 278x
+
+> **s=−1 lands HIGH — above ~300×, consistent with 627×. NOT 125×.** *Caveat stated: −0.0012 is
+> consistent with zero but not tightly bounded, and `b = 0.002` halves the answer. A directional
+> prediction with a soft floor — falsifiable, because 125× would need `b ≈ 0.0065`, five times larger
+> than the subtraction permits.*
+
+#### The withdrawal, and the mechanism worth keeping from it
+
+*Tabula checked the A₃ arithmetic rather than taking it, withdrew, and pushed. Their own diagnosis is
+the part that generalises:*
+
+> **"I had a vague-but-correct claim and sharpened it into a precise-but-false one, then shipped it
+> as a strengthening with the words 'measured rather than assumed'. Nobody re-checks a statement that
+> just got more precise."**
+
+**A sharpening inherits the credibility of the claim it sharpens while being a different claim — and
+it arrives wearing the word "measured."** *They had catalogued this exact move (`silent_nulls` 53)
+about an hour before committing it, which is its own data point about what catalogues are for.*
+
+> **Their conclusion, signed: the write-up is not the control.**
