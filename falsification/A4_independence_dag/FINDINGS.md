@@ -466,6 +466,33 @@ interpreter is a dependency on their environment, not on their code, and folding
 count would have inflated the coupling by a factor of ~2.5. An edge census that cannot tell an
 interpreter from an import produces a scary number and no finding.*
 
+## 8d. Both censuses are bounded, and the check for blind spots produced one
+
+tabula stated their own blind spot rather than leaving it to be found: their census matches absolute
+paths, so `os.chdir(<sibling>)` is caught while the `open("data/triple/K1_A.txt")` after it is not —
+**the file is never missed, the kind and count within it are under-reported.** They asked whether mine
+had the same hole, noting it matters more here because we have 19 data reads to their one.
+
+**Checked, and the answer is no for their mechanism and yes for an equivalent one:**
+
+- **No `chdir` anywhere in bridge code, and no relative `../<sibling>` references.** Their exact
+  pattern is not live here.
+- **But 20 bare sibling-module imports** (`from _kt_double import …`) carry no path of their own and
+  work only because a `sys.path.insert` ran earlier in the same file. **File never missed, kind and
+  count under-reported — structurally identical to theirs, by a different mechanism.** Both are now
+  stated in the census docstring rather than discovered later.
+
+**And the check itself produced a false positive, which is the part worth keeping.** My grep for
+parent-walked sibling references returned three hits in `falsification/Q2_corner_kappa/code/` — matched
+because the *directory name* contains `corner`, not because anything crosses a repo boundary. **A name
+pattern caught a neighbour, inside the check written to find the places name patterns fail.** Entry 49,
+and tabula hit the same thing one message earlier when documenting their blind spot put the example
+path in a docstring and the pattern then matched its own documentation.
+
+**Converging rule, from three instances in one hour:** *an edge census earns belief or it earns
+nothing, and every false positive is drawn from the same account.* Resolve on **file identity**, never
+on a name pattern — `grep -v grep` deletes any neighbour that happens to be a grep.
+
 ## 9. Honest scope
 
 - An audit of our own record. It prices the evidence everything else here is quoted in; it is not

@@ -14,6 +14,23 @@ Three edge classes, because they carry different evidential weight:
 Exit 1 on: an undeclared IMPORT/DATA edge, or a DECLARED edge that has vanished
 (a stale allowlist is a scope statement with the identical defect as the sentence
 it replaced -- L18).
+
+STATED BLIND SPOTS. A census claiming completeness it does not have is worse than
+one that bounds itself (tabula, who stated theirs first and prompted this block).
+
+  1. MATCHES ABSOLUTE PATHS ONLY. A relative "../conjecture_machine/..." or a
+     post-chdir relative read would be invisible.
+     CHECKED 2026-09-22: this repo has NO chdir anywhere and NO relative sibling
+     references, so neither pattern is live here. Re-check if either appears.
+  2. BARE SIBLING IMPORTS ARE UNDER-COUNTED. 20 lines of the form
+     `from _kt_double import ...` carry no path of their own; they work only
+     because a sys.path.insert ran earlier in the SAME file. The file is therefore
+     never missed -- the insert is always caught -- but the KIND and COUNT within
+     an already-flagged file are under-reported. Structurally identical to
+     tabula's chdir case, by a different mechanism.
+  3. A file using a sibling with neither an absolute path nor an in-file insert
+     would be missed entirely. No such file exists here today; nothing guarantees
+     that tomorrow, which is what clause 1 of the gate is for.
 """
 import re, sys, pathlib, json
 
