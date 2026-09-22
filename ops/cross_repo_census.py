@@ -191,6 +191,22 @@ def selftest():
         code, out = _quiet(capture=True)
         arms.append(("local module w/ sibling prefix NOT flagged",
                      code == 0 and "IMPORT:conjecture_machine" in out))
+        # arm 5: PATH-SENSITIVITY OF THE NAMESPACE CLASSIFIER -- the dual of arm 3.
+        # A sibling import in a file that DOES carry an absolute path must NOT be
+        # classed :NO-PATH. Added 2026-09-22 after tabula's "is there any observable
+        # that separates them" test showed M1 and M3 are NOT the same fault: PATH_RE
+        # is shared, so killing it reclassifies EVERY namespace hit as :NO-PATH, a
+        # wider blast radius than killing scan(). Without this arm the two mutations
+        # carry identical selftest signatures while the live gate can tell them apart
+        # -- a gap in the arms, not a property of the system.
+        ALLOWLIST.write_text(orig)
+        ctl.write_text('import poincare  # control\n'
+                       'P = "/Users/sumit/Github/conjecture_machine/scripts"  # path present\n')
+        code, out = _quiet(capture=True)
+        arms.append(("namespace classifier is path-sensitive",
+                     "NAMESPACE:conjecture_machine:NO-PATH" not in out
+                     and any("NAMESPACE:conjecture_machine" in l and "declared --" in l
+                             for l in out.splitlines())))
     finally:
         ALLOWLIST.write_text(orig)
         if ctl.exists():

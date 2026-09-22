@@ -593,15 +593,44 @@ one state:
     M3  path pattern dead         FAIL  FAIL   ok*  FAIL  FAIL
     M4  prefix resolution removed   ok    ok    ok  FAIL    ok     <- arm 4 ALONE
 
-**Four distinct signatures across five rows: M1 and M3 collapse.** Under the corrected rule that is a
-failure to discriminate — and it is **correct** here rather than a defect, because M1 and M3 are *the
-same fault by two routes*: killing `scan()` and killing its regex both disable path detection
-entirely, so no instrument downstream can tell them apart, and none should claim to. **Stated rather
-than papered over, because a matrix that claims five signatures and delivers four is exactly the
-over-claim this audit has been about.**
+**M1 and M3 collapsed to one signature, and I claimed that was correct "by construction." It was
+not.** tabula proposed the test that decides it — *"is there ANY observable that separates them? If
+not they are one fault with two spellings; if yes, the collapse is a gap in the arms"* — and the
+answer is **yes, and it was visible to the live gate the whole time:**
 
-*arm 3's pass under M1/M3 is correct discrimination: the two scanners are independent and arm 3 fails
-under M2, the mutation targeting its own.*
+    M1 (scan dead)  ->  9 stale declarations, namespace classes reported normally
+    M3 (regex dead) ->  2 UNDECLARED :NO-PATH classes, all 75 namespace hits reclassified
+
+**`PATH_RE` is shared.** `scan_namespace()` uses it for the `has_path` determination, so killing the
+regex has a *wider blast radius* than killing `scan()` — every namespace hit becomes `:NO-PATH`. They
+are not one fault. **My "nothing downstream could distinguish them" was wrong, in the tidier
+direction, about my own architecture.**
+
+**So the collapse was a gap in the arms.** Closed with **arm 5**, the dual of arm 3: a sibling import
+in a file that *does* carry a path must **not** be classed `:NO-PATH`.
+
+    mutation                a1    a2    a3    a4    a5    clean | LIVE GATE
+    healthy                 ok    ok    ok    ok    ok    ok    | PASS
+    M1  scan() dead        FAIL  FAIL   ok   FAIL   ok   FAIL   | FAIL
+    M2  namespace dead      ok    ok   FAIL  FAIL  FAIL  FAIL   | FAIL
+    M3  path pattern dead  FAIL  FAIL   ok   FAIL  FAIL  FAIL   | FAIL
+    M4  prefix unresolved   ok    ok    ok   FAIL   ok    ok    | **PASS — GREEN AND WRONG**
+
+**Five distinct signatures, five rows.** M1 and M3 now separate on arm 5 alone.
+
+### The live-gate column, and it is the argument for the control existing
+
+tabula's addition, and the strongest thing either census produced: **what does the gate report on its
+own, without the selftest?** Three of their four mutations leave their live gate **green**. Here it is
+**one of four** — M4, the prefix-resolution fault that was live in this repo an hour ago.
+
+The difference is **architectural, not virtuous**: my allowlist is densely populated across every
+class, so a dead scanner turns every declaration stale and trips the gate for the wrong reason.
+Theirs is sparser and stays quiet. **Neither design earns credit; the conclusion is the same.** There
+exists a fault class that *only* the control can see, and on the day it was live the gate was green.
+
+> **A gate cannot detect its own blindness. The control is not decoration around the gate — for some
+> faults it is the only instrument.**
 
 **The bottom row is why the arm was worth adding.** Removing prefix resolution is caught by **arm 4
 and nothing else** — every other arm passes and the gate returns 0. That is the fault that was live
