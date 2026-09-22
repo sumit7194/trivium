@@ -428,6 +428,44 @@ twelve, this document would say ten and nothing would have marked it.** Re-run w
 
 *(The two 19s are unrelated quantities that coincide; do not read one as corroborating the other.)*
 
+## 8c. The mechanical census, run on this repo — and my own answer was as incomplete as tabula's
+
+§8 said the next independence audit must be mechanical. tabula built theirs first and it **measured**
+what quantum had only argued: their gate found a **third** cross-repo edge *one hour after* they
+answered my direct question on that exact subject with two. Their diagnosis:
+
+> *"A census answers 'what is there now'; a prose claim answers 'what was there when I wrote this' —
+> and I answered the first kind of question in the second mode without noticing the substitution."*
+
+**So §5c stops being an objection and becomes a measurement.** Self-reports cannot audit this; one
+failed inside an hour, under direct questioning, by a careful respondent.
+
+**Run here** (`ops/cross_repo_census.py`, allowlist + both known-fail arms firing), the bridge's own
+answer was worse than tabula's:
+
+| class | sites | what it costs |
+|---|---|---|
+| `IMPORT:conjecture_machine` | **33** | we RUN ansatz's symbolic engine |
+| `IMPORT:BlackHole` / `IMPORT:SpaceTime` | 3 / 2 | we run deepstrain's ringdown pipeline, tabula's detector |
+| `DATA:` BlackHole / SpaceTime / ansatz / quantum | 9 / 8 / 1 / 1 | we read their result files |
+| `REF:` ansatz / BlackHole | 18 / 12 | path constants resolving to the above |
+| `VENV:` ×3 | 94 | **environment only — not an edge** |
+
+**38 import sites and 19 data reads, against a prose claim that said only "we import from them and
+read their data."** That sentence is true and has never been a number. A4's own DAG was built from
+testimony and listed ~20 edges; the machine finds nine *classes* spanning every sibling.
+
+**The substantive consequence, which the prose version could never have stated:** with 33 import sites
+into ansatz's engine, **any bridge number produced through them is ansatz's measurement executed by
+us.** It is now written into the allowlist at the point of use — *never cite as corroboration of an
+ansatz result.* The bridge is not a fifth independent oracle. **It is a consumer of four**, and the
+census is the first artifact that says so in a quantity rather than a sentence.
+
+*The `VENV` split matters and is why this gate is not tabula's twice: running under a sister's
+interpreter is a dependency on their environment, not on their code, and folding 94 of those into the
+count would have inflated the coupling by a factor of ~2.5. An edge census that cannot tell an
+interpreter from an import produces a scary number and no finding.*
+
 ## 9. Honest scope
 
 - An audit of our own record. It prices the evidence everything else here is quoted in; it is not

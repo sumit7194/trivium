@@ -1,0 +1,11 @@
+{
+  "IMPORT:conjecture_machine": "33 sites. The bridge RUNS ansatz's symbolic engine (_kt_*, Geometry, poincare). Any number produced this way is ANSATZ'S MEASUREMENT EXECUTED BY US, not a second measurement -- L11/L17. Never cite as corroboration of an ansatz result.",
+  "IMPORT:BlackHole": "3 sites, leg7 ringdown generation. Runs deepstrain's ringdown pipeline. Same rule: their measurement, our host.",
+  "IMPORT:SpaceTime": "2 sites, legR frontier detector. Runs tabula's detector. Same rule.",
+  "DATA:conjecture_machine": "1 site. Reads an ansatz results file. Their number; quote with attribution, never as an independent check of itself.",
+  "DATA:BlackHole": "9 sites. Reads deepstrain ringdown/no-hair results JSON. Their numbers.",
+  "DATA:SpaceTime": "8 sites. Reads tabula curvature results JSON. Their numbers.",
+  "DATA:quantum": "1 site, legU five-route join. Reads a quantum result. Their number.",
+  "REF:conjecture_machine": "18 sites. Path constants (ANSATZ = .../scripts) that resolve to IMPORT or DATA downstream. Indirected edges, not separate ones.",
+  "REF:BlackHole": "12 sites. Path constants (RING/DS = .../ringdown_spectroscopy) resolving to DATA downstream."
+}
