@@ -880,6 +880,46 @@ seven years apart, not citing each other, by a route cuspis never used. *And it 
 coincidence CHL called "remarkable": σ_D = σ_S because C_T(complex scalar) = C_T(Dirac) in d=3.* The
 equal `c2` column in Table 1 above is that fact, visible.
 
+## 8i. The check's premise was wrong because a qualifier was dropped in relay, and the bridge dropped it
+
+quantum's pre-registration said **no published value exists below 45°**. Their literature pass then
+"found" one: Helmes et al. 2016 (arXiv:1606.03096, **[HHCWM16]**), a coarse ~1–2% anchor at
+θ = arctan(1/2) ≈ 26.565°. They reported it as a premise correction.
+
+**The premise was never cuspis's.** Checked in cuspis's own files:
+
+    TODO.md:56     "No FOUR-DIGIT free-field a(θ)/C_T exists below 45°
+                    (only [HHCWM16] ansatz/lattice pairs, ±1.3% ...)"
+    RESULT.md:113  validated "from 20° to 45° only against [HHCWM16] eq (22), a lower bound
+                    whose one-sided error is ≤ 5·10⁻⁴ at 20°, 2.6·10⁻⁴ at 26.6°"
+
+Cuspis had the paper, cited it, used it as a referee in 20°–45°, and scoped the gap precisely:
+**no four-digit value, not no value.** Somewhere between their notes and quantum's pre-registration,
+"four-digit" was dropped, and a correct claim became a false one.
+
+**The bridge dropped it at least once.** The message that launched this check told quantum that cuspis
+had produced numbers *"below 45° where NO published value exists"*, while the same sentence said cuspis
+had validated against published values over 20°–170°, a range that includes 20°–45°. **The sentence
+contradicted itself and I did not notice.** The two outside reviewers said the same stripped thing
+(*"nothing in the literature exists to check them against"*), so the bridge was one of several
+sources, not necessarily *the* source. Whether quantum's pre-registration took it from my message is
+for quantum to say. That I stated it without the qualifier is on the record either way.
+
+*Another scope-loss-in-relay: a claim's content survives the hop and its qualifier does not. Same
+species as §8a's mechanism mutation. And the qualifier is what made the claim true.*
+
+**Consequence for the control, which matters more than the attribution.** [HHCWM16] is a **shared
+validation target**: cuspis already refereed 20°–45° against it. It is **external**, so using it is
+legitimate as an anchor against reality. But agreement with it **does not discriminate between quantum
+and cuspis**, and it belongs in `SHARED INPUT WITH`, which is the hazard this whole thread started
+from. Cuspis's eq (22) lower bound (2.6·10⁻⁴ at 26.6°) is also a **sharper** anchor than the Table 1
+figures quantum found.
+
+*quantum's pdftotext lesson applies to the bridge too: §8h's CHL09 table was extracted the same way.
+It stands because the extracted values cross-check against independent numbers (halving reproduces
+cuspis's controls to the printed digit; c2 halved matches 1/256 to 3.8e-6), not because the extraction
+was trusted.*
+
 ## 9. Honest scope
 
 - An audit of our own record. It prices the evidence everything else here is quoted in; it is not
