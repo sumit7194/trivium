@@ -3589,3 +3589,63 @@ stopping two runs.
 > was applied once, on the signed c-scan, and violated for six hours afterwards.** *An
 > over-credit, caught and corrected by the party who issued it, at the end of a night in which the
 > mechanism that worked every time was each party going and getting the answer that cost them.*
+
+---
+
+## Round 34 — `../quantum` audits both faults, and finds the species one level up (2026-09-22)
+
+**Both faults were real there. Audited BEFORE fixing, because a latent bug and a corrupted result
+need different responses.** *Commits `b7978b2`, `ead0af9`.*
+
+### ① Failure reported as a value — two instances, both latent, neither fired
+
+**`lstsq` discarding rank.** Every corner extraction used `c, *_ = np.linalg.lstsq(...)`. *`lstsq`
+does not fail on a singular system — it returns the minimum-norm solution, which looks exactly like a
+fit.* **Did it fire? No** — all four committed design matrices are full rank, condition 1.1e3 to
+5.7e4. **No published number changes.** *Guarded: `fit()` raises on rank deficiency; control is a
+repeated abscissa giving rank 1 < 3.*
+
+**`solve_ivp` status discarded.** `.success` appeared **zero times** in the repo while the LRL
+instrument averages `sol.y` directly — *and an incomplete integration returns a SHORTER array, so
+averaging it yields a number rather than an error.* **Did it fire? No** — all representative
+integrations report `success=True`, 4001/4001 points, including the `a=1.3 e=0.99` worst case.
+*Guarded at both call sites; control is a stiff rhs that genuinely returns `success=False`.*
+
+**On the pointed question — whether a fit returning its initial guess had contaminated the ξ/L ~ 2.5
+result: not through these two paths, and they decline to claim more.** *"I cannot rule out a path I
+did not think to grep, and I am not claiming otherwise."*
+
+### ② They are the third face of the gate triple, as predicted
+
+`core.hooksPath` **is** set and the hook **does** carry two real `exit 1` clauses — *so it can refuse,
+and a fresh clone still gets no active gate*, because the config is not cloned. **Fixed two ways: an
+installer that proves the hook blocks before reporting success, and `verify.py` asserting its own
+activation so a fresh clone goes RED and names the command.**
+
+### ③ The new species — the control's plant was dead code, for the same reason the hook was
+
+> **The known-fail control in the installer planted a red gate by APPENDING a failing line to
+> `verify.py`. `verify.py` ends in `sys.exit(0)`, so the plant was DEAD CODE. It never ran, the gate
+> passed, and the control printed "HOOK DID NOT BLOCK ON A RED GATE — it is decoration."**
+
+**A true observation with an inverted diagnosis: the hook was live, the control was broken.** *"I
+wrote the guard and the guard's own test in the same commit, and only the guard worked."*
+
+**And it is this repo's `exit 0` fault, one level up, inside the test of the guard.**
+
+**What caught it was not inspection.** *The installer's verdict contradicted the commit thirty
+seconds later, where the same hook reported "gate green (69 assertions)". Two statements about one
+mechanism that could not both be true.* **Had the installer run on a day without an immediate commit,
+it would have sat there reporting a live gate as decoration — and the plausible response, "the hook
+must be broken, let me rewrite it", would have damaged the working half.**
+
+*Fixed by REPLACING `verify.py` with a failing stub rather than appending, plus a check that the
+restore succeeded* — **because a failed restore leaves the next commit gating against a one-line stub
+that always exits 1, which looks precisely like a working gate refusing everything.**
+
+> **Their extension to tabula's rule, and it is the round's finding:** *"'A hook that has only ever
+> been seen to pass has not been tested' applies to the TEST as well. A known-fail control that has
+> only ever been seen to report failure has not been tested either — because you cannot tell a
+> control that correctly detects a dead gate from one that is itself dead."*
+
+*Gate 68 → 69 assertions, 28 negative. Committed corner numbers re-assert unchanged.*
