@@ -5083,3 +5083,66 @@ conclusion is one of the few things from that leg still standing.*
 uncensored, 905× clear of the identity bound, monotone, three orders of separation.* **After a day of
 censored statistics, borrowed denominators and 1-ulp scatter — a measurement with nothing wrong with
 it.**
+
+### Round 56 — the split resolves to representability, and two instruments agree for the first time
+
+     obj      heldout     var_within      var_total
+       A   4.9073e-10     5.5744e-10     1.1359e+00
+       C   2.0235e-11     2.2987e-11     1.1360e+00
+     ratios C/A:  heldout 0.0412   var_within 0.0412   var_total 1.0001
+
+**Pre-registered `< 0.3` reads as REPRESENTABILITY. Measured `0.0412`, exactly the predicted ~0.04.**
+
+**But the bridge's hypothesis (2) was structurally impossible and both parties should have known.**
+*`var_total` is `1.1359` vs `1.1360` — identical to four decimals, because the features are whitened
+before the eigenproblem and the candidate is a unit direction in whitened space, so the denominator
+is pinned near 1 BY CONSTRUCTION.* **The normalisation hypothesis was about a quantity the code
+normalises away, and reading `conserved()` would have shown it in ten seconds.**
+
+> **The split was still the right move — it had one live arm rather than two, and learning that from
+> the print beats assuming the answer.**
+
+#### Not a new anomaly — independent confirmation of one already open
+
+*From tabula's own notes earlier in the leg, engine-free: analytic Carter drift along trajectories,
+no basis, no eigenproblem, no conditioning.*
+
+    C's Q-drift is 13.9x BELOW A's and B's, at both eps
+    "no one's hypothesis mentions it ... C's 13.9x is open"
+
+**And the dissolution ansatz relayed at the time — "C's deformation is ~13.5× smaller in coefficient
+space" — was tested and could not be reproduced: in METRIC space C's deformation is 3.6× LARGER, on
+four of five components.** *So the anomaly was relayed, dissolved, and the dissolution went unchecked
+— and `13.5` against `13.9` is a 3% agreement, exactly the kind of near-match this family spent the
+day withdrawing.*
+
+#### The agreement is 2.8×, not 1.75× — the raw comparison mixes powers
+
+    analytic Q-drift   A/C = 13.9    an AMPLITUDE (max|Q-Q0|/|Q0|)
+    engine var_within  A/C = 24.3    a VARIANCE
+
+    raw            13.9 vs 24.3        -> factor 1.75
+    common power   13.9 vs sqrt(24.3)  -> 13.9 vs 4.93   factor 2.82
+
+> **The raw comparison flatters by 1.61×. Two ratios that look commensurable because both are "A over
+> C" and both dimensionless — one an amplitude ratio of Carter's `Q`, the other a variance ratio of a
+> FITTED direction that is not `Q`. Different objects AND different powers.**
+
+**What survives is still the day's only two-instrument agreement:** *2.8× between an analytic
+Poisson-bracket drift with no basis, no eigenproblem and no conditioning, and a whitened
+generalized-eigenproblem statistic, about an effect nobody predicted.* **The first time today two
+instruments agreed rather than one correcting the other — and the headline should be the converted
+number.**
+
+*And the residual 2.8× is a question rather than slop:* **if the engine's candidate were exactly `Q`
+the two would match after conversion. They do not, and the fitted direction is suppressed LESS than
+`Q` itself** — *consistent with the fit landing on something adjacent to Carter rather than on
+Carter. Checkable by one inner product.*
+
+#### Logged unresolved, in the uncomfortable direction
+
+**Leg 6's ladder recorded C as `CERTIFY at 1.535e-06`, read as CERTIFY-RELATIVE-TO-{polynomial,
+rational}. Representability says part of C's invariant is INSIDE the rational span.** *Different
+statistics at different settings, not formally contradictory, pointing opposite ways about one
+object.* **Tabula is not resolving it tonight and is not picking the one they prefer — the third open
+item today refused in the comfortable direction.**
