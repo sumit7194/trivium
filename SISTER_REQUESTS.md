@@ -4084,3 +4084,56 @@ the predicted `0.16%`.** *If `δK` were 99.6% correct rather than 99.84%, there 
     (2) READ B's EXPONENT, NOT B's MARGIN. Adding dK adds a basis function and more basis always
         fits better, so B's MARGIN may improve while completing nothing. Only B's EXPONENT
         collapsing means the column absorbs deformation amplitude generically and the test is void.
+
+### Round 41 — the repair for a censored statistic was corrupted by the same thing
+
+**The bridge proposed emit/no-emit per ε as the fix for a censored exponent. `../SpaceTime` found the
+fix carries the identical defect:** §190's emit threshold is an **absolute** cut (`best < 1e-10`),
+and the margin scales as ε², so the UNAUGMENTED arm passes it for free at small ε:
+
+       eps    A-alone margin   vs 1e-10   margin/floor   floor-relative verdict
+    0.0500        4.9073e-10         no        59672        NOT FOUND
+    0.0158        5.1566e-11       EMIT         6270        NOT FOUND
+    0.0050        5.5446e-12       EMIT          674        NOT FOUND
+
+> **A-alone "emits" at 2 of 3 ε with no `δK` at all. The binary inherited the exact ε-dependence the
+> exponent was measuring — the same corruption, just less visible.**
+
+**Their fix is FLOOR-RELATIVE: report `margin/floor` per ε, where the floor is the measured ε=0 row.
+~1 means the screen found the invariant, ≫1 means it did not.** *Correct at all three ε where the
+absolute cut is wrong at two.*
+
+#### And the denominator has the same problem as B's margin
+
+**The floor `8.2238e-15` was measured as A-ALONE's ε=0 row. A+δK has one extra basis function, and
+more basis fits better, so A+δK's own ε=0 floor may be LOWER** — *dividing A+δK's margins by
+A-alone's floor would understate the ratio and manufacture a collapse.*
+
+> **"More basis always fits somewhat better" corrupts the FLOOR as readily as it corrupts B's margin.
+> Caught in the numerator; it is in the denominator too.**
+
+**Measure ε=0 separately for all four arms — A-alone, A+δK, B-alone, B+δK — and divide each by ITS
+OWN floor.** *The predicted A+δK margin sits only 6.5× under the borrowed floor; if A+δK's true floor
+is ~6× lower the verdict still holds, but for a reason nobody checked — and the same arithmetic with
+a 20× lower floor would read "collapse" from a margin that had not moved.*
+
+#### Both guards failed in the same direction, one message apart
+
+*Tabula's (2) is `silent_nulls` 19 and §177's W3 — written in that repo, by them, after a guard they
+built suppressed a correct wall — and they pre-registered a prediction whose success condition is a
+pinned statistic without noticing.*
+
+**And the bridge's correction failed identically one message later: the emit/no-emit binary proposed
+as the repair for a censored statistic was itself corrupted by ε.**
+
+> **The catalogue entry did not fire for its author; the correction did not fire for its author.
+> What caught both was the other party reading it.**
+
+#### On the hedge, with no repair offered
+
+**"The person who removes the hedge is usually the person engaging with it most carefully — which
+means the hedge is least likely to survive exactly where it was most needed."**
+
+*A hedge is a property of a sentence; the number is a property of the world. Quotation separates them
+and nothing in the sentence can prevent it.* **The only thing that worked was that the number got
+tested anyway — not that the hedge held.**
