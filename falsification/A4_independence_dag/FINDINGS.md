@@ -124,7 +124,8 @@ known — the stopping rule is the contaminated part.
 | 14 | quantum → tabula: corner spec, regulator hazard, hexagon gate | `UNLOGGED` | E2✓ | never touched the bridge |
 | 15 | **the user**, relaying parallel Claude sessions | `UNLOGGED` | E2✓ | **unrecordable — see §6** |
 | 16 | **cuspis `corner_function/` → quantum: 218 files vendored at `dbd443a`, incl. `scripts/`** | `CODE` | E1✓ | **largest code edge in the fleet**; in quantum's public repo now |
-| 17 | cuspis → quantum **via the bridge**: the BWK16 bound | `RESULT` | ✓✓✓· | **changed quantum's number** — showed `a(120)=0.0038956` sat 13.3% below a theorem, drove a **+14.6%** correction |
+| 17 | cuspis → quantum **via the bridge**: the BWK16 bound | `RESULT` | ✓✓✓· | **changed quantum's number** — showed `a(120)=0.0038956` sat 13.3% below a theorem, drove a **+14.6%** correction. **DATE CORRECTED: on or before 2026-09-04, not 09-21 — the bridge's ledger was wrong by 17 days** (verified: `corner_function@a78630d`, 2026-09-04) |
+| 21 | **quantum → cuspis: an independent verification that FALSIFIED part of the result** | `METHOD`+`RESULT` | — | `corner_function@5131089`, **2026-09-04**: all three load-bearing checks re-derived, *"worked from RESULT.md rather than from a summary, and re-derived rather than read"* — and found *"C1, C2, C4, C6 hold for every ρ ≥ 0" is **FALSE for C6***. **Absent from this DAG until cuspis's reply.** |
 | 18 | bridge → quantum: corner + area spreads `s=1,2,3,4` | `RESULT` | E2✓ | **load-bearing** for quantum's `s⁻²` law and their filed `s=5` prediction |
 | 19 | tabula → quantum: `a(120)=0.003757` | `RESULT` | E1✓ | **leaked inside the sentence declaring no corner numbers would be sent** — see §5c |
 | 20 | quantum ξ/L withdrawal → tabula prereg line 43 (leg 7) | `METHOD` | E4✗ | **invisible to E1–E4** — the contamination the bridge itself caught. See §5b |
@@ -659,6 +660,47 @@ breakages.*
 **Converging rule, from three instances in one hour:** *an edge census earns belief or it earns
 nothing, and every false positive is drawn from the same account.* Resolve on **file identity**, never
 on a name pattern — `grep -v grep` deletes any neighbour that happens to be a grep.
+
+## 8e. Three corrections from cuspis, and an identifier three sessions got wrong
+
+**The date question resolved: the sub-45° work postdates the snapshot.** Verified in cuspis's own
+history rather than taken on report — `f6d40e6 2026-09-05 Phase 2` and everything downstream of it is
+dated 09-05, after quantum's 09-04 tree. Cuspis checked it *inside quantum's vendored copy*: their
+notebook there ends at EXP-011, and the later experiment numbers, run mode, constant and node value
+return zero hits across the four vendored prose files. **No veto. The n=1 magnitudes are not held.**
+
+**① The bridge's ledger was wrong by 17 days.** A4 dated the BWK16 transfer 2026-09-21. It was **on or
+before 2026-09-04** — `corner_function@a78630d`, with cuspis's resolution in three commits that day.
+Checked here, correction accepted. *Seventeen days off on what this audit called its strongest
+reception edge.*
+
+**② `dbd443a` is not a cuspis commit. It is quantum's own hash**, and the bridge, quantum and cuspis
+all used it as though it identified a *cuspis* state. Its actual referent is
+`corner_function@5131089`'s note — *"INDEPENDENTLY VERIFIED by ../quantum (dbd443a)"*. The snapshot's
+**content** was correctly identified by cuspis (they compared trees, not hashes); the **identifier**
+was wrong in three repos at once. *A hash is the one thing in this whole audit that looks
+unambiguous, and it was the thing that travelled mislabelled.*
+
+**③ And it surfaced an edge this DAG did not have — a good one.** On 2026-09-04 quantum independently
+verified cuspis's three load-bearing checks, *re-deriving rather than reading*, and **falsified part
+of the result** (`C6` does not hold for every ρ ≥ 0). That is the cuspis↔vestigium coupling an outside
+reviewer flagged — **older and deeper than recorded, and discharged correctly**: a sibling checked a
+sibling, from the primary document, and the check bit. It belongs in the DAG as both a coupling *and*
+as the fleet's cleanest instance of an independent check doing its job.
+
+**④ Quantum's contamination detector under-reports and its zero must be withdrawn.** It reported no
+angle-indexed tables below 45° in the vendored tree. Cuspis found them: a **Rényi-2** result file with
+an explicit angle key, **seven entries under 45°**, plus 145 per-node files. Not the values under
+audit — but *the same instrument*, and the n=2 sharp-end constant was later derived from that file.
+**So the n=1 arm is clean on values and an n=2 arm would not be.** Cuspis's rule, and it is this
+audit's own §8b in another domain: *"a detector that under-reports is worse than none, so fix it or
+withdraw the zero."*
+
+**⑤ The exposure does not fully dissolve, and the residue is the solver.** It predates the snapshot,
+was vendored, and `git rm` removes it from the working tree and **not from history** — in a **public**
+repository, so `git show` recovers it. **Values sealed, implementation not, and the implementation is
+the axis the check runs on.** The fresh build must be written from the published equations *without
+consulting the vendored copy in quantum's own history*, and must say so.
 
 ## 9. Honest scope
 
