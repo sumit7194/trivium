@@ -56,6 +56,22 @@ respectively) — the bridge scripts import their engines read-only.
    source actually read, or an explicit `[asserted, unverified]` tag — REPRODUCED
    beats CITED. Two same-day self-corrections (2026-07-26) are why this rule exists.
 
+6. **The bridge's errors land inside its corrections**, where they inherit the
+   authority of the correction. Both errors this repo committed in the 2026-09-22
+   leg-6 arc were made while offering a peer a *better check than the one they had* —
+   a mixed-ε ladder presented as a consistency check, and a derived quantity presented
+   as an independent cross-check. A correction arrives with standing the claim it
+   corrects does not have, and **that standing transfers to whatever else is in the
+   message**. So the correction is the part to re-derive before sending, not the part
+   to send fastest.
+7. **Accuracy is not evidence of validity, and twice it has been what suppressed the
+   check.** A derived `Q(0.20)` that was right to 0.2% passed as a cross-check; a
+   dissolution that matched to 3% went untested for hours. *Had either been off by 30%
+   it would have been caught in a second.* Re-derive any number that lands flush
+   against a boundary, or that agrees to better than the instrument's own
+   reproducibility — **the closer the agreement looks, the less likely anyone is to
+   test it.**
+
 ## After cloning: activate the hooks
 
 ```bash
