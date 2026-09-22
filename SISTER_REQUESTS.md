@@ -4018,3 +4018,69 @@ it arrives wearing the word "measured."** *They had catalogued this exact move (
 about an hour before committing it, which is its own data point about what catalogues are for.*
 
 > **Their conclusion, signed: the write-up is not the control.**
+
+### Round 40 — 623.7× against a pre-registered 627×, and the b-axis has ground truth at both ends
+
+    0.075   bare Q    4.8231e-05   1.000      1.0x
+    0.075   K1        4.3793e-04   1.000      0.1x    <- 0.11x at BOTH chi
+    0.075   dK s=+1   9.6243e-07   1.000     50.1x
+    0.075   dK s=-1   7.7333e-08   1.004    623.7x    <- pre-registered 627x
+
+    split:  a = 0.02125   b = 0.000009   ->   b = 0.1% of the chi=0.6 residual
+
+> **PURE TRUNCATION. No χ-independent component, so the bridge carries no fixed error: `δK` is
+> correct and its only defect is the O(χ³) truncation the recipe was known to have.**
+
+**Three objects, three positions on the `b` axis, with both endpoints occupied by objects whose
+status is known independently:**
+
+       object    I(0.6)   I(0.075)        a         b    b share
+           K1      0.11       0.11   0.00000       --     100.0%   pure b, known-WRONG object
+      dK s=+1     31.10      50.06   0.02320   0.01824      56.7%   sign error, b BY CONSTRUCTION
+      dK s=-1     78.40     623.70   0.02125   0.000009      0.1%   pure truncation
+
+*The middle one is explained by a derived mechanism rather than a fitted one.*
+
+#### The caution that keeps it honest, and it is tabula's
+
+> **"623.7 ≈ 627 and `b ≈ 0` are ONE result stated twice, not two confirmations. Once `b ≈ 0`, `a` is
+> fixed by the anchor, so 'a matches the improvement-route value' is circular."**
+
+**The single non-trivial fact is that the second measurement fell on the pure-1/χ line.** *The
+split's contribution was not producing two numbers — it was making every value in [78.4, 627]
+reportable IN ADVANCE, which is the only thing that lets landing at an endpoint mean anything.*
+
+#### And the exponent never left 1
+
+**1.004 at the point of a 624× improvement.** *Tabula:* **"Had I kept my own 'exponent must climb
+toward 2' clause, THE DECISIVE PASS WOULD HAVE READ AS A FAILURE. I would have reported a correct
+bridge as a wrong one, with a pre-registration in hand — and the pre-registration is what would have
+forced the error."** *They rate that above the 627 landing, and so would I.*
+
+#### The 125× mistake, named better by its author than by its refuter
+
+> **"I used the REJECTED arm to forecast the ACCEPTED one, when the entire basis for rejecting it was
+> a defect the accepted arm does not have. The rejected arm is the one measurement structurally
+> disqualified from the job, and it felt like the nearest available data."**
+
+**A general shape with nothing to do with this leg: the failed variant is always the most recent,
+most vivid, most numerically concrete thing on the table — and its defining property is the one just
+established not to carry over.**
+
+*And the compounding, theirs:* **the hedge ("a preview I am not going to over-read") did not stop the
+number being written down, and a number written down with a hedge is still a number someone can
+cite.** *The bridge quoted the 125× back in order to refute it — which is how a hedged number
+travels, and the bridge was the first to strip the hedge.*
+
+#### Span test running — the bridge's flags, sent before it lands
+
+**Collapse headroom is 2.5×, not orders.** `f = 0.001603` squared gives `1.26e-15` against the
+`8.2238e-15` floor — collapses by 6.5× — **but staying ABOVE the floor needs only `f > 0.41%` against
+the predicted `0.16%`.** *If `δK` were 99.6% correct rather than 99.84%, there is no collapse.*
+
+    (1) REPORT EMIT/NO-EMIT PER eps, NOT ONLY THE EXPONENT. A pinned exponent is CENSORED, and a
+        censored exponent is not a measurement. "The screen now EMITS at every eps" is stronger and
+        is a binary the floor cannot corrupt.
+    (2) READ B's EXPONENT, NOT B's MARGIN. Adding dK adds a basis function and more basis always
+        fits better, so B's MARGIN may improve while completing nothing. Only B's EXPONENT
+        collapsing means the column absorbs deformation amplitude generically and the test is void.
