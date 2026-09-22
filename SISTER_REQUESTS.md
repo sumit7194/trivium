@@ -3849,3 +3849,62 @@ discrimination, not the exponent.**
 *Tabula avoided reporting the BlackHole pulse as theirs because the status file happened to carry an
 `updated` field they could difference.* **Happened to — the same shape as the bridge's orbits sitting
 at r ∈ [5.1, 9.1]: a fault that did not fire because of a property nobody chose for that reason.**
+
+### Round 37 — σ resolved to the predicted branch, and the binary becomes a measurement
+
+    0.6    dK s=+1   9.2331e-05   exponent 0.984   improvement 31.1x
+    0.6    dK s=-1   3.6644e-05   exponent 1.039   improvement 78.4x
+
+**`s=−1` by a factor of 2.5 — the branch the physics predicted**, committed before any `δK` row
+existed, and derived from reading `_kt_double.py:332` (their `y` IS `u = cos θ`, so
+`p_u = −p_θ/sin θ` by calculus) rather than assumed.
+
+> **The branches ARE distinguishable, by 2.5×. The check could have rejected and did not** — *so the
+> bridge's "a free parameter fixed by a check that could not reject it is not a measurement" arrives
+> as the outcome tabula wanted rather than as the one that proves the point.* **Recorded by them as a
+> live possibility rather than a sign that was never in doubt.**
+
+*Cross-check: if the cross term contributes `±C` against a base `B`, then `|B+C|/|B−C| = 2.5` gives
+`C = 0.43·B`* — **the cross term is 43% of the base, which is why the control could see it.**
+
+#### The exponent anti-correlates with quality, measured
+
+**`s=−1` has exponent 1.039, HIGHER than `s=+1`'s 0.984, while being 2.5× better on improvement.**
+*Across the one pair where the better object is known, the exponent points the wrong way.* **Under
+tabula's original clause the better object would have read as marginally worse.** *A measured
+demonstration of the bridge's derivation that the exponent is not diagnostic here — and stronger than
+the derivation.*
+
+#### Pre-registered, recalibrated onto the selected branch
+
+    truncation-limited    78.4 x 8 = ~627x at chi = 0.075
+    wrong bridge          ~78x, unchanged
+
+**And the binary is really a two-parameter measurement.** Writing the residual as truncation plus a
+χ-independent remainder, `residual_fraction(χ) = a·χ + b`:
+
+    anchor   0.6a  + b = 1/78.4        measure   0.075a + b = 1/I(0.075)
+
+      I(0.075)    b as % of the chi=0.6 residual
+          78.4            100.0%   PURE chi-INDEPENDENT -- fixed bridge error, no chi helps
+         150.0             45.4%
+         250.0             21.6%
+         400.0              8.1%
+         627.0              0.0%   PURE TRUNCATION -- dK right, only error is O(chi^3)
+
+    I > 627   faster than 1/chi: the MODEL is wrong, not the object
+    I < 78.4  improvement WORSE at smaller chi -- neither hypothesis predicts it,
+              and it would be the interesting outcome
+
+> **Any value in [78.4, 627] is informative rather than ambiguous — the midpoint measures what
+> fraction of the residual is truncation.** *Which matters because the fourth cell was precisely the
+> case where a partial result had no home; this gives every partial result a number.*
+
+#### The general form of the luck, now with two instances
+
+*Tabula is amending entry 46 to say the check that saved them was luck rather than design.* **The
+`updated` field exists for staleness; `r ∈ [5.1, 9.1]` exists for bound orbits. Neither was put there
+to prevent the fault it prevented.**
+
+> **A near-miss that depends on an unchosen property is not a control, and writing it up as one
+> converts luck into false confidence exactly where the next instance will land.**
