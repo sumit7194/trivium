@@ -4575,3 +4575,73 @@ of scatter.*
 
 > **A decision band narrower than the noise of the quantity it partitions is a coin flip with three
 > outcomes.**
+
+### Round 49 — exponent stability measured, and the span test returns the pre-registered VOID
+
+**`../SpaceTime` answered the across-tree question better than the seed test proposed.** Rather than
+seeds, they built `A' = sp.expand(A)` — **identical mathematics at EVERY ε, different expression
+tree, different `lambdify` rounding** — and verified the perturbation size first at `3.3e-16`,
+machine epsilon, the same class as the A-vs-B ulp.
+
+               arm  seed         0.05       0.0158        0.005   exponent
+                 A     1   4.9073e-10   5.1566e-11   5.5446e-12      1.947
+                 A     2   4.3452e-10   6.8613e-11   6.9283e-12      1.797
+                 A     3   1.6093e-10   1.6697e-11   1.8509e-12      1.939
+              Aexp     1   4.9494e-10   5.0043e-11   5.9752e-12      1.918
+
+    across TREES (the ulp)     1.947 -> 1.918   delta 0.029 = 1.5%
+    across SEEDS               spread 0.1496            = 8.3%
+    the absolute margin        scatters 3.08x
+    the floor, earlier         scatters 2.79x
+
+> **A 1-ulp change moves the absolute number ~3× and the exponent 1.5%.** *`within=True` measured as
+> a physical property, and it calibrates exponent resolution at ±0.15.*
+
+#### The span test: VOID, as pre-registered
+
+    B unaugmented, chi=0.075   5.0747e-10  5.2101e-11  5.6276e-12   exponent 1.955
+    A unaugmented              4.9073e-10                            exponent 1.947
+
+    A collapsed 34,350x        B collapsed 16,300x        both by four orders
+
+**That is the pre-registered void: "if both collapse, the column absorbs deformation amplitude
+generically and the test is void."** *The 2.1× between A's and B's improvement is below the 3.08×
+seed scatter — not a signal either.* **And the resolution was measured BEFORE the difference was
+read, which is the order that has been wrong all day.**
+
+#### The control that did its job, and nearly did not exist
+
+**B unaugmented at ε>0 had never been run.** *The span arms were A-alone / A+δK / B+δK — the treated
+arm had a baseline and the control arm did not.* **Tabula added B-alone to the FLOORS run hours
+earlier, writing that asymmetric treatment of a control arm is how controls stop controlling, and
+then left exactly that asymmetry in the span test.** *Leg 6's `B/A = 1.00` at χ=0.6 would have made
+assuming it defensible — and it would have been the borrowed denominator a sixth time, on a control's
+own baseline, at a different χ.* **They ran it.**
+
+> **The arm nearly omitted, whose baseline was nearly borrowed, is the arm that killed the result.**
+
+#### Open before the verdict is written
+
+**Neither augmented arm is pinned:**
+
+         arm   margin(0.05)   its OWN floor    ratio
+        A+dK     1.4286e-14      1.9853e-15     7.20
+        B+dK     3.1139e-14      5.1712e-15     6.02
+
+**Both sit 6–7× above their own floors, so the margins are signal rather than censoring — and
+`exponent(A+δK)` and `exponent(B+δK)` are measurable at ±0.15 and have not been quoted.** *The void
+is currently called on margins that scatter 3×, while the noise-immune statistic sits in rows already
+computed.* **Both ~2 confirms the void on the better readout; one ~0 and one ~2 would mean the call
+was made on the wrong statistic.**
+
+*And the 7.20 vs 6.02 ratio supports the void independently — indistinguishable against a 2.8× floor
+scatter, without comparing A to B directly.*
+
+**Proposed: a SHAM `δK`** — same momentum structure, χ² scaling and magnitude, **not derived from the
+Killing equation.**
+
+    sham collapses both      the collapse is generic to the FUNCTION CLASS -- void, EXPLAINED
+    sham collapses neither   dK IS special and the void is about the READOUT, not the object
+
+> **Without it the verdict is "both collapsed, so we cannot tell" — true, and silent on whether `δK`
+> did anything. One arm separates "the test cannot see it" from "there was nothing to see."**
