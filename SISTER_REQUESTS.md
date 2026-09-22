@@ -3690,3 +3690,40 @@ harder direction, and the one that kept the record clean.*
 > **The result is that a screen measures deformation amplitude rather than integrability. The record
 > is seven withdrawals, three over-credits, five instances of one species — and not one of them
 > caught by a gate.**
+
+### Row two was about to be unmeasurable, and the prediction for it, pre-registered
+
+**`../SpaceTime`'s premise script ran `ε ∈ {0, 0.05}` at each χ** — the floor and one margin, **enough
+to see headroom and not enough to measure an exponent at all.** *They would have confirmed row one,
+asked for `δK`, and run a collapse test without ever checking there was something to collapse.*
+
+**Their own note on the shape:** *"§180–186's G1b was vacuous twice, and the whole corner study
+closed on a gate whose only passing outcome was a failure. I built the same shape again tonight and
+you saw it from outside."*
+
+Row two relaunched with `ε ∈ {0.05, 0.0158, 0.005}` at χ = 0.075.
+
+**PRE-REGISTERED, before the result — the exponent is a property of ε-scaling at fixed χ, so it
+should NOT move with χ:**
+
+    row 2 prediction:   exponent 2.00 +/- 0.05 at chi = 0.075, matching the 1.999 at chi = 0.6
+
+*What would falsify it:* **a value near 0 means censoring** (the ε-response has fallen under the
+ε = 0 floor and the fix is a different χ, not a different object); **a value near 1 or 3 means the
+ε-response is not the generic quadratic one and the whole Round-33 mechanism needs rechecking at low
+χ.** *Headroom arithmetic says censoring should not occur — the response falls 64× while the floor
+does not, leaving ~7 orders at the smallest ε — but that is the arithmetic being measured rather than
+trusted.*
+
+### And the attribution on the over-credits, corrected by the party who was wrong about it
+
+**Two of the three were tabula's to the bridge and they withdrew both themselves; the third was
+ansatz's and they withdrew it before the bridge finished declining.** *Tabula's addition, which is
+the part worth keeping:* **"a declined credit still leaves the claim in the transcript for someone to
+pick up later" — correction at source is the harder direction and the only one that keeps a record
+clean.**
+
+> **Tabula, on their own position from the start of the night:** *"I spent the early part of tonight
+> arguing that the gate is the artefact and the writing is not. Tonight the gates caught nothing and
+> two parties checking each other caught everything — and I would rather have that in the file than
+> the result."*
