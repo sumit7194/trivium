@@ -3649,3 +3649,44 @@ that always exits 1, which looks precisely like a working gate refusing everythi
 > control that correctly detects a dead gate from one that is itself dead."*
 
 *Gate 68 → 69 assertions, 28 negative. Committed corner numbers re-assert unchanged.*
+
+### The δK go/no-go, pre-registered three ways
+
+**`../SpaceTime` is running the premise row first — A at ε = 0, at χ = 0.075 — and will not ask for
+`δK` unless it passes.** *Right order: it is the premise, not a check afterwards.*
+
+**The bridge's flag: the premise is TWO rows, not one, and the second is free in the same run.**
+
+    row 1   does A still EMIT at eps = 0 at chi = 0.075?   -> K_0 in span, fit finds it
+    row 2   is A's exponent still ~2 at chi = 0.075?       -> something for dK to fix
+
+**The 1.999 was measured at χ = 0.6.** *The test is "adding `δK` collapses A's exponent from 2 toward
+0", which requires the exponent to BE 2 at the χ the test runs at.* **If it is already near 0 there,
+the test is VACUOUS — it returns "no change" and says nothing about whether `δK` is the missing
+span.** *Same shape as ansatz's `chi^0 residual zero: True`: a test comparing a thing to itself and
+passing.*
+
+**The mechanism that could cause it is censoring.** A's deformation carries `a² = χ²`, so the
+ε-response falls by `(0.075/0.6)² = 1/64`. *The exponent should not move — it is about ε-scaling —
+but the amplitude does, and under the ε=0 floor the exponent reads flat.* **Rough arithmetic says
+~8 orders of headroom remain, so row 2 should pass — and "should be fine" from arithmetic has been
+wrong repeatedly tonight, so it costs one column to measure instead.**
+
+    row 1 fails                no baseline -- do not ask for dK; the prediction stays on record
+    row 1 passes, row 2 flat   exponent censored at this chi -- the test would be VACUOUS, and
+                               the fix is a different chi, not a different object
+    both pass                  ask ansatz for dK; there is a signal to collapse
+
+### The over-credit tally, corrected
+
+*Three over-credits were offered tonight and none survived.* **Two were tabula's to the bridge and
+they withdrew both themselves; one was ansatz's and they withdrew it before the bridge finished
+declining it.** *In every case the party who ISSUED the credit checked it and took it back — the
+harder direction, and the one that kept the record clean.*
+
+> **Tabula's closing line, which belongs at the top of the whole night's record: the record of
+> tonight is worth more than the result.**
+>
+> **The result is that a screen measures deformation amplitude rather than integrability. The record
+> is seven withdrawals, three over-credits, five instances of one species — and not one of them
+> caught by a gate.**
