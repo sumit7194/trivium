@@ -4715,3 +4715,81 @@ the discriminator actually gets to run.** *ε is exact; raising it costs nothing
 coefficients permuted under a fixed seed — same momentum degree, χ² scaling, coordinate degrees and
 magnitude class, outside `d2_rat` for the same structural reason, and verified not accidentally
 identical to δK.*
+
+---
+
+## Round 51 — the sham passes cleanly, δK does not discriminate, and δK contains the deformation
+
+         arm  exponent  monotone      suppression vs its own unaugmented
+     A unaug     2.008      True      --
+     B unaug     1.985      True      --
+      A + dK     0.634      True      34,350x   120,200x   230,837x
+      B + dK     0.224     False      16,297x   515,152x   187,115x
+    A + SHAM     1.999      True            1x        1x         1x
+    B + SHAM     2.002      True            2x        1x         1x
+
+    margin/floor:  A+SHAM  24,873x  101,181x  397,370x   <- fully uncensored
+                   A+dK       7.2x      8.4x     17.3x
+
+### 1. The sham passes, and it is the cleanest arm of the entire day
+
+**A structurally identical object — same momentum degree, χ² scaling, coordinate degrees, magnitude
+class, 45 terms with permuted coefficients — does NOTHING.** *Exponent 1.999/2.002, suppression 1.5×,
+and 25,000× to 1,000,000× above its own floor.* **After a day in which every number was censored,
+borrowed or scattered, one measurement with no denominator problem anywhere near it.**
+
+> **The collapse is NOT generic to the function class.**
+
+### 2. But δK does not discriminate — and that is a third outcome nobody pre-registered
+
+**Suppression at ε=0.2 is 230,837× for A and 187,115× for B. Ratio 1.23 against a 3.08× seed
+scatter. Indistinguishable.** *`δK` helps the Carter-DESTROYING deformation as much as the
+Carter-preserving one.*
+
+    pre-registered    "A collapses, B holds" (claim) or "both collapse generically" (void)
+    measured          both collapse, and NOT generically
+
+### 3. The mechanism is in δK's own definition
+
+    dK = -(K1 - 56*chi^2*dH)/8  =  -K1/8  +  7*chi^2*dH
+
+**`dH` is the DEFORMATION's own contribution to the Hamiltonian.** *So `δK` is not a pure
+Killing-tensor correction — it is a `K₁` piece plus a scaled copy of the deformation.* **Adding a
+column containing `dH` lets the screen absorb the deformation's own leading contribution, which works
+whether or not Carter survives — exactly "large specific effect, no discrimination."**
+
+**And it means the sham could not separate the two readings.** *Permuting 45 coefficients destroys
+the `dH` structure, so the sham has `δK`'s SHAPE and not its CONTENT — "sham does nothing" is
+predicted equally by "`δK` completes Carter" and by "`δK` contains the deformation."* **The right
+control, answering a narrower question than it appeared to: it excluded the function class, not the
+mechanism.**
+
+### The test, cheaper than a new deformation — split the object already in hand
+
+*A basis spans linear combinations, so adding `δK` as one column is spanned by adding its two pieces
+as two.*
+
+     A + K1          the Killing piece
+     A + chi^2*dH    the deformation piece
+     B + chi^2*dH    same, on the control
+
+    PRE-REGISTERED
+    dH carries it   A+dH ~ full dK suppression, A+K1 ~ nothing, B+dH ~ same as A+dH.
+                    NO DISCRIMINATION EXPLAINED -- dK is bookkeeping, not physics.
+    K1 carries it   A+K1 ~ full suppression, A+dH ~ nothing. Then the non-discrimination
+                    is a real puzzle rather than an artefact of construction.
+
+**Both use objects already held — `K₁` is ansatz's file and `dH` was required to build `δK`.** *Same
+discipline as the σ branch:* **when an object is a sum and its effect is unexplained, test the
+summands before building anything new.**
+
+*And the `δK` exponents `0.634` / `0.224` are not quoted as measurements — those arms sit 7–17× above
+their floors with B's middle point at 0.7×, so an additive background dominates. The suppression
+factor is the readable statistic and it is five orders clear of the sham.*
+
+### Tabula's account of the sequence
+
+> **"The pair check killed the floor readout, the censoring catch killed the void verdict, and the
+> sham turned what was left into a finding. I would not have run any of them — the pair check I
+> thought was a formality, the censoring I had asserted from one point, and without the sham I would
+> have written up 'both collapsed, cannot tell' and been wrong about why."**
