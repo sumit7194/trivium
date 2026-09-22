@@ -207,6 +207,24 @@ def selftest():
                      "NAMESPACE:conjecture_machine:NO-PATH" not in out
                      and any("NAMESPACE:conjecture_machine" in l and "declared --" in l
                              for l in out.splitlines())))
+        # arm 6: THE VENV EXCLUSION -- the one classification deciding what COUNTS
+        # as an edge. Break it and 94 interpreter references become code edges,
+        # silently inflating coupling: a wrong number in the direction that looks
+        # like rigour. Found by tabula mutating the split THIS repo contributed to
+        # theirs, and never controlled for here either.
+        #
+        # Shape-independent by construction: `quantum` has only a DATA class, so a
+        # planted venv line must yield VENV:quantum and NO edge class for it. A
+        # denser allowlist would make the inflation silent, so this arm must not
+        # depend on some other class happening to be undeclared -- which is the only
+        # reason the live gate notices this mutation today.
+        ALLOWLIST.write_text(orig)
+        ctl.write_text('"""run: /Users/sumit/Github/quantum/.venv/bin/python x.py"""\n')
+        code, out = _quiet(capture=True)
+        arms.append(("venv refs excluded from edge count",
+                     code == 0
+                     and any("VENV:quantum" in l for l in out.splitlines())
+                     and not any(f"{k}:quantum" in out for k in ("REF", "IMPORT"))))
     finally:
         ALLOWLIST.write_text(orig)
         if ctl.exists():

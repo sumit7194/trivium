@@ -609,14 +609,29 @@ direction, about my own architecture.**
 **So the collapse was a gap in the arms.** Closed with **arm 5**, the dual of arm 3: a sibling import
 in a file that *does* carry a path must **not** be classed `:NO-PATH`.
 
-    mutation                a1    a2    a3    a4    a5    clean | LIVE GATE
-    healthy                 ok    ok    ok    ok    ok    ok    | PASS
-    M1  scan() dead        FAIL  FAIL   ok   FAIL   ok   FAIL   | FAIL
-    M2  namespace dead      ok    ok   FAIL  FAIL  FAIL  FAIL   | FAIL
-    M3  path pattern dead  FAIL  FAIL   ok   FAIL  FAIL  FAIL   | FAIL
-    M4  prefix unresolved   ok    ok    ok   FAIL   ok    ok    | **PASS — GREEN AND WRONG**
+    mutation                a1    a2    a3    a4    a5    a6    clean | LIVE GATE
+    healthy                 ok    ok    ok    ok    ok    ok    ok    | PASS
+    M1  scan() dead        FAIL  FAIL   ok   FAIL   ok   FAIL  FAIL   | FAIL
+    M2  namespace dead      ok    ok   FAIL  FAIL  FAIL  FAIL  FAIL   | FAIL
+    M3  path pattern dead  FAIL  FAIL   ok   FAIL  FAIL  FAIL  FAIL   | FAIL
+    M4  prefix unresolved   ok    ok    ok   FAIL   ok    ok    ok    | **PASS — GREEN AND WRONG**
+    M5  VENV excl. broken   ok    ok    ok   FAIL   ok   FAIL  FAIL   | FAIL
 
-**Five distinct signatures, five rows.** M1 and M3 now separate on arm 5 alone.
+**Six distinct signatures, six rows.** M1/M3 separate on arm 5; M4/M5 on arm 6.
+
+**Arm 6 exists because tabula mutated the VENV/IMPORT split *this repo had contributed to theirs* —
+and found it had no control on either side.** It is the one classification deciding what *counts* as
+an edge: break it and 94 interpreter references become code edges, **silently inflating coupling — a
+wrong number in the direction that looks like rigour**, the same direction my four-local-modules
+near-miss would have gone.
+
+**Here the live gate does notice M5, and only by luck of allowlist shape:** `SpaceTime` happens to
+have no declared `REF` class, so the inflation surfaces as an undeclared edge. **Had every class been
+declared, `REF:conjecture_machine` going 18 → 75 would have been silent** — counts changed, classes
+still declared, gate green. Arm 6 is therefore built shape-independently (planting against `quantum`,
+which carries only a `DATA` class) so it does not inherit the accident that currently saves us.
+
+*That is the third time today the gate has been right for a reason it did not earn.*
 
 ### The live-gate column, and it is the argument for the control existing
 
