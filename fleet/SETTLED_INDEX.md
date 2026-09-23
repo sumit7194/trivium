@@ -89,7 +89,12 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | Free-Dirac and scalar corner functions, 20°–170° | **SETTLED** | cuspis S13 | 09-23 |
 | Precision Taylor coefficients c₂ … c₁₆ and a(3π/4) | **SETTLED** as measured (c₈ vs CHL09 unexplained) | quantum COORDINATION §1 | 09-23 |
 | An independent check of the values below 45° | **PAUSED** — control 1 failed; the amendment is the user's decision | quantum PREREG · bridge A4 §8j | 09-23 |
-| The new cusp inequalities on existing curves | **IN PROGRESS** — cuspis | fleet plan step 1 | 09-23 |
+| The new cusp inequalities (2609.04302 eq. 37, conformal concavity) on existing curves | **SETTLED** — tested, including a new-theory case | cuspis EXP-022, `2554c92` | 09-24 |
+| Is eq. (37) a route to an absolute upper bound on κ? | **CLOSED–NEGATIVE** — invariant under Casimir dressing | cuspis EXP-022 | 09-24 |
+| Is the sign of a₀ fixed by a theorem? | **SETTLED** at integer n ≥ 2; at n = 1 conditional on concavity continuing | cuspis EXP-022 · SHARED_BACKLOG S7a/S7b | 09-24 |
+| Helmes et al. eq. (22) as a referee at very small angles | **SETTLED** — valid from 20°; an artifact below a few degrees | cuspis EXP-022 | 09-24 |
+| Positioning against Bueno–Casini–Lasso Andino–Moreno 2023 | **SETTLED** — in RESULT.md §0 and §8 | cuspis `2554c92` | 09-24 |
+| Cuboid bootstrap under Casimir dressing | **IN PROGRESS** — cuspis (CF-24) | cuspis's bounds chain | 09-24 |
 
 ## Representation learning (tabula)
 
