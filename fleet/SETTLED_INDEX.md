@@ -101,7 +101,8 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | 🔒 Helmes et al. eq. (22) as a small-angle referee | **SETTLED** (scope at the pointer) | cuspis EXP-022 · SHARED_BACKLOG trap 9 | 09-24 |
 | Positioning against Bueno–Casini–Lasso Andino–Moreno 2023 | **SETTLED** — in RESULT.md §0 and §8 | cuspis `2554c92` | 09-24 |
 | Can the cuboid bootstrap bound κ from above? | **CLOSED–NEGATIVE** — closed under Casimir dressing, for the pair energy as well as its own | cuspis EXP-023, `4107218` | 09-24 |
-| An upper bound on κ/C_T (the bounds chain's goal) | **OPEN** — every positivity constraint written so far is blind to the same move; the next attempt needs a new kind of constraint. Its planned search (EXP-024, pre-registered `c9e3566`) is cuspis's **next item**, now that CF-9 is done | cuspis RESULT.md §5 | 09-24 |
+| 🔒 Does conformal concavity bound κ from above? | **CLOSED–NEGATIVE** — numerically verified at the pre-registered cases; no all-case proof (scope at the pointer) | cuspis EXP-024, `bd4860a` | 09-24 |
+| An upper bound on κ/C_T (the bounds chain's goal) | **OPEN** — every constraint tried so far (including concavity) fails to bound it; the next attempt needs a constraint of a new kind | cuspis RESULT.md §0, §5 | 09-24 |
 
 ## Representation learning (tabula)
 
