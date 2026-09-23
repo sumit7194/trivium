@@ -24,6 +24,9 @@ Unblock the hubs first, and most of the chains start moving on their own.
     EXP-002 (done, high_rank_killing)
       → ansatz verifies it independently and brings it into its repo      [DONE — RESULTS §147; agrees with V5]
       → a prior-art sweep of the object itself                          [NOT DONE — needed before an outside reader]
+          search vocabulary (ansatz): Eisenhart / Bargmann lift · Smorodinsky–Winternitz / E20 ·
+          superintegrable quadratic algebra · pp-wave hidden symmetry · "Killing tensor" AND "first integral"
+          (the ZV lesson: it may already be in print under names that never say Killing tensor or vacuum)
       → tabula screens it blind, by a numerical method (K3)               [needs ansatz to supply it, sealed]
       → one outside specialist reads it (F3)                              [only you can do this]
     in parallel:
