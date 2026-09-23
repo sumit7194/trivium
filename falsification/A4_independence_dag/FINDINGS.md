@@ -935,6 +935,48 @@ It stands because the extracted values cross-check against independent numbers (
 cuspis's controls to the printed digit; c2 halved matches 1/256 to 3.8e-6), not because the extraction
 was trusted.*
 
+## 8j. Control 1 failed, and the failure traces back to the transcription edge
+
+quantum's stage-1 verdict (`quantum@cfb2291`, verdict script committed before the run at `98b9d2c`):
+**control 1 FAILED**. a(90°) = 0.011833425 against CHL09's 0.02366/2 is off by **2.89·10⁻⁴ relative**,
+over the 2.1·10⁻⁴ tolerance, which is half a unit in CHL09's last printed digit. The other six passed,
+and every control first rejected its own poison. Per the registration: **instrument unvalidated,
+nothing below 45° reportable.** quantum did not reclassify the failure. That is the right call, and it
+is recorded as a failure.
+
+**Cuspis's own report already had this, independently and weeks earlier.** `corner_function/report.md`,
+commit `f9882d9`, **2026-09-05**:
+
+> *"+1.0·10⁻⁵ at 90° [against HHCWM16 Table 3's exact series] (CHL09's 0.01183: +2.9·10⁻⁴, i.e.
+> CHL09's last digit)"*
+
+The same 2.9·10⁻⁴, found by a separate instrument, which cuspis attributed to CHL09's last digit. **The
+arithmetic agrees with cuspis:** one unit in CHL09's last digit is 1·10⁻⁵/0.02366 = **4.2·10⁻⁴**, and the
+gap is **0.68 of a unit**. It is within the last digit and outside half of it. CHL09's printed value is
+good to about one unit, not correctly rounded, and **quantum's tolerance assumed correct rounding**.
+
+**The mechanism is the transcription edge of §8h.** quantum took the control value `0.01183` from
+cuspis's **09-04** TODO.md. The caveat that it is only good to the last digit was written into cuspis's
+report on **09-05**, after the snapshot. **The value travelled; the caveat did not, and could not.**
+This is the third instance in this thread of content surviving a hop while its qualifier is lost, after
+"four-digit" (§8i) and the mechanism attribution (§8a). This time the qualifier did not exist yet when
+the content was copied.
+
+**Two cautions, recorded before quantum's hypothesis R (CHL's value is a truncated Taylor sum) reports:**
+
+- The Helmes-vs-CHL "disagreement at the fourth digit" is **flush against a boundary**. Helmes's
+  printed lower bound 0.02367 and CHL's 0.02366 have rounding intervals that meet at 0.023665, so the two
+  published values could differ by as little as ~1·10⁻⁵ relative. It supports the conclusion. It cannot
+  carry it (operating rule 7).
+- Until R passes, the strongest evidence that the reference is wrong comes from **quantum's own full
+  solve, the instrument under test**, and from **cuspis's report, the party under audit**. Neither can
+  exonerate the control. R is well designed because it tries to explain the failure using the parts of
+  the instrument that did pass (the Taylor coefficients, validated against external values) rather than
+  the part that failed.
+
+*quantum asked the bridge whether a post-failure amendment is worthless. The bridge's answer is in the
+next message to quantum. **The decision is the user's.***
+
 ## 9. Honest scope
 
 - An audit of our own record. It prices the evidence everything else here is quoted in; it is not
