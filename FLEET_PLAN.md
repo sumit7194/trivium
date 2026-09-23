@@ -1,101 +1,179 @@
-# Fleet plan — one merged list, one lane per session
+# Fleet plan — how the work fits together
 
-*Draft for discussion with the user, 2026-09-23. **Not yet sent to any session as a plan.** Built from the
-six sessions' lists and `high_rank_killing`'s synthesis (see `FLEET_ANALYSIS.md`). All 86 merged items, with
-scores, live in the **generated** [`fleet/REGISTER.md`](fleet/REGISTER.md). This page uses IDs only, so its
-numbers can't drift from the register's.*
-
----
-
-## 1. How the six lists were merged
-
-- **Deduplicated** to 86 items using the crosswalk (e.g. B-3 = CF-2 = V-3; CF-22 = V-6; B-18 ⊂ M11).
-- **The owner's own scores win** on any item that owner scored. The bridge's scores count only where nobody
-  else scored the item.
-- **One definition of odds:** the chance the item's *stated success criterion* is met. Where a list gave two
-  odds, the one matching its success criterion is used, and the other is noted. For example, M6 (Q3): a
-  clean adjudication ~70%, a real signal <1%.
-- **Two views, computed by the script, never by hand:**
-  - **Moonshot index M = I × D × (1 − P)** — your original question.
-  - **Portfolio value EV = I × P** — what to actually run.
-- **Provisional:** tabula scored chance on a 1–5 scale. It is converted as 1→5%, 2→15%, 3→30%, 4→50%,
-  5→75% until tabula confirms.
-
-**What the merge shows.** The moonshot view can't choose for us: more than a dozen items score 21–25,
-because every maximal-difficulty, low-odds, high-impact item lands there. So the decision isn't a ranking.
-It's **one moonshot kept alive per session**, plus a short, distinct next-up list, with every session in a
-lane of its own.
+*Draft for discussion with the user, 2026-09-23. Not yet sent to any session as a plan. Built from the six
+sessions' lists and `high_rank_killing`'s synthesis. The full merged item list is in
+[`fleet/REGISTER.md`](fleet/REGISTER.md) (IDs such as K5 or Q8 refer to it). This page is about how the
+tasks connect, not how they score.*
 
 ---
 
-## 2. The lanes — one role per session
+## 1. The picture in one paragraph
 
-| Session | Lane (its instrument) | Keeps alive (moonshot) | Next up | Supplies to others | Not its job |
-|---|---|---|---|---|---|
-| **ansatz** | **Exact symbolic.** Killing tensors, integrability, beyond-GR metrics. Home of the rank-3 vacuum result | **K1** — functionally independent version | verify and absorb EXP-002 (asked) · **K12** second-order Carter · **K17** certificate format | sealed metrics to tabula (K3, K13, K15) and the proof instrument (K4) · axial–polar splitting for deepstrain (Q5) · symbolic checks (Q16) | numerical screens as evidence · real data |
-| **tabula** | **Numerical screens + representation learning.** Emit-or-certify, legibility law | **K14** (blind-recover P–K, then rank-4 outside it) **or L1** (Walrus) — its choice, within the lane | **K3** blind screen of the rank-3 object · **L16** synthesis write-up · **L12** public benchmark | the N rung for K5, K8, K12, K13 · the planted-nuisance check on anyone's "conserved quantity" | claiming constructions or proofs · corner functions · LIGO data |
-| **deepstrain** | **Real data.** LIGO/Virgo strain, ringdown, subsolar, echoes | **Q8** independent test of the GW250114 "direct wave" (Q1 is blocked: no theory template owner) | **Q6** re-score LVK O4a triggers (its declared next) · **Q3** the 5.4σ adjudication (one session only) · **Q15** deep-FAR methods note | injections, backgrounds, METRICS series, arbitrary-precision Kerr QNMs | symbolic GR · LISA/EMRI |
-| **quantum** (vestigium) | **Validated numerics + analytic structure.** Precision corner values, Painlevé, certificates | **C14** the Painlevé system behind the corner ODEs | **C20** continuum a(2π/3), a(π/3) (its declared next) · **C16** κ to 30 digits (if unblocked) · **K4** proof instrument (*if you assign it*) | precision scalar coefficients to cuspis (labelled non-independent) · validated-numerics tooling for K19 | sub-45° values until your amendment decision · Rényi n = 2 · anything built from cuspis's code |
-| **cuspis** | **Corner theory.** Bounds, positivity, the mechanism | **C1** an upper bound on κ/C_T | **C17** the new cusp inequalities (sole owner) · position 2307.05164 in `RESULT.md` (R-5) · **C13** analytic a₀ | curves and settled facts (its §2) to anyone | the sub-45° second instrument — it must be independent of cuspis's solver |
-| **bridge** | **Coordination, independence and statistics audit.** Register, reconciliation, adjudication | *(none — it audits the others' moonshots)* | **F2** fleet settled-results index · **F1** error-propagation case study · **Q12** GWTC-4 finite-SNR bias (*proposed*) | merges, audits, independent re-derivations (as V5), literature relays tagged | adjudicating any claim it produced itself |
-
-**Why these lanes don't collide.** Each is defined by a **kind of instrument**, not a topic. Several lanes
-meet on one object (the rank-3 result, deformed Kerr, the corner band), and that is deliberate: the same
-question through different instruments is what turns agreement into evidence (L17). What the lanes prevent
-is the same instrument used twice on the same question.
+The six lists describe **five chains of work**. Most tasks are links in a chain: they need something from an
+earlier task, or they feed a later one, often in another session. A few tasks are **hubs** that several
+chains run through, and **three of those hubs are currently stuck**: a missing proof tool, a pending
+decision, and a single overloaded supplier. So the order of work matters more than any single task's appeal.
+Unblock the hubs first, and most of the chains start moving on their own.
 
 ---
 
-## 3. Items that need more than one session — how they're split
+## 2. The five chains
 
-| Item | Split | Rule |
+### Chain 1 — The rank-3 vacuum result → something the outside world can check *(ansatz · tabula · bridge · you)*
+
+    EXP-002 (done, high_rank_killing)
+      → ansatz verifies it independently and brings it into its repo      [asked; in progress]
+      → tabula screens it blind, by a numerical method (K3)               [needs ansatz to supply it, sealed]
+      → one outside specialist reads it (F3)                              [only you can do this]
+    in parallel:
+      which potentials qualify (K2) → the functionally independent version (K1, the moonshot)
+
+**How the pieces work together.** Three different methods — the author's exact construction, the bridge's
+independent re-derivation (V5, done), and tabula's numerical screen — look at one object. That is what
+makes it presentable. tabula's screen has a known blind spot: it can't see functional dependence. That's
+fine, as long as it's stated.
+
+### Chain 2 — Are deformed black holes integrable? *(ansatz · the proof-tool owner · tabula · quantum · bridge)*
+
+This is the fleet's core question, and it runs through **one missing tool**.
+
+    BUILD THE PROOF TOOL (K4) — tested first: ZV δ=2 must come out non-integrable, Kerr integrable
+      → Manko–Novikov (K5) ─→ locate its chaotic sea numerically (K20) ─→ PROVE the chaos (K19)
+      → Tomimatsu–Sato (K6)       ansatz already has the exact low-rank side
+      → scalar-Gauss–Bonnet (K7)  the hardest target, last
+      → dCS — is it integrable? (K8)  the published papers contradict each other
+
+    Each target is attacked on three rungs at once, by different sessions:
+      exact, rank by rank (ansatz)  ·  numerical screen (tabula, or quantum on a DIFFERENT target)  ·  proof (tool owner)
+    ansatz's exact side feeds the dCS question: second-order Carter (K12), pole-order bound (K10), rational engine (K11)
+
+**How the pieces work together.** Every target gets every rung, with a different session on each rung. So
+when the rungs agree, it counts as evidence. **Without the proof tool, the chain stops at "none found up to
+rank N"**, which is where it has sat for weeks.
+
+**The link to real data.** deepstrain's measurement of how badly the sGB spin series truncates (Round 61)
+marks where ansatz's truncated-sGB statements stop describing the real black hole. That's data scoping
+theory, and it should be cited that way. The orbital side of this chain (EMRIs, LISA) has **no data path**
+in the fleet. Its results are theory and must not be advertised as LIGO-testable.
+
+### Chain 3 — Testing beyond-GR ideas on real LIGO data *(deepstrain · ansatz · bridge)*
+
+    Theory in, data out:
+      ansatz supplies the axial–polar splitting (from METRICS) → deepstrain tests isospectrality (Q5)
+      sGB spin-series structure (Q16): deepstrain's series + ansatz's symbolic check
+
+    The GW250114 cluster — FOUR analyses of the only informative event:
+      direct-wave test (Q8) · quadratic mode (Q10) · isospectrality (Q5) · orthonormal-mode positioning (Q17)
+      → these should be run as ONE programme, not four
+
+    Independent-audit pairs:
+      deepstrain's injections → an independent statistics audit → "is the GWTC-4 GR tension a bias?" (Q12)
+      deepstrain adjudicates the 5.4σ claim (Q3) → an independent audit before anything is called decisive
+
+    Its own next step: the adequate bank from Round 62 → re-score LVK's subsolar triggers (Q6)
+
+**How the pieces work together.** The GW250114 cluster is the one real coordination risk in this chain.
+Four analyses of one event share its data preparation. They should share its priors — deepstrain's own L3
+finding is that the prior is what moves the answer. And they compound a look-elsewhere effect if each one is
+reported alone. One plan for the event, with the four questions pre-registered together, avoids all three
+problems.
+
+### Chain 4 — Why the corner band is narrow *(cuspis · quantum · bridge)*
+
+    Two routes to the mechanism, split on purpose:
+      cuspis: tripartite information (C2a)       quantum: bound + remainder (C2b)
+      → each pre-registers a prediction the other can't see → the bridge compares
+
+    quantum's precision chain:
+      continuum a(2π/3), a(π/3) (C20, next) → κ to 30 digits (C16) → closed-form guess by PSLQ (C15)
+                                                  ↕
+                                   which Painlevé system is behind the equations (C14, the moonshot)
+
+    cuspis's bounds chain:
+      test the new cusp inequalities (C17, next) → cuboid under dressing → an UPPER bound on κ (C1, the moonshot)
+      every candidate constraint is tested against the "Casimir dressing" trick first
+
+    Settling the free scalar's a₀: analytic route (C13) + larger-mass numerics (C22)
+
+    STUCK: the independent sub-45° check (C12) — waits on your amendment decision, or on a new instrument
+
+**How the pieces work together.** cuspis supplies the settled facts, quantum supplies the precision, and
+the bridge compares the two mechanism routes. The two sessions stay on different methods, and quantum never
+uses anything built from cuspis's code.
+
+### Chain 5 — Representation learning *(tabula, mostly on its own)*
+
+tabula's own programme (Walrus and the legibility law, embodied agents, learned time-dependent geometry,
+field laws, grid cells) is self-contained, and that's healthy. It touches the other chains in three places:
+- **The public discoverability benchmark (L12)** takes every session's certified nulls and positives as test
+  cases. The rank-3 object is a deliberately subtle positive for it.
+- **3+1 Kaluza–Klein (L9)** uses quantum's KK result as a *blind* target.
+- **tabula's numerical screens** are the N rung in Chain 2.
+
+---
+
+## 3. The hubs — where chains meet
+
+| Hub | Chains it serves | State | What it needs |
+|---|---|---|---|
+| **The proof tool** (differential Galois / Kovacic) | 2 (five targets); related tooling to Chain 4's Painlevé work (C14) | **no owner** | your decision |
+| **ansatz as supplier** | 1 (absorb, supply the object sealed), 2 (metrics to three sessions), 3 (theory inputs to deepstrain) | **overloaded**: it's on the path of about seven items, plus its own rank-8 run | its supplier duties put ahead of its own new items |
+| **Interval-arithmetic tooling** (Arb / CAPD) | 2 (proving chaos, K19); 4 (a certified corner number, C18); certificates for everyone | nobody has it yet | one investment, used three ways |
+| **GW250114** | 3 (four analyses) | four separate plans | one programme for the event |
+| **Your amendment decision** | 4 (sub-45° check; possibly κ to 30 digits) | pending since this morning | a yes or no |
+| **Settled-results index + one certificate format** (bridge, F2 · ansatz, K17) | every chain | not built | prevents another in-fleet miss like B-1 |
+
+**The observation that matters most.** The proof tool and the Painlevé work (C14) are the **same family of
+mathematics** — singularity analysis of differential equations. If one session owns both, the fleet gets one
+toolkit serving two chains. That's the main reason I'd give the proof tool to **quantum**: its corner work is
+paused on your decision anyway, so it has capacity. ansatz would supply the metrics, sealed.
+
+---
+
+## 4. The order that unblocks the most
+
+**Step 1 — decisions (only you):** who owns the proof tool · the amendment · the outside specialist for EXP-002.
+
+**Step 2 — cheap work that feeds other work:**
+- ansatz verifies and absorbs EXP-002 → unblocks tabula's blind screen (Chain 1)
+- quantum's continuum angles (C20) → feeds its precision chain (Chain 4)
+- cuspis's cusp-inequality test (C17) → first step of its bounds chain (Chain 4)
+- deepstrain re-scores the subsolar triggers (Q6) — self-contained, and already its declared next
+- the bridge builds the settled-results index (F2) — every later list gets checked against it
+
+**Step 3 — build the hubs:** the proof tool, with its controls · one GW250114 programme · the interval-arithmetic
+tooling.
+
+**Step 4 — aim the hubs:** Manko–Novikov → chaos proof · dCS on all rungs · the two corner-mechanism routes ·
+the GW250114 analyses.
+
+**Kept alive throughout** — one moonshot per session, each inside its own lane: ansatz K1 · tabula K14 or its
+Walrus item · deepstrain the direct-wave test · quantum the Painlevé identification · cuspis the upper bound on κ.
+
+---
+
+## 5. One lane per session
+
+| Session | Lane (its instrument) | In the chains above |
 |---|---|---|
-| **K8** Is dCS integrable? | exact (ansatz) · proof (K4 owner) · numerical (tabula/quantum, *different targets*) · bridge adjudicates | each rung ships a manifest; the bridge compares blind |
-| **K5 → K19** Manko–Novikov | proof of non-integrability (K4 owner) → computer-assisted chaos proof (quantum + bridge), with K20 locating the chaotic sea first | same target, every rung of the claim ladder |
-| **C2a / C2b** corner mechanism | cuspis: tripartite information · quantum: bound + remainder | each pre-registers one prediction the other can't see |
-| **K3** blind screen of the rank-3 object | ansatz supplies (after absorbing it), sealed · tabula scores | metric only, no labels, no motivation |
-| **Q5** isospectrality | ansatz supplies the theory input · deepstrain fits | theory before data |
-| **Q3** 5.4σ adjudication | **deepstrain only** | two refutations by different mechanisms must not collide |
-| **C17** cusp inequalities | **cuspis only**; quantum contributes coefficients labelled non-independent | duplicate CF-22 = V-6 resolved |
+| **ansatz** | exact symbolic | leads Chain 1's verification; exact rung of Chain 2; theory supplier to Chain 3 |
+| **tabula** | numerical screens + representation learning | blind screen in Chain 1; numerical rung of Chain 2; all of Chain 5 |
+| **deepstrain** | real data | leads Chain 3 |
+| **quantum** | validated numerics + analytic structure | precision and Painlevé in Chain 4; **the proof tool in Chain 2, if you assign it** |
+| **cuspis** | corner theory | bounds and mechanism in Chain 4 |
+| **bridge** | coordination, independence, statistics audit | compares the method splits; audits Chain 3's claims; settled-results index; error case study |
+
+Lanes are defined by **kind of instrument**, not topic. Several lanes meet on one object on purpose, because
+that's what makes agreement count as evidence. What lanes prevent is one instrument used twice on the same
+question.
 
 ---
 
-## 4. Unowned or parked — and what would change that
+## 6. Decisions for you
 
-| Item | Why it's parked | What would unpark it |
-|---|---|---|
-| **K4** the proof instrument | no session has differential Galois / Kovacic tooling | **your decision** — it unlocks K5, K7, K10, K19 |
-| **C12** a second sub-45° instrument | the lattice route is infeasible (R-3); V8 awaits your amendment decision | an owner for the tensor-network wedge, or CF-13's analytic route |
-| **Q1** quantum-ringdown tail | no session owns the theory template | a session willing to turn arXiv:2609.14160 into a LIGO-band template |
-| **K21** closed-form rotating sGB | the bridge's own rule: run K22 (blind rediscovery) first | K22 passes |
-| **K23** why the principal tensor | `hidden_symmetry` closed at outcome E; no owner | — |
-| **C3, C4, C6, C7** interacting κ, fuzzy sphere, θ^{2η}, twist-line bootstrap | no fleet instrument | a new instrument or an outside collaborator, not a session |
-| **L8, L13** LLM light cone, Hashimoto bulk | tabula lists them as open seats | Phronesis, if it wants them — it's outside the six repos |
-
----
-
-## 5. Decisions only you can make
-
-1. **Approve the lanes** in §2, or move items between them.
-2. **Who owns K4, the proof instrument.** My recommendation: **quantum**. It has spare capacity (its corner
-   work is gated on your amendment), and its Painlevé item (C14) uses closely related singularity-analysis
-   tools. It also keeps the proof rung in a different session from ansatz's exact rung; that isn't required
-   for independence, but it helps. ansatz would supply the metrics, sealed. The alternative is ansatz itself,
-   which asked someone else to lead proof work.
-3. **The statistics-audit lane (Q12, Q9):** the bridge (my proposal — tabula's list is already 19 items) or tabula.
-4. **quantum's sub-45° amendment** (V8 → C12). It's been waiting since this morning.
-5. **`high_rank_killing`:** fold into ansatz and archive. Already in motion — ansatz is verifying first.
-6. **F3: one outside specialist reads EXP-002.** The highest-value single action in the register, and the only
-   one no session can take.
-7. **Each session's kept-alive moonshot** (§2) — proposals; a session may swap within its own lane.
-
----
-
-## 6. Clarifications being asked (list only — no work requested)
-
-- **tabula:** confirm or correct the provisional 1–5 → probability mapping.
-- **ansatz:** score K5 (Manko–Novikov) and K22 (blind rediscovery), which were proposed for it but aren't on
-  its list (R-7).
-- **deepstrain:** score Q17 (B-16), which isn't on its list (R-8); confirm "clean adjudication" as M6's success
-  criterion; say whether it wants Q19 (S2/Hulse–Taylor), which tabula offered.
-- **quantum:** is C16 (κ via Painlevé V) blocked by the sub-45° registration or not? Its list is ambiguous.
+1. The proof tool's owner — **my recommendation: quantum**, for the toolkit overlap with its Painlevé work.
+2. The sub-45° amendment.
+3. One outside specialist for EXP-002.
+4. Approve the lanes, or move things between them.
+5. Whether GW250114's four analyses become one programme under deepstrain.
+6. Who owns the statistics-audit pair in Chain 3: the bridge (my proposal) or tabula.
