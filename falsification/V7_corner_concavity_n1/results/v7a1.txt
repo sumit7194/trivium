@@ -1,0 +1,2 @@
+d/dx of symmetry relation at x=1: 2*Gp1 + 4*a  -> G'(1) = -2*a
+EMI kappa/a(pi/2) = 3.141592653589793 >= 2 ? True

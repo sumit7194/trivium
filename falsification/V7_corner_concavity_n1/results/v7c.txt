@@ -1,0 +1,16 @@
+thmin=0.001 N=  200  LP1=2.537840  LP2 kappa/C_T=2.893577
+thmin=0.001 N=  400  LP1=2.537855  LP2 kappa/C_T=2.893609
+thmin=0.001 N=  800  LP1=2.537866  LP2 kappa/C_T=2.893626
+thmin=0.001 N= 1600  LP1=2.537867  LP2 kappa/C_T=2.893629
+thmin=0.001 N= 3200  LP1=2.537868  LP2 kappa/C_T=2.893629
+thmin=0.0001 N=  200  LP1=2.537840  LP2 kappa/C_T=2.893576
+thmin=0.0001 N=  400  LP1=2.537855  LP2 kappa/C_T=2.893610
+thmin=0.0001 N=  800  LP1=2.537866  LP2 kappa/C_T=2.893626
+thmin=0.0001 N= 1600  LP1=2.537867  LP2 kappa/C_T=2.893629
+thmin=0.0001 N= 3200  LP1=2.537868  LP2 kappa/C_T=2.893629
+no-CC control (LP1, LP2): {400: (0.0, 0.0), 1600: (0.0, 0.0)}
+intercept - [tau a/2 + g tau(1-tau^2)/(1+tau^2)] = 0
+lower-bound intercept (sigma = 1) - 4 phi = 0
+tau* = 0.371519414916  theta* (deg) = 81.524036  phi* = 0.439778974134
+kappa >= 16 sigma phi*  ->  kappa/C_T >= 2.893629666 ;  kappa/a(pi/2) >= 4 phi*/ln 2 = 2.537867780  (needs theta* <= pi/2: True )
+control CC without C3, LP1 (expect chord 2): {400: 1.9999999999997122, 1600: 2.0000000000020206}

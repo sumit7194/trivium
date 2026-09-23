@@ -1,0 +1,4 @@
+b1 {'translation_residual': '0', 'zeta_i_modulus_sq': '1', 'arg_error': 0.0, 'eye_angle_max_error': 1.1102230246251565e-16, 'attractor_rate_residual': '0'}
+b2/b3 cases: 90  union mismatches: 0  intersection mismatches: 0  rows not one interval: 0
+reversed-assignment control: min mismatches over cases = 8198
+notch controls (must fail): [(860, 31), (1298, 37), (0, 13)]

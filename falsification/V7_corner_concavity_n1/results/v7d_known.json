@@ -1,0 +1,65 @@
+{
+ "EMI": {
+  "min_sdd": 0.6675951483995287,
+  "maxF": 0.7853981633974483,
+  "passes": true
+ },
+ "EMI_bump_control": {
+  "min_sdd": -205.84466729327107,
+  "maxF": 0.7853981633974483,
+  "passes": false
+ },
+ "amin_control": {
+  "min_sdd": -214735131450.88687,
+  "maxF": 0.1912410179229846,
+  "passes": false
+ },
+ "holo_selfcheck": {
+  "sigma_over_CT_numeric": [
+   0.411237014104665,
+   0.41123675488338435,
+   0.41123651487507995,
+   0.41123629265568623,
+   0.4112360869067737
+  ],
+  "sigma_over_CT_expected": 0.4112335167120566,
+  "kappa_over_CT_small_angle": [
+   3.7092157302238173,
+   3.7092146471994245,
+   3.7092134774769985,
+   3.709212214116262,
+   3.709210849621372
+  ],
+  "monotone_decreasing": true
+ },
+ "holographic": {
+  "min_sdd": 0.16163593534541537,
+  "maxF": 0.17944190193098858,
+  "passes": true
+ },
+ "holographic_with_F0": {
+  "min_sdd": -1505571.4862643143,
+  "maxF": 0.17944190193098858,
+  "passes": false
+ },
+ "holographic_bump_control": {
+  "min_sdd": -7620.332378219215,
+  "maxF": 1.2911925631226322,
+  "passes": false
+ },
+ "CHL09_real_scalar": {
+  "min_sdd": 0.020903581977852657,
+  "maxF": 0.009925,
+  "passes": true
+ },
+ "CHL09_dirac": {
+  "min_sdd": 0.0406192547070523,
+  "maxF": 0.01805,
+  "passes": true
+ },
+ "CHL09_scalar_wrong_complex_a90_control": {
+  "min_sdd": -0.12901174934242077,
+  "maxF": 0.009925,
+  "passes": false
+ }
+}
