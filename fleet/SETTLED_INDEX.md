@@ -81,7 +81,9 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | Do the known constraints bound κ/C_T from above? | **SETTLED** (re-derived by quantum) | cuspis SHARED_BACKLOG S1 | 09-23 |
 | What the ~1% collapse actually is | **SETTLED** | cuspis S2 | 09-23 |
 | Can ⟨TT⟩ and ⟨TTT⟩ data order the band? | **SETTLED** | cuspis S3 | 09-23 |
-| A lower bound on κ/C_T at n = 1 | **PARTIAL** — rests on an assumed n → 1 continuation; **proof at n = 1 IN PROGRESS** (cuspis CF-9 → EXP-025, being pre-registered; user's choice) | cuspis S4 | 09-24 |
+| A lower bound on κ/C_T at n = 1 | **SETTLED** unconditionally, from standard inputs (scope at the pointer). A **stronger** bound is **PARTIAL**: it rests on the concavity row below | cuspis EXP-025, S4 | 09-24 |
+| Conformal concavity at n = 1 | **PARTIAL** — derived at physics-level rigour in one session, with a within-repo review; not a theorem. **Bridge check V7 IN PROGRESS** (non-blind) | cuspis EXP-025, S14 | 09-24 |
+| Does the rectangle bound hold at n = 1? | **PARTIAL** — follows *given* the concavity row; the direct route rests on a conjectural positivity (named at the pointer) | cuspis EXP-025 | 09-24 |
 | Can the rectangle bootstrap bound κ from above? | **SETTLED** | cuspis S5 | 09-23 |
 | What a₀ ≠ 0 requires | **SETTLED** (the exponent is prior art) | cuspis S6 | 09-23 |
 | 🔒 a₀ by theory | **SETTLED** as measured | cuspis S7 | 09-24 |
@@ -99,7 +101,7 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | 🔒 Helmes et al. eq. (22) as a small-angle referee | **SETTLED** (scope at the pointer) | cuspis EXP-022 · SHARED_BACKLOG trap 9 | 09-24 |
 | Positioning against Bueno–Casini–Lasso Andino–Moreno 2023 | **SETTLED** — in RESULT.md §0 and §8 | cuspis `2554c92` | 09-24 |
 | Can the cuboid bootstrap bound κ from above? | **CLOSED–NEGATIVE** — closed under Casimir dressing, for the pair energy as well as its own | cuspis EXP-023, `4107218` | 09-24 |
-| An upper bound on κ/C_T (the bounds chain's goal) | **OPEN** — every positivity constraint written so far is blind to the same move; the next attempt needs a new kind of constraint. Its planned search (EXP-024, pre-registered `c9e3566`) is **DEFERRED** while cuspis does CF-9 | cuspis RESULT.md §5 | 09-24 |
+| An upper bound on κ/C_T (the bounds chain's goal) | **OPEN** — every positivity constraint written so far is blind to the same move; the next attempt needs a new kind of constraint. Its planned search (EXP-024, pre-registered `c9e3566`) is cuspis's **next item**, now that CF-9 is done | cuspis RESULT.md §5 | 09-24 |
 
 ## Representation learning (tabula)
 
