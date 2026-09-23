@@ -44,7 +44,7 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | Does dCS keep a rational Carter constant? | **SETTLED** | ansatz §145 | 09-23 |
 | Is dCS integrable overall (any degree, non-polynomial)? | **OPEN** — the literature contradicts itself | fleet item K8 | 09-23 |
 | The pole-order ladder | **PARTIAL** — parity grading found; ℓ-dependence open | ansatz §141–§146 | 09-23 |
-| Tomimatsu–Sato δ=2: any additional integral? (the proof tool's first real target) | **IN PROGRESS** — the target metric (rational form) is built and vacuum-checked by ansatz, and HELD sealed until quantum's controls pass | ansatz `3981560` · fleet plan chain 2 | 09-24 |
+| Tomimatsu–Sato δ=2: any additional integral? (the proof tool's first real target) | **IN PROGRESS** — three rungs. Numerical (tabula): **done**, scope at the pointer. Proof tool (quantum): waits on its controls. Exact (ansatz): its expectation is sealed. The bridge compares when the rungs are in | ansatz `3981560` · tabula `193_ts2_screen` (local, unpushed) · fleet plan chain 2 | 09-24 |
 | Manko–Novikov: all-rank non-integrability, proved | **OPEN** — none found in print (two searches) | fleet item K5 | 09-23 |
 | Manko–Novikov: chaos seen numerically | **SETTLED** (literature) | arXiv:1108.5057 | 09-23 |
 | The proof tool (Morales–Ramis / Kovacic) | **IN PROGRESS** — quantum, Stage 1: calibration passes on three routes; controls A (ZV δ=2) and A′ pass; A″, B1, B2 pending (rerun under a footprint watchdog) | fleet plan step 1 · quantum `69621e9`, `46f5bb2` | 09-24 |
