@@ -73,3 +73,8 @@ ansatz has corrected its own headline (#1) and its CLAUDE.md §1, and brought th
 **The object now has three routes behind it** — the author's construction, V5, and ansatz's standalone
 check — all AI. **Still not done before an outside reader: a prior-art sweep of the object itself**
 (ansatz lists it as NOT CHECKED).
+
+
+---
+
+**Prior art (V6, 2026-09-23): COROLLARY.** The spacetime and its two quadratic Killing tensors are in Filyukov 2017 (Sci. Tech. Educ. 1(5) 13–20, Russian). What V5 verifies — the rank-3 tensor and its polynomial irreducibility — is not in print. See `falsification/V6_rank3_prior_art/FINDINGS.md`.

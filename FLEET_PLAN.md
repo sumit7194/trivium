@@ -23,7 +23,10 @@ Unblock the hubs first, and most of the chains start moving on their own.
 
     EXP-002 (done, high_rank_killing)
       → ansatz verifies it independently and brings it into its repo      [DONE — RESULTS §147; agrees with V5]
-      → a prior-art sweep of the object itself                          [NOT DONE — needed before an outside reader]
+      → a prior-art sweep of the object itself                          [DONE — V6: COROLLARY. The SPACETIME and its two
+          quadratic Killing tensors were published by Filyukov 2017 (Russian, off arXiv). The rank-3 tensor is
+          their Poisson bracket, never computed; that paper names finding it as its open problem.
+          → the result is a short note, not a first construction — describe it that way]
           search vocabulary (ansatz): Eisenhart / Bargmann lift · Smorodinsky–Winternitz / E20 ·
           superintegrable quadratic algebra · pp-wave hidden symmetry · "Killing tensor" AND "first integral"
           (the ZV lesson: it may already be in print under names that never say Killing tensor or vacuum)
