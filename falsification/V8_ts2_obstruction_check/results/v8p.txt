@@ -1,0 +1,12 @@
+CONTROL ZV_delta2  (1, 0, 4): OBSTRUCTION                              case1=no case-1 solution  candidates tried=7  OK
+CONTROL ZV_delta2  (1, 0, 9): OBSTRUCTION                              case1=no case-1 solution  candidates tried=7  OK
+CONTROL ZV_delta2  (1, 1, 4): OBSTRUCTION                              case1=no case-1 solution  candidates tried=1  OK
+CONTROL KERR_t1o2  (1, 0, 4): NOT OBSTRUCTION (no log point at 0)      case1=no case-1 solution  candidates tried=1  OK
+CONTROL KERR_t1o2  (1, 0, 9): NOT OBSTRUCTION (no log point at 0)      case1=no case-1 solution  candidates tried=1  OK
+CONTROL KERR_t1o2  (1, 1, 4): NOT OBSTRUCTION (no log point at 0)      case1=no case-1 solution  candidates tried=1  OK
+TARGET  TS2_P1     (1, 0, 4): OBSTRUCTION                              case1=no case-1 solution  candidates tried=0
+TARGET  TS2_P1     (1, 0, 9): OBSTRUCTION                              case1=no case-1 solution  candidates tried=0
+TARGET  TS2_P1     (1, 1, 4): OBSTRUCTION                              case1=no case-1 solution  candidates tried=0
+TARGET  TS2_P2     (1, 0, 4): OBSTRUCTION                              case1=no case-1 solution  candidates tried=0
+TARGET  TS2_P2     (1, 0, 9): OBSTRUCTION                              case1=no case-1 solution  candidates tried=0
+TARGET  TS2_P2     (1, 1, 4): OBSTRUCTION                              case1=no case-1 solution  candidates tried=0

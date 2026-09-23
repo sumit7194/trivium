@@ -1,0 +1,2 @@
+ts2_metric_components_t1o2.txt  even_in_y: True   max|R_ab| at 3 fresh points: ['0', '0', '0']   bump control |R|: 0.1002
+ts2_metric_components_t1o3.txt  even_in_y: True   max|R_ab| at 3 fresh points: ['0', '0', '0']   bump control |R|: 0.07289

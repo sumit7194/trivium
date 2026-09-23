@@ -1,0 +1,4 @@
+poison_d0: log0=True  N=2  poles=[('x - 3', '-3/16'), ('x', '3/4'), ('x + 2', '21/16')]  ord_inf=4
+   case1: CASE 1 HOLDS (P found);  P=['x**2']  ->  NOT OBSTRUCTION  (OK)
+poison_d1: log0=True  N=2  poles=[('x - 5', '39425/153664'), ('x - 3', '-3/16'), ('x', '3/4'), ('x + 2', '599985/153664')]  ord_inf=4
+   case1: CASE 1 HOLDS (P found);  P=['x**3 - 7*x**2']  ->  NOT OBSTRUCTION  (OK)
