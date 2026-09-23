@@ -22,7 +22,8 @@ Unblock the hubs first, and most of the chains start moving on their own.
 ### Chain 1 — The rank-3 vacuum result → something the outside world can check *(ansatz · tabula · bridge · you)*
 
     EXP-002 (done, high_rank_killing)
-      → ansatz verifies it independently and brings it into its repo      [asked; in progress]
+      → ansatz verifies it independently and brings it into its repo      [DONE — RESULTS §147; agrees with V5]
+      → a prior-art sweep of the object itself                          [NOT DONE — needed before an outside reader]
       → tabula screens it blind, by a numerical method (K3)               [needs ansatz to supply it, sealed]
       → one outside specialist reads it (F3)                              [only you can do this]
     in parallel:

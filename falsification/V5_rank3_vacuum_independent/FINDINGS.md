@@ -44,3 +44,32 @@ first-time pass.
 The bridge's **B-1 (scored ~3%) was already done**, 18 days before it was listed, in the polynomial sense.
 G-3 is killed by construction *inside the fleet*. The open moonshot becomes the **functionally independent**
 version (H-2).
+
+---
+
+## Addendum — ansatz's independent verification agrees (2026-09-23, conjecture_machine RESULTS §147)
+
+ansatz verified EXP-002 **from the object alone, before reading any workspace file**, with a standalone
+script importing nothing from its own repo (`scripts/_pp_wave_verify.py`, `data/pp_wave_verify.out`). It was
+told only the method-level trap that a first-order jet count isn't tight on a pp-wave, **not** V5's numbers or
+verdict, which were withheld until its check was done.
+
+**Where the two routes overlap, they agree:** Ricci-flat · signature (1,3) · {H,F} = 0 with a failing
+perturbation · dim K1 = 2 via integrability conditions · polynomial irreducibility via the ideal (p_t, p_s).
+**Both independently found an upper bound of exactly 6 at first order**, which cross-checks the jet
+machinery itself, not only the final answer.
+
+**Where ansatz goes further than V5:**
+- the count stays at 2 at k = 2 (stabilisation), where V5 stopped at k = 1
+- Schwarzschild returns 4 as a control, showing the method isn't stuck at 2 (stronger than V5's flat-space 10)
+- **functional status measured:** F is independent of {p_t, p_s, H, Q1} (Jacobian rank 5) but dependent on
+  the full quadratic family; F = −4{Q1, Q2}, and the F² identity holds exactly
+- **scope:** a singular pp-wave, with a 4π conical excess at ρ = 0 and a profile ~1/ρ — generic for non-plane
+  vacuum pp-waves
+
+ansatz has corrected its own headline (#1) and its CLAUDE.md §1, and brought the workspace in as
+`workspaces/high_rank_killing/` with PROVENANCE.md (commits, per-file sha256).
+
+**The object now has three routes behind it** — the author's construction, V5, and ansatz's standalone
+check — all AI. **Still not done before an outside reader: a prior-art sweep of the object itself**
+(ansatz lists it as NOT CHECKED).
