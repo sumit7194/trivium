@@ -1,0 +1,14 @@
+V5 — independent check of the rank-3 Lorentzian vacuum pp-wave
+
+  PASS  V5a signature (1,3)  negative eigenvalues: 1
+  PASS  V5b Ricci-flat
+  PASS    poison-b (non-harmonic g_tt) must be NON-flat
+  PASS  V5c {H,F} = 0
+  PASS    poison-c (one sign flipped) must be NONZERO
+  PASS  V5d pure (p_xi,p_eta) part nonzero  F|pt=ps=0 = (p_eta**2 + p_xi**2)*(eta*p_xi - p_eta*xi)/(32*(eta**2 + xi**2))
+  FAIL  V5e dim K1 <= 2 (jet count at one point)  kernel dim = 6
+  PASS    pos-e: d_t is Killing and its jet lies in the kernel
+  PASS    pos-e: d_s is Killing and its jet lies in the kernel
+  PASS    flat-e: at a=0 (flat space) the count must return 10  kernel dim = 10
+
+VERDICT: A GATE OR CONTROL FAILED -- see above; the claim is not confirmed by this route

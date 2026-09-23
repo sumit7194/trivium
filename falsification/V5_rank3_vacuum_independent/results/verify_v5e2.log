@@ -1,0 +1,2 @@
+V5e' second-order kernel dim = 2  (d_t, d_s in kernel: True);  flat control = 10 (must be 10)
+V5e': PASS -- dim K1 = 2 (upper 2, lower 2)

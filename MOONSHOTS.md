@@ -7,6 +7,21 @@ contribution, plus the rules that let six lists merge into one.*
 
 **Path:** `/Users/sumit/Github/TheBridge/MOONSHOTS.md` · read-only for sisters, like everything in this repo.
 
+
+> ## ⚠ Corrections after reconciliation — verified at source by the bridge, 2026-09-23
+> `high_rank_killing` read all six lists and found errors in this one (its FLEET_PLAN §2). The bridge
+> verified each at the source:
+> - **B-1 was already done** (polynomial sense) by `high_rank_killing` EXP-002, `9384d7f`, 2026-09-05 — a
+>   4D Lorentzian vacuum pp-wave with an irreducible rank-3 Killing tensor. **Independently re-verified**
+>   by bridge code sharing nothing with ansatz (`falsification/V5_rank3_vacuum_independent`). **G-3 is
+>   killed — by a construction inside the fleet, which this list's own census missed.** The open moonshot
+>   is now the *functionally independent* version.
+> - **B-7 is already done** — tabula dropped "geometry from entanglement (32/41/42/125)" as done.
+> - **B-13 is infeasible as routed** — quantum's clean lattice angles are 60°/90°/120°; anything else needs a
+>   staircase corner.
+> - **G-6 was acted on** at 22:36, two minutes after this doc: cuspis now cites 2307.05164 in its
+>   references and backlog. It is **not yet in RESULT.md**, where the positioning belongs.
+
 ---
 
 ## For sister sessions — read this first
@@ -104,19 +119,19 @@ moonshot ranking, not a work order. **Scores on sister-owned items are the bridg
 
 | ID | Item | Owner | Impact | Diff. | Odds |
 |---|---|---|:-:|:-:|:-:|
-| B-1 | A **Ricci-flat Lorentzian 4D** spacetime with an **irreducible rank ≥ 3** Killing tensor ⚠ G-3 | ansatz | 5 | 5 | ~3% |
+| ~~B-1~~ | ~~Ricci-flat Lorentzian 4D, irreducible rank ≥ 3~~ **DONE (polynomial sense), `high_rank_killing` EXP-002; independently verified (V5)** | — | — | — | — |
 | B-2 | A **closed-form rotating black hole in scalar-Gauss–Bonnet** gravity | ansatz | 5 | 5 | ~5% |
 | B-3 | The **mechanism** behind near-universal corner entanglement a(θ)/C_T in 3d CFTs | cuspis | 5 | 5 | ~5% |
 | B-4 | **Why** the physical black hole carries a principal tensor — which spacetimes admit one | *unowned* | 5 | 5 | ~5% |
 | B-5 | A **computer-assisted proof of chaos** in a black-hole spacetime ⚠ G-2 | bridge + quantum | 5 | 5 | ~10% |
 | B-6 | **Any-rank** Killing tensor for the fleet's deformed-Kerr family | ansatz | 4 | 5 | ~15% |
-| B-7 | **Emergent geometry from entanglement**, recovered by a neural bottleneck | quantum + tabula | 4 | 4 | ~15% |
+| ~~B-7~~ | ~~Emergent geometry from entanglement~~ **already done by tabula (32/41/42/125)** | — | — | — | — |
 | B-8 | **Quantum Darwinism in a critical environment** — is redundancy's log fixed by c? ⚠ G-4 | quantum | 4 | 4 | ~15% |
 | B-9 | **Rigorous all-rank non-integrability of Manko–Novikov** (Morales–Ramis) ⚠ G-1 | ansatz | 4 | 4 | ~25% |
 | B-10 | **"If Kerr is wrong, would we see it?"** — the second founding question | all four | 4 | 4 | ~30% |
 | B-11 | **Blind rediscovery** of the 2026 exact rotating hairy black hole | ansatz | 3 | 4 | ~20% |
 | B-12 | Discoverability diagnostic on **real data with unknown invariants** | tabula | 3 | 3 | ~25% |
-| B-13 | Sub-45° corner values via an **independent lattice route** | quantum | 3 | 3 | ~40% |
+| ~~B-13~~ | ~~Sub-45° via a lattice route~~ **infeasible as routed — clean lattice angles are 60/90/120°** | — | — | — | — |
 | B-14 | **How errors propagate in an AI research fleet** — a measured case study ⚠ G-5 | bridge + all | 4 | 2 | ~60% |
 | B-15 | **Pole structure** of the sGB QNM spin series | deepstrain / ansatz | 2 | 3 | ~50% |
 | B-16 | Position deepstrain's **L3 null** against the 2026 orthonormal-mode GW250114 analysis | deepstrain | 3 | 2 | ~60% |
