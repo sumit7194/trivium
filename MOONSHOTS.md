@@ -137,7 +137,7 @@ moonshot ranking, not a work order. **Scores on sister-owned items are the bridg
 | B-16 | Position deepstrain's **L3 null** against the 2026 orthonormal-mode GW250114 analysis | deepstrain | 3 | 2 | ~60% |
 | B-17 | **G4:** certify Manko–Novikov's deep chaotic sea numerically | bridge + quantum | 2 | 3 | ~50% |
 | B-18 | CNN-accelerated **subsolar PBH** rate limit on public O4 data | deepstrain | 2 | 3 | ~60% |
-| B-19 | Echo non-detections → **real upper limits** | deepstrain | 2 | 2 | ~80% |
+| ~~B-19~~ | ~~Echo non-detections → real upper limits~~ **already done — deepstrain has per-Δt upper limits (brief §1); caught by the settled index on its first pass** | — | — | — | — |
 | B-20 | Systematic **table-reproduction audit** of recent GR/QNM papers | deepstrain / ansatz | 2 | 1 | ~80% |
 
 **Not ranked — just do it (G-6):** cuspis positions its result against
