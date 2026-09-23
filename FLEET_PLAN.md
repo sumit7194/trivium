@@ -89,6 +89,8 @@ problems.
 
     Two routes to the mechanism, split on purpose:
       cuspis: tripartite information (C2a)       quantum: bound + remainder (C2b)
+      [09-24: C2a NOT WELL-POSED as written — its premise was a misattributed citation (cuspis EXP-026).
+       Reformulated as C2a′, the Dirac cumulant route (fermion-only), prior-art sweep first.]
       → each pre-registers a prediction the other can't see → the bridge compares
 
     quantum's precision chain:
