@@ -1040,3 +1040,27 @@ next message to quantum. **The decision is the user's.***
 - **Every material finding came from the reception half.** My census produced 217 candidates and not
   one of the four kills. Its actual contribution was to make the asks specific enough to answer.
   **A census of sends cannot audit independence; only receivers can.** That is the transferable result.
+
+## §9 — quantum's sub-45° exposure record (asked 2026-09-24, after Stage 1 reported; user-approved question)
+
+**quantum's answer, from its own records and without opening anything to check:** it has never opened cuspis's
+SHARED_BACKLOG.md, so it has not read rows S7, S7a, S8 or S10, nor trap 9, nor any of cuspis's small-angle a₀
+material. It notes this is a statement of memory and records, and that it cannot prove a negative.
+
+**What it declares it HAS seen** (already in its PREREG_cuspis_sub45_check.md):
+1. Prose vendored into its tree on 09-04: RESULT.md (read), references.md and report.md (grepped), and TODO.md
+   lines ~40–46 and ~152–154, seen in grep output. These include a truncation-tail magnitude, "≈4·10⁻⁴ at 5°".
+   That is not an a(θ) value.
+2. **Two relays from the bridge:**
+   - the HHCWM16 eq.(22) "≤2.6·10⁻⁴ at 26.6°" figure (§8i);
+   - cuspis's `f9882d9` "+2.9·10⁻⁴ at 90°".
+
+   quantum logged both as received and not used.
+3. Grep lines naming HHCWM16 in its kept RESULT.md and TODO.md.
+
+**Standing rule from now on:** the only cuspis file quantum uses is `corner_function/SHARED_BACKLOG_QUANTUM.md`.
+Every bridge message to quantum about corners is checked against the sealed rows before it is sent. Two of the
+three exposure routes above run through the bridge's own relays.
+
+**Consequence for the sub-45° decision (the user's):** quantum's check would not be blind to (1) and (2). Both are
+magnitudes or bounds, not the small-angle values themselves. Whether that is acceptable is part of the decision.
