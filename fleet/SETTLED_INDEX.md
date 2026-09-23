@@ -89,6 +89,8 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | What a₀ ≠ 0 requires | **SETTLED** (the exponent is prior art) | cuspis S6 | 09-23 |
 | 🔒 a₀ by theory | **SETTLED** as measured | cuspis S7 | 09-24 |
 | 🔒 The free scalar's a₀ | **PARTIAL** (scope at the pointer) | cuspis S8 | 09-24 |
+| 🔒 Why near EMI (free Dirac, cumulant route C2a′): sign and direction of the next cumulant's corner | **SETTLED as measured** — trend-based, not blind, free Dirac only; the magnitude question is OPEN (feasibility being assessed) | cuspis EXP-029, `dc5e0b6` | 09-24 |
+| C2a as first written (tripartite-information route) | **WITHDRAWN** — its premise was a misattributed citation | cuspis EXP-026 | 09-24 |
 | The trial function's constant | **SETTLED** | cuspis S9 | 09-23 |
 | 🔒 The scalar residual below 45° | **SETTLED** as measured (scope at the pointer) | cuspis S10 | 09-24 |
 | Does fixing σ and κ leave little freedom? | **SETTLED** | cuspis S11 | 09-23 |
