@@ -32,7 +32,7 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | Question | Status | Where | As of |
 |---|---|---|---|
 | Lorentzian vacuum spacetime with a polynomially irreducible rank-3 Killing tensor | **SETTLED** — the spacetime is prior art (Filyukov 2017); the tensor is new | ansatz RESULTS §147 · bridge V5, V6 | 09-23 |
-| …the same, with a *functionally independent* tensor | **OPEN** — the first screen found no candidate (scope at the pointer); the Drach-list screen is IN PROGRESS (ansatz) | fleet item H-2 / ansatz #1 · ansatz `fa1ae03` | 09-24 |
+| …the same, with a *functionally independent* tensor | **OPEN** — the published classifications are screened with no candidate (three bounded screens; scope and unscreened classes at the pointer). What remains is an open search or a no-go proof | fleet item H-2 / ansatz #1 · ansatz `fa1ae03`, `e92c5d3`, `f562a99` | 09-24 |
 | Zipoy–Voorhees δ=2: any additional integral, any rank? | **SETTLED** (literature, 2013) | arXiv:1302.4234 · ansatz §134 | 09-23 |
 | Zipoy–Voorhees ranks 1–6, exact | **SETTLED** (now a control, not a result) | ansatz §124, §126 | 09-23 |
 | Exact test recovers Kerr's Carter constant | **SETTLED** (control) | ansatz §127 | 09-23 |
