@@ -16,8 +16,9 @@ What it contains, verified in the text:
 - **Its eq. (33) lists the potential U = α·√(x + √(x²+y²))/√(x²+y²) = α·√(r+x)/r.** Checked here: this is
   **√2 × EXP-002's profile Re(w^{−1/2})** at every sampled point (max deviation 7×10⁻¹⁶), and it is harmonic.
   **Same spacetime, up to a constant and coordinates.**
-- It states *"all these systems are superintegrable"* (line 299), i.e. **two quadratic integrals**, and writes
-  them out as quadratic Killing tensors of the lift.
+- It states *"all these systems are superintegrable"* (line 299). **It displays ONE quadratic integral I₂ per
+  potential**; the second is only implied by "superintegrable". *(Corrected on high_rank_killing's reading — the
+  first version said both were written out.)*
 - **§4.3 sets up a cubic-integral ansatz but only counts** ("at most 6 … possibly reducible … reducible
   combinations lower the number to 2"). It never solves it for this potential.
 - **It never computes a Poisson bracket.** All three "Пуассон" mentions are the Poisson *equation* (the vacuum
@@ -31,10 +32,10 @@ What it contains, verified in the text:
 | Part | Status |
 |---|---|
 | The 4D Lorentzian vacuum pp-wave | **prior art** — Filyukov 2017 |
-| Its two quadratic Killing tensors | **prior art** — Filyukov 2017 |
+| Its quadratic Killing tensors | **prior art** — one displayed in Filyukov 2017; the second implied by its superintegrability statement |
 | **The rank-3 Killing tensor F = −4{Q1,Q2}** | **not in print** — one Poisson bracket away, never computed; that a bracket of integrals is an integral is textbook (e.g. the cubic-algebra literature, math-ph/0608021) |
 | **Its polynomial irreducibility** (dim K1 = 2, pure part ≠ 0) | **not in print** — the author, V5, and ansatz §147 |
-| That this breaks the stated "rank-2 barrier" | **new** — the barrier is stated in three papers from one group: CG 2015's abstract, FG 2019, and Filyukov 2017's own conclusion |
+| That this breaks the stated "rank-2 barrier" | **new** — the barrier is stated in three papers from one group: CG 2015 (introduction and conclusion — **not its abstract**, as first written here from a search snippet), FG 2019, and Filyukov 2017's own conclusion |
 
 **The accurate one-line description:** *the Lorentzian vacuum pp-wave that Filyukov (2017) built from the
 harmonic σ = 0 Smorodinsky–Winternitz potential already carries a polynomially irreducible rank-3 Killing
@@ -45,7 +46,30 @@ that paper, in Cariglia–Galajinsky 2015, and in Fordy–Galajinsky 2019.*
 object answers the question that group kept posing. That is useful and citable, but it must not go to an
 outside reader described as "the first Lorentzian vacuum spacetime with a rank-3 Killing tensor".
 
-## How the author's sweep missed it
+## How the author's sweep missed it — CORRECTED by the author
+
+**First version (wrong, too generous):** language and venue — Russian, off arXiv, formulas not searchable.
+
+**Actual cause, reported by `high_rank_killing` from its own EXP-001 record:** it ran **the same malformed
+INSPIRE query** this sweep caught — `refersto:arxiv:1503.02162`, which returns **25,061** records — and accepted
+the list without noticing the count. With the correct query (`refersto:recid:1351199`), Filyukov 2017 is the
+**third of 18 citers**. Its second route, Semantic Scholar's citer list, doesn't index the paper at all.
+
+**So the paper was in the list the whole time. The instrument returned noise, and nothing checked it.** For
+B-14 this is **"a check that cannot fail"**, not "an unsearchable venue".
+
+**The sharpest data point of the day:** two sessions **independently wrote the identical broken query**. One
+accepted 25,061 and missed the paper; the other noticed the number was absurd and found it. The only
+difference was a sanity check on the count. **The fix is mechanical:** every citer query needs a positive
+control (a known citer must appear) and a count bound. `high_rank_killing` has adopted exactly that.
+
+## A framing point, from high_rank_killing
+
+Read literally, Filyukov's open problem — *a harmonic planar potential with a third-order integral* — **is
+answered by his own eq. (33) system**, since {I₂, I₂′} is cubic. Read as *functionally independent*, it is
+still open: fleet item H-2.
+
+## (superseded) How the author's sweep missed it
 
 The author searched for the metric (including "pp-waves with Re z^{−1/2} / √(r+x)/r profiles"), used INSPIRE
 full text, and checked forward citations of six papers through August 2026. Filyukov 2017 **is** among CG's
