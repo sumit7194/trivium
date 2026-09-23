@@ -44,9 +44,10 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | Does dCS keep a rational Carter constant? | **SETTLED** | ansatz §145 | 09-23 |
 | Is dCS integrable overall (any degree, non-polynomial)? | **OPEN** — the literature contradicts itself | fleet item K8 | 09-23 |
 | The pole-order ladder | **PARTIAL** — parity grading found; ℓ-dependence open | ansatz §141–§146 | 09-23 |
+| Tomimatsu–Sato δ=2: any additional integral? (the proof tool's first real target) | **IN PROGRESS** — the target metric (rational form) is built and vacuum-checked by ansatz, and HELD sealed until quantum's controls pass | ansatz `3981560` · fleet plan chain 2 | 09-24 |
 | Manko–Novikov: all-rank non-integrability, proved | **OPEN** — none found in print (two searches) | fleet item K5 | 09-23 |
 | Manko–Novikov: chaos seen numerically | **SETTLED** (literature) | arXiv:1108.5057 | 09-23 |
-| The proof tool (Morales–Ramis / Kovacic) | **IN PROGRESS** — quantum, Stage 1: pre-registered (`59c4ae3`); calibration 5/13; controls not yet run | fleet plan step 1 · quantum PREREG_morales_ramis_tool.md | 09-24 |
+| The proof tool (Morales–Ramis / Kovacic) | **IN PROGRESS** — quantum, Stage 1: calibration passes on three routes; controls A (ZV δ=2) and A′ pass; A″, B1, B2 pending (rerun under a footprint watchdog) | fleet plan step 1 · quantum `69621e9`, `46f5bb2` | 09-24 |
 | Cartan–Karlhede to order 2 | **SETTLED** | ansatz §122 | 09-23 |
 | Emit-legibility theorem | **SETTLED** | ansatz §123 | 09-23 |
 | "legible ⟺ KY-integrable" | **WITHDRAWN** — falsified; replaced by representability in the probe's basis | bridge G2, CAPSTONE §3 #2 | 09-23 |
