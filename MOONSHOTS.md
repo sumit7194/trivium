@@ -205,7 +205,7 @@ mutation-tested — all dated and git-backed. Existing work is mostly synthetic 
 ([arXiv:2606.03467](https://arxiv.org/abs/2606.03467), [arXiv:2607.09195](https://arxiv.org/abs/2607.09195)).
 Low in a moonshot ranking because it is easy and likely; possibly **the fleet's most novel asset**.
 
-**B-15 · sGB spin-series pole structure** *(planned)*. Round 62 measured truncation magnitude (about 2× Kerr's).
+**B-15 · sGB spin-series pole structure** *(planned)*. Round 61 measured truncation magnitude (about 2× Kerr's).
 The singularity diagnosis is still open, but non-perturbative methods lower its payoff.
 
 **B-16 · L3 null vs the orthonormal-mode GW250114 analysis** *(new)*. deepstrain measured that rotating to
