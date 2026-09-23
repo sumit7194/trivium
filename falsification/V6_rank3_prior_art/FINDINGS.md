@@ -88,3 +88,17 @@ list read in full, including non-English entries, can.
   quadratic / cubic algebra · pp-wave / Brinkmann hidden symmetry · "Killing tensor" and "first integral".
 - **Not searched:** elibrary.ru directly, Russian-language journals beyond what INSPIRE indexes, theses.
   A negative sweep is never complete.
+
+## Correction, 2026-09-24: what each paper actually says (read at source)
+
+The table above says the barrier is "stated in three papers". That was too loose. Read at source:
+- **CG 2015:** the introduction says none of the Lorentzian spacetimes in its refs [5], [7]–[12] solves the
+  vacuum equations. The conclusion (§5, "Thirdly") poses, as an open problem, whether a harmonic potential can
+  carry a cubic or higher integral. It does not say "none known".
+- **FG 2019:** the introduction says no vacuum example with higher-rank Killing tensors is presently known
+  (per ansatz, read at source).
+- **Filyukov 2017:** the conclusion names the third-order integral for a harmonic potential as the open problem.
+
+So only FG states "none known". CG and Filyukov pose the problem. The bridge's V5 pre-registration
+paraphrased CG as stating "no Lorentzian vacuum spacetime … was known". It is frozen and stays as written;
+this entry corrects it. Found while reviewing ansatz's short-note draft.
