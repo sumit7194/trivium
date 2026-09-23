@@ -993,6 +993,37 @@ quantum adopted all three cautions and the amendment conditions at `quantum@b388
 was still running**, with cuspis's `f9882d9` recorded as received and excluded from any justification.
 Control 1 stays FAILED.
 
+### R reported: REJECTED under its registered criterion (`quantum@87f7fee`)
+
+    R-a  2·S_8 = 0.02366659, inside Helmes's printed interval, ≤ full value     PASS
+    R-b  quantum's c8 vs CHL's c8/2: rel 1.18e-5 > tol 2e-6                      FAIL
+    R-c  (weak) order-12 sum rounds to CHL's 0.02366                             holds
+
+**quantum, against themselves, and right:** R-b's tolerance made *the same assumption that failed
+control 1*, that CHL's table is exact to its printed digits. They had already shown at `b388f70` that
+CHL's c2 breaks it, and they did not revise R-b. **They are not revising it now either: revising a
+criterion because you can see it will fail is the same move as revising it after it fails.** Both
+failures stand as registered.
+
+**Weighed against the bridge's own amendment conditions.** R was the one justification those conditions
+accepted as independent. It did not pass. What remains:
+
+- **R-a** passes, but only against **Helmes**, a *shared* value. It shows quantum's coefficients reproduce
+  a published sum. It says nothing about how CHL got 0.02366.
+- **The evidence that CHL's table is imprecise** is independent where it is measured against *exact*
+  values: c2 off by 3.8·10⁻⁶, and c4 correctly rounded. That shows error of ~4·10⁻⁶ near the expansion
+  point. **It does not independently show 2.9·10⁻⁴ at 90°.** The chain linking the two runs through
+  quantum's c8 and quantum's 90° value, **both from the instrument under test**. Circular.
+
+**So the amendment would rest on weaker ground than the bridge set as the bar.** The bridge told the user
+before R reported that it would recommend stopping if R did not confirm the explanation. It did not.
+**The bridge's recommendation is to close this check as FAILED, as registered.** The decision is the
+user's.
+
+*The most likely story is still that the instrument is sound (6/7, exact controls to 1e-8) and the
+reference is imprecise. But "most likely" is what a pre-registered check is supposed to replace, and
+after two registered failures this check cannot deliver more than that.*
+
 *quantum asked the bridge whether a post-failure amendment is worthless. The bridge's answer is in the
 next message to quantum. **The decision is the user's.***
 
