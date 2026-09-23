@@ -81,7 +81,7 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | Do the known constraints bound κ/C_T from above? | **SETTLED** (re-derived by quantum) | cuspis SHARED_BACKLOG S1 | 09-23 |
 | What the ~1% collapse actually is | **SETTLED** | cuspis S2 | 09-23 |
 | Can ⟨TT⟩ and ⟨TTT⟩ data order the band? | **SETTLED** | cuspis S3 | 09-23 |
-| A lower bound on κ/C_T at n = 1 | **PARTIAL** — rests on an assumed n → 1 continuation | cuspis S4 | 09-23 |
+| A lower bound on κ/C_T at n = 1 | **PARTIAL** — rests on an assumed n → 1 continuation; **proof at n = 1 IN PROGRESS** (cuspis CF-9, user's choice) | cuspis S4 | 09-24 |
 | Can the rectangle bootstrap bound κ from above? | **SETTLED** | cuspis S5 | 09-23 |
 | What a₀ ≠ 0 requires | **SETTLED** (the exponent is prior art) | cuspis S6 | 09-23 |
 | 🔒 a₀ by theory | **SETTLED** as measured | cuspis S7 | 09-24 |
