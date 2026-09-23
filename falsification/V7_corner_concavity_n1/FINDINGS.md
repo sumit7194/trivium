@@ -180,7 +180,46 @@ Recorded because each one could have produced a false verdict.
 
 No tolerance was changed after seeing a result.
 
-## 6. Post-run comparison with cuspis's derivation
+## 6. Post-run comparison with cuspis's derivation *(added after `a897549`; the bridge read cuspis's EXP-025 addendum, addendum 2 and EXP-025b only now)*
 
-*(To be added after this file is committed. The bridge reads cuspis's EXP-025 derivation and LP code only after
-that commit.)*
+**Where the two routes agree.**
+- **O1 is V7a1**: the same three steps (cuspis's h is the bridge's −G) and the same inputs.
+- **O3 has the same skeleton as V7b**: the flow (1 − uz²)/2, a Killing frame in which it is a translation (cuspis's
+  w has circumference 2π/√u, the bridge's 2π, which is the same frame rescaled), nesting read off the containment
+  of one lens in the other, the late slope from A5, the early slope affine in u from A6, and touching at u′.
+- **Constants.** The LP values agree to ~10⁻⁶, and both sides have the closed form 16σφ* and 4φ*/ln 2.
+  The bridge derived it without reading EXP-025c.
+- **Gaps.** cuspis's review named three. Its (i) (ξ_u is tangent to the boundary at ±i) is the bridge's **G2**, at the same
+  point. Its (ii) (a cap window near u = u′) is the bridge's **G3**, the same cusp-at-a-fixed-point degeneracy
+  regularised differently. Its (iii) (shape-differentiability and the ρ → 0 limit, i.e. A6) overlaps G2 and G3.
+  The bridge's **G1** (multi-scale log structure) is cuspis's A5, which cuspis lists as an assumption rather than
+  a gap. Same content either way.
+
+**Where they differ: two different formalisations of the same idea.**
+- **Region family.**
+  - *cuspis:* reflected half-regions θH_a ∪ H_b, which uses A2 (CRT reflection). This mirrors LMW's ⟨ψ|e^{−τH}|ψ⟩.
+  - *bridge:* translates of L ∪ slab ∪ φ_τ(U), with no reflection. So A2 is not needed on the bridge's route.
+  - Both give concavity in the total flow time.
+- **UV bookkeeping.**
+  - *cuspis* caps the cusp at radius ρ and uses a Killing-covariant cutoff. That creates its gap (ii), closed by
+    fixing (u, u′) first and then letting ρ → 0.
+  - *bridge* keeps the cusps under a uniform cutoff and uses the compensated ĝ = S_fin − Σ a·log|w′(c)|, which is
+    exactly flow-invariant. That avoids the cap window, but meets the same degeneracy as a singular compensation at
+    u = u′ (G3).
+- **LP discretisation of C3.**
+  - *cuspis's final rows* are an exact relaxation, (a_i − a_{i+1})/∫cot(θ/2) nonincreasing, so every grid value is a
+    certified lower bound.
+  - *the bridge's midpoint rows* match cuspis's first LP run (`exp025b_output_run1_midpointC3.txt`), which is not a
+    guaranteed relaxation. So the bridge's LP numbers corroborate the constants but do not certify them. The
+    certificate is the analytic V7c2 argument, which both sides now have independently.
+- **Known answers.**
+  - *cuspis* has the EMI tangent-line identity (the step-4 Hellmann–Feynman test), built by its within-session
+    reviewer and re-run to 10⁻¹⁰.
+  - *the bridge* has holography with the F(0) node in 40-digit arithmetic, and did not repeat the EMI identity.
+    Each side's known answer is one the other lacks.
+
+**Net.** The idea survives being formalised two different ways, by two sessions, with different regularisations
+and different region families. The load-bearing assumptions are the same on both routes: A5, the multi-scale log
+structure, and A6, first-order shape differentiability, including at the C¹ junctions. So the honest grade stays
+the same: **derived at physics-level rigour, now checked outside cuspis (non-blind); not a theorem.** Promoting it
+further needs either a proof of A5 and A6 in this setting, or a human specialist.

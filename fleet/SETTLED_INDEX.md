@@ -81,8 +81,8 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | Do the known constraints bound κ/C_T from above? | **SETTLED** (re-derived by quantum) | cuspis SHARED_BACKLOG S1 | 09-23 |
 | What the ~1% collapse actually is | **SETTLED** | cuspis S2 | 09-23 |
 | Can ⟨TT⟩ and ⟨TTT⟩ data order the band? | **SETTLED** | cuspis S3 | 09-23 |
-| A lower bound on κ/C_T at n = 1 | **SETTLED** unconditionally, from standard inputs (scope at the pointer). A **stronger** bound is **PARTIAL**: it rests on the concavity row below | cuspis EXP-025, S4 | 09-24 |
-| Conformal concavity at n = 1 | **PARTIAL** — derived at physics-level rigour in one session, with a within-repo review; not a theorem. **Bridge check V7 IN PROGRESS** (non-blind) | cuspis EXP-025, S14 | 09-24 |
+| A lower bound on κ/C_T at n = 1 | **SETTLED** unconditionally, from standard inputs (scope at the pointer); re-derived by the bridge. A **stronger** bound is **PARTIAL**: it rests on the concavity row below | cuspis EXP-025, S4 · bridge V7a | 09-24 |
+| Conformal concavity at n = 1 | **PARTIAL** — derived at physics-level rigour; **checked outside cuspis** by the bridge (V7, non-blind): the argument holds together under a second formalisation, and the constants match. Still rests on two named assumptions; not a theorem | cuspis EXP-025, S14 · bridge V7 | 09-24 |
 | Does the rectangle bound hold at n = 1? | **PARTIAL** — follows *given* the concavity row; the direct route rests on a conjectural positivity (named at the pointer) | cuspis EXP-025 | 09-24 |
 | Can the rectangle bootstrap bound κ from above? | **SETTLED** | cuspis S5 | 09-23 |
 | What a₀ ≠ 0 requires | **SETTLED** (the exponent is prior art) | cuspis S6 | 09-23 |
