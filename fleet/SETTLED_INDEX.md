@@ -47,7 +47,7 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | Tomimatsu–Sato δ=2: any additional integral? (the proof tool's first real target) | **IN PROGRESS** — three rungs. Numerical (tabula): **done**, scope at the pointer. Proof tool (quantum): waits on its controls. Exact (ansatz): its expectation is sealed. The bridge compares when the rungs are in | ansatz `3981560` · tabula `193_ts2_screen` (local, unpushed) · fleet plan chain 2 | 09-24 |
 | Manko–Novikov: all-rank non-integrability, proved | **OPEN** — none found in print (two searches) | fleet item K5 | 09-23 |
 | Manko–Novikov: chaos seen numerically | **SETTLED** (literature) | arXiv:1108.5057 | 09-23 |
-| The proof tool (Morales–Ramis / Kovacic) | **IN PROGRESS** — quantum, Stage 1 **NOT PASSED** under its registered rule: guarded run 1 FAILED (a monodromy bug); the second attempt passes 7 of 8 control rows with one INCONCLUSIVE (resource limit), and no verdict is wrong | fleet plan step 1 · quantum `3b364b9`, `4f51311` | 09-24 |
+| The proof tool (Morales–Ramis / Kovacic) | **Stage 1 PASSED on the third attempt** (labelled post-failure; attempts 1 and 2 stay on the record; the fixes were algorithmic and no control changed). Stage 2 (TS δ=2) is next | fleet plan step 1 · quantum `227ccf3`+ | 09-24 |
 | Cartan–Karlhede to order 2 | **SETTLED** | ansatz §122 | 09-23 |
 | Emit-legibility theorem | **SETTLED** | ansatz §123 | 09-23 |
 | "legible ⟺ KY-integrable" | **WITHDRAWN** — falsified; replaced by representability in the probe's basis | bridge G2, CAPSTONE §3 #2 | 09-23 |
