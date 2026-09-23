@@ -65,3 +65,27 @@ anyone leans on it.
 
 Meromorphic integrals only, in a complex neighbourhood of Γ, at the tested (p, q) and (E, L, μ²) only, on the
 supplied metric. It says nothing about how much chaos there is. It is AI checking AI.
+
+---
+
+## Addendum, registered AFTER the first run — V8 as registered is REFUSED; V8′ is post-failure
+
+**What happened.** `code/v8_nve.py` ran every row in one pass. That was itself a procedural slip: the gate was
+meant to run the controls first and only then compute the TS rows. So the TS rows were computed and printed in
+the same run, and **the bridge saw them before the control verdict was applied.** Recorded here, not hidden.
+
+- **Kerr (negative control):** PASS on all 3 rows. There is no log point at x = 0, so no obstruction.
+- **ZV δ=2 (positive control):** FAIL on all 3 rows. A log point is found at x = 0 (b = 3/4, N = 2), but the
+  pure exponent count leaves case-1 candidates d ≥ 0 open: Σα_min = −1/2 at L = 0 and +1 at L = 1, against
+  α∞ ≤ 1. So a count-only route cannot prove ZV's known obstruction. It is sound but underpowered, the same
+  failure as quantum's 2b.
+- **Verdict as registered: REFUSED.** The TS rows are not graded from this run.
+
+**V8′ (post-failure amendment, frozen now, before its code).** For every exponent choice the count leaves open
+with d ∈ ℤ≥0, solve P″ + 2θP′ + (θ′ + θ² − r)P = 0 for a monic P ∈ ℚ[x] of degree d. That is an exact linear system.
+- **Valid only if every factor has a rational exponent**, in which case the choices are per factor and θ ∈ ℚ(x),
+  by the uniqueness lemma for log points.
+- **OBSTRUCTION iff** there is a log point and no choice yields a P.
+- **Controls, as before:** ZV δ=2 must now give OBSTRUCTION, and Kerr must not.
+- **Gate:** this time the code runs the controls first, and exits before touching TS if either fails.
+- **V8a's vacuum re-check** is run separately, and gates the final grade.

@@ -1,0 +1,662 @@
+{
+ "ZV_delta2_control|1,0,4": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "x - 3",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "x - 1",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "x",
+     "degree": 1,
+     "pole_order": "2",
+     "beta": "3/4",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "2",
+     "alphas": [
+      "-1/2",
+      "3/2"
+     ]
+    },
+    {
+     "factor": "x + 1",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "21/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "5/2",
+     "alphas": [
+      "-3/4",
+      "7/4"
+     ]
+    },
+    {
+     "factor": "3*x - 1",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "-1/2",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "3/4",
+   "N": 2,
+   "log_coefficient": "2",
+   "log_present": true
+  },
+  "verdict": "NOT OBSTRUCTED BY THIS ROUTE (case-1 count survives)"
+ },
+ "ZV_delta2_control|1,0,9": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "x - 2",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "x - 1",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "x",
+     "degree": 1,
+     "pole_order": "2",
+     "beta": "3/4",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "2",
+     "alphas": [
+      "-1/2",
+      "3/2"
+     ]
+    },
+    {
+     "factor": "x + 1",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "21/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "5/2",
+     "alphas": [
+      "-3/4",
+      "7/4"
+     ]
+    },
+    {
+     "factor": "2*x - 1",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "-1/2",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "3/4",
+   "N": 2,
+   "log_coefficient": "-3",
+   "log_present": true
+  },
+  "verdict": "NOT OBSTRUCTED BY THIS ROUTE (case-1 count survives)"
+ },
+ "ZV_delta2_control|1,1,4": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "x - 1",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "x",
+     "degree": 1,
+     "pole_order": "2",
+     "beta": "3/4",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "2",
+     "alphas": [
+      "-1/2",
+      "3/2"
+     ]
+    },
+    {
+     "factor": "3*x**5 - x**4 - 17*x**3 - 21*x**2 + 2*x + 2",
+     "degree": 5,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "1",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "3/4",
+   "N": 2,
+   "log_coefficient": "3",
+   "log_present": true
+  },
+  "verdict": "NOT OBSTRUCTED BY THIS ROUTE (case-1 count survives)"
+ },
+ "KERR_control_t1o2|1,0,4": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "3*x + 5",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "81*x**3 + 45*x**2 - 381*x - 545",
+     "degree": 3,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "1",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "0",
+   "N": 1,
+   "log_coefficient": "0",
+   "log_present": false
+  },
+  "verdict": "NO-OBSTRUCTION-FOUND (no log point at 0)"
+ },
+ "KERR_control_t1o2|1,0,9": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "3*x + 5",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "108*x**3 + 135*x**2 - 258*x - 385",
+     "degree": 3,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "1",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "0",
+   "N": 1,
+   "log_coefficient": "0",
+   "log_present": false
+  },
+  "verdict": "NO-OBSTRUCTION-FOUND (no log point at 0)"
+ },
+ "KERR_control_t1o2|1,1,4": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "3*x + 5",
+     "degree": 1,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "81*x**3 + 45*x**2 - 354*x - 830",
+     "degree": 3,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "1",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "0",
+   "N": 1,
+   "log_coefficient": "0",
+   "log_present": false
+  },
+  "verdict": "NO-OBSTRUCTION-FOUND (no log point at 0)"
+ },
+ "TS2_P1_t1o2|1,0,4": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "x",
+     "degree": 1,
+     "pole_order": "2",
+     "beta": "3/4",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "2",
+     "alphas": [
+      "-1/2",
+      "3/2"
+     ]
+    },
+    {
+     "factor": "9*x**4 + 30*x**3 - 30*x - 25",
+     "degree": 4,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "243*x**6 + 270*x**5 - 3843*x**4 - 12540*x**3 - 4275*x**2 + 270*x - 5725",
+     "degree": 6,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "2",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "3/4",
+   "N": 2,
+   "log_coefficient": "-54/229",
+   "log_present": true
+  },
+  "verdict": "OBSTRUCTION (log point excludes cases 2,3; case 1 fails the exponent count)"
+ },
+ "TS2_P1_t1o2|1,0,9": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "x",
+     "degree": 1,
+     "pole_order": "2",
+     "beta": "3/4",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "2",
+     "alphas": [
+      "-1/2",
+      "3/2"
+     ]
+    },
+    {
+     "factor": "9*x**4 + 30*x**3 - 30*x - 25",
+     "degree": 4,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "162*x**6 + 405*x**5 - 1062*x**4 - 3810*x**3 - 1350*x**2 + 405*x - 1150",
+     "degree": 6,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "2",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "3/4",
+   "N": 2,
+   "log_coefficient": "27/23",
+   "log_present": true
+  },
+  "verdict": "OBSTRUCTION (log point excludes cases 2,3; case 1 fails the exponent count)"
+ },
+ "TS2_P1_t1o2|1,1,4": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "x",
+     "degree": 1,
+     "pole_order": "2",
+     "beta": "3/4",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "2",
+     "alphas": [
+      "-1/2",
+      "3/2"
+     ]
+    },
+    {
+     "factor": "9*x**4 + 30*x**3 - 30*x - 25",
+     "degree": 4,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "243*x**6 + 270*x**5 - 3762*x**4 - 15690*x**3 - 4275*x**2 + 1980*x - 8350",
+     "degree": 6,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "2",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "3/4",
+   "N": 2,
+   "log_coefficient": "-27/167",
+   "log_present": true
+  },
+  "verdict": "OBSTRUCTION (log point excludes cases 2,3; case 1 fails the exponent count)"
+ },
+ "TS2_P2_t1o3|1,0,4": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "x",
+     "degree": 1,
+     "pole_order": "2",
+     "beta": "3/4",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "2",
+     "alphas": [
+      "-1/2",
+      "3/2"
+     ]
+    },
+    {
+     "factor": "16*x**4 + 40*x**3 - 40*x - 25",
+     "degree": 4,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "48*x**6 + 40*x**5 - 448*x**4 - 1080*x**3 - 475*x**2 + 40*x - 150",
+     "degree": 6,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "2",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "3/4",
+   "N": 2,
+   "log_coefficient": "-1",
+   "log_present": true
+  },
+  "verdict": "OBSTRUCTION (log point excludes cases 2,3; case 1 fails the exponent count)"
+ },
+ "TS2_P2_t1o3|1,0,9": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "x",
+     "degree": 1,
+     "pole_order": "2",
+     "beta": "3/4",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "2",
+     "alphas": [
+      "-1/2",
+      "3/2"
+     ]
+    },
+    {
+     "factor": "16*x**4 + 40*x**3 - 40*x - 25",
+     "degree": 4,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "128*x**6 + 240*x**5 - 528*x**4 - 1480*x**3 - 600*x**2 + 240*x - 25",
+     "degree": 6,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "2",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "3/4",
+   "N": 2,
+   "log_coefficient": "24",
+   "log_present": true
+  },
+  "verdict": "OBSTRUCTION (log point excludes cases 2,3; case 1 fails the exponent count)"
+ },
+ "TS2_P2_t1o3|1,1,4": {
+  "even_in_y": true,
+  "vacuum_max_abs_R": "skipped",
+  "analysis": {
+   "poles": [
+    {
+     "factor": "x",
+     "degree": 1,
+     "pole_order": "2",
+     "beta": "3/4",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "2",
+     "alphas": [
+      "-1/2",
+      "3/2"
+     ]
+    },
+    {
+     "factor": "16*x**4 + 40*x**3 - 40*x - 25",
+     "degree": 4,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    },
+    {
+     "factor": "48*x**6 + 40*x**5 - 432*x**4 - 1360*x**3 - 475*x**2 + 200*x - 325",
+     "degree": 6,
+     "pole_order": 2,
+     "beta": "-3/16",
+     "beta_exact_all_roots": true,
+     "exponent_difference": "1/2",
+     "alphas": [
+      "1/4",
+      "3/4"
+     ]
+    }
+   ],
+   "order_at_inf": 4,
+   "sum_alpha_min": "2",
+   "all_double_rational": true
+  },
+  "log_at_0": {
+   "r0": "3/4",
+   "N": 2,
+   "log_coefficient": "-6/13",
+   "log_present": true
+  },
+  "verdict": "OBSTRUCTION (log point excludes cases 2,3; case 1 fails the exponent count)"
+ }
+}
