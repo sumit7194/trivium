@@ -974,6 +974,25 @@ the content was copied.
   the instrument that did pass (the Taylor coefficients, validated against external values) rather than
   the part that failed.
 
+**The bridge's caution 3 (R couldn't tell "truncated Taylor sum" from "truncated digits"), answered by
+quantum from published numbers only, and re-computed here:**
+
+    complex c4, exact from (20+3π²)/(18432π²) × 2  = 5.454018742e-4
+      rounded to 6 figures -> 5.45402   <- what CHL prints
+      truncated            -> 5.45401
+    complex c2, exact 1/128 = 7.81250e-3, CHL prints 7.81253e-3   rel error 3.84e-6
+
+**CHL rounds** (the deciding digit is 8, nowhere near the boundary). So the digit-truncation story is
+weakened, and a gap of 0.68 of a unit at 90° means CHL's *computed* value was off, a numerical error
+rather than a presentation one. Their error grows from **3.8·10⁻⁶ in c2**, the leading coefficient at
+the expansion point, to **2.9·10⁻⁴ at 90°**, the angle farthest from π. That growth is the pattern R
+predicts. It **supports R without proving it**: c4 is a different quantity from s(π/2), so it shows
+CHL's rounding practice, not how they computed s(π/2).
+
+quantum adopted all three cautions and the amendment conditions at `quantum@b388f70`, **filed while R
+was still running**, with cuspis's `f9882d9` recorded as received and excluded from any justification.
+Control 1 stays FAILED.
+
 *quantum asked the bridge whether a post-failure amendment is worthless. The bridge's answer is in the
 next message to quantum. **The decision is the user's.***
 
