@@ -5562,3 +5562,33 @@ not the fleet's.
 latest version (the unversioned `/src` main.tex is byte-identical to the v2-pinned source by `cmp`, and
 the rendered v2 HTML shows Ω⁽⁰⁾ = a/(2Mb) directly). **All three errata are live on arXiv.** The
 journal version (PRD 110, 064019) is paywalled and **unchecked**. No outward action, per the user.
+
+---
+
+## Round 62 — the CNN-vs-matched-filter question, closed under its own stopping rule (2026-09-23)
+
+deepstrain, `BlackHole@aa7e411` (commit verified). This closes the question the Round 22 stopping rule
+was written for (above, *"written at 66% with the curve unseen"*). **Every clause of that rule held:**
+
+- **Adequacy, pre-registered (`MF(dense)/MF(coarser) < 1.10` in every bin): met at step 1.** The 0.05% bank
+  (3,235 templates) against its own nested 1,617-template halving, on the same 9,000 injections:
+  **1.01 / 0.97 / 0.98**. The earlier 649 → 1,617 step was still climbing (1.30 / 1.19 / 1.08), so the
+  0.1% "not adequate" call was right, and saturation sets in around 1,600 templates. The two sub-1 bins
+  are explained: the zero-false-alarm threshold rises with the trials factor (12.09 → 12.59).
+- **"No CNN-vs-MF verdict at any density failing the criterion": honoured.** The verdict below was
+  taken only at a density that passed.
+- **The on-record prediction (the low-mass bin would still be climbing): WRONG,** and reported as wrong.
+  *That is what made the stopping rule falsifiable instead of an escape hatch.*
+
+**Verdict, under the pre-registered paired-bootstrap rule** (the matched filter wins only if the 90% CI
+excludes 1; CNN scored on the identical 9,000 windows): **MF/CNN = 1.062, CI [1.041, 1.088]. The matched
+filter wins**, per bin 1.11 / 1.05 / 1.03 from light to heavy. *Post-hoc and labelled so:*
+leave-one-segment-out on both thresholds gives 1.061–1.079, with the matched filter ahead in every drop.
+
+**What it means, in deepstrain's words:** "ties a realizable bank" (Follow-up A) stands as worded. But
+the CNN **does not tie an adequate bank**. It comes **within 6%** of it in one forward pass.
+
+**Scope, so this isn't read as something it isn't:** this compares deepstrain's CNN with **deepstrain's
+own** matched-filter bank. It is **not** a comparison against production pipelines (PyCBC, GstLAL).
+An outside reviewer this week described that comparison as the publishable version; this result is
+measured, pre-registered and clean, but it isn't that benchmark.
