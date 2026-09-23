@@ -72,6 +72,10 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 
 ## Corner entanglement
 
+> **⚠ SEALED TOWARD QUANTUM (while its sub-45° check is registered or could be reopened).** Rows marked 🔒
+> concern the small-angle region. **quantum must not open their pointers.** Their wording here is pure status
+> by design; it was redacted on 2026-09-24 after earlier wording leaked content.
+
 | Question | Status | Where | As of |
 |---|---|---|---|
 | Do the known constraints bound κ/C_T from above? | **SETTLED** (re-derived by quantum) | cuspis SHARED_BACKLOG S1 | 09-23 |
@@ -80,10 +84,10 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | A lower bound on κ/C_T at n = 1 | **PARTIAL** — rests on an assumed n → 1 continuation | cuspis S4 | 09-23 |
 | Can the rectangle bootstrap bound κ from above? | **SETTLED** | cuspis S5 | 09-23 |
 | What a₀ ≠ 0 requires | **SETTLED** (the exponent is prior art) | cuspis S6 | 09-23 |
-| a₀ by theory | **SETTLED** as measured, with caveats | cuspis S7 | 09-23 |
-| The free scalar's a₀ | **PARTIAL** — model-dependent; the sign is robust | cuspis S8 | 09-23 |
+| 🔒 a₀ by theory | **SETTLED** as measured | cuspis S7 | 09-24 |
+| 🔒 The free scalar's a₀ | **PARTIAL** (scope at the pointer) | cuspis S8 | 09-24 |
 | The trial function's constant | **SETTLED** | cuspis S9 | 09-23 |
-| Sign change of the scalar residual | **SETTLED** as measured; values below 45° refereed by one formula only | cuspis S10 | 09-23 |
+| 🔒 The scalar residual below 45° | **SETTLED** as measured (scope at the pointer) | cuspis S10 | 09-24 |
 | Does fixing σ and κ leave little freedom? | **SETTLED** | cuspis S11 | 09-23 |
 | The Dirac / Einstein thermal-coefficient coincidence | **SETTLED** (chance) | cuspis S12 | 09-23 |
 | Free-Dirac and scalar corner functions, 20°–170° | **SETTLED** | cuspis S13 | 09-23 |
@@ -91,8 +95,8 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | An independent check of the values below 45° | **PAUSED** — control 1 failed; the amendment is the user's decision | quantum PREREG · bridge A4 §8j | 09-23 |
 | The new cusp inequalities (2609.04302 eq. 37, conformal concavity) on existing curves | **SETTLED** — tested, including a new-theory case | cuspis EXP-022, `2554c92` | 09-24 |
 | Is eq. (37) a route to an absolute upper bound on κ? | **CLOSED–NEGATIVE** — invariant under Casimir dressing | cuspis EXP-022 | 09-24 |
-| Is the sign of a₀ fixed by a theorem? | **SETTLED** at integer n ≥ 2; at n = 1 conditional on concavity continuing | cuspis EXP-022 · SHARED_BACKLOG S7a/S7b | 09-24 |
-| Helmes et al. eq. (22) as a referee at very small angles | **SETTLED** — valid from 20°; an artifact below a few degrees | cuspis EXP-022 | 09-24 |
+| 🔒 Consequences of the new cusp theorems for a₀ | **SETTLED** (scope at the pointer) | cuspis EXP-022 · SHARED_BACKLOG S7a/S7b | 09-24 |
+| 🔒 Helmes et al. eq. (22) as a small-angle referee | **SETTLED** (scope at the pointer) | cuspis EXP-022 · SHARED_BACKLOG trap 9 | 09-24 |
 | Positioning against Bueno–Casini–Lasso Andino–Moreno 2023 | **SETTLED** — in RESULT.md §0 and §8 | cuspis `2554c92` | 09-24 |
 | Cuboid bootstrap under Casimir dressing | **IN PROGRESS** — cuspis (CF-24) | cuspis's bounds chain | 09-24 |
 
