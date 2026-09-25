@@ -39,7 +39,7 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | sGB metric at O(χ²), derived | **SETTLED** | ansatz §128–§129 | 09-23 |
 | Does sGB keep Carter at rank 2? | **SETTLED** | ansatz §130 | 09-23 |
 | sGB irreducible Killing tensors at ranks 3, 4, 6 | **SETTLED** within the stated ansatz and denominator | ansatz §131–§133, §137 | 09-23 |
-| sGB rank 8 | **IN PROGRESS** — ansatz queue (the L⁸ pair to follow) | ansatz weekend queue | 09-23 |
+| sGB rank 8 | **SETTLED** as measured — polar ℓ=4 is two-prime (job 2 MATCH on all sealed fields); axial ℓ=3 at L⁸ is valid on prime 0 (MATCH); the second L⁸ prime is sealed, not run | ansatz §143, §146 add. 3 · inbox reports 09-25 | 09-25 |
 | Which deformations of Kerr keep Carter | **SETTLED** (scope at the pointer) | ansatz §139 | 09-23 |
 | Does dCS keep a rational Carter constant? | **SETTLED** | ansatz §145 | 09-23 |
 | Is dCS integrable overall (any degree, non-polynomial)? | **OPEN** — the literature contradicts itself | fleet item K8 | 09-23 |
