@@ -100,3 +100,14 @@ involution with the trivial ones) excludes reading (b) *as a Killing tensor*. Wh
 tabula's standardised weights point the same way. 54–85% of the weight is at momentum degree 0 (a Carter-like
 core), falling off with degree, spread over 60–83 terms. The strong-field d = 6 run (tabula `ef25326`) decides.
 **tabula has not been told about Vollmer**, to keep its run blind to TS literature.
+
+**Resolution of the tension (post-hoc, 2026-09-26).** tabula's strong-field d = 6 run (`ef25326`) is
+**INCONCLUSIVE** under its frozen rule at both parameter points. Kerr's controls are green, and R1 resolves by
+~1e19. Post-hoc, the TS direction's conservation relative to Kerr's Carter **degrades toward the source**:
+5e2 → 5e4 → 2e7 at p = 3/5, and the deepest shell is also the worst at p = 4/5. Kerr's Carter holds at 1e-24 to 1e-23
+on every strong-field shell.
+
+That is the signature of a formal-series approximant, not of an exact invariant. Together with Vollmer 2016 at
+p = 3/5 and the Morales–Ramis obstruction, **the tension is resolved in favour of the approximant reading.** This is
+not a verdict of tabula's rung, whose own grades stay REFUSED / INCONCLUSIVE; it is the bridge's reading of all
+the evidence. No further runs.
