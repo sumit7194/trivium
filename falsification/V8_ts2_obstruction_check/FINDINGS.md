@@ -71,3 +71,22 @@ count admits no candidate at all.
 integrable near its equatorial geodesics at the tested parameters.** Each one reached this after a post-failure
 amendment. This agrees with ansatz's sealed expectation and with tabula's numerical rung, which found nothing up
 to rank 4. It is a candidate result for an outside reader. A full prior-art sweep comes first.
+
+## Open tension, recorded 2026-09-26 (post-hoc, not a verdict)
+
+tabula's rank-6 run was **REFUSED in all four arms** under its gate R1, so it issues no verdict. But in the one arm
+where TS was read (p = 4/5 shared arm, far field, even r6 d4), it saw **one TS direction at Kerr's
+exact-conservation level** (2e-23 to 8e-26) on all three shells, 1e8× better than at rank 4. Two readings:
+- (a) a far-field formal-series approximant, which would be consistent with the obstruction;
+- (b) a genuine polynomial invariant of rank ≤ 6, which would be in tension with the Morales–Ramis obstruction at
+  P2 = (4/5, 3/5).
+
+Two caveats:
+- Vollmer 2016's no-Killing-tensor theorem (valence ≤ 7) is at p = 3/5, **not** the p = 4/5 of this arm, so it does
+  not settle (b) here.
+- The Morales–Ramis result covers meromorphic integrals near the equatorial Γ at its own (E, L, μ²) levels.
+  tabula's far-field shells are different levels.
+
+**The decisive test is pre-registered separately** (tabula: strong-field, d = 6, where K³ is representable, so Kerr
+resolves). The TS direction's coefficient vector is exported to the bridge only. Until that lands, the TS grade
+stays as above, and this tension is carried with it.
