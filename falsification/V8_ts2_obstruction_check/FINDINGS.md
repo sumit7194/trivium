@@ -90,3 +90,13 @@ Two caveats:
 **The decisive test is pre-registered separately** (tabula: strong-field, d = 6, where K³ is representable, so Kerr
 resolves). The TS direction's coefficient vector is exported to the bridge only. Until that lands, the TS grade
 stays as above, and this tension is carried with it.
+
+**Correction (same day, from tabula):** the far-field direction is at **p = 3/5, q = 4/5**, not p = 4/5. So it is
+**Vollmer's parameter point.** Vollmer 2016's rigorous theorem (no additional Killing tensor of valence ≤ 7, in
+involution with the trivial ones) excludes reading (b) *as a Killing tensor*. What remains possible is:
+- (a) an approximant, favoured; or
+- a shell-restricted (fixed-energy) integral, which Vollmer's theorem does not cover.
+
+tabula's standardised weights point the same way. 54–85% of the weight is at momentum degree 0 (a Carter-like
+core), falling off with degree, spread over 60–83 terms. The strong-field d = 6 run (tabula `ef25326`) decides.
+**tabula has not been told about Vollmer**, to keep its run blind to TS literature.
