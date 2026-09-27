@@ -69,7 +69,7 @@ named) · **IN PROGRESS** (who is on it) · **OPEN** · **PAUSED** (waiting on a
 | Three-tone spectroscopy | **CLOSED–NEGATIVE**, information-limited; reopens at ρ_rd ≈ 38 | deepstrain ROADMAP L5 | 09-23 |
 | Larger SSL pool | **CLOSED–NEGATIVE**, saturates | deepstrain ROADMAP L6 | 09-23 |
 | Coherent network echo search | **WITHDRAWN** | deepstrain ROADMAP L4 | 09-23 |
-| Re-score LVK's O4a subsolar triggers | **IN PROGRESS** — deepstrain | fleet plan step 1 | 09-23 |
+| Re-score LVK's O4a subsolar triggers | **SETTLED — UNINFORMATIVE**, as pre-registered: our instruments can't test signals this weak (scope and sensitivity gap at the pointer) | deepstrain `157452e` (frozen) · `bee8b2e` | 09-28 |
 
 ## Corner entanglement
 
