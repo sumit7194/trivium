@@ -15,3 +15,6 @@
 __pycache__/
 *.pyc
 .venv/
+
+# Outreach drafts are local-only: they include draft emails to named researchers (user decision 2026-09-27)
+outreach/
