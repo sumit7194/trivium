@@ -58,3 +58,35 @@ imported from quantum.*
   process). Replaced by DOP853 in double precision, which is ample for 7–9-digit agreement.
 - The first controls run hung in a symbolic `cancel` of the full Kerr r and was stopped (again the bridge's own
   process). Replaced by locating the singular points piecewise, from A, ẋ² and B.
+
+## V9-eq: equatorial row 0, reproduced by the bridge (2026-10-04, pre-registration `51fff74`)
+
+**Verdict: REPRODUCED, after a post-failure amendment (V9-eq′) to fix a bug in the bridge's own code.**
+
+| Run | Gates (provenance / Abel / convergence) | Agreement with quantum | Verdict |
+|---|---|---|---|
+| V9-eq as registered | PASS / PASS / PASS | tr²/det(g) off by a relative 0.86, tr²/det(h) off by 3.8, tr[g,h] off by 0.98 | **DISAGREES** |
+| V9-eq′ (branch fix) | PASS (7e−42) / PASS (≤1.2e−10) / PASS (1.8e−10) | 7.0e−11, 5.9e−11 and 4.3e−11 | **REPRODUCED** |
+
+**What V9-eq′ computes:**
+- tr²/det(g) = −313428.51362 − 106383.32490i;
+- tr²/det(h) = 26436.875182 (imaginary part 1e−6, numerically zero);
+- tr[g,h] = −290240.66028 − 86714.14717i, the same in both composition orders.
+
+So tr[g,h] ≠ 2, and tr²/det(g) is not real. This is a numerical reproduction, not a certificate (that is quantum's v2,
+replayed by v1).
+
+**Cause of the first disagreement.**
+- The bridge wrote R(x, y) = √(R₀² + y²) with R₀ a plain symbol. sympy does not reduce √(R₀²) to R₀, so after the
+  substitution R₀ = (t² − 1)/(2t), the code evaluated the *principal* root.
+- That flips the sign of R on the t < 1 sheet, where loops a and c′ sit. So the bridge was integrating a different
+  equation there. quantum's specification had warned about exactly this cut.
+- Gate 1 couldn't catch it, because it checks only at t = 2 (R > 0). **Lesson: a provenance point must sample every
+  sheet the loops visit, not just the convenient one.**
+
+**The fix.** R₀ is declared positive, so √(R₀²) = R₀ before the substitution. An assertion now fails if any
+square root of t survives in the coefficients. Results: `results/v9_equatorial_row0.json` (first run, kept) and
+`results/v9_equatorial_row0_amended.json`.
+
+**Scope.** Row 0 only (P1, (E, L, μ²) = (1, 0, 4)). Non-blind: the target values were known. It used the bridge's own
+equations and integrator, with the loop recipe transcribed from quantum's message. No quantum file was read.
