@@ -114,3 +114,19 @@ and 0.3 on the commutator), so its midpoints aren't guaranteed to 1e−7.
 - If every gate passes but agreement is worse than 1e−7, and the bridge's values lie inside all three of quantum's v2
   balls, the verdict is **CONSISTENT**. That is weaker than REPRODUCED.
 - If any value lies outside quantum's ball, the verdict is **DISAGREES**.
+
+## Addendum: row 5 (P2 = (13, 5, −1/3), (1, 1, 4); the A6 certificate, v1 replay pending), before running
+The recipe came from quantum's message:
+- base z₀ = 2.77416837150067 + 2.8777954532811547i;
+- loops: a at 1.8863920234010294 with ρ = 0.13088312993112963; b at 0.8166392060114543 + 0.36031282344687354i with
+  ρ = 0.03444944931591693; d at 1.4714290235704188 + 0.13469750018348645i with ρ = 0.08081850011009187; e at
+  0.3077800261557361 with ρ = 0.1870525851458148;
+- composition: g = M_a·M_b, h = M_d·M_e.
+
+Targets, with quantum's v2 radii:
+- tr²/det(g) = 512140.62328653 + 842354.40594609i, ±15;
+- tr²/det(h) = −9213426.4383476 + 10444835.760931i, ±5.7e2;
+- tr[g,h] = −1.299991000133e10 − 2.034816386959e11i, ±1.6e11.
+
+The gates, verdict rule and row-4 CONSISTENT rule are unchanged. Loop b sits about 0.4 from t = 1, so the bridge's
+gates may fail as they did on row 4. If so, the verdict is INCONCLUSIVE, with no tuning.
