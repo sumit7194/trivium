@@ -124,3 +124,16 @@ Results: `results/v9_equatorial_row1_a6.json`.
 - **Agreement with quantum** (relative): tr²/det(g) 2.5e−10, tr²/det(h) 1.5e−11, tr[g,h] 8.9e−9.
 - **Values:** tr[g,h] = 544.03465 − 550.27482i ≠ 2.
 - This is the first L ≠ 0 equatorial row. Results: `results/v9_equatorial_row2_a6.json`.
+
+### V9-eq′, row 4 (P2, (1, 0, 9); the A6 certificate): INCONCLUSIVE by the pre-registered gates
+- **Gates:** provenance PASS (5e−42). **Abel FAIL** (7.7e−8, against a gate of 1e−8). **Convergence FAIL** (4.2e−7,
+  against a gate of 1e−7). Loops a and b sit close to t = 1, and complex128 DOP853 runs out of digits there. This is
+  the same stress as row 1, only stronger.
+- **Values anyway**, recorded but not graded: agreement with quantum's midpoints is 1.5e−6 on g and the commutator,
+  and 1.1e−11 on h. All three values lie deep inside quantum's v2 balls: the commutator differs by ~1.5e4 against a
+  radius of 3.2e9. tr[g,h] ≈ 9.31e9 − 4.87e9i.
+- **β:** the run used the registered p2 β = −1/3. quantum confirmed from its runtime and files that the "β = 1/5" in
+  its message was a typo. Agreement at 1.5e−6 with β = −1/3 is consistent with that.
+- **No relabelling.** The row stays INCONCLUSIVE on the bridge's side. A tighter reproduction would need a
+  pre-registered change of method (for example, mpmath or Arb transport near t = 1), not tolerance tuning.
+- Results: `results/v9_equatorial_row4_a6.json`.
