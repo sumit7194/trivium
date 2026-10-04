@@ -56,3 +56,24 @@ Targets:
 - tr[g,h] = −389140.59069213841206 + 1464024.0755057192621i.
 
 The code is the V9-eq′ code (positive R₀, no-√ assertion), unchanged, with only the row table added.
+
+## Addendum, 2026-10-04 ~07:00 IST: row 1, the A6 certificate (before running)
+Row 1 is P1, (E, L, μ²) = (1, 0, 9). quantum's v2 certificate was found under the post-failure A6 amendment. Its v1
+replay at N=100 could not certify (commutator radius 1.3e11). The v1 replay at N=140 (quantum's A7) is pending. This
+bridge run is a numerical reproduction only and does not stand in for A7.
+
+The recipe came from quantum's message:
+- base z₀ = 2.483596994071131 + 2.5763699891994527i;
+- loops: a at c = 1.2614475105508947 + 0.32152725175852437i; b at c = 1.2874032225413898 + 0.23979070891675344i
+  (both with ρ = 0.025727621885033154); c′ at c = −0.16003305636505147 with ρ = 0.1262521808340563;
+- composition: g = M_a·M_b, h = M_a·M_c′.
+
+Targets:
+- tr²/det(g) = −2547891.7087019648 + 4172532.2257715459i;
+- tr²/det(h) = −6817.1486392324403 + 7154.6410627524415i;
+- tr[g,h] = 51202181.921165786 + 30889220.299715389i.
+
+The gates and verdict rule are unchanged.
+
+Expected stress: loops a and b sit about 0.3 from the essential point t = 1. If the Abel or convergence gate fails there,
+the verdict is INCONCLUSIVE, and no tolerance tuning follows unless it is pre-registered.
