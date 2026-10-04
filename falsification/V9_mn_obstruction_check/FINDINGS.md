@@ -90,3 +90,11 @@ square root of t survives in the coefficients. Results: `results/v9_equatorial_r
 
 **Scope.** Row 0 only (P1, (E, L, μ²) = (1, 0, 4)). Non-blind: the target values were known. It used the bridge's own
 equations and integrator, with the loop recipe transcribed from quantum's message. No quantum file was read.
+
+### V9-eq′, row 3 (P2 = (13, 5, −1/3), (1, 0, 4)): REPRODUCED (first run, no amendment)
+- **Gates:** provenance 8e−42, Abel ≤ 5.8e−12, convergence 3.9e−11. All PASS.
+- **Agreement with quantum** (relative): tr²/det(g) 2.2e−12, tr²/det(h) 4.6e−13, tr[g,h] 2.2e−12. The commutator is the
+  same in both composition orders.
+- **Values:** tr²/det(g) = 1345.2758406 − 1011.6353859i, tr²/det(h) = −2371.4390654 − 7787.8783024i, and
+  tr[g,h] = −389140.59069 + 1464024.0755i ≠ 2. The second parameter point is now reproduced as well.
+- Results: `results/v9_equatorial_row3.json`.
