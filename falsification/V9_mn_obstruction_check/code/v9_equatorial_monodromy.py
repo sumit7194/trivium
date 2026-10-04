@@ -75,27 +75,42 @@ def abel_det(pf, pts, n=400):
 inv = lambda G: np.trace(G)**2/np.linalg.det(G)
 comm = lambda G, H: np.trace(G @ H @ np.linalg.inv(G) @ np.linalg.inv(H))
 
+R = sp.Rational
+# Row specifications transcribed from quantum's cross-session messages (no quantum file read). g, h = products of loop M's.
+ROWS = {
+    0: dict(params=(5, 3, R(1, 5), 1, 0, 4), prov='p1|E=1,L=0,mu2=4', out='v9_equatorial_row0_amended.json',
+            base=2.0246153192247602 + 2.100243381102574j,
+            loops=dict(a=(0.18574683248165982, 0.10036930953180813), b=(-0.5601946717730222, 0.01330513017617667),
+                       c=(-0.14881753262436728, 0.10036930953180813)), g=('a', 'b'), h=('c', 'b'),
+            target=dict(inv_g=-313428.5136459282350497 - 106383.3249050493482615j, inv_h=26436.87518302681110765 + 0j,
+                        comm=-290240.6602844212393278 - 86714.14718309701690989j)),
+    3: dict(params=(13, 5, R(-1, 3), 1, 0, 4), prov='p2|E=1,L=0,mu2=4', out='v9_equatorial_row3.json',
+            base=2.667119562555136 + 2.7667479123938024j,
+            loops=dict(a=(0.307967384242499, 0.20760978472725028), b=(-0.4751366065599529 + 0.22858319755496656j, 0.07700413164438846),
+                       c=(-0.7703523566330759 + 0.37656494220755987j, 0.017435697281317466)), g=('a', 'b'), h=('a', 'c'),
+            target=dict(inv_g=1345.2758406025942679 - 1011.6353858956783367j, inv_h=-2371.4390654371280839 - 7787.8783024198235091j,
+                        comm=-389140.59069213841206 + 1464024.0755057192621j)),
+}
+
 if __name__ == '__main__':
-    R = sp.Rational
-    pt, qt, x1, x2 = eq_coeffs_t(5, 3, R(1, 5), 1, 0, 4)
+    import sys
+    row = ROWS[int(sys.argv[1]) if len(sys.argv) > 1 else 0]
+    pt, qt, x1, x2 = eq_coeffs_t(*row['params'])
     out = {}
     # Gate 1: back-convert at t = 2 (x = 5/4) and compare with the bridge's committed 50-digit provenance values
-    prov = json.load(open('../results/v9_equatorial_provenance.json'))['p1|E=1,L=0,mu2=4']['5/4']
+    prov = json.load(open('../results/v9_equatorial_provenance.json'))[row['prov']]['5/4']
     px = ((pt + x2/x1)/x1).subs(t, 2); qx = (qt/x1**2).subs(t, 2)
     px, qx = sp.N(px, 40), sp.N(qx, 40)
     e1 = max(abs(px/sp.Float(prov['p'], 50) - 1), abs(qx/sp.Float(prov['q'], 50) - 1))
     out['gate1_rel_err'] = float(e1); print('gate 1 provenance rel err:', float(e1), 'PASS' if e1 < 1e-12 else 'FAIL', flush=True)
-    if e1 >= 1e-12: json.dump(out, open('../results/v9_equatorial_row0_amended.json', 'w'), indent=1); raise SystemExit
+    if e1 >= 1e-12: json.dump(out, open('../results/' + row['out'], 'w'), indent=1); raise SystemExit
     pf = sp.lambdify(t, pt, modules='numpy', cse=True); qf = sp.lambdify(t, qt, modules='numpy', cse=True)
-    base = 2.0246153192247602 + 2.100243381102574j
-    loops = dict(a=(0.18574683248165982, 0.10036930953180813), b=(-0.5601946717730222, 0.01330513017617667),
-                 c=(-0.14881753262436728, 0.10036930953180813))
-    target = dict(inv_g=-313428.5136459282350497 - 106383.3249050493482615j, inv_h=26436.87518302681110765 + 0j,
-                  comm=-290240.6602844212393278 - 86714.14718309701690989j)
+    base, loops, target = row['base'], row['loops'], row['target']
     res = {}
     for tol in (1e-11, 1e-13):
         Ms = {k: monodromy(pf, qf, loop_pts(base, c, r), tol) for k, (c, r) in loops.items()}
-        g, h = Ms['a'] @ Ms['b'], Ms['c'] @ Ms['b']; g2, h2 = Ms['b'] @ Ms['a'], Ms['b'] @ Ms['c']
+        (g1, g2_), (h1, h2_) = row['g'], row['h']
+        g, h = Ms[g1] @ Ms[g2_], Ms[h1] @ Ms[h2_]; g2, h2 = Ms[g2_] @ Ms[g1], Ms[h2_] @ Ms[h1]
         res[tol] = dict(inv_g=inv(g), inv_h=inv(h), comm=comm(g, h), comm_rev=comm(g2, h2),
                         abel=max(abs(np.linalg.det(Ms[k])/abel_det(pf, loop_pts(base, c, r)) - 1) for k, (c, r) in loops.items()))
         v = res[tol]; print(f'tol {tol:.0e}: tr2/det g={v["inv_g"]:.12g}  tr2/det h={v["inv_h"]:.12g}  tr[g,h]={v["comm"]:.12g}'
@@ -111,4 +126,4 @@ if __name__ == '__main__':
     print('VERDICT:', verdict)
     out.update(dict(results={str(k): {kk: str(vv) for kk, vv in v.items()} for k, v in res.items()}, convergence=conv,
                     agreement={k: v for k, v in agree.items()}, verdict=verdict))
-    json.dump(out, open('../results/v9_equatorial_row0_amended.json', 'w'), indent=1, default=str)
+    json.dump(out, open('../results/' + row['out'], 'w'), indent=1, default=str)

@@ -42,3 +42,17 @@ specification came as text in a cross-session message.*
 - **INCONCLUSIVE:** anything else.
 
 The verdict is about numerical reproduction only (not a certificate). The certificate is quantum's v2, replayed by v1.
+
+## Addendum, 2026-10-04 ~04:30 IST: row 3, under the same gates and verdict rule (before running)
+Row 3 is P2 = (13, 5, −1/3), (E, L, μ²) = (1, 0, 4). The recipe came from quantum's message:
+- base z₀ = 2.667119562555136 + 2.7667479123938024i;
+- loops: a at c = 0.307967384242499 with ρ = 0.20760978472725028; b at c = −0.4751366065599529 + 0.22858319755496656i
+  with ρ = 0.07700413164438846; c′ at c = −0.7703523566330759 + 0.37656494220755987i with ρ = 0.017435697281317466;
+- composition: g = M_a·M_b, h = M_a·M_c′.
+
+Targets:
+- tr²/det(g) = 1345.2758406025942679 − 1011.6353858956783367i;
+- tr²/det(h) = −2371.4390654371280839 − 7787.8783024198235091i;
+- tr[g,h] = −389140.59069213841206 + 1464024.0755057192621i.
+
+The code is the V9-eq′ code (positive R₀, no-√ assertion), unchanged, with only the row table added.
