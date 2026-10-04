@@ -20,8 +20,11 @@ def coeffs(tag, E, L, mu2):
     Gxx0 = Gxx.subs(y, 0); px2 = (-mu2 - V0)/Gxx0
     A = Gyy.subs(y, 0); X = Gxx0*(-mu2 - V0); B = sp.Rational(1, 2)*(d2(Gxx)*px2 + V2)
     pc = -(sp.diff(A, x)/A - sp.diff(X, x)/(2*X)); qc = A*B/X
-    xt = (t + 1/t)/2; x1 = sp.diff(xt, t); x2 = sp.diff(x1, t)
-    pt = x1*pc.subs(x, xt) - x2/x1; qt = x1**2*qc.subs(x, xt)
+    # Compose numerically (no symbolic cancel: it blew up memory on the first attempt, killed at ~8 GB).
+    pxf = sp.lambdify(x, pc, 'numpy', cse=True); qxf = sp.lambdify(x, qc, 'numpy', cse=True)
+    x1f = lambda z: (1 - 1/z**2)/2; x2f = lambda z: 1/z**3
+    pt = lambda z: x1f(z)*pxf((z + 1/z)/2) - x2f(z)/x1f(z)
+    qt = lambda z: x1f(z)**2*qxf((z + 1/z)/2)
     return pc, qc, pt, qt
 
 ROWS = {
@@ -54,7 +57,7 @@ if __name__ == '__main__':
         pv = prov[f'{tag}|E={E},L={L},mu2={mu2}']['5/4']
         e1 = max(abs(sp.N(pc.subs(x, sp.Rational(5, 4)), 40)/sp.Float(pv['p'], 50) - 1),
                  abs(sp.N(qc.subs(x, sp.Rational(5, 4)), 40)/sp.Float(pv['q'], 50) - 1))
-        pf = sp.lambdify(t, sp.cancel(pt), 'numpy'); qf = sp.lambdify(t, sp.cancel(qt), 'numpy')
+        pf, qf = pt, qt
         target = dict(inv_g=tg[0], inv_h=tg[1], comm=tg[2]); res = {}
         for tol in (1e-11, 1e-13):
             Ms = {k: monodromy(pf, qf, loop_pts(base, c, r), tol) for k, (c, r) in loops.items()}

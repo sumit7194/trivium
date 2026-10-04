@@ -111,3 +111,35 @@ That is the signature of a formal-series approximant, not of an exact invariant.
 p = 3/5 and the Morales–Ramis obstruction, **the tension is resolved in favour of the approximant reading.** This is
 not a verdict of tabula's rung, whose own grades stay REFUSED / INCONCLUSIVE; it is the bridge's reading of all
 the evidence. No further runs.
+
+## V8-mono: quantum's TS δ=2 v2 monodromy certificates, reproduced by the bridge (2026-10-05, pre-registration committed 01:41)
+
+**All 6 rows REPRODUCED.** Every gate passes on every row:
+- provenance ≤ 6.5e−42;
+- Abel ≤ 5.5e−10;
+- convergence ≤ 6.6e−9.
+
+Agreement with quantum's v2 midpoints is ≤ 2.9e−9 relative on all three invariants.
+
+| Row | Point, (E, L, μ²) | tr[g,h], bridge |
+|---|---|---|
+| 0 | P1, (1,0,4) | 1.582859621 − 75.61779771i |
+| 1 | P1, (1,0,9) | −2.336288614 + 6.5727524i |
+| 2 | P1, (1,1,4) | 33.57839164 − 50.74493873i |
+| 3 | P2, (1,0,4) | −49.07593352 + 101.8276866i |
+| 4 | P2, (1,0,9) | −0.9817397367 (Im ~1e−9, i.e. numerically 0) |
+| 5 | P2, (1,1,4) | −92.11550054 + 20.63826164i |
+
+**What this closes.** The TS monodromy, which V8 recorded as *uncorroborated*, is now reproduced numerically by a
+second code. The equations come from the bridge's own V8 derivation on ansatz's Ernst- and twist-checked metric.
+Combined with quantum's v2 + v1 certificates, the TS δ=2 obstruction now has two routes:
+- certified monodromy, by two quantum engines, reproduced by the bridge;
+- the Kovacic/log-point argument of quantum 2b′ and bridge V8′.
+
+**Instrument log.** The first attempt simplified p_t and q_t symbolically with `sp.cancel`. Memory ran away to
+~8 GB, and the process was killed by hand (01:41–01:51) while ansatz's rank-6 job and quantum's jobs were running on
+the 16 GiB box. The fix composes the x-coefficients numerically. Every run now sits under a self-kill guard at 2 GB,
+and the process peaked at 0.12 GB. The runaway overlapped ansatz's watchdog stop at 01:50:34, which was disclosed to
+ansatz. **Lesson: the bridge's own runs need a memory guard whenever the box is committed.**
+
+Results: `results/v8_ts_monodromy.json`.
