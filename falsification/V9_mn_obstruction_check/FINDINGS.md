@@ -137,3 +137,13 @@ Results: `results/v9_equatorial_row1_a6.json`.
 - **No relabelling.** The row stays INCONCLUSIVE on the bridge's side. A tighter reproduction would need a
   pre-registered change of method (for example, mpmath or Arb transport near t = 1), not tolerance tuning.
 - Results: `results/v9_equatorial_row4_a6.json`.
+
+### V9-eq′, row 5 (P2, (1, 1, 4); the A6 certificate): CONSISTENT
+- **Gates:** provenance 8e−43, Abel ≤ 4.2e−9, convergence 2.6e−8. All PASS.
+- **Agreement with quantum's v2 midpoints** (relative): tr²/det(g) 1.3e−8, tr²/det(h) 2.8e−7, tr[g,h] 2.7e−7. The
+  last two miss the 1e−7 REPRODUCED bar, but every value lies inside quantum's v2 balls, so by the row-4 rule the
+  verdict is **CONSISTENT**.
+- **Values:** the bridge's own run converges to about 1e−8 on tr[g,h] ≈ −1.29999e10 − 2.03482e11i. Its imaginary
+  part is about 2e11 from zero, so numerically tr[g,h] ≠ 2 by a wide margin. v2's certificate excludes 2 only thinly,
+  through Im. This is a numerical statement, not a certificate.
+- Results: `results/v9_equatorial_row5_a6.json`.
