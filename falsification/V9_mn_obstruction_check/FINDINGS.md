@@ -118,3 +118,9 @@ significant digits agree, on tr[g,h] ≈ 5.12e7 + 3.09e7i, which is nowhere near
 row's certificate grade stays as quantum reports it.
 
 Results: `results/v9_equatorial_row1_a6.json`.
+
+### V9-eq′, row 2 (P1, (1, 1, 4), so L = 1; the A6 certificate, v1-replayed): REPRODUCED
+- **Gates:** provenance 5e−42, Abel ≤ 3.2e−10, convergence 1.1e−8. All PASS.
+- **Agreement with quantum** (relative): tr²/det(g) 2.5e−10, tr²/det(h) 1.5e−11, tr[g,h] 8.9e−9.
+- **Values:** tr[g,h] = 544.03465 − 550.27482i ≠ 2.
+- This is the first L ≠ 0 equatorial row. Results: `results/v9_equatorial_row2_a6.json`.
