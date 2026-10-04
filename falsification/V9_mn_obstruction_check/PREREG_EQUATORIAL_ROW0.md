@@ -77,3 +77,18 @@ The gates and verdict rule are unchanged.
 
 Expected stress: loops a and b sit about 0.3 from the essential point t = 1. If the Abel or convergence gate fails there,
 the verdict is INCONCLUSIVE, and no tolerance tuning follows unless it is pre-registered.
+
+## Addendum: row 2 (P1, (1, 1, 4); the A6 certificate, v1-replayed at N=100), before running
+The recipe came from quantum's message:
+- base z₀ = 2.4691717810397047 + 2.5614059326191394i;
+- loops: a at c = 1.0407508871125104 + 0.4677121389555332i; b at c = 1.0080515742827576 + 0.36856210426090547i
+  (both with ρ = 0.03132088280290887); c at 0.19761156121947301 with ρ = 0.1154952476585107;
+- composition: g = M_a·M_b, h = M_a·M_c.
+
+Targets:
+- tr²/det(g) = 48.163959217322192 − 56.115995966010885i;
+- tr²/det(h) = −12146.886141027918 − 6932.6906398834416i;
+- tr[g,h] = 544.03465380660005 − 550.27482251186448i.
+
+The gates and verdict rule are unchanged. Loops a and b sit close to the essential point t = 1 (|c − 1| ≈ 0.37–0.47), so
+the same stress as row 1 is expected.
