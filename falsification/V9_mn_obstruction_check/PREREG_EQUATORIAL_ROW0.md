@@ -92,3 +92,25 @@ Targets:
 
 The gates and verdict rule are unchanged. Loops a and b sit close to the essential point t = 1 (|c − 1| ≈ 0.37–0.47), so
 the same stress as row 1 is expected.
+
+## Addendum: row 4 (P2 = (13, 5, −1/3), (1, 0, 9); the A6 certificate, v1 replay pending), before running
+The recipe came from quantum's message:
+- base z₀ = 2.6478084529899895 + 2.7467154500979643i;
+- loops: a at c = 1.4630859217922259 + 0.11907670815419788i with ρ = 0.07144602489251872; b at
+  c = 0.844094439134436 + 0.46228514057135917i with ρ = 0.038060428501300446; c at 0.4236097945571309 with
+  ρ = 0.15468191854243515;
+- composition: g = M_a·M_b, **h = M_b·M_c**.
+
+Targets, with quantum's v2 radii:
+- tr²/det(g) = −54792981.26 + 38564787.55i, ±5.0e4;
+- tr²/det(h) = 112.84092006827 − 107.48097808331i, ±1.05e−7;
+- tr[g,h] = 9307412800.05 − 4874558287.89i, ±3.2e9.
+
+**Parameter flag.** quantum's message header said "p2, β = 1/5", but the registered p2 has β = −1/3. The bridge
+runs the registered β = −1/3 and has asked quantum to confirm from its files.
+
+**Added rule, for this row only, fixed before running.** quantum's own enclosures are wide here (relative 7e−4 on g
+and 0.3 on the commutator), so its midpoints aren't guaranteed to 1e−7.
+- If every gate passes but agreement is worse than 1e−7, and the bridge's values lie inside all three of quantum's v2
+  balls, the verdict is **CONSISTENT**. That is weaker than REPRODUCED.
+- If any value lies outside quantum's ball, the verdict is **DISAGREES**.

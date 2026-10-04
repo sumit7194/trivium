@@ -100,6 +100,15 @@ ROWS = {
             target=dict(inv_g=48.16395921732219238937 - 56.11599596601088473492j,
                         inv_h=-12146.88614102791808418 - 6932.690639883441608725j,
                         comm=544.0346538066000467109 - 550.2748225118644843529j)),
+    4: dict(params=(13, 5, R(-1, 3), 1, 0, 9), prov='p2|E=1,L=0,mu2=9', out='v9_equatorial_row4_a6.json',
+            base=2.6478084529899895 + 2.7467154500979643j,
+            loops=dict(a=(1.4630859217922259 + 0.11907670815419788j, 0.07144602489251872),
+                       b=(0.844094439134436 + 0.46228514057135917j, 0.038060428501300446),
+                       c=(0.4236097945571309, 0.15468191854243515)), g=('a', 'b'), h=('b', 'c'),
+            target=dict(inv_g=-54792981.25991847482041863 + 38564787.55385748195701619j,
+                        inv_h=112.8409200682702553747621 - 107.4809780833145082690042j,
+                        comm=9307412800.054622903634094 - 4874558287.894730114374308j),
+            v2_radius=dict(inv_g=5.0e4, inv_h=1.05e-7, comm=3.2e9)),
     3: dict(params=(13, 5, R(-1, 3), 1, 0, 4), prov='p2|E=1,L=0,mu2=4', out='v9_equatorial_row3.json',
             base=2.667119562555136 + 2.7667479123938024j,
             loops=dict(a=(0.307967384242499, 0.20760978472725028), b=(-0.4751366065599529 + 0.22858319755496656j, 0.07700413164438846),
@@ -138,6 +147,9 @@ if __name__ == '__main__':
     print('agreement with quantum (rel):', {k: f'{v:.1e}' for k, v in agree.items()})
     if abel_ok and conv < 1e-7:
         verdict = 'REPRODUCED' if max(agree.values()) < 1e-7 else ('DISAGREES' if max(agree.values()) > 1e-5 else 'INCONCLUSIVE')
+        if verdict != 'REPRODUCED' and 'v2_radius' in row:   # row-4 addendum rule: inside quantum's own v2 ball = CONSISTENT
+            inside = all(abs(hi[k] - target[k]) <= row['v2_radius'][k] for k in target)
+            verdict = 'CONSISTENT (inside v2 enclosures)' if inside else 'DISAGREES'
     else: verdict = 'INCONCLUSIVE'
     print('VERDICT:', verdict)
     out.update(dict(results={str(k): {kk: str(vv) for kk, vv in v.items()} for k, v in res.items()}, convergence=conv,
