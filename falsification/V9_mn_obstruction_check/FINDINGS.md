@@ -98,3 +98,23 @@ equations and integrator, with the loop recipe transcribed from quantum's messag
 - **Values:** tr²/det(g) = 1345.2758406 − 1011.6353859i, tr²/det(h) = −2371.4390654 − 7787.8783024i, and
   tr[g,h] = −389140.59069 + 1464024.0755i ≠ 2. The second parameter point is now reproduced as well.
 - Results: `results/v9_equatorial_row3.json`.
+
+### V9-eq′, row 1 (P1, (1, 0, 9); A6 certificate): REPRODUCED, with a thin convergence margin
+**Gates:**
+- provenance 5e−42;
+- Abel ≤ 1.1e−10;
+- convergence **9.9e−8, against a gate of 1e−7**. This passes, but only just.
+
+**Agreement with quantum** (relative):
+- tr²/det(g) 5.1e−8;
+- tr²/det(h) 1.7e−12;
+- tr[g,h] 5.1e−8.
+
+**What the numbers say.** The two loops near t ≈ 1.27 (about 0.3 from the essential point t = 1) cost the bridge's
+complex128 integrator about 5 digits. That is consistent with quantum's v1 needing N = 140 there. Even so, about 7
+significant digits agree, on tr[g,h] ≈ 5.12e7 + 3.09e7i, which is nowhere near 2.
+
+**What it does NOT do.** It does not substitute for quantum's pending A7 v1 replay at N = 140. Until that lands, the
+row's certificate grade stays as quantum reports it.
+
+Results: `results/v9_equatorial_row1_a6.json`.
