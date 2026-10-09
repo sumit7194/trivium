@@ -42,3 +42,22 @@ Note from quantum: several rows have a REAL tr[g,h] in (0, 2) and a real tr²/de
 the real parts and the signs, not just the moduli.
 C3–C8 come from quantum's text recipes (R3–R8), registered before running under the same rule. C1's result (first run,
 gates: convergence 2.2e−7 > 1e−7) is INCONCLUSIVE by the rule, recorded as is, with no tolerance tuning.
+
+## HP addendum (before running): high-precision transport for C1, C3, C4, C6 and C7
+Those five rows were INCONCLUSIVE under complex128 DOP853 (the convergence gate, plus Abel for C6 and C7). The new
+`code/v8_hp.py` uses the same V8 equations:
+- p(x) and q(x) are reduced exactly to rational functions (degree ≤ 12);
+- a Taylor-series transport in mpmath, with exact coefficient-series arithmetic at each centre;
+- step = a fraction of the distance to the nearest singular point.
+
+**Two settings:** (dps 30, K 60, frac 0.3) and (dps 40, K 80, frac 0.25).
+
+**Gates:**
+- convergence between the two settings below 1e−20;
+- validation first, on rows that DOP853 already REPRODUCED (row 0, C2, C5, C8): HP must agree with quantum to below
+  1e−12 there, or STOP.
+
+**Verdict:**
+- REPRODUCED if the agreement with quantum's v2 midpoints is below 1e−12;
+- DISAGREES if it is above 1e−8;
+- INCONCLUSIVE otherwise.
