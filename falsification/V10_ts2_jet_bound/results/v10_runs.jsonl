@@ -25,3 +25,5 @@
 {"case": "ts45", "r": 4, "N": 5, "P": ["7/4", "-2/5"], "shape": [840, 735], "rank": 726, "bound": 9, "trivial": 9, "t_build": 0.0, "t_rank": 0.1}
 {"case": "ts45", "r": 5, "N": 6, "P": ["7/4", "-2/5"], "shape": [1764, 1568], "rank": 1556, "bound": 12, "trivial": 12, "t_build": 0.1, "t_rank": 0.7}
 {"case": "ts45", "r": 6, "N": 7, "P": ["7/4", "-2/5"], "shape": [3360, 3024], "rank": 3008, "bound": 16, "trivial": 16, "t_build": 0.1, "t_rank": 4.5}
+{"case": "ts45", "r": 7, "N": 8, "P": ["3/2", "1/3"], "shape": [5940, 5400], "rank": 5380, "bound": 20, "trivial": 20, "t_build": 0.2, "t_rank": 19.6}
+{"case": "ts45", "r": 7, "N": 8, "P": ["7/4", "-2/5"], "shape": [5940, 5400], "rank": 5380, "bound": 20, "trivial": 20, "t_build": 0.2, "t_rank": 19.6}
