@@ -143,3 +143,37 @@ and the process peaked at 0.12 GB. The runaway overlapped ansatz's watchdog stop
 ansatz. **Lesson: the bridge's own runs need a memory guard whenever the box is committed.**
 
 Results: `results/v8_ts_monodromy.json`.
+
+## V8-mono on quantum's bound-orbit levels (item 1), 2026-10-10
+
+| Row | (p, E, L, μ²) | DOP853 (complex128) | HP (mpmath Taylor, 30/40 digits) |
+|---|---|---|---|
+| C1 | (4/5, 47/50, −39/5, 1), Dubeibe's level | INCONCLUSIVE (convergence 2.2e−7) | **REPRODUCED** |
+| C2 | (3/5, 47/50, −52/5, 1) | REPRODUCED (3.0e−8) | **REPRODUCED** |
+| C3 | (4/5, 19/20, −773/100, 1) | INCONCLUSIVE | **REPRODUCED** |
+| C4 | (4/5, 97/100, −201/25, 1) | INCONCLUSIVE | **REPRODUCED** |
+| C5 | (4/5, 97/100, 1051/100, 1) | REPRODUCED (2.4e−10) | **REPRODUCED** |
+| C6 | (3/5, 19/20, −93/10, 1) | INCONCLUSIVE (Abel 1.8e−7) | **REPRODUCED** |
+| C7 | (3/5, 97/100, −48/5, 1) | INCONCLUSIVE (Abel 1.5e−7) | **REPRODUCED** |
+| C8 | (3/5, 97/100, 287/20, 1) | REPRODUCED (7.6e−11) | **REPRODUCED** |
+
+**HP method** (pre-registered addendum, code `v8_hp.py`):
+- p(x) and q(x) are reduced exactly to rational functions (degree ≤ 12).
+- Taylor-series transport in t, with exact coefficient series at each centre.
+- Convergence between (dps 30, K 60) and (dps 40, K 80) is ≤ 1e−22 on every row.
+
+**Validation.** The validation rows (row 0, C2, C5, C8) come out at ~1e−16. That's the precision floor of the
+double-precision targets the bridge stored, not the method's. Against the 25-digit strings quantum sent, C3's
+tr[g,h] = 0.63414386438599461988417340… and C6's 1.29013464239116070983647387… agree to every digit quantum sent
+(25 for C3, 24 for C6).
+
+**The real-hyperbolic rows** (C1, C3, C4, C6, C7): tr[g,h] and tr²/det(h) come out real to |Im| ~ 1e−30 to 1e−35,
+confirming quantum's "decided by the real part" reading:
+- tr[g,h] ∈ (0, 2);
+- tr²/det(h) ~ 1e4.
+
+**So all 8 bound-orbit certificates, including Dubeibe's own level, are independently reproduced.**
+
+**Instrument lesson.** Complex128 DOP853 runs out of digits on loops whose monodromy is real-hyperbolic of order 1e4.
+There the commutator trace in (0, 2) comes from heavy cancellation. HP transport is the right tool there, and
+tuning tolerances is not.
