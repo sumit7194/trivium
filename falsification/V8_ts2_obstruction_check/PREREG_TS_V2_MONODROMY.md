@@ -40,3 +40,5 @@ carry the run.
 
 Note from quantum: several rows have a REAL tr[g,h] in (0, 2) and a real tr²/det(h) of order 10⁴. The bridge checks
 the real parts and the signs, not just the moduli.
+C3–C8 come from quantum's text recipes (R3–R8), registered before running under the same rule. C1's result (first run,
+gates: convergence 2.2e−7 > 1e−7) is INCONCLUSIVE by the rule, recorded as is, with no tolerance tuning.
