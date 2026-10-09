@@ -82,3 +82,8 @@ and 36. The rule is unchanged.
 
 **Resource guard, sized to the box and not arbitrary.** Kill if the process RSS exceeds 10 GB or system memory free
 falls below 10%. Single-threaded. The valence-10 matrix is about 24024 × 22308 int32 entries (≈ 2.1 GB).
+
+## Addendum 3, 2026-10-10 (before running): TS p = 3/5, valence 8–10
+This is the "beyond Vollmer" claim, single-implementation so far (ansatz's). The targets are TS p = 3/5 (`t1o2`) at
+P₁ and P₂, valence 8, 9 and 10, with N = r+1, then r+2 if needed. Trivial counts are 25, 30 and 36. The rule and
+guard are unchanged.
