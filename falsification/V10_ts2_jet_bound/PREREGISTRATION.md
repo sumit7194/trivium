@@ -55,3 +55,30 @@ Memory is self-limited to 3 GB. Single-threaded.
 ## Addendum, ~03:40 IST: before running, after r1–6 landed
 Extend the targets to valence 7 and 8 for TS p = 4/5 at P₁ and P₂. The rule is unchanged. Trivial counts are 20 and 25.
 Memory guard stays at 3 GB; r8 is about 9900 × 9075 entries.
+
+## Addendum 2, 2026-10-10 ~02:05 IST: instrument fix, and targets valence 8–10 (before running)
+*Clock correction: the "~03:10" and "~03:40" times above were the bridge's estimates. The commit timestamps are
+authoritative.*
+
+**Instrument change, memory only.** The valence-8 run was stopped by the bridge's own 3 GB guard. The elimination
+copied the whole matrix several times per pivot. It now:
+- stores the matrix as int32 (all entries are below Q < 2³¹);
+- eliminates in place;
+- updates rows in chunks of 1024, in int64.
+
+The arithmetic is identical.
+
+**Re-validation first.** The fixed code must reproduce, with the SAME rank, every earlier run:
+- flat r1;
+- Kerr r1–4;
+- ZV r6;
+- TS p=3/5 r7;
+- TS p=4/5 r1–7 at P₁ and P₂.
+
+Any mismatch means STOP.
+
+**Targets:** TS p = 4/5, valence 8, 9 and 10, at P₁ and P₂, with N = r+1, then r+2 if needed. Trivial counts are 25, 30
+and 36. The rule is unchanged.
+
+**Resource guard, sized to the box and not arbitrary.** Kill if the process RSS exceeds 10 GB or system memory free
+falls below 10%. Single-threaded. The valence-10 matrix is about 24024 × 22308 int32 entries (≈ 2.1 GB).

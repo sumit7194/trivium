@@ -75,7 +75,7 @@ def build(G, r, N, T):
     al = monos(r); be = monos(r + 1); bidx = {b: i for i, b in enumerate(be)}
     st = [(s, t) for s in range(N + 1) for t in range(N + 1 - s)]; cidx = {(a, s, t): k for k, (a, (s, t)) in enumerate(itertools.product(al, st))}
     mn = [(m, n) for m in range(N) for n in range(N - m)]; ridx = {(b, m, n): k for k, (b, (m, n)) in enumerate(itertools.product(be, mn))}
-    E = np.zeros((len(ridx), len(cidx)), dtype=np.int64)
+    E = np.zeros((len(ridx), len(cidx)), dtype=np.int32)   # entries < Q < 2^31
     dG = {k: (T.du(v), T.dv(v)) for k, v in G.items()}
     def add(C, a, b, kind, fac):
         for (m, n) in mn:
@@ -87,7 +87,7 @@ def build(G, r, N, T):
                     if kind == 0: key, w = (a, s, t), 1
                     elif kind == 1: key, w = (a, s + 1, t), s + 1
                     else: key, w = (a, s, t + 1), t + 1
-                    col = cidx[key]; E[row, col] = (E[row, col] + c * w % Q * fac) % Q
+                    col = cidx[key]; E[row, col] = (int(E[row, col]) + c * w % Q * fac) % Q
     e = [tuple(int(i == j) for i in range(4)) for j in range(4)]
     plus = lambda a, *vs: tuple(x + sum(v[i] for v in vs) for i, x in enumerate(a))
     for a in al:
@@ -100,17 +100,27 @@ def build(G, r, N, T):
                 add(d[k], a, plus(am, e[i], e[j]), 0, (Q - INV2) * a[q_] % Q)
     return E
 
-def rank_mod(A):
-    A = A % Q; R, C = A.shape; r = 0
+def rank_mod(A, CH=1024):
+    """Rank mod Q, in place. A is int32 with entries in [0, Q). Row updates run in chunks of CH rows in int64, so the
+    temporaries stay ~CH x C x 16 B instead of copies of the whole matrix (the first version copied A several times
+    per pivot and hit the 3 GB guard at valence 8)."""
+    R, C = A.shape; r = 0
     for c in range(C):
         if r == R: break
-        nz = np.nonzero(A[r:, c])[0]
+        nz = np.flatnonzero(A[r:, c])
         if nz.size == 0: continue
-        p = r + nz[0]
+        p = r + int(nz[0])
         if p != r: A[[r, p]] = A[[p, r]]
-        A[r, c:] = A[r, c:] * pow(int(A[r, c]), Q - 2, Q) % Q
-        idx = r + 1 + np.nonzero(A[r + 1:, c])[0]
-        if idx.size: A[idx, c:] = (A[idx, c:] - np.outer(A[idx, c], A[r, c:])) % Q
+        piv = A[r, c:].astype(np.int64)
+        piv = piv * pow(int(piv[0]), Q - 2, Q) % Q
+        A[r, c:] = piv
+        idx = r + 1 + np.flatnonzero(A[r + 1:, c])
+        for k in range(0, idx.size, CH):
+            ii = idx[k:k + CH]
+            sub = A[ii, c:].astype(np.int64)
+            sub -= sub[:, :1] * piv[None, :]
+            sub %= Q
+            A[ii, c:] = sub
         r += 1
     return r
 
@@ -133,8 +143,8 @@ def bound(case, r, N, P):
     T = TPS(N); t0 = time.time()
     G = inverse_metric(metric(case), X, Y, P, T)
     E = build(G, r, N, T); t1 = time.time()
-    rk = rank_mod(E); b = E.shape[1] - rk
-    return dict(case=case, r=r, N=N, P=[str(P[0]), str(P[1])], shape=list(E.shape), rank=rk, bound=b, trivial=trivial(r),
+    shape = list(E.shape); rk = rank_mod(E); b = shape[1] - rk; del E
+    return dict(case=case, r=r, N=N, P=[str(P[0]), str(P[1])], shape=shape, rank=rk, bound=b, trivial=trivial(r),
                 t_build=round(t1 - t0, 1), t_rank=round(time.time() - t1, 1))
 
 if __name__ == '__main__':
