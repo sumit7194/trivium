@@ -15,7 +15,7 @@ def coeffs(tag, E, L, mu2):
     det = gtt*gpp - gtp**2
     Gtt, Gtp, Gpp, Gxx, Gyy = gpp/det, -gtp/det, gtt/det, 1/gxx_dn, 1/gyy_dn
     d2 = lambda e: sp.diff(e, y, 2).subs(y, 0)
-    E, L, mu2 = map(sp.Integer, (E, L, mu2))
+    E, L, mu2 = map(sp.Rational, (E, L, mu2))
     V0 = (Gtt*E**2 - 2*Gtp*E*L + Gpp*L**2).subs(y, 0); V2 = d2(Gtt)*E**2 - 2*d2(Gtp)*E*L + d2(Gpp)*L**2
     Gxx0 = Gxx.subs(y, 0); px2 = (-mu2 - V0)/Gxx0
     A = Gyy.subs(y, 0); X = Gxx0*(-mu2 - V0); B = sp.Rational(1, 2)*(d2(Gxx)*px2 + V2)
@@ -48,15 +48,30 @@ ROWS = {
      ('a', 'b'), ('a', 'c'), (-93.520510069692272 + 21.310319434306618j, -2.2443215278010807 - 2.3184031010151625j, -92.115500570103438 + 20.638261599509653j)),
 }
 
+R_ = sp.Rational
+ROWS.update({
+ 'C1': ('P2', (R_(47, 50), R_(-39, 5), 1), 4.759635492754377 + 4.937428283386672j,
+        dict(a=(0.7652811125597551 + 1.0620418145798625j, 0.16353683386738407), b=(1.401118545620634, 0.12033556368619022),
+             c=(0.4465957475364694 + 0.6197766419594568j, 0.16353683386738407)),
+        ('a', 'b'), ('a', 'c'), (-101.37866390210203 - 79.657151925358826j, 17031.873368516720 + 0j, 0.97421985471953651 + 0j)),
+ 'C2': ('P1', (R_(47, 50), R_(-52, 5), 1), 6.7144374993199625 + 6.965250525306411j,
+        dict(a=(3.800859593274011, 0.6370180593131861), b=(0.9152986617538389 + 0.8003881663168713j, 0.11803505681547546),
+             c=(1.6774660622300568, 0.20323981866901702)),
+        ('a', 'b'), ('a', 'c'), (29.671765061459352 + 65.516083404545710j, 9730.0175008273566 + 0j, 4.4971759768442451 - 7.3405918935261554j)),
+})
+
 if __name__ == '__main__':
     prov = json.load(open('../results/v8_ts_provenance.json'))
     out = {}
-    for i in [int(a) for a in sys.argv[1:]] or range(6):
+    for i in [(a if a.startswith('C') else int(a)) for a in sys.argv[1:]] or range(6):
         tag, (E, L, mu2), base, loops, gw, hw, tg = ROWS[i]
         pc, qc, pt, qt = coeffs(tag, E, L, mu2)
-        pv = prov[f'{tag}|E={E},L={L},mu2={mu2}']['5/4']
-        e1 = max(abs(sp.N(pc.subs(x, sp.Rational(5, 4)), 40)/sp.Float(pv['p'], 50) - 1),
-                 abs(sp.N(qc.subs(x, sp.Rational(5, 4)), 40)/sp.Float(pv['q'], 50) - 1))
+        key = f'{tag}|E={E},L={L},mu2={mu2}'
+        if key in prov:
+            pv = prov[key]['5/4']
+            e1 = max(abs(sp.N(pc.subs(x, sp.Rational(5, 4)), 40)/sp.Float(pv['p'], 50) - 1),
+                     abs(sp.N(qc.subs(x, sp.Rational(5, 4)), 40)/sp.Float(pv['q'], 50) - 1))
+        else: e1 = 0   # gate 1 N/A for new levels (addendum); gates 2-3 carry the run
         pf, qf = pt, qt
         target = dict(inv_g=tg[0], inv_h=tg[1], comm=tg[2]); res = {}
         for tol in (1e-11, 1e-13):
@@ -71,4 +86,4 @@ if __name__ == '__main__':
         print(f'row {i} {tag} {(E, L, mu2)}: prov {float(e1):.1e}  Abel {max(lo["abel"], hi["abel"]):.1e}  conv {conv:.1e}  '
               f'agree {agree:.1e}  tr[g,h]={hi["comm"]:.10g}  -> {verdict}', flush=True)
         out[i] = dict(prov=float(e1), conv=conv, agree=agree, verdict=verdict, values={k: str(v) for k, v in hi.items()})
-    json.dump(out, open('../results/v8_ts_monodromy.json', 'w'), indent=1)
+    json.dump(out, open('../results/v8_ts_monodromy' + ('_bound' if any(str(k).startswith('C') for k in out) else '') + '.json', 'w'), indent=1)
