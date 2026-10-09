@@ -1,0 +1,7 @@
+{"case": "ts35", "r": 8, "N": 9, "P": ["3/2", "1/3"], "shape": [9900, 9075], "rank": 9050, "bound": 25, "trivial": 25, "t_build": 0.4, "t_rank": 85.9} = trivial
+{"case": "ts35", "r": 8, "N": 9, "P": ["7/4", "-2/5"], "shape": [9900, 9075], "rank": 9050, "bound": 25, "trivial": 25, "t_build": 0.4, "t_rank": 87.5} = trivial
+{"case": "ts35", "r": 9, "N": 10, "P": ["3/2", "1/3"], "shape": [15730, 14520], "rank": 14490, "bound": 30, "trivial": 30, "t_build": 1.0, "t_rank": 584.1} = trivial
+{"case": "ts35", "r": 9, "N": 10, "P": ["7/4", "-2/5"], "shape": [15730, 14520], "rank": 14490, "bound": 30, "trivial": 30, "t_build": 0.9, "t_rank": 323.3} = trivial
+{"case": "ts35", "r": 10, "N": 11, "P": ["3/2", "1/3"], "shape": [24024, 22308], "rank": 22272, "bound": 36, "trivial": 36, "t_build": 1.2, "t_rank": 1572.1} = trivial
+{"case": "ts35", "r": 10, "N": 11, "P": ["7/4", "-2/5"], "shape": [24024, 22308], "rank": 22272, "bound": 36, "trivial": 36, "t_build": 1.8, "t_rank": 1205.1} = trivial
+DONE

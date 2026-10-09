@@ -66,3 +66,17 @@ All at N = r+1. **The verdict now reads CONFIRMED at valence 1–10, at both phy
 **Instrument log.** The first valence-8 attempt was stopped by the bridge's own 3 GB guard. That was an arbitrary cap
 on an elimination that copied the whole matrix several times per pivot. It was fixed rather than accepted. The guard
 is now sized to the box (kill only above 10 GB RSS or below 10% memory free), and the runs were coordinated with ansatz.
+
+## Addendum 3 results (2026-10-10): TS p = 3/5, valence 8–10, beyond Vollmer's 7
+
+| Valence | P₁ = (3/2, 1/3) | P₂ = (7/4, −2/5) | trivial |
+|---|---|---|---|
+| 8 | 25 | 25 | 25 |
+| 9 | 30 | 30 | 30 |
+| 10 | 36 | 36 | 36 |
+
+All at N = r+1. **CONFIRMED.**
+- At Vollmer's own parameter point there is no ∂t, ∂φ-invariant Killing tensor beyond the trivial ones, up to valence 10.
+  That extends his theorem (valence ≤ 7) by three valences.
+- Two independent implementations agree: ansatz's `_kt_jet.py` and the bridge's V10.
+- Same scope as above: invariant, local, polynomial integrals. No human has checked it.
