@@ -51,3 +51,7 @@ For each (valence, point), try N = r+1, r+2 and r+3, and use the smallest bound 
 - **STOP** on any control failure, or on any nullity below the trivial count.
 
 Memory is self-limited to 3 GB. Single-threaded.
+
+## Addendum, ~03:40 IST: before running, after r1–6 landed
+Extend the targets to valence 7 and 8 for TS p = 4/5 at P₁ and P₂. The rule is unchanged. Trivial counts are 20 and 25.
+Memory guard stays at 3 GB; r8 is about 9900 × 9075 entries.
