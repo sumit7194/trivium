@@ -114,3 +114,25 @@ of the claim.
 - Up to 6 worker processes when the 5-minute load is < 8. Memory is small (< 0.5 GB per worker).
 - Per-orbit checkpointing, so an interruption loses nothing.
 - No human has checked this pre-registration.
+
+## Addendum 1 (2026-10-11, before any gate value was compared): G1 pointed at the wrong circular orbit
+**What happened.** The first `v12_lsep.py` run stopped on its own monotonicity assertion. A scan of the closed-pocket
+predicate on the grid showed it is NOT monotone in |L|: at TS 4/5, E = 0.97 it is True only for |L|/m ∈ [4.19, 4.48].
+
+**Physics, now stated correctly.** At fixed E < 1, as |L| grows:
+- a closed pocket first appears when the barrier top reaches W = −1. That is the **unstable** circular orbit of energy
+  E, which is the separatrix.
+- the pocket disappears when its floor rises through −1. That is the **stable** circular orbit of energy E.
+
+The original G1 text named the stable orbit; that was wrong. The L_sep definition itself ("smallest |L| with a closed
+interval") is unchanged and matches the spec.
+
+**Changes:**
+- **L_sep** = the lower edge, by bisection between the last False and the first True grid point. Monotonicity is no
+  longer asserted.
+- **G1 (corrected):** on Kerr, the lower edge must equal the BPT **unstable**-branch L at E (r_mb < r < r_isco) to a
+  relative 1e−8, for the physical sense.
+- **G1b (new, same tolerance):** the upper edge, found by its own bisection, must equal the BPT **stable**-branch L.
+  This is a second analytic check on the same code.
+- No gate value had been compared to BPT, ansatz or anything else when this was written. The only output seen was the
+  predicate's True/False pattern on the TS 4/5 grid.
