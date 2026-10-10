@@ -262,3 +262,28 @@ windows.
 **Interpretive note, stated now.** An orbit whose outcome flips under integration-error perturbations is a point
 where the outcome is sensitive at every resolvable scale. In f(ε) such points count as uncertain at every ε, as they
 should for chaotic dynamics. E1's rule for excluding noise-dominated ε stays as pre-registered.
+
+## Addendum 7 (2026-10-11; G3 rows read so far: s1 complete; s0, s4, s5 partial): the 20-crossing position bar is ill-posed near the separatrix
+**s1 (Kerr 4/5 L1), complete:**
+- 75/75 identical outcomes;
+- but all 36 survivors have first-20 section dx between 8e−6 and 7.9e−3, failing the 1e−7 bar.
+
+**Diagnosis (two survivors with the largest dx):**
+- Numba disagrees with ITSELF (rtol 1e−11 vs 1e−13 or 1e−14) by the same amount, up to 1.0e−2. So the numba/scipy
+  difference is the system's sensitivity, not an integrator discrepancy.
+- Per-crossing |numba − scipy|: 1.7e−11, 8.5e−10, 9.5e−9, 7.9e−10, 5.3e−9, 2.1e−7, 8.3e−6, 3.6e−4, 7.4e−3, 1.6e−4,
+  3.8e−6, 5.5e−7, ….
+- The difference swells during passes near the unstable circular orbit (x ≈ 5) and shrinks back afterwards. That is
+  bounded shear in an integrable system, not exponential divergence. The window orbits are near-separatrix by design.
+
+**G3″ (replaces the position parts of G3 and G3′; outcome parts unchanged):**
+- (a) **Kerr outcomes:** ≥ 99% identical (s1 so far: 100%).
+- (b) **First crossing:** |dx1| ≤ 1e−8 for every orbit in all 4 systems, i.e. agreement before any separatrix pass.
+- (c) **Convergence:** for the 5 survivors per Kerr system with the largest dx20, the numba–scipy max dx20 at
+  rtol 1e−13 (both codes) must be ≤ 0.1× its value at rtol 1e−11. Two correct integrators converge toward each other
+  as the tolerance tightens; a bug in either does not.
+- (d) **TS:** G3′ (i)–(ii) unchanged: every outcome disagreement is realisation-sensitive, and ≥ 99% agreement on
+  tolerance-invariant orbits. r is reported.
+
+**Relevance to α:** only outcomes enter f(ε), and Kerr outcomes agree 75/75. The 20-crossing positions were a proxy
+for integrator correctness, and they are a poor one near a separatrix.
