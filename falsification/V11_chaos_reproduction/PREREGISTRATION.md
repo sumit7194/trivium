@@ -153,3 +153,29 @@ reason.
 - In quick classifications, "capped" is its own class, so it neither brackets nor matches a survive/plunge transition.
 
 Everything else is unchanged.
+
+## Addendum 6 (2026-10-11, POST-FAILURE, after the a–g ensemble results were seen): a bug fix restoring the registered plunge definition
+**Root cause (diagnosed).** The registered plunge criterion is x < 1.5, but it was tested only at the END of each 10-τ
+chunk.
+- An orbit that crossed x = 1.5 mid-chunk kept falling toward the (x, y) → (1, ±1) corner, the pole of the central
+  object, where momenta exceed 1e6.
+- The integrator then crawled until the evaluation cap fired, giving status "capped".
+- Example: TS ensemble d, x0 = 5.927068, really plunges after 3 crossings at τ ≈ 117.
+- The same defect hid the Kerr plunges, so no Kerr survive/plunge transitions were found.
+
+**Fix:**
+- x = 1.5 (inward) and x = 2000 (outward) are now TERMINAL integrator events, so the definitions are unchanged and are
+  now applied exactly when crossed.
+- The evaluation cap becomes a PER-CHUNK stall guard: 2M evaluations within one 10-τ chunk gives status "stalled".
+  It's excluded from S/P like "capped".
+
+**Checks (before any rerun):**
+- The TS d member now gives plunge, 3 crossings, |2H+1| 3e−13.
+- The Kerr inner quick check now gives plunge.
+- The flagged Kerr orbit is unchanged: 300 crossings, S_trunc 4.1, fd 1.1e−4, Carter 5.9e−13.
+- The ZV torus is unchanged: S_trunc −4.0, fd 3.6e−6.
+
+**The rerun of ensembles a–g under addenda 3–5 + 6 is labelled POST-FAILURE.** The scoring and verdict rule are
+unchanged.
+
+**Scheduling:** the rerun waits its turn (ansatz's p35w α rerun, then tabula §194, then this).

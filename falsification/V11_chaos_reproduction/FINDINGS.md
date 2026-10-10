@@ -62,3 +62,11 @@ gave INCONCLUSIVE for L 2.9 on this build.
 - **Status:** V11 provides NO independent confirmation yet. ansatz §150 (α, the matched table) stands on its own
   instrument. Any V11 rerun with a physically defined plunge criterion (inside the barrier radius, moving inward) and a
   stall-based (per-chunk) cap would be POST-DATA and labelled as such.
+
+### Root cause of the a–g failure (diagnosed 2026-10-11): a bug, not physics
+The plunge check ran only at chunk ends. Orbits that crossed x = 1.5 mid-chunk fell into the (x, y) → (1, ±1) corner
+and crawled until capped. That was misread at first as stiffness, then as inner-region trapping; the direct trace
+shows a plain plunge.
+
+Fixed in addendum 6 (terminal plunge and escape events; a per-chunk stall guard). The regular controls are unchanged.
+A rerun is scheduled post-failure.

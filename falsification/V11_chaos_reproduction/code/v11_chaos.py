@@ -101,35 +101,42 @@ def nn_dimension(xs, ps):
 
 class StepCap(Exception): pass
 
-def run_orbit(fF, fJ, fW, fGyy, fH, x0, tol, ncross=300, tau_max=5e6, dtau=10.0, Qf=None, max_evals=3_000_000):
+def run_orbit(fF, fJ, fW, fGyy, fH, x0, tol, ncross=300, tau_max=5e6, dtau=10.0, Qf=None, max_evals=2_000_000):
+    """max_evals is now a PER-CHUNK stall guard (addendum 6); plunge (x = 1.5) and escape (x = 2000) are terminal
+    integrator events, so a plunge inside a chunk is caught at the crossing instead of at the chunk end."""
     py0 = math.sqrt((-1 - fW(x0, 0.0)) / fGyy(x0, 0.0))
     s = np.array([x0, 0.0, 0.0, py0]); v = np.array([1, 0.7, -0.4, 0.3]); v = v / np.linalg.norm(v)
     FJ = fF[0]; nev = [0]
     def rhs(t, z):
         nev[0] += 1
-        if nev[0] > max_evals: raise StepCap()
+        if nev[0] > max_evals: raise StepCap()   # per-chunk counter, reset before every chunk
         Fv, Jv = FJ(*z[:4])
         return np.concatenate([np.array(Fv, float), np.array(Jv, float) @ z[4:]])
     def ev(t, z): return z[1]
     ev.direction = 1
+    def pl(t, z): return z[0] - 1.5
+    pl.terminal = True; pl.direction = -1
+    def es(t, z): return z[0] - 2000.0
+    es.terminal = True; es.direction = 1
     tau = 0.0; S = 0.0; xs = []; pxs = []; status = 'max_tau'; tau_last = 0.0
     Q0 = Qf(s) if Qf else None; Qdev = 0.0; S_cross = None; tau_cross = None; prev_cross = (None, None)
     while tau < tau_max:
+        nev[0] = 0
         try:
-            sol = solve_ivp(rhs, (tau, tau + dtau), np.concatenate([s, v]), method='DOP853', rtol=tol, atol=tol * 1e-2, events=ev)
+            sol = solve_ivp(rhs, (tau, tau + dtau), np.concatenate([s, v]), method='DOP853', rtol=tol, atol=tol * 1e-2, events=[ev, pl, es])
         except StepCap:
-            status = 'capped'; break
+            status = 'stalled'; break
         for ze in sol.y_events[0]:
             if ze[3] > 0: xs.append(ze[0]); pxs.append(ze[2])
         z = sol.y[:, -1]; s = z[:4]; v = z[4:]; tau = sol.t[-1]
         nv = np.linalg.norm(v); S += math.log(nv); v = v / nv; tau_last = tau
         if len(sol.t_events[0]): prev_cross = (S_cross, tau_cross); S_cross, tau_cross = S, tau   # truncated at the last crossing
         if Qf and s[0] >= 1.5: Qdev = max(Qdev, abs(Qf(s) - Q0) / abs(Q0))
-        if s[0] < 1.5:
+        if len(sol.t_events[1]) or s[0] < 1.5:
             status = 'plunge'
             if len(sol.t_events[0]) and prev_cross[1]: S_cross, tau_cross = prev_cross   # chunk with the last crossing also holds the plunge
             break
-        if s[0] > 2000: status = 'escape'; break
+        if len(sol.t_events[2]) or s[0] > 2000: status = 'escape'; break
         if len(xs) >= ncross: status = 'crossings'; break
     Sex = S - math.log(tau_last) if tau_last > 0 else float('nan')
     Sex_trunc = (S_cross - math.log(tau_cross)) if tau_cross else float('nan')

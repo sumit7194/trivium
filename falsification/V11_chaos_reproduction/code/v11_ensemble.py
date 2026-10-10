@@ -57,8 +57,8 @@ def basin_score(members):
     """Addendum 4: order by x0; S = survived the 300-crossing budget, P(n) = plunged after n crossings.
     T = number of S/P status changes; V = strict reversals of n along each P run, oriented toward the adjacent S block
     (or toward the larger-n end if there is no adjacent S block / S on both sides)."""
-    capped = [m['x0'] for m in members if m['status'] == 'capped']
-    ms = sorted([m for m in members if m['status'] != 'capped'], key=lambda m: m['x0'])
+    capped = [m['x0'] for m in members if m['status'] in ('capped', 'stalled')]
+    ms = sorted([m for m in members if m['status'] not in ('capped', 'stalled')], key=lambda m: m['x0'])
     st = ['P' if m['status'] == 'plunge' else 'S' for m in ms]
     T = sum(1 for i in range(len(st) - 1) if st[i] != st[i + 1])
     V = 0; i = 0
