@@ -287,3 +287,25 @@ should for chaotic dynamics. E1's rule for excluding noise-dominated ε stays as
 
 **Relevance to α:** only outcomes enter f(ε), and Kerr outcomes agree 75/75. The 20-crossing positions were a proxy
 for integrator correctness, and they are a poor one near a separatrix.
+
+## Addendum 8 (2026-10-11): G3″(c) failed by the letter on one Kerr 3/5 orbit; a stricter diagnostic is fixed before running it
+**Kerr part of G3″** (`results/v12_G3p_1_5.json`):
+- **s1 (Kerr 4/5): PASS.**
+  - outcomes 75/75;
+  - max |dx1| = 3.7e−11;
+  - convergence ratios 0.025, 0.020, 0.041, 0.012, 0.027.
+- **s5 (Kerr 3/5): (a) PASS (75/75) and (b) PASS (max |dx1| = 1.4e−11), but (c) FAILS on 1 of 5 orbits.**
+  - Convergence ratios: **0.125**, 0.051, 0.0016, 0.067, 0.011.
+  - The failing orbit (x0 = 3.46362694…) has dx20 = 1.5e−2 at rtol 1e−11, already at the nonlinear (saturated) scale,
+    and 1.9e−3 at 1e−13. That is still an 8× contraction.
+
+The 0.1 threshold was set without a model of saturation. Rather than loosen it, a stricter, multi-point diagnostic is
+fixed here before it runs:
+
+**G3‴ (convergence, replaces (c) only):**
+- For all 10 orbits above (5 per Kerr system), compute the numba–scipy max dx20 at rtol 1e−11, 1e−12, 1e−13 and 3e−14,
+  with both codes at the same rtol (3e−14 because scipy floors rtol at 100·eps).
+- **PASS** if, for every orbit, the sequence is strictly decreasing at every step, OR it drops below 1e−6 and stays
+  there.
+- **FAIL** otherwise. A FAIL means the integrators do not converge toward each other; the α runs are then blocked
+  until it is diagnosed.
