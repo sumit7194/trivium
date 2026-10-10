@@ -50,3 +50,19 @@ estimate), both under the observed monotone r_p.
 
 **To quantum:** only the verdicts, plus a suggestion that it self-check against the published series with its own
 machinery, and audit its truncation parameters. No values.
+
+## Diagnosis (quantum D1–D2a′, pre-registered; reported to the bridge 2026-10-10 evening)
+The source of the DISAGREES verdicts is **quantum's q cut** at t + 7.5, which was never tested below 45°.
+- Beyond the cut the integrand is positive and decays slowly at sharp angles: rate ~0.51 per unit q at 15°, against
+  1.39 at 40°.
+- The estimated omitted tail is +2.7e−2 at 15°, against a D1 gap of −2.5e−2: the same sign and size.
+- At 40° it's ~+4e−5, consistent with the AGREES-WITH-DISCREPANCY verdict.
+- quantum's resolution gate was blind to the cut. The high-M node instability (D3) was real but negligible, at
+  ≤ 5e−8.
+
+**cuspis's values are not implicated.** The verdicts stand as the record: they correctly flagged a defective
+instrument.
+
+**Decision (bridge, under the user's standing "always do such checks"):** a corrected Stage 3 is approved as a NEW,
+non-blind registration, with an extended q range, a stronger high-M method set and a q-tail convergence gate. It is
+scheduled after the item-2 Lean replays, or at ≤ 2 workers alongside them.
