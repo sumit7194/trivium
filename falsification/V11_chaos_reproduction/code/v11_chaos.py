@@ -31,7 +31,9 @@ def build(case, E, L):
     F = [sp.diff(H, px), sp.diff(H, py), -sp.diff(H, X), -sp.diff(H, Y)]
     J = [[sp.diff(f, v) for v in s] for f in F]
     lam = lambda e, args: sp.lambdify(args, e, 'numpy', cse=True)
-    return lam(F, s), lam(J, s), lam(W, [X, Y]), lam(Gyy, [X, Y]), lam(H, s)
+    FJ = lam([F, J], s)                                   # joint CSE (addendum 2 speed-up)
+    fF = lambda *a: FJ(*a)[0]; fJ = FJ
+    return (FJ, None), None, lam(W, [X, Y]), lam(Gyy, [X, Y]), lam(H, s)
 
 def frequency_drift(xs):
     n = len(xs)
@@ -46,30 +48,54 @@ def frequency_drift(xs):
     h = n // 2; f1, f2 = peak(xs[:h]), peak(xs[h:2 * h])
     return abs(f1 - f2) / (0.5 * (f1 + f2))
 
+def _std(xs, ps):
+    a = np.array([xs, ps], float).T; return (a - a.mean(0)) / a.std(0)
+
+def roughness(xs, ps, K=12):
+    if len(xs) < 100: return None
+    a = _std(xs, ps); th = np.arctan2(a[:, 1], a[:, 0]); r = np.hypot(a[:, 0], a[:, 1])
+    A = np.column_stack([np.ones_like(th)] + [f(k * th) for k in range(1, K + 1) for f in (np.cos, np.sin)])
+    coef, *_ = np.linalg.lstsq(A, r, rcond=None); res = r - A @ coef
+    return float(np.sqrt(np.mean(res**2)) / np.sqrt(np.mean((r - r.mean())**2)))
+
+def nn_dimension(xs, ps):
+    if len(xs) < 100: return None
+    a = _std(xs, ps)
+    def med_nn(b):
+        d = np.sqrt(((b[:, None, :] - b[None, :, :])**2).sum(-1)); np.fill_diagonal(d, np.inf); return np.median(d.min(1))
+    d1, dh = med_nn(a), med_nn(a[:len(a) // 2])
+    return float(np.log(2) / np.log(dh / d1)) if dh > d1 else float('inf')
+
 def run_orbit(fF, fJ, fW, fGyy, fH, x0, tol, ncross=300, tau_max=5e6, dtau=10.0, Qf=None):
     py0 = math.sqrt((-1 - fW(x0, 0.0)) / fGyy(x0, 0.0))
     s = np.array([x0, 0.0, 0.0, py0]); v = np.array([1, 0.7, -0.4, 0.3]); v = v / np.linalg.norm(v)
+    FJ = fF[0]
     def rhs(t, z):
-        return np.concatenate([np.array(fF(*z[:4]), float), np.array(fJ(*z[:4]), float) @ z[4:]])
+        Fv, Jv = FJ(*z[:4])
+        return np.concatenate([np.array(Fv, float), np.array(Jv, float) @ z[4:]])
     def ev(t, z): return z[1]
     ev.direction = 1
-    tau = 0.0; S = 0.0; xs = []; status = 'max_tau'; tau_last = 0.0
-    Q0 = Qf(s) if Qf else None; Qdev = 0.0; S_cross = None; tau_cross = None
+    tau = 0.0; S = 0.0; xs = []; pxs = []; status = 'max_tau'; tau_last = 0.0
+    Q0 = Qf(s) if Qf else None; Qdev = 0.0; S_cross = None; tau_cross = None; prev_cross = (None, None)
     while tau < tau_max:
         sol = solve_ivp(rhs, (tau, tau + dtau), np.concatenate([s, v]), method='DOP853', rtol=tol, atol=tol * 1e-2, events=ev)
         for ze in sol.y_events[0]:
-            if ze[3] > 0: xs.append(ze[0])
+            if ze[3] > 0: xs.append(ze[0]); pxs.append(ze[2])
         z = sol.y[:, -1]; s = z[:4]; v = z[4:]; tau = sol.t[-1]
         nv = np.linalg.norm(v); S += math.log(nv); v = v / nv; tau_last = tau
-        if len(sol.t_events[0]): S_cross, tau_cross = S, tau          # score truncated at the last crossing (amendment-4 style)
+        if len(sol.t_events[0]): prev_cross = (S_cross, tau_cross); S_cross, tau_cross = S, tau   # truncated at the last crossing
         if Qf and s[0] >= 1.5: Qdev = max(Qdev, abs(Qf(s) - Q0) / abs(Q0))
-        if s[0] < 1.5: status = 'plunge'; break
+        if s[0] < 1.5:
+            status = 'plunge'
+            if len(sol.t_events[0]) and prev_cross[1]: S_cross, tau_cross = prev_cross   # chunk with the last crossing also holds the plunge
+            break
         if s[0] > 2000: status = 'escape'; break
         if len(xs) >= ncross: status = 'crossings'; break
     Sex = S - math.log(tau_last) if tau_last > 0 else float('nan')
     Sex_trunc = (S_cross - math.log(tau_cross)) if tau_cross else float('nan')
     return dict(x0=x0, tol=tol, status=status, crossings=len(xs), tau=tau, S_ex=Sex, S_ex_trunc=Sex_trunc, carter_rel_dev=Qdev if Qf else None,
-                fd=frequency_drift(xs[:ncross]),
+                fd=frequency_drift(xs[:ncross]), R=roughness(xs[:ncross], pxs[:ncross]), D=nn_dimension(xs[:ncross], pxs[:ncross]),
+                section=[list(map(float, xs[:ncross])), list(map(float, pxs[:ncross]))],
                 H_drift=float(abs(2 * fH(*s) + 1)))
 
 def classify(r):
@@ -82,7 +108,7 @@ if __name__ == '__main__':
     for x0 in x0s:
         rs = [run_orbit(*fns, x0, tol, Qf=Qf) for tol in (1e-11, 1e-13)]
         cls = [classify(r) for r in rs]; verdict = cls[0] if cls[0] == cls[1] else 'INCONCLUSIVE'
-        for r, c in zip(rs, cls): print(json.dumps({**r, 'case': case, 'E': E, 'L': L, 'class': c}), flush=True)
+        for r, c in zip(rs, cls): print(json.dumps({k: v for k, v in {**r, 'case': case, 'E': E, 'L': L, 'class': c}.items() if k != 'section'}), flush=True)
         print(f'== {case} E={E} L={L} x0={x0}: {verdict}', flush=True)
         with open('../results/v11_runs.jsonl', 'a') as f:
             for r, c in zip(rs, cls): f.write(json.dumps({**r, 'case': case, 'E': E, 'L': L, 'class': c, 'verdict': verdict}) + '\n')

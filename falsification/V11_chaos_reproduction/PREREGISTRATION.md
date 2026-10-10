@@ -43,3 +43,27 @@ Each TS candidate ansatz reports gets reproduced at both tolerances.
 - **Truncated score:** classification now uses S_ex truncated at the last section crossing, the same rule as ansatz's
   amendment 4. Untruncated S_ex is still reported. The ZV gate is re-checked under the truncated score before any Kerr
   replay.
+
+## Addendum 2 (before any TS replay): a geometric diagnostic, the classification rule, and a speed-up
+**Why.** S_ex is unspecific near the separatrix, since regular Kerr orbits reach 11–62 (ansatz). And fd is
+realisation-sensitive: the bridge's own 1e−13 realisations of the ZV layer orbits gave fd 0.0006 and 0.002.
+
+**Two geometric diagnostics** on the section points (x, p_x), standardised by their std, at n ≥ 100:
+- **R (Fourier roughness):** the RMS residual of a K = 12 Fourier fit of radius against angle about the centroid,
+  divided by the RMS deviation of the radius about its mean.
+- **D (nearest-neighbour dimension):** D = ln 2 / ln(d½/d₁), where d₁ and d½ are the median nearest-neighbour distances
+  for all points and for the first half. D ≈ 1 for a curve and ≈ 2 for an area.
+
+**Calibration on controls only:**
+- regular: the ZV torus at 7.62, the flagged Kerr orbit (kerr45, E = 0.97, L = 1.25, x0 = 4.44855), and matched Kerr
+  orbits;
+- chaotic: the ZV layer orbits at L = 2.9 and L = 3.0.
+
+The diagnostic used is whichever of R and D separates every regular control from every chaotic one with the larger
+log-margin. Its threshold is the geometric mean of the closest regular and chaotic values. If neither separates the
+controls, it is reported, and V11's TS verdicts rest on S_ex and fd only, as INCONCLUSIVE unless all agree.
+
+**Classification for TS replays:** the chosen geometric diagnostic is primary, and it must agree at both tolerances.
+S_ex, fd and (for Kerr) the Carter deviation are all reported alongside.
+
+**Speed-up:** F and J are lambdified jointly with shared common-subexpression elimination. The arithmetic is unchanged.
