@@ -309,3 +309,32 @@ fixed here before it runs:
   there.
 - **FAIL** otherwise. A FAIL means the integrators do not converge toward each other; the α runs are then blocked
   until it is diagnosed.
+
+## Addendum 9 (2026-10-11): G3‴ fails by the letter; stepping back to a scale-free criterion
+**G3‴ so far** (`results/v12_G3ppp.log`, 6 of 10 orbits): it FAILS. Two sequences are not strictly decreasing:
+- Kerr 4/5, x0 = 4.99607: 1.6e−3, 4.5e−5, **6.7e−5**, 5.5e−6;
+- Kerr 3/5, x0 = 3.46363: 1.5e−2, 1.89e−3, **1.90e−3**, 3.2e−4.
+
+Every sequence falls by 10²–10³ overall.
+
+**Stepping back.** G3, G3′, G3″(c) and G3‴ all gated a max-over-20-crossings position difference near a separatrix.
+That statistic is phase-sensitive and saturating, so absolute bars, ratio bars and monotonicity bars are all guesses
+about its noise.
+
+The question G3 has to answer is: **do the two codes differ by more than one code differs from itself under an
+integration-error-sized change?** If not, the codes are interchangeable at the level the α study can resolve.
+
+**G3⁗ (replaces every position criterion; all outcome criteria stay):**
+- For every SURVIVOR whose outcome is tolerance-invariant, in all 4 systems:
+  - D_cross = max first-20 |numba − scipy|, both at rtol 1e−11;
+  - D_self = max first-20 |numba(1e−11) − numba(1e−12)|;
+  - **PASS** if D_cross ≤ 10·max(D_self, 1e−12) for every such orbit.
+- **First crossing:** |dx1| ≤ 1e−8 for every orbit. Seen so far: s0 ≤ 1.1e−10, s1 ≤ 3.7e−11, s5 ≤ 1.4e−11.
+- **Outcome criteria:**
+  - Kerr: ≥ 99% identical (s1, s5: 100%);
+  - TS: every disagreement is realisation-sensitive, and ≥ 99% agreement on invariant orbits (s0: 10/10 sensitive,
+    47/47 invariant agree).
+
+**By-product, recorded now.** The realisation-sensitive fraction r is 0.373 in the TS L1 window (28/75 orbits flip
+outcome across rtol 1e−11 … 1e−14) and **0.000** in both Kerr windows (0/75 each). This is a direct, α-independent
+contrast. It is reported, not gated.

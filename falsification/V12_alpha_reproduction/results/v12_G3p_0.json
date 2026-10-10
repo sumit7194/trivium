@@ -1,0 +1,1294 @@
+{
+ "0": {
+  "summary": {
+   "kind": "TS",
+   "n": 75,
+   "disagreements": 10,
+   "disagreements_all_sensitive": true,
+   "invariant_n": 47,
+   "invariant_same_frac": 1.0,
+   "max_dx1": 1.0603429245747975e-10,
+   "r_sensitive": 0.3733333333333333,
+   "invariant_survivor_dx20_max": 1.952067255217571e-05,
+   "pass_": true
+  },
+  "rows": [
+   {
+    "idx": 0,
+    "x0": 9.913003574507917,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 1.2586028191208243e-05,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "invariant": false,
+    "dx1": 2.1392665416897216e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.907985407215458,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.779612126995289e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 8.743228363528033e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.912291980949984,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.8700417783179546e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 1.5218049043141946e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.901791597159056,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 7.113810081449401e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 1.2086331935279304e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.905725387209781,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 3.1459032236114126e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 3.388578306839918e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.900835148560729,
+    "numba": 0,
+    "scipy": 1,
+    "same": false,
+    "survivor": false,
+    "dx20": 4.598834813407393e-06,
+    "tol_outcomes": [
+     0,
+     1,
+     1,
+     0
+    ],
+    "invariant": false,
+    "dx1": 1.9834800468743197e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.92125551427173,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.1179683276907326e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.119726616456319e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.933822641164493,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 5.362164600342112e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 3.459277309048048e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.92886244186807,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 7.0987623743690165e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     0,
+     0
+    ],
+    "invariant": false,
+    "dx1": 7.397993329050223e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.91287760051179,
+    "numba": 0,
+    "scipy": 1,
+    "same": false,
+    "survivor": false,
+    "dx20": 9.481800624655534e-06,
+    "tol_outcomes": [
+     0,
+     1,
+     1,
+     0
+    ],
+    "invariant": false,
+    "dx1": 1.7193357848555024e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.906652566992554,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 4.287262609636855e-05,
+    "tol_outcomes": [
+     0,
+     0,
+     1,
+     1
+    ],
+    "invariant": false,
+    "dx1": 1.8561152614893217e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.931158110005471,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 1.2385240808043818e-05,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "invariant": true,
+    "dx1": 4.979661127890722e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.895083000961781,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 0.0005531569543961723,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 4.142464149481384e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.894026083747368,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 0.030358061945165105,
+    "tol_outcomes": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "invariant": false,
+    "dx1": 5.52979884105298e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.897952263539397,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 0.000603764801496709,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 6.258105145207082e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.937606718313738,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 4.8242605501513935e-06,
+    "tol_outcomes": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "invariant": false,
+    "dx1": 9.629630426388758e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.894256951646184,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.8909970769698248e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 1.8117063405043154e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.927535164792113,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 4.3185571115600396e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 5.242917211489839e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.936329275602226,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 8.896193577356826e-07,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "invariant": true,
+    "dx1": 2.4792612407509296e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.916067020169045,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 3.611092110844538e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.064659554434911e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.91421078198103,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.3938320648776426e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.2597035354010586e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.905074827781279,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.6822559992135666e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     0
+    ],
+    "invariant": false,
+    "dx1": 4.192379776668531e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.898148639364464,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 2.601320678863317e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 5.0608406354513136e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.907241363996716,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 8.971528018264507e-07,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     0
+    ],
+    "invariant": false,
+    "dx1": 2.807531984672096e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.894849706628921,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 0.005558630247598728,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 5.297096095091547e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.909237500151162,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.1089909939698828e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.772893026303791e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.933687834610046,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 1.381117969145862e-05,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "invariant": true,
+    "dx1": 4.281019982954604e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.899229671559903,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 0.0010426068752380502,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 1.4033219031261979e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.926302946055406,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 1.952067255217571e-05,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "invariant": true,
+    "dx1": 6.293632281995087e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.892953250491262,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 8.229721046326688e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.7048585593547614e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.907106452441925,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 9.414132478013926e-06,
+    "tol_outcomes": [
+     1,
+     0,
+     1,
+     0
+    ],
+    "invariant": false,
+    "dx1": 9.698908343125368e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.895410808862758,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 2.639980786511842e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 6.131983809609665e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.918750149138274,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.0420439380709468e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.240163610167656e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.92863948555659,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 2.3905070172247633e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 5.001687952699285e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.932991462246873,
+    "numba": 0,
+    "scipy": 1,
+    "same": false,
+    "survivor": false,
+    "dx20": 1.688955428846839e-06,
+    "tol_outcomes": [
+     0,
+     1,
+     1,
+     1
+    ],
+    "invariant": false,
+    "dx1": 3.004885229529464e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.913904197637029,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 4.3213370737760215e-05,
+    "tol_outcomes": [
+     1,
+     0,
+     1,
+     1
+    ],
+    "invariant": false,
+    "dx1": 7.758771403132414e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.89998783083273,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.7588590210948496e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.2589929926652985e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.911164257434775,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 3.5074356148356856e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 1.8907542198576266e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.929793247777278,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 5.936697533570623e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 1.0603429245747975e-10
+   },
+   {
+    "idx": 0,
+    "x0": 9.911607028097096,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 1.4152093644526076e-05,
+    "tol_outcomes": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "invariant": false,
+    "dx1": 1.887201506178826e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.904182216702782,
+    "numba": 0,
+    "scipy": 1,
+    "same": false,
+    "survivor": false,
+    "dx20": 1.0100753755182268e-05,
+    "tol_outcomes": [
+     0,
+     1,
+     1,
+     1
+    ],
+    "invariant": false,
+    "dx1": 1.9811707829830993e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.932827088413493,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 1.6524504523829364e-05,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "invariant": true,
+    "dx1": 6.421885245799785e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.933377719208634,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 2.6377851796155483e-06,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "invariant": true,
+    "dx1": 1.567279639402841e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.900682334901589,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 2.766930250786004e-05,
+    "tol_outcomes": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "invariant": false,
+    "dx1": 6.544276232034463e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.922429661471268,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.1737077695528342e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.454925152051146e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.92085289749214,
+    "numba": 0,
+    "scipy": 1,
+    "same": false,
+    "survivor": false,
+    "dx20": 1.6454088132888955e-05,
+    "tol_outcomes": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "invariant": false,
+    "dx1": 4.4439119051276066e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.90370782563498,
+    "numba": 1,
+    "scipy": 0,
+    "same": false,
+    "survivor": false,
+    "dx20": 1.3747830895027846e-05,
+    "tol_outcomes": [
+     1,
+     0,
+     1,
+     1
+    ],
+    "invariant": false,
+    "dx1": 2.923705721968872e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.932425813839405,
+    "numba": 0,
+    "scipy": 1,
+    "same": false,
+    "survivor": false,
+    "dx20": 6.801630227926125e-06,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "invariant": false,
+    "dx1": 4.654054919228656e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.893640078830115,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 0.00027889501208022693,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 9.155343150268891e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.898810774201797,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 7.492684520826742e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 3.077893495628814e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.901126574418548,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 4.103462771354316e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 8.054001909840736e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.90452368463756,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 1.0084536523180532e-05,
+    "tol_outcomes": [
+     0,
+     1,
+     1,
+     0
+    ],
+    "invariant": false,
+    "dx1": 2.071764981792512e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.920484201587216,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.362320169562281e-06,
+    "tol_outcomes": [
+     1,
+     0,
+     1,
+     1
+    ],
+    "invariant": false,
+    "dx1": 2.6131985464417085e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.894604097517101,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 2.1692457210065186e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.1255885940263397e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.915175051259713,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.920238158703569e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 1.8694379377848236e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.895958722464862,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 6.723013071763262e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 4.657607632907457e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.933956229878408,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 1.630304354449663e-05,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "invariant": true,
+    "dx1": 2.475708527072129e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.921014544740016,
+    "numba": 1,
+    "scipy": 0,
+    "same": false,
+    "survivor": false,
+    "dx20": 4.927393561615645e-06,
+    "tol_outcomes": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "invariant": false,
+    "dx1": 2.6787461138155777e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.917320658481884,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 3.5231905236798866e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 3.799627279477136e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.929324068429269,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 4.780066557685814e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 6.364864191255037e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.901391267134125,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 3.0667404509188145e-06,
+    "tol_outcomes": [
+     0,
+     1,
+     0,
+     0
+    ],
+    "invariant": false,
+    "dx1": 4.389377750158019e-12
+   },
+   {
+    "idx": 0,
+    "x0": 9.905534482117833,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 4.2128883499970016e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 3.154276839723025e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.905848465859572,
+    "numba": 1,
+    "scipy": 0,
+    "same": false,
+    "survivor": false,
+    "dx20": 3.52556351685962e-05,
+    "tol_outcomes": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "invariant": false,
+    "dx1": 2.2362556251209753e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.904246122950553,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 9.549688961385527e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 3.2226665780399344e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.932939924201815,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 2.3160074746897408e-06,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "invariant": true,
+    "dx1": 6.691358578336803e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.911788674109943,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.4960455761325875e-05,
+    "tol_outcomes": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "invariant": false,
+    "dx1": 2.3629098677702132e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.895551918635126,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 1.4739092851101532e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 3.8051339856792765e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.929967220352378,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 4.097142102921225e-06,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "invariant": true,
+    "dx1": 8.121681105421885e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.900631927378939,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 8.235964962466369e-06,
+    "tol_outcomes": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "invariant": false,
+    "dx1": 1.3951506616649567e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.920253364940539,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 5.776441525995324e-06,
+    "tol_outcomes": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "invariant": false,
+    "dx1": 2.5856650154310046e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.910878763238074,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 4.693733217209228e-06,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 3.168842965806107e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.893979067671268,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 0.0004366123524235377,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.994404724177002e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.907447662990895,
+    "numba": 1,
+    "scipy": 0,
+    "same": false,
+    "survivor": false,
+    "dx20": 1.2705636159182632e-05,
+    "tol_outcomes": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "invariant": false,
+    "dx1": 9.023892744153272e-13
+   },
+   {
+    "idx": 0,
+    "x0": 9.916486670559507,
+    "numba": 1,
+    "scipy": 1,
+    "same": true,
+    "survivor": false,
+    "dx20": 3.785270734724122e-05,
+    "tol_outcomes": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "invariant": true,
+    "dx1": 2.9757529773632996e-11
+   },
+   {
+    "idx": 0,
+    "x0": 9.928710625264603,
+    "numba": 0,
+    "scipy": 0,
+    "same": true,
+    "survivor": true,
+    "dx20": 7.370214980539913e-06,
+    "tol_outcomes": [
+     0,
+     1,
+     1,
+     1
+    ],
+    "invariant": false,
+    "dx1": 5.182343443266291e-11
+   }
+  ]
+ },
+ "pass": true
+}

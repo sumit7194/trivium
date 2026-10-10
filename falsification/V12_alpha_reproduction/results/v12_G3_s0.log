@@ -57,3 +57,20 @@
 {"idx": 0, "x0": 9.933956229878408, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 1.630304354449663e-05}
 {"idx": 0, "x0": 9.921014544740016, "numba": 1, "scipy": 0, "same": false, "survivor": false, "dx20": 4.927393561615645e-06}
 {"idx": 0, "x0": 9.917320658481884, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 3.5231905236798866e-05}
+{"idx": 0, "x0": 9.929324068429269, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 4.780066557685814e-06}
+{"idx": 0, "x0": 9.901391267134125, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 3.0667404509188145e-06}
+{"idx": 0, "x0": 9.905534482117833, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 4.2128883499970016e-05}
+{"idx": 0, "x0": 9.905848465859572, "numba": 1, "scipy": 0, "same": false, "survivor": false, "dx20": 3.52556351685962e-05}
+{"idx": 0, "x0": 9.904246122950553, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 9.549688961385527e-06}
+{"idx": 0, "x0": 9.932939924201815, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 2.3160074746897408e-06}
+{"idx": 0, "x0": 9.911788674109943, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 1.4960455761325875e-05}
+{"idx": 0, "x0": 9.895551918635126, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 1.4739092851101532e-05}
+{"idx": 0, "x0": 9.929967220352378, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 4.097142102921225e-06}
+{"idx": 0, "x0": 9.900631927378939, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 8.235964962466369e-06}
+{"idx": 0, "x0": 9.920253364940539, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 5.776441525995324e-06}
+{"idx": 0, "x0": 9.910878763238074, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 4.693733217209228e-06}
+{"idx": 0, "x0": 9.893979067671268, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 0.0004366123524235377}
+{"idx": 0, "x0": 9.907447662990895, "numba": 1, "scipy": 0, "same": false, "survivor": false, "dx20": 1.2705636159182632e-05}
+{"idx": 0, "x0": 9.916486670559507, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 3.785270734724122e-05}
+{"idx": 0, "x0": 9.928710625264603, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 7.370214980539913e-06}
+{"n": 75, "same_frac": 0.8666666666666667, "survivors": 16, "max_dx20": 4.287262609636855e-05, "n_dx_over_1e7": 16, "pass_": false}
