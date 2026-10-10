@@ -80,3 +80,39 @@ All at N = r+1. **CONFIRMED.**
   That extends his theorem (valence ≤ 7) by three valences.
 - Two independent implementations agree: ansatz's `_kt_jet.py` and the bridge's V10.
 - Same scope as above: invariant, local, polynomial integrals. No human has checked it.
+
+## Addendum 4 results (2026-10-11): V10-MN, the bridge's independent jet bound for Manko–Novikov
+
+**Gates (commit 47e6a3c): PASS.**
+- **Kerr limit** (β = 0, P_A): 2, 5, 8, 14 at valence 1–4. These are the expected Kerr values, Carter included.
+- **Series identities:** 82/82 exp/√ nodes are exact at both points for both parameter sets, with 0 failures.
+- **Draw independence:** never triggered, because no bound came out above trivial. Every row uses the single
+  pre-registered draw t = 1056243203 (seed 20261011).
+
+**Targets:** p1 = (M, a, β) = (5, 3, 1/5) and p2 = (13, 5, −1/3), at P_A = (3/2, 1/3) and P_B = (2, −1/4). All at
+N = r+1. 40 rows in `results/v10_mn_runs.jsonl` (raw logs in `results/v10_mn_p{1,2}.log`).
+Exp exponent lcm N_exp: 69 206 436 005 (p1) and 41 523 861 603 (p2).
+
+| Valence | p1 @ P_A | p1 @ P_B | p2 @ P_A | p2 @ P_B | trivial | matrix |
+|---|---|---|---|---|---|---|
+| 1 | 2 | 2 | 2 | 2 | 2 | 30 × 24 |
+| 2 | 4 | 4 | 4 | 4 | 4 | 120 × 100 |
+| 3 | 6 | 6 | 6 | 6 | 6 | 350 × 300 |
+| 4 | 9 | 9 | 9 | 9 | 9 | 840 × 735 |
+| 5 | 12 | 12 | 12 | 12 | 12 | 1764 × 1568 |
+| 6 | 16 | 16 | 16 | 16 | 16 | 3360 × 3024 |
+| 7 | 20 | 20 | 20 | 20 | 20 | 5940 × 5400 |
+| 8 | 25 | 25 | 25 | 25 | 25 | 9900 × 9075 |
+| 9 | 30 | 30 | 30 | 30 | 30 | 15730 × 14520 |
+| 10 | 36 | 36 | 36 | 36 | 36 | 24024 × 22308 |
+
+**Verdict: CONFIRMED at valence 1–10.**
+- Manko–Novikov at both parameter sets has no ∂t, ∂φ-invariant Killing tensor beyond p_t^a p_φ^b H^c, up to valence 10.
+- This independently reproduces ansatz §151. It's non-blind as to the headline but independent in code, metric
+  transcription, exp/√ handling, points and draw. The MN claim (ledger B3) now rests on two implementations.
+- The bound can only be over-stated (Q(T) specialisation; see addendum 4). A trivial bound is therefore conclusive
+  for the stated scope.
+
+**Scope:** invariant, local, polynomial-in-momenta integrals near the two points, and generic-point rank (Zariski-open).
+It says nothing about non-polynomial or non-invariant integrals; Morales–Ramis (V9) covers meromorphic ones. No human
+has checked it.
