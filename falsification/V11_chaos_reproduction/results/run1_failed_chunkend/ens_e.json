@@ -6,7 +6,7 @@
  "x0": 12.866727,
  "ts_boundary": 12.829373484375001,
  "ts_sides": [
-  "plunge",
+  "capped",
   "survive"
  ],
  "ts_members": [
@@ -34,13 +34,13 @@
   },
   {
    "x0": 12.867726999999999,
-   "status": "plunge",
+   "status": "capped",
    "n": 75,
-   "late_escape": true,
+   "late_escape": false,
    "R": null,
    "fd": null,
    "S_trunc": 10.101851769972583,
-   "H": 2.5579538487363607e-13,
+   "H": 1.163513729807164e-13,
    "carter": null
   },
   {
@@ -56,13 +56,13 @@
   },
   {
    "x0": 12.868727,
-   "status": "plunge",
+   "status": "capped",
    "n": 75,
-   "late_escape": true,
+   "late_escape": false,
    "R": null,
    "fd": null,
    "S_trunc": 9.548280026785775,
-   "H": 2.1316282072803006e-13,
+   "H": 9.903189379656396e-14,
    "carter": null
   },
   {
@@ -78,13 +78,13 @@
   },
   {
    "x0": 12.870726999999999,
-   "status": "plunge",
+   "status": "capped",
    "n": 62,
-   "late_escape": true,
+   "late_escape": false,
    "R": null,
    "fd": null,
    "S_trunc": 4.142352929562374,
-   "H": 5.7127635955112055e-12,
+   "H": 2.90878432451791e-14,
    "carter": null
   },
   {
@@ -100,13 +100,13 @@
   },
   {
    "x0": 12.874726999999998,
-   "status": "plunge",
-   "n": 91,
-   "late_escape": true,
+   "status": "capped",
+   "n": 90,
+   "late_escape": false,
    "R": null,
    "fd": null,
    "S_trunc": 11.263433148801667,
-   "H": 1.0800249583553523e-12,
+   "H": 1.6431300764452317e-13,
    "carter": null
   }
  ],
@@ -114,10 +114,10 @@
  "kerr_transitions": [],
  "kerr_members": null,
  "kerr_note": "no matching survive/plunge transition at this Kerr level",
- "ts_frac": 0.4444444444444444,
+ "ts_frac": 0.0,
  "kerr_frac": null,
  "late_escape_descriptive": {
-  "ts_frac": 0.4444444444444444,
+  "ts_frac": 0.0,
   "kerr_frac": null
  },
  "ts_basin": {
@@ -146,32 +146,17 @@
     12.866727,
     "S",
     300
-   ],
-   [
-    12.867726999999999,
-    "P",
-    75
-   ],
-   [
-    12.868727,
-    "P",
-    75
-   ],
-   [
-    12.870726999999999,
-    "P",
-    62
-   ],
-   [
-    12.874726999999998,
-    "P",
-    91
    ]
   ],
-  "T": 1,
-  "V": 1,
+  "T": 0,
+  "V": 0,
   "budget": 300,
-  "capped": []
+  "capped": [
+   12.867726999999999,
+   12.868727,
+   12.870726999999999,
+   12.874726999999998
+  ]
  },
  "kerr_basin": null,
  "kerr_carter_max": null,

@@ -1,66 +1,66 @@
 {"key": "quick|T|13.423770999999999|30", "val": "survive"}
 {"key": "quick|T|13.523771|30", "val": "survive"}
-{"key": "member|T|13.473771", "val": {"x0": 13.473771, "status": "capped", "n": 198, "late_escape": false, "R": 0.025479340502689563, "fd": 0.017410350452322677, "S_trunc": 18.214223559488126, "H": 1.5631940186722204e-13, "carter": null}}
-{"key": "member|T|13.472771", "val": {"x0": 13.472771, "status": "capped", "n": 193, "late_escape": false, "R": 0.009026967167536712, "fd": 0.0014026722795536432, "S_trunc": 11.895042776073499, "H": 1.0680345496894006e-13, "carter": null}}
-{"key": "member|T|13.474770999999999", "val": {"x0": 13.474770999999999, "status": "capped", "n": 100, "late_escape": false, "R": 0.011887653259190795, "fd": 0.03937005225993536, "S_trunc": 13.961896466253782, "H": 1.3455903058456897e-13, "carter": null}}
+{"key": "member|T|13.473771", "val": {"x0": 13.473771, "status": "plunge", "n": 198, "late_escape": true, "R": 0.025479340502689563, "fd": 0.017410350452322677, "S_trunc": 18.214223559488126, "H": 2.2595258997171186e-12, "carter": null}}
+{"key": "member|T|13.472771", "val": {"x0": 13.472771, "status": "plunge", "n": 194, "late_escape": true, "R": 0.00279124606306819, "fd": 0.0012749668283411556, "S_trunc": 11.895042776073499, "H": 3.780087354243733e-12, "carter": null}}
+{"key": "member|T|13.474770999999999", "val": {"x0": 13.474770999999999, "status": "plunge", "n": 100, "late_escape": true, "R": 0.011887653259190795, "fd": 0.03937005225993536, "S_trunc": 13.961896466253782, "H": 2.0889956431346945e-12, "carter": null}}
 {"key": "member|T|13.471770999999999", "val": {"x0": 13.471770999999999, "status": "crossings", "n": 300, "late_escape": false, "R": 0.00038074252169657314, "fd": 0.0, "S_trunc": -3.491885813757408, "H": 1.1035616864774056e-13, "carter": null}}
-{"key": "member|T|13.475771", "val": {"x0": 13.475771, "status": "capped", "n": 31, "late_escape": false, "R": null, "fd": null, "S_trunc": 1.874076403866237, "H": 1.3500311979441904e-13, "carter": null}}
+{"key": "member|T|13.475771", "val": {"x0": 13.475771, "status": "plunge", "n": 31, "late_escape": false, "R": null, "fd": null, "S_trunc": 1.874076403866237, "H": 4.376943252282217e-12, "carter": null}}
 {"key": "member|T|13.469771", "val": {"x0": 13.469771, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0003363102234029982, "fd": 0.0, "S_trunc": -4.108056836658495, "H": 1.0613732115416497e-13, "carter": null}}
-{"key": "member|T|13.477770999999999", "val": {"x0": 13.477770999999999, "status": "capped", "n": 51, "late_escape": false, "R": null, "fd": null, "S_trunc": 2.5979464043634053, "H": 3.863576125695545e-14, "carter": null}}
+{"key": "member|T|13.477770999999999", "val": {"x0": 13.477770999999999, "status": "plunge", "n": 51, "late_escape": true, "R": null, "fd": null, "S_trunc": 2.5979464043634053, "H": 2.842170943040401e-14, "carter": null}}
 {"key": "member|T|13.465771", "val": {"x0": 13.465771, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0002059050449359858, "fd": 0.0, "S_trunc": -4.090143759393398, "H": 9.525713551283843e-14, "carter": null}}
-{"key": "member|T|13.481770999999998", "val": {"x0": 13.481770999999998, "status": "capped", "n": 27, "late_escape": false, "R": null, "fd": null, "S_trunc": 1.2402816758245283, "H": 4.440892098500626e-14, "carter": null}}
-{"key": "quick|K|1.6|30", "val": "capped"}
-{"key": "quick|K|1.7000000000000002|30", "val": "capped"}
-{"key": "quick|K|1.8|30", "val": "capped"}
-{"key": "quick|K|1.9000000000000001|30", "val": "capped"}
-{"key": "quick|K|2.0|30", "val": "capped"}
-{"key": "quick|K|2.1|30", "val": "capped"}
-{"key": "quick|K|2.2|30", "val": "capped"}
-{"key": "quick|K|2.3000000000000003|30", "val": "capped"}
-{"key": "quick|K|2.4000000000000004|30", "val": "capped"}
-{"key": "quick|K|2.5|30", "val": "capped"}
-{"key": "quick|K|2.6|30", "val": "capped"}
-{"key": "quick|K|2.7|30", "val": "capped"}
-{"key": "quick|K|2.8000000000000003|30", "val": "capped"}
-{"key": "quick|K|2.9000000000000004|30", "val": "capped"}
-{"key": "quick|K|3.0|30", "val": "capped"}
-{"key": "quick|K|3.1|30", "val": "capped"}
-{"key": "quick|K|3.2|30", "val": "capped"}
-{"key": "quick|K|3.3000000000000003|30", "val": "capped"}
-{"key": "quick|K|3.4000000000000004|30", "val": "capped"}
-{"key": "quick|K|3.5|30", "val": "capped"}
-{"key": "quick|K|3.6|30", "val": "capped"}
-{"key": "quick|K|3.7|30", "val": "capped"}
-{"key": "quick|K|3.8000000000000003|30", "val": "capped"}
-{"key": "quick|K|3.9000000000000004|30", "val": "capped"}
-{"key": "quick|K|4.0|30", "val": "capped"}
-{"key": "quick|K|4.1|30", "val": "capped"}
-{"key": "quick|K|4.2|30", "val": "capped"}
-{"key": "quick|K|4.300000000000001|30", "val": "capped"}
-{"key": "quick|K|4.4|30", "val": "capped"}
-{"key": "quick|K|4.5|30", "val": "capped"}
-{"key": "quick|K|4.6|30", "val": "capped"}
-{"key": "quick|K|4.7|30", "val": "capped"}
-{"key": "quick|K|4.800000000000001|30", "val": "capped"}
-{"key": "quick|K|4.9|30", "val": "capped"}
-{"key": "quick|K|5.0|30", "val": "capped"}
-{"key": "quick|K|5.1|30", "val": "capped"}
-{"key": "quick|K|5.2|30", "val": "capped"}
-{"key": "quick|K|5.300000000000001|30", "val": "capped"}
-{"key": "quick|K|5.4|30", "val": "capped"}
-{"key": "quick|K|5.5|30", "val": "capped"}
-{"key": "quick|K|5.6|30", "val": "capped"}
-{"key": "quick|K|5.700000000000001|30", "val": "capped"}
-{"key": "quick|K|5.800000000000001|30", "val": "capped"}
-{"key": "quick|K|5.9|30", "val": "capped"}
-{"key": "quick|K|6.0|30", "val": "capped"}
-{"key": "quick|K|6.1|30", "val": "capped"}
-{"key": "quick|K|6.200000000000001|30", "val": "capped"}
-{"key": "quick|K|6.300000000000001|30", "val": "capped"}
-{"key": "quick|K|6.4|30", "val": "capped"}
-{"key": "quick|K|6.5|30", "val": "capped"}
-{"key": "quick|K|6.6|30", "val": "capped"}
-{"key": "quick|K|6.700000000000001|30", "val": "capped"}
+{"key": "member|T|13.481770999999998", "val": {"x0": 13.481770999999998, "status": "plunge", "n": 27, "late_escape": false, "R": null, "fd": null, "S_trunc": 1.2402816758245283, "H": 3.0411229090532288e-12, "carter": null}}
+{"key": "quick|K|1.6|30", "val": "plunge"}
+{"key": "quick|K|1.7000000000000002|30", "val": "stalled"}
+{"key": "quick|K|1.8|30", "val": "plunge"}
+{"key": "quick|K|1.9000000000000001|30", "val": "plunge"}
+{"key": "quick|K|2.0|30", "val": "plunge"}
+{"key": "quick|K|2.1|30", "val": "plunge"}
+{"key": "quick|K|2.2|30", "val": "plunge"}
+{"key": "quick|K|2.3000000000000003|30", "val": "plunge"}
+{"key": "quick|K|2.4000000000000004|30", "val": "plunge"}
+{"key": "quick|K|2.5|30", "val": "plunge"}
+{"key": "quick|K|2.6|30", "val": "plunge"}
+{"key": "quick|K|2.7|30", "val": "plunge"}
+{"key": "quick|K|2.8000000000000003|30", "val": "plunge"}
+{"key": "quick|K|2.9000000000000004|30", "val": "plunge"}
+{"key": "quick|K|3.0|30", "val": "plunge"}
+{"key": "quick|K|3.1|30", "val": "plunge"}
+{"key": "quick|K|3.2|30", "val": "plunge"}
+{"key": "quick|K|3.3000000000000003|30", "val": "plunge"}
+{"key": "quick|K|3.4000000000000004|30", "val": "plunge"}
+{"key": "quick|K|3.5|30", "val": "plunge"}
+{"key": "quick|K|3.6|30", "val": "plunge"}
+{"key": "quick|K|3.7|30", "val": "plunge"}
+{"key": "quick|K|3.8000000000000003|30", "val": "plunge"}
+{"key": "quick|K|3.9000000000000004|30", "val": "plunge"}
+{"key": "quick|K|4.0|30", "val": "plunge"}
+{"key": "quick|K|4.1|30", "val": "stalled"}
+{"key": "quick|K|4.2|30", "val": "stalled"}
+{"key": "quick|K|4.300000000000001|30", "val": "stalled"}
+{"key": "quick|K|4.4|30", "val": "stalled"}
+{"key": "quick|K|4.5|30", "val": "stalled"}
+{"key": "quick|K|4.6|30", "val": "stalled"}
+{"key": "quick|K|4.7|30", "val": "stalled"}
+{"key": "quick|K|4.800000000000001|30", "val": "stalled"}
+{"key": "quick|K|4.9|30", "val": "stalled"}
+{"key": "quick|K|5.0|30", "val": "stalled"}
+{"key": "quick|K|5.1|30", "val": "stalled"}
+{"key": "quick|K|5.2|30", "val": "stalled"}
+{"key": "quick|K|5.300000000000001|30", "val": "stalled"}
+{"key": "quick|K|5.4|30", "val": "plunge"}
+{"key": "quick|K|5.5|30", "val": "plunge"}
+{"key": "quick|K|5.6|30", "val": "plunge"}
+{"key": "quick|K|5.700000000000001|30", "val": "plunge"}
+{"key": "quick|K|5.800000000000001|30", "val": "plunge"}
+{"key": "quick|K|5.9|30", "val": "plunge"}
+{"key": "quick|K|6.0|30", "val": "plunge"}
+{"key": "quick|K|6.1|30", "val": "plunge"}
+{"key": "quick|K|6.200000000000001|30", "val": "plunge"}
+{"key": "quick|K|6.300000000000001|30", "val": "stalled"}
+{"key": "quick|K|6.4|30", "val": "plunge"}
+{"key": "quick|K|6.5|30", "val": "stalled"}
+{"key": "quick|K|6.6|30", "val": "plunge"}
+{"key": "quick|K|6.700000000000001|30", "val": "stalled"}
 {"key": "quick|K|6.800000000000001|30", "val": "survive"}
 {"key": "quick|K|6.9|30", "val": "survive"}
 {"key": "quick|K|7.0|30", "val": "survive"}

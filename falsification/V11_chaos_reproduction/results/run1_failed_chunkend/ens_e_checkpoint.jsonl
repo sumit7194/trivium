@@ -1,73 +1,73 @@
-{"key": "quick|T|10.334508999999999|30", "val": "plunge"}
-{"key": "quick|T|10.434509|30", "val": "survive"}
-{"key": "quick|T|10.384509|30", "val": "survive"}
-{"key": "quick|T|10.359509|30", "val": "plunge"}
-{"key": "quick|T|10.372008999999998|30", "val": "plunge"}
-{"key": "quick|T|10.378259|30", "val": "survive"}
-{"key": "quick|T|10.375134|30", "val": "survive"}
-{"key": "quick|T|10.373571499999999|30", "val": "survive"}
-{"key": "quick|T|10.372790249999998|30", "val": "plunge"}
-{"key": "quick|T|10.373180875|30", "val": "plunge"}
-{"key": "quick|T|10.3733761875|30", "val": "plunge"}
-{"key": "quick|T|10.373473843749998|30", "val": "plunge"}
-{"key": "member|T|10.384509", "val": {"x0": 10.384509, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0005657632253088165, "fd": 0.0066074162310912005, "S_trunc": 25.14103869130433, "H": 4.001243780749064e-13, "carter": null}}
-{"key": "member|T|10.383509", "val": {"x0": 10.383509, "status": "plunge", "n": 271, "late_escape": true, "R": 0.0006996263249829194, "fd": 1.1800489677983074e-05, "S_trunc": 17.7120689271132, "H": 5.329070518200751e-13, "carter": null}}
-{"key": "member|T|10.385508999999999", "val": {"x0": 10.385508999999999, "status": "plunge", "n": 67, "late_escape": true, "R": null, "fd": null, "S_trunc": 4.271386203376107, "H": 7.247535904753022e-13, "carter": null}}
-{"key": "member|T|10.382508999999999", "val": {"x0": 10.382508999999999, "status": "crossings", "n": 300, "late_escape": false, "R": 0.000466934646352779, "fd": 0.0, "S_trunc": -3.897478204724049, "H": 8.104628079763643e-14, "carter": null}}
-{"key": "member|T|10.386509", "val": {"x0": 10.386509, "status": "plunge", "n": 68, "late_escape": true, "R": null, "fd": null, "S_trunc": 3.1714109694073525, "H": 1.9326762412674725e-12, "carter": null}}
-{"key": "member|T|10.380509", "val": {"x0": 10.380509, "status": "crossings", "n": 300, "late_escape": false, "R": 0.00046322075377425203, "fd": 0.0, "S_trunc": -3.831024953970174, "H": 2.042810365310288e-14, "carter": null}}
-{"key": "member|T|10.388508999999999", "val": {"x0": 10.388508999999999, "status": "plunge", "n": 115, "late_escape": true, "R": 0.019029002361882992, "fd": 4.274240159300693e-05, "S_trunc": 15.08182749811961, "H": 8.526512829121202e-14, "carter": null}}
-{"key": "member|T|10.376509", "val": {"x0": 10.376509, "status": "plunge", "n": 39, "late_escape": false, "R": null, "fd": null, "S_trunc": -0.629874183918913, "H": 1.1368683772161603e-13, "carter": null}}
-{"key": "member|T|10.392508999999999", "val": {"x0": 10.392508999999999, "status": "plunge", "n": 59, "late_escape": true, "R": null, "fd": null, "S_trunc": 2.338165511005659, "H": 5.684341886080802e-14, "carter": null}}
-{"key": "quick|K|1.6|30", "val": "plunge"}
-{"key": "quick|K|1.7000000000000002|30", "val": "plunge"}
-{"key": "quick|K|1.8|30", "val": "plunge"}
-{"key": "quick|K|1.9000000000000001|30", "val": "plunge"}
-{"key": "quick|K|2.0|30", "val": "plunge"}
-{"key": "quick|K|2.1|30", "val": "plunge"}
-{"key": "quick|K|2.2|30", "val": "plunge"}
-{"key": "quick|K|2.3000000000000003|30", "val": "plunge"}
-{"key": "quick|K|2.4000000000000004|30", "val": "plunge"}
-{"key": "quick|K|2.5|30", "val": "plunge"}
-{"key": "quick|K|2.6|30", "val": "plunge"}
-{"key": "quick|K|2.7|30", "val": "plunge"}
-{"key": "quick|K|2.8000000000000003|30", "val": "plunge"}
-{"key": "quick|K|2.9000000000000004|30", "val": "plunge"}
-{"key": "quick|K|3.0|30", "val": "plunge"}
-{"key": "quick|K|3.1|30", "val": "plunge"}
-{"key": "quick|K|3.2|30", "val": "plunge"}
-{"key": "quick|K|3.3000000000000003|30", "val": "plunge"}
-{"key": "quick|K|3.4000000000000004|30", "val": "plunge"}
-{"key": "quick|K|3.5|30", "val": "plunge"}
-{"key": "quick|K|3.6|30", "val": "plunge"}
-{"key": "quick|K|3.7|30", "val": "plunge"}
-{"key": "quick|K|3.8000000000000003|30", "val": "plunge"}
-{"key": "quick|K|3.9000000000000004|30", "val": "plunge"}
-{"key": "quick|K|4.0|30", "val": "plunge"}
-{"key": "quick|K|4.1|30", "val": "plunge"}
-{"key": "quick|K|4.2|30", "val": "plunge"}
-{"key": "quick|K|4.300000000000001|30", "val": "plunge"}
-{"key": "quick|K|4.4|30", "val": "plunge"}
-{"key": "quick|K|4.5|30", "val": "plunge"}
-{"key": "quick|K|4.6|30", "val": "plunge"}
-{"key": "quick|K|4.7|30", "val": "plunge"}
-{"key": "quick|K|4.800000000000001|30", "val": "plunge"}
-{"key": "quick|K|4.9|30", "val": "plunge"}
-{"key": "quick|K|5.0|30", "val": "plunge"}
-{"key": "quick|K|5.1|30", "val": "plunge"}
-{"key": "quick|K|5.2|30", "val": "plunge"}
-{"key": "quick|K|5.300000000000001|30", "val": "survive"}
-{"key": "quick|K|5.4|30", "val": "survive"}
-{"key": "quick|K|5.5|30", "val": "survive"}
-{"key": "quick|K|5.6|30", "val": "survive"}
-{"key": "quick|K|5.700000000000001|30", "val": "survive"}
-{"key": "quick|K|5.800000000000001|30", "val": "survive"}
-{"key": "quick|K|5.9|30", "val": "survive"}
-{"key": "quick|K|6.0|30", "val": "survive"}
-{"key": "quick|K|6.1|30", "val": "survive"}
-{"key": "quick|K|6.200000000000001|30", "val": "survive"}
-{"key": "quick|K|6.300000000000001|30", "val": "survive"}
-{"key": "quick|K|6.4|30", "val": "survive"}
+{"key": "quick|T|12.816726999999998|30", "val": "capped"}
+{"key": "quick|T|12.916727|30", "val": "survive"}
+{"key": "quick|T|12.866727|30", "val": "survive"}
+{"key": "quick|T|12.841726999999999|30", "val": "survive"}
+{"key": "quick|T|12.829227|30", "val": "capped"}
+{"key": "quick|T|12.835477|30", "val": "survive"}
+{"key": "quick|T|12.832352|30", "val": "survive"}
+{"key": "quick|T|12.8307895|30", "val": "survive"}
+{"key": "quick|T|12.830008249999999|30", "val": "survive"}
+{"key": "quick|T|12.829617625|30", "val": "survive"}
+{"key": "quick|T|12.8294223125|30", "val": "survive"}
+{"key": "quick|T|12.82932465625|30", "val": "capped"}
+{"key": "member|T|12.866727", "val": {"x0": 12.866727, "status": "crossings", "n": 300, "late_escape": false, "R": 0.011447199689459257, "fd": 0.0, "S_trunc": 31.486427692868077, "H": 4.000133557724439e-13, "carter": null}}
+{"key": "member|T|12.865727", "val": {"x0": 12.865727, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0001632896724079011, "fd": 0.0, "S_trunc": -4.020038665213848, "H": 1.8984813721090177e-13, "carter": null}}
+{"key": "member|T|12.867726999999999", "val": {"x0": 12.867726999999999, "status": "capped", "n": 75, "late_escape": false, "R": null, "fd": null, "S_trunc": 10.101851769972583, "H": 1.163513729807164e-13, "carter": null}}
+{"key": "member|T|12.864726999999998", "val": {"x0": 12.864726999999998, "status": "crossings", "n": 300, "late_escape": false, "R": 0.00019240323460472704, "fd": 0.0, "S_trunc": -2.753870573495309, "H": 8.304468224196171e-14, "carter": null}}
+{"key": "member|T|12.868727", "val": {"x0": 12.868727, "status": "capped", "n": 75, "late_escape": false, "R": null, "fd": null, "S_trunc": 9.548280026785775, "H": 9.903189379656396e-14, "carter": null}}
+{"key": "member|T|12.862727", "val": {"x0": 12.862727, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0001834338227999399, "fd": 0.0, "S_trunc": -3.9326537343156334, "H": 7.949196856316121e-14, "carter": null}}
+{"key": "member|T|12.870726999999999", "val": {"x0": 12.870726999999999, "status": "capped", "n": 62, "late_escape": false, "R": null, "fd": null, "S_trunc": 4.142352929562374, "H": 2.90878432451791e-14, "carter": null}}
+{"key": "member|T|12.858727", "val": {"x0": 12.858727, "status": "crossings", "n": 300, "late_escape": false, "R": 0.00010543050804888962, "fd": 0.0, "S_trunc": -3.953403182183285, "H": 1.6764367671839864e-13, "carter": null}}
+{"key": "member|T|12.874726999999998", "val": {"x0": 12.874726999999998, "status": "capped", "n": 90, "late_escape": false, "R": null, "fd": null, "S_trunc": 11.263433148801667, "H": 1.6431300764452317e-13, "carter": null}}
+{"key": "quick|K|1.6|30", "val": "capped"}
+{"key": "quick|K|1.7000000000000002|30", "val": "capped"}
+{"key": "quick|K|1.8|30", "val": "capped"}
+{"key": "quick|K|1.9000000000000001|30", "val": "capped"}
+{"key": "quick|K|2.0|30", "val": "capped"}
+{"key": "quick|K|2.1|30", "val": "capped"}
+{"key": "quick|K|2.2|30", "val": "capped"}
+{"key": "quick|K|2.3000000000000003|30", "val": "capped"}
+{"key": "quick|K|2.4000000000000004|30", "val": "capped"}
+{"key": "quick|K|2.5|30", "val": "capped"}
+{"key": "quick|K|2.6|30", "val": "capped"}
+{"key": "quick|K|2.7|30", "val": "capped"}
+{"key": "quick|K|2.8000000000000003|30", "val": "capped"}
+{"key": "quick|K|2.9000000000000004|30", "val": "capped"}
+{"key": "quick|K|3.0|30", "val": "capped"}
+{"key": "quick|K|3.1|30", "val": "capped"}
+{"key": "quick|K|3.2|30", "val": "capped"}
+{"key": "quick|K|3.3000000000000003|30", "val": "capped"}
+{"key": "quick|K|3.4000000000000004|30", "val": "capped"}
+{"key": "quick|K|3.5|30", "val": "capped"}
+{"key": "quick|K|3.6|30", "val": "capped"}
+{"key": "quick|K|3.7|30", "val": "capped"}
+{"key": "quick|K|3.8000000000000003|30", "val": "capped"}
+{"key": "quick|K|3.9000000000000004|30", "val": "capped"}
+{"key": "quick|K|4.0|30", "val": "capped"}
+{"key": "quick|K|4.1|30", "val": "capped"}
+{"key": "quick|K|4.2|30", "val": "capped"}
+{"key": "quick|K|4.300000000000001|30", "val": "capped"}
+{"key": "quick|K|4.4|30", "val": "capped"}
+{"key": "quick|K|4.5|30", "val": "capped"}
+{"key": "quick|K|4.6|30", "val": "capped"}
+{"key": "quick|K|4.7|30", "val": "capped"}
+{"key": "quick|K|4.800000000000001|30", "val": "capped"}
+{"key": "quick|K|4.9|30", "val": "capped"}
+{"key": "quick|K|5.0|30", "val": "capped"}
+{"key": "quick|K|5.1|30", "val": "capped"}
+{"key": "quick|K|5.2|30", "val": "capped"}
+{"key": "quick|K|5.300000000000001|30", "val": "capped"}
+{"key": "quick|K|5.4|30", "val": "capped"}
+{"key": "quick|K|5.5|30", "val": "capped"}
+{"key": "quick|K|5.6|30", "val": "capped"}
+{"key": "quick|K|5.700000000000001|30", "val": "capped"}
+{"key": "quick|K|5.800000000000001|30", "val": "capped"}
+{"key": "quick|K|5.9|30", "val": "capped"}
+{"key": "quick|K|6.0|30", "val": "capped"}
+{"key": "quick|K|6.1|30", "val": "capped"}
+{"key": "quick|K|6.200000000000001|30", "val": "capped"}
+{"key": "quick|K|6.300000000000001|30", "val": "capped"}
+{"key": "quick|K|6.4|30", "val": "capped"}
 {"key": "quick|K|6.5|30", "val": "survive"}
 {"key": "quick|K|6.6|30", "val": "survive"}
 {"key": "quick|K|6.700000000000001|30", "val": "survive"}
@@ -283,58 +283,39 @@
 {"key": "quick|K|27.700000000000003|30", "val": "survive"}
 {"key": "quick|K|27.800000000000004|30", "val": "survive"}
 {"key": "quick|K|27.900000000000002|30", "val": "survive"}
-{"key": "quick|K|28.000000000000004|30", "val": "plunge"}
-{"key": "quick|K|28.1|30", "val": "plunge"}
-{"key": "quick|K|28.200000000000003|30", "val": "plunge"}
-{"key": "quick|K|28.300000000000004|30", "val": "plunge"}
-{"key": "quick|K|28.400000000000002|30", "val": "plunge"}
-{"key": "quick|K|28.500000000000004|30", "val": "plunge"}
-{"key": "quick|K|28.6|30", "val": "plunge"}
-{"key": "quick|K|28.700000000000003|30", "val": "plunge"}
-{"key": "quick|K|28.800000000000004|30", "val": "plunge"}
-{"key": "quick|K|28.900000000000002|30", "val": "plunge"}
-{"key": "quick|K|29.000000000000004|30", "val": "plunge"}
-{"key": "quick|K|29.1|30", "val": "plunge"}
-{"key": "quick|K|29.200000000000003|30", "val": "plunge"}
-{"key": "quick|K|29.300000000000004|30", "val": "plunge"}
-{"key": "quick|K|29.400000000000002|30", "val": "plunge"}
-{"key": "quick|K|29.500000000000004|30", "val": "plunge"}
-{"key": "quick|K|29.6|30", "val": "plunge"}
-{"key": "quick|K|29.700000000000003|30", "val": "plunge"}
-{"key": "quick|K|29.800000000000004|30", "val": "plunge"}
-{"key": "quick|K|29.900000000000002|30", "val": "plunge"}
-{"key": "quick|K|30.000000000000004|30", "val": "plunge"}
-{"key": "quick|K|30.1|30", "val": "plunge"}
-{"key": "quick|K|30.200000000000003|30", "val": "plunge"}
-{"key": "quick|K|30.300000000000004|30", "val": "plunge"}
-{"key": "quick|K|30.400000000000002|30", "val": "plunge"}
-{"key": "quick|K|30.500000000000004|30", "val": "plunge"}
-{"key": "quick|K|30.6|30", "val": "plunge"}
-{"key": "quick|K|30.700000000000003|30", "val": "plunge"}
-{"key": "quick|K|30.800000000000004|30", "val": "plunge"}
-{"key": "quick|K|30.900000000000002|30", "val": "plunge"}
-{"key": "quick|K|31.000000000000004|30", "val": "plunge"}
-{"key": "quick|K|31.1|30", "val": "plunge"}
-{"key": "quick|K|31.200000000000003|30", "val": "plunge"}
-{"key": "quick|K|31.300000000000004|30", "val": "plunge"}
-{"key": "quick|K|31.400000000000002|30", "val": "plunge"}
-{"key": "quick|K|31.500000000000004|30", "val": "plunge"}
-{"key": "quick|K|5.25|30", "val": "survive"}
-{"key": "quick|K|5.225|30", "val": "plunge"}
-{"key": "quick|K|5.2375|30", "val": "survive"}
-{"key": "quick|K|5.231249999999999|30", "val": "plunge"}
-{"key": "quick|K|5.234375|30", "val": "survive"}
-{"key": "quick|K|5.2328125|30", "val": "survive"}
-{"key": "quick|K|5.2320312499999995|30", "val": "plunge"}
-{"key": "quick|K|5.232421875|30", "val": "plunge"}
-{"key": "quick|K|5.2326171875|30", "val": "survive"}
-{"key": "quick|K|5.23251953125|30", "val": "plunge"}
-{"key": "member|K|5.243554687500001", "val": {"x0": 5.243554687500001, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0035646838090734696, "fd": 0.001119057369494961, "S_trunc": -2.357348457787868, "H": 1.6431300764452317e-14, "carter": 2.2075822266296289e-13}}
-{"key": "member|K|5.242554687500001", "val": {"x0": 5.242554687500001, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0037310998514818563, "fd": 0.0004244233699243488, "S_trunc": -2.8537991814574966, "H": 2.9753977059954195e-14, "carter": 6.599633530148641e-14}}
-{"key": "member|K|5.244554687500002", "val": {"x0": 5.244554687500002, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0030928856728590585, "fd": 2.3583483893346394e-07, "S_trunc": -0.4988080977495297, "H": 2.0317081350640365e-14, "carter": 1.4424404687834183e-13}}
-{"key": "member|K|5.241554687500002", "val": {"x0": 5.241554687500002, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0038609205968256747, "fd": 2.929525066129836e-06, "S_trunc": -2.103571561827952, "H": 4.6629367034256575e-14, "carter": 1.9082310475386932e-13}}
-{"key": "member|K|5.245554687500001", "val": {"x0": 5.245554687500001, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0034744439382668755, "fd": 7.569802419016984e-08, "S_trunc": -2.20147583698917, "H": 3.530509218307998e-14, "carter": 1.2517325417081415e-13}}
-{"key": "member|K|5.239554687500002", "val": {"x0": 5.239554687500002, "status": "crossings", "n": 300, "late_escape": false, "R": 0.004167446189955723, "fd": 2.0373174289469312e-06, "S_trunc": -0.8232481416277224, "H": 4.907185768843192e-14, "carter": 3.259367140112459e-13}}
-{"key": "member|K|5.247554687500001", "val": {"x0": 5.247554687500001, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0032297741675949743, "fd": 4.9092769637563675e-06, "S_trunc": -0.5608332993666192, "H": 2.2315482794965646e-14, "carter": 1.3407276550977308e-13}}
-{"key": "member|K|5.235554687500001", "val": {"x0": 5.235554687500001, "status": "crossings", "n": 300, "late_escape": false, "R": 0.004990470668550172, "fd": 5.964782980342365e-06, "S_trunc": 0.9232481462989455, "H": 1.4033219031261979e-13, "carter": 4.990765612306018e-13}}
-{"key": "member|K|5.251554687500001", "val": {"x0": 5.251554687500001, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0028666929742128416, "fd": 4.139164938336562e-06, "S_trunc": -0.8428522198415216, "H": 1.354472090042691e-14, "carter": 2.0908357280346485e-13}}
+{"key": "quick|K|28.000000000000004|30", "val": "survive"}
+{"key": "quick|K|28.1|30", "val": "survive"}
+{"key": "quick|K|28.200000000000003|30", "val": "survive"}
+{"key": "quick|K|28.300000000000004|30", "val": "survive"}
+{"key": "quick|K|28.400000000000002|30", "val": "survive"}
+{"key": "quick|K|28.500000000000004|30", "val": "survive"}
+{"key": "quick|K|28.6|30", "val": "survive"}
+{"key": "quick|K|28.700000000000003|30", "val": "survive"}
+{"key": "quick|K|28.800000000000004|30", "val": "survive"}
+{"key": "quick|K|28.900000000000002|30", "val": "survive"}
+{"key": "quick|K|29.000000000000004|30", "val": "survive"}
+{"key": "quick|K|29.1|30", "val": "survive"}
+{"key": "quick|K|29.200000000000003|30", "val": "survive"}
+{"key": "quick|K|29.300000000000004|30", "val": "survive"}
+{"key": "quick|K|29.400000000000002|30", "val": "survive"}
+{"key": "quick|K|29.500000000000004|30", "val": "survive"}
+{"key": "quick|K|29.6|30", "val": "survive"}
+{"key": "quick|K|29.700000000000003|30", "val": "survive"}
+{"key": "quick|K|29.800000000000004|30", "val": "survive"}
+{"key": "quick|K|29.900000000000002|30", "val": "survive"}
+{"key": "quick|K|30.000000000000004|30", "val": "survive"}
+{"key": "quick|K|30.1|30", "val": "survive"}
+{"key": "quick|K|30.200000000000003|30", "val": "survive"}
+{"key": "quick|K|30.300000000000004|30", "val": "survive"}
+{"key": "quick|K|30.400000000000002|30", "val": "survive"}
+{"key": "quick|K|30.500000000000004|30", "val": "survive"}
+{"key": "quick|K|30.6|30", "val": "survive"}
+{"key": "quick|K|30.700000000000003|30", "val": "survive"}
+{"key": "quick|K|30.800000000000004|30", "val": "survive"}
+{"key": "quick|K|30.900000000000002|30", "val": "survive"}
+{"key": "quick|K|31.000000000000004|30", "val": "survive"}
+{"key": "quick|K|31.1|30", "val": "survive"}
+{"key": "quick|K|31.200000000000003|30", "val": "survive"}
+{"key": "quick|K|31.300000000000004|30", "val": "survive"}
+{"key": "quick|K|31.400000000000002|30", "val": "survive"}
+{"key": "quick|K|31.500000000000004|30", "val": "survive"}

@@ -70,3 +70,27 @@ shows a plain plunge.
 
 Fixed in addendum 6 (terminal plunge and escape events; a per-chunk stall guard). The regular controls are unchanged.
 A rerun is scheduled post-failure.
+
+## Rerun of ensembles a–g after addendum 6 (POST-FAILURE), 2026-10-11
+
+| Ens | TS (E, L) | TS T / V (capped) | Kerr T / V | Kerr Carter max | Verdict |
+|---|---|---|---|---|---|
+| a | ts45 (0.95, -6.25) | 1 / 1 (0) | (0, 0) | 3.1e-13 | **INCONCLUSIVE** |
+| b | ts45 (0.97, -6.25) | 2 / 2 (0) | (0, 0) | 2.4e-13 | **CONFIRMED** |
+| c | ts45 (0.97, 6.25) | 4 / 2 (0) | (0, 0) | 5.0e-13 | **CONFIRMED** |
+| d | ts45 (0.95, -5.125) | 0 / 4 (0) | (1, 0) | 1.3e-12 | **CONFIRMED** |
+| e | ts35 (0.97, 5.333) | 1 / 1 (0) | no Kerr transition | — | **INCONCLUSIVE** |
+| f | ts35 (0.97, 11.83) | 2 / 3 (0) | no Kerr transition | — | **INCONCLUSIVE** |
+| g | ts35 (0.97, 6.333) | 1 / 2 (0) | no Kerr transition | — | **INCONCLUSIVE** |
+
+**Reading:**
+- **3 of 7 CONFIRMED (b, c, d).** TS shows interleaved or non-monotone escape structure (T ≥ 2 or V ≥ 2). The matched Kerr
+  ensembles are clean (T ≤ 1, V = 0) with Carter conserved to ≤ 1.3e−12.
+- **a: INCONCLUSIVE.** TS has T = 1, V = 1, below the bar.
+- **e, f, g (the p = 3/5 levels): INCONCLUSIVE.** The Kerr scan found NO survive/plunge transition at the same E and
+  L/m, so no Kerr ensemble could be built. The TS sides show T/V = 1/1, 2/3 and 1/2.
+- **Design limitation:** addendum 3 matched Kerr by L/m, not by distance to each system's OWN separatrix. ansatz §150
+  matches by ε_sep, which is the better matching. Recorded as a lesson, not changed post-data.
+- **Net:** V11 independently CONFIRMS the TS-vs-Kerr basin-structure contrast at 3 of 4 p = 4/5 candidates. No candidate
+  contradicts it: every Kerr ensemble built is clean, and no TS ensemble reads integrable-clean except a, which is
+  borderline. This is a post-failure rerun, labelled as such.

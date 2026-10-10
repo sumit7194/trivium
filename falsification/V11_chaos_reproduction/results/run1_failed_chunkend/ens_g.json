@@ -12,35 +12,35 @@
  "ts_members": [
   {
    "x0": 13.473771,
-   "status": "plunge",
+   "status": "capped",
    "n": 198,
-   "late_escape": true,
+   "late_escape": false,
    "R": 0.025479340502689563,
    "fd": 0.017410350452322677,
    "S_trunc": 18.214223559488126,
-   "H": 2.2595258997171186e-12,
+   "H": 1.5631940186722204e-13,
    "carter": null
   },
   {
    "x0": 13.472771,
-   "status": "plunge",
-   "n": 194,
-   "late_escape": true,
-   "R": 0.00279124606306819,
-   "fd": 0.0012749668283411556,
+   "status": "capped",
+   "n": 193,
+   "late_escape": false,
+   "R": 0.009026967167536712,
+   "fd": 0.0014026722795536432,
    "S_trunc": 11.895042776073499,
-   "H": 3.780087354243733e-12,
+   "H": 1.0680345496894006e-13,
    "carter": null
   },
   {
    "x0": 13.474770999999999,
-   "status": "plunge",
+   "status": "capped",
    "n": 100,
-   "late_escape": true,
+   "late_escape": false,
    "R": 0.011887653259190795,
    "fd": 0.03937005225993536,
    "S_trunc": 13.961896466253782,
-   "H": 2.0889956431346945e-12,
+   "H": 1.3455903058456897e-13,
    "carter": null
   },
   {
@@ -56,13 +56,13 @@
   },
   {
    "x0": 13.475771,
-   "status": "plunge",
+   "status": "capped",
    "n": 31,
    "late_escape": false,
    "R": null,
    "fd": null,
    "S_trunc": 1.874076403866237,
-   "H": 4.376943252282217e-12,
+   "H": 1.3500311979441904e-13,
    "carter": null
   },
   {
@@ -78,13 +78,13 @@
   },
   {
    "x0": 13.477770999999999,
-   "status": "plunge",
+   "status": "capped",
    "n": 51,
-   "late_escape": true,
+   "late_escape": false,
    "R": null,
    "fd": null,
    "S_trunc": 2.5979464043634053,
-   "H": 2.842170943040401e-14,
+   "H": 3.863576125695545e-14,
    "carter": null
   },
   {
@@ -100,13 +100,13 @@
   },
   {
    "x0": 13.481770999999998,
-   "status": "plunge",
+   "status": "capped",
    "n": 27,
    "late_escape": false,
    "R": null,
    "fd": null,
    "S_trunc": 1.2402816758245283,
-   "H": 3.0411229090532288e-12,
+   "H": 4.440892098500626e-14,
    "carter": null
   }
  ],
@@ -114,10 +114,10 @@
  "kerr_transitions": [],
  "kerr_members": null,
  "kerr_note": "no matching survive/plunge transition at this Kerr level",
- "ts_frac": 0.4444444444444444,
+ "ts_frac": 0.0,
  "kerr_frac": null,
  "late_escape_descriptive": {
-  "ts_frac": 0.4444444444444444,
+  "ts_frac": 0.0,
   "kerr_frac": null
  },
  "ts_basin": {
@@ -136,42 +136,19 @@
     13.471770999999999,
     "S",
     300
-   ],
-   [
-    13.472771,
-    "P",
-    194
-   ],
-   [
-    13.473771,
-    "P",
-    198
-   ],
-   [
-    13.474770999999999,
-    "P",
-    100
-   ],
-   [
-    13.475771,
-    "P",
-    31
-   ],
-   [
-    13.477770999999999,
-    "P",
-    51
-   ],
-   [
-    13.481770999999998,
-    "P",
-    27
    ]
   ],
-  "T": 1,
-  "V": 2,
+  "T": 0,
+  "V": 0,
   "budget": 300,
-  "capped": []
+  "capped": [
+   13.473771,
+   13.472771,
+   13.474770999999999,
+   13.475771,
+   13.477770999999999,
+   13.481770999999998
+  ]
  },
  "kerr_basin": null,
  "kerr_carter_max": null,

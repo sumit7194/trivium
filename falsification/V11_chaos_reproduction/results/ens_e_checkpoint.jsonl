@@ -1,73 +1,73 @@
-{"key": "quick|T|12.816726999999998|30", "val": "capped"}
+{"key": "quick|T|12.816726999999998|30", "val": "plunge"}
 {"key": "quick|T|12.916727|30", "val": "survive"}
 {"key": "quick|T|12.866727|30", "val": "survive"}
 {"key": "quick|T|12.841726999999999|30", "val": "survive"}
-{"key": "quick|T|12.829227|30", "val": "capped"}
+{"key": "quick|T|12.829227|30", "val": "plunge"}
 {"key": "quick|T|12.835477|30", "val": "survive"}
 {"key": "quick|T|12.832352|30", "val": "survive"}
 {"key": "quick|T|12.8307895|30", "val": "survive"}
 {"key": "quick|T|12.830008249999999|30", "val": "survive"}
 {"key": "quick|T|12.829617625|30", "val": "survive"}
 {"key": "quick|T|12.8294223125|30", "val": "survive"}
-{"key": "quick|T|12.82932465625|30", "val": "capped"}
+{"key": "quick|T|12.82932465625|30", "val": "plunge"}
 {"key": "member|T|12.866727", "val": {"x0": 12.866727, "status": "crossings", "n": 300, "late_escape": false, "R": 0.011447199689459257, "fd": 0.0, "S_trunc": 31.486427692868077, "H": 4.000133557724439e-13, "carter": null}}
 {"key": "member|T|12.865727", "val": {"x0": 12.865727, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0001632896724079011, "fd": 0.0, "S_trunc": -4.020038665213848, "H": 1.8984813721090177e-13, "carter": null}}
-{"key": "member|T|12.867726999999999", "val": {"x0": 12.867726999999999, "status": "capped", "n": 75, "late_escape": false, "R": null, "fd": null, "S_trunc": 10.101851769972583, "H": 1.163513729807164e-13, "carter": null}}
+{"key": "member|T|12.867726999999999", "val": {"x0": 12.867726999999999, "status": "plunge", "n": 75, "late_escape": true, "R": null, "fd": null, "S_trunc": 10.101851769972583, "H": 2.5579538487363607e-13, "carter": null}}
 {"key": "member|T|12.864726999999998", "val": {"x0": 12.864726999999998, "status": "crossings", "n": 300, "late_escape": false, "R": 0.00019240323460472704, "fd": 0.0, "S_trunc": -2.753870573495309, "H": 8.304468224196171e-14, "carter": null}}
-{"key": "member|T|12.868727", "val": {"x0": 12.868727, "status": "capped", "n": 75, "late_escape": false, "R": null, "fd": null, "S_trunc": 9.548280026785775, "H": 9.903189379656396e-14, "carter": null}}
+{"key": "member|T|12.868727", "val": {"x0": 12.868727, "status": "plunge", "n": 75, "late_escape": true, "R": null, "fd": null, "S_trunc": 9.548280026785775, "H": 2.1316282072803006e-13, "carter": null}}
 {"key": "member|T|12.862727", "val": {"x0": 12.862727, "status": "crossings", "n": 300, "late_escape": false, "R": 0.0001834338227999399, "fd": 0.0, "S_trunc": -3.9326537343156334, "H": 7.949196856316121e-14, "carter": null}}
-{"key": "member|T|12.870726999999999", "val": {"x0": 12.870726999999999, "status": "capped", "n": 62, "late_escape": false, "R": null, "fd": null, "S_trunc": 4.142352929562374, "H": 2.90878432451791e-14, "carter": null}}
+{"key": "member|T|12.870726999999999", "val": {"x0": 12.870726999999999, "status": "plunge", "n": 62, "late_escape": true, "R": null, "fd": null, "S_trunc": 4.142352929562374, "H": 5.7127635955112055e-12, "carter": null}}
 {"key": "member|T|12.858727", "val": {"x0": 12.858727, "status": "crossings", "n": 300, "late_escape": false, "R": 0.00010543050804888962, "fd": 0.0, "S_trunc": -3.953403182183285, "H": 1.6764367671839864e-13, "carter": null}}
-{"key": "member|T|12.874726999999998", "val": {"x0": 12.874726999999998, "status": "capped", "n": 90, "late_escape": false, "R": null, "fd": null, "S_trunc": 11.263433148801667, "H": 1.6431300764452317e-13, "carter": null}}
-{"key": "quick|K|1.6|30", "val": "capped"}
-{"key": "quick|K|1.7000000000000002|30", "val": "capped"}
-{"key": "quick|K|1.8|30", "val": "capped"}
-{"key": "quick|K|1.9000000000000001|30", "val": "capped"}
-{"key": "quick|K|2.0|30", "val": "capped"}
-{"key": "quick|K|2.1|30", "val": "capped"}
-{"key": "quick|K|2.2|30", "val": "capped"}
-{"key": "quick|K|2.3000000000000003|30", "val": "capped"}
-{"key": "quick|K|2.4000000000000004|30", "val": "capped"}
-{"key": "quick|K|2.5|30", "val": "capped"}
-{"key": "quick|K|2.6|30", "val": "capped"}
-{"key": "quick|K|2.7|30", "val": "capped"}
-{"key": "quick|K|2.8000000000000003|30", "val": "capped"}
-{"key": "quick|K|2.9000000000000004|30", "val": "capped"}
-{"key": "quick|K|3.0|30", "val": "capped"}
-{"key": "quick|K|3.1|30", "val": "capped"}
-{"key": "quick|K|3.2|30", "val": "capped"}
-{"key": "quick|K|3.3000000000000003|30", "val": "capped"}
-{"key": "quick|K|3.4000000000000004|30", "val": "capped"}
-{"key": "quick|K|3.5|30", "val": "capped"}
-{"key": "quick|K|3.6|30", "val": "capped"}
-{"key": "quick|K|3.7|30", "val": "capped"}
-{"key": "quick|K|3.8000000000000003|30", "val": "capped"}
-{"key": "quick|K|3.9000000000000004|30", "val": "capped"}
-{"key": "quick|K|4.0|30", "val": "capped"}
-{"key": "quick|K|4.1|30", "val": "capped"}
-{"key": "quick|K|4.2|30", "val": "capped"}
-{"key": "quick|K|4.300000000000001|30", "val": "capped"}
-{"key": "quick|K|4.4|30", "val": "capped"}
-{"key": "quick|K|4.5|30", "val": "capped"}
-{"key": "quick|K|4.6|30", "val": "capped"}
-{"key": "quick|K|4.7|30", "val": "capped"}
-{"key": "quick|K|4.800000000000001|30", "val": "capped"}
-{"key": "quick|K|4.9|30", "val": "capped"}
-{"key": "quick|K|5.0|30", "val": "capped"}
-{"key": "quick|K|5.1|30", "val": "capped"}
-{"key": "quick|K|5.2|30", "val": "capped"}
-{"key": "quick|K|5.300000000000001|30", "val": "capped"}
-{"key": "quick|K|5.4|30", "val": "capped"}
-{"key": "quick|K|5.5|30", "val": "capped"}
-{"key": "quick|K|5.6|30", "val": "capped"}
-{"key": "quick|K|5.700000000000001|30", "val": "capped"}
-{"key": "quick|K|5.800000000000001|30", "val": "capped"}
-{"key": "quick|K|5.9|30", "val": "capped"}
-{"key": "quick|K|6.0|30", "val": "capped"}
-{"key": "quick|K|6.1|30", "val": "capped"}
-{"key": "quick|K|6.200000000000001|30", "val": "capped"}
-{"key": "quick|K|6.300000000000001|30", "val": "capped"}
-{"key": "quick|K|6.4|30", "val": "capped"}
+{"key": "member|T|12.874726999999998", "val": {"x0": 12.874726999999998, "status": "plunge", "n": 91, "late_escape": true, "R": null, "fd": null, "S_trunc": 11.263433148801667, "H": 1.0800249583553523e-12, "carter": null}}
+{"key": "quick|K|1.6|30", "val": "plunge"}
+{"key": "quick|K|1.7000000000000002|30", "val": "stalled"}
+{"key": "quick|K|1.8|30", "val": "plunge"}
+{"key": "quick|K|1.9000000000000001|30", "val": "plunge"}
+{"key": "quick|K|2.0|30", "val": "plunge"}
+{"key": "quick|K|2.1|30", "val": "plunge"}
+{"key": "quick|K|2.2|30", "val": "plunge"}
+{"key": "quick|K|2.3000000000000003|30", "val": "plunge"}
+{"key": "quick|K|2.4000000000000004|30", "val": "plunge"}
+{"key": "quick|K|2.5|30", "val": "plunge"}
+{"key": "quick|K|2.6|30", "val": "plunge"}
+{"key": "quick|K|2.7|30", "val": "plunge"}
+{"key": "quick|K|2.8000000000000003|30", "val": "plunge"}
+{"key": "quick|K|2.9000000000000004|30", "val": "plunge"}
+{"key": "quick|K|3.0|30", "val": "plunge"}
+{"key": "quick|K|3.1|30", "val": "plunge"}
+{"key": "quick|K|3.2|30", "val": "plunge"}
+{"key": "quick|K|3.3000000000000003|30", "val": "plunge"}
+{"key": "quick|K|3.4000000000000004|30", "val": "plunge"}
+{"key": "quick|K|3.5|30", "val": "plunge"}
+{"key": "quick|K|3.6|30", "val": "plunge"}
+{"key": "quick|K|3.7|30", "val": "plunge"}
+{"key": "quick|K|3.8000000000000003|30", "val": "plunge"}
+{"key": "quick|K|3.9000000000000004|30", "val": "plunge"}
+{"key": "quick|K|4.0|30", "val": "stalled"}
+{"key": "quick|K|4.1|30", "val": "stalled"}
+{"key": "quick|K|4.2|30", "val": "stalled"}
+{"key": "quick|K|4.300000000000001|30", "val": "stalled"}
+{"key": "quick|K|4.4|30", "val": "stalled"}
+{"key": "quick|K|4.5|30", "val": "stalled"}
+{"key": "quick|K|4.6|30", "val": "stalled"}
+{"key": "quick|K|4.7|30", "val": "stalled"}
+{"key": "quick|K|4.800000000000001|30", "val": "stalled"}
+{"key": "quick|K|4.9|30", "val": "stalled"}
+{"key": "quick|K|5.0|30", "val": "stalled"}
+{"key": "quick|K|5.1|30", "val": "plunge"}
+{"key": "quick|K|5.2|30", "val": "plunge"}
+{"key": "quick|K|5.300000000000001|30", "val": "plunge"}
+{"key": "quick|K|5.4|30", "val": "plunge"}
+{"key": "quick|K|5.5|30", "val": "plunge"}
+{"key": "quick|K|5.6|30", "val": "plunge"}
+{"key": "quick|K|5.700000000000001|30", "val": "plunge"}
+{"key": "quick|K|5.800000000000001|30", "val": "plunge"}
+{"key": "quick|K|5.9|30", "val": "plunge"}
+{"key": "quick|K|6.0|30", "val": "stalled"}
+{"key": "quick|K|6.1|30", "val": "stalled"}
+{"key": "quick|K|6.200000000000001|30", "val": "stalled"}
+{"key": "quick|K|6.300000000000001|30", "val": "plunge"}
+{"key": "quick|K|6.4|30", "val": "stalled"}
 {"key": "quick|K|6.5|30", "val": "survive"}
 {"key": "quick|K|6.6|30", "val": "survive"}
 {"key": "quick|K|6.700000000000001|30", "val": "survive"}
