@@ -1,0 +1,143 @@
+{
+ "label": "d",
+ "ts": "ts45",
+ "E": 0.95,
+ "L_ts": -5.125,
+ "x0": 5.935068,
+ "ts_boundary": 5.934726203125,
+ "ts_sides": [
+  "capped",
+  "survive"
+ ],
+ "ts_members": [
+  {
+   "x0": 5.935068,
+   "status": "capped",
+   "n": 252,
+   "late_escape": false,
+   "R": 0.10248749869842623,
+   "fd": 0.014561644747678815,
+   "S_trunc": 28.700856696452547,
+   "H": 3.388400671155978e-13,
+   "carter": null
+  },
+  {
+   "x0": 5.934068,
+   "status": "capped",
+   "n": 81,
+   "late_escape": false,
+   "R": null,
+   "fd": null,
+   "S_trunc": 13.088973033673438,
+   "H": 1.4377388168895777e-13,
+   "carter": null
+  },
+  {
+   "x0": 5.936068000000001,
+   "status": "capped",
+   "n": 21,
+   "late_escape": false,
+   "R": null,
+   "fd": null,
+   "S_trunc": 2.6422754519574054,
+   "H": 3.375077994860476e-14,
+   "carter": null
+  },
+  {
+   "x0": 5.9330680000000005,
+   "status": "capped",
+   "n": 7,
+   "late_escape": false,
+   "R": null,
+   "fd": null,
+   "S_trunc": -1.179758763132793,
+   "H": 1.7763568394002505e-15,
+   "carter": null
+  },
+  {
+   "x0": 5.937068,
+   "status": "capped",
+   "n": 21,
+   "late_escape": false,
+   "R": null,
+   "fd": null,
+   "S_trunc": 0.6837407701866303,
+   "H": 2.9976021664879227e-14,
+   "carter": null
+  },
+  {
+   "x0": 5.931068000000001,
+   "status": "capped",
+   "n": 8,
+   "late_escape": false,
+   "R": null,
+   "fd": null,
+   "S_trunc": 3.402595725911703,
+   "H": 2.6645352591003757e-15,
+   "carter": null
+  },
+  {
+   "x0": 5.939068,
+   "status": "capped",
+   "n": 7,
+   "late_escape": false,
+   "R": null,
+   "fd": null,
+   "S_trunc": 0.3474083264505117,
+   "H": 3.774758283725532e-15,
+   "carter": null
+  },
+  {
+   "x0": 5.927068,
+   "status": "capped",
+   "n": 3,
+   "late_escape": false,
+   "R": null,
+   "fd": null,
+   "S_trunc": 2.5299104625147946,
+   "H": 1.4654943925052066e-14,
+   "carter": null
+  },
+  {
+   "x0": 5.943068,
+   "status": "capped",
+   "n": 7,
+   "late_escape": false,
+   "R": null,
+   "fd": null,
+   "S_trunc": -0.798039605423905,
+   "H": 2.398081733190338e-14,
+   "carter": null
+  }
+ ],
+ "kerr_L": -2.5625,
+ "kerr_transitions": [],
+ "kerr_members": null,
+ "kerr_note": "no matching survive/plunge transition at this Kerr level",
+ "ts_frac": 0.0,
+ "kerr_frac": null,
+ "late_escape_descriptive": {
+  "ts_frac": 0.0,
+  "kerr_frac": null
+ },
+ "ts_basin": {
+  "order": [],
+  "T": 0,
+  "V": 0,
+  "budget": 300,
+  "capped": [
+   5.935068,
+   5.934068,
+   5.936068000000001,
+   5.9330680000000005,
+   5.937068,
+   5.931068000000001,
+   5.939068,
+   5.927068,
+   5.943068
+  ]
+ },
+ "kerr_basin": null,
+ "kerr_carter_max": null,
+ "verdict": "INCONCLUSIVE"
+}

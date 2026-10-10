@@ -41,3 +41,24 @@ addendum-4 basin structure.
 
 **The layer realisations are sticky and inconsistent** (see addendum 3). That is why the single-orbit classification
 gave INCONCLUSIVE for L 2.9 on this build.
+
+## Ensembles a–g (addenda 3–5), run 2026-10-10/11: ALL INCONCLUSIVE, the instrument failed its design
+- **TS sides:**
+  - most neighbours ended "capped" (the 3M-evaluation cap), not "plunge";
+  - e.g. ensemble d had all 9 capped;
+  - the TS boundary search found "capped | survive" edges, not "plunge | survive".
+- **Kerr sides:**
+  - the scan found NO plunge/survive transition at any matched level;
+  - e.g. ensemble a: 138 survive, 45 capped, 1 plunge;
+  - so the Kerr ensembles were never built and the verdict rule could not apply.
+- **Diagnosis:**
+  - Orbits heading into the strong-field core stiffen, and DOP853 at rtol 1e−13 exhausts the evaluation budget before
+    they reach the x < 1.5 plunge cut.
+  - So "capped" here mostly means "plunging into the core", not "numerical stall near a singularity".
+  - Addendum 5's rule (capped is neither S nor P) therefore removed exactly the plunge outcomes the basin score needs.
+- **Descriptive only (no verdict):**
+  - TS ensemble b shows S/P/capped interleaving (T = 2 over non-capped members);
+  - the others show survive vs capped patterns.
+- **Status:** V11 provides NO independent confirmation yet. ansatz §150 (α, the matched table) stands on its own
+  instrument. Any V11 rerun with a physically defined plunge criterion (inside the barrier radius, moving inward) and a
+  stall-based (per-chunk) cap would be POST-DATA and labelled as such.
