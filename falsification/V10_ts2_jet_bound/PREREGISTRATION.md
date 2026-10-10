@@ -87,3 +87,30 @@ falls below 10%. Single-threaded. The valence-10 matrix is about 24024 × 22308 
 This is the "beyond Vollmer" claim, single-implementation so far (ansatz's). The targets are TS p = 3/5 (`t1o2`) at
 P₁ and P₂, valence 8, 9 and 10, with N = r+1, then r+2 if needed. Trivial counts are 25, 30 and 36. The rule and
 guard are unchanged.
+
+## Addendum 4 (2026-10-11, before running): V10-MN, an independent jet bound for Manko–Novikov
+This independently reproduces ansatz §151 (MN: invariant-KT bound trivial at valence 1–10). It's non-blind: ansatz's
+headline result is known, but not its code or its points.
+
+**The bridge's own build:**
+- The MN metric comes from the bridge's V9 transcription (`v9_nve.mn_functions`), with
+  p1 = (M, a, β) = (5, 3, 1/5) and p2 = (13, 5, −1/3).
+- Exponentials and square roots are handled inside the bridge's own truncated-series evaluator over GF(q):
+  - √(base): the base's exact value at the point must be a rational square r₀². The series is then
+    r₀·(1 + e)^{1/2} with e nilpotent.
+  - exp(arg): the exact constant c = arg(P) is rational. With N = the lcm of the denominators of all such c, set
+    exp(c) = t^{cN} for one random t ∈ GF(q)*. The remainder is Σ (arg − c)^k / k!.
+- **Soundness:** the true values are a specialisation of Q(T) at T = e^{1/N}, which is transcendental (Lindemann). So
+  the true rank equals the rank over Q(T), which is ≥ rank_q(t). The bound can therefore only be over-stated.
+- **Points** (my own, with x² + y² − 1 a rational square): P_A = (3/2, 1/3), R₀ = 7/6; P_B = (2, −1/4), R₀ = 7/4.
+
+**Gates:**
+1. **Kerr limit:** the same code with β = 0 must give 2, 5, 8, 14 at valence 1–4, at P_A.
+2. **Series identities:** exp(g)·exp(−g) = 1 and (√b)² = b, exactly, on the MN pieces at both points.
+3. **Draw independence:** if any bound is above trivial, repeat with a second t. Report the minimum.
+
+**Targets:** p1 and p2, at P_A and P_B, valence 1–10, N = r+1 (escalating to r+2 if above trivial).
+
+**Verdict:** CONFIRMED at a valence if bound = trivial at both points for both parameter sets; otherwise INCONCLUSIVE.
+
+**Resources:** single-threaded, run while 3 cores are free; it stops if memory free < 10%.
