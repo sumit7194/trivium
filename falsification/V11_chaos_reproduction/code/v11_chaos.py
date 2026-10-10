@@ -20,6 +20,42 @@ def carter(case, E, L):
     return lambda s: (1 - s[1]**2)*s[3]**2 + s[1]**2*(a*a*(1 - E*E) + L*L/(1 - s[1]**2))
 
 def build(case, E, L):
+    """Compact fast build (V11 implementation note, 2026-10-10): only the scalar pieces A = g^xx, B = g^yy and W, with
+    their first and second derivatives, are generated (common-subexpression eliminated) and compiled with numba; the
+    vector field F and exact Jacobian J are assembled analytically from them. Same mathematics as the original build."""
+    import numba
+    g = get_metric(case); E, L = sp.nsimplify(E), sp.nsimplify(L)
+    det = g['g_TT']*g['g_phiphi'] - g['g_Tphi']**2
+    Gtt, Gtp, Gpp = g['g_phiphi']/det, -g['g_Tphi']/det, g['g_TT']/det
+    A, B = 1/g['g_xx'], 1/g['g_yy']
+    W = Gtt*E**2 - 2*Gtp*E*L + Gpp*L**2
+    flat = []
+    for f in (A, B, W):
+        fx, fy = sp.diff(f, X), sp.diff(f, Y)
+        flat += [f, fx, fy, sp.diff(fx, X), sp.diff(fx, Y), sp.diff(fy, Y)]
+    pieces = numba.njit(sp.lambdify([X, Y], flat, 'math', cse=True))
+
+    @numba.njit
+    def FJ(x, y, px, py):
+        q = pieces(x, y)
+        a, ax, ay, axx, axy, ayy = q[0], q[1], q[2], q[3], q[4], q[5]
+        b, bx, by, bxx, bxy, byy = q[6], q[7], q[8], q[9], q[10], q[11]
+        w, wx, wy, wxx, wxy, wyy = q[12], q[13], q[14], q[15], q[16], q[17]
+        px2, py2 = px*px, py*py
+        F = (a*px, b*py, -0.5*(ax*px2 + bx*py2 + wx), -0.5*(ay*px2 + by*py2 + wy))
+        J = ((ax*px, ay*px, a, 0.0), (bx*py, by*py, 0.0, b),
+             (-0.5*(axx*px2 + bxx*py2 + wxx), -0.5*(axy*px2 + bxy*py2 + wxy), -ax*px, -bx*py),
+             (-0.5*(axy*px2 + bxy*py2 + wxy), -0.5*(ayy*px2 + byy*py2 + wyy), -ay*px, -by*py))
+        return F, J
+
+    def fW(x, y): return pieces(x, y)[12]
+    def fGyy(x, y): return pieces(x, y)[6]
+    def fH(x, y, px, py):
+        q = pieces(x, y); return 0.5*(q[0]*px*px + q[6]*py*py + q[12])
+    return (FJ, None), None, fW, fGyy, fH
+
+def build_reference(case, E, L):
+    """The original (slow) build, kept only to validate the compact build."""
     g = get_metric(case); E, L = sp.nsimplify(E), sp.nsimplify(L)
     det = g['g_TT']*g['g_phiphi'] - g['g_Tphi']**2
     Gtt, Gtp, Gpp = g['g_phiphi']/det, -g['g_Tphi']/det, g['g_TT']/det
@@ -30,10 +66,7 @@ def build(case, E, L):
     s = [X, Y, px, py]
     F = [sp.diff(H, px), sp.diff(H, py), -sp.diff(H, X), -sp.diff(H, Y)]
     J = [[sp.diff(f, v) for v in s] for f in F]
-    lam = lambda e, args: sp.lambdify(args, e, 'numpy', cse=True)
-    FJ = lam([F, J], s)                                   # joint CSE (addendum 2 speed-up)
-    fF = lambda *a: FJ(*a)[0]; fJ = FJ
-    return (FJ, None), None, lam(W, [X, Y]), lam(Gyy, [X, Y]), lam(H, s)
+    return sp.lambdify(s, [F, J], 'numpy')
 
 def frequency_drift(xs):
     n = len(xs)

@@ -126,3 +126,16 @@ plunge. Late escape stays as a descriptive column only.
 1. V counts only STRICT reversals of n; equal neighbouring counts are not violations.
 2. "S" means the member survived the 300-crossing budget, not that it survives forever. The budget is stated next to
    every T.
+
+## Implementation note (2026-10-10 ~23:00, before ANY ensemble data existed)
+The first ensemble launch made no progress. Evaluating the full symbolic F and J took ~3.4 ms per call, an 814k-character
+expression with no effective CSE, and no orbit finished in ~2.7 h. A power cut also killed the very first launch.
+
+**Replacement:** a compact build. Only A = g^xx, B = g^yy and W are generated, with their first and second derivatives,
+CSE'd and numba-compiled; F and the exact J are then assembled analytically.
+
+**Validated before use:**
+- It agrees with the original build to ≤ 2.2e−11 relative, at 80 random points across ts45, ts35, zv and kerr45.
+- The flagged Kerr orbit reproduces its calibration: regular, S_trunc 4.1, fd 1e−4, Carter 5.9e−13.
+
+The mathematics, criteria and scoring are unchanged (addendum 4).
