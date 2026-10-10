@@ -92,3 +92,33 @@ on the torus) and is DROPPED.
    - **NOT CONFIRMED:** the TS fraction is 0.
    - **INCONCLUSIVE:** anything else.
 3. **Single-orbit S_ex, fd and R** at both tolerances are still reported for comparison with ansatz.
+
+## Addendum 4 (ensembles running, NO ensemble result yet seen): the scoring is replaced, the premise was wrong
+**Correction, raised by ansatz before any data.** Addendum 3's premise ("a bound orbit with ≥ 50 crossings can never
+later plunge") is false near the separatrix. In an integrable system, plunge-or-not is fixed at t = 0, but an orbit
+just on the plunge side zoom-whirls near the unstable spherical orbit. That costs ~log(1/δ) of time per approach, with
+polar oscillations, so it can make 50+ crossings and then plunge with Carter exactly conserved. Late escape is
+therefore NOT a non-integrability signature by itself.
+
+**Replacement primary criterion: escape-basin structure across each 9-member ensemble.** The data are unchanged; only
+the scoring changes.
+
+Order the members by x0. Record each outcome as S (survives 300 crossings) or P(n) (plunges after n crossings).
+- **Integrable expectation:** at most ONE S/P status change within ±0.008. On the P side, n is monotone, increasing
+  toward the boundary (≈ −log|x0 − x_b|).
+- **Chaotic (fractal basin) expectation:** S and P interleave (≥ 2 status changes), and/or n is non-monotone on a P run.
+
+Scores:
+- T = the number of S/P status changes;
+- V = the number of monotonicity violations of n along each P run (oriented toward the adjacent S block, or toward the
+  larger n if there is no S block).
+
+Per orbit:
+- **CONFIRMED (bridge):** TS has T ≥ 2 or V ≥ 2, AND the matched Kerr ensemble has T ≤ 1 and V = 0, with Carter
+  conserved (max relative deviation < 1e−8) on every Kerr member.
+- **NOT CONFIRMED:** TS has T ≤ 1 and V = 0.
+- **INCONCLUSIVE:** anything else, including any Kerr member with T ≥ 2, V ≥ 1, or a Carter violation. That would mean
+  the instrument fails its control.
+
+**Also reported:** every member's n, status, H drift, R and fd, and, as ansatz asked, the Kerr crossing counts before
+plunge. Late escape stays as a descriptive column only.
