@@ -235,3 +235,30 @@ INSUFFICIENT. That is a design error.
 - SECONDARY = the outer transition, treated identically. It is reported, but kept out of the verdict.
 
 Nothing else changes.
+
+## Addendum 6 (2026-10-11, written while G3 is running, after seeing 2 of its 300 rows): G3 is ill-posed on chaotic orbits
+**Seen so far:** 2 TS L1 rows where numba says SURVIVE and scipy says PLUNGE (x0 = 9.900835…, 9.912877…). Probed with
+the numba integrator alone, both orbits' outcomes change with tolerance:
+- rtol 1e−10, 1e−12, 1e−13 → PLUNGE, after 124–197 crossings;
+- rtol 1e−11, 1e−14 → SURVIVE.
+
+These are long chaotic transients. Their outcome depends on perturbations at the integration-error level, so no two
+correct integrators must agree on them. "≥ 99% identical outcomes" is therefore not a valid integrator test on TS
+windows.
+
+**G3′ (replaces G3; fixed before the remaining G3 rows are read):**
+- **Kerr systems (s1, s5):** unchanged. ≥ 99% identical outcomes, and survivors' first 20 section x agree to 1e−7.
+- **TS systems (s0, s4):**
+  - (i) every numba/scipy outcome disagreement must be **realisation-sensitive**, meaning the numba outcome is not
+    invariant across rtol ∈ {1e−11, 1e−12, 1e−13, 1e−14};
+  - (ii) among orbits that ARE invariant across those tolerances, ≥ 99% identical outcomes;
+  - (iii) the **first** section crossing must agree to 1e−8 for every orbit with ≥ 1 crossing in both, since
+    divergence has not had time to grow by then;
+  - (iv) on survivors that are invariant across tolerances, the first-20 dx is reported; it is not gated, because
+    chaotic orbits legitimately diverge.
+- **Reported quantity:** the realisation-sensitive fraction r of each TS window, as a by-product. It feeds the
+  interpretation, not the primary fit. The primary fit is unchanged.
+
+**Interpretive note, stated now.** An orbit whose outcome flips under integration-error perturbations is a point
+where the outcome is sensitive at every resolvable scale. In f(ε) such points count as uncertain at every ε, as they
+should for chaotic dynamics. E1's rule for excluding noise-dominated ε stays as pre-registered.
