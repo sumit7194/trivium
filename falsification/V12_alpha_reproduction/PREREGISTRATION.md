@@ -136,3 +136,57 @@ interval") is unchanged and matches the spec.
   This is a second analytic check on the same code.
 - No gate value had been compared to BPT, ansatz or anything else when this was written. The only output seen was the
   predicate's True/False pattern on the TS 4/5 grid.
+
+## Addendum 2 (2026-10-11, post-failure, synthetic data only, before any real orbit): G4 was mis-calibrated
+**G4 as pre-registered FAILED** (`results/v12_G4.json`, seed 4, K = 2000):
+
+| Case | Hits | α̂ (MLE) | CI | Band | Result |
+|---|---|---|---|---|---|
+| smooth | 399/156/49/23/8 | 0.871 | [0.78, 0.98] | [0.95, 1.05] | FAIL |
+| Cantor | — | 0.285 | — | 0.369 ± 0.05 | FAIL |
+| random | — | 0.0025 | — | [−0.05, 0.05] | PASS |
+
+**Root cause: the gate, not the estimator.**
+1. **Sampling spread was ignored.** Across 20 seeds (K = 2000, w = 0.03) the smooth α̂ has mean 0.987 and sd 0.041.
+   Its bootstrap CI covers 1 in 20/20. A single-draw band of ±0.05 fails about 25% of the time by design; seed 4 is
+   about a 3σ low draw.
+2. **The target ignored finite-range bias of the TRUTH.**
+   - The exact Cantor f(ε), from a deterministic 2·10⁶-point grid, has slope 0.322 over the pre-registered
+     ε ∈ [3e−5, 3e−3] (ε/w ∈ [1e−3, 1e−1]).
+   - Its local slopes are 0.236, 0.320, 0.343, 0.373. The asymptotic 0.369 is reached only at smaller ε/w
+     (0.363 over ε = w·3^−k, k = 3–11).
+   - So over this range, the quantity the estimator measures is an **effective exponent**, and 0.369 was the wrong
+     target.
+
+**Consequence for the real study (stated before any real data).** V12's α, like ansatz's, is an effective exponent
+over [3e−5, 3e−3], not an asymptotic dimension. Single-level α̂ carries a sampling sd of about 0.04 near α ≈ 1. The Kerr
+band [0.85, 1.15] is about ±3.5σ and is kept.
+
+**G4′ (replaces G4).** 20 seeds per synthetic case (K = 2000, w = 0.03, the same ε set). The population target α_pop
+is the binomial-likelihood fit to the exact f(ε) from the dense grid, over the ε with ≥ 10 expected hits.
+- smooth: |mean α̂ − α_pop| ≤ 0.03, and CI coverage of α_pop ≥ 17/20;
+- Cantor: the same two criteria;
+- random: |mean α̂| ≤ 0.03.
+The failing seed-4 run stays on record.
+
+## Addendum 3 (2026-10-11, post-failure, synthetic only): G4′ failed on Cantor CI coverage; decision rule written BEFORE measuring
+**G4′ result** (`results/v12_G4p.json`):
+
+| Case | Mean α̂ | α_pop | sd | Coverage | Result |
+|---|---|---|---|---|---|
+| smooth | 0.993 | 1 | 0.046 | 20/20 | PASS |
+| Cantor | 0.310 | 0.305 | 0.013 | **16/20** (needed ≥ 17) | **FAIL** |
+| random | 0.0013 | — | — | — | PASS |
+
+The bias criterion passed for Cantor; only coverage failed. 16/20 has probability about 0.016 under exact 95%
+coverage, so the percentile bootstrap may under-cover on fractal boundaries.
+
+**Rule, fixed before the 200-seed measurement:**
+- Measure coverage of α_pop over 200 seeds (600–799) for smooth and Cantor.
+- If both are ≥ 90%: keep the percentile bootstrap, report the measured coverages next to every V12 CI, and treat G4′
+  as passed on bias plus measured coverage.
+- If either is < 90%: switch the primary CI to a bootstrap-t (studentized; inner bootstrap 100) and re-run this
+  200-seed check on the new interval. The new interval must reach ≥ 90% on both before any real run.
+
+**Why this doesn't touch the verdicts.** The primary verdict thresholds (TS CI upper end < 0.5; Kerr CI ∋ 1) are
+unchanged. Kerr's smooth-case coverage is the relevant one for the Kerr criterion, and that was 20/20.
