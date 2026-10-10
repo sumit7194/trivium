@@ -67,3 +67,28 @@ controls, it is reported, and V11's TS verdicts rest on S_ex and fd only, as INC
 S_ex, fd and (for Kerr) the Carter deviation are all reported alongside.
 
 **Speed-up:** F and J are lambdified jointly with shared common-subexpression elimination. The arithmetic is unchanged.
+
+## Addendum 3 (after the ZV calibration runs, before any TS replay): a late-escape criterion and neighbourhood ensembles
+**What the ZV calibration showed.** The same layer orbits give different realisations under tiny arithmetic changes. The
+joint-CSE build changes the rounding.
+- L = 2.9 at 1e−13: no plunge in 300 crossings, R 0.002, fd 1e−4, S_trunc 9.6. Looks regular.
+- L = 2.9 at 1e−11: plunges at 186, R 0.044.
+- L = 3.0: R 0.0015 and 0.58 at the two tolerances.
+
+**Consequence.** Single-orbit classification of sticky layer orbits is realisation-dependent. That is inherent to thin
+chaotic layers, not a bug. **D (the nearest-neighbour dimension) is broken for quasi-periodic orderings** (it gives 50
+on the torus) and is DROPPED.
+
+**Added criteria, physically grounded, for the TS replays:**
+1. **Late escape (primary).** In an integrable system a bound orbit lies on an invariant torus with fixed radial turning
+   points. One that completes ≥ 50 section crossings can never later plunge, except through integration error across
+   an unstable manifold. So an orbit counts as NON-REGULAR if it plunges after ≥ 50 crossings at BOTH tolerances, with
+   |2H+1| < 1e−9 at its last crossing. For Kerr, this is backed by the Carter deviation check.
+2. **Neighbourhood ensemble.** For each TS orbit a)–g), integrate 8 neighbours at x0 ± {0.001, 0.002, 0.004, 0.008}, at
+   rtol 1e−13, plus the same 9 initial-condition offsets on the matched Kerr level, i.e. the same E and L/m with x0 at
+   the same relative position in its survive window. Record the fraction that is NON-REGULAR (late escape, or R above the
+   addendum-2 threshold if R separates the controls).
+   - **CONFIRMED (bridge):** the TS fraction ≥ 3/9 and the Kerr fraction = 0 at that level.
+   - **NOT CONFIRMED:** the TS fraction is 0.
+   - **INCONCLUSIVE:** anything else.
+3. **Single-orbit S_ex, fd and R** at both tolerances are still reported for comparison with ansatz.
