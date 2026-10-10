@@ -122,3 +122,7 @@ Per orbit:
 
 **Also reported:** every member's n, status, H drift, R and fd, and, as ansatz asked, the Kerr crossing counts before
 plunge. Late escape stays as a descriptive column only.
+*Addendum 4 clarifications (still no ensemble result seen), from ansatz:*
+1. V counts only STRICT reversals of n; equal neighbouring counts are not violations.
+2. "S" means the member survived the 300-crossing budget, not that it survives forever. The budget is stated next to
+   every T.
