@@ -190,3 +190,10 @@ coverage, so the percentile bootstrap may under-cover on fractal boundaries.
 
 **Why this doesn't touch the verdicts.** The primary verdict thresholds (TS CI upper end < 0.5; Kerr CI ∋ 1) are
 unchanged. Kerr's smooth-case coverage is the relevant one for the Kerr criterion, and that was 20/20.
+
+**Addendum 3 outcome** (`results/v12_G4p_coverage200.json`, seeds 600–799):
+- smooth: coverage 192/200 = **96%**; mean α̂ 0.999, sd 0.053.
+- Cantor: coverage 186/200 = **93%**; mean α̂ 0.304 against α_pop 0.305, sd 0.011.
+
+Both are ≥ 90%, so under the rule above the percentile bootstrap is kept and **G4′ PASSES**. Every V12 CI will be
+reported with these measured coverages (smooth 96%, fractal 93%).
