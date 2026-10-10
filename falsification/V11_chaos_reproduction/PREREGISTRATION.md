@@ -33,3 +33,13 @@ Each TS candidate ansatz reports gets reproduced at both tolerances.
 - **REPRODUCED:** CHAOTIC at both.
 - **NOT REPRODUCED:** REGULAR at both.
 - **INCONCLUSIVE:** the two tolerances disagree.
+
+## Addendum 1 (before any Kerr replay): Kerr in ansatz's chart, a Carter diagnostic, and the truncated score
+- **Kerr in the TS chart:** `kerr45` (p = 4/5) and `kerr35` (p = 3/5), built from the δ = 1 Ernst potential with the
+  same conventions (`code/kerr_ts_chart.py`). The twist equations are satisfied exactly, and R_ab = 0 exactly at 3
+  rational points.
+- **Carter diagnostic:** Q = (1−y²)p_y² + y²(a²(1−E²) + L²/(1−y²)), with a = q/p, recorded as the maximum relative
+  deviation along the orbit while x ≥ 1.5. A conserved Q together with a "chaotic" score marks a detector false positive.
+- **Truncated score:** classification now uses S_ex truncated at the last section crossing, the same rule as ansatz's
+  amendment 4. Untruncated S_ex is still reported. The ZV gate is re-checked under the truncated score before any Kerr
+  replay.
