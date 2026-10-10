@@ -139,3 +139,17 @@ CSE'd and numba-compiled; F and the exact J are then assembled analytically.
 - The flagged Kerr orbit reproduces its calibration: regular, S_trunc 4.1, fd 1e−4, Carter 5.9e−13.
 
 The mathematics, criteria and scoring are unchanged (addendum 4).
+
+## Addendum 5 (2026-10-10 ~23:20, before ANY ensemble data existed): step cap
+Diagnosis: a TS neighbour orbit (ts45, x0 − 0.05) stalls inside a single 10-τ chunk. It takes ever-smaller steps,
+presumably near a TS singular region, and with no step limit it hangs. ansatz's design has a step cap for the same
+reason.
+
+**Rule:**
+- An orbit integration is capped at 3,000,000 right-hand-side evaluations; on reaching the cap, status = "capped".
+- A capped orbit is NEVER counted as S or P.
+- In the basin score, capped members are excluded from the ordered S/P sequence, and they're reported.
+- An ensemble with fewer than 6 non-capped members, on either the TS or the Kerr side, is INCONCLUSIVE.
+- In quick classifications, "capped" is its own class, so it neither brackets nor matches a survive/plunge transition.
+
+Everything else is unchanged.

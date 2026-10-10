@@ -12,7 +12,7 @@ def _quick(fns, x0, n=30):
         r = run_orbit(*fns, x0, 1e-11, ncross=n)
     except (ValueError, ZeroDivisionError):
         return 'forbidden'
-    return 'plunge' if r['status'] == 'plunge' else ('survive' if r['crossings'] >= n else r['status'])
+    return 'plunge' if r['status'] == 'plunge' else ('survive' if r['crossings'] >= n else r['status'])   # 'capped' stays its own class
 
 def allowed(fns, x0):
     fW, fGyy = fns[2], fns[3]
@@ -57,7 +57,8 @@ def basin_score(members):
     """Addendum 4: order by x0; S = survived the 300-crossing budget, P(n) = plunged after n crossings.
     T = number of S/P status changes; V = strict reversals of n along each P run, oriented toward the adjacent S block
     (or toward the larger-n end if there is no adjacent S block / S on both sides)."""
-    ms = sorted(members, key=lambda m: m['x0'])
+    capped = [m['x0'] for m in members if m['status'] == 'capped']
+    ms = sorted([m for m in members if m['status'] != 'capped'], key=lambda m: m['x0'])
     st = ['P' if m['status'] == 'plunge' else 'S' for m in ms]
     T = sum(1 for i in range(len(st) - 1) if st[i] != st[i + 1])
     V = 0; i = 0
@@ -71,7 +72,7 @@ def basin_score(members):
         seq = ns if toward_right else ns[::-1]
         V += sum(1 for a, b in zip(seq[:-1], seq[1:]) if b < a)
         i = j + 1
-    return dict(order=[(m['x0'], s_, m['n']) for m, s_ in zip(ms, st)], T=T, V=V, budget=300)
+    return dict(order=[(m['x0'], s_, m['n']) for m, s_ in zip(ms, st)], T=T, V=V, budget=300, capped=capped)
 
 if __name__ == '__main__':
     ts, E, Lts, x0, m_ts, kc, m_k, label = sys.argv[1], float(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4]), float(sys.argv[5]), sys.argv[6], float(sys.argv[7]), sys.argv[8]
@@ -109,7 +110,8 @@ if __name__ == '__main__':
     out['kerr_carter_max'] = kcarter
     ts_ch = bt['T'] >= 2 or bt['V'] >= 2
     kerr_ok = bk is not None and bk['T'] <= 1 and bk['V'] == 0 and kcarter is not None and kcarter < 1e-8
-    out['verdict'] = ('CONFIRMED' if ts_ch and kerr_ok else 'NOT CONFIRMED' if (bt['T'] <= 1 and bt['V'] == 0) else 'INCONCLUSIVE')
+    enough = len(bt['order']) >= 6 and (bk is None or len(bk['order']) >= 6)
+    out['verdict'] = ('INCONCLUSIVE' if not enough else 'CONFIRMED' if ts_ch and kerr_ok else 'NOT CONFIRMED' if (bt['T'] <= 1 and bt['V'] == 0) else 'INCONCLUSIVE')
     print(label, 'VERDICT', out['verdict'], 'TS T/V', bt['T'], bt['V'], 'Kerr T/V', None if bk is None else (bk['T'], bk['V']),
           'Kerr Carter max', kcarter, '| late-escape (descriptive) TS', round(fts, 3), 'Kerr', fk, flush=True)
     json.dump(out, open(f'../results/ens_{label}.json', 'w'), indent=1, default=str)

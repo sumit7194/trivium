@@ -99,11 +99,15 @@ def nn_dimension(xs, ps):
     d1, dh = med_nn(a), med_nn(a[:len(a) // 2])
     return float(np.log(2) / np.log(dh / d1)) if dh > d1 else float('inf')
 
-def run_orbit(fF, fJ, fW, fGyy, fH, x0, tol, ncross=300, tau_max=5e6, dtau=10.0, Qf=None):
+class StepCap(Exception): pass
+
+def run_orbit(fF, fJ, fW, fGyy, fH, x0, tol, ncross=300, tau_max=5e6, dtau=10.0, Qf=None, max_evals=3_000_000):
     py0 = math.sqrt((-1 - fW(x0, 0.0)) / fGyy(x0, 0.0))
     s = np.array([x0, 0.0, 0.0, py0]); v = np.array([1, 0.7, -0.4, 0.3]); v = v / np.linalg.norm(v)
-    FJ = fF[0]
+    FJ = fF[0]; nev = [0]
     def rhs(t, z):
+        nev[0] += 1
+        if nev[0] > max_evals: raise StepCap()
         Fv, Jv = FJ(*z[:4])
         return np.concatenate([np.array(Fv, float), np.array(Jv, float) @ z[4:]])
     def ev(t, z): return z[1]
@@ -111,7 +115,10 @@ def run_orbit(fF, fJ, fW, fGyy, fH, x0, tol, ncross=300, tau_max=5e6, dtau=10.0,
     tau = 0.0; S = 0.0; xs = []; pxs = []; status = 'max_tau'; tau_last = 0.0
     Q0 = Qf(s) if Qf else None; Qdev = 0.0; S_cross = None; tau_cross = None; prev_cross = (None, None)
     while tau < tau_max:
-        sol = solve_ivp(rhs, (tau, tau + dtau), np.concatenate([s, v]), method='DOP853', rtol=tol, atol=tol * 1e-2, events=ev)
+        try:
+            sol = solve_ivp(rhs, (tau, tau + dtau), np.concatenate([s, v]), method='DOP853', rtol=tol, atol=tol * 1e-2, events=ev)
+        except StepCap:
+            status = 'capped'; break
         for ze in sol.y_events[0]:
             if ze[3] > 0: xs.append(ze[0]); pxs.append(ze[2])
         z = sol.y[:, -1]; s = z[:4]; v = z[4:]; tau = sol.t[-1]
