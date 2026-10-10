@@ -50,17 +50,25 @@ def allowed_interval(sysd):
     if hi < 400: hi = brentq(lambda x: W(x) + 1, xs[np.argmax(~ok) - 1], hi, xtol=1e-13)
     return lo, hi
 
+def _changes(sysd, xs):
+    oc = np.array([outcome(sysd, x)[0] for x in xs]); return oc, np.flatnonzero(oc[1:] != oc[:-1])
+
 def window(sysd, n=400):
+    """Addendum 5: two-stage window on the INNER transition (primary) and the OUTER transition (secondary)."""
     lo, hi = allowed_interval(sysd)
-    xs = np.linspace(lo, hi, n + 2)[1:-1]; oc = np.array([outcome(sysd, x)[0] for x in xs])
-    ch = np.flatnonzero(oc[1:] != oc[:-1])
-    step = xs[1] - xs[0]
-    if len(ch) == 0: return dict(lo=lo, hi=hi, W=None, n_changes=0)
-    a = xs[ch[0]] - 3*step; b = xs[ch[-1] + 1] + 3*step
-    if b - a < 10*max(EPS):
-        c = 0.5*(a + b); a, b = c - 5*max(EPS), c + 5*max(EPS)
-    a, b = max(a, lo + max(EPS)*1.0001), min(b, hi - max(EPS)*1.0001)   # keep x0 +- eps inside the start region
-    return dict(lo=lo, hi=hi, W=[a, b], n_changes=int(len(ch)), scan_outcomes=np.bincount(oc, minlength=5).tolist())
+    xs = np.linspace(lo, hi, n + 2)[1:-1]; oc, ch = _changes(sysd, xs); step = xs[1] - xs[0]
+    res = dict(lo=lo, hi=hi, n_changes=int(len(ch)), scan_outcomes=np.bincount(oc, minlength=5).tolist())
+    if len(ch) == 0: res['W'] = None; return res
+    for name, c in (('W', ch[0]), ('W_outer', ch[-1])):
+        a0, b0 = max(lo, xs[c] - 3*step), min(hi, xs[c + 1] + 3*step)
+        xd = np.linspace(a0, b0, n); ocd, chd = _changes(sysd, xd); sd = xd[1] - xd[0]
+        a, b = xd[chd[0]] - 3*sd, xd[chd[-1] + 1] + 3*sd
+        if b - a < 10*max(EPS):
+            cc = 0.5*(a + b); a, b = cc - 5*max(EPS), cc + 5*max(EPS)
+        a, b = max(a, lo + max(EPS)*1.0001), min(b, hi - max(EPS)*1.0001)
+        res[name] = [float(a), float(b)]; res[name + '_dense_changes'] = int(len(chd))
+        res[name + '_dense_outcomes'] = np.bincount(ocd, minlength=5).tolist()
+    return res
 
 def _batch(args):
     sysd, x0s, eps, px_mode, N, rtol = args
@@ -76,13 +84,13 @@ def _batch(args):
         base.append(ob); minus.append(om); plus.append(op)
     return np.array(base), np.array(minus), np.array(plus), hd
 
-def run(tag, sysl, eps, K=2000, workers=6, batch=50, px_mode=False, N=N_CROSS, rtol=RTOL, seed_base=12000):
+def run(tag, sysl, eps, K=2000, workers=6, batch=50, px_mode=False, N=N_CROSS, rtol=RTOL, seed_base=12000, wkey='W'):
     from multiprocessing import get_context
     wins = json.load(open(os.path.join(RES, 'v12_windows.json')))
     for sysd in sysl:
         out = os.path.join(RES, f'v12_{tag}_s{sysd["idx"]}.npz')
         if os.path.exists(out): print('done already', out); continue
-        a, b = wins[str(sysd['idx'])]['W']
+        a, b = wins[str(sysd['idx'])][wkey]
         x0 = np.random.default_rng(seed_base + sysd['idx']).uniform(a, b, K)
         ckdir = os.path.join(RES, f'ck_{tag}_s{sysd["idx"]}'); os.makedirs(ckdir, exist_ok=True)
         jobs = [(i, (sysd, x0[i:i + batch], eps, px_mode, N, rtol)) for i in range(0, K, batch)
@@ -98,10 +106,10 @@ def run(tag, sysl, eps, K=2000, workers=6, batch=50, px_mode=False, N=N_CROSS, r
                  H_drift_max=max(float(p['hd']) for p in parts), sysd=json.dumps(sysd))
         print('wrote', out, flush=True)
 
-def G3(n_per=75):
+def G3(n_per=75, only=None):
     from v12_ref import make_ref
     wins = json.load(open(os.path.join(RES, 'v12_windows.json'))); sysl = systems(); rows = []
-    for sysd in [s for s in sysl if s['level'] in ('L1', 'L3')]:
+    for sysd in [s for s in sysl if s['level'] in ('L1', 'L3') and (only is None or s['idx'] == only)]:
         ref = make_ref(sysd['case'], sysd['E'], sysd['L']); a, b = wins[str(sysd['idx'])]['W']
         for x0 in np.random.default_rng(3000 + sysd['idx']).uniform(a, b, n_per):
             o, r = outcome(sysd, x0, record=20); q = ref(x0, 0.0, N_CROSS, RTOL, RTOL*ATOL_F)
@@ -113,7 +121,7 @@ def G3(n_per=75):
     same = np.mean([r['same'] for r in rows]); dxs = [r['dx20'] for r in rows if r['survivor']]
     summ = dict(n=len(rows), same_frac=float(same), survivors=len(dxs), max_dx20=float(max(dxs) if dxs else 0),
                 n_dx_over_1e7=int(sum(d > 1e-7 for d in dxs)), pass_=bool(same >= 0.99 and all(d <= 1e-7 for d in dxs)))
-    json.dump(dict(summary=summ, rows=rows), open(os.path.join(RES, 'v12_G3.json'), 'w'), indent=1)
+    json.dump(dict(summary=summ, rows=rows), open(os.path.join(RES, f'v12_G3{"" if only is None else "_s%d" % only}.json'), 'w'), indent=1)
     print(json.dumps(summ))
 
 if __name__ == '__main__':
@@ -125,8 +133,9 @@ if __name__ == '__main__':
         for s in systems():
             w[str(s['idx'])] = {**window(s), **s}; print(json.dumps(w[str(s['idx'])]), flush=True)
         json.dump(w, open(os.path.join(RES, 'v12_windows.json'), 'w'), indent=1)
-    elif mode == 'G3': G3()
+    elif mode == 'G3': G3(only=int(sys.argv[2]) if len(sys.argv) > 2 else None)
     elif mode == 'primary': run('primary', systems(), EPS, workers=workers)
+    elif mode == 'outer': run('outer', systems(), EPS, workers=workers, seed_base=15000, wkey='W_outer')
     elif mode == 'E1':
         L1 = [s for s in systems() if s['level'] == 'L1']
         run('E1_N300', L1, EPS_E1, workers=workers, rtol=1e-13, seed_base=13000)

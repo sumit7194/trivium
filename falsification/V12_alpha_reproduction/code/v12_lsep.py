@@ -5,8 +5,17 @@ from scipy.optimize import brentq, minimize_scalar
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, '../../V11_chaos_reproduction/code'))
 _cwd = os.getcwd(); os.chdir(os.path.join(HERE, '../../V11_chaos_reproduction/code'))
-from v11_chaos import get_metric, X, Y
+from v11_chaos import get_metric as _get_metric_v11, X, Y
 os.chdir(_cwd)
+import sympy as _sp
+_REG = {}
+def get_metric(case):
+    """Addendum 5: Kerr components are symbolically cancelled (the V11 chart forms are numerically singular at the
+    ergosurface); TS components come from the sealed files, which are already regular."""
+    if case not in _REG:
+        g = _get_metric_v11(case)
+        _REG[case] = {k: _sp.factor(_sp.cancel(v)) for k, v in g.items()} if case.startswith('kerr') else g
+    return _REG[case]
 
 P = {'ts45': sp.Rational(4, 5), 'ts35': sp.Rational(3, 5), 'kerr45': sp.Rational(4, 5), 'kerr35': sp.Rational(3, 5)}
 def mass(case): return float(2 / P[case]) if case.startswith('ts') else float(1 / P[case])

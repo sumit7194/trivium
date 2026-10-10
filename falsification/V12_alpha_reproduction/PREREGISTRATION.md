@@ -197,3 +197,41 @@ unchanged. Kerr's smooth-case coverage is the relevant one for the Kerr criterio
 
 Both are ≥ 90%, so under the rule above the percentile bootstrap is kept and **G4′ PASSES**. Every V12 CI will be
 reported with these measured coverages (smooth 96%, fractal 93%).
+
+## Addendum 4 (2026-10-11): scheduling only
+V12 runs before tabula's §195 G0 rerun, with tabula's agreement. Tabula is first debugging a segfault in its own smoke
+test and expects no G0 launch within 45 min. The numba integrator makes V12 roughly 30–45 min on 6 workers. No science
+change.
+
+## Addendum 5 (2026-10-11, before any α data): Kerr-chart regularity bug and window design flaw, both found in the window scan
+**What the window scan showed** (`windows` mode; outcomes only, no ε sampling, no α):
+
+**(a) The bridge's own Kerr chart is numerically singular at the ergosurface.**
+- Kerr 3/5 had 12/400 CAPPED starts. Every one stalled while crossing the ergosurface f = −g_tt = 0, which at p = 3/5
+  lies at x = 5/3 on the equator, outside the plunge cut 1.5.
+  - scipy also needed 2.15 M steps to reach τ = 0.79, so this is not specific to the numba integrator.
+- **Cause:** `kerr_ts_chart.py` builds g_φφ = −fω² + ρ²/f and g_tφ = fω with ω ∝ 1/A (A = the numerator of f), so
+  terms that are singular individually cancel. Measured against 50-digit evaluation, the relative error of the float
+  g_φφ is 5e−9 at Δx = 1e−4, 2.5e−5 at 1e−6, and 1.2 at 1e−8.
+- **The TS component files are regular:** ≤ 5e−16 down to Δx = 1e−12 at both p, on the equator and at y = 0.5.
+- Kerr 4/5 never meets its ergosurface before plunging: it sits at x = 1.25 on the equator, and f > 0 at x ≥ 1.5 for
+  all y. So only Kerr 3/5 is affected.
+- **Fix:** V12 uses `sp.factor(sp.cancel(·))` of every Kerr component. V11's code is left untouched as a sealed run;
+  its Kerr 3/5 results are flagged for a re-check.
+- **New gate G0r:** for all 4 charts, every component evaluated in floats must match a 50-digit evaluation to a
+  relative 1e−12 at Δx = 1e−2 … 1e−12 from the ergosurface (equator and y = 0.5). G1 and G2 are re-run on the
+  regularised Kerr chart.
+
+**(b) The pre-registered window spans both boundaries.** Every system's start interval reads PLUNGE | SURVIVE | PLUNGE.
+For example, TS L1: plunge on [1.5, 9.98], survive on [9.98, 56.7], plunge beyond. The hull of all changes therefore
+has |W| ≈ 24–48. With K = 2000, a smooth boundary would give < 1 hit at ε = 3e−3, so every Kerr fit would come out
+INSUFFICIENT. That is a design error.
+
+**Replacement, the spec's choice, with the bridge's own parameters:**
+- PRIMARY = the **inner** transition (the status change at smallest x0).
+- Stage 2: 400 x0 uniform on [x_a − 3Δ, x_b + 3Δ], where x_a and x_b are the coarse points bracketing the inner change
+  and Δ is the coarse step.
+- W = the hull of the stage-2 changes ± 3 dense steps, widened symmetrically to ≥ 0.03.
+- SECONDARY = the outer transition, treated identically. It is reported, but kept out of the verdict.
+
+Nothing else changes.
