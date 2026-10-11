@@ -162,7 +162,8 @@ Quantum's gate found the bridge's p and q to be **identical rational functions**
 - P·Q′ − P′·Q ≡ 0 exactly, with the E_k = exp(w_k) as independent symbols;
 - covering **all 14 TS rows** (0–5, C1–C8) and **all 6 MN equatorial rows** (quantum qsim/capd/replay_gate_ts.json,
   replay_gate_mneq_0.json, replay_gate_mneq_1_2_3_4_5.json @ 4afe971);
-- the MN axial gate (VREPRO 0–3 = the bridge's V9 rows 6–9) is pending.
+- the MN axial gate also PASSES: VREPRO 0–3 = the bridge's V9 rows 6–9, identical in (x, E1)
+  (qsim/capd/replay_gate_mnaxial.json). All 24 replay rows use the bridge's derivation.
 
 Two independently written derivations agree as exact identities, which is stronger than the earlier 50-digit numerical
 agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equations.
