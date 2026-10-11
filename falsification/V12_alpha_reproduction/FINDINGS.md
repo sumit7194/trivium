@@ -178,3 +178,13 @@ rtol 1e−11 and 1e−13 (tolerance-invariant). Realisation-sensitive points can
 - Removing the realisation-sensitive points raises TS α only slightly (0.044 → 0.065).
 - The contrast (TS ≪ 1, Kerr ≈ 1) is robust to (a) the integration tolerance, (b) the perturbation direction, and (c)
   excluding every tolerance-sensitive orbit.
+
+**Caveat on the post-hoc tolerance-invariant check (added 2026-10-11, from ansatz's HP probe gate G3).** Among 20
+"tolerance-stable" TS L1 orbits (same outcome at DP5 1e−11 / 1e−12 / 1e−13), one (x0 = 9.925681556) PLUNGES at crossing
+283 in double-double (~32-digit) integration while surviving 300 at all double tolerances. So "tolerance-invariant at
+double precision" is a PROXY for a resolved outcome, not a guarantee.
+- The post-hoc subset analysis above therefore shows that the flat profile is not caused by outcomes that flip WITHIN
+  double precision. It does not exclude sensitivity below double precision; that sensitivity would itself be a chaos
+  signature.
+- The HP probe's base run (DD R1/R2, N = 600) will quantify how many double-stable orbits change outcome at higher
+  precision.
