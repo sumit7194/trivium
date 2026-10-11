@@ -143,3 +143,38 @@ L1 pair, K = 2000, rtol 1e−13, ε = 3e−3 … 1e−6 (8 values). `results/v12
     (0.055 vs 0.051).
 - This is consistent with strong exponential sensitivity (long chaotic transients) in TS and its absence in Kerr. It
   sharpens the contrast but does not by itself prove a fractal dimension.
+
+## E2′, perturbation direction p_x (addendum 11: rescaled ε {3e−4 … 3e−6}, same x0 as E2)
+- **Kerr control PASSES:** α̂ = 1.051 [0.905, 1.228]; hits 168, 58, 13, 4, 1; r = 0.000.
+- **TS, all ε:** α̂ = 0.045 [0.034, 0.056]; hits 1110, 1031, 974, 973, 884. The same value as the x direction (0.044).
+- **Under addendum 11's noise rule as written:** TS r = 0.179, and f ≥ 3r leaves 1/5 ε, so E2′ is formally
+  **INCONCLUSIVE**.
+- (E2 with the original ε set was VOID on Kerr saturation; addendum 11.)
+
+## A tension in the pre-registration, and a post-hoc robustness check (labelled post hoc)
+Two parts of this pre-registration pull against each other:
+- addendum 6 says realisation-sensitive points legitimately count as uncertain at every ε, as they should for
+  chaotic dynamics;
+- the E1/E2′ rule "exclude ε with f < 3r" discards exactly the ε where such points are a large share.
+
+The primary x-direction analysis applied no such rule (none was registered for it).
+
+**Post-hoc check that settles which reading matters.** Recompute α using ONLY the x0 whose base outcome is identical at
+rtol 1e−11 and 1e−13 (tolerance-invariant). Realisation-sensitive points cannot contribute there.
+`results/v12_posthoc_invariant_subset.json`:
+
+| Run | Invariant x0 | Hits (invariant subset) | α̂ (invariant) [CI] | α̂ (all) |
+|---|---|---|---|---|
+| Primary L1 TS (x) | 1665/2000 | 817, 767, 710, 666, 602 | **0.065** [0.051, 0.078] | 0.044 |
+| Primary L1 Kerr (x) | 1999/2000 | 403, 128, 39, 13, 5 | 1.020 [0.924, 1.132] | 1.008 |
+| E2′ TS (p_x) | 1641/2000 | 853, 772, 738, 704, 630 | **0.061** [0.047, 0.073] | 0.045 |
+| E2′ Kerr (p_x) | 2000/2000 | 168, 58, 13, 4, 1 | 1.051 [0.893, 1.246] | 1.051 |
+
+**Reading (post hoc).**
+- The flat uncertainty profile is NOT an integration-noise artefact. Among TS start points whose outcome is
+  tolerance-stable, 36–38% are still uncertain at the smallest ε, and α stays at 0.06 in both perturbation
+  directions.
+- Kerr is unchanged at about 1.
+- Removing the realisation-sensitive points raises TS α only slightly (0.044 → 0.065).
+- The contrast (TS ≪ 1, Kerr ≈ 1) is robust to (a) the integration tolerance, (b) the perturbation direction, and (c)
+  excluding every tolerance-sensitive orbit.

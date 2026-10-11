@@ -1,0 +1,202 @@
+{
+ "env": {
+  "python": "3.14.5",
+  "executable": "/Users/sumit/Github/conjecture_machine/.venv/bin/python",
+  "implementation": "CPython",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "packages": {
+   "numpy": "2.4.6",
+   "scipy": "1.18.0",
+   "sympy": "1.14.0",
+   "mpmath": "1.3.0",
+   "numba": "0.65.1",
+   "llvmlite": "0.47.0",
+   "flint": null,
+   "torch": null
+  },
+  "blas_lapack": {
+   "numpy": {
+    "blas": "accelerate",
+    "lapack": "accelerate"
+   },
+   "scipy": {
+    "blas": "Accelerate",
+    "lapack": "Accelerate"
+   }
+  },
+  "git": {
+   "commit": "2a4185b0b886d3b6fb2738e05d8686c70da9eef1",
+   "dirty": true
+  }
+ },
+ "s0": {
+  "case": "ts45",
+  "hits": [
+   1110,
+   1031,
+   974,
+   973,
+   884
+  ],
+  "eps": [
+   0.0003,
+   0.0001,
+   3e-05,
+   1e-05,
+   3e-06
+  ],
+  "r": 0.1795,
+  "retained": [
+   true,
+   false,
+   false,
+   false,
+   false
+  ],
+  "alpha_all": {
+   "K": 2000,
+   "hits": [
+    1110,
+    1031,
+    974,
+    973,
+    884
+   ],
+   "f": [
+    0.555,
+    0.5155,
+    0.487,
+    0.4865,
+    0.442
+   ],
+   "eps": [
+    0.0003,
+    0.0001,
+    3e-05,
+    1e-05,
+    3e-06
+   ],
+   "used": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "alpha_mle": 0.04480492662185922,
+   "alpha_wls": 0.0446431024023553,
+   "ci": [
+    0.03417349337747103,
+    0.05556409051385618
+   ],
+   "nboot_ok": 1000
+  },
+  "alpha_retained": {
+   "verdict": "INSUFFICIENT"
+  },
+  "excluded": 0
+ },
+ "s1": {
+  "case": "kerr45",
+  "hits": [
+   168,
+   58,
+   13,
+   4,
+   1
+  ],
+  "eps": [
+   0.0003,
+   0.0001,
+   3e-05,
+   1e-05,
+   3e-06
+  ],
+  "r": 0.0,
+  "retained": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "alpha_all": {
+   "K": 2000,
+   "hits": [
+    168,
+    58,
+    13,
+    4,
+    1
+   ],
+   "f": [
+    0.084,
+    0.029,
+    0.0065,
+    0.002,
+    0.0005
+   ],
+   "eps": [
+    0.0003,
+    0.0001,
+    3e-05,
+    1e-05,
+    3e-06
+   ],
+   "used": [
+    true,
+    true,
+    true,
+    false,
+    false
+   ],
+   "alpha_mle": 1.0510293345560742,
+   "alpha_wls": 1.048235844849299,
+   "ci": [
+    0.9051763021806971,
+    1.2275470530349155
+   ],
+   "nboot_ok": 1000
+  },
+  "alpha_retained": {
+   "K": 2000,
+   "hits": [
+    168,
+    58,
+    13,
+    4,
+    1
+   ],
+   "f": [
+    0.084,
+    0.029,
+    0.0065,
+    0.002,
+    0.0005
+   ],
+   "eps": [
+    0.0003,
+    0.0001,
+    3e-05,
+    1e-05,
+    3e-06
+   ],
+   "used": [
+    true,
+    true,
+    true,
+    false,
+    false
+   ],
+   "alpha_mle": 1.0510293345560742,
+   "alpha_wls": 1.048235844849299,
+   "ci": [
+    0.9009686375403863,
+    1.2476522325401986
+   ],
+   "nboot_ok": 1000
+  },
+  "excluded": 0
+ }
+}
