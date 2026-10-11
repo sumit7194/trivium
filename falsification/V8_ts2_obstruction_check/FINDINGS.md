@@ -182,3 +182,17 @@ tuning tolerances is not.
 `/Users/sumit/Github/conjecture_machine/.venv`; numpy 2.4.6 (Accelerate), scipy 1.18.0, sympy 1.14.0, mpmath 1.3.0,
 numba 0.65.1; macOS 26.5 arm64. Pinned in `ENVIRONMENT/` (bridge_env.json, bridge_requirements.lock). Assumed
 unchanged since the run; the venv was not upgraded in between.
+
+## Exact equation identity with quantum (2026-10-11), for the CAPD third replay
+The bridge exported its own exact NVE coefficients (TS: `code/v8_export_capd.py`; MN: `code/v9_export_capd.py` and
+`code/v9_export_capd_axial.py`; exports in `export_capd/`), each self-checked against its original unreduced
+expressions at 40 digits (≤ 3.2e−27; most ≤ 1e−31).
+
+Quantum's gate found the bridge's p and q to be **identical rational functions** to its own:
+- P·Q′ − P′·Q ≡ 0 exactly, with the E_k = exp(w_k) as independent symbols;
+- covering **all 14 TS rows** (0–5, C1–C8) and **all 6 MN equatorial rows** (quantum qsim/capd/replay_gate_ts.json,
+  replay_gate_mneq_0.json, replay_gate_mneq_1_2_3_4_5.json @ 4afe971);
+- the MN axial gate (VREPRO 0–3 = the bridge's V9 rows 6–9) is pending.
+
+Two independently written derivations agree as exact identities, which is stronger than the earlier 50-digit numerical
+agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equations.
