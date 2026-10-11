@@ -17,25 +17,12 @@ lost jobs. The Lean batch was unaffected (fork-mode workers).
 **Rule adopted.** Kill only explicit PIDs verified as your own (parent chain or cwd). Never kill by pattern on the
 shared box.
 
-## 2026-10-11: Apple Accelerate dgeqrf heap overrun (root-caused by tabula, commit 59812ec)
-**What.** Accelerate's LAPACK dgeqrf (QR) writes past the end of a heap block it allocates internally, for near-square
-matrices of about 550–800 × 550–629.
-- Minimal repro: `np.linalg.qr(rng.standard_normal((629, 629)), mode='r')` under Guard Malloc.
-- Clean at n ≤ 500, at m ≥ 900, and on OpenBLAS.
+## 2026-10-11: a system numerical-library defect (under responsible disclosure)
+Tabula root-caused its §195 crash series to a defect in a vendor numerical library. It has been reported to the vendor
+through its security channel by the user.
 
-**Effect.** Silent heap corruption. It usually lands in slack, so the failure is intermittent: about 1/4 of tabula's
-§195 runs crashed, typically later in the GC.
-
-**Fleet exposure.** Every Mac env here links Accelerate for numpy and scipy (3.12, 3.13, 3.14). Indirect users of
-dgeqrf include lstsq (gelsd) and SVD on tall matrices.
-- tabula: remedy is the OpenBLAS env (.venv314ob), validated under Guard Malloc; earlier Accelerate results are
-  flagged for rerun.
-- ansatz, quantum and deepstrain have been alerted to audit.
-- Bridge paper code (V8–V12) is not exposed; older bridge legs are queued for audit (spawned task).
-
-**Upstream.** A draft report (Apple Feedback, and possibly numpy) is pending; the user decides whether to send.
-- **Correction (deepstrain, 2026-10-11):** Mac torch is NOT a safe workaround. torch 2.12.0 reports BLAS_INFO=accelerate
-  and LAPACK_INFO=accelerate, so torch.linalg on Mac CPU also uses Accelerate. Clean alternatives are an OpenBLAS numpy
-  env, Linux, or the phone (OpenBLAS + ACL).
-- **Audit results:** ansatz CLEAN (no LAPACK in any verdict path); deepstrain CLEAN (all QR/lstsq ≤ 29 columns; commit
-  9262e51); bridge paper code CLEAN. Quantum CLEAN, tested directly under Guard Malloc (positive control crashes; all CHL lstsq shapes N = 20..80 incl. in-band 594x599 and all SVDs clean; underdetermined gelsd has no dgeqrf preprocessing). Tabula: remedied via OpenBLAS.
+Details are withheld from all public repos until the vendor resolves the issue or states it is not a security issue,
+per the user's direction. They are kept in local, uncommitted notes.
+- Fleet impact: each sister audited its own code locally. The bridge's paper code, ansatz, deepstrain and quantum are
+  unaffected. Tabula moved to an alternative library build.
+- Results are not affected.
