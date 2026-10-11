@@ -397,3 +397,23 @@ numba 0.65.1; macOS 26.5 arm64. Pinned in `ENVIRONMENT/`. Every V12 result file 
   realisation-sensitivity levels. So the E1 rule applies: any ε with f(ε) < 3r is excluded, where r is the TS L1
   realisation-sensitive fraction measured at rtol 1e−11 vs 1e−13 on the E2′ base points.
 - **Runs after E1.**
+
+## Addendum 12 (2026-10-11, before any E1 data exists): the operational definition of the E1 crossover
+E1 (addendum-free, pre-registered): L1 pair, ε ∈ {3e−3 … 1e−6} (8 values), rtol 1e−13, N = 300 and N = 600, K = 2000,
+seed 13000.
+
+**Steps, fixed now:**
+1. **Realisation sensitivity r(N):** the fraction of the E1 base x0 whose outcome differs between rtol 1e−11 and 1e−13
+   at the same N, computed separately for TS and Kerr. ε values with f(ε) < 3r are excluded (as pre-registered).
+2. **Local slopes:** s_i = ln(f_i/f_{i+1}) / ln(ε_i/ε_{i+1}) between consecutive retained ε. Only pairs where both f
+   have ≥ 10 hits are used.
+3. **Crossover:** ε_c(N) = the LARGEST ε_i whose slope s_i to the next smaller ε exceeds 0.5. If none exists, then
+   ε_c(N) < min retained ε ("no crossover").
+4. **Readings for TS** (Kerr is the control and must show s ≈ 1 throughout, within its noise):
+   - ε_c(600) < ε_c(300) (strictly lower in the ε grid): **supports a genuine fractal**; the flat range extends with
+     the horizon.
+   - ε_c(600) = ε_c(300), with both crossovers found: **finite-time artefact suspected**.
+   - no crossover at either N down to the smallest retained ε: **"flat to ε_min"**, consistent with a fat fractal or
+     a positive-measure chaotic layer; not over-interpreted.
+   - any other pattern (e.g. a crossover at 600 but not at 300): reported as is, labelled UNEXPECTED.
+5. The α fit over the retained ε is also reported for each N, using the binomial MLE.
