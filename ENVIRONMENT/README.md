@@ -6,8 +6,8 @@ environment.
 - **`bridge_env.json`:** interpreter, platform, package versions, BLAS/LAPACK backend and git commit. Generate it with
   `python tools/envstamp.py ENVIRONMENT/bridge_env.json`.
 - **`bridge_requirements.lock`:** `pip freeze` of the interpreter used for all bridge runs (V8–V12).
-- **Machine:** Apple M-series (arm64), macOS 26.5 (25F71). numpy links Apple Accelerate; scipy links its bundled
-  OpenBLAS (see the json).
+- **Machine:** Apple M-series (arm64), macOS 26.5 (25F71). numpy and scipy BOTH link Apple Accelerate for
+  BLAS/LAPACK (see the json).
 
 ## Interpreter
 `/Users/sumit/Github/conjecture_machine/.venv` is CPython 3.14.5 (Homebrew build, clang 21). To recreate it elsewhere:
