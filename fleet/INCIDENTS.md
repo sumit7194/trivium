@@ -38,4 +38,4 @@ dgeqrf include lstsq (gelsd) and SVD on tall matrices.
   and LAPACK_INFO=accelerate, so torch.linalg on Mac CPU also uses Accelerate. Clean alternatives are an OpenBLAS numpy
   env, Linux, or the phone (OpenBLAS + ACL).
 - **Audit results:** ansatz CLEAN (no LAPACK in any verdict path); deepstrain CLEAN (all QR/lstsq ≤ 29 columns; commit
-  9262e51); bridge paper code CLEAN. Quantum: pending. Tabula: remedied via OpenBLAS.
+  9262e51); bridge paper code CLEAN. Quantum CLEAN, tested directly under Guard Malloc (positive control crashes; all CHL lstsq shapes N = 20..80 incl. in-band 594x599 and all SVDs clean; underdetermined gelsd has no dgeqrf preprocessing). Tabula: remedied via OpenBLAS.
