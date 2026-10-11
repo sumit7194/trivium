@@ -204,5 +204,7 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
     1.58285961940844 − 75.6177977170676i ≠ 2, with an enclosure width of 3.8e−24.
   - Cross-engine checks: it overlaps v2's w_g, w_h and tr_comm balls and v1's tr_comm, and every g and h matrix entry
     overlaps v2's exact Lean-export boxes.
+- **TS row 2: REPLAYED** (quantum de7759e, 3.9 h). Every check is consistent: it overlaps v2's w_g, w_h and tr_comm,
+  v1's tr_comm, and all of v2's exact G/H boxes. TS rows 0 and 2 are now third-replayed.
 - **C1 (Dubeibe's level), attempt 1: FAILED-CLOSED** on quantum's own 6 h watchdog, at 35/54 segments; its loops are
   based far out. Re-queued under amendment A2 (a 24 h watchdog, a resource-only change). The attempt-1 record is kept.
