@@ -188,3 +188,13 @@ double precision" is a PROXY for a resolved outcome, not a guarantee.
   signature.
 - The HP probe's base run (DD R1/R2, N = 600) will quantify how many double-stable orbits change outcome at higher
   precision.
+
+## Downstream: ansatz's high-precision crossover probe (2026-10-12), which settles the question E1 could not answer
+Double-double integration, ε = 1e−8 … 1e−20.
+- **Pre-registered verdict: SUPPORTS FINITE-TIME ARTEFACT.** ε_c(300) = ε_c(600) = 1e−14; TS uncertainty vanishes at
+  ε ≤ 1e−17; Kerr is clean at every ε.
+- Outcomes are determinate at 32 digits for 98% of double-sensitive x0.
+- Post-hoc reading (ansatz, labelled): ε_c tracks orbit lifetime, i.e. transient chaos (a chaotic saddle).
+- Consequence for this record: V12's α values stand as EFFECTIVE exponents over [3e−5, 3e−3]. The "fractal" language is
+  qualified to "fractal-like down to ~1e−14"; no strict-limit fractal is claimed. This is the user's direction: read
+  the results as they came out, not as hoped.
