@@ -1,0 +1,386 @@
+{
+ "tag": "primary",
+ "env": {
+  "python": "3.14.5",
+  "executable": "/Users/sumit/Github/conjecture_machine/.venv/bin/python",
+  "implementation": "CPython",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "packages": {
+   "numpy": "2.4.6",
+   "scipy": "1.18.0",
+   "sympy": "1.14.0",
+   "mpmath": "1.3.0",
+   "numba": "0.65.1",
+   "llvmlite": "0.47.0",
+   "flint": null,
+   "torch": null
+  },
+  "blas_lapack": {
+   "numpy": {
+    "blas": "accelerate",
+    "lapack": "accelerate"
+   },
+   "scipy": {
+    "blas": "Accelerate",
+    "lapack": "Accelerate"
+   }
+  },
+  "git": {
+   "commit": "d7f792df57b6bc226e197daf3f0ad7a6716d5541",
+   "dirty": true
+  }
+ },
+ "coverage_note": {
+  "smooth": 0.96,
+  "fractal": 0.93
+ },
+ "pairs": {
+  "L1": {
+   "ts": {
+    "K": 2000,
+    "hits": [
+     1040,
+     1007,
+     951,
+     908,
+     849
+    ],
+    "f": [
+     0.52,
+     0.5035,
+     0.4755,
+     0.454,
+     0.4245
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "alpha_mle": 0.04383722893740368,
+    "alpha_wls": 0.04405620219016359,
+    "ci": [
+     0.03235388161814765,
+     0.05482336779445183
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     625,
+     1375,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 1.0923006943386326e-10,
+    "sysd": {
+     "idx": 0,
+     "level": "L1",
+     "case": "ts45",
+     "E": 0.97,
+     "L": 5.125,
+     "eps_sep": -0.5097682994146966,
+     "sense": "retrograde"
+    }
+   },
+   "kerr": {
+    "K": 2000,
+    "hits": [
+     404,
+     129,
+     40,
+     14,
+     6
+    ],
+    "f": [
+     0.202,
+     0.0645,
+     0.02,
+     0.007,
+     0.003
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "alpha_mle": 1.0078271912854742,
+    "alpha_wls": 1.0065113054203445,
+    "ci": [
+     0.9059308702406662,
+     1.1285657350505354
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     955,
+     1045,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 9.951328650004143e-11,
+    "sysd": {
+     "idx": 1,
+     "level": "L1",
+     "case": "kerr45",
+     "E": 0.97,
+     "L": 2.553803751186969,
+     "eps_sep": -0.5097682994146966,
+     "sense": "retrograde"
+    }
+   },
+   "verdict": "CONTRAST REPRODUCED"
+  },
+  "L2": {
+   "ts": {
+    "K": 2000,
+    "hits": [
+     827,
+     678,
+     641,
+     611,
+     579
+    ],
+    "f": [
+     0.4135,
+     0.339,
+     0.3205,
+     0.3055,
+     0.2895
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "alpha_mle": 0.07454836537934412,
+    "alpha_wls": 0.07363854893148955,
+    "ci": [
+     0.059638082025965496,
+     0.0893626903707206
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     1097,
+     903,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 9.722855853766532e-11,
+    "sysd": {
+     "idx": 2,
+     "level": "L2",
+     "case": "ts45",
+     "E": 0.97,
+     "L": 5.875,
+     "eps_sep": -0.43802707493879856,
+     "sense": "retrograde"
+    }
+   },
+   "kerr": {
+    "K": 2000,
+    "hits": [
+     408,
+     140,
+     43,
+     18,
+     6
+    ],
+    "f": [
+     0.204,
+     0.07,
+     0.0215,
+     0.009,
+     0.003
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "alpha_mle": 0.9547509793649478,
+    "alpha_wls": 0.9527124131616587,
+    "ci": [
+     0.8607007980568142,
+     1.0717315050680813
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     925,
+     1075,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 9.613676521524894e-11,
+    "sysd": {
+     "idx": 3,
+     "level": "L2",
+     "case": "kerr45",
+     "E": 0.97,
+     "L": 2.927531129409452,
+     "eps_sep": -0.43802707493879856,
+     "sense": "retrograde"
+    }
+   },
+   "verdict": "CONTRAST REPRODUCED"
+  },
+  "L3": {
+   "ts": {
+    "K": 2000,
+    "hits": [
+     469,
+     327,
+     291,
+     254,
+     243
+    ],
+    "f": [
+     0.2345,
+     0.1635,
+     0.1455,
+     0.127,
+     0.1215
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "alpha_mle": 0.14716911253956738,
+    "alpha_wls": 0.14567236831460803,
+    "ci": [
+     0.12389120090238563,
+     0.17026902327435128
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     1011,
+     989,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 2.0191814886771908e-10,
+    "sysd": {
+     "idx": 4,
+     "level": "L3",
+     "case": "ts35",
+     "E": 0.95,
+     "L": -5.333333333333333,
+     "eps_sep": -0.4242687561279805,
+     "sense": "prograde"
+    }
+   },
+   "kerr": {
+    "K": 2000,
+    "hits": [
+     422,
+     147,
+     49,
+     18,
+     7
+    ],
+    "f": [
+     0.211,
+     0.0735,
+     0.0245,
+     0.009,
+     0.0035
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "alpha_mle": 0.9379639855009035,
+    "alpha_wls": 0.9371402613935079,
+    "ci": [
+     0.8433139132551815,
+     1.0485125848383379
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     1014,
+     986,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 1.9262796913110947e-10,
+    "sysd": {
+     "idx": 5,
+     "level": "L3",
+     "case": "kerr35",
+     "E": 0.95,
+     "L": -2.5892621954265764,
+     "eps_sep": -0.4242687561279805,
+     "sense": "prograde"
+    }
+   },
+   "verdict": "CONTRAST REPRODUCED"
+  }
+ },
+ "overall": "REPRODUCED"
+}
