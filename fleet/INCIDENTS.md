@@ -34,3 +34,8 @@ dgeqrf include lstsq (gelsd) and SVD on tall matrices.
 - Bridge paper code (V8–V12) is not exposed; older bridge legs are queued for audit (spawned task).
 
 **Upstream.** A draft report (Apple Feedback, and possibly numpy) is pending; the user decides whether to send.
+- **Correction (deepstrain, 2026-10-11):** Mac torch is NOT a safe workaround. torch 2.12.0 reports BLAS_INFO=accelerate
+  and LAPACK_INFO=accelerate, so torch.linalg on Mac CPU also uses Accelerate. Clean alternatives are an OpenBLAS numpy
+  env, Linux, or the phone (OpenBLAS + ACL).
+- **Audit results:** ansatz CLEAN (no LAPACK in any verdict path); deepstrain CLEAN (all QR/lstsq ≤ 29 columns; commit
+  9262e51); bridge paper code CLEAN. Quantum: pending. Tabula: remedied via OpenBLAS.
