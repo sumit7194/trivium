@@ -1,0 +1,385 @@
+{
+ "tag": "outer",
+ "env": {
+  "python": "3.14.5",
+  "executable": "/Users/sumit/Github/conjecture_machine/.venv/bin/python",
+  "implementation": "CPython",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "packages": {
+   "numpy": "2.4.6",
+   "scipy": "1.18.0",
+   "sympy": "1.14.0",
+   "mpmath": "1.3.0",
+   "numba": "0.65.1",
+   "llvmlite": "0.47.0",
+   "flint": null,
+   "torch": null
+  },
+  "blas_lapack": {
+   "numpy": {
+    "blas": "accelerate",
+    "lapack": "accelerate"
+   },
+   "scipy": {
+    "blas": "Accelerate",
+    "lapack": "Accelerate"
+   }
+  },
+  "git": {
+   "commit": "bb5b21331c250fb11b073e60dae9b55d058908d7",
+   "dirty": true
+  }
+ },
+ "coverage_note": {
+  "smooth": 0.96,
+  "fractal": 0.93
+ },
+ "pairs": {
+  "L1": {
+   "ts": {
+    "K": 2000,
+    "hits": [
+     406,
+     145,
+     56,
+     39,
+     42
+    ],
+    "f": [
+     0.203,
+     0.0725,
+     0.028,
+     0.0195,
+     0.021
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "alpha_mle": 0.6531540898739574,
+    "alpha_wls": 0.6085635456475761,
+    "ci": [
+     0.5775141752655368,
+     0.7385705196232901
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     992,
+     1008,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 1.1167694546898588e-10,
+    "sysd": {
+     "idx": 0,
+     "level": "L1",
+     "case": "ts45",
+     "E": 0.97,
+     "L": 5.125,
+     "eps_sep": -0.5097682994146966,
+     "sense": "retrograde"
+    }
+   },
+   "kerr": {
+    "K": 2000,
+    "hits": [
+     386,
+     128,
+     40,
+     21,
+     6
+    ],
+    "f": [
+     0.193,
+     0.064,
+     0.02,
+     0.0105,
+     0.003
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "alpha_mle": 0.9378829386588736,
+    "alpha_wls": 0.9293444035889431,
+    "ci": [
+     0.8360668348863323,
+     1.0556152096301423
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     985,
+     1015,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 9.716677462634493e-11,
+    "sysd": {
+     "idx": 1,
+     "level": "L1",
+     "case": "kerr45",
+     "E": 0.97,
+     "L": 2.553803751186969,
+     "eps_sep": -0.5097682994146966,
+     "sense": "retrograde"
+    }
+   },
+   "verdict": "INCONCLUSIVE"
+  },
+  "L2": {
+   "ts": {
+    "K": 2000,
+    "hits": [
+     388,
+     142,
+     53,
+     46,
+     31
+    ],
+    "f": [
+     0.194,
+     0.071,
+     0.0265,
+     0.023,
+     0.0155
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "alpha_mle": 0.6645556632623036,
+    "alpha_wls": 0.6355794134738296,
+    "ci": [
+     0.5884308017363392,
+     0.7602356924983907
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     1119,
+     881,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 1.0191042454366084e-10,
+    "sysd": {
+     "idx": 2,
+     "level": "L2",
+     "case": "ts45",
+     "E": 0.97,
+     "L": 5.875,
+     "eps_sep": -0.43802707493879856,
+     "sense": "retrograde"
+    }
+   },
+   "kerr": {
+    "K": 2000,
+    "hits": [
+     413,
+     143,
+     40,
+     12,
+     5
+    ],
+    "f": [
+     0.2065,
+     0.0715,
+     0.02,
+     0.006,
+     0.0025
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "alpha_mle": 1.0090938535927756,
+    "alpha_wls": 1.0098048151303889,
+    "ci": [
+     0.9119460130713893,
+     1.1262122215446166
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     1029,
+     971,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 9.875344986198797e-11,
+    "sysd": {
+     "idx": 3,
+     "level": "L2",
+     "case": "kerr45",
+     "E": 0.97,
+     "L": 2.927531129409452,
+     "eps_sep": -0.43802707493879856,
+     "sense": "retrograde"
+    }
+   },
+   "verdict": "INCONCLUSIVE"
+  },
+  "L3": {
+   "ts": {
+    "K": 2000,
+    "hits": [
+     403,
+     109,
+     26,
+     11,
+     6
+    ],
+    "f": [
+     0.2015,
+     0.0545,
+     0.013,
+     0.0055,
+     0.003
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "alpha_mle": 1.1498798728343984,
+    "alpha_wls": 1.1427015172891188,
+    "ci": [
+     1.017377612504301,
+     1.3025926099174299
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     1046,
+     954,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 1.7728474244194103e-10,
+    "sysd": {
+     "idx": 4,
+     "level": "L3",
+     "case": "ts35",
+     "E": 0.95,
+     "L": -5.333333333333333,
+     "eps_sep": -0.4242687561279805,
+     "sense": "prograde"
+    }
+   },
+   "kerr": {
+    "K": 2000,
+    "hits": [
+     408,
+     140,
+     42,
+     16,
+     4
+    ],
+    "f": [
+     0.204,
+     0.07,
+     0.021,
+     0.008,
+     0.002
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "alpha_mle": 0.97190431823832,
+    "alpha_wls": 0.9713142063013066,
+    "ci": [
+     0.8704795920023792,
+     1.0917769910407737
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     1038,
+     962,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 1.860323006752651e-10,
+    "sysd": {
+     "idx": 5,
+     "level": "L3",
+     "case": "kerr35",
+     "E": 0.95,
+     "L": -2.5892621954265764,
+     "eps_sep": -0.4242687561279805,
+     "sense": "prograde"
+    }
+   },
+   "verdict": "INCONCLUSIVE"
+  }
+ }
+}

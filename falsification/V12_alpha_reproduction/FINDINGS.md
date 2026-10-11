@@ -95,3 +95,23 @@ ledger: L3 is the addendum-2 rerun, and its Kerr values are WLS.
   MLE to 0.002, so the estimator is unlikely); K (2000 vs 1500); and ε_sep matching (exact bisection vs a 0.01 m
   grid, which moves the Kerr partner L by about 0.1%).
 - **Not pursued further:** this is a few-percent effective-exponent difference that does not touch the contrast.
+
+## Secondary (pre-registered, outside the verdict): the OUTER transition (addendum 5)
+Same design at the outer survive/plunge edge (K = 2000, seeds 15000+):
+
+| Level | TS α̂ [CI] | TS hits (3e−3 → 3e−5) | Kerr α̂ [CI] |
+|---|---|---|---|
+| L1 | 0.653 [0.578, 0.739] | 406, 145, 56, 39, 42 | 0.938 [0.836, 1.056] |
+| L2 | 0.665 [0.588, 0.760] | 388, 142, 53, 46, 31 | 1.009 [0.912, 1.126] |
+| L3 | **1.150** [1.017, 1.303] | 403, 109, 26, 11, 6 | 0.972 [0.870, 1.092] |
+
+**Reading.**
+- The fractality is **concentrated at the INNER transition**, the one nearest the plunge, where α̂ is 0.04–0.15.
+- At the outer edge:
+  - L1 and L2 start smooth-like (hits fall ≈ 3× per half-decade) but flatten at about 2% of x0 at small ε. That is a
+    small residual sensitive set.
+  - L3 is fully smooth (α ≈ 1, like Kerr).
+- This supports the "thin chaotic layer near the separatrix" reading: the chaos is localised, not spread over the
+  whole basin boundary.
+- The outer windows' fits are INCONCLUSIVE under the primary rule (TS CI upper end not < 0.5), as expected for a
+  secondary not designed for it.
