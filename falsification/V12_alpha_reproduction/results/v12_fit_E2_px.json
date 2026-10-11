@@ -1,0 +1,155 @@
+{
+ "tag": "E2_px",
+ "env": {
+  "python": "3.14.5",
+  "executable": "/Users/sumit/Github/conjecture_machine/.venv/bin/python",
+  "implementation": "CPython",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "packages": {
+   "numpy": "2.4.6",
+   "scipy": "1.18.0",
+   "sympy": "1.14.0",
+   "mpmath": "1.3.0",
+   "numba": "0.65.1",
+   "llvmlite": "0.47.0",
+   "flint": null,
+   "torch": null
+  },
+  "blas_lapack": {
+   "numpy": {
+    "blas": "accelerate",
+    "lapack": "accelerate"
+   },
+   "scipy": {
+    "blas": "Accelerate",
+    "lapack": "Accelerate"
+   }
+  },
+  "git": {
+   "commit": "2530d3d4a1ab6eb0559763c0d80c556514a508ee",
+   "dirty": true
+  }
+ },
+ "coverage_note": {
+  "smooth": 0.96,
+  "fractal": 0.93
+ },
+ "pairs": {
+  "L1": {
+   "ts": {
+    "K": 2000,
+    "hits": [
+     1043,
+     1151,
+     1110,
+     1031,
+     974
+    ],
+    "f": [
+     0.5215,
+     0.5755,
+     0.555,
+     0.5155,
+     0.487
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "alpha_mle": 0.020518844981750134,
+    "alpha_wls": 0.0217378736430553,
+    "ci": [
+     0.010867962218620285,
+     0.030548837813299506
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     666,
+     1334,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 1.3003997878513474e-10,
+    "sysd": {
+     "idx": 0,
+     "level": "L1",
+     "case": "ts45",
+     "E": 0.97,
+     "L": 5.125,
+     "eps_sep": -0.5097682994146966,
+     "sense": "retrograde"
+    }
+   },
+   "kerr": {
+    "K": 2000,
+    "hits": [
+     977,
+     574,
+     168,
+     58,
+     13
+    ],
+    "f": [
+     0.4885,
+     0.287,
+     0.084,
+     0.029,
+     0.0065
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "alpha_mle": 0.7615017933439827,
+    "alpha_wls": 0.7688432448822178,
+    "ci": [
+     0.7231481505303551,
+     0.8001624041974224
+    ],
+    "nboot_ok": 1000,
+    "excluded": 0,
+    "outcome_counts": [
+     977,
+     1023,
+     0,
+     0,
+     0
+    ],
+    "H_drift_max": 1.0880008005642594e-10,
+    "sysd": {
+     "idx": 1,
+     "level": "L1",
+     "case": "kerr45",
+     "E": 0.97,
+     "L": 2.553803751186969,
+     "eps_sep": -0.5097682994146966,
+     "sense": "retrograde"
+    }
+   },
+   "verdict": "VOID (Kerr control failed)"
+  }
+ }
+}

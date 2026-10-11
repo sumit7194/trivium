@@ -8,6 +8,7 @@ sys.path.insert(0, HERE)
 
 EPS = [3e-3, 1e-3, 3e-4, 1e-4, 3e-5]
 EPS_E1 = EPS + [1e-5, 3e-6, 1e-6]
+EPS_E2B = [3e-4, 1e-4, 3e-5, 1e-5, 3e-6]   # addendum 11
 TS_LEVELS = [('L1', 'ts45', 'kerr45', 0.97, 5.125), ('L2', 'ts45', 'kerr45', 0.97, 5.875), ('L3', 'ts35', 'kerr35', 0.95, -16/3)]
 RTOL, ATOL_F = 1e-11, 1e-2          # atol = rtol * 1e-2, as V11
 N_CROSS, TAU_MAX, MAX_STEPS = 300, 5e6, 3_000_000
@@ -140,5 +141,7 @@ if __name__ == '__main__':
         L1 = [s for s in systems() if s['level'] == 'L1']
         run('E1_N300', L1, EPS_E1, workers=workers, rtol=1e-13, seed_base=13000)
         run('E1_N600', L1, EPS_E1, workers=workers, rtol=1e-13, N=600, seed_base=13000)
+    elif mode == 'E2b':
+        run('E2b_px', [s for s in systems() if s['level'] == 'L1'], EPS_E2B, workers=workers, px_mode=True, seed_base=14000)
     elif mode == 'E2':
         run('E2_px', [s for s in systems() if s['level'] == 'L1'], EPS, workers=workers, px_mode=True, seed_base=14000)

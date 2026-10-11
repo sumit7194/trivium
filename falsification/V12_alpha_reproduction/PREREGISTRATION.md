@@ -373,3 +373,27 @@ The reported r values are lower bounds from 4 tolerances: TS L1 0.373, TS L3 0.0
 
 **Environment (from the start):** CPython 3.14.5, numpy 2.4.6 (Accelerate), scipy 1.18.0, sympy 1.14.0, mpmath 1.3.0,
 numba 0.65.1; macOS 26.5 arm64. Pinned in `ENVIRONMENT/`. Every V12 result file will embed `tools/envstamp.stamp()`.
+
+## Addendum 11 (2026-10-11, post-failure, written before any rerun): E2 Kerr control saturated, so E2′ uses a rescaled ε set
+**E2 as pre-registered** (p_x0 = ±ε, same windows, ε ∈ {3e−3 … 3e−5}, K = 2000): **VOID**.
+- Kerr α̂ = 0.762 [0.723, 0.800], hits 977, 574, 168, 58, 13. That's outside [0.85, 1.15].
+- TS α̂ = 0.021 [0.011, 0.031], hits 1043, 1151, 1110, 1031, 974.
+- Results in `results/v12_fit_E2_px.json`.
+
+**Diagnosis: saturation at large ε, the failure mode ansatz recorded for L3.**
+- Kerr's pairwise slopes are 0.48 (3e−3 → 1e−3), then 1.12, 0.97, 1.36. That is smooth-boundary behaviour (≈ 1) at
+  small ε, flattened only at the top.
+- At ε = 3e−3, 49% of x0 are uncertain (x-direction: 20%). A p_x kick of ε moves the orbit's section intersection by
+  much more than ε in x, so the same ε set reaches across the whole window.
+- This is a design error in E2's ε range, not evidence about the boundary.
+
+**E2′ (replaces E2's ε set only).**
+- **ε_px ∈ {3e−4, 1e−4, 3e−5, 1e−5, 3e−6}**: the x-direction set shifted down by one decade.
+- **Rationale, fixed before rerunning:** Kerr's E2 uncertain fraction at ε = 3e−4 was 0.084, comparable to the
+  x-direction's 0.07 at 1e−3 and well below saturation.
+- Same windows, same x0 (seed 14000, so the x0 draw is identical to E2), rtol 1e−11, same estimator and verdict rule.
+  The Kerr control must pass for the pair to count.
+- **Integration-noise check before reading E2′:** ε down to 3e−6 in p_x, at rtol 1e−11, could approach
+  realisation-sensitivity levels. So the E1 rule applies: any ε with f(ε) < 3r is excluded, where r is the TS L1
+  realisation-sensitive fraction measured at rtol 1e−11 vs 1e−13 on the E2′ base points.
+- **Runs after E1.**
