@@ -66,3 +66,22 @@ instrument.
 **Decision (bridge, under the user's standing "always do such checks"):** a corrected Stage 3 is approved as a NEW,
 non-blind registration, with an extended q range, a stronger high-M method set and a q-tail convergence gate. It is
 scheduled after the item-2 Lean replays, or at ≤ 2 workers alongside them.
+
+## Status note (2026-10-11): verdicts under re-audit
+Quantum's plan-A validation failed two registered gates.
+
+**V2a: 19/30.**
+- The recorded Stage-2 sparse value at a heavy node, t = 0.224, q = 6.138, 15°, is off by 5.5e−6 relative; v1-dense
+  and v2 agree with each other.
+- At 10 high-M, large-t nodes no stepper is yet trustworthy.
+
+**V3: 0/4.**
+
+**The re-audit is quantum's V1 run** (the full Stage-2 grid with v2, about 10 h), judged by a rule fixed BEFORE its
+results:
+- a verdict STANDS at θ if |a_V1 − a_rec|/a_rec < 0.1 × the registered (cuspis − quantum)/quantum gap: 6.3e−6 (40°),
+  5.7e−5 (30°), 1.35e−4 (26.565°), 7.1e−4 (20°), 2.5e−3 (15°);
+- otherwise the comparison at that angle is re-run and the verdict reissued as post-audit;
+- the 10 untrustworthy nodes are bounded (Σ weight × max |value| over the three steppers) against the same thresholds.
+
+The diagnosis above (quantum's q cut) is unaffected. The status reads SEALED TOWARD QUANTUM, verdicts under re-audit.
