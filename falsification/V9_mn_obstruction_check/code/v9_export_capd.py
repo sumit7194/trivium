@@ -31,15 +31,23 @@ def auto_basis(args):
         n, d = sp.fraction(sp.cancel(b)); out.append(-b if sp.Poly(n, t).LC() < 0 else b)
     return out
 
+def int_combo(arg, basis):
+    """Exact integer n_k with arg == sum n_k w_k (rational functions of t); None if no such combination."""
+    ns = sp.symbols(f'n0:{len(basis)}')
+    num = sp.numer(sp.together(arg - sum(n*w for n, w in zip(ns, basis))))
+    eqs = sp.Poly(sp.expand(num), t).coeffs()
+    sol = sp.linsolve(eqs, ns)
+    if not sol: return None
+    (vals,) = sol
+    if any(v.free_symbols for v in vals) or not all(sp.Rational(v).q == 1 for v in vals): return None
+    return [int(v) for v in vals]
+
 def to_rational(e, basis, Es):
     m = {}
     for a in e.atoms(sp.exp):
-        arg = sp.cancel(sp.together(a.args[0])); hit = None
-        for k, w in enumerate(basis):
-            r = sp.cancel(arg/w)
-            if r.is_Integer: hit = (k, int(r)); break
-        assert hit, f'exp argument not an integer multiple of a basis element: {arg}'
-        m[a] = Es[hit[0]]**hit[1]
+        arg = sp.cancel(sp.together(a.args[0])); nk = int_combo(arg, basis)
+        assert nk is not None, f'exp argument not an integer combination of the basis: {arg}'
+        m[a] = sp.Mul(*[E**n for E, n in zip(Es, nk)])
     n, d = sp.fraction(sp.together(e.xreplace(m)))
     gens = (t,) + tuple(Es)
     N = sp.Poly(sp.expand(n), *gens); D = sp.Poly(sp.expand(d), *gens)
