@@ -196,3 +196,13 @@ Quantum's gate found the bridge's p and q to be **identical rational functions**
 
 Two independently written derivations agree as exact identities, which is stronger than the earlier 50-digit numerical
 agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equations.
+
+### CAPD third replay, results (quantum, MR_REPLAY.md)
+- **TS row 0 (P1, E = 1, L = 0, μ² = 4): REPLAYED** (quantum 7e76def, 4.3 h).
+  - Setup: CAPD/MPFR only (no Arb), the bridge's V8 fields, and the identical 16-gon loops.
+  - Result: all three certificate conditions certainly hold. w_g and w_h lie outside [0, 4]; tr[g,h] =
+    1.58285961940844 − 75.6177977170676i ≠ 2, with an enclosure width of 3.8e−24.
+  - Cross-engine checks: it overlaps v2's w_g, w_h and tr_comm balls and v1's tr_comm, and every g and h matrix entry
+    overlaps v2's exact Lean-export boxes.
+- **C1 (Dubeibe's level), attempt 1: FAILED-CLOSED** on quantum's own 6 h watchdog, at 35/54 segments; its loops are
+  based far out. Re-queued under amendment A2 (a 24 h watchdog, a resource-only change). The attempt-1 record is kept.
