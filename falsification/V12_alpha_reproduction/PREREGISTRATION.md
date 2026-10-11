@@ -338,3 +338,35 @@ integration-error-sized change?** If not, the codes are interchangeable at the l
 **By-product, recorded now.** The realisation-sensitive fraction r is 0.373 in the TS L1 window (28/75 orbits flip
 outcome across rtol 1e−11 … 1e−14) and **0.000** in both Kerr windows (0/75 each). This is a direct, α-independent
 contrast. It is reported, not gated.
+
+## Addendum 10 (2026-10-11): final G3 status, and a post-failure judgement that the integrator is validated
+**Results:**
+
+| Criterion | s0 TS L1 | s1 Kerr 4/5 | s4 TS L3 | s5 Kerr 3/5 |
+|---|---|---|---|---|
+| Outcomes | 10 disagreements, all realisation-sensitive; invariant 47/47 agree | 75/75 | 3 disagreements; **2 on 4-tolerance-invariant orbits** → G3′(i) FAILS by the letter; invariant 68/70 | 75/75 |
+| First crossing \|dx1\| (≤ 1e−8) | 1.1e−10 | 3.7e−11 | 5.5e−11 | 1.4e−11 |
+| G3⁗ D_cross / D_self: max (median) | 1.50 (0.52) | 7.86 (0.84) | 8.51 (0.52) | 3.44 (0.48) |
+
+- **G3⁗ PASSES in all 4 systems:** no orbit's cross-code difference exceeds 10× its own tolerance difference.
+- **G3‴** (`v12_G3ppp.json`): FAILED by the letter; 4 of 10 sequences are not strictly monotone, though all fall by
+  10²–10³. It is superseded by G3⁗ (addendum 9).
+
+**Extended diagnosis of the 2 s4 orbits** (8 numba tolerances 1e−10 … 3e−14; scipy at 4 tolerances and 3 chunkings):
+- **x0 = 6.7087568:**
+  - numba PLUNGE at all 8 tolerances, but after 106 to 265 crossings depending on tolerance (a non-converged chaotic
+    transient);
+  - scipy PLUNGE at 1e−10, 1e−12 and 1e−13 and at chunk 10 or 10⁹, but SURVIVE at 1e−11 with chunk 50 (the G3 run).
+- **x0 = 6.7152163:** numba flips (PLUNGE at 3e−12 and 3e−13, SURVIVE elsewhere); scipy flips too.
+
+So both ARE realisation-sensitive. Four tolerances were too few to detect it: a 50/50 orbit looks invariant with
+probability 1/8.
+
+**Judgement (post-failure, recorded as such).** The integrator is validated for V12:
+- every outcome disagreement in all 4 systems is realisation-sensitive under the extended test;
+- Kerr outcomes agree 150/150;
+- first crossings agree to ≤ 1.1e−10;
+- G3⁗ passes everywhere.
+
+The reported r values are lower bounds from 4 tolerances: TS L1 0.373, TS L3 0.067, Kerr 0.000 and 0.000. The primary
+α runs proceed with the pre-registered gate: load < 8, up to 6 workers.

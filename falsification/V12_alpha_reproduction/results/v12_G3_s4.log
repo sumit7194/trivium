@@ -61,3 +61,16 @@
 {"idx": 4, "x0": 6.723200705442238, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 7.310314430242215e-06}
 {"idx": 4, "x0": 6.722703579384944, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 7.95052757851522e-06}
 {"idx": 4, "x0": 6.719639688033607, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 4.004791381362338e-05}
+{"idx": 4, "x0": 6.725654408369534, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 1.1121633182398227e-05}
+{"idx": 4, "x0": 6.73096610828163, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 3.002910979432727e-05}
+{"idx": 4, "x0": 6.714969387358089, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 8.172592927380151e-05}
+{"idx": 4, "x0": 6.703538272283086, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 2.287336775097515e-06}
+{"idx": 4, "x0": 6.710585032466193, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 5.930268724796406e-05}
+{"idx": 4, "x0": 6.728194701479708, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 5.817822174236653e-06}
+{"idx": 4, "x0": 6.720748028874181, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 1.1452474684148228e-05}
+{"idx": 4, "x0": 6.717616836481027, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 3.274344495451942e-05}
+{"idx": 4, "x0": 6.71521630886008, "numba": 0, "scipy": 1, "same": false, "survivor": false, "dx20": 1.3017626464773002e-05}
+{"idx": 4, "x0": 6.706152268982339, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 2.5621289463373387e-06}
+{"idx": 4, "x0": 6.725773857117644, "numba": 0, "scipy": 0, "same": true, "survivor": true, "dx20": 1.2961180047454945e-05}
+{"idx": 4, "x0": 6.705978205010337, "numba": 1, "scipy": 1, "same": true, "survivor": false, "dx20": 4.8791908771050885e-06}
+{"n": 75, "same_frac": 0.96, "survivors": 41, "max_dx20": 0.00011300540441538942, "n_dx_over_1e7": 41, "pass_": false}
