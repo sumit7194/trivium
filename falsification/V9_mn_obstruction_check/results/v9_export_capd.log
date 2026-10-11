@@ -1,0 +1,31 @@
+row 0: 8 exp args, basis 3 (../export_capd_basis_quantum.json)
+  p done 190s terms 194/170 gcd deg 47
+  q done 751s terms 189/201 gcd deg 76
+row 0 exported, selfcheck 3.2e-27, 754s
+ROW 0 EXIT 0
+row 1: 8 exp args, basis 3 (../export_capd_basis_quantum.json)
+  p done 188s terms 194/170 gcd deg 47
+  q done 772s terms 189/201 gcd deg 76
+row 1 exported, selfcheck 9.2e-38, 775s
+ROW 1 EXIT 0
+row 2: 8 exp args, basis 3 (../export_capd_basis_quantum.json)
+  p done 210s terms 194/170 gcd deg 47
+  q done 1057s terms 189/201 gcd deg 76
+row 2 exported, selfcheck 1.6e-38, 1065s
+ROW 2 EXIT 0
+row 3: 8 exp args, basis 3 (../export_capd_basis_quantum.json)
+  p done 189s terms 193/170 gcd deg 47
+  q done 559s terms 187/201 gcd deg 68
+row 3 exported, selfcheck 1.7e-39, 562s
+ROW 3 EXIT 0
+row 4: 8 exp args, basis 3 (../export_capd_basis_quantum.json)
+  p done 192s terms 193/170 gcd deg 47
+  q done 533s terms 187/201 gcd deg 68
+row 4 exported, selfcheck 7.5e-32, 536s
+ROW 4 EXIT 0
+row 5: 8 exp args, basis 3 (../export_capd_basis_quantum.json)
+  p done 210s terms 193/170 gcd deg 47
+  q done 636s terms 187/201 gcd deg 68
+row 5 exported, selfcheck 3.1e-37, 643s
+ROW 5 EXIT 0
+MN_EXPORT_DONE
