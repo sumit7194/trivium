@@ -116,3 +116,8 @@ Exp exponent lcm N_exp: 69 206 436 005 (p1) and 41 523 861 603 (p2).
 **Scope:** invariant, local, polynomial-in-momenta integrals near the two points, and generic-point rank (Zariski-open).
 It says nothing about non-polynomial or non-invariant integrals; Morales–Ramis (V9) covers meromorphic ones. No human
 has checked it.
+
+**Environment (back-filled 2026-10-11, per the fleet reproducibility policy):** CPython 3.14.5,
+`/Users/sumit/Github/conjecture_machine/.venv`; numpy 2.4.6 (Accelerate), scipy 1.18.0, sympy 1.14.0, mpmath 1.3.0,
+numba 0.65.1; macOS 26.5 arm64. Pinned in `ENVIRONMENT/` (bridge_env.json, bridge_requirements.lock). Assumed
+unchanged since the run; the venv was not upgraded in between.

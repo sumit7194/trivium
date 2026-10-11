@@ -94,3 +94,8 @@ A rerun is scheduled post-failure.
 - **Net:** V11 independently CONFIRMS the TS-vs-Kerr basin-structure contrast at 3 of 4 p = 4/5 candidates. No candidate
   contradicts it: every Kerr ensemble built is clean, and no TS ensemble reads integrable-clean except a, which is
   borderline. This is a post-failure rerun, labelled as such.
+
+**Environment (back-filled 2026-10-11, per the fleet reproducibility policy):** CPython 3.14.5,
+`/Users/sumit/Github/conjecture_machine/.venv`; numpy 2.4.6 (Accelerate), scipy 1.18.0, sympy 1.14.0, mpmath 1.3.0,
+numba 0.65.1; macOS 26.5 arm64. Pinned in `ENVIRONMENT/` (bridge_env.json, bridge_requirements.lock). Assumed
+unchanged since the run; the venv was not upgraded in between.

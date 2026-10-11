@@ -96,7 +96,7 @@ def run(tag, sysl, eps, K=2000, workers=6, batch=50, px_mode=False, N=N_CROSS, r
         jobs = [(i, (sysd, x0[i:i + batch], eps, px_mode, N, rtol)) for i in range(0, K, batch)
                 if not os.path.exists(os.path.join(ckdir, f'{i:05d}.npz'))]
         t0 = time.time()
-        with get_context('fork').Pool(workers) as pool:
+        with get_context('spawn').Pool(workers) as pool:
             for (i, _), res in zip(jobs, pool.imap(_batch, [j for _, j in jobs])):
                 np.savez(os.path.join(ckdir, f'{i:05d}.npz'), base=res[0], minus=res[1], plus=res[2], hd=res[3])
                 print(f'{tag} s{sysd["idx"]} batch {i} done ({time.time() - t0:.0f}s)', flush=True)

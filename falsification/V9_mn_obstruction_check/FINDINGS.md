@@ -147,3 +147,8 @@ Results: `results/v9_equatorial_row1_a6.json`.
   part is about 2e11 from zero, so numerically tr[g,h] ≠ 2 by a wide margin. v2's certificate excludes 2 only thinly,
   through Im. This is a numerical statement, not a certificate.
 - Results: `results/v9_equatorial_row5_a6.json`.
+
+**Environment (back-filled 2026-10-11, per the fleet reproducibility policy):** CPython 3.14.5,
+`/Users/sumit/Github/conjecture_machine/.venv`; numpy 2.4.6 (Accelerate), scipy 1.18.0, sympy 1.14.0, mpmath 1.3.0,
+numba 0.65.1; macOS 26.5 arm64. Pinned in `ENVIRONMENT/` (bridge_env.json, bridge_requirements.lock). Assumed
+unchanged since the run; the venv was not upgraded in between.

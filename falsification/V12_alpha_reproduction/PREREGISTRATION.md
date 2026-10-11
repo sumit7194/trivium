@@ -370,3 +370,6 @@ probability 1/8.
 
 The reported r values are lower bounds from 4 tolerances: TS L1 0.373, TS L3 0.067, Kerr 0.000 and 0.000. The primary
 α runs proceed with the pre-registered gate: load < 8, up to 6 workers.
+
+**Environment (from the start):** CPython 3.14.5, numpy 2.4.6 (Accelerate), scipy 1.18.0, sympy 1.14.0, mpmath 1.3.0,
+numba 0.65.1; macOS 26.5 arm64. Pinned in `ENVIRONMENT/`. Every V12 result file will embed `tools/envstamp.stamp()`.

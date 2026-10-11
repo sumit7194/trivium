@@ -177,3 +177,8 @@ confirming quantum's "decided by the real part" reading:
 **Instrument lesson.** Complex128 DOP853 runs out of digits on loops whose monodromy is real-hyperbolic of order 1e4.
 There the commutator trace in (0, 2) comes from heavy cancellation. HP transport is the right tool there, and
 tuning tolerances is not.
+
+**Environment (back-filled 2026-10-11, per the fleet reproducibility policy):** CPython 3.14.5,
+`/Users/sumit/Github/conjecture_machine/.venv`; numpy 2.4.6 (Accelerate), scipy 1.18.0, sympy 1.14.0, mpmath 1.3.0,
+numba 0.65.1; macOS 26.5 arm64. Pinned in `ENVIRONMENT/` (bridge_env.json, bridge_requirements.lock). Assumed
+unchanged since the run; the venv was not upgraded in between.

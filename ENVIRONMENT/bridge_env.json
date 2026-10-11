@@ -1,0 +1,31 @@
+{
+ "python": "3.14.5",
+ "executable": "/Users/sumit/Github/conjecture_machine/.venv/bin/python",
+ "implementation": "CPython",
+ "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+ "machine": "arm64",
+ "packages": {
+  "numpy": "2.4.6",
+  "scipy": "1.18.0",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "numba": "0.65.1",
+  "llvmlite": "0.47.0",
+  "flint": null,
+  "torch": null
+ },
+ "blas_lapack": {
+  "numpy": {
+   "blas": "accelerate",
+   "lapack": "accelerate"
+  },
+  "scipy": {
+   "blas": "Accelerate",
+   "lapack": "Accelerate"
+  }
+ },
+ "git": {
+  "commit": "00fa40140a03b46849f2991c0268b61009380993",
+  "dirty": true
+ }
+}
