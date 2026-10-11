@@ -1,0 +1,388 @@
+{
+ "env": {
+  "python": "3.14.5",
+  "executable": "/Users/sumit/Github/conjecture_machine/.venv/bin/python",
+  "implementation": "CPython",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "packages": {
+   "numpy": "2.4.6",
+   "scipy": "1.18.0",
+   "sympy": "1.14.0",
+   "mpmath": "1.3.0",
+   "numba": "0.65.1",
+   "llvmlite": "0.47.0",
+   "flint": null,
+   "torch": null
+  },
+  "blas_lapack": {
+   "numpy": {
+    "blas": "accelerate",
+    "lapack": "accelerate"
+   },
+   "scipy": {
+    "blas": "Accelerate",
+    "lapack": "Accelerate"
+   }
+  },
+  "git": {
+   "commit": "34e8f3f5c3073add78ed88b4d09cba8feb7086bc",
+   "dirty": true
+  }
+ },
+ "runs": {
+  "E1_N300_s0": {
+   "system": {
+    "idx": 0,
+    "level": "L1",
+    "case": "ts45",
+    "E": 0.97,
+    "L": 5.125,
+    "eps_sep": -0.5097682994146966,
+    "sense": "retrograde"
+   },
+   "N": 300,
+   "K": 2000,
+   "excluded": 0,
+   "hits": [
+    1094,
+    1051,
+    1012,
+    933,
+    879,
+    871,
+    819,
+    754
+   ],
+   "f": [
+    0.547,
+    0.5255,
+    0.506,
+    0.4665,
+    0.4395,
+    0.4355,
+    0.4095,
+    0.377
+   ],
+   "eps": [
+    0.003,
+    0.001,
+    0.0003,
+    0.0001,
+    3e-05,
+    1e-05,
+    3e-06,
+    1e-06
+   ],
+   "r": 0.173,
+   "r_count": 346,
+   "retained": [
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "slopes": [
+    {
+     "eps_hi": 0.003,
+     "eps_lo": 0.001,
+     "s": 0.03649932967124237
+    }
+   ],
+   "eps_c": null,
+   "alpha": {
+    "verdict": "INSUFFICIENT"
+   }
+  },
+  "E1_N300_s1": {
+   "system": {
+    "idx": 1,
+    "level": "L1",
+    "case": "kerr45",
+    "E": 0.97,
+    "L": 2.553803751186969,
+    "eps_sep": -0.5097682994146966,
+    "sense": "retrograde"
+   },
+   "N": 300,
+   "K": 2000,
+   "excluded": 0,
+   "hits": [
+    417,
+    120,
+    36,
+    18,
+    8,
+    2,
+    0,
+    0
+   ],
+   "f": [
+    0.2085,
+    0.06,
+    0.018,
+    0.009,
+    0.004,
+    0.001,
+    0.0,
+    0.0
+   ],
+   "eps": [
+    0.003,
+    0.001,
+    0.0003,
+    0.0001,
+    3e-05,
+    1e-05,
+    3e-06,
+    1e-06
+   ],
+   "r": 0.001,
+   "r_count": 2,
+   "retained": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false
+   ],
+   "slopes": [
+    {
+     "eps_hi": 0.003,
+     "eps_lo": 0.001,
+     "s": 1.1337889552708698
+    },
+    {
+     "eps_hi": 0.001,
+     "eps_lo": 0.0003,
+     "s": 1.0
+    },
+    {
+     "eps_hi": 0.0003,
+     "eps_lo": 0.0001,
+     "s": 0.6309297535714575
+    }
+   ],
+   "eps_c": 0.003,
+   "alpha": {
+    "K": 2000,
+    "hits": [
+     417,
+     120,
+     36,
+     18,
+     8
+    ],
+    "f": [
+     0.2085,
+     0.06,
+     0.018,
+     0.009,
+     0.004
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "alpha_mle": 1.0299230871216678,
+    "alpha_wls": 1.0173522151811898,
+    "ci": [
+     0.9217604376126101,
+     1.162960717048041
+    ],
+    "nboot_ok": 1000
+   }
+  },
+  "E1_N600_s0": {
+   "system": {
+    "idx": 0,
+    "level": "L1",
+    "case": "ts45",
+    "E": 0.97,
+    "L": 5.125,
+    "eps_sep": -0.5097682994146966,
+    "sense": "retrograde"
+   },
+   "N": 600,
+   "K": 2000,
+   "excluded": 0,
+   "hits": [
+    859,
+    805,
+    820,
+    791,
+    729,
+    747,
+    732,
+    688
+   ],
+   "f": [
+    0.4295,
+    0.4025,
+    0.41,
+    0.3955,
+    0.3645,
+    0.3735,
+    0.366,
+    0.344
+   ],
+   "eps": [
+    0.003,
+    0.001,
+    0.0003,
+    0.0001,
+    3e-05,
+    1e-05,
+    3e-06,
+    1e-06
+   ],
+   "r": 0.2175,
+   "r_count": 435,
+   "retained": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "slopes": [],
+   "eps_c": null,
+   "alpha": {
+    "verdict": "INSUFFICIENT"
+   }
+  },
+  "E1_N600_s1": {
+   "system": {
+    "idx": 1,
+    "level": "L1",
+    "case": "kerr45",
+    "E": 0.97,
+    "L": 2.553803751186969,
+    "eps_sep": -0.5097682994146966,
+    "sense": "retrograde"
+   },
+   "N": 600,
+   "K": 2000,
+   "excluded": 0,
+   "hits": [
+    417,
+    120,
+    36,
+    18,
+    8,
+    3,
+    0,
+    0
+   ],
+   "f": [
+    0.2085,
+    0.06,
+    0.018,
+    0.009,
+    0.004,
+    0.0015,
+    0.0,
+    0.0
+   ],
+   "eps": [
+    0.003,
+    0.001,
+    0.0003,
+    0.0001,
+    3e-05,
+    1e-05,
+    3e-06,
+    1e-06
+   ],
+   "r": 0.001,
+   "r_count": 2,
+   "retained": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false
+   ],
+   "slopes": [
+    {
+     "eps_hi": 0.003,
+     "eps_lo": 0.001,
+     "s": 1.1337889552708698
+    },
+    {
+     "eps_hi": 0.001,
+     "eps_lo": 0.0003,
+     "s": 1.0
+    },
+    {
+     "eps_hi": 0.0003,
+     "eps_lo": 0.0001,
+     "s": 0.6309297535714575
+    }
+   ],
+   "eps_c": 0.003,
+   "alpha": {
+    "K": 2000,
+    "hits": [
+     417,
+     120,
+     36,
+     18,
+     8
+    ],
+    "f": [
+     0.2085,
+     0.06,
+     0.018,
+     0.009,
+     0.004
+    ],
+    "eps": [
+     0.003,
+     0.001,
+     0.0003,
+     0.0001,
+     3e-05
+    ],
+    "used": [
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "alpha_mle": 1.0299230871216678,
+    "alpha_wls": 1.0173522151811898,
+    "ci": [
+     0.9217604376126101,
+     1.162960717048041
+    ],
+    "nboot_ok": 1000
+   }
+  }
+ },
+ "TS_reading": "FLAT TO EPS_MIN (no crossover at either N)"
+}

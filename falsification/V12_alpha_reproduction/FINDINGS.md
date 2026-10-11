@@ -115,3 +115,31 @@ Same design at the outer survive/plunge edge (K = 2000, seeds 15000+):
   whole basin boundary.
 - The outer windows' fits are INCONCLUSIVE under the primary rule (TS CI upper end not < 0.5), as expected for a
   secondary not designed for it.
+
+## E1, depth and horizon (pre-registered; definitions in addendum 12): the crossover test is NOT EVALUABLE (noise-dominated)
+L1 pair, K = 2000, rtol 1e−13, ε = 3e−3 … 1e−6 (8 values). `results/v12_E1_analysis.json`.
+
+| Run | r (rtol 1e−11 vs 1e−13) | Hits, ε = 3e−3 → 1e−6 | Retained after f ≥ 3r | Slopes / α |
+|---|---|---|---|---|
+| TS, N = 300 | **0.173** (346/2000) | 1094, 1051, 1012, 933, 879, 871, 819, 754 | 2/8 | s(3e−3 → 1e−3) = 0.036 |
+| TS, N = 600 | **0.217** (435/2000) | 859, 805, 820, 791, 729, 747, 732, 688 | 0/8 | — |
+| Kerr, N = 300 | 0.001 (2) | 417, 120, 36, 18, 8, 2, 0, 0 | 5/8 | s = 1.13, 1.00, 0.63 → α̂ 1.03 [0.92, 1.16] |
+| Kerr, N = 600 | 0.001 (2) | 417, 120, 36, 18, 8, 3, 0, 0 | 5/8 | identical, α̂ 1.03 |
+
+**Reading under the pre-registered rules.**
+- The script's automatic label, "FLAT TO EPS_MIN", is **overruled**. "No crossover" holds only because the noise rule
+  leaves 2/8 (N = 300) and 0/8 (N = 600) TS ε values.
+- The registered question (does ε_c fall with N?) **cannot be answered** at this precision. E1 is NOT EVALUABLE.
+
+**What the data do establish (descriptive, not a registered verdict).**
+- TS's uncertain fraction is nearly flat over 3.5 decades: 55% → 38% (N = 300) and 43% → 34% (N = 600), with no
+  sign of approaching α = 1.
+- 17–22% of TS window start points change outcome under a change of integration tolerance (a 1e−11 → 1e−13 level
+  perturbation). Kerr's figure is 0.1%, and Kerr is unchanged between N = 300 and 600.
+- Therefore any finite-time crossover scale ε_c(N) for TS lies BELOW the resolution of double-precision integration
+  (≲ 1e−11 relative). The "genuine fractal vs finite-time artefact" question needs either:
+  - higher-precision integration (quad or mpmath) at selected x0, or
+  - a different discriminator, e.g. ansatz's fixed-ε horizon test, where α is unchanged between N = 300 and 600
+    (0.055 vs 0.051).
+- This is consistent with strong exponential sensitivity (long chaotic transients) in TS and its absence in Kerr. It
+  sharpens the contrast but does not by itself prove a fractal dimension.
