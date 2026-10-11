@@ -69,3 +69,29 @@ numba 0.65.1, macOS 26.5 arm64. The env stamp is embedded in `results/v12_fit_pr
 ## Pending (pre-registered extensions)
 E1 (ε down to 1e−6, N = 300 vs 600, rtol 1e−13), E2 (perturbing p_x), and the outer-transition secondary. After the
 seal: comparison with ansatz's per-level α and CIs.
+
+## Post-seal correction and comparison with ansatz (2026-10-11)
+**Correction.** The pre-registration says ansatz's per-level α values and CIs "are not" known to the bridge. That
+statement was **false when written**. The bridge's own claims ledger (outreach/, local) already listed them from
+ansatz's §150 report, and the one-pager quoted 0.055 and 0.093.
+- What WAS fixed before computing any α: the procedure, every threshold, seeds, windows and the verdict rules.
+- Nothing was tuned on α. The 10 amendments concern gates on synthetic data, the separatrix, the metric chart, the
+  windows and the integrator; none uses an α value.
+- But V12 is not blind to ansatz's numbers, and it should not be described as blind.
+
+**Comparison** (pre-registered rule: they AGREE if the 95% CIs overlap). Ansatz's values are from §150 via the
+ledger: L3 is the addendum-2 rerun, and its Kerr values are WLS.
+
+| Level | TS, bridge | TS, ansatz | Kerr, bridge | Kerr, ansatz | Agree? |
+|---|---|---|---|---|---|
+| L1 | 0.044 [0.032, 0.055] | 0.055 [0.044, 0.067] | 1.008 [0.906, 1.129] | 1.055 [0.997, 1.112] | yes, both |
+| L2 | 0.075 [0.060, 0.089] | 0.093 [0.079, 0.109] | 0.955 [0.861, 1.072] | 1.039 [0.978, 1.098] | yes, both |
+| L3 | 0.147 [0.124, 0.170] | 0.159 [0.132, 0.186] | 0.938 [0.843, 1.049] | 1.039 [0.906, 1.203] | yes, both |
+
+**All six AGREE.**
+- **Pattern worth stating:** the bridge's values are lower in all six cells: TS by 0.011–0.018, Kerr by 0.05–0.10.
+  Same-direction offsets suggest a shared systematic, not noise.
+- **Candidates:** window definition and width; estimator (binomial MLE vs WLS, though the bridge's own WLS equals its
+  MLE to 0.002, so the estimator is unlikely); K (2000 vs 1500); and ε_sep matching (exact bisection vs a 0.01 m
+  grid, which moves the Kerr partner L by about 0.1%).
+- **Not pursued further:** this is a few-percent effective-exponent difference that does not touch the contrast.
