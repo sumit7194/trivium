@@ -291,3 +291,11 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
     the result file).
   - Cross-path: TS 2 AGREE. The table now has TS 0, TS 2 and C3, all AGREE, no FAIL.
   - Tally: 13/24 REPLAYED (TS 0–5, C1–C6, C8), C7 in the ladder, 0 contradictions.
+- **C7: REPLAYED at A7 step 1** (A5 path, 45 min; tr[g,h] width 5e−12; all cross-engine checks true). Its v2
+  exact-box check was applied post hoc to saved output, because the run started before the label fix (noted).
+- **ALL 14 TS rows are REPLAYED by the Arb-free CAPD third replay** (TS 0–5 and C1–C8), with 0 contradictions.
+  - The A7 step 2 was never needed.
+  - The homotopic secondaries (TS 0, C1) PASS.
+  - Cross-path: TS 0, 2, 3, C1 and C3 AGREE; C2 is in progress, and TS 4 will be compared when its original-path run
+    finishes.
+  - Determinism: 6 rows × 3 loops × 3 copies, all bit-identical.
