@@ -258,3 +258,8 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
     128 bits runs out. C1 and C2 passed on the original path at 256 bits.
   - Every NOT_REPLAYED A5 row goes through the A7 ladder mechanically.
   - Tally: 9/24 REPLAYED, 2 pending the ladder (C6, C7), 0 contradictions.
+- **Cross-path FAIL made precise (quantum, registered before any cross-path result).** A FAIL is either
+  non-overlapping enclosures of w_g, w_h or tr[g,h], or opposite CERTAIN decisions. An undecided run goes through the
+  A7 ladder. A cross-path row still undecided after the ladder is listed as "overlap only (A5 undecided)".
+- **A8 (quantum 7491a16), scheduling only:** C3 A5, the C1 secondary and the C1/C2 cross-path re-runs start at A7
+  step-1 settings (prec 256). C8, already started at 128 bits, runs the normal ladder.
