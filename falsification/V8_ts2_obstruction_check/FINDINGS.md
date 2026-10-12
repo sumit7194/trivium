@@ -225,3 +225,6 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   6/24 (TS 0, 1, 2, 3, C1, C2), 0 failures.
 - **TS row 5: REPLAYED** (A5 path, 22.8 min; every cross-engine check true; 0 halvings; tr[g,h] width 3.0e−9). Tally:
   7/24 (TS 0, 1, 2, 3, 5, C1, C2), 0 failures. TS row 4 is still running on both paths.
+- **C4: REPLAYED** (A5 path, 28 min; every cross-engine check true; 0 halvings). Its max shifted-coefficient width is
+  6.7e−11 absolute, larger because the C loops are based far out (|c| ~ 7, so coefficients scale like c^j). The gate
+  and the v2 exact-box overlaps pass. Tally: 8/24 (TS 0, 1, 2, 3, 5, C1, C2, C4), 0 failures.
