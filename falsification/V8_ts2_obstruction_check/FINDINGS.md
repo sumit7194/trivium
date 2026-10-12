@@ -277,3 +277,7 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   comparison. TS 0: AGREE. C3: AGREE. No FAIL.
 - **A7 ladder** started for C6 and C7 in parallel (scheduling only). Tally: 12/24 REPLAYED, 2 in the ladder, 0
   contradictions.
+- **TS 0 secondary (a homotopic 24-gon at 0.8r, same base and approach ray, A5 path): REPLAYED** in 4.7 min. All 24
+  loop-matrix entries overlap both primaries, the original path and the A5 control (exact comparison; quantum
+  qsim/capd/replay_secondary_check.json). The monodromy is unchanged on an independently discretised homotopic loop,
+  which rules out a discretisation artefact shared by the engines.
