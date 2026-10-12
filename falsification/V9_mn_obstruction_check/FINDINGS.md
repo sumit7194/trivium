@@ -206,3 +206,4 @@ Update (2026-10-12):
   Tally: 17/24.
 - **MN equatorial row 1: REPLAYED** (A5 path, fixed layout, 88 min; all checks in-run, including the v2 exact G/H
   boxes; 0 halvings; certainly ≠ 2). Tally: 18/24.
+- **MN axial row 2 (VREPRO 2, p2 μ² = 4): REPLAYED** (23 min; all checks in-run; 0 halvings). Tally: 19/24.
