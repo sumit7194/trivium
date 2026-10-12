@@ -269,3 +269,6 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
 - **TS row 4: REPLAYED** (A5 path, 7.8 min; every cross-engine check true; 0 halvings; tr[g,h] width 5.2e−9). The
   original-path run (>26 h) continues, and the cross-path comparison follows when it finishes. **All six TS plunging
   rows (0–5) are REPLAYED.** Tally: 11/24, 2 undecided pending the ladder (C6, C7), 0 contradictions.
+- **C3: REPLAYED** (original path, 10.2 h; every cross-engine check true; tr[g,h] width 1.4e−15). Its A5 run (A8,
+  starting at prec 256) completes the cross-path pair. Tally: 12/24 REPLAYED (TS 0–5, C1–C5, C8), 2 undecided pending
+  the ladder (C6, C7), 0 contradictions.
