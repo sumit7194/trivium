@@ -184,3 +184,11 @@ Fix: quantum's A5 (quantum 49e8d84), registered before any MN replay output, app
 - positive controls: M6 PASS, and an already-REPLAYED TS row through the A5 path (running).
 Probe: ~16 min per segment (vs ~a week), 0 halvings, max shifted-coefficient width 9.5e−20. Lean: final aggregate
 build passed (9016 jobs).
+Update (2026-10-12):
+- **A5 positive control PASS.** TS row 0 through the full A5 path is REPLAYED again, with every cross-engine check
+  true. The tr[g,h] enclosure (width 3.5e−9) contains the original replay's value. 0 halvings; max shifted-coefficient
+  width 2.7e−16; 11 min vs 4.3 h.
+- **Second exact gate PASS.** p, q rebuilt from the bridge's factored exports equal quantum's expanded p, q in exact
+  rational arithmetic at 20 random rational points per row (a Schwartz–Zippel identity test, not a symbolic proof);
+  the exps are identical (quantum qsim/capd/replay_gate_factored.json).
+- **MN queue started under A5:** eq rows 0–5 and axial rows 0–3, plus the secondaries.
