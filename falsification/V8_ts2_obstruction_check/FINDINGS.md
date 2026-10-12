@@ -272,3 +272,8 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
 - **C3: REPLAYED** (original path, 10.2 h; every cross-engine check true; tr[g,h] width 1.4e−15). Its A5 run (A8,
   starting at prec 256) completes the cross-path pair. Tally: 12/24 REPLAYED (TS 0–5, C1–C5, C8), 2 undecided pending
   the ladder (C6, C7), 0 contradictions.
+- **C3 on the A5 path** (A8, prec 256): REPLAYED in 18.6 min (tr[g,h] width 4.5e−16).
+- **Cross-path table** (quantum qsim/capd/replay_crosspath.py): exact overlap of w_g, w_h and tr[g,h] plus a verdict
+  comparison. TS 0: AGREE. C3: AGREE. No FAIL.
+- **A7 ladder** started for C6 and C7 in parallel (scheduling only). Tally: 12/24 REPLAYED, 2 in the ladder, 0
+  contradictions.
