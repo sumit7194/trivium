@@ -214,3 +214,12 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   failures under A2.
 - **C1 (Dubeibe's level), attempt 1: FAILED-CLOSED** on quantum's own 6 h watchdog, at 35/54 segments; its loops are
   based far out. Re-queued under amendment A2 (a 24 h watchdog, a resource-only change). The attempt-1 record is kept.
+- **Amendments A5/A6 (quantum, 2026-10-12, registered before use):**
+  - Local Taylor re-expansion on 32 exact dyadic sub-segments (MPFR intervals, shift gate, halving rule). It was
+    introduced for the MN stall; see V9 FINDINGS.
+  - Positive control: TS row 0 re-replayed under A5 matched the original path (overlapping tr[g,h]; 11 min vs 4.3 h).
+  - A6 puts the unstarted TS rows on the A5 path. Already-REPLAYED rows are re-run under A5 as a cross-path record,
+    and TS 4 and C3 run on both paths.
+  - Rule: a cross-path non-overlap or verdict change is a FAIL to investigate.
+- **TS row 1: REPLAYED** (A5 path, 12.7 min; every cross-engine check true; 0 halvings; tr[g,h] width 4.7e−8). Tally:
+  6/24 (TS 0, 1, 2, 3, C1, C2), 0 failures.
