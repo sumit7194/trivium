@@ -85,3 +85,24 @@ results:
 - the 10 untrustworthy nodes are bounded (Σ weight × max |value| over the three steppers) against the same thresholds.
 
 The diagnosis above (quantum's q cut) is unaffected. The status reads SEALED TOWARD QUANTUM, verdicts under re-audit.
+
+## Re-audit outcome (2026-10-12): ALL C12 VERDICTS STAND
+Quantum's V1 (the full Stage-2 grid recomputed with the v2 stepper; 2136 nodes, 0 failed) was evaluated under the rule
+fixed before its results (quantum 2abb00d; bridge f901e46).
+- **V1 gates PASS:** a(90°) is within 3.8e−12 of Stage 1; a(40°) and a(45°) lie inside the tight D1 interval;
+  coarse/fine ≤ 1.6e−9; a is positive and monotone.
+
+| θ | (a_V1 − a_rec)/a_rec | Threshold (0.1 × registered gap) | Verdict |
+|---|---|---|---|
+| 40° | +1.20e−6 | 6.3e−6 | stands |
+| 30° | +1.55e−5 | 5.7e−5 | stands |
+| 26.565° | +3.68e−5 | 1.35e−4 | stands |
+| 20° | +1.85e−4 | 7.1e−4 | stands |
+| 15° | +6.15e−4 | 2.5e−3 | stands |
+
+**Reading.**
+- The Stage-2 stepper defect made the recorded values slightly LOW. The shifts are about 2% of each gap, 4–5× under
+  threshold.
+- The gaps remain dominated by quantum's q-truncation (D2a′), which V1 does not change.
+- **The "under re-audit" status is LIFTED.** Status: SEALED TOWARD QUANTUM, verdicts confirmed post-audit.
+- Open, and outside this record's verdicts: plan-A V3 failed, plan B is unregistered, and plan C is deferred.
