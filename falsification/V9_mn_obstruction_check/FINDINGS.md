@@ -192,3 +192,9 @@ Update (2026-10-12):
   rational arithmetic at 20 random rational points per row (a Schwartz–Zippel identity test, not a symbolic proof);
   the exps are identical (quantum qsim/capd/replay_gate_factored.json).
 - **MN queue started under A5:** eq rows 0–5 and axial rows 0–3, plus the secondaries.
+- **MN equatorial row 0: REPLAYED** by the CAPD third replay (A5 path, quantum 2026-10-13). All cross-engine checks
+  are true, including entry-wise overlap with v2's exact G/H boxes; 0 halvings.
+  - tr[g,h]: re [−4.244e5, −1.561e5], im [−2.196e5, 4.62e4]. Wide, but certainly ≠ 2, and it contains v2's
+    −290240.660 − 86714.147i.
+  - w_g encloses v2's value to ~1e−1 absolute.
+  - Tally: 15/24 (14 TS + MN eq 0), 0 contradictions.
