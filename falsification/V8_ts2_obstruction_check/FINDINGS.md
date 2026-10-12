@@ -299,3 +299,11 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   - Cross-path: TS 0, 2, 3, C1 and C3 AGREE; C2 is in progress, and TS 4 will be compared when its original-path run
     finishes.
   - Determinism: 6 rows × 3 loops × 3 copies, all bit-identical.
+- **Cross-path: C2 AGREE.** The table now has TS 0, 2, 3, C1, C2 and C3 all AGREE, no FAIL; TS 4 is pending its
+  original-path run. The A6 re-runs are complete.
+- **MN eq 0, a scheduling change** (quantum MR_REPLAY.md):
+  - First verified that the old-layout input reproduces the checkpoint hashes, and that its 34 checkpointed segments
+    are bit-identical across the 3 copies.
+  - Then stopped all three processes and resumed the row from process 1's exact input on 1 core. All 3 loops come from
+    that single output, through the same combine.
+  - That frees 2 cores for the MN queue on the fixed layout.
