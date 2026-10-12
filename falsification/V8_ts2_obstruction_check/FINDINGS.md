@@ -263,3 +263,6 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   A7 ladder. A cross-path row still undecided after the ladder is listed as "overlap only (A5 undecided)".
 - **A8 (quantum 7491a16), scheduling only:** C3 A5, the C1 secondary and the C1/C2 cross-path re-runs start at A7
   step-1 settings (prec 256). C8, already started at 128 bits, runs the normal ladder.
+- **C8: REPLAYED** (A5 path at 128 bits, 9 min, fixed layout; every cross-engine check true; 0 halvings; tr[g,h]
+  width 5e−6). Not every far-out C row exhausts 128 bits. Tally: 10/24 REPLAYED, 2 undecided pending the ladder (C6,
+  C7), 0 contradictions.
