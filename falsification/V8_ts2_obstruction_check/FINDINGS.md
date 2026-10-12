@@ -223,3 +223,5 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   - Rule: a cross-path non-overlap or verdict change is a FAIL to investigate.
 - **TS row 1: REPLAYED** (A5 path, 12.7 min; every cross-engine check true; 0 halvings; tr[g,h] width 4.7e−8). Tally:
   6/24 (TS 0, 1, 2, 3, C1, C2), 0 failures.
+- **TS row 5: REPLAYED** (A5 path, 22.8 min; every cross-engine check true; 0 halvings; tr[g,h] width 3.0e−9). Tally:
+  7/24 (TS 0, 1, 2, 3, 5, C1, C2), 0 failures. TS row 4 is still running on both paths.
