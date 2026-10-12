@@ -281,3 +281,6 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   loop-matrix entries overlap both primaries, the original path and the A5 control (exact comparison; quantum
   qsim/capd/replay_secondary_check.json). The monodromy is unchanged on an independently discretised homotopic loop,
   which rules out a discretisation artefact shared by the engines.
+- **C1 secondary (Dubeibe's level; homotopic 24-gon at 0.8r; A5 at prec 256): REPLAYED** in 15 min (tr[g,h] width
+  2.9e−16). All 24 loop-matrix entries overlap the original-path primary's (exact). Both registered TS secondaries
+  (TS 0 and C1) are done.
