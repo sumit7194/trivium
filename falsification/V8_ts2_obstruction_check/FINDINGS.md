@@ -284,3 +284,10 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
 - **C1 secondary (Dubeibe's level; homotopic 24-gon at 0.8r; A5 at prec 256): REPLAYED** in 15 min (tr[g,h] width
   2.9e−16). All 24 loop-matrix entries overlap the original-path primary's (exact). Both registered TS secondaries
   (TS 0 and C1) are done.
+- **C6: REPLAYED at A7 step 1** (order 40, prec 256, tol 1e−40; A5 path, 26 min). tr[g,h] ≠ 2 is certain; tr[g,h]
+  width 6e−12, vs ~1e12 at prec 128. All cross-engine checks are true.
+  - Caveat: the v2 exact-box overlap, which is required for all rows under A5, was not run by quantum's finish_row for
+    escalated labels (a bug). It was fixed and the check applied to C6's saved output with the same code (noted in
+    the result file).
+  - Cross-path: TS 2 AGREE. The table now has TS 0, TS 2 and C3, all AGREE, no FAIL.
+  - Tally: 13/24 REPLAYED (TS 0–5, C1–C6, C8), C7 in the ladder, 0 contradictions.
