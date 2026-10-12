@@ -204,3 +204,5 @@ Update (2026-10-12):
 - **MN axial row 1 (VREPRO 1, p1 μ² = 9): REPLAYED** (A5 path, 34 min, 0 halvings; certainly ≠ 2). The v2/v1 overlaps
   were applied post hoc (the run started just before the parser fix), and the exact G/H boxes were checked in-run.
   Tally: 17/24.
+- **MN equatorial row 1: REPLAYED** (A5 path, fixed layout, 88 min; all checks in-run, including the v2 exact G/H
+  boxes; 0 halvings; certainly ≠ 2). Tally: 18/24.
