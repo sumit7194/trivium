@@ -228,3 +228,9 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
 - **C4: REPLAYED** (A5 path, 28 min; every cross-engine check true; 0 halvings). Its max shifted-coefficient width is
   6.7e−11 absolute, larger because the C loops are based far out (|c| ~ 7, so coefficients scale like c^j). The gate
   and the v2 exact-box overlaps pass. Tally: 8/24 (TS 0, 1, 2, 3, 5, C1, C2, C4), 0 failures.
+- **C5: REPLAYED** (A5 path, 26 min; every cross-engine check true; 0 halvings). Tally: 9/24 (TS 0, 1, 2, 3, 5, C1,
+  C2, C4, C5), 0 failures.
+- **Resource bug in quantum's per-loop layout (results unaffected).** The ONLY directive was placed after the loop
+  data, so every per-loop process computed all loops (3× the CPU). The combine still takes loop n from process n, and
+  every affected row passed the v2 exact-box overlaps. Fixed for rows started after this point; the fixed layout is
+  validated by requiring bit-identical loop matrices for TS row 0.
