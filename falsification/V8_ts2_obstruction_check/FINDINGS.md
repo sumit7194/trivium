@@ -210,5 +210,7 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   12.3 h). Every check is consistent: v2's w_g, w_h and tr_comm, v1's tr_comm, and v2's exact G/H boxes. The 2007
   paper's own level is therefore certified non-integrable by three engines on two independent arithmetic libraries
   (Arb ×2, MPFR).
+- **C2: REPLAYED** (quantum, 10.9 h; every check consistent). That makes 5/24 replay rows: TS 0, 2, 3, C1 and C2. 0
+  failures under A2.
 - **C1 (Dubeibe's level), attempt 1: FAILED-CLOSED** on quantum's own 6 h watchdog, at 35/54 segments; its loops are
   based far out. Re-queued under amendment A2 (a 24 h watchdog, a resource-only change). The attempt-1 record is kept.
