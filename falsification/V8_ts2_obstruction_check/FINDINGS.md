@@ -234,3 +234,6 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   data, so every per-loop process computed all loops (3× the CPU). The combine still takes loop n from process n, and
   every affected row passed the v2 exact-box overlaps. Fixed for rows started after this point; the fixed layout is
   validated by requiring bit-identical loop matrices for TS row 0.
+- **Determinism check** (quantum qsim/capd/replay_results/determinism_check.txt). Covers the 5 rows affected by the
+  layout bug: the A5 control, TS 1, TS 5, C4 and C5. Each of their 15 loops was computed independently by 3 separate
+  processes. All 3 copies are bit-identical in every exact interval endpoint of all 8 matrix entries.
