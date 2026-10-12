@@ -198,3 +198,6 @@ Update (2026-10-12):
     −290240.660 − 86714.147i.
   - w_g encloses v2's value to ~1e−1 absolute.
   - Tally: 15/24 (14 TS + MN eq 0), 0 contradictions.
+- **MN axial row 0 (VREPRO 0, p1 μ² = 4): REPLAYED** (A5 path, 33 min, 0 halvings). tr[g,h] width 5.4e8 on a value
+  of ~5.8e12 − 2.8e12i, so certainly ≠ 2. The overlaps with v2/v1 were evaluated post hoc with a parser for Arb's
+  printed ball strings (rigorous enclosures), all TRUE; the exact G/H boxes were TRUE in-run. Tally: 16/24.

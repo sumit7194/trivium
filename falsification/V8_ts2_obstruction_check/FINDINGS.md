@@ -307,3 +307,8 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   - Then stopped all three processes and resumed the row from process 1's exact input on 1 core. All 3 loops come from
     that single output, through the same combine.
   - That frees 2 cores for the MN queue on the fixed layout.
+- **TS 4's original-path run FAILED-CLOSED** at the A2 24 h watchdog (loop 2, 12/18 segments). Resource only, nothing
+  contradicted, and TS 4 is REPLAYED on A5.
+  - Proposed: an A5 homotopic secondary for TS 4 now.
+  - Proposed: an original-path re-run with checkpoints at low priority after the MN queue. Otherwise the table states
+    "no original-path pair (resource)".
