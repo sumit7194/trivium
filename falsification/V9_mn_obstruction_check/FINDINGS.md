@@ -167,3 +167,20 @@ Quantum's gate found the bridge's p and q to be **identical rational functions**
 
 Two independently written derivations agree as exact identities, which is stronger than the earlier 50-digit numerical
 agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equations.
+
+### MN equatorial CAPD replay: step-size stall and amendment A5 (2026-10-12)
+Under quantum's settings (A2–A4), the MN eq row 0 replay did not complete one segment in 6.2 h. Root cause (quantum's
+measurements): interval dependency. Individual E-monomial groups of p, q have ~1e15 terms cancelling to ~1e10. That
+gives tight point values and Jacobians (widths ~1e−34), but box enclosures wide enough to straddle zero in the
+p denominator, so CAPD's step was independent of tolerance and order. Neither the order, the tolerance, Horner
+codegen, direct E evaluation, nor the bridge's factored export (`code/v9_export_capd_factored.py`;
+`export_capd/mneq_factored_row_*.json`, kept as an optional second exact gate) removes the intra-group cancellation.
+Fix: quantum's A5 (quantum 49e8d84), registered before any MN replay output, applies to MN rows only:
+- exact dyadic subdivision into 32 sub-segments (the path is unchanged);
+- each polynomial is Taylor-shifted to the sub-segment start in MPFR interval arithmetic (still independent of
+  FLINT/Arb);
+- shift gate at σ = 0, 0.5 and 1, failing closed;
+- pre-registered dyadic halving rule, up to 4 levels;
+- positive controls: M6 PASS, and an already-REPLAYED TS row through the A5 path (running).
+Probe: ~16 min per segment (vs ~a week), 0 halvings, max shifted-coefficient width 9.5e−20. Lean: final aggregate
+build passed (9016 jobs).
