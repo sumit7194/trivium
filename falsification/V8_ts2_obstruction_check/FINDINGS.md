@@ -253,3 +253,8 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
      tuning. The v1/v2 certificate stands.
   Contradictions are a FAIL to investigate, never something to escalate past. C6's loop copies are bit-identical
   (added to the determinism record).
+- **C7: NOT_REPLAYED** on the A5 path at 128 bits (tr[g,h] undecided, width 6.7e3; every cross-engine overlap true).
+  - Pattern: the C rows (P2 bound level) have far-out loop bases (|c| ~ 7). Their polynomial values are huge, so
+    128 bits runs out. C1 and C2 passed on the original path at 256 bits.
+  - Every NOT_REPLAYED A5 row goes through the A7 ladder mechanically.
+  - Tally: 9/24 REPLAYED, 2 pending the ladder (C6, C7), 0 contradictions.
