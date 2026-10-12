@@ -237,3 +237,11 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
 - **Determinism check** (quantum qsim/capd/replay_results/determinism_check.txt). Covers the 5 rows affected by the
   layout bug: the A5 control, TS 1, TS 5, C4 and C5. Each of their 15 loops was computed independently by 3 separate
   processes. All 3 copies are bit-identical in every exact interval endpoint of all 8 matrix entries.
+- **Layout fix validated:** TS row 0 through the fixed layout gives loop matrices bit-identical to the A5 control, on
+  1 core in 667 s.
+- **C6: NOT_REPLAYED** (undecided, not contradicted).
+  - LOX_G and LOX_H are certain, but tr[g,h] ≠ 2 is undecided. The h loop has large monodromy (v2 w_h ≈ 22337); at
+    prec 128 and tol 1e−25 the enclosure widths grow to w_h ~3.7e4 and tr[g,h] ~1e12.
+  - Every cross-engine overlap is true (the enclosures contain v2's values), and w_g is tight.
+  - Next step, by the registered escalation rule: the same A5 path at order 40, prec 256, tol 1e−40.
+  - Tally: 9/24 REPLAYED, 1 NOT_REPLAYED pending escalation, 0 contradictions.
