@@ -210,3 +210,5 @@ Update (2026-10-12):
 - **MN eq 0 homotopic secondary (24-gon at 0.8r, A5 path): REPLAYED** (3.7 h on 2 procs). All 24 loop-matrix entries
   overlap the primary's (exact), and the v2/v1 overlaps are true. Secondaries TS 0, TS 4, C1 and MN eq 0 all PASS;
   the MN axial-0 secondary is still to run.
+- **MN axial row 3 (VREPRO 3, p2 μ² = 9): REPLAYED** (20 min; all checks in-run; tr[g,h] width 5.7e−7). **All 4 MN
+  axial rows are REPLAYED.** Tally: 20/24.
