@@ -245,3 +245,11 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
   - Every cross-engine overlap is true (the enclosures contain v2's values), and w_g is tight.
   - Next step, by the registered escalation rule: the same A5 path at order 40, prec 256, tol 1e−40.
   - Tally: 9/24 REPLAYED, 1 NOT_REPLAYED pending escalation, 0 contradictions.
+- **Amendment A7 (quantum), registered before any escalated result.** It applies to every NOT_REPLAYED row on the A5
+  path, TS or MN:
+  1. order 40, prec 256, tol 1e−40, SUBSEG 32;
+  2. if still undecided, the same settings with SUBSEG 128 on all loops;
+  3. then stop, and report the row as NOT_REPLAYED by CAPD (undecided, enclosures contain v1/v2), with no further
+     tuning. The v1/v2 certificate stands.
+  Contradictions are a FAIL to investigate, never something to escalate past. C6's loop copies are bit-identical
+  (added to the determinism record).
