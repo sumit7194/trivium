@@ -212,3 +212,5 @@ Update (2026-10-12):
   the MN axial-0 secondary is still to run.
 - **MN axial row 3 (VREPRO 3, p2 μ² = 9): REPLAYED** (20 min; all checks in-run; tr[g,h] width 5.7e−7). **All 4 MN
   axial rows are REPLAYED.** Tally: 20/24.
+- **MN axial-0 homotopic secondary: REPLAYED**, overlapping its primary entry-wise. All 5 registered secondaries PASS
+  (TS 0, TS 4, C1, MN eq 0, MN axial 0).
