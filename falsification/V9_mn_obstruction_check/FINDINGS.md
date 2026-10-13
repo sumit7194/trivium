@@ -214,3 +214,5 @@ Update (2026-10-12):
   axial rows are REPLAYED.** Tally: 20/24.
 - **MN axial-0 homotopic secondary: REPLAYED**, overlapping its primary entry-wise. All 5 registered secondaries PASS
   (TS 0, TS 4, C1, MN eq 0, MN axial 0).
+- **MN equatorial row 2 (p1, E = 1, L = 1, μ² = 4): REPLAYED** (83 min; all checks true, including the v2 exact G/H
+  boxes; 0 halvings; tr[g,h] width 1.9e−3). Tally: 21/24.
