@@ -225,3 +225,20 @@ Update (2026-10-12):
   - Note: this is the row the bridge's own floating-point V9-eq′ reproduction left INCONCLUSIVE on its gates. It now
     has an independent rigorous replay.
   - Tally: 23/24.
+- **MN equatorial row 5: REPLAYED.** Re(tr[g,h]) straddles 2, but Im is certainly in [−3.27e11, −7.98e10], so ≠ 2
+  is certain; it contains v2's value.
+
+### OUTCOME: CAPD third replay complete (quantum 2799ede, qsim/capd/MR_REPLAY.md "OUTCOME"; read and checked by the bridge)
+**All 24 Morales–Ramis certificates are REPLAYED by the Arb-free CAPD/MPFR replay, with 0 contradictions.** That
+covers 14 TS (6 plunging + 8 bound, including Dubeibe's C1), 6 MN equatorial and 4 MN axial.
+- Every row overlaps v2's w_g, w_h and tr[g,h], v1's tr[g,h], and, entry-wise, v2's exact Lean-export G/H boxes.
+- The fields are the bridge's V8/V9 derivation, gated exactly.
+- Cross-path: 6 rows AGREE, no FAIL. TS 4's original-path pair is pending (low-priority re-run).
+- Homotopic secondaries: 5/5 PASS (24/24 entries each).
+- Determinism: bit-identical.
+- Controls: M6 and wrong-p on every path.
+- Caveats (stated in the outcome):
+  - Post-hoc application of the exact-box check (C6, C7) and of the w/tr overlaps (MN axial 0, 1), by re-evaluating
+    saved outputs with the corrected checker.
+  - Two configurations of the same CAPD/MPFR stack (original path and A5 local re-expansion). Amendments A2–A8 were
+    each registered before the outputs they govern.
