@@ -216,3 +216,5 @@ Update (2026-10-12):
   (TS 0, TS 4, C1, MN eq 0, MN axial 0).
 - **MN equatorial row 2 (p1, E = 1, L = 1, μ² = 4): REPLAYED** (83 min; all checks true, including the v2 exact G/H
   boxes; 0 halvings; tr[g,h] width 1.9e−3). Tally: 21/24.
+- **MN equatorial row 3 (p2, E = 1, L = 0, μ² = 4): REPLAYED** (88 min; all checks true, including the v2 exact G/H
+  boxes; 0 halvings; tr[g,h] width 1.0e−2). Tally: 22/24.
