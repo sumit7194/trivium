@@ -218,3 +218,10 @@ Update (2026-10-12):
   boxes; 0 halvings; tr[g,h] width 1.9e−3). Tally: 21/24.
 - **MN equatorial row 3 (p2, E = 1, L = 0, μ² = 4): REPLAYED** (88 min; all checks true, including the v2 exact G/H
   boxes; 0 halvings; tr[g,h] width 1.0e−2). Tally: 22/24.
+- **MN equatorial row 4 (p2, E = 1, L = 0, μ² = 9): REPLAYED** (91 min; all checks true, including the v2 exact G/H
+  boxes; 0 halvings).
+  - tr[g,h]: re [8.52e9, 1.01e10], im [−5.66e9, −4.09e9]. Certainly ≠ 2, and it contains v2's 9.307e9 − 4.875e9i;
+    CAPD is tighter here than v2's own ball (radius 3.2e9).
+  - Note: this is the row the bridge's own floating-point V9-eq′ reproduction left INCONCLUSIVE on its gates. It now
+    has an independent rigorous replay.
+  - Tally: 23/24.
