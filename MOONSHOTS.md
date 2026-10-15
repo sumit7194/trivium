@@ -21,6 +21,13 @@ contribution, plus the rules that let six lists merge into one.*
 >   staircase corner.
 > - **G-6 was acted on** at 22:36, two minutes after this doc: cuspis now cites 2307.05164 in its
 >   references and backlog. It is **not yet in RESULT.md**, where the positioning belongs.
+> - **2026-10-16 (bridge re-read, `fleet/MOONSHOT_REVIEW_2026-10-16.md`):** two citation errors in the settled-facts
+>   table. (i) arXiv:2412.04135 is Ben Achour's DHOST review (EPJC 85, 424 (2025)), not a spectral sGB QNM paper; the
+>   spectral QNM papers are 2406.11986 and 2412.09377. (ii) The "primary hair (Jan 2026)" exact rotating hairy hole,
+>   arXiv:2601.21163 (Fernandes), is a Kerr–Schild solution of *generalized Proca* theory: no scalar, no Gauss–Bonnet term.
+>   So B-11 controls "can the engine find an exact rotating hairy hole", not the sGB class. Also: 0804.4705's authors are
+>   Krtouš, Frolov and Kubizňák. **B-5's gate (K5, the proof tool) is gone**: quantum's Morales–Ramis tool exists, with
+>   24 TS/MN certificates CAPD-replayed and Lean-checked.
 
 ---
 
