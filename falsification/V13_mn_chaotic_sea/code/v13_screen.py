@@ -15,7 +15,7 @@ RES = os.path.join(HERE, '../results')
 N_RET, N_ORB, ACC = 2000, 60, 1e-9
 POINTS = {'C0': (1, R(9, 10), R(19, 20)/(R(19, 100))**R(3, 2)), 'F5R': (89, 80, R(13394411, 1186380)),
           'p1': (5, 3, R(1, 5)), 'p2': (13, 5, R(-1, 3))}
-SHARED = {'C0': (R(19, 20), R(3)), 'F5R': (R(19, 20), R(3)), 'p1': (R(37, 40), R(29, 10)), 'p2': (R(9, 10), R(13, 10))}
+SHARED = {'C0': (R(19, 20), R(3)), 'F5R': (R(19, 20), R(3)), 'p1': (R(37, 40), R(29, 10)), 'p2': (R(37, 40), R(3))}   # A8
 
 def E_b(P, ell, lo=0.85, hi=0.9999):
     def state(E):
@@ -126,3 +126,20 @@ if __name__ == '__main__':
             print('region', [round(v, 3) for v in reg['rho']], 'read', reg['n_read'], 'chaotic', reg['n_chaotic'],
                   '| B9: leftD', reg['b9_left_D'], 'read', reg['b9_read'], 'chaotic', reg['b9_chaotic'], flush=True)
         json.dump(res, open(os.path.join(RES, 'v13_c0_gate.json'), 'w'), indent=1)
+
+    if mode == 'counted':
+        # Counted screen at a point's shared level (prereg §3-4, A1-A8): B9 domain, 1e-9 acceptance,
+        # thresholds from the same chi's Kerr null; section points stored for the §7 Jaccard comparison.
+        thr = json.load(open(os.path.join(RES, f'v13_kerr_null_{key}_analysis.json')))['thresholds']
+        M, a_, beta = POINTS[key]; Es, ls = SHARED[key]; P = Point(key)
+        orbits, comps = sample(P, float(Es), float(ls))
+        rtol, _ = pilot(M, a_, beta, Es, ls, orbits, 'B9')
+        recs = run_orbits(M, a_, beta, Es, ls, orbits, rtol, 'B9')
+        for r in recs:
+            if r['status'] == 'READ': r['verdict'] = 'CHAOTIC' if (r['A1'] > thr['A1'] and r['A2'] > thr['A2']) else 'NOT_CHAOTIC'
+        rd = [r for r in recs if r['status'] == 'READ']
+        res = dict(key=key, E=str(Es), ell=str(ls), commit=commit, thresholds=thr, rtol=rtol,
+                   comps=[(c['lo'], c['hi']) for c in comps], n=len(recs), n_read=len(rd),
+                   n_chaotic=sum(r['verdict'] == 'CHAOTIC' for r in rd), orbits=recs)
+        json.dump(res, open(os.path.join(RES, f'v13_counted_{key}.json'), 'w'))
+        print(key, 'shared', Es, ls, 'rtol', rtol, 'READ', len(rd), '/', len(recs), 'CHAOTIC', res['n_chaotic'], flush=True)
