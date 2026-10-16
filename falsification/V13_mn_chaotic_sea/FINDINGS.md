@@ -121,3 +121,5 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
     are void.
   - C0 (M = 1) and p1/p2 (M = 5, 13) were checked: no orbit there hit the cap. Every SURVIVE-with-<2000-returns fate
     is absent at those points.
+- **F5-R null rerun** (with the cap fixed): READ 35, 56, 60, 60 and 60 of 60, matching C0's pattern. Thresholds
+  A1 > −7.64, A2 > 0.0200 (C0's: −7.61 and 0.0193). **C1: PASS, 0 of 136.**

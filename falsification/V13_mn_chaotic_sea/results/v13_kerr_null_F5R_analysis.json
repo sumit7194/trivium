@@ -1,7 +1,7 @@
 {
  "key": "F5R",
  "thresholds": {
-  "A1": -8.133527803802126,
+  "A1": -7.641244489237475,
   "A2": 0.020039580521209566
  },
  "levels": [
@@ -9,25 +9,29 @@
    "kind": "whirl",
    "E": 0.9976394566079405,
    "ell": 2.7,
-   "rtol": 1e-13,
-   "n_read": 0,
+   "rtol": 1e-11,
+   "n_read": 35,
    "n": 60,
    "abstain_fates": {
-    "SURVIVE": 35,
     "LEFT_D": 25
-   }
+   },
+   "p99_A1": -7.641244489237475,
+   "p99_A2": -0.004152662637695718,
+   "n_train": 17
   },
   {
    "kind": "whirl",
    "E": 0.9967394566079405,
    "ell": 2.7,
-   "rtol": 1e-13,
-   "n_read": 0,
+   "rtol": 1e-11,
+   "n_read": 56,
    "n": 60,
    "abstain_fates": {
-    "SURVIVE": 56,
     "LEFT_D": 4
-   }
+   },
+   "p99_A1": -7.927491898029198,
+   "p99_A2": 0.000902131978221145,
+   "n_train": 28
   },
   {
    "kind": "whirl",
@@ -67,9 +71,9 @@
   }
  ],
  "C1": {
-  "held_out_read": 90,
+  "held_out_read": 136,
   "chaotic": 0,
-  "cp95_upper": 0.03273803383353457,
+  "cp95_upper": 0.021786610611001893,
   "p_binom": 1.0,
   "PASS": true,
   "rule": "FAIL iff P(X >= k | n, p = 0.01) < 0.05 (one-sided binomial test of rate <= 1%); CP95 reported"
