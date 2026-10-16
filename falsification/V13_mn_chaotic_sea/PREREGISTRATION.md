@@ -140,3 +140,20 @@ Two arms, AND rule:
 ## 9. Failure handling
 A failed gate is root-caused and amended (amendments are numbered and committed before the outputs they govern), never
 silently retried.
+
+## Amendment A1 (2026-10-16, before any orbit; disclosed: made after V13's geometry, a554dc6)
+- **D:** the counted domain is quantum's B9 (45c1168). It replaces the global δ_x and R_s rules:
+  - (a) g_φφ > 0 on the (x, y) box inflated by ±0.025 around every point, checked numerically at the point and on the
+    box's corners and edge midpoints;
+  - (a′) x − 1 ≥ 0.05;
+  - (c) R ≥ 0.5;
+  - every metric function finite.
+- **Also reported:** f_D under the withdrawn global rule (B6) and under the pointwise rule x − x_CTC(y) ≥ 0.025.
+- **Shared levels are unchanged.** a554dc6 named them under B6. Under B9 the same candidates qualify:
+  - p2 and F5-R: the first candidate still qualifies;
+  - p1: the MR levels' regions start at x ≈ 1.076, which equals x_CTC(p1). B9(a) fails within 0.025 of the CTC
+    boundary, so the grid fallback still applies.
+  - The levels stand, so both screens keep a single shared set.
+- **Geometry correction:** the equatorial CTC edge is 1.92192 (F5-R) and 1.92983 (C0) after refinement. The 1.885 in
+  my message to quantum came from a coarse grid. At C0 the inner allowed region's lower edge coincides with the CTC
+  edge.
