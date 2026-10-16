@@ -66,3 +66,9 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
 - **Second partial unblinding (2026-10-16):** a quantum status message reported that 1 of 7 adaptive HH coverings
   (M0⇒M0) was certified at that point. V14's HH decisions are unaffected (own ladder, committed before reading
   quantum's JSONs); disclosed here.
+- **Complete list of HH information the bridge has received** (quantum's own inventory, 2026-10-16):
+  1. the first-pass qualitative picture ("(b) passing and (a) failing on coarse boxes"; disclosed above; also in
+     quantum's prereg commit 5d77bee);
+  2. the adaptive-pass M0⇒M0 certified, at 305 leaves;
+  3. the first-pass settings (16×16 support boxes, 64 pieces per edge).
+  Nothing else: no other covering outcome, no W result, no margins.
