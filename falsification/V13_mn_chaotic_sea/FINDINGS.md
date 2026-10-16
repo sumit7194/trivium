@@ -94,3 +94,11 @@
 - **The comparison is INCOMPLETE:** the registered region-overlap criterion (Jaccard ≥ 0.5) and the return-time
   comparison could not be evaluated, because V13 stored no section points. This is a gap, not an agreement.
   - Fix: the counted screens store (x, p_x, τ) per crossing (v13_screen, from this commit on).
+
+## C3: published islands NOT CHAOTIC (C0)
+- The bridge's own elliptic period-1 fixed points (Newton on P, with the exact variational Jacobian) are at x = 2.26508
+  (ρ = 0.8859) and x = 19.18295 (ρ = 8.3503). These are the published inner and outer islands (CLA u₀ and u₀′; tabula
+  reports ρ ≈ 0.8–1.05 and 8.35).
+- 10 orbits per island (x offsets ±0.2–4% of x_c, p_x = 0), base domain, 1e−8: **20 of 20 READ, 0 CHAOTIC. C3 PASS.**
+- Sealed: `results/v13_c3.json` (sha256 below).
+a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/V13_mn_chaotic_sea/results/v13_c3.json
