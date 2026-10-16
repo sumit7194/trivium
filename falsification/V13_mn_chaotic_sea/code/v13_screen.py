@@ -1,0 +1,102 @@
+"""V13 screen driver (prereg §4, A1–A6). One level = one (point, E, ell, domain) with 60 orbits on the section.
+Per orbit: outcome, returns, max |H + 1/2| up to the reading (the last return), and the two arms
+(A1 = log10 |dnu| frequency-map diffusion, A2 = 0-1 test K), read only if the orbit completes N returns inside the
+domain with drift <= 1e-9; otherwise ABSTAIN (reported by fate).
+Usage: python v13_screen.py kerr_null <chi_key>  |  python v13_screen.py pilot_selftest <chi_key>"""
+import sys, os, json, math, time, subprocess
+import numpy as np, sympy as sp
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from v13_geometry import Point
+from v13_orbit import make
+from v13_indicators import fma_diffusion, zero_one_K
+R = sp.Rational
+RES = os.path.join(HERE, '../results')
+N_RET, N_ORB, ACC = 2000, 60, 1e-9
+POINTS = {'C0': (1, R(9, 10), R(19, 20)/(R(19, 100))**R(3, 2)), 'F5R': (89, 80, R(13394411, 1186380)),
+          'p1': (5, 3, R(1, 5)), 'p2': (13, 5, R(-1, 3))}
+SHARED = {'C0': (R(19, 20), R(3)), 'F5R': (R(19, 20), R(3)), 'p1': (R(37, 40), R(29, 10)), 'p2': (R(9, 10), R(13, 10))}
+
+def E_b(P, ell, lo=0.85, hi=0.9999):
+    def state(E):
+        cs = [c for c in P.components(E, ell) if not c['nan_edge'] and c['hi'] - c['lo'] > 1e-3]
+        if any(not c['touches_inner'] and not c['touches_outer'] for c in cs): return 'bound'
+        inner = [c for c in cs if c['touches_inner']]
+        return 'merged' if inner and max(c['hi'] for c in inner) > 1.2 else 'none'
+    Es = [lo + (hi - lo)*i/60 for i in range(61)]; st = [state(E) for E in Es]
+    for i in range(60):
+        if st[i] == 'bound' and st[i + 1] == 'merged':
+            a, b = Es[i], Es[i + 1]
+            while b - a > 1e-12:
+                m = 0.5*(a + b)
+                if state(m) == 'bound': a = m
+                else: b = m
+            return 0.5*(a + b)
+    return None
+
+def kerr_levels(key):
+    M, a_, _ = POINTS[key]; K = Point('kerr_' + key, (M, a_, 0)); Es, ls = SHARED[key]
+    grid = [round(2.0 + 0.1*j, 1) for j in range(26)]
+    grid.sort(key=lambda l: (abs(l - float(ls)), l))
+    lw = Eb = None
+    for l in grid:
+        e = E_b(K, l)
+        if e is not None and e < 0.999: lw, Eb = l, e; break
+    levels = [dict(kind='whirl', E=Eb - d, ell=lw, dE=d) for d in (1e-4, 1e-3, 1e-2)]
+    levels.append(dict(kind='generic', E=Eb - 0.03, ell=lw))
+    if K.bounded(float(Es), float(ls)): levels.append(dict(kind='generic_shared', E=float(Es), ell=float(ls)))
+    return K, lw, Eb, levels
+
+def sample(P, E, ell, x_min=1.05):
+    comps = [c for c in P.bounded(E, ell, x_min) if not c['nan_edge'] and c['hi'] - c['lo'] > 0.05]
+    xs = []
+    for c in comps:
+        lo, hi = c['lo'], c['hi']; m = 0.15*(hi - lo)
+        xs += list(np.linspace(lo + m, hi - m, N_ORB))
+    xs = xs[:: max(1, len(xs)//N_ORB)][:N_ORB]
+    ss = [0.0, 0.3, -0.3, 0.6, -0.6]
+    return [(float(x), ss[i % 5]) for i, x in enumerate(xs)], comps
+
+def run_orbits(M, a_, beta, E, ell, orbits, rtol, domain):
+    integ, start, ham, inD, pieces = make(M, a_, beta, R(E).limit_denominator(10**12) if not isinstance(E, sp.Basic) else E,
+                                          sp.nsimplify(ell)*sp.nsimplify(M), domain=domain)
+    out = []
+    for i, (x0, s) in enumerate(orbits):
+        q = pieces(x0, 0.0); rest = -1.0 - q[6]
+        pmax = math.sqrt(rest/q[0]) if rest > 0 and q[0] > 0 else 0.0
+        px0 = 0.98*s*pmax
+        oc, nc, tau, drift, steps, sec = integ(x0, px0, N_RET, rtol, rtol*1e-3, 1e9, 400_000_000)
+        rec = dict(i=i, x0=x0, px0=px0, outcome=int(oc), returns=int(nc), drift=float(drift), tau=float(tau))
+        if nc >= N_RET and drift <= ACC:
+            d, n1, n2 = fma_diffusion(sec[:, 0], sec[:, 1]); rec.update(A1=d, A2=zero_one_K(sec[:, 0]), status='READ')
+            rec['ret_time_median'] = float(np.median(np.diff(sec[:, 2])))
+        else:
+            rec['status'] = 'ABSTAIN'
+        out.append(rec)
+    return out
+
+def pilot(M, a_, beta, E, ell, orbits, domain):
+    pick = orbits[:: max(1, len(orbits)//12)][:12]
+    if not pick: raise SystemExit('PILOT REFUSES: empty')
+    for rtol in (1e-11, 1e-12, 1e-13):
+        r = run_orbits(M, a_, beta, E, ell, pick, rtol, domain)
+        ok = [x for x in r if x['returns'] >= N_RET]
+        if ok and all(x['drift'] <= ACC for x in ok): return rtol, r
+    return 1e-13, r   # floor; per-orbit acceptance decides
+
+if __name__ == '__main__':
+    mode, key = sys.argv[1], sys.argv[2]
+    commit = subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True, cwd=HERE).stdout.strip()
+    if mode == 'kerr_null':
+        M, a_, _ = POINTS[key]; K, lw, Eb, levels = kerr_levels(key)
+        res = dict(key=key, chi=str(sp.nsimplify(a_)/M), ell_w=lw, E_b=Eb, commit=commit, levels=[])
+        for L in levels:
+            orbits, comps = sample(K, L['E'], L['ell'])
+            if not orbits: res['levels'].append(dict(**L, note='no bound region inside D')); continue
+            t0 = time.time(); rtol, pil = pilot(M, a_, 0, L['E'], L['ell'], orbits, 'B9')
+            recs = run_orbits(M, a_, 0, L['E'], L['ell'], orbits, rtol, 'B9')
+            res['levels'].append(dict(**L, comps=[(c['lo'], c['hi']) for c in comps], rtol=rtol, orbits=recs,
+                                      seconds=round(time.time() - t0, 1)))
+            print(key, L['kind'], round(L['E'], 6), L['ell'], 'rtol', rtol, 'read',
+                  sum(r['status'] == 'READ' for r in recs), '/', len(recs), round(time.time() - t0, 1), 's', flush=True)
+        json.dump(res, open(os.path.join(RES, f'v13_kerr_null_{key}.json'), 'w'), indent=1)

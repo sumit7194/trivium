@@ -1,0 +1,11 @@
+{
+ "key": "C0",
+ "level": {
+  "kind": "generic",
+  "E": 0.9677275790039876,
+  "ell": 2.7
+ },
+ "max_drift_rtol1e7": 6.4173499035313775e-06,
+ "max_drift_rtol1e11": 2.692803202641869e-10,
+ "PASS": true
+}

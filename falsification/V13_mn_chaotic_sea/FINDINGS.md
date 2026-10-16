@@ -46,3 +46,14 @@
     closed and continuous, so they keep the centred (x, p_x) signal.
 - **Rule for development smoke tests:** no MN orbits from shared or gate levels are inspected before thresholds are
   fixed. Pipeline smoke runs use Hénon–Heiles and Kerr only.
+
+## Kerr null at χ = 0.9 (C0 and F5-R's χ ≈ 0.9 partner; A6). Thresholds fixed here, before any MN orbit is scored.
+- ℓ_w = 2.7, E_b = 0.997727579 (the merge of the bound region with the plunge region). Levels: E_b − 1e−4, E_b − 1e−3,
+  E_b − 1e−2 and E_b − 0.03 at ℓ_w, plus the shared level (0.95, 3).
+- **Pilot:** rtol 1e−11 at every level.
+- **C2 pilot self-test: PASS.** At rtol 1e−7 the drift is 6.4e−6, which fails as it should; at 1e−11 it is 2.7e−10.
+- **READ per level:** 35, 57, 60, 60 and 60 of 60.
+  - The ABSTAIN orbits are all LEFT_D (plunging) at the two levels nearest the barrier: 25 and 3.
+- **Thresholds** (class-wise max of the per-level training p99s): **A1 > −7.61, A2 > 0.0193.**
+- **C1: PASS.** Held-out READ orbits: 0 of 136 CHAOTIC (CP95 upper bound 2.2%; binomial p = 1.0).
+- Files: `results/v13_kerr_null_C0.json`, `_analysis.json`, `v13_pilot_selftest_C0.json`.
