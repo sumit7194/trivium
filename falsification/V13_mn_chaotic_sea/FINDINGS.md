@@ -72,3 +72,19 @@
     equatorial singular ring, the CTC-adjacent zone that B9 excludes.**
 - Sealed for the exchange with tabula: `results/v13_c0_gate.json` (sha256 below, recorded at commit).
 6a705e2bd53443e8755387d68913857d99658f25a09053be21266e41cfbd74d1  falsification/V13_mn_chaotic_sea/results/v13_c0_gate.json
+
+## C0 exchange with tabula (§7; both sealed before the exchange: tabula a1c5051 / dd6c102c…, bridge d24e034 / 6a705e2b…)
+
+| | bridge V13 | tabula K20 | §7 |
+|---|---|---|---|
+| inner CHAOTIC | 49/50 = 0.98 [0.894, 0.999] | 75/80 = 0.9375 [0.860, 0.979] | CIs overlap: AGREE |
+| outer CHAOTIC | 0/60 [0, 0.060] | 0/100 [0, 0.036] | AGREE |
+| inner leaving D_B9 before 2000 returns | 59/60 (median 15 returns) | 95/100 (median 16) | AGREE |
+| base-CHAOTIC leaving D_B9 before 500 returns | 49/49 | 75/75 | AGREE |
+
+- The two screens are independent: different indicators (NAFF and 0–1 test, against FTLE ratio and correlation
+  dimension), different code, and their own Kerr nulls.
+- **Both find the published C0 inner chaos real, and lying entirely in the singular-ring/CTC neighbourhood that D
+  excludes.**
+- Limitation on the bridge side: section points were not stored, so the bridge's sea-ρ statement uses starting
+  points only.
