@@ -315,3 +315,6 @@ agreement. Quantum's CAPD replay (MPFR, no Arb) integrates the BRIDGE's equation
 - **TS 4 homotopic secondary (24-gon at 0.8r, A5 path): REPLAYED** in 15 min. All 24 loop-matrix entries overlap the
   A5 primary's (exact), and the v2/v1 overlaps are true. TS secondaries TS 0, TS 4 and C1 all PASS. The TS 4
   original-path re-run (checkpointed, nice +19) is chained after the MN queues.
+- **TS 4 original-path re-run: REPLAYED** (2026-10-14, 20.0 h, attempt 1; all checks true, including the v2 exact G/H
+  boxes). The cross-path pair with A5 AGREES (quantum 7596e4e / 985faf2). **Cross-path table: 7/7 AGREE** (TS 0, 2, 3,
+  4, C1, C2, C3), with no FAIL. The CAPD third replay has no loose ends.
