@@ -1,0 +1,77 @@
+{
+ "key": "F5R",
+ "thresholds": {
+  "A1": -8.133527803802126,
+  "A2": 0.020039580521209566
+ },
+ "levels": [
+  {
+   "kind": "whirl",
+   "E": 0.9976394566079405,
+   "ell": 2.7,
+   "rtol": 1e-13,
+   "n_read": 0,
+   "n": 60,
+   "abstain_fates": {
+    "SURVIVE": 35,
+    "LEFT_D": 25
+   }
+  },
+  {
+   "kind": "whirl",
+   "E": 0.9967394566079405,
+   "ell": 2.7,
+   "rtol": 1e-13,
+   "n_read": 0,
+   "n": 60,
+   "abstain_fates": {
+    "SURVIVE": 56,
+    "LEFT_D": 4
+   }
+  },
+  {
+   "kind": "whirl",
+   "E": 0.9877394566079405,
+   "ell": 2.7,
+   "rtol": 1e-11,
+   "n_read": 60,
+   "n": 60,
+   "abstain_fates": {},
+   "p99_A1": -8.133527803802126,
+   "p99_A2": 0.020039580521209566,
+   "n_train": 30
+  },
+  {
+   "kind": "generic",
+   "E": 0.9677394566079405,
+   "ell": 2.7,
+   "rtol": 1e-11,
+   "n_read": 60,
+   "n": 60,
+   "abstain_fates": {},
+   "p99_A1": -8.689112676260653,
+   "p99_A2": 0.006950742720228521,
+   "n_train": 30
+  },
+  {
+   "kind": "generic_shared",
+   "E": 0.95,
+   "ell": 3.0,
+   "rtol": 1e-11,
+   "n_read": 60,
+   "n": 60,
+   "abstain_fates": {},
+   "p99_A1": -9.89255694334679,
+   "p99_A2": -0.00010532732308062478,
+   "n_train": 30
+  }
+ ],
+ "C1": {
+  "held_out_read": 90,
+  "chaotic": 0,
+  "cp95_upper": 0.03273803383353457,
+  "p_binom": 1.0,
+  "PASS": true,
+  "rule": "FAIL iff P(X >= k | n, p = 0.01) < 0.05 (one-sided binomial test of rate <= 1%); CP95 reported"
+ }
+}

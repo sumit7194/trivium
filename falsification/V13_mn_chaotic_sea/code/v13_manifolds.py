@@ -16,36 +16,37 @@ from v13_upo import SectionMap
 from v13_screen import POINTS, RES
 DMAX, NSEG0, NMAX_PTS = 0.01, 200, 40000
 
-def grow(S, z, m, lam, v, kmax, delta, xscale, pscale):
-    """Returns the list of polylines [iterate 0..kmax] of W^u(z) inside D, and the number of dropped points."""
+def grow(S, z, m, lam, v, kmax, delta, xscale, pscale, cap=6000):
+    """Incremental growth: each retained point's image at iterate k is P applied once to its image at k-1. Only
+    points INSERTED by refinement are traced from the fundamental segment (k applications). Returns the polylines for
+    iterates 0..kmax inside D, and the number of dropped points."""
     pow_ = m if lam > 0 else 2*m
     span = abs(lam) if lam > 0 else lam*lam
-    s = np.geomspace(delta, delta*span, NSEG0)
-    pts = [z + si*v for si in s]
-    curves = [np.array(pts)]; dropped = 0; cur_s = list(s)
+    ss = list(np.geomspace(delta, delta*span, NSEG0))
+    cur = [z + si*v for si in ss]
+    curves = [np.array(cur)]; dropped = 0
+    def trace(si, k):
+        w = z + si*v
+        for _ in range(k):
+            w2, _, _ = S.P(*w, pow_, b9=True)
+            if w2 is None: return None
+            w = w2
+        return w
     for k in range(1, kmax + 1):
-        imgs = []
-        for si in cur_s:
-            w = z + si*v; ok = True
-            for _ in range(k):
-                w2, _, _ = S.P(*w, pow_, b9=True)
-                if w2 is None: ok = False; break
-                w = w2
-            imgs.append(w if ok else None)
-        # refine: insert midpoints where consecutive images are far apart (both alive), up to the cap
+        nxt = []
+        for w in cur:
+            if w is None: nxt.append(None); continue
+            w2, _, _ = S.P(*w, pow_, b9=True); nxt.append(w2)
         i = 0
-        while i < len(cur_s) - 1 and len(cur_s) < NMAX_PTS:
-            a, b = imgs[i], imgs[i + 1]
+        while i < len(ss) - 1 and len(ss) < cap:
+            a, b = nxt[i], nxt[i + 1]
             if a is not None and b is not None and math.hypot((a[0] - b[0])/xscale, (a[1] - b[1])/pscale) > DMAX:
-                sm = math.sqrt(cur_s[i]*cur_s[i + 1]); w = z + sm*v; ok = True
-                for _ in range(k):
-                    w2, _, _ = S.P(*w, pow_, b9=True)
-                    if w2 is None: ok = False; break
-                    w = w2
-                cur_s.insert(i + 1, sm); imgs.insert(i + 1, w if ok else None)
+                sm = math.sqrt(ss[i]*ss[i + 1])
+                ss.insert(i + 1, sm); nxt.insert(i + 1, trace(sm, k))
             else: i += 1
-        dropped += sum(1 for p in imgs if p is None)
-        curves.append(np.array([p if p is not None else [np.nan, np.nan] for p in imgs]))
+        dropped = sum(1 for p in nxt if p is None)
+        cur = nxt
+        curves.append(np.array([p if p is not None else [np.nan, np.nan] for p in cur]))
     return curves, dropped
 
 def seg_cross(P1, P2):

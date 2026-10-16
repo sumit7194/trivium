@@ -65,7 +65,7 @@ def run_orbits(M, a_, beta, E, ell, orbits, rtol, domain, acc=ACC):
         q = pieces(x0, 0.0); rest = -1.0 - q[6]
         pmax = math.sqrt(rest/q[0]) if rest > 0 and q[0] > 0 else 0.0
         px0 = 0.98*s*pmax
-        oc, nc, tau, drift, steps, sec = integ(x0, px0, N_RET, rtol, rtol*1e-3, 1e9, 400_000_000)
+        oc, nc, tau, drift, steps, sec = integ(x0, px0, N_RET, rtol, rtol*1e-3, 1e9*float(M), 400_000_000)   # tau cap scales with M (bug fix)
         rec = dict(i=i, x0=x0, px0=px0, outcome=int(oc), returns=int(nc), drift=float(drift), tau=float(tau),
                    sec=[[float(v) for v in row[:3]] for row in sec[:nc]])   # (x, p_x, tau) per crossing, for §7 Jaccard
         if nc >= N_RET and drift <= acc:

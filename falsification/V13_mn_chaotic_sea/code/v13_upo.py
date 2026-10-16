@@ -24,7 +24,7 @@ class SectionMap:
         self.sj = make_var(M, a_, beta, sp.nsimplify(E), sp.nsimplify(Lz))
     def P(self, x, px, n, b9=False):
         integ = (self.b9 if b9 else self.base)[0]
-        oc, nc, tau, drift, steps, sec = integ(x, px, n, RT, RT*1e-3, 1e9, 50_000_000)
+        oc, nc, tau, drift, steps, sec = integ(x, px, n, RT, RT*1e-3, 1e12, 50_000_000)
         if nc < n: return None, sec[:nc], oc
         return np.array([sec[n - 1, 0], sec[n - 1, 1]]), sec[:nc], oc
     def jac(self, z, n):

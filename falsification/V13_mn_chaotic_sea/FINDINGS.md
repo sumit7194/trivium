@@ -109,3 +109,15 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
     a post-hoc supplementary C3/C4 using the bridge's offsets.
   - V13 does not share this failure mode. A2 (the 0–1 test) is scale-invariant, and A1 (NAFF) is a frequency, well
     defined for small curves.
+
+## Kerr nulls at the other three χ (A6); one bug fixed
+- **p1** (χ = 0.6): ℓ_w = 2.9. Thresholds A1 > −7.21, A2 > −0.0025. **C1: PASS, 0 of 90.** E_b − 1e−2 and E_b − 0.03
+  have no bound region inside D, so the level set is smaller.
+- **p2** (χ = 5/13): ℓ_w = 3.1. Thresholds A1 > −6.93, A2 > −0.0005. **C1: PASS, 0 of 60.** Same two levels absent.
+- **F5-R** (χ = 80/89), first run INVALID at the two barrier-nearest levels (0 of 60 READ).
+  - **Bug:** the hard-coded proper-time cap τ_max = 1e9 is in units with M = 89, so orbit periods are 89× longer than
+    at C0 and 2000 returns exceed the cap.
+  - **Fix:** τ_max = 1e9·M (v13_screen; also 1e12 in v13_upo). The F5-R null is being rerun; its first-run thresholds
+    are void.
+  - C0 (M = 1) and p1/p2 (M = 5, 13) were checked: no orbit there hit the cap. Every SURVIVE-with-<2000-returns fate
+    is absent at those points.

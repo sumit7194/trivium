@@ -1,0 +1,49 @@
+{
+ "key": "p2",
+ "thresholds": {
+  "A1": -6.930414923957729,
+  "A2": -0.0004678931060724902
+ },
+ "levels": [
+  {
+   "kind": "whirl",
+   "E": 0.9309865169548293,
+   "ell": 3.1,
+   "rtol": 1e-11,
+   "n_read": 60,
+   "n": 60,
+   "abstain_fates": {},
+   "p99_A1": -9.7341785193727,
+   "p99_A2": -0.0004678931060724902,
+   "n_train": 30
+  },
+  {
+   "kind": "whirl",
+   "E": 0.9300865169548292,
+   "ell": 3.1,
+   "rtol": 1e-11,
+   "n_read": 60,
+   "n": 60,
+   "abstain_fates": {},
+   "p99_A1": -6.930414923957729,
+   "p99_A2": -0.003571873856177168,
+   "n_train": 30
+  },
+  {
+   "kind": "whirl",
+   "note": "no bound region inside D"
+  },
+  {
+   "kind": "generic",
+   "note": "no bound region inside D"
+  }
+ ],
+ "C1": {
+  "held_out_read": 60,
+  "chaotic": 0,
+  "cp95_upper": 0.04870291331009749,
+  "p_binom": 1.0,
+  "PASS": true,
+  "rule": "FAIL iff P(X >= k | n, p = 0.01) < 0.05 (one-sided binomial test of rate <= 1%); CP95 reported"
+ }
+}
