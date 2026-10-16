@@ -102,3 +102,10 @@
 - 10 orbits per island (x offsets ±0.2–4% of x_c, p_x = 0), base domain, 1e−8: **20 of 20 READ, 0 CHAOTIC. C3 PASS.**
 - Sealed: `results/v13_c3.json` (sha256 below).
 a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/V13_mn_chaotic_sea/results/v13_c3.json
+- **C3 exchange:** AGREE. Tabula's island centres are x = 2.265080299244 and 19.182948559923, within 5e−6 of the
+  bridge's, and both screens PASS.
+  - Tabula found its own I2 (correlation dimension) passed vacuously there: launches within 1e−3 of the centre sat
+    below its fixed D₂ windows. Tabula adds a saturation guard, as an amendment before reading any counted verdict, and
+    a post-hoc supplementary C3/C4 using the bridge's offsets.
+  - V13 does not share this failure mode. A2 (the 0–1 test) is scale-invariant, and A1 (NAFF) is a frequency, well
+    defined for small curves.
