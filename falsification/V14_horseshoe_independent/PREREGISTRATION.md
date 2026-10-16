@@ -56,3 +56,10 @@ quantum's registered rule.
 ## Budget and environment
 - At most 2 cores at nice 10, and no wall-clock stop rule.
 - Julia and package versions are pinned; each result JSON records them.
+
+## Disclosure (2026-10-16): partial unblinding on HH
+While answering a process question, quantum told the bridge one qualitative fact about its first HH pass: on coarse
+16×16 boxes, condition (b) passes and condition (a) fails, for 4 of the 7 coverings. The bridge has seen no numbers
+and no per-covering decisions. V14's HH run is unaffected: it uses its own pre-stated subdivision ladder, and its
+decisions are committed before the bridge reads quantum's JSONs. Quantum's registered HH run is its first pass. The
+adaptive pass is a disclosed post-hoc escalation (quantum b2d1c1a).
