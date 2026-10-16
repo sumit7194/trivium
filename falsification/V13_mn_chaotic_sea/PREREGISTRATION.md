@@ -209,3 +209,28 @@ silently retried.
 - p1 (37/40, 29/10) and F5-R (19/20, 3) are unchanged.
 - **Consequence:** at p2 the horseshoe can no longer share the MR level (1,0,4) through K20. That level stays possible
   for quantum only with a polar-crossing chart, which is quantum's choice.
+
+## Amendment A6 (2026-10-17, before any Kerr-null or MN orbit is scored): Kerr null design, orbit sampling, pilot
+- **Kerr partner:** the same (M, a), β = 0, the same code (v13_orbit), and the same domain rule as the screen it serves.
+- **Whirl levels.** For each χ:
+  - ℓ_w is the ℓ in {2.0, 2.1, …, 4.5} nearest to the shared ℓ for which the barrier energy E_b(ℓ) exists with
+    E_b < 0.999. E_b is the energy at which the equatorial bound region first merges with the inner plunge region,
+    found by bisection to 1e−12.
+  - Levels: E_b − {1e−4, 1e−3, 1e−2} at ℓ_w.
+- **Generic levels:** the shared level itself, if Kerr has an equatorial bound region inside D there; and (ℓ_w,
+  E_b − 0.03).
+- **Orbit sampling, per level** (Kerr and MN alike):
+  - 60 orbits on Σ, numbered 0–59;
+  - x0 on a uniform grid strictly inside each bound component (15% margins);
+  - p_x0 = s·p_max(x0), with s cycling through {0, ±0.3, ±0.6};
+  - N = 2000 returns.
+- **Thresholds:**
+  - Even-numbered Kerr orbits are training: per-arm p99 over all of that χ's levels (class-wise max = max of the
+    per-level p99s).
+  - Odd-numbered orbits are held out for the C1 binomial test (CHAOTIC rate against 1%, CP95).
+- **Pilot (C2):**
+  - 12 orbits spread over the level's region pick the tolerance: rtol from {1e−11, 1e−12, 1e−13} (atol = 1e−3·rtol),
+    taking the loosest at which all 12 hold drift ≤ 1e−9 to return 2000.
+  - An empty pilot REFUSES.
+  - Self-test: the same orbits at rtol 1e−7 must FAIL.
+  - Per-orbit acceptance still applies, as in §4.

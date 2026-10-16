@@ -23,8 +23,8 @@ MR_LEVELS = {  # V9 row order, (E, L, mu2) -> (E/mu, L/(mu M))
 XMAX = 1000.0
 
 class Point:
-    def __init__(self, name):
-        M, a, beta = POINTS[name]; self.name, self.M = name, sp.nsimplify(M)
+    def __init__(self, name, params=None):
+        M, a, beta = params if params is not None else POINTS[name]; self.name, self.M = name, sp.nsimplify(M)
         F = mn_functions(M, a, beta); f, om, k = F['f'], F['om'], F['k']; self.k = float(k)
         gtt = -f; gtp = f*om; gpp = -f*om**2 + k**2/f*(x**2 - 1)*(1 - y**2)
         self.g_full = sp.lambdify((x, y), [gtt, gtp, gpp], 'numpy')
