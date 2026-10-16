@@ -198,3 +198,14 @@ silently retried.
 - **Additional null, if built:** an integrable 2-DOF system with a genuine separatrix (a separable double-well or
   pendulum product), run through the same code path, to show the AND rule does not flag near-hyperbolic transit. If it
   is not built, this is stated as a limitation.
+
+## Amendment A5 (2026-10-16, before any orbit): the p2 shared level must have L_z ≠ 0
+- The rule picked p2's MR level (1/2, 0). With L_z = 0 there is no centrifugal barrier: orbits reach the axis
+  y = ±1, where the prolate chart is singular (g^yy ∝ 1 − y²) and quantum's D requires 1 − y² > 0. So the shared
+  comparison there would be vacuous. Tabula raised this from geometry alone.
+- **Rule change:** candidates must have L_z ≠ 0; otherwise the registered grid fallback applies.
+- **New p2 shared level:** (E, ℓ) = (9/10, 13/10), the nearest grid level to (1/2, 0) under the registered metric. Its
+  bound equatorial region inside D is x ∈ [1.1519, 9.4004].
+- p1 (37/40, 29/10) and F5-R (19/20, 3) are unchanged.
+- **Consequence:** at p2 the horseshoe can no longer share the MR level (1,0,4) through K20. That level stays possible
+  for quantum only with a polar-crossing chart, which is quantum's choice.
