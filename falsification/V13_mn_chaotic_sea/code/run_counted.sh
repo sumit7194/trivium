@@ -1,11 +1,9 @@
 #!/bin/sh
-# V13 counted screens, run in sequence after the C0 graph (one core, nice 10): per point, the orbit verdicts at the
-# shared level, then the UPO search (period <= 3) and the transition graph.
+# V13 counted screens in sequence (one core, nice 10). p2's run 1 sampled only its single bound-in-D component, so it
+# stands. p1 is rerun after the sampling fix (run 1 kept as INVALID); then F5-R; then the structure stage.
 PY=/Users/sumit/Github/conjecture_machine/.venv/bin/python
 cd "$(dirname "$0")"
-for k in p1 p2 F5R; do
-  nice -n 10 $PY -u -W ignore v13_screen.py counted $k
-done
+for k in p1 F5R; do nice -n 10 $PY -u -W ignore v13_screen.py counted $k; done
 nice -n 10 $PY -u -W ignore v13_upo.py p1 37/40 29/10 3 10 5
 nice -n 10 $PY -u -W ignore v13_upo.py p2 37/40 3 3 10 5
 nice -n 10 $PY -u -W ignore v13_upo.py F5R 19/20 3 3 10 5

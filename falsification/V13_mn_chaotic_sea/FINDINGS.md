@@ -123,3 +123,14 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
     is absent at those points.
 - **F5-R null rerun** (with the cap fixed): READ 35, 56, 60, 60 and 60 of 60, matching C0's pattern. Thresholds
   A1 > −7.64, A2 > 0.0200 (C0's: −7.61 and 0.0193). **C1: PASS, 0 of 136.**
+
+## Counted screen: sampling bug in the first p1 run (fixed; disclosed)
+- p1 run 1 sampled every equatorial bound interval at (37/40, 29/10), including a second, ring-adjacent component
+  [1.076, 2.767] that is not inside D (it starts at p1's B = 0 point, x ≈ 1.0759). Its 30 orbits all read LEFT_D.
+- Run 1, as observed before the fix (kept as `results/v13_counted_p1_RUN1_INVALID_wrong_component.json`):
+  - the shared component [3.271, 7.756] gave 30 of 30 READ and 1 CHAOTIC.
+  - That one orbit (x0 = 6.817) has margins A1 = −6.50 against a threshold of −7.21, and A2 = −0.001 against −0.0025.
+    A2's Kerr-null threshold is degenerate (Kerr K ≈ 0), so this verdict is marginal. It is reported as registered,
+    with its margins.
+- **Fix:** the counted screen samples only components that pass the A8 2-D bound-in-D test. p1 is rerun. p2's run
+  sampled only its single valid component, so it stands: **READ 60/60, CHAOTIC 0/60.** F5-R reruns after the fix.

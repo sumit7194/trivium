@@ -132,7 +132,15 @@ if __name__ == '__main__':
         # thresholds from the same chi's Kerr null; section points stored for the §7 Jaccard comparison.
         thr = json.load(open(os.path.join(RES, f'v13_kerr_null_{key}_analysis.json')))['thresholds']
         M, a_, beta = POINTS[key]; Es, ls = SHARED[key]; P = Point(key)
-        orbits, comps = sample(P, float(Es), float(ls))
+        # A8: sample ONLY the equatorial components whose 2-D allowed component is bound inside D (bug fix: the first
+        # p1 run also sampled a second, ring-adjacent component [1.076, 2.767] that is not inside D).
+        from v13_geom2d import bound2d
+        allc = [c for c in P.bounded(float(Es), float(ls), 1.05) if not c['nan_edge'] and c['hi'] - c['lo'] > 0.05]
+        keep = [c for c in allc if bound2d(M, a_, beta, Es, ls, 0.5*(c['lo'] + c['hi']))['ok']]
+        orbits, comps = [], keep
+        for c in keep:
+            lo, hi = c['lo'], c['hi']; m = 0.15*(hi - lo); ss = [0.0, 0.3, -0.3, 0.6, -0.6]
+            orbits += [(float(x), ss[i % 5]) for i, x in enumerate(np.linspace(lo + m, hi - m, N_ORB//len(keep)))]
         rtol, _ = pilot(M, a_, beta, Es, ls, orbits, 'B9')
         recs = run_orbits(M, a_, beta, Es, ls, orbits, rtol, 'B9')
         for r in recs:
