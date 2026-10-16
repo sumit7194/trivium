@@ -63,3 +63,6 @@ While answering a process question, quantum told the bridge one qualitative fact
 and no per-covering decisions. V14's HH run is unaffected: it uses its own pre-stated subdivision ladder, and its
 decisions are committed before the bridge reads quantum's JSONs. Quantum's registered HH run is its first pass. The
 adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier message gave the hash "b2d1c1a" before the commit existed).
+- **Second partial unblinding (2026-10-16):** a quantum status message reported that 1 of 7 adaptive HH coverings
+  (M0⇒M0) was certified at that point. V14's HH decisions are unaffected (own ladder, committed before reading
+  quantum's JSONs); disclosed here.
