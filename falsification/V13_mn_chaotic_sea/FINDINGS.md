@@ -57,3 +57,18 @@
 - **Thresholds** (class-wise max of the per-level training p99s): **A1 > −7.61, A2 > 0.0193.**
 - **C1: PASS.** Held-out READ orbits: 0 of 136 CHAOTIC (CP95 upper bound 2.2%; binomial p = 1.0).
 - Files: `results/v13_kerr_null_C0.json`, `_analysis.json`, `v13_pilot_selftest_C0.json`.
+
+## C0 instrument gate (A3: base domain, drift ≤ 1e−8; thresholds from the χ = 0.9 Kerr null)
+- **Inner region** (ρ 0.719–2.125): 50 of 60 READ; **49 of 50 CHAOTIC (98%)**, against a required ≥ 50%.
+- **Outer region** (ρ 2.386–13.639): 60 of 60 READ; **0 of 60 CHAOTIC**, against a required ≤ 10%.
+- **The sea sits at ρ ≈ 0.72–2.1**, as published (CLA/LGAC).
+- **C0 gate (inner and outer): PASS.**
+- **C3** (regular orbits on the published islands, NOT CHAOTIC on both arms): pending. It needs the islands located
+  by the bridge's own fixed-point search.
+- **Finding, not a gate** (A3: the same orbits under the B9 domain at 1e−9):
+  - inner region: **59 of 60 orbits leave D** before 2000 returns, so 1 is READ (and it is NOT CHAOTIC);
+  - outer region: 0 of 60 leave D, 60 READ, 0 CHAOTIC.
+  - **Essentially all of the published inner-region chaos at C0 involves orbits that enter the neighbourhood of the
+    equatorial singular ring, the CTC-adjacent zone that B9 excludes.**
+- Sealed for the exchange with tabula: `results/v13_c0_gate.json` (sha256 below, recorded at commit).
+6a705e2bd53443e8755387d68913857d99658f25a09053be21266e41cfbd74d1  falsification/V13_mn_chaotic_sea/results/v13_c0_gate.json

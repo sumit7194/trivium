@@ -57,7 +57,7 @@ def sample(P, E, ell, x_min=1.05):
     ss = [0.0, 0.3, -0.3, 0.6, -0.6]
     return [(float(x), ss[i % 5]) for i, x in enumerate(xs)], comps
 
-def run_orbits(M, a_, beta, E, ell, orbits, rtol, domain):
+def run_orbits(M, a_, beta, E, ell, orbits, rtol, domain, acc=ACC):
     integ, start, ham, inD, pieces = make(M, a_, beta, R(E).limit_denominator(10**12) if not isinstance(E, sp.Basic) else E,
                                           sp.nsimplify(ell)*sp.nsimplify(M), domain=domain)
     out = []
@@ -67,7 +67,7 @@ def run_orbits(M, a_, beta, E, ell, orbits, rtol, domain):
         px0 = 0.98*s*pmax
         oc, nc, tau, drift, steps, sec = integ(x0, px0, N_RET, rtol, rtol*1e-3, 1e9, 400_000_000)
         rec = dict(i=i, x0=x0, px0=px0, outcome=int(oc), returns=int(nc), drift=float(drift), tau=float(tau))
-        if nc >= N_RET and drift <= ACC:
+        if nc >= N_RET and drift <= acc:
             d, n1, n2 = fma_diffusion(sec[:, 0], sec[:, 1]); rec.update(A1=d, A2=zero_one_K(sec[:, 0]), status='READ')
             rec['ret_time_median'] = float(np.median(np.diff(sec[:, 2])))
         else:
@@ -75,13 +75,13 @@ def run_orbits(M, a_, beta, E, ell, orbits, rtol, domain):
         out.append(rec)
     return out
 
-def pilot(M, a_, beta, E, ell, orbits, domain):
+def pilot(M, a_, beta, E, ell, orbits, domain, acc=ACC):
     pick = orbits[:: max(1, len(orbits)//12)][:12]
     if not pick: raise SystemExit('PILOT REFUSES: empty')
     for rtol in (1e-11, 1e-12, 1e-13):
-        r = run_orbits(M, a_, beta, E, ell, pick, rtol, domain)
+        r = run_orbits(M, a_, beta, E, ell, pick, rtol, domain, acc)
         ok = [x for x in r if x['returns'] >= N_RET]
-        if ok and all(x['drift'] <= ACC for x in ok): return rtol, r
+        if ok and all(x['drift'] <= acc for x in ok): return rtol, r
     return 1e-13, r   # floor; per-orbit acceptance decides
 
 if __name__ == '__main__':
@@ -100,3 +100,28 @@ if __name__ == '__main__':
             print(key, L['kind'], round(L['E'], 6), L['ell'], 'rtol', rtol, 'read',
                   sum(r['status'] == 'READ' for r in recs), '/', len(recs), round(time.time() - t0, 1), 's', flush=True)
         json.dump(res, open(os.path.join(RES, f'v13_kerr_null_{key}.json'), 'w'), indent=1)
+
+    if mode == 'c0_gate':
+        # A3: graded on the base domain at the published accuracy (1e-8); the B9 reading is a FINDING, not a gate.
+        thr = json.load(open(os.path.join(RES, 'v13_kerr_null_C0_analysis.json')))['thresholds']
+        M, a_, beta = POINTS['C0']; P = Point('C0'); E, ell = 0.95, 3.0
+        comps = [c for c in P.bounded(E, ell, 1.0 + 1e-9) if not c['nan_edge'] and c['hi'] - c['lo'] > 0.05]
+        res = dict(commit=commit, thresholds=thr, regions=[])
+        for c in comps:
+            lo, hi = c['lo'], c['hi']; m = 0.15*(hi - lo); ss = [0.0, 0.3, -0.3, 0.6, -0.6]
+            orbits = [(float(x), ss[i % 5]) for i, x in enumerate(np.linspace(lo + m, hi - m, N_ORB))]
+            rtol, _ = pilot(M, a_, beta, E, ell, orbits, 'base', 1e-8)
+            base = run_orbits(M, a_, beta, E, ell, orbits, rtol, 'base', 1e-8)
+            b9 = run_orbits(M, a_, beta, E, ell, orbits, max(rtol, 1e-13), 'B9', 1e-9)
+            for r in base + b9:
+                if r['status'] == 'READ': r['verdict'] = 'CHAOTIC' if (r['A1'] > thr['A1'] and r['A2'] > thr['A2']) else 'NOT_CHAOTIC'
+            rd = [r for r in base if r['status'] == 'READ']
+            k = P.k; reg = dict(x=(lo, hi), rho=(k*math.sqrt(lo**2 - 1), k*math.sqrt(hi**2 - 1)), rtol=rtol, base=base, b9=b9,
+                                n_read=len(rd), n_chaotic=sum(r['verdict'] == 'CHAOTIC' for r in rd),
+                                b9_left_D=sum(r['outcome'] == 1 for r in b9),
+                                b9_read=sum(r['status'] == 'READ' for r in b9),
+                                b9_chaotic=sum(r.get('verdict') == 'CHAOTIC' for r in b9))
+            res['regions'].append(reg)
+            print('region', [round(v, 3) for v in reg['rho']], 'read', reg['n_read'], 'chaotic', reg['n_chaotic'],
+                  '| B9: leftD', reg['b9_left_D'], 'read', reg['b9_read'], 'chaotic', reg['b9_chaotic'], flush=True)
+        json.dump(res, open(os.path.join(RES, 'v13_c0_gate.json'), 'w'), indent=1)
