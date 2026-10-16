@@ -72,3 +72,6 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
   2. the adaptive-pass M0⇒M0 certified, at 305 leaves;
   3. the first-pass settings (16×16 support boxes, 64 pieces per edge).
   Nothing else: no other covering outcome, no W result, no margins.
+  4. (Added at quantum's own disclosure.) Quantum's prereg note d64dc56 says the adaptive W-AZ re-runs were stopped
+     because they would bisect to the 2¹⁶ cap, and that the registered first pass "already settles" W-AZ1 and W-AZ2.
+     That is a qualitative statement about the W outcome; treat it as known.
