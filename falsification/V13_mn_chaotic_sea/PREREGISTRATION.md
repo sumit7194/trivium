@@ -157,3 +157,13 @@ silently retried.
 - **Geometry correction:** the equatorial CTC edge is 1.92192 (F5-R) and 1.92983 (C0) after refinement. The 1.885 in
   my message to quantum came from a coarse grid. At C0 the inner allowed region's lower edge coincides with the CTC
   edge.
+
+## Amendment A2 (2026-10-16, before any orbit): ergosurface regularisation
+- About 94% of the C0/F5-R inner region is ergoregion (A = 0 is crossed); this was tabula's finding, 91e774e.
+- V and g_φφ evaluated through f and ω carry canceling 1/A terms. V13 uses the regularised forms instead, built on the
+  exact identity ρ²B² − 4k²C² = k²·A·Q. The bridge verified this independently: sympy Poly division with the V9
+  transcription gives remainder 0.
+  - V = ½[e^{2ψ} A L′² − 4kC E L′ − e^{−2ψ} k² E² Q]/(ρ²B), with L′ = L + ω₀E;
+  - g_φφ = [e^{−2ψ}k²Q + 4kω₀C − e^{2ψ}ω₀²A]/B.
+- Gate: the bridge's regularised H matches the unregularised H to ≤ 1e−12 (relative) at 50 random points with |A| > 0.1
+  at each point.
