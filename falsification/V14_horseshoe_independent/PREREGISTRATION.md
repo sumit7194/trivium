@@ -62,4 +62,4 @@ While answering a process question, quantum told the bridge one qualitative fact
 16×16 boxes, condition (b) passes and condition (a) fails, for 4 of the 7 coverings. The bridge has seen no numbers
 and no per-covering decisions. V14's HH run is unaffected: it uses its own pre-stated subdivision ladder, and its
 decisions are committed before the bridge reads quantum's JSONs. Quantum's registered HH run is its first pass. The
-adaptive pass is a disclosed post-hoc escalation (quantum b2d1c1a).
+adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier message gave the hash "b2d1c1a" before the commit existed).
