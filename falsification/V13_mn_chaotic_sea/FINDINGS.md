@@ -32,3 +32,17 @@
   - The Manko–Novikov 1992 original is not read (closed access).
   - Two implementations from one fleet share the MN formula source chain (ansatz manifest → V9; tabula's script). An
     outside check of the metric formula against MN 1992 is still owed.
+
+## Build log (no MN verdicts)
+- **Gate A2: PASS.** The regularised W, g^xx, g^yy and g_φφ equal the unregularised forms to ≤ 1e−38 relative (40
+  digits, 50 points with |A| > 0.1 at each of C0, F5-R, p1, p2). `results/v13_gate_A2.json`.
+- **Integrator** (`code/v13_orbit.py`): the V12 numba DOP853 on the regularised field, with section recording and
+  B9/base domains. A smoke run at C0 gave 200 returns in about 0.1 s, with drift ~1e−10 (development check only).
+- **Indicator self-test** (`code/v13_indicators.py`, `results/v13_indicator_selftest.json`; standard map, N = 2000):
+  - regular orbits: log10 Δν = −11.0 and −10.4, K = 0.00;
+  - chaotic orbits: log10 Δν = −1.1 and −0.7, K = 1.00.
+  - PASS, after one fix: the first attempt fed NAFF a signal built from p mod 2π, which jumps, and that mis-scored
+    one regular rotational curve at −0.7. The self-test now uses e^{ix}, the map's natural angle. MN section curves are
+    closed and continuous, so they keep the centred (x, p_x) signal.
+- **Rule for development smoke tests:** no MN orbits from shared or gate levels are inspected before thresholds are
+  fixed. Pipeline smoke runs use Hénon–Heiles and Kerr only.
