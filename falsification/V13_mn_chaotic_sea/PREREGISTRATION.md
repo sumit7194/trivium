@@ -167,3 +167,18 @@ silently retried.
   - g_φφ = [e^{−2ψ}k²Q + 4kω₀C − e^{2ψ}ω₀²A]/B.
 - Gate: the bridge's regularised H matches the unregularised H to ≤ 1e−12 (relative) at 50 random points with |A| > 0.1
   at each point.
+
+## Amendment A3 (2026-10-16, before any verdict): the equatorial singular ring, and C0 grading
+- **The ring.** Tabula found, and the bridge confirmed independently at 50 digits with the V9 transcription, that
+  B = 0 with a = −b on the equator. The ring sits at x_s = 1.92982825852 (C0) and 1.92192258792 (F5-R), from
+  (x − 1)a² = x + 1, with B(x_s) ≤ 5e−100.
+  - It lies outside the horizon. g_φφ and V have poles there, and the "equatorial CTC edge" is that pole.
+  - The published inner edge ρ ≈ 0.72 is x_s. Whether the ring is a curvature singularity is pending (tabula is
+    computing the Kretschmann scalar).
+- **C0 instrument gate** (proposed to tabula; both screens use the same rule):
+  - graded on the base domain at LGAC's own reported accuracy, drift ≤ 1e−8, because the gate's job is to reproduce
+    the published result in the published setting;
+  - disclosed as a post-pilot amendment, made before any verdict, because of the H cancellation near V ~ −1e4..−1e5.
+- **New reported finding, not a gate:** the same C0 orbits read at their B9 exit at 1e−9, i.e. how much of the
+  published chaos lies inside D.
+- **Counted screens** (p1, p2, F5-R): unchanged. They run at 1e−9 with each orbit read at its B9 exit.
