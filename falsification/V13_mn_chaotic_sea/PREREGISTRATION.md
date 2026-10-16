@@ -234,3 +234,12 @@ silently retried.
   - An empty pilot REFUSES.
   - Self-test: the same orbits at rtol 1e−7 must FAIL.
   - Per-orbit acceptance still applies, as in §4.
+
+## Amendment A7 (2026-10-17, before the structure stage runs): the K20 question is a saddle inside D
+- This follows quantum's point. Typical sampled orbits leaving D quickly does not exclude a measure-zero chaotic
+  saddle inside D, and a horseshoe needs only that.
+- For every located hyperbolic UPO (period ≤ 3): report whether its WHOLE orbit stays in D_B9, with its minimum
+  margins.
+- Transition graph: connections count only if the traced manifold segments stay inside D.
+- **Per-point verdict:** "saddle-in-D candidates exist" or "none found within the search". It is never inferred from
+  f_D of sampled orbits.
