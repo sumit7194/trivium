@@ -182,3 +182,19 @@ silently retried.
 - **New reported finding, not a gate:** the same C0 orbits read at their B9 exit at 1e−9, i.e. how much of the
   published chaos lies inside D.
 - **Counted screens** (p1, p2, F5-R): unchanged. They run at 1e−9 with each orbit read at its B9 exit.
+
+## Amendment A4 (2026-10-16, before any orbit): matched-null design flaw (tabula's A8)
+- §4's per-d_min-bin Kerr null is infeasible. Bound Kerr is separable: for E < E_b every bound orbit lies on a torus
+  and the unstable spherical orbit sits outside the bound region; for E ≥ E_b orbits plunge within about one radial
+  period. So no long-lived Kerr orbit has finite d_min, and bins with d_min < 0.1 could never be filled.
+- The rule as written would have read every near-UPO MN orbit as "cannot discriminate": a silent null. Tabula found
+  this while building its C-gates, not from any MN result.
+- **Replacement:**
+  - thresholds pooled over the Kerr null (class-wise max over the whirl levels E_b − {1e−4, 1e−3, 1e−2} and generic
+    levels);
+  - the C1 Kerr gate becomes a held-out binomial test against 1%;
+  - d_sep (distance to the separatrix structure on the section) is reported for Kerr;
+  - MN verdicts are tabulated by d_min bin, as information only.
+- **Additional null, if built:** an integrable 2-DOF system with a genuine separatrix (a separable double-well or
+  pendulum product), run through the same code path, to show the AND rule does not flag near-hyperbolic transit. If it
+  is not built, this is stated as a limitation.
