@@ -243,3 +243,14 @@ silently retried.
 - Transition graph: connections count only if the traced manifold segments stay inside D.
 - **Per-point verdict:** "saddle-in-D candidates exist" or "none found within the search". It is never inferred from
   f_D of sampled orbits.
+
+## Amendment A8 (2026-10-17, before any p2 orbit is scored): 2-D bound-inside-D criterion for shared levels
+- The §3 rule checked only the equatorial interval. At p2's A5 level (9/10, 13/10), the 2-D allowed component
+  containing that interval reaches x → 1 and |y| → 0.999, with 43% of its cells outside D_B9. It is plunge-connected,
+  not bound. Tabula found this; the bridge confirmed it with `code/v13_geom2d.py`.
+- **Rule:** a shared level needs its 2-D allowed component (a flood fill on a (log(x−1), y) grid) not to touch the
+  grid edges or x → 1, and every cell to satisfy D_B9. The registered nearest-grid fallback is otherwise unchanged
+  (L_z ≠ 0, as in A5).
+- **New p2 shared level:** (E, ℓ) = (37/40, 3). Its equatorial interval is [3.3885711, 5.7411460], and it is
+  confirmed bound-in-D at 300×240 and at 500×400. Search record: `results/v13_p2_fallback_2d.json`.
+- p1 (37/40, 29/10) and F5-R (19/20, 3) pass the 2-D test (0% of cells outside D) and are unchanged.
