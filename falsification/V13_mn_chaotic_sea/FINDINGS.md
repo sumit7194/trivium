@@ -84,7 +84,13 @@
 
 - The two screens are independent: different indicators (NAFF and 0–1 test, against FTLE ratio and correlation
   dimension), different code, and their own Kerr nulls.
-- **Both find the published C0 inner chaos real, and lying entirely in the singular-ring/CTC neighbourhood that D
-  excludes.**
-- Limitation on the bridge side: section points were not stored, so the bridge's sea-ρ statement uses starting
-  points only.
+- **What both establish:** the published C0 inner chaos is real, and NO base-CHAOTIC orbit stays inside D_B9 for 500
+  returns. Every one reaches the excluded neighbourhood of the singular ring / CTC zone (within ~0.025) within
+  ≤ ~126 returns.
+  - The chaotic orbits' section points span the WHOLE inner region (ρ 0.72–2.12, tabula's section points).
+  - So the sea is the inner region, and its orbits keep visiting the excluded zone. It is NOT confined to that zone.
+  - (Correction, at tabula's note: an earlier wording here, "lying entirely in the neighbourhood that D excludes",
+    overstated this.)
+- **The comparison is INCOMPLETE:** the registered region-overlap criterion (Jaccard ≥ 0.5) and the return-time
+  comparison could not be evaluated, because V13 stored no section points. This is a gap, not an agreement.
+  - Fix: the counted screens store (x, p_x, τ) per crossing (v13_screen, from this commit on).

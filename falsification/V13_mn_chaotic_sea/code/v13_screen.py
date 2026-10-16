@@ -66,7 +66,8 @@ def run_orbits(M, a_, beta, E, ell, orbits, rtol, domain, acc=ACC):
         pmax = math.sqrt(rest/q[0]) if rest > 0 and q[0] > 0 else 0.0
         px0 = 0.98*s*pmax
         oc, nc, tau, drift, steps, sec = integ(x0, px0, N_RET, rtol, rtol*1e-3, 1e9, 400_000_000)
-        rec = dict(i=i, x0=x0, px0=px0, outcome=int(oc), returns=int(nc), drift=float(drift), tau=float(tau))
+        rec = dict(i=i, x0=x0, px0=px0, outcome=int(oc), returns=int(nc), drift=float(drift), tau=float(tau),
+                   sec=[[float(v) for v in row[:3]] for row in sec[:nc]])   # (x, p_x, tau) per crossing, for §7 Jaccard
         if nc >= N_RET and drift <= acc:
             d, n1, n2 = fma_diffusion(sec[:, 0], sec[:, 1]); rec.update(A1=d, A2=zero_one_K(sec[:, 0]), status='READ')
             rec['ret_time_median'] = float(np.median(np.diff(sec[:, 2])))
