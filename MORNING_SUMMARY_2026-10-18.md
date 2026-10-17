@@ -55,3 +55,18 @@
 - Quantum disclosed a slip of its own: it once stopped its own test process by name pattern instead of by ID. Nothing
   else was affected.
 
+## 4. Our independent chaos-proof checker: the Rössler test passed, but it found a weakness in itself
+- **The test:** redo quantum's Rössler test cases with completely separate software (Julia), reading only the case
+  definitions, not quantum's answers. **It passed every pre-registered requirement:**
+  - all 4 genuine coverings confirmed;
+  - all deliberately wrong ones rejected;
+  - the one "trick" case that should pass, passed.
+- **Its own weak point:** the Julia package does some internal arithmetic in ordinary floating point without counting
+  the rounding errors. For these results the margins are about 10 billion times larger than that error, so the
+  answers are safe. But it means the checker is not yet fully rigorous, which matters for the real Manko–Novikov
+  proof.
+- **The fix:** registered before any further use (6158857), and running now. Either use interval coefficients
+  throughout, or add a proven rounding bound, then redo the Rössler tests with the fixed version.
+- **One open question to quantum:** the test files don't say which cross-section they use. We assumed the standard
+  one and asked quantum to confirm.
+
