@@ -1,7 +1,7 @@
 # V15 FINDINGS: the Manko–Novikov equatorial ring singularity
 
 Pre-registration: PREREGISTRATION.md (bf73ce2). Four independent Opus agents (Q1–Q4), plus the verifier (V) after them.
-Status: Q1–Q4 are in; V (adversarial verifier) is running.
+Status: COMPLETE. Q1–Q4 and V are in. **Verifier verdict: the ring stands.**
 
 ## Q1: existence map — PASS (all registered checks)
 - **Equatorial reduction (verified, sympy plus 50-digit numerics).**
@@ -111,3 +111,48 @@ sympy 1.14.0, mpmath 1.3.0, numpy 2.4.6), as recorded in each JSON.
   effective-potential hole in Lukes-Gerakopoulos et al. 2010; Geyer's g_φφ blob.
 - **For the Manko email:** the honest framing is "we could not find this in the literature we could read, and we
   could not read MN 1992, so we're asking whether it is already known". It is not "new".
+
+## V: adversarial verifier — RING STANDS (all 7 tests PASS; results/v15_V_verifier.md)
+1. **Independent transcription** (from the arXiv LaTeX of GLM 2008, Brink 2008 App. C and LGAC 2010, made before
+   reading v9_nve.py): PASS. The papers disagree with each other in three places:
+   - **GLM Eq. 3h "−2":** typeset inside the sum in GLM. LGAC move it outside "to avoid any confusion"; Brink's form
+     is equivalent to outside.
+   - **β² coefficient in γ:** GLM and LGAC have 3/2; **Brink has 9/4, a typo** (it fails vacuum: Ricci/√K up to 0.58).
+   - **b exponent:** **Brink prints P₂/r² where GLM and LGAC have P₂/R³, a typo** (Ricci/√K up to 5.7).
+2. **Comparison with v9_nve:** f, ω and e^{2γ} agree to 5e−79 (C0) and 7e−77 (F5-R). v9 types GLM's "−2 inside" and
+   adds 8β, which equals the "outside" reading. PASS.
+3. **Vacuum:** full 4-D Ricci at 17 points, including d = 1e−3 from the ring. Ricci/√|K| ≤ 9e−87 at 100 digits
+   (round-off). Brink's Ernst potential satisfies the Ernst equation to 7e−54 and reproduces GLM's f and ω.
+   Independent K equals Q2/V13 to 20 digits. PASS.
+4. **Axis regularity:** the "outside" reading (the one v9 uses) has e^{2γ} = 1 on both axes and at infinity, so it
+   is elementary-flat. The "inside" reading is conical: the circumference ratio is e^{4β} ≈ 8.4e19 at C0. **The
+   singularity survives in BOTH** (K differs by exactly e^{16β}, with the same d⁻⁶ law). PASS.
+5. **Multipoles:** from the axis Ernst potential, mass, spin, quadrupole −M(a² + qM²) and current octupole equal GLM
+   Eq. 4 exactly. PASS.
+6. **Not a coordinate artefact:**
+   - Local slopes are −6.000 ± 0.004 on 4 rays.
+   - K has 12 nodal directions, but the invariant √(K² + P²) (P = Pontryagin) stays ≥ 5.39·d⁻⁶ at all 36 angles
+     sampled, so a scalar invariant diverges along every approach.
+   - **The ring is reachable:** proper distance is finite (0.1547 from x_s + 0.5), and equatorial timelike and null
+     geodesics reach it at finite proper time or affine parameter.
+   - PASS.
+7. **Other attacks:** the ring is outside the horizon (x_s − 1 = 0.930, ρ = 0.719); it is the only equatorial root;
+   there are no CTCs on the approach from outside (g_φφ ≥ 10.4); it is not a branch-cut effect. GLM and LGAC mention
+   only the x = 1, y = 0 singularity. PASS.
+
+**Prereg V criterion ((i)–(iii) all pass): MET. The ring claim stands** for the metric as published in GLM and LGAC
+(and in Brink, once its two typos are corrected).
+- **Still for an outside expert:**
+  - MN 1992's own γ normalisation and formulae (the original was not read);
+  - whether the ring is already known;
+  - Q2's assumption about the first-order correction (supported numerically here, not derived);
+  - Q1's "no off-equator zeros for q > 0", which is numerical only.
+- **Side finding (for any outreach):** Brink 2008 App. C has two typos (β² coefficient 9/4 instead of 3/2; P₂/r²
+  instead of P₂/R³ in b). Both are caught by the vacuum test.
+
+## Registered-criteria summary
+- Q1: PASS.
+- Q2: V13 agreement PASS; slope band FAIL as registered (strict per-side reading; the cause is a pre-asymptotic
+  d = 1e−2 point; the verifier's local slopes are −6.000 ± 0.004).
+- V: PASS.
+- Q3, Q4: descriptive.
