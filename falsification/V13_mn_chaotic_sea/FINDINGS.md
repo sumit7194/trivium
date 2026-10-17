@@ -230,3 +230,38 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
   off-equator pair. This does not affect any V13 result.
 - V15 verifier: the ring is a genuine, reachable curvature singularity (K ∝ d⁻⁶), outside the horizon, for the
   axis-regular metric that V13 uses.
+
+## A10 multiple-shooting confirmation: result as registered (results/v13_a10_{controls,C0,F5R}.json; code/v13_a10_multishoot.py)
+- **Controls PASS, so A10 is valid.**
+  - **HH positive control at E = 1/6, as registered:** all 54 homoclinic self-loops tried are CONFIRMED_MS. Worst
+    residual 2.4e−14, smallest angle 0.22.
+  - **Negative controls:** a crossing shifted by 1e−3 along W^u fails check 2 in every case (residuals 1.2e−8 to
+    1.1e−4 on MN, 1.9e−8 on HH).
+  - The agent's first control run had HH manifolds too short (0 crossings). It is kept, labelled INVALID.
+- **C0: 16 of 18 scoped edges CONFIRMED_MS.**
+  - Self-loops at UPOs 1, 3 and 6; one strongly connected component {1, 3, 4, 6}.
+  - Edges inside the SCC have residuals 6e−12 to 5.3e−11. Minimum margins: x−1 = 0.947, R = 1.674, g_φφ box 0.180.
+  - **Failures:**
+    - 8→3 fails check 2 (residual 1.0e−10).
+    - 8→4 fails check 5 only through a "Newton must take a step" guard carried over from A9. That guard is NOT in
+      A10's text, and by the text 8→4 passes (its points agree to 2.4e−11).
+    - **Bridge reading: the stricter count, 16/18, is primary; 17/18 by the text alone.** The SCC and self-loops are
+      the same either way.
+- **F5-R: 35 of 42 CONFIRMED_MS.**
+  - Self-loops at UPOs 2–7; one SCC {2, …, 8}. All 7 failures are on check 2.
+  - Worst confirmed residual 9.4e−11; smallest angle 0.014 rad; condition number up to 4.5e6; minimum margins
+    x−1 = 0.939, R = 1.664.
+- **A9 verdict wording: at C0 and at F5-R, NUMERICAL EVIDENCE OF A HORSESHOE INSIDE D_B9** (confirmed transverse
+  homoclinic self-loops and a confirmed cycle of heteroclinic connections whose connecting orbits stay inside D).
+  **This is not a proof.** The proof belongs to the computer-assisted programme (quantum, plus the V14 replay).
+- **Caveats (recorded, not tuned away):**
+  1. **Spec flaw, found by the agent:** a segment is one P^{pow}. For the most expanding UPOs (C0 UPO 8, F5-R UPO 9;
+     stretch ~4e4 per segment) the integrator noise per segment is 1e−10 to 5e−9, at or above check 2's 1e−10 limit.
+     So check 2 near the limit is partly luck.
+     - Every failed edge is in that regime. Within the C0 SCC, residuals are at least 2× below the limit, and the
+       noise floors there are 1e−11 to 1e−10.
+     - An UNREGISTERED, labelled diagnostic with single-return segments passes checks 2, 3, 5 and 6 on 60 of 60
+       edges, with residuals ~1e−12. It is supporting evidence only.
+  2. The comparison with tabula's independent A12 confirmation is pending; both sides must seal first, and blinding
+     is on.
+  3. Commit drift: C0 was run at f585656 and F5-R at d417089 (code unchanged between them for these files).

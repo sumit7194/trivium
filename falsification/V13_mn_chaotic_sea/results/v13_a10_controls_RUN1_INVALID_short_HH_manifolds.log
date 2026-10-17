@@ -1,0 +1,19 @@
+[     3.6s] HH jacobian check {'det_minus_1': 1.021405182655144e-14, 'fd_rel': 8.674860829539161e-11, 'energy_drift_1_return': np.float64(6.078471059822732e-15)}
+[     4.3s] HH fixed points [([-0.429461, 0.0], -2.9309, 'hyperbolic'), ([-0.249787, 0.0], 7.4002, 'hyperbolic'), ([-0.074173, 0.307136], -4.1309, 'hyperbolic'), ([0.070017, 0.258119], -4.1309, 'hyperbolic'), ([-0.074173, -0.307136], -4.1309, 'hyperbolic'), ([0.340772, 0.0], -2.9309, 'hyperbolic'), ([-0.051707, 0.263719], 8.1606, 'hyperbolic'), ([0.070017, -0.258119], -4.1309, 'hyperbolic'), ([0.376774, -0.306716], 7.4002, 'hyperbolic'), ([0.376774, 0.306716], 7.4002, 'hyperbolic'), ([0.011702, 0.284438], -4.1801, 'hyperbolic'), ([0.054363, 0.306984], 8.1606, 'hyperbolic')]
+[     4.9s] HH fixed point [-0.429461, 0.0] lambda -2.5367 G partner [-0.429461, 0.0] raw crossings 0 short-chord 0
+[     5.5s] HH fixed point [-0.249787, 0.0] lambda 7.2625 G partner [-0.249787, 0.0] raw crossings 0 short-chord 0
+[     8.3s] HH fixed point [-0.074173, 0.307136] lambda -3.8727 G partner [-0.074173, -0.307136] raw crossings 0 short-chord 0
+[    11.2s] HH fixed point [0.070017, 0.258119] lambda -3.8727 G partner [0.070017, -0.258119] raw crossings 0 short-chord 0
+[    14.3s] HH fixed point [-0.074173, -0.307136] lambda -3.8727 G partner [-0.074173, 0.307136] raw crossings 0 short-chord 0
+[    14.9s] HH fixed point [0.340772, 0.0] lambda -2.5367 G partner [0.340772, 0.0] raw crossings 0 short-chord 0
+[    14.9s] HH fixed point [-0.05170745  0.26371862] has no G partner among found points; skipped
+[    17.9s] HH fixed point [0.070017, -0.258119] lambda -3.8727 G partner [0.070017, 0.258119] raw crossings 0 short-chord 0
+[    18.4s] HH fixed point [0.376774, -0.306716] lambda 7.2625 G partner [0.376774, 0.306716] raw crossings 0 short-chord 0
+[    18.9s] HH fixed point [0.376774, 0.306716] lambda 7.2625 G partner [0.376774, -0.306716] raw crossings 0 short-chord 0
+[    18.9s] HH fixed point [0.01170177 0.28443827] has no G partner among found points; skipped
+[    18.9s] HH fixed point [0.05436332 0.30698379] has no G partner among found points; skipped
+[    18.9s] HH positive control FAIL ; negative FAIL
+[    45.8s] MN negative C0 1->1 true solve res 4.450143523866004e-11 fake res {'along_Wu_1e-3_scaled': 1.1790766289122209e-08, 's_relative_1e-3': 1.6413151490315214e-08} PASS
+[    45.8s] MN negative C0 8->4 true solve res 1.649275873321311e-11 fake res {'along_Wu_1e-3_scaled': 0.00011016815069734808, 's_relative_1e-3': 3.619152411135838e-05} PASS
+[    61.6s] MN negative F5R 9->2 true solve res 4.840474689779183e-10 fake res {'along_Wu_1e-3_scaled': 0.00010808791436826518, 's_relative_1e-3': 4.519410579272498e-05} PASS
+[    62.0s] wrote /Users/sumit/Github/TheBridge/falsification/V13_mn_chaotic_sea/code/../results/v13_a10_controls.json A10 controls FAIL
