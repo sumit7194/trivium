@@ -75,3 +75,10 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
   4. (Added at quantum's own disclosure.) Quantum's prereg note d64dc56 says the adaptive W-AZ re-runs were stopped
      because they would bisect to the 2¹⁶ cap, and that the registered first pass "already settles" W-AZ1 and W-AZ2.
      That is a qualitative statement about the W outcome; treat it as known.
+  5. (2026-10-17 evening, a quantum status message.) The two HH coverings still running after the reboot (they are
+     being rerun under quantum's B13) "likely" have a persistently failing box, and quantum offers this as the reason
+     for their long runtimes. It is quantum's speculation, but it is qualitative information about two coverings;
+     treat it as known.
+     - The bridge has NOT read B13 or any of quantum's HH JSONs.
+     - Five HH coverings are sealed at quantum 914e99f. The bridge has not received their hashes or outcomes.
+     - V14's HH decisions stay on V14's own pre-stated ladder, committed before reading quantum's JSONs.
