@@ -19,4 +19,30 @@
   - Tabula's independent check is still to come; we compare only after both sides seal.
 - Committed: 085ac13.
 
-## 2. (more sections are added below as the overnight jobs finish)
+## 2. Manko email: drafted, nothing sent or published
+- **Address:** vsmanko@cinvestav.mx, from his official Cinvestav profile page (dated 2025-02-11). His 2023 arXiv
+  papers print no email. Recommend writing to Manko alone.
+- **Draft:** `outreach/mn_ring_manko/EMAIL_DRAFT.txt` (~530 words, same style as the 2007 email). It asks:
+  (a) is the ring already known, perhaps in the 1992 or 1990 papers we couldn't read;
+  (b) is our copy of the metric faithful to his original;
+  (c) does he see a flaw.
+  - It links the ring to his own 2011 paper on Tomimatsu–Sato δ=2 (arXiv:1110.6564). I checked that this paper
+    exists and is his.
+  - A one-page summary is at `ONE_PAGER.md` and `.pdf`. Checklist and claim-by-claim sources:
+    `README_FOR_USER.md`.
+- **Snapshot repo:** built locally only at `~/Github/snapshots/mn-ring-singularity/`. It re-runs and reproduces the
+  stored results, and every fingerprint in its MANIFEST checks.
+- **Before it goes public, I recommend cleaning three things:**
+  1. one `env.json` line names Apple's maths library (Accelerate) as the linear-algebra backend. With the Apple
+     report still open, I'd remove that line;
+  2. a few logs contain `/Users/sumit/...` paths;
+  3. mentions of "Fable" and of our session names.
+  None of them is sensitive in itself, but cleaning them costs nothing.
+- **Decisions for you:**
+  - edit and approve the email;
+  - make the snapshot public (after the clean-up);
+  - a separate short note to Brink about the two misprints in his 2008 appendix (I'd keep them out of the Manko
+    email).
+- If the ring-proof derivation (section 3) succeeds, one sentence in the email changes: "one step assumed" becomes
+  "derived".
+
