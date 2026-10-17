@@ -82,3 +82,18 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
      - The bridge has NOT read B13 or any of quantum's HH JSONs.
      - Five HH coverings are sealed at quantum 914e99f. The bridge has not received their hashes or outcomes.
      - V14's HH decisions stay on V14's own pre-stated ladder, committed before reading quantum's JSONs.
+
+## Amendment B1 (2026-10-18 overnight, after Q1 and BEFORE Q2/Q3): close the Float64 rounding gap
+- **The gap:** `validated_integ` does the polynomial coefficient arithmetic in Float64, and those rounding errors
+  are not in the remainder. So V14's enclosures are not fully rigorous.
+- **Fix, in order of preference:**
+  1. Run TaylorModels with Interval{Float64} polynomial coefficients, if the package supports it end to end. Every
+     coefficient operation is then enclosed.
+  2. Otherwise, add an a-posteriori rounding bound to each step's remainder. Bound: (number of coefficient
+     operations) × (max |coefficient|) × eps(Float64) × a safety factor of 4, derived and stated per step.
+     Validate it by comparing against a BigFloat (256-bit) re-run of the same steps on Q0's Rössler points: the
+     bound must contain the Float64-vs-BigFloat difference.
+- **Re-qualification:** with the fix, rerun Q0 (5/5 containment) and Q1 (the same 4 CERTIFIED, W1–W3 REJECTED,
+  W2 M′⟹N CERTIFIED). Either a different decision, or an UNDECIDED, is reported as such.
+- Q2 (HH) and Q3 (MN) use only the fixed pipeline.
+- The S6 wording stays conditional on B1 passing.
