@@ -222,3 +222,11 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
 - **No bug was found in the existing code.** All UPOs, λ values and recorded crossings were reproduced exactly. After
   its first pass the agent added a guard (check 5 cannot pass if Newton takes no step). It affected two unconfirmed
   edges and changed no verdict.
+
+## Note from V15 (2026-10-17): ring structure across the MN family
+- V15 Q1 shows that for every q > 0 (all V13 points: C0, F5-R, p1, p2) there is exactly ONE B = A = 0 ring, on the
+  equator. For q < 0 there is no equatorial ring, but there is a pair of off-equator (±y) B = A = 0 rings.
+- D_B9 was designed around the equatorial ring and the CTC zone. A q < 0 study would need D redesigned around the
+  off-equator pair. This does not affect any V13 result.
+- V15 verifier: the ring is a genuine, reachable curvature singularity (K ∝ d⁻⁶), outside the horizon, for the
+  axis-regular metric that V13 uses.
