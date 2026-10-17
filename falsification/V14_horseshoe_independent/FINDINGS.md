@@ -55,3 +55,37 @@
     ex_cone specs (which are cone-condition checks), but their boxes are exactly the r1_generic M and N (same centres,
     U and S). So the Q1 base result applies to the same coverings.
   - The B1 re-qualification reads r1_generic_*.spec directly and asserts the equality.
+
+## B1 rigour fix: Q0 PASS, **Q1 FAILS on the rigorous pipeline** (results/b1_note.md, b1_q0.json, b1_q1.json, b1_validation.json)
+- **A second, larger gap was found in the pre-B1 pipeline.** `validated_integ` (TaylorModels 0.13.1) drops the
+  polynomial terms above orderQ in the initial-box variables and never bounds them.
+  - On x′ = x², with its exact solution, the true value misses the enclosure by up to 3.8e12× the stored remainder,
+    scaling as r³ (verified).
+  - The Float64 rounding gap is also real: a 256-bit reference fell outside the old enclosures at 145 of 1299 step
+    ends, by up to 66× the remainder.
+  - **So the pre-B1 Q0 and Q1 "CERTIFIED" decisions were never rigorous.** They are hereby downgraded to
+    "non-rigorous agreement".
+- **B1 used `validated_integ3`** (same pinned package), which is validated per step in interval arithmetic. It bounds
+  the truncated terms, uses exactly representable time steps and verified QR, and has midrad = false. No upgrade,
+  no tuning. One package defect (undefined `t0` at validated_integ3.jl:467, hit only when no step length validates)
+  is caught, and that piece fails closed.
+  - Validation: 4113 of 4113 step-end samples on Q0's 5 points lie inside, smallest relative margin 0.0106; Q1 spot
+    check 52 of 52 inside.
+- **Q0 (rigorous): PASS**, 5 of 5 (widths 3e−13 to 4e−12).
+- **Q1 (rigorous): FAIL as registered.**
+  - The base t-sets come from r1_generic_*.spec (equal to the old boxes); the section is confirmed.
+  - **The 4 example coverings and W2 M′⟹N are UNDECIDED,** where the gate requires CERTIFIED. So are W1 N⟹N, W2 N⟹N,
+    W3 N⟹M and W3 N⟹N, which were certified before B1.
+  - W1, W2 and W3 are still REJECTED.
+  - **There is no contradiction anywhere:** no covering is certified by one pipeline and rejected by the other.
+  - **Causes (method limits):**
+    - a few support images (10–18 of 4096 at level 3, plus one N edge piece) fail the QR validation. For M⟹N and
+      the N-source coverings, these are the only obstruction.
+    - for M⟹M and W2 M′⟹N the enclosures are much wider, so the strong form of (a) is lost: max |s| bound 1.18 and
+      1.71.
+  - That the missing column pivoting in QR causes the widening is a guess (unverified).
+- **Status under the prereg wording:** V14's S6 replay is "UNDECIDED (method limit)" until a further amendment
+  qualifies it on Rössler. Quantum's own R1 (CAPD) is unaffected.
+- **Possible upstream issue:** validated_integ's truncation behaviour, if its documentation claims rigour. To be
+  checked against the TaylorModels docs before any report; the user decides.
+- Runtime: Q1 8.1 h + 8.3 h on 2 processes, ≤ 1.3 GB each.

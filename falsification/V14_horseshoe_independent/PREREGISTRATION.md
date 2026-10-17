@@ -97,3 +97,20 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
   W2 M′⟹N CERTIFIED). Either a different decision, or an UNDECIDED, is reported as such.
 - Q2 (HH) and Q3 (MN) use only the fixed pipeline.
 - The S6 wording stays conditional on B1 passing.
+
+## Amendment B2 (2026-10-18, after B1's Q1 FAIL and BEFORE any further covering run): re-qualify on Rössler
+- **Why:** on the rigorous pipeline (B1, validated_integ3), Q1's required certifications came out UNDECIDED. The
+  causes are a few QR-validation failures per support, and wider enclosures that break the strong form of (a) on
+  M⟹M and W2 M′⟹N.
+- **Changes, all pre-stated here (the integrator and its rigour are unchanged):**
+  1. **Adaptive refinement of failed pieces.** Any support box or edge piece that fails validation or a check is
+     bisected (in its longer side, in the t-set's (u, s) chart), recursively to depth ≤ 6 below the level-3 ladder,
+     with a cap of 2¹⁶ leaves per covering. A covering is CERTIFIED only if every leaf certifies.
+  2. **Higher Taylor order in the box variables:** orderQ 3 (from 2), with orderT unchanged. This is a single
+     pre-stated setting, not a sweep.
+  3. **Pivoted QR**, only if available in the pinned package. Otherwise this item is dropped and recorded.
+- **Gate (unchanged from Q1):** the 4 example coverings CERTIFIED; W1, W2 and W3 REJECTED; W2 M′⟹N CERTIFIED.
+  - Any certified-vs-rejected contradiction with B1 or with quantum is a FAIL to investigate.
+  - If B2 still leaves required certifications UNDECIDED, V14 stays "UNDECIDED (method limit)". The next option (a
+    different validated integrator) would then need its own amendment.
+- **Budget:** ≤ 2 processes at nice 10, ≤ 3 GB, and disk checks before running.
