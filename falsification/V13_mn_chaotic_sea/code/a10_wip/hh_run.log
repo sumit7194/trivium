@@ -1,0 +1,17 @@
+[    2.4] HH jacobian check {'det_minus_1': 1.021405182655144e-14, 'fd_rel': 8.674860829539161e-11, 'energy_drift_1_return': np.float64(6.078471059822732e-15)}
+[    2.9] HH fixed points [([-0.429461, 0.0], -2.9309, 'hyperbolic'), ([-0.249787, 0.0], 7.4002, 'hyperbolic'), ([-0.074173, 0.307136], -4.1309, 'hyperbolic'), ([0.070017, 0.258119], -4.1309, 'hyperbolic'), ([-0.074173, -0.307136], -4.1309, 'hyperbolic'), ([0.340772, 0.0], -2.9309, 'hyperbolic'), ([-0.051707, 0.263719], 8.1606, 'hyperbolic'), ([0.070017, -0.258119], -4.1309, 'hyperbolic'), ([0.376774, -0.306716], 7.4002, 'hyperbolic'), ([0.376774, 0.306716], 7.4002, 'hyperbolic'), ([0.011702, 0.284438], -4.1801, 'hyperbolic'), ([0.054363, 0.306984], 8.1606, 'hyperbolic')]
+[    3.9] HH fixed point [-0.429461, 0.0] lambda -2.5367 G partner [-0.429461, 0.0] raw crossings scanned 36 kept short-chord candidates 18 at a+b = [14]
+[    4.1] HH loop (a,b)= (7, 7) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 1.6e-14 ang 1.231 pt13/12 1.9e-12 step 2.6e-13 cond 3.9e+03 reparam 3.0468366516869276e-15
+[    4.1] HH negative control {'label': 'HH (a,b)=(7,7)', 'along_Wu_1e-3_scaled': 1.9192918173385195e-08, 's_relative_1e-3': 8.231331919864801e-10, 'control_passes': True}
+[    4.3] HH loop (a,b)= (7, 7) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 1.5e-14 ang 1.231 pt13/12 1.9e-12 step 3.9e-13 cond 4.3e+03 reparam 1.6743765183276534e-14
+[    4.5] HH loop (a,b)= (6, 8) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 1.9e-14 ang 0.229 pt13/12 4.4e-13 step 2.3e-13 cond 6.0e+03 reparam 4.2129082873666596e-14
+[    4.6] HH loop (a,b)= (8, 6) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 1.8e-14 ang 0.229 pt13/12 4.5e-13 step 4.7e-13 cond 7.0e+03 reparam 6.781181950378318e-14
+[    4.7] HH loop (a,b)= (6, 8) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 1.8e-14 ang 0.221 pt13/12 4.0e-12 step 3.4e-13 cond 5.4e+03 reparam 9.625017399004965e-14
+[    4.9] HH loop (a,b)= (8, 6) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 8.1e-15 ang 0.221 pt13/12 4.1e-12 step 2.2e-13 cond 5.8e+03 reparam 1.1060069697946509e-14
+[    6.6] HH fixed point [-0.249787, 0.0] lambda 7.2625 G partner [-0.249787, 0.0] raw crossings scanned 16 kept short-chord candidates 16 at a+b = [13]
+[    6.7] HH loop (a,b)= (6, 7) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 6.1e-15 ang 1.358 pt13/12 1.1e-13 step 1.3e-14 cond 2.2e+01 reparam 2.211787952954322e-15
+[    6.8] HH loop (a,b)= (7, 6) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 2.6e-15 ang 1.358 pt13/12 9.8e-14 step 6.2e-15 cond 2.8e+01 reparam 7.826487036496576e-16
+[    6.9] HH loop (a,b)= (5, 8) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 2.8e-15 ang 1.127 pt13/12 6.7e-14 step 5.5e-15 cond 3.3e+01 reparam 1.4402853094655024e-15
+[    6.9] HH loop (a,b)= (8, 5) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 6.1e-15 ang 1.127 pt13/12 6.5e-14 step 9.3e-15 cond 2.9e+01 reparam 1.852331559902254e-15
+[    7.0] HH loop (a,b)= (5, 8) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 2.8e-15 ang 1.052 pt13/12 1.0e-14 step 5.6e-15 cond 3.5e+01 reparam 1.24017236573313e-15
+[    7.1] HH loop (a,b)= (8, 5) CONFIRMED_MS c2,3,5,6 [True, True, True, True] res 3.1e-15 ang 1.052 pt13/12 1.0e-14 step 7.0e-15 cond 3.0e+01 reparam 1.2207820622234452e-15
