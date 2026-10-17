@@ -180,3 +180,11 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
   84ab1056952c0a5331d30396186537396d1cb0b60fd4490636259a49b2f06176  falsification/V13_mn_chaotic_sea/results/v13_upo_F5R_19o20_3.json
   728f80aac659437af6c15bce94b42cc9d89fcd88781bb9a607c4a16971312933  falsification/V13_mn_chaotic_sea/results/v13_upo_p1_37o40_29o10.json
   13a396884d5fae1a92ea2c21931eeffb267d72037e382905d30dc0e662fd8949  falsification/V13_mn_chaotic_sea/results/v13_upo_p2_37o40_3.json
+
+## Protocol deviation (2026-10-17, logged at tabula's note)
+- Before tabula sealed, the bridge's message to tabula included summary counts from the bridge's C0 structure stage:
+  in-D UPOs, raw crossings and self-loops. Class: early disclosure of unsealed comparison data.
+- **Mitigation:** tabula's C0 UPO search ran in its earlier sealed gate run. All of its in-D, manifold and confirmation
+  rules (A10, A10.1, A12) were committed beforehand (tabula 5a7d93d), so its C0 result cannot be steered toward the
+  bridge's numbers. C0 is informational in tabula's analysis.
+- **Rule from now on:** no counts, edge lists or verdict summaries go to the other side until both have sealed.
