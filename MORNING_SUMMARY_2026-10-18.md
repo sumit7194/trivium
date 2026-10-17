@@ -46,3 +46,12 @@
 - If the ring-proof derivation (section 3) succeeds, one sentence in the email changes: "one step assumed" becomes
   "derived".
 
+## 3. Quantum: Hénon–Heiles proof calculations
+- The restart killed the two unfinished calculations with no results. The other five finished before it and are
+  sealed.
+- Before rerunning, quantum added the ability to save progress partway and resume, tested it on the Rössler case, and
+  registered the change before launching. A future restart can't wipe out hours of work again.
+- The two reruns are going now (4 low-priority processes, very little memory).
+- Quantum disclosed a slip of its own: it once stopped its own test process by name pattern instead of by ID. Nothing
+  else was affected.
+
