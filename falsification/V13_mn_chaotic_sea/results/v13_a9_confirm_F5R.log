@@ -1,0 +1,118 @@
+[     0.0s] F5R hyp in-D UPOs 11 edges 48 xscale 26.54335556316149 pscale 128.51445047597178
+[    18.4s] eigen data reproduced exactly for all 11 UPOs (z, lambda bitwise equal to the graph file)
+[    25.4s] regrown W^u 1 branch 1 to iterate 5 points 200 dropped 0  6.9s
+[    25.4s] regrown W^u 1 branch -1 to iterate 5 points 200 dropped 0  6.8s
+[   142.0s] regrown W^u 4 branch 1 to iterate 5 points 6000 dropped 122 cap hit 116.7s
+[   142.0s] regrown W^u 4 branch -1 to iterate 5 points 5417 dropped 219  92.0s
+[   166.5s] regrown W^u 2 branch 1 to iterate 5 points 2986 dropped 148  49.2s
+[   251.9s] regrown W^u 2 branch -1 to iterate 5 points 6000 dropped 219 cap hit 109.9s
+[   256.8s] regrown W^u 3 branch 1 to iterate 5 points 2714 dropped 25  90.3s
+[   429.9s] regrown W^u 3 branch -1 to iterate 5 points 6000 dropped 9 cap hit 178.0s
+[   429.9s] regrown W^u 6 branch 1 to iterate 5 points 240 dropped 0  7.3s
+[   439.0s] regrown W^u 6 branch -1 to iterate 5 points 6000 dropped 1 cap hit 174.9s
+[   439.0s] regrown W^u 5 branch 1 to iterate 5 points 200 dropped 0  2.8s
+[   439.0s] regrown W^u 5 branch -1 to iterate 5 points 279 dropped 44  4.0s
+[   440.1s] regrown W^u 7 branch 1 to iterate 5 points 252 dropped 3  3.5s
+[   441.8s] regrown W^u 7 branch -1 to iterate 5 points 200 dropped 0  2.8s
+[   441.8s] regrown W^u 8 branch 1 to iterate 4 points 200 dropped 0  1.2s
+[   442.6s] regrown W^u 8 branch -1 to iterate 4 points 200 dropped 0  1.2s
+[   463.1s] regrown W^u 9 branch 1 to iterate 2 points 2378 dropped 162  21.3s
+[   463.1s] regrown W^u 9 branch -1 to iterate 2 points 616 dropped 141  5.9s
+[   463.1s] edge 1 -> 2 (a,b)=(5,5) gj=4 match 0.0e+00 chords 7.17e-05 2.57e-01 seed s=1.161549e-06 s'=3.012904e-05
+[   463.1s] edge 1 -> 4 (a,b)=(5,5) gj=2 match 0.0e+00 chords 1.41e-04 3.15e-01 seed s=1.371980e-06 s'=-6.460413e-06
+[   463.2s] edge 1 -> 6 (a,b)=(5,5) gj=3 match 0.0e+00 chords 2.47e-04 4.21e-01 seed s=-5.231012e-07 s'=-3.167423e-06
+[   463.2s] edge 2 -> 2 (a,b)=(3,2) gj=4 match 0.0e+00 chords 6.39e-03 2.65e-04 seed s=1.593621e-06 s'=-8.947997e-06
+[   463.2s] edge 2 -> 3 (a,b)=(3,5) gj=6 match 0.0e+00 chords 9.51e-03 6.06e-03 seed s=2.427605e-06 s'=-3.242918e-06
+[   463.2s] edge 2 -> 4 (a,b)=(3,3) gj=2 match 0.0e+00 chords 9.37e-03 9.37e-03 seed s=1.847002e-06 s'=1.847002e-06
+[   463.2s] edge 2 -> 5 (a,b)=(2,5) gj=5 match 0.0e+00 chords 9.99e-04 8.12e-03 seed s=-2.987817e-05 s'=-1.296822e-06
+[   463.3s] edge 2 -> 6 (a,b)=(2,5) gj=3 match 0.0e+00 chords 1.54e-04 7.52e-03 seed s=-6.149124e-06 s'=5.748884e-07
+[   463.3s] edge 2 -> 7 (a,b)=(3,5) gj=7 match 0.0e+00 chords 1.28e-03 1.32e-03 seed s=2.363415e-06 s'=2.875378e-07
+[   463.5s] edge 3 -> 2 (a,b)=(5,2) gj=4 match 0.0e+00 chords 9.61e-03 2.14e-04 seed s=-2.691686e-06 s'=1.253440e-05
+[   463.5s] edge 3 -> 3 (a,b)=(3,5) gj=6 match 0.0e+00 chords 6.90e-06 7.08e-03 seed s=-1.213360e-06 s'=-1.166952e-06
+[   463.8s] edge 3 -> 4 (a,b)=(5,2) gj=2 match 0.0e+00 chords 7.52e-03 1.54e-04 seed s=5.748884e-07 s'=-6.149124e-06
+[   464.0s] edge 3 -> 5 (a,b)=(5,4) gj=5 match 0.0e+00 chords 1.79e-01 1.44e-04 seed s=-3.248810e-06 s'=1.148393e-06
+[   464.0s] edge 3 -> 6 (a,b)=(4,5) gj=3 match 0.0e+00 chords 6.00e-04 5.69e-01 seed s=-1.798173e-06 s'=-3.379104e-06
+[   464.2s] edge 3 -> 7 (a,b)=(5,4) gj=7 match 0.0e+00 chords 4.04e-03 4.44e-04 seed s=-2.694789e-06 s'=2.943531e-06
+[   464.2s] edge 4 -> 2 (a,b)=(2,3) gj=4 match 0.0e+00 chords 1.91e-05 6.97e-03 seed s=8.016204e-07 s'=-1.394206e-05
+[   464.3s] edge 4 -> 3 (a,b)=(3,5) gj=6 match 0.0e+00 chords 2.16e-04 9.36e-03 seed s=1.028616e-07 s'=-3.244620e-06
+[   464.3s] edge 4 -> 4 (a,b)=(3,2) gj=2 match 0.0e+00 chords 2.78e-03 9.24e-04 seed s=4.981626e-07 s'=-2.868478e-05
+[   464.3s] edge 4 -> 5 (a,b)=(2,5) gj=5 match 0.0e+00 chords 4.34e-04 8.89e-03 seed s=-1.330264e-05 s'=-1.391908e-06
+[   464.3s] edge 4 -> 6 (a,b)=(2,5) gj=3 match 0.0e+00 chords 2.14e-04 9.61e-03 seed s=1.253440e-05 s'=-2.691686e-06
+[   464.3s] edge 4 -> 7 (a,b)=(3,5) gj=7 match 0.0e+00 chords 9.85e-03 1.09e-03 seed s=-9.566895e-06 s'=2.333175e-07
+[   464.4s] edge 4 -> 8 (a,b)=(4,4) gj=8 match 0.0e+00 chords 6.46e-03 8.38e-08 seed s=-1.033240e-05 s'=-2.519684e-07
+[   464.4s] edge 5 -> 2 (a,b)=(5,2) gj=4 match 0.0e+00 chords 8.89e-03 4.34e-04 seed s=-1.391908e-06 s'=-1.330264e-05
+[   464.4s] edge 5 -> 3 (a,b)=(5,5) gj=6 match 0.0e+00 chords 2.41e-04 5.12e-03 seed s=2.572392e-06 s'=-3.297694e-06
+[   464.4s] edge 5 -> 4 (a,b)=(5,2) gj=2 match 0.0e+00 chords 8.12e-03 9.99e-04 seed s=-1.296822e-06 s'=-2.987817e-05
+[   464.4s] edge 5 -> 5 (a,b)=(5,5) gj=5 match 0.0e+00 chords 6.37e-03 6.37e-03 seed s=-1.338656e-06 s'=-1.338656e-06
+[   464.5s] edge 5 -> 6 (a,b)=(4,5) gj=3 match 0.0e+00 chords 1.44e-04 1.79e-01 seed s=1.148393e-06 s'=-3.248810e-06
+[   464.5s] edge 5 -> 7 (a,b)=(5,5) gj=7 match 0.0e+00 chords 1.11e-04 5.81e-04 seed s=5.670087e-07 s'=-1.176876e-07
+[   464.6s] edge 6 -> 2 (a,b)=(5,3) gj=4 match 0.0e+00 chords 9.36e-03 2.16e-04 seed s=-3.244620e-06 s'=1.028616e-07
+[   465.0s] edge 6 -> 3 (a,b)=(5,5) gj=6 match 0.0e+00 chords 1.34e-03 5.83e-03 seed s=7.059673e-07 s'=8.638903e-07
+[   465.2s] edge 6 -> 4 (a,b)=(5,3) gj=2 match 0.0e+00 chords 6.06e-03 9.51e-03 seed s=-3.242918e-06 s'=2.427605e-06
+[   465.4s] edge 6 -> 5 (a,b)=(5,5) gj=5 match 0.0e+00 chords 5.12e-03 2.41e-04 seed s=-3.297694e-06 s'=2.572392e-06
+[   465.4s] edge 6 -> 6 (a,b)=(3,5) gj=3 match 0.0e+00 chords 9.42e-07 8.68e-03 seed s=1.574213e-07 s'=-1.218715e-06
+[   465.6s] edge 6 -> 7 (a,b)=(5,4) gj=7 match 0.0e+00 chords 6.85e-03 2.56e-04 seed s=-3.268743e-06 s'=1.675218e-06
+[   465.6s] edge 7 -> 2 (a,b)=(5,3) gj=4 match 0.0e+00 chords 1.09e-03 9.85e-03 seed s=2.333175e-07 s'=-9.566895e-06
+[   465.7s] edge 7 -> 3 (a,b)=(4,5) gj=6 match 0.0e+00 chords 2.56e-04 6.85e-03 seed s=1.675218e-06 s'=-3.268743e-06
+[   465.7s] edge 7 -> 4 (a,b)=(5,3) gj=2 match 0.0e+00 chords 1.32e-03 1.28e-03 seed s=2.875378e-07 s'=2.363415e-06
+[   465.7s] edge 7 -> 5 (a,b)=(5,5) gj=5 match 0.0e+00 chords 7.06e-03 3.08e-03 seed s=1.494176e-06 s'=-2.210863e-07
+[   465.7s] edge 7 -> 6 (a,b)=(4,5) gj=3 match 0.0e+00 chords 4.44e-04 4.04e-03 seed s=2.943531e-06 s'=-2.694789e-06
+[   465.7s] edge 7 -> 7 (a,b)=(5,5) gj=7 match 0.0e+00 chords 5.15e-03 7.97e-03 seed s=1.704184e-06 s'=3.077811e-06
+[   465.7s] edge 8 -> 2 (a,b)=(4,4) gj=4 match 0.0e+00 chords 8.38e-08 6.46e-03 seed s=-2.519684e-07 s'=-1.033240e-05
+[   465.8s] edge 9 -> 2 (a,b)=(1,1) gj=4 match 0.0e+00 chords 5.65e-03 2.57e-07 seed s=6.722847e-04 s'=-3.397124e-06
+[   465.8s] edge 9 -> 3 (a,b)=(1,5) gj=6 match 0.0e+00 chords 5.59e-03 5.26e-03 seed s=1.498707e-03 s'=-3.123885e-06
+[   465.8s] edge 9 -> 4 (a,b)=(1,3) gj=2 match 0.0e+00 chords 9.04e-03 5.13e-03 seed s=7.174498e-04 s'=1.919333e-06
+[   465.8s] edge 9 -> 5 (a,b)=(1,5) gj=5 match 0.0e+00 chords 8.17e-03 8.12e-03 seed s=7.113429e-04 s'=-1.296845e-06
+[   465.8s] edge 9 -> 6 (a,b)=(1,5) gj=3 match 0.0e+00 chords 8.15e-03 9.48e-03 seed s=1.624730e-03 s'=4.214471e-07
+[   465.8s] edge 9 -> 7 (a,b)=(1,5) gj=7 match 0.0e+00 chords 7.61e-03 7.43e-03 seed s=3.130132e-03 s'=1.531630e-06
+[   465.9s] edge 9 -> 8 (a,b)=(2,4) gj=8 match 0.0e+00 chords 8.77e-03 3.77e-08 seed s=7.156054e-04 s'=1.125916e-07
+[   482.1s] edge 1 -> 2 not confirmed c1..5 [False, False, True, True, False] res 9.1e-03 ang 0.3262 s_rel 7.4e-04/1.5e-06 16s
+[   482.1s] edge 1 -> 4 not confirmed c1..5 [False, False, True, False, False] res 6.1e-02 ang 0.0580 s_rel 8.4e-01/5.1e-04 12s
+[   496.3s] edge 1 -> 6 not confirmed c1..5 [False, False, True, False, False] res 1.4e-03 ang 0.0121 s_rel 2.5e+00/1.6e-02 18s
+[   496.3s] edge 2 -> 2 not confirmed c1..5 [True, False, True, True, False] res 8.7e-08 ang 0.0692 s_rel 1.5e-05/6.5e-08 3s
+[   496.3s] edge 2 -> 3 not confirmed c1..5 [True, False, True, True, False] res 8.7e-05 ang 0.0552 s_rel 1.9e-04/4.9e-06 5s
+[   496.3s] edge 2 -> 4 not confirmed c1..5 [True, False, True, True, False] res 4.2e-08 ang 0.0455 s_rel 1.3e-05/1.3e-05 3s
+[   496.3s] edge 2 -> 5 not confirmed c1..5 [True, False, True, True, False] res 3.8e-08 ang 0.0451 s_rel 2.5e-07/1.3e-04 3s
+[   501.0s] edge 2 -> 6 not confirmed c1..5 [True, False, True, True, False] res 3.9e-05 ang 0.0938 s_rel 2.4e-02/6.2e-05 5s
+[   501.0s] edge 2 -> 7 not confirmed c1..5 [True, False, True, True, False] res 7.5e-07 ang 0.0947 s_rel 1.3e-05/3.6e-04 4s
+[   505.2s] edge 3 -> 2 not confirmed c1..5 [True, False, True, True, False] res 9.4e-06 ang 0.0660 s_rel 1.3e-05/2.3e-04 5s
+[   508.7s] edge 3 -> 3 not confirmed c1..5 [True, False, True, True, False] res 1.1e-06 ang 0.0889 s_rel 6.4e-05/4.9e-04 8s
+[   510.0s] edge 3 -> 4 not confirmed c1..5 [True, False, True, True, False] res 3.9e-05 ang 0.0938 s_rel 6.2e-05/2.4e-02 5s
+[   543.0s] edge 3 -> 5 not confirmed c1..5 [False, False, False, True, False] res 4.4e-02 ang 0.0003 s_rel 5.0e-02/1.1e+00 34s
+[   556.4s] edge 3 -> 6 not confirmed c1..5 [False, False, True, False, False] res 3.2e-02 ang 0.0204 s_rel 8.8e-01/3.0e-06 46s
+[   556.4s] edge 3 -> 7 not confirmed c1..5 [True, False, True, True, False] res 4.7e-05 ang 0.0333 s_rel 2.0e-05/7.2e-05 7s
+[   556.4s] edge 4 -> 2 not confirmed c1..5 [True, False, True, True, False] res 1.1e-07 ang 0.0681 s_rel 1.7e-05/5.8e-08 3s
+[   559.3s] edge 4 -> 3 not confirmed c1..5 [True, False, True, True, False] res 3.5e-07 ang 0.0888 s_rel 9.9e-05/1.8e-05 6s
+[   559.3s] edge 4 -> 4 not confirmed c1..5 [True, False, True, True, True] res 2.5e-08 ang 0.0443 s_rel 2.8e-08/9.2e-07 2s
+[   562.9s] edge 4 -> 5 not confirmed c1..5 [True, False, True, True, False] res 6.1e-07 ang 0.0727 s_rel 9.3e-05/1.3e-04 4s
+[   564.5s] edge 4 -> 6 not confirmed c1..5 [True, False, True, True, False] res 9.4e-06 ang 0.0660 s_rel 2.3e-04/1.3e-05 5s
+[   565.9s] edge 4 -> 7 not confirmed c1..5 [True, False, True, True, False] res 2.2e-07 ang 0.0144 s_rel 8.3e-08/5.5e-04 3s
+[   567.6s] edge 4 -> 8 not confirmed c1..5 [True, False, True, True, False] res 2.7e-08 ang 0.0461 s_rel 3.7e-07/8.9e-05 3s
+[   569.9s] edge 5 -> 2 not confirmed c1..5 [True, False, True, True, False] res 6.1e-07 ang 0.0727 s_rel 1.3e-04/9.3e-05 4s
+[   574.4s] edge 5 -> 3 not confirmed c1..5 [True, False, True, True, False] res 2.0e-05 ang 0.2364 s_rel 1.1e-05/4.2e-05 7s
+[   574.4s] edge 5 -> 4 not confirmed c1..5 [True, False, True, True, False] res 3.8e-08 ang 0.0451 s_rel 1.3e-04/2.5e-07 3s
+[   577.5s] edge 5 -> 5 not confirmed c1..5 [True, False, True, True, False] res 2.0e-06 ang 0.0482 s_rel 1.2e-04/1.2e-04 4s
+[   608.6s] edge 5 -> 6 not confirmed c1..5 [False, False, False, True, False] res 4.4e-02 ang 0.0003 s_rel 1.1e+00/5.0e-02 34s
+[   608.6s] edge 5 -> 7 not confirmed c1..5 [True, False, True, True, False] res 1.1e-07 ang 0.1816 s_rel 3.9e-04/1.5e-03 3s
+[   608.6s] edge 6 -> 2 not confirmed c1..5 [True, False, True, True, False] res 3.5e-07 ang 0.0888 s_rel 1.8e-05/9.9e-05 6s
+[   608.6s] edge 6 -> 3 not confirmed c1..5 [True, False, True, True, False] res 1.4e-05 ang 0.0508 s_rel 3.2e-04/4.4e-04 8s
+[   608.6s] edge 6 -> 4 not confirmed c1..5 [True, False, True, True, False] res 8.7e-05 ang 0.0552 s_rel 4.9e-06/1.9e-04 5s
+[   608.6s] edge 6 -> 5 not confirmed c1..5 [True, False, True, True, False] res 2.0e-05 ang 0.2364 s_rel 4.2e-05/1.1e-05 7s
+[   614.6s] edge 6 -> 6 not confirmed c1..5 [True, False, True, True, False] res 2.2e-06 ang 0.0827 s_rel 8.6e-05/2.5e-05 7s
+[   615.0s] edge 6 -> 7 not confirmed c1..5 [True, False, True, True, False] res 3.4e-06 ang 0.0330 s_rel 6.2e-05/1.1e-04 6s
+[   617.7s] edge 7 -> 2 not confirmed c1..5 [True, False, True, True, False] res 2.2e-07 ang 0.0144 s_rel 5.5e-04/8.3e-08 3s
+[   621.3s] edge 7 -> 3 not confirmed c1..5 [True, False, True, True, False] res 3.4e-06 ang 0.0330 s_rel 1.1e-04/6.2e-05 6s
+[   621.4s] edge 7 -> 4 not confirmed c1..5 [True, False, True, True, False] res 7.5e-07 ang 0.0947 s_rel 3.6e-04/1.3e-05 4s
+[   625.9s] edge 7 -> 5 not confirmed c1..5 [True, False, True, True, False] res 2.1e-07 ang 0.0235 s_rel 9.5e-05/1.1e-03 5s
+[   628.6s] edge 7 -> 6 not confirmed c1..5 [True, False, True, True, False] res 4.7e-05 ang 0.0333 s_rel 7.2e-05/2.0e-05 7s
+[   629.9s] edge 7 -> 7 not confirmed c1..5 [True, False, True, True, False] res 5.3e-06 ang 0.0214 s_rel 8.0e-05/3.7e-05 4s
+[   631.6s] edge 8 -> 2 not confirmed c1..5 [True, False, True, True, False] res 2.7e-08 ang 0.0461 s_rel 8.9e-05/3.7e-07 3s
+[   631.8s] edge 9 -> 2 CONFIRMED c1..5 [True, True, True, True, True] res 4.8e-10 ang 0.0687 s_rel 6.4e-08/8.7e-09 2s
+[   636.8s] edge 9 -> 3 not confirmed c1..5 [True, False, True, True, False] res 9.2e-07 ang 0.1130 s_rel 2.2e-07/5.7e-05 5s
+[   636.8s] edge 9 -> 4 not confirmed c1..5 [True, False, True, True, False] res 1.2e-07 ang 0.0447 s_rel 5.6e-08/1.3e-05 3s
+[   638.7s] edge 9 -> 5 not confirmed c1..5 [True, False, True, True, False] res 8.9e-08 ang 0.0451 s_rel 3.4e-08/1.6e-04 4s
+[   643.1s] edge 9 -> 6 not confirmed c1..5 [True, False, True, True, False] res 2.4e-05 ang 0.0719 s_rel 3.7e-09/8.8e-05 6s
+[   643.1s] edge 9 -> 7 not confirmed c1..5 [True, False, True, True, False] res 1.5e-06 ang 0.0223 s_rel 0.0e+00/0.0e+00 2s
+[   643.7s] edge 9 -> 8 not confirmed c1..5 [True, False, True, True, False] res 6.5e-06 ang 0.0461 s_rel 6.3e-08/5.6e-05 3s
+[   644.4s] wrote /Users/sumit/Github/TheBridge/falsification/V13_mn_chaotic_sea/code/../results/v13_a9_confirm_F5R.json
+[   644.4s] SUMMARY {"n_edges": 48, "n_confirmed": 1, "confirmed": [[9, 2]], "self_loops_confirmed": [], "sccs_confirmed": [], "first_failing_check": {"check1": 6, "check2": 41}, "failing_each_check": {"check1": 6, "check2": 47, "check3": 2, "check4": 3, "check5": 46}, "check3_scaled_metric_failures": 2, "margins": {"min_angle_confirmed": 0.06872564426980127, "max_res_confirmed": 4.840474689779183e-10, "max_srel_confirmed": 6.434611795456018e-08, "max_chord_confirmed": 0.005652047602061801, "min_xm1_confirmed": 0.9391988067799071, "min_R_confirmed": 1.6641683944305703, "min_gpp_box_confirmed": 170.10602662931205}, "anomalies": ["3->5: refined point 1.9e-01 (scaled) from the recorded crossing, farther than its longer chord"], "runtime_s": 644.3456699848175}

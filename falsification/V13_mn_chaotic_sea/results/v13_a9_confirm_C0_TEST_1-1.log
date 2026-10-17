@@ -1,0 +1,10 @@
+[     0.0s] C0 hyp in-D UPOs 11 edges 1 xscale 17.166107559825864 pscale 1.4397551347079538
+[    21.4s] eigen data reproduced exactly for all 11 UPOs (z, lambda bitwise equal to the graph file)
+[    31.2s] regrown W^u 1 branch 1 to iterate 4 points 268 dropped 0  9.9s
+[    31.2s] regrown W^u 1 branch -1 to iterate 4 points 200 dropped 0  8.2s
+[    35.0s] regrown W^u 3 branch 1 to iterate 4 points 200 dropped 0  5.4s
+[    36.6s] regrown W^u 3 branch -1 to iterate 4 points 204 dropped 0  5.4s
+[    36.6s] edge 1 -> 1 (a,b)=(4,4) gj=3 match 0.0e+00 chords 5.65e-03 8.23e-03 seed s=2.152515e-06 s'=1.165580e-06
+[    52.0s] edge 1 -> 1 not confirmed c1..5 [True, False, True, True, False] res 1.8e-07 ang 1.5066 s_rel 1.0e-05/4.3e-06 15s
+[    52.8s] wrote /Users/sumit/Github/TheBridge/falsification/V13_mn_chaotic_sea/code/../results/v13_a9_confirm_C0_TEST_1-1.json
+[    52.8s] SUMMARY {"n_edges": 1, "n_confirmed": 0, "confirmed": [], "self_loops_confirmed": [], "sccs_confirmed": [], "first_failing_check": {"check2": 1}, "failing_each_check": {"check1": 0, "check2": 1, "check3": 0, "check4": 0, "check5": 1}, "check3_scaled_metric_failures": 0, "margins": {"min_angle_confirmed": null, "max_res_confirmed": null, "max_srel_confirmed": null, "max_chord_confirmed": null, "min_xm1_confirmed": null, "min_R_confirmed": null, "min_gpp_box_confirmed": null}, "anomalies": [], "runtime_s": 52.764716148376465}

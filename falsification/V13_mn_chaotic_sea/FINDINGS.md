@@ -188,3 +188,37 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
   rules (A10, A10.1, A12) were committed beforehand (tabula 5a7d93d), so its C0 result cannot be steered toward the
   bridge's numbers. C0 is informational in tabula's analysis.
 - **Rule from now on:** no counts, edge lists or verdict summaries go to the other side until both have sealed.
+
+## A9 edge confirmation: result as registered (code/v13_a9_confirm.py; results/v13_a9_confirm_{C0,F5R}.json, HEAD 3d304bd)
+- **CONFIRMED: C0 1 of 31 (8 → 4), F5-R 1 of 48 (9 → 2).**
+  - **No self-loop is confirmed, and neither point has a strongly connected component.**
+  - **As registered, A9 does NOT give numerical evidence of a horseshoe inside D at either point.**
+- **C0, 8 → 4:**
+  - residual 2.4e−11, angle 0.913 rad, chord 8.7e−3;
+  - s agreement between rtol 1e−13 and 1e−12 is 8.1e−7, just inside the 1e−6 limit;
+  - the connecting orbit stays in D: min x−1 = 0.947, R = 1.674, smallest g_φφ in the box 0.167.
+- **F5-R, 9 → 2:** residual 4.8e−10, angle 0.069 rad (0.328 in the scaled metric), s agreement 6.4e−8; min x−1 0.939,
+  R 1.664.
+- **Failure breakdown** (an edge can fail more than one check):
+
+  | point | first failing check = 1 (chords) | first failing check = 2 (residual) | failing check 1 / 2 / 3 / 4 / 5 |
+  |---|---|---|---|
+  | C0 | 13 | 17 | 13 / 30 / 1 / 9 / 28 |
+  | F5-R | 6 | 41 | 6 / 47 / 2 / 3 / 46 |
+
+  - **Long-chord edges** (chords 0.03–1.06) are polyline artefacts: Newton lands elsewhere or doesn't converge, and 9
+    (C0) and 3 (F5-R) of them leave D.
+  - **Every short-chord edge** (18 C0, 42 F5-R), including the C0 self-loops at UPOs 1, 3 and 6 and the F5-R
+    self-loops at 2–7, **passes checks 1, 3 and 4 and fails check 2, mostly also check 5.**
+- **Why checks 2 and 5 fail** (verifier's diagnosis; partially verified):
+  - Each return adds about 1e−12 of noise at rtol 1e−13. A single-shooting composition over a + b iterates multiplies
+    it by the total stretch, up to ~1e6. The map is therefore rough at ~5e−6 (scaled), far above the 1e−9 residual
+    limit.
+  - Newton reaches that noise floor on every short-chord edge (residual/noise ≤ 0.55 on C0 and ≤ 0.95 on F5-R).
+  - s itself is exponentially ill-conditioned, while the refined POINT moves by only ≤ 3e−5 (C0) and ≤ 8e−4 (F5-R)
+    between tolerances.
+  - So **A9's checks 2 and 5 were mis-designed for long single-shooting compositions.** This is the bridge's
+    design error and is recorded as such. It is not evidence for or against the crossings.
+- **No bug was found in the existing code.** All UPOs, λ values and recorded crossings were reproduced exactly. After
+  its first pass the agent added a guard (check 5 cannot pass if Newton takes no step). It affected two unconfirmed
+  edges and changed no verdict.

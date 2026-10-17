@@ -274,3 +274,30 @@ silently retried.
     of a horseshoe inside D", NOT a proof;
   - the proof belongs to the computer-assisted programme (quantum, V14).
   - Unconfirmed edges are dropped and counted.
+
+## Amendment A10 (2026-10-17, after A9's result and BEFORE any rerun): multiple-shooting confirmation
+- **Why:** A9 composed a + b maps in one shot, so its 1e−9 residual and s-stability checks fall below the map's own
+  noise floor (~1e−12 per return × stretch up to 1e6). See FINDINGS "A9 edge confirmation". A9's result stands as
+  reported: 1 confirmed edge per point.
+- **Scope:** the edges that passed A9 checks 1, 3 and 4: 18 at C0 and 42 at F5-R. The long-chord edges stay
+  rejected. No new edges are added.
+- **Method:** multiple shooting. Unknowns are s, s′ and the intermediate section points after each single P^{pow}
+  application on both branches. Equations: P^{pow}(w_k) = w_{k+1} for every segment, plus the final match
+  W^u-end = G(W^u(gj)-end). Newton uses the exact variational Jacobian per segment (SectionMap.jac).
+- **An edge is CONFIRMED_MS iff all of these hold:**
+  1. A9's check 1 (it already passed);
+  2. the max per-segment residual (scaled) is ≤ 1e−10;
+  3. the transversality angle at the crossing is ≥ 0.01 rad, from the segment-propagated tangents;
+  4. every segment orbit is in D_B9, with margins reported;
+  5. tolerance stability: the refined CROSSING POINT agrees to ≤ 1e−6 (scaled) between rtol 1e−13 and 1e−12. The
+     ill-conditioned parameter s is no longer the test variable. This change is made, with this rationale, before
+     any rerun.
+  6. NEW: the condition number of the multiple-shooting Jacobian is reported. The crossing is accepted only if the
+     Newton step norm at the solution is ≤ 1e−8.
+- **Controls:**
+  - Positive: Hénon–Heiles E = 1/6 (a known transverse homoclinic orbit of the period-1 saddle). The method must
+    confirm at least one self-loop there.
+  - Negative: a deliberately shifted fake crossing (offset 1e−3 along W^u). It must fail check 2.
+  - If either control fails, A10 is void.
+- **Verdict wording is unchanged** (A9): a confirmed self-loop or cycle is "numerical evidence of a horseshoe inside
+  D", not a proof.
