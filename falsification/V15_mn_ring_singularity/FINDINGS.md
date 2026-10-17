@@ -183,3 +183,24 @@ sympy 1.14.0, mpmath 1.3.0, numpy 2.4.6), as recorded in each JSON.
   for this step.
 - **Note:** the derivation also gives the off-equator q < 0 poles the same |W|⁻⁶ law, which suggests they are
   curvature singularities too. They have not been checked separately; stated as a hypothesis for future work.
+
+## Literature additions (2026-10-18; leads from a user-supplied Gemini answer, each verified here, per the no-Gemini rule)
+- **MN 1992 bibliographic record** verified on Crossref: "Generalizations of the Kerr and Kerr-Newman metrics
+  possessing an arbitrary set of mass-multipole moments", CQG 9 (11), 2477–2487, Nov 1992, DOI
+  10.1088/0264-9381/9/11/013. There is still no open copy.
+- **GLM 2008 corrects a typo in MN 1992's Eq. (14)** (the multipole moments), "following [19]" = H. Fang, PhD thesis,
+  Caltech 2007. Verified in the GLM arXiv PDF.
+  - Our multipole check (V test 5) is against GLM's corrected Eq. 4.
+  - Fang's thesis is a possible open-access route to MN 1992's formulae. Not yet retrieved.
+- **GLM's only singularity statement** is the "circular line singularity at x = 1, y = 0 (ρ = z = 0)", credited to
+  Brink by private communication. That is ON the horizon rod, not our ring at x_s ≈ 1.93. Verified, and consistent
+  with Q4. The Gemini answer misdescribed this as an "equatorial ring singularity discussion".
+- **NEW and relevant:** Chruściel, Maliborski & Yunes, "The structure of the singular ring in Kerr-like metrics", PRD
+  101, 104048 (2020), arXiv:1912.06020. Verified on the arXiv record (Gemini gave wrong authors).
+  - For Kerr-like metrics, K vanishes at the singular set along particular directions, but a combination of
+    invariants diverges from every direction. This is exactly the structure found here (V test 6: 12 nodal
+    directions of K; √(K² + P²) diverges everywhere).
+  - It treats Kerr-family metrics, not MN, so it doesn't bear on novelty. It is a good citation for the email and any
+    write-up.
+- Lukes-Gerakopoulos, Contopoulos & Apostolatos 2014 (arXiv:1408.4697, "Non-linear effects in non-Kerr spacetimes"):
+  real, about bumpy-BH dynamics, and not about singularities.
