@@ -89,3 +89,15 @@
 - **Possible upstream issue:** validated_integ's truncation behaviour, if its documentation claims rigour. To be
   checked against the TaylorModels docs before any report; the user decides.
 - Runtime: Q1 8.1 h + 8.3 h on 2 processes, ≤ 1.3 GB each.
+- **Upstream status, checked 2026-10-18:** TaylorModels.jl issue #207 (open, 2026-10-01, LongQianQL),
+  "validated_integ2 incorrect enclosure", reports the same x′ = x² unsound enclosure for validated_integ2. The
+  maintainer (lbenet) replied that he is aware of failures "also in validated_integ" and is working on a fix.
+  - **So the gap is already known upstream. We will not open a duplicate.** A comment adding our validated_integ
+    (v1) reproducer is optional, and the user's call.
+  - The package presents these routines as "validated integration of ODEs", and the README says "guaranteed error
+    bounds".
+  - **Risk flag for B1/B2:** validated_integ3 is not named in #207, and passes our tests (4113 of 4113 inside against
+    256-bit references, 52 of 52 on Q1). But its rigour rests on reading the source plus those tests, while the
+    maintainer acknowledges defects in sibling routines.
+  - V14 certificates on validated_integ3 are therefore labelled "subject to the open upstream defects in sibling
+    routines", until the fix lands or validated_integ3 is independently confirmed.
