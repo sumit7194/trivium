@@ -254,3 +254,23 @@ silently retried.
 - **New p2 shared level:** (E, ℓ) = (37/40, 3). Its equatorial interval is [3.3885711, 5.7411460], and it is
   confirmed bound-in-D at 300×240 and at 500×400. Search record: `results/v13_p2_fallback_2d.json`.
 - p1 (37/40, 29/10) and F5-R (19/20, 3) pass the 2-D test (0% of cells outside D) and are unchanged.
+
+## Amendment A9 (2026-10-17, after the structure stage ran, BEFORE any of its crossings is used): confirm each graph edge
+- **Why:** `v13_manifolds.py` finds an edge as a crossing of two POLYLINES (manifold samples joined by chords). A chord
+  can be longer than DMAX = 0.01 if the refinement cap (6000 points) was hit. The crossing point itself was never
+  refined, or re-integrated as an orbit. The raw graphs are therefore candidates only.
+- **Confirmation (new additive script `code/v13_a9_confirm.py`; nothing existing is edited):** for each edge i → j
+  (a, b), re-grow the two branches storing the fundamental-segment parameters, and solve
+  P^{a·m_i'}(z_i + s v_i) = G P^{b·m_j'}(G z_j + s' v_j) in (s, s') by 2-D Newton, seeded from the crossing chords.
+- **An edge is CONFIRMED only if all of these hold:**
+  1. both crossing chords are ≤ DMAX in the scaled section metric;
+  2. the Newton residual is ≤ 1e−9 (scaled);
+  3. the transversality angle at the refined point is ≥ 0.01 rad;
+  4. the whole connecting orbit is inside D_B9 at every accepted step, with its minimum margins reported. Backward
+     means from z_i + s v_i over a·m_i' maps; forward means b·m_j' maps, via reversibility;
+  5. (s, s') agree to ≤ 1e−6 relative between integrator rtol 1e−13 and 1e−12.
+- **Verdict wording:**
+  - a UPO with a CONFIRMED transverse homoclinic loop, or a confirmed cycle of edges, inside D is "numerical evidence
+    of a horseshoe inside D", NOT a proof;
+  - the proof belongs to the computer-assisted programme (quantum, V14).
+  - Unconfirmed edges are dropped and counted.

@@ -1,0 +1,8 @@
+{
+ "source": "v13_upo_p1_37o40_29o10.json",
+ "kmax": 5,
+ "delta": 1e-07,
+ "DMAX": 0.01,
+ "upos": [],
+ "edges": []
+}

@@ -134,3 +134,49 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
     with its margins.
 - **Fix:** the counted screen samples only components that pass the A8 2-D bound-in-D test. p1 is rerun. p2's run
   sampled only its single valid component, so it stands: **READ 60/60, CHAOTIC 0/60.** F5-R reruns after the fix.
+
+## Counted screens and structure stage (chain finished 2026-10-17 ~03:20). RAW; edges await A9
+- **Counted screens** (60 orbits per point, sampling only the A8 bound-in-D component; all 60 READ at every point):
+
+  | point | level (E, ℓ) | component | CHAOTIC |
+  |---|---|---|---|
+  | p1 (rerun) | 37/40, 29/10 | [3.2707, 7.7556] | **1/60**: orbit 55, x0 = 6.8700, A1 = −6.41 (threshold −7.21), A2 = +0.0275 (threshold −0.0025) |
+  | F5-R | 19/20, 3 | [5.4542, 31.1419] | 0/60 |
+  | p2 | 37/40, 3 | [3.3886, 5.7411] | 0/60 (unchanged) |
+
+  The p1 orbit clears both arms by a clear margin. Its A2 is positive, unlike run 1's marginal orbit (x0 = 6.817).
+  It sits near run 1's marginal orbit, which suggests a thin chaotic layer around x ≈ 6.8–6.9 at p1. That reading is
+  post hoc and unconfirmed.
+- **UPOs** (period ≤ 3; all have area_ok, i.e. det = 1 to tolerance):
+
+  | point | hyperbolic | of which whole orbit in D |
+  |---|---|---|
+  | C0 | 12 | 11 |
+  | F5-R | 17 | 11 |
+  | p1 | 10 | 0 |
+  | p2 | 0 | 0 |
+
+- **Transition graphs** (kmax 5, δ 1e−7):
+  - **C0:** 31 polyline crossings among the 11 in-D UPOs, including self-loops at UPOs 1, 3 and 6, and
+    cycles (1 ↔ 3, 1 ↔ 4, 1 ↔ 6, 3 ↔ 6). Minimum angle 0.29 rad.
+  - **F5-R:** 48 crossings, with a dense strongly connected block among UPOs 2–7. The minimum angle is 0.011 rad, and
+    21 crossings are below 0.05 rad.
+  - p1 and p2: no in-D hyperbolic UPO, so no graph.
+- **A7 per-point reading (registered wording, pending A9):**
+  - C0 and F5-R: "saddle-in-D candidates exist";
+  - p1 and p2: "none found within the search" (period ≤ 3). At p1 this sits alongside one CHAOTIC counted orbit, so
+    the search may be too short there (period > 3).
+- **Not yet claimed:** any confirmed homo/heteroclinic connection. The crossings are between chords and were never
+  refined, so A9 (pre-registered above) must confirm each edge first.
+- Sealed (sha256), before any exchange with tabula:
+  bab2fbf56efe6ba453394fe1a0e4f3d6d8bfdfe64e8f2a086ccdf2cf26dddad0  falsification/V13_mn_chaotic_sea/results/v13_counted_F5R.json
+  b2f3b3c9f705b5da476ad90aa130baefd5bb023525660301022cd3e3b66b5c9c  falsification/V13_mn_chaotic_sea/results/v13_counted_p1.json
+  c26e468e21bb31176d2ac34e8cafb567c3e2d84912f3f6befba134ae84f6af2a  falsification/V13_mn_chaotic_sea/results/v13_counted_p2.json
+  bcf67d676c6fc508e15f39d7d4d649f0e78ba1ba0ae8d398c2930708424e190d  falsification/V13_mn_chaotic_sea/results/v13_graph_C0_19o20_3.json
+  9ad6f36a16686695d72e48ad2f8f4f81f33484027d749e0c28d2a65169617f54  falsification/V13_mn_chaotic_sea/results/v13_graph_F5R_19o20_3.json
+  9c6e29d9f82d113132fbf1cb44586906ef49b310bcd38d6319e3ccfcd758bc7e  falsification/V13_mn_chaotic_sea/results/v13_graph_p1_37o40_29o10.json
+  11261ff00ad457fefd709c93170da97494d89c2afa295b13308105732824bd95  falsification/V13_mn_chaotic_sea/results/v13_graph_p2_37o40_3.json
+  110c96284aa7f314373ed433c0101c544a330891342caf7e272ba3f62e05d5ba  falsification/V13_mn_chaotic_sea/results/v13_upo_C0_19o20_3.json
+  84ab1056952c0a5331d30396186537396d1cb0b60fd4490636259a49b2f06176  falsification/V13_mn_chaotic_sea/results/v13_upo_F5R_19o20_3.json
+  728f80aac659437af6c15bce94b42cc9d89fcd88781bb9a607c4a16971312933  falsification/V13_mn_chaotic_sea/results/v13_upo_p1_37o40_29o10.json
+  13a396884d5fae1a92ea2c21931eeffb267d72037e382905d30dc0e662fd8949  falsification/V13_mn_chaotic_sea/results/v13_upo_p2_37o40_3.json
