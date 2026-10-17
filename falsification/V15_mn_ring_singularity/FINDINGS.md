@@ -1,7 +1,7 @@
 # V15 FINDINGS: the Manko–Novikov equatorial ring singularity
 
 Pre-registration: PREREGISTRATION.md (bf73ce2). Four independent Opus agents (Q1–Q4), plus the verifier (V) after them.
-Status: COMPLETE. Q1–Q4 and V are in. **Verifier verdict: the ring stands.**
+Status: COMPLETE. Q1–Q4, V and Q2b are in. **Verifier verdict: the ring stands. Q2b: the d⁻⁶ law is derived.**
 
 ## Q1: existence map — PASS (all registered checks)
 - **Equatorial reduction (verified, sympy plus 50-digit numerics).**
@@ -156,3 +156,30 @@ sympy 1.14.0, mpmath 1.3.0, numpy 2.4.6), as recorded in each JSON.
   d = 1e−2 point; the verifier's local slopes are −6.000 ± 0.004).
 - V: PASS.
 - Q3, Q4: descriptive.
+
+## Q2b: the assumed step is now DERIVED — PASS (results/v15_q2b_derivation.md, results/v15_q2b_check.json)
+- **Closed form:** with ℰ = c/W + … at the pole and W = (ρ−ρ₀) + iz,
+  I = 3(c/c̄)²/(ρ₀²Λ²W⁶)·(1 + O(|W|)) and K = 48 cos(6θ_W − 4 arg c)/(ρ₀²Λ²|W|⁶), with Λ = lim e^{2γ}/(f|W|²).
+  - Only arg c, ρ₀ and Λ enter; the subleading Laurent data cancel.
+  - c is real at equatorial rings (reflection symmetry), so this is exactly Q2's assumed law.
+  - Λ is fixed globally by γ's axis normalisation.
+- **Mechanism (derived):** an exact identity I = (4/H²)(𝒬_WW𝒬_W̄W̄ + 3𝒬_WW̄²) with H = e^{2γ}/f.
+  - The holomorphic leading pole leaves only 𝒬_WW, a null pp-wave with zero invariants.
+  - The 1/ρ term of the Ernst equation generates 𝒬_WW̄ at first order. So the invariant appears two orders below
+    naive counting: |W|⁻⁶, not |W|⁻⁸.
+- **PASS (criterion ≤ 1e−6 relative):** closed form vs Richardson-extrapolated numeric K·δ⁶:
+  - C0 109.0013104836 (9.7e−35);
+  - F5-R 1.70976083e−6 (1.0e−34);
+  - (0.6, 0.1024) 14.60186064 (1.4e−27);
+  - Kerr 6998.10468 = 48M²/k⁶ (3.6e−75; bridge arithmetic check 48/0.19³ = 6998.10). The symbolic Kerr reduction is
+    exact.
+- **Extra, unregistered phase test:** the (c/c̄)² factor holds at an off-equator q < 0 pole (χ 0.9, q −1;
+  arg c = −1.02) to 1.7e−11.
+- **Status of each step:**
+  - derived: the identity, the perturbative solution, the cancellations, the coefficient, Λ, the Kerr reduction;
+  - cited: the Ernst and γ equations (Ernst 1968; checked here to 1e−84), Wald 1984 Eq. C.3.6, O'Neill 1966;
+  - hypothesis: ℰ = N/D with real-analytic N and D, a simple zero of D and N ≠ 0 (holds at all 4 rings).
+- **Consequence:** the d⁻⁶ law is now DERIVED (under the stated hypothesis), not assumed. No Fable brief is needed
+  for this step.
+- **Note:** the derivation also gives the off-equator q < 0 poles the same |W|⁻⁶ law, which suggests they are
+  curvature singularities too. They have not been checked separately; stated as a hypothesis for future work.
