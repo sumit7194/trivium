@@ -70,3 +70,17 @@
 - **One open question to quantum:** the test files don't say which cross-section they use. We assumed the standard
   one and asked quantum to confirm.
 
+## 5. The ring proof: the missing step is now derived, and Fable isn't needed
+- The one step we had only checked numerically (how fast the curvature blows up near the ring) has now been derived
+  by hand, by an Opus agent.
+- The formula matches the computer values at all four test rings to about 27–35 digits (the requirement was 6), and
+  reduces exactly to Kerr's known result.
+- **It also explains why** the curvature grows a million-fold per tenfold step and not faster: right at the ring the
+  geometry looks like a flat gravitational wave with no curvature invariants at all, and the blow-up comes only from
+  the next correction.
+- I've updated the matching sentence in the Manko email draft (it said "one step assumed"; now it gives the derived
+  formula).
+- A side result for later: the same formula suggests the off-equator rings at negative q are singular too. Not
+  checked separately.
+- Committed: c8467f9.
+
