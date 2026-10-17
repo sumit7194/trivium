@@ -48,3 +48,10 @@
      - This must be fixed before V14's certificates can stand in for S6. Amendment B1 below is registered before
        Q2/Q3.
 - Runtime ~26 min × 2 processes; ~1.1 GB per process.
+- **Update (quantum's spec answer; no outcomes received):**
+  - The section is CONFIRMED: x = 0 crossed from x < 0 to x > 0, coordinates (y, z), P². The field matches
+    q1_poincare.jl.
+  - The base coverings in quantum's run are specified in r1_generic_{MM,MN,NM,NN}.spec. Q1 took M and N from the
+    ex_cone specs (which are cone-condition checks), but their boxes are exactly the r1_generic M and N (same centres,
+    U and S). So the Q1 base result applies to the same coverings.
+  - The B1 re-qualification reads r1_generic_*.spec directly and asserts the equality.
