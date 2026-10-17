@@ -1,7 +1,7 @@
 # V15 FINDINGS: the Manko–Novikov equatorial ring singularity
 
 Pre-registration: PREREGISTRATION.md (bf73ce2). Four independent Opus agents (Q1–Q4), plus the verifier (V) after them.
-Status: Q1, Q2 and Q3 are in. Q4 (literature) and V are pending.
+Status: Q1–Q4 are in; V (adversarial verifier) is running.
 
 ## Q1: existence map — PASS (all registered checks)
 - **Equatorial reduction (verified, sympy plus 50-digit numerics).**
@@ -86,3 +86,28 @@ Status: Q1, Q2 and Q3 are in. Q4 (literature) and V are pending.
 Files: code/v15_q{1,2,3}_*.py; results/v15_q1_existence.json, v15_q1_map.svg, v15_q2_curvature.json,
 v15_q2_analytic.md, v15_q3_geometry.{json,md}, v15_q3_c0*.png/svg. Env: the conjecture_machine venv (Python 3.14.5,
 sympy 1.14.0, mpmath 1.3.0, numpy 2.4.6), as recorded in each JSON.
+
+## Q4: literature (results/v15_q4_literature.md, screening record results/v15_q4_screen.json)
+- **Verdict: no paper we could legitimately read identifies a curvature singularity off the horizon in MN.**
+  - Full text read closely [verified]: Gair–Li–Mandel 2008; Brink 2008; Lukes-Gerakopoulos–Apostolatos–Contopoulos
+    2010; Contopoulos et al. 2011 and 2012; Lukes-Gerakopoulos & Contopoulos 2013; Bambi & Barausse 2011; Bambi &
+    Lukes-Gerakopoulos 2013; Johannsen 2013; Destounis & Kokkotas 2021; Staelens et al. 2023; Wang–Chen–Jing 2018;
+    Dey et al. 2022; the Yunes Living Reviews article; the Geyer 2013 thesis; four Manko-group papers.
+  - Keyword screen of full text [partially verified]: 284 further papers. 40 non-arXiv works were checked on metadata
+    or abstract only. Text inside figures cannot be screened.
+- **Brink 2008 Fig. 10 ("No singularities outside")** [verified on the rendered page]: a label inside a cartoon,
+  making a family-wide claim with no parameter point or computation behind it. Brink's Fig. 6 parameters work out to
+  χ 0.9, q 0.95, the same as C0.
+- **Not read:** MN 1992 (CQG 9, 2477; the IOP page is behind a captcha, not circumvented, and it is closed access
+  elsewhere); Castejon-Amenedo & Manko 1990; Manko 1990 (CQG 7 L209); Manko et al. 1998.
+  - **So "not identified in MN 1992" is UNVERIFIED.** Johannsen 2013 cites MN 1992 only for "naked singularity".
+- **Closest precedents** [verified]:
+  - Kodama & Hikida 2003 (Tomimatsu–Sato δ=2): Ψ₂ ∝ B⁻³ at the equatorial B = 0 point where the inner ergo-boundary
+    meets the equator, with g_φφ having a pole there. This is the same structure as Q2/Q3.
+  - Manko 2011 (arXiv:1110.6564): a vacuum ring singularity sits where the stationary-limit surface touches the
+    CTC-region boundary. This is the Q3 geometry, but it has not been applied to MN by anyone.
+- **Unrecognised traces at ρ ≈ 0.72** [our inference; unverified]: GLM's touching point of the CTC and bound regions;
+  the E- and L-independent inner boundary of allowed motion in Contopoulos et al. 2011/2012; the deep
+  effective-potential hole in Lukes-Gerakopoulos et al. 2010; Geyer's g_φφ blob.
+- **For the Manko email:** the honest framing is "we could not find this in the literature we could read, and we
+  could not read MN 1992, so we're asking whether it is already known". It is not "new".
