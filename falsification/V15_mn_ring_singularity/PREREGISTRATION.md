@@ -52,3 +52,15 @@ same papers). Parameters (M, a, β) with α = (−1+√(1−χ²))/χ, k = √(M
 ## Outputs
 `code/`, `results/` (JSON with versions), `FINDINGS.md`. Precision: mpmath ≥ 50 digits for curvature near the ring.
 Python env: /Users/sumit/Github/conjecture_machine/.venv (versions recorded in each result).
+
+## Amendment Q2b (2026-10-17 evening, before any work on it): derive Q2's assumed step
+- **Why:** Q2's leading exponent rests on an ASSUMPTION. The first correction to the local vacuum pp-wave was taken
+  to behave as in Kerr, giving K ≈ 48 cos 6θ_W / (ρ₀²Λ²|W|⁶). It is supported numerically (K·δ⁶ matches to 3.5e−7
+  at 4 rings) but not derived. An outside expert would ask for the derivation.
+- **Task (Opus first; Fable only if Opus cannot settle it, per the cost rule):** derive the first-order correction from
+  the Ernst equation near a simple pole of ℰ (holomorphic in W). Show analytically that the Weyl scalar Ψ₂ (or I) has
+  leading term ∝ W̄⁻³ with the stated coefficient, including Λ in closed form.
+- **PASS:** the derived coefficient reproduces the numeric K·δ⁶ at the 4 rings of Q2 to ≤ 1e−6 relative, and
+  reduces to the exact Kerr result at β = 0.
+- **FAIL / INCONCLUSIVE** is reported as such. The singularity verdict does not depend on Q2b, because the invariant
+  divergence is shown numerically by V. Q2b only decides whether the exponent is derived or empirical.
