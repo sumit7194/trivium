@@ -101,3 +101,12 @@
     maintainer acknowledges defects in sibling routines.
   - V14 certificates on validated_integ3 are therefore labelled "subject to the open upstream defects in sibling
     routines", until the fix lands or validated_integ3 is independently confirmed.
+
+## Quantum HH-PRIMARY SEALED (received 2026-10-18; hashes only, nothing opened)
+- Commit quantum ca819cf, with 26 result files in qsim/capd/horseshoe_results/: hh1_*, hh1a_*, hh1b_*, including W-AZ1/W-AZ2
+  and the exact checks.
+  - Hash examples: hh1_M0M0 989de158…84a6, hh1_W_AZ1_swap 002c896f…e627, hh1b_M3M4_c1c.pre_restart 15fbab29…3a85.
+  - The full list is in the bridge transcript of 2026-10-18.
+- Both readings of the post-hoc B13 budget change are in HH_PRIMARY_OUTCOME.md (ca819cf).
+- **The bridge has NOT opened any of these.** V14 Q2's HH decisions must be committed first. That needs V14 to
+  re-qualify on Rössler (B3, running).
