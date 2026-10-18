@@ -114,3 +114,22 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
   - If B2 still leaves required certifications UNDECIDED, V14 stays "UNDECIDED (method limit)". The next option (a
     different validated integrator) would then need its own amendment.
 - **Budget:** ≤ 2 processes at nice 10, ≤ 3 GB, and disk checks before running.
+
+## Amendment B3 (2026-10-18 afternoon, after B2 was stopped with NO verdict, before any B3 run)
+- **Why:** B2 (orderQ 3 plus adaptive refinement) was too slow: about 10 s per P² image, with level 3 unfinished
+  after 7 h. It was stopped at the user's restart (logs committed, 2bc189e) and has no outcome. B1's data shows the
+  obstruction is local: QR-validation failures on 10–18 of 4096 level-3 pieces, plus a wider (a) bound for M⟹M and
+  W2 M′⟹N. Local refinement at B1's cost should reach it.
+- **Change:** B2's adaptive refinement (bisect failing pieces in the (u, s) chart along the longer side; depth ≤ 6
+  below level 3; ≤ 2¹⁶ leaves; CERTIFIED only if every leaf certifies) is applied at **orderQ 2**, B1's setting.
+  - The B2 code is reused with only the order constant changed (julia/b3_*.jl, a mechanical copy of b2_*.jl; the
+    diff is recorded).
+  - The integrator (validated_integ3, midrad = false), the ladder and the gate are unchanged.
+- **Gate (unchanged):** the 4 examples CERTIFIED, W1–W3 REJECTED, W2 M′⟹N CERTIFIED. A contradiction with B1 is a
+  FAIL.
+  - If B3 still leaves required certifications UNDECIDED, V14 stays "UNDECIDED (method limit)".
+  - The next option would be a different validated integrator, under its own amendment.
+- **Budget:** 2 processes at nice 10, ≤ 3 GB total, a disk check first. It runs in the bridge's own session (no
+  sub-agent).
+- **Risk flag kept:** results on validated_integ3 are "subject to the open upstream defects in sibling routines"
+  (TaylorModels.jl #207).

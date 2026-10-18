@@ -1,0 +1,36 @@
+== rigor
+< # V14 Amendment B2: the B1 rigorous step (validated_integ3, interval Picard validation, midrad = false) with the one
+< # pre-registered integrator change: orderQ = 3 (from 2); orderT 16, abstol 1e-20, maxsteps 20000 unchanged.
+> # V14 Amendment B3: the B1 rigorous step (validated_integ3, interval Picard validation, midrad = false) with the one
+> # V14 Amendment B3: B2 adaptive refinement at orderQ = 2 (B1 setting); orderT 16, abstol 1e-20, maxsteps 20000 unchanged.
+< const B2_ORDER_Q = 3
+< const B2_ORDER_T = B1_ORDER_T
+< const B2_ABSTOL = B1_ABSTOL
+< const B2_MAXSTEPS = B1_MAXSTEPS
+== poincare
+< # V14 Amendment B2: b1_poincare.jl with orderQ = 3 (via b2_rigor.jl); nothing else changed (see diff).
+> # V14 Amendment B3: b1_poincare.jl with orderQ = 3 (via b3_rigor.jl); nothing else changed (see diff).
+< include(joinpath(@__DIR__, "b2_rigor.jl"))
+> include(joinpath(@__DIR__, "b3_rigor.jl"))
+< const ORDER_Q = B2_ORDER_Q
+< const ORDER_T = B2_ORDER_T
+< const ABSTOL = B2_ABSTOL
+< const MAXSTEPS = B2_MAXSTEPS
+== q1_cover
+< # V14 Amendment B2 (PREREGISTRATION.md, "Amendment B2"): Q1 re-qualification on the rigorous pipeline with
+< #   (1) adaptive refinement below ladder level 3, (2) orderQ = 3 (b2_rigor.jl), (3) pivoted QR: dropped (not in the
+> # V14 Amendment B3 (PREREGISTRATION.md, "Amendment B3"): Q1 re-qualification on the rigorous pipeline with
+> #   (1) adaptive refinement below ladder level 3, (2) orderQ = 3 (b3_rigor.jl), (3) pivoted QR: dropped (not in the
+< #  - Images are the same validated P^2 enclosures (b2_poincare.jl), cached by section rectangle (shared between
+> #  - Images are the same validated P^2 enclosures (b3_poincare.jl), cached by section rectangle (shared between
+< # Usage: julia --project=julia julia/b2_q1_cover.jl GROUP   (GROUP = N or M; see GROUPS below)
+> # Usage: julia --project=julia julia/b3_q1_cover.jl GROUP   (GROUP = N or M; see GROUPS below)
+== q1_merge
+< # V14 Amendment B2: merge the two B2 worker outputs (groups N and M) into results/b2_q1.json; evaluate the Q1 gate
+> # V14 Amendment B3: merge the two B2 worker outputs (groups N and M) into results/b3_q1.json; evaluate the Q1 gate
+< gN = JSON.parsefile(joinpath(RD, "b2_q1_N.json")); gM = JSON.parsefile(joinpath(RD, "b2_q1_M.json"))
+> gN = JSON.parsefile(joinpath(RD, "b3_q1_N.json")); gM = JSON.parsefile(joinpath(RD, "b3_q1_M.json"))
+<         push!(contr, Dict("cover" => l, "B2" => c["decision"], "B1" => s1))
+>         push!(contr, Dict("cover" => l, "B3" => c["decision"], "B1" => s1))
+<     push!(table, Dict("cover" => l, "B2" => c["decision"], "B2_level" => c["decided_at_level"], "B2_how" => c["how"],
+>     push!(table, Dict("cover" => l, "B3" => c["decision"], "B3_level" => c["decided_at_level"], "B3_how" => c["how"],
