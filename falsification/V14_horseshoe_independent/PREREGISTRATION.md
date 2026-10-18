@@ -133,3 +133,11 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
   sub-agent).
 - **Risk flag kept:** results on validated_integ3 are "subject to the open upstream defects in sibling routines"
   (TaylorModels.jl #207).
+- **B3 implementation note (2026-10-18 ~17:45), on the user's request to use the idle cores:** B3 is restarted as
+  julia/b3t_q1_cover.jl. It is b3_q1_cover.jl plus a threaded prefetch of the P² images: the same images, computed
+  in parallel, behind a cache lock.
+  - Method, settings, ladder, refinement and gate are unchanged.
+  - Thread-safety test (julia/b3t_threadtest.jl; results/b3t_threadtest.log): 16 rectangles, serial vs 4 threads,
+    give bitwise-identical enclosures (all 16 ok), at 3.7× speed.
+  - The serial B3 run (3.5 h, no verdict) was stopped; its logs are kept.
+  - Output: results/b3t_q1_{N,M}.json, 2 processes × 4 threads.

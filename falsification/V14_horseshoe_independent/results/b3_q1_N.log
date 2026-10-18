@@ -1,0 +1,5 @@
+2026-10-18T14:08:40.351  base: N => M  level 1: (b) PASS orient -1  (a) UNDECIDED  [137.5 s, images computed so far 32]
+2026-10-18T14:24:42.645  base: N => M  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [962.3 s, images computed so far 352]
+
+[4702] signal 15: Terminated: 15
+in expression starting at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b3_q1_cover.jl:409

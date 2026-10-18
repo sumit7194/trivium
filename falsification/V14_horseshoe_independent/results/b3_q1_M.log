@@ -1,0 +1,17 @@
+2026-10-18T14:08:47.149  base: M => N  level 1: (b) PASS orient 1  (a) UNDECIDED  [144.3 s, images computed so far 32]
+2026-10-18T14:20:06.908  base: M => N  level 2: (b) PASS orient 1  (a) UNDECIDED  [679.7 s, images computed so far 352]
+2026-10-18T16:56:44.030  base: M => N  level 3: (b) PASS orient 1  (a) UNDECIDED  [9397.2 s, images computed so far 4704]
+2026-10-18T16:57:33.516  base: M => N  refinement: CERTIFIED  leaves 4362  max depth 1  [49.0 s, images computed so far 4724]  B2 refinement: every leaf of (a) and (b) certified
+2026-10-18T16:58:21.042  W1: M => M  level 1: (b) UNDECIDED orient 0  (a) UNDECIDED  [46.0 s, images computed so far 4740]
+2026-10-18T16:59:56.373  W1: M => M  level 2: (b) CERTIFIED_FAILURE orient 0  (a) -  [95.3 s, images computed so far 4804]
+2026-10-18T16:59:56.374  W1: M => N  level 1: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.0 s, images computed so far 4804]
+2026-10-18T16:59:56.375  W1: M => N  level 2: (b) CERTIFIED_FAILURE orient 0  (a) -  [0.0 s, images computed so far 4804]
+2026-10-18T17:00:42.925  W3: M => M  level 1: (b) CERTIFIED_FAILURE orient 0  (a) -  [46.5 s, images computed so far 4820]
+2026-10-18T17:00:42.926  W3: M => N  level 1: (b) CERTIFIED_FAILURE orient 0  (a) -  [0.0 s, images computed so far 4820]
+2026-10-18T17:01:39.004  W2: M => M  level 1: (b) CERTIFIED_FAILURE orient 0  (a) -  [56.1 s, images computed so far 4836]
+2026-10-18T17:01:39.005  base: M => M  level 1: (b) PASS orient 1  (a) UNDECIDED  [0.0 s, images computed so far 4836]
+2026-10-18T17:01:39.011  base: M => M  level 2: (b) PASS orient 1  (a) UNDECIDED  [0.0 s, images computed so far 4836]
+2026-10-18T17:01:39.100  base: M => M  level 3: (b) PASS orient 1  (a) UNDECIDED  [0.1 s, images computed so far 4836]
+
+[4703] signal 15: Terminated: 15
+in expression starting at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b3_q1_cover.jl:409

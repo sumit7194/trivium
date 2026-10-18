@@ -1,0 +1,2 @@
+threads=4 serial 37.2 s, threaded 10.1 s; identical: true  ok-count 16
+nice -n 10 julia -t 4 --project=julia julia/b3t_threadtest.jl  82.04s user 0.57s system 169% cpu 48.771 total
