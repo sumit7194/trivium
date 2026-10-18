@@ -419,3 +419,20 @@ before computing.
 **Reading (registered §7 wording):** two independent manifold and confirmation codes (bridge: multiple shooting plus
 strict box; tabula: per-iterate polylines plus A12 refinement) find the same chaotic core inside D_B9, at C0 and at
 F5-R. This strengthens "numerical evidence of a horseshoe inside D". It is still not a proof.
+- **Refinement (tabula's crossing-identity check, 2026-10-18):** tabula iterated its 5 agreeing C0 crossings up to
+  ±12 steps under P and measured the closest approach to the bridge's crossings.
+  - **2→4:** P³ of tabula's crossing lands on the bridge's to 2.8e−6 (6-digit rounding). **The SAME heteroclinic
+    orbit**, found independently.
+  - **3→4 / 4→1** (a mirror pair): closest approach 4.2e−3. Inconclusive; possibly a neighbouring member of the
+    family.
+  - **1→1 / 3→3** (a mirror pair): tabula's crossings are at (2.847765, ±0.474744), the bridge's at
+    (2.725602, ±0.113769), closest approach 0.37. **DIFFERENT homoclinic orbits** of the same UPOs.
+- **Corrected wording (replaces "self-loops found by both" above):**
+  - At both F5-R and C0, two independent manifold and confirmation codes find a strongly connected core of in-D
+    hyperbolic UPOs with transversal connections: F5-R core {2, 3, 4, 6, 7, 8}; C0 core {1, 3, 4} (V13 indices).
+  - Several connections are confirmed at the SAME crossing: F5-R 2→2 and 4→4 (≤ 1e−6); C0 2→4 (up to P³).
+  - The others are confirmed at different intersection points of the same manifold pair, i.e. agreement on edge
+    existence.
+- **Standing caveat:** "inside D" here means the strong-field zone next to the naked ring singularity. The bridge's
+  SCC orbits come within ~0.1 of the ring point in (x, y), off the equator (strict-box recheck). Tabula's tier-1 UPOs
+  keep x ≥ 1.942, i.e. ≥ 0.02 from x_s in x.
