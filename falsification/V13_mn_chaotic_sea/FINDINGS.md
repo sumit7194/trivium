@@ -394,3 +394,28 @@ before computing.
 - Tabula's informational verdict is "tier-1 UPOs in D, no confirmed connection". Tabula attributes this to its own
   first-hit/bridging defect, to be read through its A13 (held until after the user's restart).
 - The C0 edge comparison happens after A13.
+
+## §7 tier-2 edge comparison with tabula's A13 (both sealed: tabula 771a5af / 197_a13.json c2343e24…40c9; bridge 085ac13 + c4daaa7)
+**F5-R** (tabula's message, mapped by tabula to V13 indices; UPOs matched to 1e−5):
+- Tabula's 7 tier-1 UPOs = V13 UPOs 8, 2, 4, 0, 3, 6, 7. V13 UPOs 1, 5 and 10 are not in tabula's set.
+- **9 edges agree:** 2→2, 2→4, 3→3, 4→2, 4→4, 4→8, 6→3, 6→6, 8→2. The 2→2 and 4→4 crossings match to ≤ 1e−6.
+- 13 are bridge-only (tabula's sensitivity limits, as registered).
+- 11 are tabula-only, on pairs the bridge didn't test, including 0→… and 8→8.
+- 2 are tabula Y where the bridge has N: 2→6 and 3→4. These are DIFFERENT crossings, a p_x-mirror pair at
+  (2.81133, ∓37.398) vs the bridge's (3.63097, ±5.3985). Not contradictions. Multiple-shooting checks of tabula's
+  points are possible later (new work, not started).
+- **SCCs share the core {2, 3, 4, 6, 7, 8}.**
+
+**C0** (mapped by the bridge, section points to ≤ 5e−7; results/v13_s7_C0_edges_bridge.txt):
+- Tabula 0, 1, 3, 5, 6 → V13 2, 4, 0, 3, 1. Tabula 2 is the p_x mirror of V13 UPO2, which the bridge's Newton grid
+  didn't return. Tabula 4 and 7 have no V13 match.
+- **5 edges agree:** 1→1 and 3→3 (self-loops), 2→4, 3→4, 4→1. 7 are tabula-only and 11 bridge-only, all on untested
+  pairs.
+- **There are no Y-vs-N contradictions on any common pair.**
+- **Shared SCC core {1, 3, 4}**, with the self-loops at 1 and 3 found by both.
+
+**Outer components** have no edges at either point, on both sides.
+
+**Reading (registered §7 wording):** two independent manifold and confirmation codes (bridge: multiple shooting plus
+strict box; tabula: per-iterate polylines plus A12 refinement) find the same chaotic core inside D_B9, at C0 and at
+F5-R. This strengthens "numerical evidence of a horseshoe inside D". It is still not a proof.
