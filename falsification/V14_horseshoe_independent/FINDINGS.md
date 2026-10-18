@@ -126,3 +126,8 @@
   TaylorModels' sibling routines (#207), as flagged.
 - **Next gate:** Q2 (HH, blind). Its decisions are committed before reading quantum's sealed HH JSONs (ca819cf).
   Not started (the user said no new work today).
+
+## Quantum HH-SECONDARY SEALED (received 2026-10-19; hashes only, nothing opened)
+- Commit quantum 5a21dde. Files hh2_N0N0, N0N3, N3N4, N4N5, N5N6, N6N0, N6N3, exact_checks and summary
+  (sha256 in the bridge transcript; e.g. hh2_N0N0 356cb5c2…dc5a, hh2_summary 68602610…dc5a…).
+  - The outcome file HH_SECONDARY_OUTCOME.md stays unopened until V14 Q2's decisions are committed.
