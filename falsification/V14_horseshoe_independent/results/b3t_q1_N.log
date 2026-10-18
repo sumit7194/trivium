@@ -1,0 +1,87 @@
+2026-10-18T17:29:27.089  base: N => M  level 1: (b) PASS orient -1  (a) UNDECIDED  [47.7 s, images computed so far 32]
+2026-10-18T17:34:53.370  base: N => M  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [326.3 s, images computed so far 352]
+2026-10-18T18:47:01.202  base: N => M  level 3: (b) UNDECIDED orient 0  (a) UNDECIDED  [4327.9 s, images computed so far 4704]
+2026-10-18T18:48:52.448  base: N => M  refinement: CERTIFIED  leaves 4371  max depth 1  [111.0 s, images computed so far 4742]  B2 refinement: every leaf of (a) and (b) certified
+2026-10-18T18:48:53.985  base: N => N  level 1: (b) PASS orient -1  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:53.993  base: N => N  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:54.165  base: N => N  level 3: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.2 s, images computed so far 4742]
+2026-10-18T18:48:54.285  base: N => N  refinement: CERTIFIED  leaves 4371  max depth 1  [0.1 s, images computed so far 4742]  B2 refinement: every leaf of (a) and (b) certified
+2026-10-18T18:48:54.296  W1: N => M  level 1: (b) CERTIFIED_FAILURE orient 0  (a) -  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:54.297  W1: N => N  level 1: (b) PASS orient -1  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:54.306  W1: N => N  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:54.476  W1: N => N  level 3: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.2 s, images computed so far 4742]
+2026-10-18T18:48:54.628  W1: N => N  refinement: CERTIFIED  leaves 4371  max depth 1  [0.2 s, images computed so far 4742]  B2 refinement: every leaf of (a) and (b) certified
+2026-10-18T18:48:54.630  W2: N => M  level 1: (b) CERTIFIED_FAILURE orient 0  (a) -  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:54.631  W2: N => N  level 1: (b) PASS orient -1  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:54.641  W2: N => N  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:54.817  W2: N => N  level 3: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.2 s, images computed so far 4742]
+2026-10-18T18:48:54.957  W2: N => N  refinement: CERTIFIED  leaves 4371  max depth 1  [0.1 s, images computed so far 4742]  B2 refinement: every leaf of (a) and (b) certified
+2026-10-18T18:48:54.958  W3: N => M  level 1: (b) PASS orient -1  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:54.967  W3: N => M  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:55.172  W3: N => M  level 3: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.2 s, images computed so far 4742]
+2026-10-18T18:48:55.318  W3: N => M  refinement: CERTIFIED  leaves 4371  max depth 1  [0.1 s, images computed so far 4742]  B2 refinement: every leaf of (a) and (b) certified
+2026-10-18T18:48:55.320  W3: N => N  level 1: (b) PASS orient -1  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:55.329  W3: N => N  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.0 s, images computed so far 4742]
+2026-10-18T18:48:55.525  W3: N => N  level 3: (b) UNDECIDED orient 0  (a) UNDECIDED  [0.2 s, images computed so far 4742]
+2026-10-18T18:48:55.692  W3: N => N  refinement: CERTIFIED  leaves 4371  max depth 1  [0.2 s, images computed so far 4742]  B2 refinement: every leaf of (a) and (b) certified
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 8.88658846054346
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 9.226075705984709
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 4.502941832045182
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 10.585490450658769
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 5.063405039832621
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 7.29857129042671
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 2.1552194899473136
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 8.202107802487118
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 7.127193680726442
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 2.191092579799213
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 8.753505239327044
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 2.440166365149032
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 8.58153358751956
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 5.029253334740562
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 2.465176162943576
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 7.618922461012419
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 5.276858378130151
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 8.413415042567154
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 10.770400342944223
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 7.175744322253845
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+wrote /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/../results/b3t_q1_N.json

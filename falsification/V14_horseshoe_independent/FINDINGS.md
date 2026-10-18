@@ -110,3 +110,19 @@
 - Both readings of the post-hoc B13 budget change are in HH_PRIMARY_OUTCOME.md (ca819cf).
 - **The bridge has NOT opened any of these.** V14 Q2's HH decisions must be committed first. That needs V14 to
   re-qualify on Rössler (B3, running).
+
+## B3 (threaded): Q1 Rössler re-qualification on the RIGOROUS pipeline — PASS (results/b3t_q1.json; julia/b3t_*.jl)
+- Pipeline: validated_integ3 (interval-validated steps, truncation bounded, midrad = false), orderQ 2, adaptive
+  bisection of failing pieces (depth ≤ 6, ≤ 2¹⁶ leaves). 2 processes × 4 threads; the thread-safety test gave
+  bitwise-identical output. Finished 2026-10-18 ~22:00.
+- **Gate PASS:**
+  - all 4 example coverings (M⟹M, M⟹N, N⟹M, N⟹N) are CERTIFIED: every leaf of (a) and (b), 4362–5335 leaves,
+    refinement depth ≤ 2;
+  - W1, W2 and W3's required rejections are REJECTED (certified (b) failures, both orientations);
+  - **W2 M′⟹N is CERTIFIED** (5531 leaves, depth 2).
+  - Also certified, as before: W1 N⟹N, W2 N⟹N, W3 N⟹M, W3 N⟹N.
+- **0 contradictions with B1.** The decisions now coincide with the pre-B1 (non-rigorous) Q1 decisions.
+- **Status:** V14 is qualified on Rössler with a rigorous pipeline. It is subject to the open upstream defects in
+  TaylorModels' sibling routines (#207), as flagged.
+- **Next gate:** Q2 (HH, blind). Its decisions are committed before reading quantum's sealed HH JSONs (ca819cf).
+  Not started (the user said no new work today).
