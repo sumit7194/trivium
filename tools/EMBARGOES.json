@@ -1,0 +1,22 @@
+{
+  "_doc": "Active blinding embargoes. tools/blind_check.py must pass on every outgoing cross-session message before it is sent. Lift an embargo only when its seal arrives, and record the commit.",
+  "embargoes": [
+    {
+      "id": "tabula-C0-structure",
+      "recipient": "tabula-geometrica",
+      "until": "tabula's informational C0 add-on sealed (commit + sha256 received)",
+      "opened": "2026-10-17",
+      "patterns": ["\\bC0\\b[^.\\n]{0,80}(edge|SCC|self-loop|UPO|confirm|\\d+\\s*/\\s*\\d+|cycle|graph|crossing)",
+                   "(edge|SCC|self-loop|UPO|confirm|cycle|graph|crossing)[^.\\n]{0,80}\\bC0\\b",
+                   "\\{1,\\s*3,\\s*4,\\s*6\\}", "16\\s*/\\s*1[68]", "31 raw", "self-loops? at (UPOs? )?1, 3"]
+    },
+    {
+      "id": "quantum-HH-for-V14",
+      "recipient": "*",
+      "direction": "inbound-and-outbound: the bridge must not receive or discuss HH covering outcomes before V14's HH decisions are committed",
+      "until": "V14 Q2 HH decisions committed",
+      "opened": "2026-10-16",
+      "patterns": ["(HH|H[ée]non)[^.\\n]{0,80}(certif|UNDECIDED|fail|pass|margin|covering result)"]
+    }
+  ]
+}
