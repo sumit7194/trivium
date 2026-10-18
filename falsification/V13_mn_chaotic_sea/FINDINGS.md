@@ -381,3 +381,10 @@ before computing.
     only.
   - The orbits are near the ring, in the strong-field zone, but with a clear margin. The SCC boxes clear the CTC
     region by > 1e−2 (C0).
+
+## Protocol deviation #2 (2026-10-18, logged at tabula's note)
+- The bridge's strict-box message to tabula included C0 edge counts and SCC membership while tabula's informational
+  C0 add-on was still unsealed. This is the same class as deviation #1.
+- **Mitigation:** tabula's C0 procedure was committed beforehand (structure stage 87ed331; A13 e7f38be).
+- **Bridge practice from now on:** every outgoing message to tabula is checked for C0 numbers before sending, until
+  tabula's C0 seal arrives.
