@@ -359,3 +359,25 @@ before computing.
     as registered, with this explanation attached.
   - **Instrument lesson:** a Kerr-null A2 threshold under-estimates the regular-orbit K scatter of a non-integrable
     χ ≠ Kerr system. Any future use of A2 needs the null taken from a non-Kerr regular sample, or a margin.
+
+## Strict-box D recheck of the A10 graph: ALL SURVIVE (labelled post hoc; results/v13_a10_densebox{,_hstar_*}.json, .md)
+- The test: every confirmed edge's connecting orbit and every in-D UPO, re-integrated densely and tested with g_φφ > 0
+  on the WHOLE ±0.025 box (a 21 × 21 grid plus local minimisation).
+  - Controls pass at both points: (3.6, 0) is in; (x_s + 0.015, 0) is out (g_φφ ≈ −4e8 / −4e12).
+- **Survivors: C0 16/16 confirmed edges; F5-R 35/35.** All 11 in-D UPOs at each point are strictly in D. The graph
+  is unchanged:
+  - C0: SCC {1, 3, 4, 6}, self-loops at 1, 3, 6;
+  - F5-R: SCC {2..8}, self-loops at 2–7.
+- **Margins** (bisection on the box half-width: by how much the box clears the CTC region):
+  - SCC members clear by > 1e−2 (C0) and ≥ 7.2e−4 (F5-R, 4→2).
+  - Marginal, and not in any SCC: F5-R UPO9 (5.1e−5) and its outgoing edges (7e−6 to 4e−5); C0 8→4 (3.2e−4).
+  - The worst box value always sits at a box corner already among B9's 9 samples, so the 9-point and strict tests
+    agree here.
+- **UPO9:** strictly in D by 5e−5, which is below tabula's stated mask accuracy (5e−4). So tabula's "leaves D" is
+  within its resolution, not a contradiction. UPO9 has no incoming edges and is in no SCC.
+- **Correction to the geometric caveat above:**
+  - The closest approach (min x = 1.9474 at C0, 1.9392 at F5-R) is OFF the equator, at y ≈ ±0.095.
+  - So the distance from the ring point (x_s, 0) is about 0.096, not ~0.017. The 0.017 figure was an x-difference
+    only.
+  - The orbits are near the ring, in the strong-field zone, but with a clear margin. The SCC boxes clear the CTC
+    region by > 1e−2 (C0).

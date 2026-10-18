@@ -6,8 +6,9 @@
   and it rejected the deliberately planted fake crossings.
 - **Main test point (C0):** 16 of 18 crossings confirmed. Three periodic orbits loop back onto themselves, and four
   orbits are linked in a closed cycle. All the connecting orbits stay inside the safe region and outside the time-loop zone.
-  **Correction (later that morning):** "away from the ring singularity" was wrong. These orbits pass within about
-  0.02 (in the x coordinate) of the ring, on its non-time-loop side. They are inside the safe region as defined, but
+  **Correction (later that morning):** "away from the ring singularity" was wrong. These orbits pass close to the ring
+  (closest about 0.1 from it in the (x, y) coordinates, off the equator), on its non-time-loop side; a strict re-check
+  later confirmed every one stays inside the safe region. They are inside the safe region as defined, but
   in the strong-field zone right next to the ring.
 - **Second test point (F5-R):** 35 of 42 confirmed. Six orbits loop back onto themselves, and seven are linked in a
   cycle.
