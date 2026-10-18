@@ -388,3 +388,9 @@ before computing.
 - **Mitigation:** tabula's C0 procedure was committed beforehand (structure stage 87ed331; A13 e7f38be).
 - **Bridge practice from now on:** every outgoing message to tabula is checked for C0 numbers before sending, until
   tabula's C0 seal arrives.
+
+## Tabula's C0 add-on is SEALED (2026-10-18): SpaceTime 2667d63, 197_analysis_C0.json sha256 1eb357f8…d1c4
+- Both sides' C0 results are now sealed, so the bridge's C0 embargo is lifted (tools/EMBARGOES.json).
+- Tabula's informational verdict is "tier-1 UPOs in D, no confirmed connection". Tabula attributes this to its own
+  first-hit/bridging defect, to be read through its A13 (held until after the user's restart).
+- The C0 edge comparison happens after A13.

@@ -21,3 +21,16 @@
   - V14 Q1: PASS. B1 rigour-fix rerun is running.
 - **Still running:** V14 B1 (bridge), quantum HH reruns (B13 checkpointed), tabula K20 chain. Blinding is on until
   both sides seal.
+
+## 2026-10-18 ~14:30: restart checkpoint (the user is turning off Lockdown Mode)
+- **Fleet:** every session reported "done and saved".
+  - Quantum's hh1b2 resumes from its checkpoints with `HS_BIN=qsim/capd/horseshoe/hs_cover_ck python qsim/capd/horseshoe/hs_run.py hh1b2` (see quantum HANDOFF.md).
+  - DeepStrain's phone queue is independent of the Mac. Keep the USB cable plugged in.
+- **Bridge, after the restart:**
+  1. V14 B2 was stopped. It was too slow at orderQ 3 (level 3: ~10 s per image), with no B2 verdict. Rethink before
+     any rerun: register a lighter plan (e.g. adaptive bisection at orderQ 2 only on the failing boxes), or a
+     different validated integrator.
+  2. The C0 edge comparison with tabula, after tabula's A13.
+  3. Watch for replies: Galajinsky, Dubeibe et al., Manko, CAPD #29–#32.
+- **Blinding guard:** live (TheBridge/.claude/settings.json). EMBARGOES now holds only quantum-HH-for-V14.
+- **Rules:** minimise agent spawns; repeated mistake → mechanism.

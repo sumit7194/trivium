@@ -2,6 +2,18 @@
   "_doc": "Active blinding embargoes. tools/blind_check.py must pass on every outgoing cross-session message before it is sent. Lift an embargo only when its seal arrives, and record the commit.",
   "embargoes": [
     {
+      "id": "quantum-HH-for-V14",
+      "recipient": "*",
+      "direction": "inbound-and-outbound: the bridge must not receive or discuss HH covering outcomes before V14's HH decisions are committed",
+      "until": "V14 Q2 HH decisions committed",
+      "opened": "2026-10-16",
+      "patterns": [
+        "(HH|H[\u00e9e]non)[^.\\n]{0,80}(certif|UNDECIDED|fail|pass|margin|covering result)"
+      ]
+    }
+  ],
+  "lifted": [
+    {
       "id": "tabula-C0-structure",
       "recipient": "*",
       "until": "tabula's informational C0 add-on sealed (commit + sha256 received)",
@@ -14,17 +26,8 @@
         "31 raw",
         "self-loops? at (UPOs? )?1, 3"
       ],
-      "note": "recipient \"*\" (2026-10-18): name-prefix matching missed uds:/tmp/... socket addresses (caught by tabula); applies to every recipient until tabula C0 seal"
-    },
-    {
-      "id": "quantum-HH-for-V14",
-      "recipient": "*",
-      "direction": "inbound-and-outbound: the bridge must not receive or discuss HH covering outcomes before V14's HH decisions are committed",
-      "until": "V14 Q2 HH decisions committed",
-      "opened": "2026-10-16",
-      "patterns": [
-        "(HH|H[\u00e9e]non)[^.\\n]{0,80}(certif|UNDECIDED|fail|pass|margin|covering result)"
-      ]
+      "note": "recipient \"*\" (2026-10-18): name-prefix matching missed uds:/tmp/... socket addresses (caught by tabula); applies to every recipient until tabula C0 seal",
+      "lifted_at": "2026-10-18, tabula C0 seal 2667d63 (197_analysis_C0.json sha256 1eb357f8\u2026d1c4)"
     }
   ]
 }
