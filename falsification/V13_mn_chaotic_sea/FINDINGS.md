@@ -338,3 +338,24 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
   - A labelled post-hoc STRICT box recheck (21 × 21 grid plus local minimisation over the whole box) of every
     confirmed edge's connecting orbit and every in-D UPO is running.
   - The SCC/horseshoe-evidence statement stands or falls on it.
+
+## p1 orbit 55: labelled post-hoc diagnostic — LIKELY REGULAR (a false positive of the AND rule)
+Files: results/v13_p1_o55_diag.{md,json}, code/v13_p1_o55_diag.py. The method and decision rule were written down
+before computing.
+- **Lyapunov (exact variational, rtol 1e−12):** λ = 3.93e−4 at 20000 returns and 4.92e−5 at 200000 returns. It
+  decays like ln t / t (slope −0.85) and matches the regular control orbit 14 (5.09e−5).
+  - Chaotic control (C0 inner orbit 20): steady λ = 0.755 per return. Its run stopped at 13546 returns near the
+    ring, with drift 4.7e−8, which is above the gate. It is a control only.
+- **Section:** one smooth closed curve (correlation dimension 1.002). The NAFF frequency spread across ten windows is
+  1.9e−6, with ν = 0.498490, close to 1/2.
+- **A2:** the other 59 READ orbits have K mean −0.0131, sd 0.0168, max −0.0039. The p1 Kerr-null K spread (sd 0.0020)
+  is 8× narrower than the regular-orbit scatter, so the −0.0025 threshold cannot separate regular from chaotic at this
+  χ.
+  - Near ν ≈ 1/2, the orbit's windowed K swings from −0.041 to +0.028. The registered AND rule fires on 46 of 100
+    windows of this one regular orbit, and on 0 of 100 for the control.
+- **Integrator:** reproducible (rtol 1e−11 reproduces the sealed A1/A2 exactly).
+- **Reading (post hoc, labelled):**
+  - p1 has no evidence of chaos; tabula's 0/200 is right there. The registered 1/60 and the §7 p1 region FAIL stand
+    as registered, with this explanation attached.
+  - **Instrument lesson:** a Kerr-null A2 threshold under-estimates the regular-orbit K scatter of a non-integrable
+    χ ≠ Kerr system. Any future use of A2 needs the null taken from a non-Kerr regular sample, or a margin.
