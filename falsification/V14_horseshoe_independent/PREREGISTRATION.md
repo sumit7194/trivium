@@ -141,3 +141,19 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
     give bitwise-identical enclosures (all 16 ok), at 3.7× speed.
   - The serial B3 run (3.5 h, no verdict) was stopped; its logs are kept.
   - Output: results/b3t_q1_{N,M}.json, 2 processes × 4 threads.
+
+## Q2 launch note (2026-10-18 ~22:50, before any Q2 decision exists; nothing of quantum's HH results has been read)
+- Q2 runs on the B3t pipeline qualified by Q1 (27a89b7). Code: julia/q2_hh_poincare.jl and julia/q2_hh_cover.jl, a
+  mechanical adaptation of b3t.
+- Inputs: quantum's hh1_*.spec files only (t-sets, AZ M3 special sides, covers). No JSON, outcome or adaptive-pass
+  spec (hh1a/hh1b) was read.
+- System: H = (px² + py²)/2 + (x² + y²)/2 + x²y − y³/3; Θ1 = {x = 0, ẋ > 0, H = 1/6}; P1; coordinates (y, p_y).
+  - px is lifted from the energy on the positive branch, with the radicand certified > 0 (else the piece fails
+    closed).
+  - S9: H on every image enclosure must contain 1/6.
+- t-sets are parallelograms: each source piece's axis-aligned hull is integrated (conservative).
+- AZ special M3 sides: as in the spec semantics. For special targets no certified (a)-violation is claimed.
+- Smoke test: 3 points against RK4 references, all contained. Quick test at level 1: runs, coarse pieces undecided
+  (expected).
+- Ladder and refinement as in Q1/B2. Gate as registered: the 7 (5.1) coverings CERTIFIED; W-AZ1 and W-AZ2 REJECTED
+  under the Q1 merge rule. Runs as 2 processes × 4 threads.
