@@ -265,3 +265,24 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
   2. The comparison with tabula's independent A12 confirmation is pending; both sides must seal first, and blinding
      is on.
   3. Commit drift: C0 was run at f585656 and F5-R at d417089 (code unchanged between them for these files).
+
+## §7 exchange with tabula: seals and the bridge's side
+- **Tabula's K20 official counted analysis, SEALED at SpaceTime 41d57be:**
+  - 197_analysis_p1.json 5623aa8b…d553;
+  - 197_analysis_p2.json 928f0ce5…be0f;
+  - 197_analysis_F5R.json e6a21746…d7e5;
+  - post-hoc, labelled: 197_c3_supplement.json e3b3f895…54e2 (586951e).
+  - Tabula's informational C0 add-on is still running. Bridge C0 edge data stays withheld until it is sealed.
+- **Bridge seals:**
+  - counted screens c365279 (hashes above);
+  - A9 v13_a9_confirm_C0 220e224f…0358 and _F5R ed54a07c…71b7 (267035d);
+  - A10 controls 836f4566…e7ef, C0 a4602110…7710 and F5R 3e098030…e589 (085ac13).
+- **Bridge side of the counted-screen comparison** (results/v13_s7_exchange_bridge.json, derived read-only from the
+  sealed JSONs). Each CHAOTIC count has a Clopper–Pearson 95% CI. Grid = 200 × 200 over the bound-in-D x-range ×
+  ±√(max p_x²):
+
+  | point | CHAOTIC | 95% CI | return-time median (all READ) | chaotic grid cells / all READ cells |
+  |---|---|---|---|---|
+  | p1 | 1/60 | [0.0004, 0.089] | 319.5 | 331 / 12855 |
+  | p2 | 0/60 | [0, 0.060] | 753.6 | 0 / 13095 |
+  | F5-R | 0/60 | [0, 0.060] | 14005.6 | 0 / 11898 |
