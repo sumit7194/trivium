@@ -320,3 +320,21 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
 - For any proof built on these h-sets: the claim is chaos in a region that stays a finite (small) distance from the
   singular ring and outside the CTC zone. Whether the h-sets keep a safe margin under interval enclosures is for
   quantum's design (S9) to verify.
+
+## §7 tier-2 (edges) exchange at F5-R, with tabula sealed at 41d57be
+- **UPOs:** 8 of the bridge's 11 in-D hyperbolic UPOs match tabula's to 1e−5 (0, 2, 3, 4, 6, 7, 8, 10).
+  - Tabula's 20 × 20 Newton grid didn't find UPO1 or UPO5 (search coverage).
+  - **UPO9:** tabula finds the orbit, but its dilated-mask D test says it LEAVES D_B9, where the bridge's 9-sample
+    test says it stays in. This is a D-test disagreement. UPO9 is not in the bridge SCC {2..8}.
+- **Edges:** tabula confirms 8→7 at both ε, which the bridge's polyline pass never recorded. At ε 1e−6 only, it
+  confirms 2→4, 4→2 and 8→0. Nothing else.
+  - **Tabula diagnoses its own low count, post seal, as a defect in its method:** its polylines bridge successive
+    iterates, and only the first hit per pair is examined, so spurious first hits mask real crossings.
+  - So **on existence the two sides agree** (tier-2 structure at F5-R in the inner component; none at p1 or p2).
+    Tabula's "no confirmed cycle" is a sensitivity limit, not disagreement.
+  - Tabula proposes A13 (per-iterate polylines; confirm every hit): an independent test of the bridge SCC.
+- **The bridge's D test is B9 as A1 specifies:** g_φφ > 0 at the point plus the ±0.025 box's corners and edge
+  midpoints (9 samples). That is NOT a full box test, so a thin CTC sliver near the ring can slip between samples.
+  - A labelled post-hoc STRICT box recheck (21 × 21 grid plus local minimisation over the whole box) of every
+    confirmed edge's connecting orbit and every in-D UPO is running.
+  - The SCC/horseshoe-evidence statement stands or falls on it.
