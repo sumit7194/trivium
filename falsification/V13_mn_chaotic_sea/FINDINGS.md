@@ -286,3 +286,37 @@ a9264f320d6e84c1c465ddae29211058b854b4231d07d2f668a881dc8e949939  falsification/
   | p1 | 1/60 | [0.0004, 0.089] | 319.5 | 331 / 12855 |
   | p2 | 0/60 | [0, 0.060] | 753.6 | 0 / 13095 |
   | F5-R | 0/60 | [0, 0.060] | 14005.6 | 0 / 11898 |
+
+## §7 counted-screen comparison: OUTCOME
+- Tabula (sealed 41d57be): 200 orbits per level, all READ, Clopper–Pearson 95%. The grids are identical to the
+  bridge's (x edges to < 1e−11, the same p_x half-widths).
+
+  | point | bridge CHAOTIC | tabula CHAOTIC | fractions (CI overlap) | return-time medians (bridge / tabula) | chaotic-region Jaccard |
+  |---|---|---|---|---|---|
+  | p1 | 1/60 [0.0004, 0.089] | 0/200 [0, 0.018] | AGREE | 319.5 / 315.0, AGREE | **FAIL** (331 cells vs 0) |
+  | p2 | 0/60 | 0/200 | AGREE | 753.6 / 752.5, AGREE | AGREE (both empty) |
+  | F5-R | 0/60 | 0/200 | AGREE | 14005.6 / 13676.1, AGREE | AGREE (both empty) |
+
+- **Registered result: the p1 region criterion FAILS. Everything else agrees.**
+- **Tabula's post-seal diagnosis (from its sealed data):** its orbit x0 = 5.2558 covers 97% of the bridge's orbit-55
+  cells and reads REGULAR with margin (λ₂ 5.5e−5 vs p99 9.6e−5; D₂ ≈ 1.0, curve-like). The bridge's CHAOTIC call
+  rests on A2 = +0.0275 against a NEGATIVE Kerr-null threshold (−0.0025), already flagged as degenerate in p1 run 1,
+  and on A1 = −6.41 vs −7.21.
+  - **The bridge's reading, post hoc and labelled:** orbit 55 is likely a false positive of the AND rule at this χ,
+    with A2 inside regular-orbit scatter.
+  - A labelled diagnostic (a long-time variational Lyapunov estimate for orbit 55, and A2 against the regular-orbit
+    K scatter) is to be run. The registered verdict is not changed.
+
+## IMPORTANT geometric caveat on the A10 "horseshoe inside D" evidence (bridge, 2026-10-18)
+- The confirmed SCC UPOs at C0 and F5-R lie in the INNER component (section x ≈ 2.0–4.1), not in the counted
+  shared-level component (F5-R [5.45, 31.14]).
+- Their connecting orbits come within ~0.02 in x of the singular ring:
+  - C0: min x − 1 = 0.947, i.e. x 1.947 vs x_s 1.9298; min R 1.674 vs R_s 1.6505;
+  - F5-R: min x 1.939 vs x_s 1.9219; min R 1.664 vs R_s 1.6413.
+  - The UPOs themselves reach x ≈ 2.01 on the section, 0.087 from the ring.
+- They satisfy D_B9's registered tests (the g_φφ box test excludes the CTC side). But **"inside D" here means in the
+  strong-field zone right next to the ring singularity, on its non-CTC side, not far from it.** Earlier wording in
+  the bridge's morning summary ("away from the ring singularity") overstated this, and is corrected there.
+- For any proof built on these h-sets: the claim is chaos in a region that stays a finite (small) distance from the
+  singular ring and outside the CTC zone. Whether the h-sets keep a safe margin under interval enclosures is for
+  quantum's design (S9) to verify.

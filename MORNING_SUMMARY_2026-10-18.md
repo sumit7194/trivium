@@ -5,8 +5,10 @@
   them all at once). It passed both built-in sanity checks: it confirmed all 54 known chaotic loops in Hénon–Heiles,
   and it rejected the deliberately planted fake crossings.
 - **Main test point (C0):** 16 of 18 crossings confirmed. Three periodic orbits loop back onto themselves, and four
-  orbits are linked in a closed cycle. All the connecting orbits stay inside the safe region, away from the ring
-  singularity and the time-loop zone.
+  orbits are linked in a closed cycle. All the connecting orbits stay inside the safe region and outside the time-loop zone.
+  **Correction (later that morning):** "away from the ring singularity" was wrong. These orbits pass within about
+  0.02 (in the x coordinate) of the ring, on its non-time-loop side. They are inside the safe region as defined, but
+  in the strong-field zone right next to the ring.
 - **Second test point (F5-R):** 35 of 42 confirmed. Six orbits loop back onto themselves, and seven are linked in a
   cycle.
 - **What it means:** strong numerical evidence that the Manko–Novikov chaos lives in the safe region too, which is
