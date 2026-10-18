@@ -9,7 +9,8 @@ text = sys.stdin.read() if path == '-' else open(path).read()
 E = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'EMBARGOES.json')))['embargoes']
 hits = []
 for e in E:
-    if e['recipient'] not in ('*', rec): continue
+    r = e['recipient']
+    if r != '*' and not rec.strip().lower().startswith(r.lower()): continue   # also matches 'name [ref]' and uds addresses with the name
     for p in e['patterns']:
         for m in re.finditer(p, text, re.I):
             hits.append((e['id'], m.group(0)[:120]))
