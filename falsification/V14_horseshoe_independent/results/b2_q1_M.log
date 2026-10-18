@@ -1,2 +1,95 @@
 2026-10-18T05:02:40.353  base: M => N  level 1: (b) PASS orient 1  (a) UNDECIDED  [496.4 s, images computed so far 32]
 2026-10-18T05:44:16.328  base: M => N  level 2: (b) PASS orient 1  (a) UNDECIDED  [2496.0 s, images computed so far 352]
+
+[12900] signal 15: Terminated: 15
+in expression starting at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_q1_cover.jl:409
+__psynch_cvwait at /usr/lib/system/libsystem_kernel.dylib (unknown line)
+unknown function (ip: 0x0) at (unknown file)
+_mul_output_major_unchecked! at /Users/sumit/.julia/packages/TaylorSeries/tB96E/src/arithmetic/multiplication.jl:684 [inlined]
+mul! at /Users/sumit/.julia/packages/TaylorSeries/tB96E/src/arithmetic/multiplication.jl:763 [inlined]
+_hp_muladd! at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/arithmetic.jl:805 [inlined]
+_pair_poly! at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/cauchy_joint.jl:47 [inlined]
+_cauchy_joint_pairs at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/cauchy_joint.jl:196
+_cauchy_joint at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/cauchy_joint.jl:314 [inlined]
+* at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/cauchy_joint.jl:322
+rossler! at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_poincare.jl:21
+picard_lindelof! at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:31
+_picard_pass! at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:71
+_validation3! at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:440
+_validated_integ3! at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:263
+#32 at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:192 [inlined]
+_with_arith_settings at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:146
+#validated_integ3#30 at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:188
+unknown function (ip: 0x154c70153) at (unknown file)
+validated_integ3 at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:171
+unknown function (ip: 0x1548ac34f) at (unknown file)
+#validated_integ3#29 at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:163
+unknown function (ip: 0x122c2430f) at (unknown file)
+validated_integ3 at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:152
+unknown function (ip: 0x122c1c26f) at (unknown file)
+validated_integ3 at /Users/sumit/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:152 [inlined]
+#b2_integ#3 at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_rigor.jl:12 [inlined]
+b2_integ at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_rigor.jl:12 [inlined]
+#poincare2#10 at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_poincare.jl:124
+poincare2 at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_poincare.jl:112 [inlined]
+p2_box at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_poincare.jl:193
+#image##0 at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_q1_cover.jl:102
+get! at ./dict.jl:460
+image at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_q1_cover.jl:99 [inlined]
+#check_a##0 at ./none (unknown line) [inlined]
+iterate at ./generator.jl:48 [inlined]
+collect_to! at ./array.jl:886 [inlined]
+collect_to_with_first! at ./array.jl:864 [inlined]
+collect at ./array.jl:838
+check_a at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_q1_cover.jl:151
+macro expansion at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_q1_cover.jl:322 [inlined]
+macro expansion at ./timing.jl:463 [inlined]
+run_cover_b2 at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_q1_cover.jl:320
+main_b2 at /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/b2_q1_cover.jl:389
+unknown function (ip: 0x12294665f) at (unknown file)
+jl_apply at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/julia.h:2319 [inlined]
+do_call at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/interpreter.c:123
+eval_stmt_value at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/interpreter.c:194 [inlined]
+eval_body at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/interpreter.c:675
+jl_interpret_toplevel_thunk at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/interpreter.c:884
+jl_toplevel_eval_flex at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/toplevel.c:742
+jl_eval_toplevel_stmts at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/toplevel.c:585
+jl_toplevel_eval_flex at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/toplevel.c:683
+ijl_toplevel_eval at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/toplevel.c:754 [inlined]
+ijl_toplevel_eval_in at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/toplevel.c:799
+eval at ./boot.jl:489
+include_string at ./loading.jl:3045
+_include at ./loading.jl:3105
+include at ./Base.jl:309
+exec_options at ./client.jl:344
+_start at ./client.jl:577
+jfptr__start_44882.1 at /Users/sumit/.julia/juliaup/julia-1.13.2+0.aarch64.apple.darwin14/Julia-1.13.app/Contents/Resources/julia/lib/julia/sys.dylib (unknown line)
+jl_apply at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/julia.h:2319 [inlined]
+true_main at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/jlapi.c:985
+jl_repl_entrypoint at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/builder-honeycrisp-HL2F7YQ3XH.1/019ebd63-635e-4155-b60a-9d2815900786/trusted/build/builder-honeycrisp-HL2F7YQ3XH-1/julialang/julia-ci/src/jlapi.c:1152
+unknown function (ip: 0x0) at (unknown file)
+Allocations: 46425537528 (Pool: 46425536665; Big: 863); GC: 54449
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 1.9973353453831117
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 5.396541413918808
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 4.547128803160724
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 1.7086240845289022
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 1.5987142244751846
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 1.48183996570454
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 12.086765654045141
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 3.062591830383909
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
