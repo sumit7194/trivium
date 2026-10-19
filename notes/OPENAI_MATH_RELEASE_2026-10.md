@@ -22,3 +22,22 @@ and apply our own rigour (independent checks) before relying on anything.**
 ## Not found
 Nothing on Morales–Ramis/Ziglin integrability, geodesics in exotic spacetimes, Killing tensors, Ernst-potential
 solutions, or interval-arithmetic ODE proofs.
+
+## Follow-up 2026-10-19: a closer look at item 146's Lean library
+- The comparator file (ComparatorChallenges/StandardMapEntropy.lean) is a short statement with `sorry`. It defines
+  metric entropy from scratch for the standard map on the 2-torus: finite partitions, block entropy, sup over
+  partitions. The proof lives in lean/OAI/Dynamics/StandardMap/ (284 files). Toolchain Lean v4.34.1, vs ZiglinCert's
+  v4.35.0-rc3.
+- Its sub-folders: Lyapunov (Definitions, PlaneLyapunov, Subadditive, HyperbolicSet, …), Entropy, Bernoulli, Coding,
+  Holonomy, ConeGrowth. Most of it is tailored to the standard map's torus geometry.
+- **Fit for our chaos proof: LOW.** A covering-relation horseshoe needs:
+  - (i) Zgliczyński–Gidea style topological theorems (covering relations ⇒ orbits / semiconjugacy to a shift,
+    degree-based);
+  - (ii) TOPOLOGICAL entropy ≥ log λ.
+  The OpenAI library provides MEASURE-theoretic entropy for one specific torus map, and has no covering-relation
+  theory.
+  - For (ii), Mathlib's own topological-entropy development is the better starting point (to be checked when we get
+    there).
+  - Their plane-map Lyapunov definitions might be borrowable, but we don't need Lyapunov exponents for a horseshoe
+    statement.
+- Items 264, 260 and 282: no change (context; 282 is held for cuspis).
