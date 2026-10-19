@@ -140,4 +140,10 @@
   - UNDECIDED at the registered depth 6 (q2_hh_B.json);
   - **CERTIFIED after the disclosed post-hoc escalation Q2-R1** (q2_hh_D.json): 27053 leaves, max depth 8, i.e. 2
     levels beyond the registered 6, well within the escalation cap of 12.
-- **M1⟹M2:** pending (groups A and E).
+- **M1⟹M2: UNDECIDED at the registered settings** (q2_hh_E.json, 2026-10-19 18:51; the parallel-refinement rerun):
+  - (b) certified, orientation −1, at level 3.
+  - (a): 2977 of 4096 level-3 boxes fail. Refinement hit the leaf cap 2¹⁶ at depth 6, with 34487 pieces still queued.
+  - No certified violation of (a).
+  - So the limit hit is the leaf cap (the amount of work), not the depth.
+  - Group A (serial, same computation) is still running; it is kept as an identity check of the parallel refinement.
+  - A post-hoc diagnosis (q2_m1m2_diag.jl) is running. Any rerun will be pre-registered first, as Q2-R1 was.
