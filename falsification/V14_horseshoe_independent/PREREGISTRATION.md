@@ -182,3 +182,31 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
   - otherwise UNDECIDED at depth 12 / cap. Then report "limit of this method", with the leaf.
 - **Reporting:** a CERTIFIED here is reported as "certified after a disclosed post-hoc depth escalation", alongside
   the registered depth-6 UNDECIDED.
+
+## Amendment Q2-R2 (2026-10-19 ~19:45, after M1⟹M2 came out UNDECIDED at the registered settings, before any rerun)
+- **Registered result kept:** M1⟹M2 is UNDECIDED at depth 6 / leaf cap 2¹⁶ (q2_hh_E.json). (b) is certified
+  (orientation −1). For (a), 2977 of 4096 level-3 boxes fail; the leaf cap was hit with 34487 pieces queued; no
+  certified violation.
+- **Diagnosis (labelled post hoc; q2_m1m2_diag.jl, q2_m1m2_probe.jl):**
+  - Every level-3 rigorous image is computed (0 integration failures). The failures are all "ambiguous": the
+    enclosures are wide, median U width 6.0 and S width 13.1 in M2's frame. Each box's image is a thin, tilted,
+    stretched curve, and its axis-aligned hull is fat.
+  - A NON-rigorous float probe (17 × 17 RK4 grid points per failing box, 2977 boxes) finds no point inside
+    F = {|u| ≤ 1, |s| ≥ 1}. The minimum distance-type margin max(1 − |s|, |u| − 1) is 0.160, with median 0.946.
+  - Disclosure: a first version of the probe used a wrong margin (|u| − 1 if |u| > 1, else 1 − |s|), which
+    understated margins near |u| = 1; it was corrected before this amendment, and both files record the fix.
+  - Estimate, assuming enclosures shrink linearly: boxes need 3–7 bisections below level 3 (581, 1329, 767, 273
+    and 27 boxes at 3, 4, 5, 6 and 7). The pessimistic leaf count is 2.7 × 10⁶; the real count should be far lower,
+    because children with larger margins pass early.
+- **Escalation, M1⟹M2 only (group "F"):** MAXDEPTH 10 (4 levels beyond the registered 6; 3 beyond the estimated
+  worst case), leaf cap 2²⁰. Same pipeline, ladder, checks and parallel refinement as Q2-R1; 5 threads. Group A keeps
+  running as the serial identity check of the registered run. (The stop message's text still reads "leaf cap 2^16
+  reached"; that is fixed wording, and the cap in force is the env value recorded in the JSON.)
+- **Stop rule:**
+  - CERTIFIED if every leaf passes;
+  - REJECTED if a certified violation appears;
+  - otherwise UNDECIDED at depth 10 / cap 2²⁰, reported as the limit of this enclosure method.
+  - A possible next step is a method change (evaluating u and s on the Taylor-model polynomial instead of the
+    axis-aligned hull). That would need its own amendment and validation; it is not part of Q2-R2.
+- **Reporting:** a CERTIFIED here is reported as "certified after a disclosed post-hoc depth/cap escalation (Q2-R2)",
+  alongside the registered UNDECIDED.

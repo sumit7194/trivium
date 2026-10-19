@@ -389,6 +389,7 @@ const GROUPS = Dict(
     "C" => [("AZ", "M2", "M3")],
     "E" => [("AZ", "M1", "M2")],       # parallel-refinement rerun of the registered M1=>M2 (group A is still running it serially)
     "D" => [("AZ", "M3", "M4")],       # Q2-R1 escalation (MAXDEPTH/LEAF_CAP from env), labelled post hoc
+    "F" => [("AZ", "M1", "M2")],       # Q2-R2 escalation (MAXDEPTH 10, LEAF_CAP 2^20 from env), labelled post hoc
     "B" => [("AZ", "M3", "M4"), ("AZ", "M4", "M0"), ("AZ", "M4", "M1"), ("W1", "M2", "M3"), ("W2", "M2", "M3")])
 
 function main_q2(group)

@@ -1,0 +1,6 @@
+2026-10-19T19:03:33.909  rigorous level-3 images: 4096 in 596.1 s
+non-pass boxes: 2977  (fail_image 0, fail_ambiguous 2977, violation 0)
+image-failure reasons: Dict{String, Int64}()
+float margin over non-pass boxes: min 4.749846475293751e-5  q10 0.07722420595505208  median 0.9337094947311398  max 2.291443353668155  (negative = a float point inside F)
+ambiguous boxes: median U width 6.018119288277714, median S width 13.061676203579982
+wrote q2_m1m2_diag.json

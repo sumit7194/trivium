@@ -2,7 +2,7 @@
 # 2977 of 4096 level-3 support boxes failing? For every level-3 box (64 x 64, as in the registered ladder):
 #   - the rigorous image (same pipeline: p1_box via image_compute) -> ok / reason; if ok, where its (U, S) sits;
 #   - a NON-rigorous float probe (RK4 first return on a 5 x 5 grid of points in the box) -> the true margin
-#     m = min over points of (|u| - 1 if |u| > 1 else 1 - |s|); m > 0 means the true image misses F there.
+#     m = min over points of max(1 - |s|, |u| - 1); m > 0 means the float point is outside F.
 # Output: results/q2_m1m2_diag.json and a summary on stdout.
 include(joinpath(@__DIR__, "q2_hh_cover.jl"))
 
@@ -52,7 +52,7 @@ function main_diag()
             y1, p1 = p1_float(a, b)
             isnan(y1) && (nnan += 1; continue)
             uu = Ni[1, 1] * (y1 - Nc[1]) + Ni[1, 2] * (p1 - Nc[2]); ss = Ni[2, 1] * (y1 - Nc[1]) + Ni[2, 2] * (p1 - Nc[2])
-            m = min(m, abs(uu) > 1 ? abs(uu) - 1 : 1 - abs(ss))
+            m = min(m, max(1 - abs(ss), abs(uu) - 1))   # distance-type margin to F = {|u|<=1, |s|>=1} (fixed 2026-10-19: was |u|-1 if |u|>1 else 1-|s|, which understated margins)
         end
         d["float_margin"] = m; d["float_nan_points"] = nnan
         push!(rows, d)
