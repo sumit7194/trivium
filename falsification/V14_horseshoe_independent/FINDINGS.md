@@ -131,3 +131,13 @@
 - Commit quantum 5a21dde. Files hh2_N0N0, N0N3, N3N4, N4N5, N5N6, N6N0, N6N3, exact_checks and summary
   (sha256 in the bridge transcript; e.g. hh2_N0N0 356cb5c2…dc5a, hh2_summary 68602610…dc5a…).
   - The outcome file HH_SECONDARY_OUTCOME.md stays unopened until V14 Q2's decisions are committed.
+
+## Q2 (HH, blind) progress, 2026-10-19 13:10
+- **CERTIFIED at the registered depth 6:** M0⟹M0 (6074 leaves), M0⟹M1 (15144), M2⟹M3 (7261; AZ special M3 sides),
+  M4⟹M0 (4626), M4⟹M1 (5283).
+- **W-AZ1 and W-AZ2: REJECTED** (certified (b) failures on M2′⟹M3).
+- **M3⟹M4:**
+  - UNDECIDED at the registered depth 6 (q2_hh_B.json);
+  - **CERTIFIED after the disclosed post-hoc escalation Q2-R1** (q2_hh_D.json): 27053 leaves, max depth 8, i.e. 2
+    levels beyond the registered 6, well within the escalation cap of 12.
+- **M1⟹M2:** pending (groups A and E).
