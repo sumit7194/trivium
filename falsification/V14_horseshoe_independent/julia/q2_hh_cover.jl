@@ -387,6 +387,7 @@ hset_json(H::HSet) = Dict("centre" => string.(H.c), "A_columns_u_s" => [string.(
 const GROUPS = Dict(
     "A" => [("AZ", "M0", "M0"), ("AZ", "M0", "M1"), ("AZ", "M1", "M2"), ("W1", "M1", "M2"), ("W2", "M1", "M2"), ("AZ", "M2", "M3")],
     "C" => [("AZ", "M2", "M3")],
+    "E" => [("AZ", "M1", "M2")],       # parallel-refinement rerun of the registered M1=>M2 (group A is still running it serially)
     "D" => [("AZ", "M3", "M4")],       # Q2-R1 escalation (MAXDEPTH/LEAF_CAP from env), labelled post hoc
     "B" => [("AZ", "M3", "M4"), ("AZ", "M4", "M0"), ("AZ", "M4", "M1"), ("W1", "M2", "M3"), ("W2", "M2", "M3")])
 
