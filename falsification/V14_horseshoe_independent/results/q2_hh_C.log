@@ -1,0 +1,11 @@
+2026-10-19T10:32:29.012  AZ: M2 => M3  level 1: (b) UNDECIDED orient 0  (a) UNDECIDED  [12.3 s, images computed so far 32]
+2026-10-19T10:33:02.329  AZ: M2 => M3  level 2: (b) PASS orient 1  (a) UNDECIDED  [33.3 s, images computed so far 352]
+2026-10-19T10:40:07.300  AZ: M2 => M3  level 3: (b) PASS orient 1  (a) UNDECIDED  [425.0 s, images computed so far 4704]
+2026-10-19T10:49:51.826  AZ: M2 => M3  refinement: CERTIFIED  leaves 7261  max depth 4  [584.2 s, images computed so far 10522]  B2 refinement: every leaf of (a) and (b) certified
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 0.35462272560484775
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+┌ Warning: QR preconditioning could not be verified; exiting
+│   t0 + δt = 1.17262571130177
+└ @ TaylorModels.ValidatedInteg ~/.julia/packages/TaylorModels/uhtsT/src/valid_integ/validated_integ3.jl:306
+wrote /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/../results/q2_hh_C.json

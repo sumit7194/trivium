@@ -210,8 +210,8 @@ end
 
 
 # ---------------------------------------------------------------- B2 refinement ----------------------------------
-const MAXDEPTH = 6
-const LEAF_CAP = 2^16
+const MAXDEPTH = parse(Int, get(ENV, "Q2_MAXDEPTH", "6"))     # registered 6; Q2-R1 escalation via env
+const LEAF_CAP = 2^parse(Int, get(ENV, "Q2_LEAFPOW", "16"))
 const Chart = NTuple{4,Rat}          # (u1, u2, s1, s2) in the source t-set's chart
 image_chart(M::HSet, c::Chart) = image(piece_rect(M, c...))
 function bisect(c::Chart)
@@ -387,6 +387,7 @@ hset_json(H::HSet) = Dict("centre" => string.(H.c), "A_columns_u_s" => [string.(
 const GROUPS = Dict(
     "A" => [("AZ", "M0", "M0"), ("AZ", "M0", "M1"), ("AZ", "M1", "M2"), ("W1", "M1", "M2"), ("W2", "M1", "M2"), ("AZ", "M2", "M3")],
     "C" => [("AZ", "M2", "M3")],
+    "D" => [("AZ", "M3", "M4")],       # Q2-R1 escalation (MAXDEPTH/LEAF_CAP from env), labelled post hoc
     "B" => [("AZ", "M3", "M4"), ("AZ", "M4", "M0"), ("AZ", "M4", "M1"), ("W1", "M2", "M3"), ("W2", "M2", "M3")])
 
 function main_q2(group)
@@ -414,7 +415,7 @@ function main_q2(group)
         out = Dict("gate" => "Q2 (HH, blind)", "group" => group, "covers" => results, "spec_sha256" => sha,
             "tsets" => Dict(k => Dict(n => hset_json(H) for (n, H) in v) for (k, v) in sets),
             "map" => "P1 (iter 1), section Θ1 = {x = 0, x' > 0, H = 1/6}, coordinates (y, p_y); px from the energy (positive branch)",
-            "ladder" => LADDER, "refinement" => Dict("max_depth_below_level3" => MAXDEPTH, "leaf_cap" => LEAF_CAP),
+            "ladder" => LADDER, "refinement" => Dict("max_depth_below_level3" => MAXDEPTH, "leaf_cap" => LEAF_CAP, "escalation_env" => get(ENV, "Q2_MAXDEPTH", "none")),
             "integrator" => Dict("method" => "TaylorModels.ValidatedInteg.validated_integ3", "orderQ" => ORDER_Q,
                 "orderT" => ORDER_T, "abstol" => ABSTOL, "maxsteps" => MAXSTEPS, "midrad" => B3_MIDRAD),
             "threads" => Threads.nthreads(), "julia" => string(VERSION), "packages" => deps, "git_commit" => git,

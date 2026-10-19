@@ -164,3 +164,21 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
 - **Blinding disclosure:** quantum's seal file names (hh1b_M1M2_*, hh1b_M3M4_*) reveal which two coverings needed its
   re-split, consistent with disclosure item 5. That was seen before any V14 Q2 decision on those coverings, and
   V14's procedure is fixed regardless.
+
+## Amendment Q2-R1 (2026-10-19 ~11:00, after M3⟹M4 came out UNDECIDED at the registered depth 6, before any rerun)
+- **Registered result kept:** M3⟹M4 is UNDECIDED at depth 6 (q2_hh_B.json). (b) is all certified; (a) has a failing
+  leaf at depth 6.
+- **Diagnosis (labelled post hoc):**
+  - The failing leaf's rigorous image is computed (ok); it is not an integration failure. Its envelope is too wide:
+    U ∈ [−1.18, −0.94], S ∈ [−1.0016, −0.52].
+  - A NON-rigorous float probe of 81 points in the leaf gives true margins of ≈ 0.07 (in U) and ≈ 0.23 (in S): the
+    true image clears the forbidden zone.
+  - So the envelope is ~2–3× too fat in linear size, which ≈ 3–4 more bisections should fix.
+- **Escalation, M3⟹M4 only:** MAXDEPTH 12 (6 levels beyond registered; a leaf can reach 1/4096 of a level-3 piece's
+  area), leaf cap 2¹⁸. Same pipeline, ladder and checks, with parallel refinement.
+- **Stop rule:**
+  - CERTIFIED if every leaf passes;
+  - REJECTED if a certified violation appears;
+  - otherwise UNDECIDED at depth 12 / cap. Then report "limit of this method", with the leaf.
+- **Reporting:** a CERTIFIED here is reported as "certified after a disclosed post-hoc depth escalation", alongside
+  the registered depth-6 UNDECIDED.
