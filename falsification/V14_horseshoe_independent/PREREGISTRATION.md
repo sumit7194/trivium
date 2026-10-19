@@ -157,3 +157,10 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
   (expected).
 - Ladder and refinement as in Q1/B2. Gate as registered: the 7 (5.1) coverings CERTIFIED; W-AZ1 and W-AZ2 REJECTED
   under the Q1 merge rule. Runs as 2 processes × 4 threads.
+- **Q2 speed-up (2026-10-19 ~10:40; mechanical, no change of method):** refinement now prefetches each batch of
+  child pieces in parallel (`refine!(…; pre = …)`), with the same breadth-first order, leaves and decisions. The
+  pending AZ M2⟹M3 covering runs as its own group "C" (6 threads), while group A finishes M1⟹M2 serially. W1/W2 are
+  already REJECTED via M2′⟹M3 (group B), so the W M1⟹M2 lines are not needed for the gate.
+- **Blinding disclosure:** quantum's seal file names (hh1b_M1M2_*, hh1b_M3M4_*) reveal which two coverings needed its
+  re-split, consistent with disclosure item 5. That was seen before any V14 Q2 decision on those coverings, and
+  V14's procedure is fixed regardless.

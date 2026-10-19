@@ -248,9 +248,15 @@ function a_status(M::HSet, N::HSet, c::Chart)
 end
 # Breadth-first refinement of the failing pieces `fails` (depth 0 = level-3 pieces) with status function `st`
 # (:pass / :fail / anything else = certified contradiction). `leaves` is the running leaf count (Ref).
-function refine!(fails::Vector{Chart}, st, leaves::Ref{Int})
-    queue = [(c, 0) for c in fails]; maxd = 0; nnew = 0; head = 1
+function refine!(fails::Vector{Chart}, st, leaves::Ref{Int}; pre = nothing)
+    # Breadth-first, as before; `pre` (optional) prefetches the images of each new batch of children in parallel
+    # before they are evaluated in the original queue order (same leaves, same decisions; only faster).
+    queue = [(c, 0) for c in fails]; maxd = 0; nnew = 0; head = 1; fetched = 0
     while head <= length(queue)
+        if pre !== nothing && head > fetched
+            batch = [ch for (c, d) in queue[head:end] for ch in bisect(c)]
+            pre(batch); fetched = length(queue)
+        end
         c, d = queue[head]; head += 1
         d >= MAXDEPTH && return Dict("outcome" => "UNDECIDED", "reason" => "failing leaf at depth $MAXDEPTH", "leaf" => string.(c),
                                      "max_depth" => maxd, "new_pieces" => nnew, "unrefined_in_queue" => length(queue) - head + 1)
@@ -291,7 +297,7 @@ function refine_cover(M::HSet, N::HSet, lev3)
                 push!(brec, Dict("orientation" => σ, "outcome" => "REFUTED at level 3")); continue
             end
             leaves = Ref(2K + nbox)
-            r = refine!(fails, c -> b_status(M, N, c, σ), leaves)
+            r = refine!(fails, c -> b_status(M, N, c, σ), leaves; pre = cs -> prefetch!([piece_rect(M, c...) for c in cs]))
             r["orientation"] = σ; r["level3_failing_edge_pieces"] = length(fails); r["edge_leaves"] = leaves[] - nbox
             push!(brec, r)
             if r["outcome"] == "ALL_LEAVES_PASS"
@@ -318,7 +324,7 @@ function refine_cover(M::HSet, N::HSet, lev3)
                 rec["a"] = Dict("outcome" => "CONTRADICTION", "status" => "violation", "leaf" => string.(viol))
             else
                 leaves = Ref(bleaves + nbox)
-                ra = refine!(fails, c -> a_status(M, N, c), leaves)
+                ra = refine!(fails, c -> a_status(M, N, c), leaves; pre = cs -> prefetch!([piece_rect(M, c...) for c in cs]))
                 ra["level3_failing_boxes"] = length(fails); ra["support_leaves"] = leaves[] - bleaves
                 rec["a"] = ra
             end
@@ -380,6 +386,7 @@ hset_json(H::HSet) = Dict("centre" => string.(H.c), "A_columns_u_s" => [string.(
 # Worker groups: coverings sharing a source set share its images (cache keyed by section rectangle).
 const GROUPS = Dict(
     "A" => [("AZ", "M0", "M0"), ("AZ", "M0", "M1"), ("AZ", "M1", "M2"), ("W1", "M1", "M2"), ("W2", "M1", "M2"), ("AZ", "M2", "M3")],
+    "C" => [("AZ", "M2", "M3")],
     "B" => [("AZ", "M3", "M4"), ("AZ", "M4", "M0"), ("AZ", "M4", "M1"), ("W1", "M2", "M3"), ("W2", "M2", "M3")])
 
 function main_q2(group)
