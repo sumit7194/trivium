@@ -185,3 +185,39 @@
     under our TaylorModels pipeline. This is the transcription of AZ's sets in quantum's spec files.
   - Reporting must say "certified after disclosed post-hoc escalations" for M1⟹M2 and M3⟹M4.
 - **Next:** ask quantum to lift the HH embargo, then compare under the cross-path rule.
+
+## Cross-path comparison with quantum (2026-10-20, after the embargo was lifted on both sides)
+- **Seal check first:** all 35 sealed quantum files (hh1_*, hh1a_*, hh1b_* at ca819cf; hh2_* at 5a21dde) match the
+  sha256s in quantum's seal messages (0 mismatches). Only then were HH_PRIMARY_OUTCOME.md and HH_SECONDARY_OUTCOME.md
+  read.
+- **Comparison rule (registered):** FAIL = opposite certified decisions. **Verdict: AGREE, no FAIL.**
+
+| AZ covering | V14 (TaylorModels.jl, Julia) | quantum (CAPD/MPFR 128, C++) | orientation V14 / q | return-time hull V14 / q |
+|---|---|---|---|---|
+| M0⟹M0 | CERTIFIED | certified | +1 / LR | [6.831, 7.560] / [6.848, 7.505] |
+| M0⟹M1 | CERTIFIED | certified | +1 / LR | [6.831, 7.560] / [6.848, 7.505] |
+| M1⟹M2 | CERTIFIED* (Q2-R2/R3) | certified* (hh1b, B13) | −1 / RL | [7.223, 9.214] / [7.244, 9.409] |
+| M2⟹M3 | CERTIFIED | certified | +1 / LR | [6.137, 7.898] / [6.144, 7.930] |
+| M3⟹M4 | CERTIFIED* (Q2-R1) | certified* (hh1b, B13) | −1 / RL | [7.517, 8.126] / [7.499, 8.188] |
+| M4⟹M0 | CERTIFIED | certified | +1 / LR | [6.611, 7.614] / [6.622, 7.581] |
+| M4⟹M1 | CERTIFIED | certified | +1 / LR | [6.611, 7.614] / [6.622, 7.581] |
+| W-AZ1, W-AZ2 | REJECTED ((b) failures) | rejected ((b) failures) | — | — |
+
+  (* = certified only after disclosed post-hoc escalation, on both sides.)
+- **The striking part:**
+  - Each pipeline, at its own registered settings, left exactly the same two coverings undecided: M1⟹M2 and
+    M3⟹M4. V14 hit its depth 6 / cap 2¹⁶; quantum's first pass did not certify (a) on any covering, and under its
+    original 48 core-hour budget it is PARTIAL 5/7 with the same two missing.
+  - Both needed the most work on those two (V14: depth 10 plus fallback, and depth 8; quantum: depths 9 and 11,
+    about 23 and 32 CPU-h).
+  - The strong form |s| < 1 of (a) fails on all 7 in both pipelines (recorded as data).
+- **Consistency checks:**
+  - Orientations agree 7/7.
+  - Every pair of return-time hulls intersects, as two rigorous enclosures of the same range must. The true range
+    lies in each intersection; e.g. for M1⟹M2 it is within [7.244, 9.214].
+- **Wording:** two independent rigorous implementations (different languages, libraries, integrators and
+  arithmetic) reproduce the covering relations (5.1) of Arioli–Zgliczyński 2001, Lemma 5, on their published
+  t-sets. In both, M1⟹M2 and M3⟹M4 are certified only after disclosed post-hoc escalation of the registered
+  settings. V14's certificates carry the TaylorModels caveat (#207, sibling routines).
+- **Not replayed by V14:** quantum's HH-SECONDARY (own constructor sets; 6/6 required coverings certified, plastic
+  number ρ, h_top ≥ 0.2812). That would need its own blind gate.
