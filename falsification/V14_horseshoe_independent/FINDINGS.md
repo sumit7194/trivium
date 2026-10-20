@@ -146,4 +146,17 @@
   - No certified violation of (a).
   - So the limit hit is the leaf cap (the amount of work), not the depth.
   - Group A (serial, same computation) is still running; it is kept as an identity check of the parallel refinement.
-  - A post-hoc diagnosis (q2_m1m2_diag.jl) is running. Any rerun will be pre-registered first, as Q2-R1 was.
+  - Post-hoc diagnosis: 0 image failures at level 3; fat hulls (median U width 6.0, S width 13.1). Float margin
+    ≥ 0.16 over all 2977 boxes. Hence Q2-R2.
+  - Group A (serial) finished: AZ M1⟹M2 is identical to group E (UNDECIDED, 65536 leaves, depth 6), so the identity
+    check of the parallel refinement passes. Its AZ M2⟹M3 is CERTIFIED with 7261 leaves, identical to group C.
+- **M1⟹M2 under Q2-R2 (q2_hh_F.json, 2026-10-20 04:55): UNDECIDED, "failing leaf at depth 10"**, 131251 leaves.
+  - Every other piece passed: the queue was empty when the one remaining leaf hit depth 10.
+  - That leaf (chart u ∈ [−631/1024, −315/512], s ∈ [887/1024, 111/128]) is NOT an enclosure-width problem. Its
+    rigorous image fails to compute at all: "integration_stopped_at_t=4.63" (validated_integ3's step validation /
+    QR preconditioning gave up, with t1 ≈ 8.76).
+  - A float probe of that leaf gives u ∈ [1.109, 1.118] and s ∈ [−0.744, −0.736], a margin of 0.26: comfortably
+    outside F.
+  - So the one remaining obstacle is an integrator failure at a single tiny box, not a sign that the covering fails.
+    Any fix (e.g. a fallback integration for failed leaves only) needs its own pre-registered amendment and
+    validation.
