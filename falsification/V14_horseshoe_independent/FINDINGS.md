@@ -215,9 +215,12 @@
   - Orientations agree 7/7.
   - Every pair of return-time hulls intersects, as two rigorous enclosures of the same range must. The true range
     lies in each intersection; e.g. for M1⟹M2 it is within [7.244, 9.214].
-- **Wording:** two independent rigorous implementations (different languages, libraries, integrators and
-  arithmetic) reproduce the covering relations (5.1) of Arioli–Zgliczyński 2001, Lemma 5, on their published
-  t-sets. In both, M1⟹M2 and M3⟹M4 are certified only after disclosed post-hoc escalation of the registered
-  settings. V14's certificates carry the TaylorModels caveat (#207, sibling routines).
+- **Wording (agreed with quantum, 2026-10-20):** "Two independent rigorous implementations (CAPD/MPFR and
+  TaylorModels.jl/Float64 intervals) reproduce the covering relations (5.1) of AZ 2001 Lemma 5 on AZ's published
+  t-sets, with condition (a) certified on the whole support. In both, M1⟹M2 and M3⟹M4 needed a disclosed post-hoc
+  escalation beyond the registered settings, and the CAPD run also exceeded its originally registered core-hour budget
+  (B13)."
+  - Wherever the V14 side is cited, attach: "subject to TaylorModels.jl #207 sibling-routine defects".
+  - Say "reproduces (5.1)", never "reproduces their proof": (5.2)–(5.4) and their Lemma 3 are not redone.
 - **Not replayed by V14:** quantum's HH-SECONDARY (own constructor sets; 6/6 required coverings certified, plastic
   number ρ, h_top ≥ 0.2812). That would need its own blind gate.
