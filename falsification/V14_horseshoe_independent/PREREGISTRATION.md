@@ -210,3 +210,38 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
     axis-aligned hull). That would need its own amendment and validation; it is not part of Q2-R2.
 - **Reporting:** a CERTIFIED here is reported as "certified after a disclosed post-hoc depth/cap escalation (Q2-R2)",
   alongside the registered UNDECIDED.
+
+## Amendment Q2-R3 (2026-10-20 ~11:30, after Q2-R2 ended with one leaf whose image fails to integrate; before applying)
+- **Registered results kept:** M1⟹M2 is UNDECIDED at the registered settings (q2_hh_E.json) and UNDECIDED under
+  Q2-R2 (q2_hh_F.json, "failing leaf at depth 10").
+- **Facts from q2_hh_F.json:**
+  - (b) is certified (orientation −1).
+  - For (a), the refinement queue was EMPTY when the single remaining leaf L hit depth 10. L is chart
+    u ∈ [−631/1024, −315/512], s ∈ [887/1024, 111/128].
+  - So every other piece of the (a) refinement is a leaf that passed (miss_F certified).
+- **Diagnosis (post hoc; q2_m1m2_leaf.jl, q2_fb_explore.jl):**
+  - L's image is not computed at the registered orderT 16: validated_integ3 stops at t = 4.63 ("QR preconditioning
+    could not be verified"). A float probe gives a margin of 0.26.
+  - With the SAME validated_integ3 (orderQ 2, midrad false, same abstol and maxsteps), orderT 12, 14, 18 and 20
+    all integrate L, and each image satisfies miss_F. orderT 24 hits a package FieldError, which is irrelevant.
+  - Disclosure: the fallback list below was chosen AFTER seeing this. That cannot bias the result: every enclosure
+    validated_integ3 returns is rigorous at any orderT, so using any successful one is sound.
+- **Rule (Q2-R3):** if the registered integration (orderT 16) of a piece fails (image not ok), retry with orderT 14,
+  then orderT 18; use the first ok image. Everything else is unchanged: section logic (q2_fallback.jl generates
+  `poincare1_fb` textually from q2_hh_poincare.jl with only the integrator call swapped), status logic, miss_F and
+  violates_a. Pieces whose primary image is ok are never re-integrated.
+- **Validation, done BEFORE L counts (q2_r3.jl):** on 200 pieces drawn reproducibly from the level-3 grid
+  (seeded; every 20th of the 4096 boxes, then the first 200 of the 2977 non-pass boxes in list order, up to 200 in
+  total), whose primary images are ok:
+  - (V1) each fallback image (orderT 14 and 18) must INTERSECT the primary image in (y, p_y); disjoint enclosures
+    of the same set would mean a bug;
+  - (V2) every float RK4 point of a 3 × 3 grid in the piece must lie inside every computed enclosure, primary and
+    both fallbacks.
+  - Any V1/V2 failure voids Q2-R3.
+- **Application:** with validation passed, evaluate L under the rule.
+  - If its image passes miss_F, the Q2-R2 leaves together with L form a complete cover of M1 by certified pieces,
+    and M1⟹M2 is CERTIFIED.
+  - If L's image is ok but ambiguous, refine L's subtree under the rule to depth 12 (cap 2¹²).
+  - A certified violation → REJECTED. Otherwise UNDECIDED.
+- **Reporting:** a CERTIFIED here is reported as "certified after disclosed post-hoc escalations Q2-R2 (depth/cap)
+  and Q2-R3 (integrator-order fallback for one leaf)", alongside the registered UNDECIDED.
