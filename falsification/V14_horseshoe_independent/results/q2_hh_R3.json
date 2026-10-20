@@ -1,0 +1,32 @@
+{
+ "amendment": "Q2-R3",
+ "decision": "CERTIFIED",
+ "git_commit": "fecf042abdafd8650fb2df11a8a4efa8554136ff",
+ "leaf_L": {
+  "S": [
+   -0.929562855686039,
+   -0.5511156696047474
+  ],
+  "U": [
+   1.0311545191013893,
+   1.1966706029542271
+  ],
+  "leaf": [
+   "-631//1024",
+   "-315//512",
+   "887//1024",
+   "111//128"
+  ],
+  "ok": true,
+  "orderT_used": 14,
+  "reason": "ok",
+  "status": "pass"
+ },
+ "updated": "2026-10-20T10:52:00.861",
+ "validation": {
+  "V1_failures": 0,
+  "V2_failures": 0,
+  "failures": [],
+  "n_pieces_checked": 200
+ }
+}

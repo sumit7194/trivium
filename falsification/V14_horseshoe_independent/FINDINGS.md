@@ -160,3 +160,28 @@
   - So the one remaining obstacle is an integrator failure at a single tiny box, not a sign that the covering fails.
     Any fix (e.g. a fallback integration for failed leaves only) needs its own pre-registered amendment and
     validation.
+- **M1⟹M2 under Q2-R3 (q2_hh_R3.json, 2026-10-20 10:52): CERTIFIED** after disclosed post-hoc escalations Q2-R2
+  (depth 10 / cap 2²⁰) and Q2-R3 (integrator-order fallback).
+  - Validation of the fallback, done before L counted: 200 pieces checked, V1 failures 0 (every orderT-14/18
+    enclosure meets the orderT-16 one), V2 failures 0 (every float grid point lies inside every enclosure).
+  - Leaf L under the rule: orderT 14, U ∈ [1.031, 1.197], S ∈ [−0.930, −0.551], so miss_F holds. With the Q2-R2
+    leaves, M1 is covered by certified pieces.
+
+## Q2 decisions — COMPLETE (2026-10-20), committed before opening quantum's sealed HH results
+| AZ covering (5.1) | decision | how |
+|---|---|---|
+| M0⟹M0 | CERTIFIED | registered depth 6 (6074 leaves) |
+| M0⟹M1 | CERTIFIED | registered depth 6 (15144 leaves) |
+| M1⟹M2 | CERTIFIED* | *registered UNDECIDED (leaf cap); certified after disclosed post-hoc Q2-R2 + Q2-R3 |
+| M2⟹M3 | CERTIFIED | registered depth 6 (7261 leaves; AZ special M3 sides; group A identical) |
+| M3⟹M4 | CERTIFIED* | *registered UNDECIDED (depth 6); certified after disclosed post-hoc Q2-R1 (depth 8) |
+| M4⟹M0 | CERTIFIED | registered depth 6 (4626 leaves) |
+| M4⟹M1 | CERTIFIED | registered depth 6 (5283 leaves) |
+| W-AZ1, W-AZ2 (wrong sets) | REJECTED | certified (b) failures on M2′⟹M3 |
+
+- **Gate Q2 as registered:** NOT passed at the registered settings (2 of 7 UNDECIDED).
+- **With the disclosed escalations:** all 7 coverings are CERTIFIED and both wrong-set controls REJECTED.
+  - So, independently of quantum, the AZ M-chain coverings M0⟹M0⟹M1⟹M2⟹M3⟹M4⟹{M0, M1} hold for P1 at h = 1/6,
+    under our TaylorModels pipeline. This is the transcription of AZ's sets in quantum's spec files.
+  - Reporting must say "certified after disclosed post-hoc escalations" for M1⟹M2 and M3⟹M4.
+- **Next:** ask quantum to lift the HH embargo, then compare under the cross-path rule.

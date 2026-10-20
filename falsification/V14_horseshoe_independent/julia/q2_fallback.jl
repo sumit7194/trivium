@@ -1,7 +1,7 @@
 # V14 Q2-R3 helper: poincare1 with a pluggable integrator, generated TEXTUALLY from q2_hh_poincare.jl's poincare1 so
 # that the section, root-isolation, transversality, departure/window, S9 and time-label logic are byte-identical;
 # only the call `b3_integ(hh!, X0, 0.0, tmax, SP)` is replaced by `integ(hh!, X0, 0.0, tmax, SP)`.
-include(joinpath(@__DIR__, "q2_hh_cover.jl"))
+isdefined(@__MODULE__, :main_q2) || include(joinpath(@__DIR__, "q2_hh_cover.jl"))
 let src = read(joinpath(@__DIR__, "q2_hh_poincare.jl"), String)
     i = findfirst("function poincare1(", src); j = findfirst("\n# Driver for one initial box", src)
     body = src[first(i):first(j)-1]
