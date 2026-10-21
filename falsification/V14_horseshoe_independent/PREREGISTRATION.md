@@ -245,3 +245,40 @@ adaptive pass is a disclosed post-hoc escalation (quantum 5d77bee; an earlier me
   - A certified violation → REJECTED. Otherwise UNDECIDED.
 - **Reporting:** a CERTIFIED here is reported as "certified after disclosed post-hoc escalations Q2-R2 (depth/cap)
   and Q2-R3 (integrator-order fallback for one leaf)", alongside the registered UNDECIDED.
+
+## Amendment Q2-U and Q3-S (2026-10-21, registered BEFORE either run; for the unattended run while the user travels)
+Both use ONE fixed setting, chosen now and applied identically to every covering:
+- the Q2 pipeline unchanged (validated_integ3, orderQ 2, orderT 16, midrad false; the same ladder; the same (a)/(b)
+  logic, miss_F and violates_a);
+- refinement to MAXDEPTH 10, leaf cap 2²⁰ (the Q2-R2 values);
+- the Q2-R3 rule everywhere: a piece whose orderT-16 image fails is retried with orderT 14, then 18, using the first
+  ok image. The validation of that rule (V1/V2, 200 pieces, 0 failures) is in q2_hh_R3.json;
+- the image cache is cleared between coverings with different source sets (memory bound only; it never changes an
+  image).
+Driver: julia/q2u_main.jl; chain: julia/run_chain_2026-10-21.sh.
+
+**Q2-U, the uniform re-run of the AZ (5.1) coverings plus the wrong-set controls.**
+- Coverings: the 7 AZ (5.1) coverings, plus W-AZ1 and W-AZ2 on M2′⟹M3. Spec files: quantum's hh1_*.spec (the same
+  sha256 as Q2).
+- **Gate:** PASS iff all 7 AZ coverings are CERTIFIED AND W-AZ1 and W-AZ2 are both REJECTED. Anything else is
+  reported as it falls.
+- Purpose: to replace "certified, two of them after post-hoc escalations" by "certified under one setting fixed in
+  advance". Q2's registered results and escalations stay on record unchanged. Q2-U is a new run, not a revision.
+- Disclosure: the setting was chosen AFTER Q2/Q2-R1/R2/R3 showed what M1⟹M2 and M3⟹M4 need. So Q2-U certifies under
+  a fixed setting, but it is not blind to the difficulty.
+
+**Q3-S, an independent replay of quantum's HH-SECONDARY (NOT blind).**
+- Coverings: quantum's B14 constructor sets N0, N3–N6 (hh2_*.spec at quantum 5a21dde, whose sha256s were already
+  verified against the seals): N0⟹N0, N0⟹N3, N3⟹N4, N4⟹N5, N5⟹N6, N6⟹N0 (required) and N6⟹N3 (optional).
+- **Disclosure:** quantum's outcome is already known to the bridge: the 6 required coverings certified, and N6⟹N3 a
+  certified orientation failure. So this is a cross-implementation REPLAY, not a blind test.
+- Expected agreement: 6 CERTIFIED, plus N6⟹N3 REJECTED (or UNDECIDED, which counts as "overlap only").
+- Comparison rule as in Q2: FAIL = opposite certified decisions.
+- The sets are general parallelograms; each piece is integrated as its axis-aligned hull, which is conservative (as
+  for the AZ sets).
+
+**Running:**
+- One Julia process at a time, 6 threads, nice 5, heap hint 8 GB. A watchdog kills it only if RSS > 11 GB (own PID
+  only), and the chain then moves on.
+- Q2-U runs first, then Q3-S.
+- Results: results/q2u_*.json and results/q3s_*.json, written after each covering. Status: results/CHAIN_STATUS.md.
