@@ -24,3 +24,16 @@ for _ in range(50):
     q1 = f1(*v); worst = max(worst, abs(q1 - f2(*v)) / max(abs(q1), mp.mpf(1)))
 print("80-digit point gate, worst relative difference over 50 points:", mp.nstr(worst, 3))
 # Kerr check: for beta = 0 the MN a, b are constants (-alpha, alpha); report Q there in structured form
+
+# ---- Notes (2026-10-21, bridge, for quantum's MN field fix; post hoc diagnostics, no verdicts) ----
+# At quantum's t = 291 point (x 1.94376, y 0.10345; a = 0.74096, b = -3.22935 from the exact F5-R a, b), with a 1e-6
+# box in x, y, a, b (a, b tight), interval width / true linear range:
+#   A as written in v13 (two squares) 2.26 vs expanded 6.78;  B as written (two squares) 1.30 vs expanded 11.64;
+#   C as written 4.89 vs expanded 8.92; regrouped C2 = (x+y) b [(x+1)(1-y) - (x-1)(1+y) a^2]
+#   + (x-y) a [(x-1)(1-y) b^2 - (x+1)(1+y)] (exact) gives 3.59 there but is not uniformly better (2.1-5.5 elsewhere).
+# => keep the v13 grouped forms of A, B, C verbatim in codegen (do not expand; check CSE does not undo the grouping).
+# ea, eb: Legendre generating function, R^2 - 2uR + 1 = (x-y)^2 and R^2 + 2uR + 1 = (x+y)^2 (verified), so
+#   (x-y) sum_{l>=0} P_l(u)/R^{l+1} = 1  and  (x+y) sum_{l>=0} (-1)^l P_l(u)/R^{l+1} = 1, hence
+#   ea = -(x-y) sum_{l>=3} P_l(u)/R^{l+1},   eb = (x+y) sum_{l>=3} (-1)^l P_l(u)/R^{l+1}:
+#   the small values are TAILS of convergent series (ratio 1/R ~ 0.6 at the swing). The O(1) cancellation is intrinsic
+#   to the 3-term truncation; there is no smooth closed form without it -> keep a, b as augmented states.
