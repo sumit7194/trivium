@@ -282,3 +282,12 @@ Driver: julia/q2u_main.jl; chain: julia/run_chain_2026-10-21.sh.
   only), and the chain then moves on.
 - Q2-U runs first, then Q3-S.
 - Results: results/q2u_*.json and results/q3s_*.json, written after each covering. Status: results/CHAIN_STATUS.md.
+- **Addendum (2026-10-21, before launch): checkpoint/resume, at the user's request.** The user asked that a long power
+  loss cost at most a few hours, and that nothing live in tmp folders.
+  - q2u_main.jl overrides refine! with an identical breadth-first refinement that saves its full state every hour
+    to results/ckpt_q2u/ (queue from head on, leaves, maxd, nnew; keyed by covering and phase) and resumes from it.
+  - Finished coverings in q2u_all.json / q3s_all.json are skipped on relaunch. The chain appends to its logs and
+    status file and has a pid lock.
+  - **Test (julia/test_resume_2026-10-21.sh):** AZ M0⟹M0 run uninterrupted vs kill -9'd after its first checkpoint
+    and relaunched. Both CERTIFIED, 6074 leaves, max depth 2; ALL fields identical except timings; 0 leftover
+    checkpoints. The decision logic is unchanged.

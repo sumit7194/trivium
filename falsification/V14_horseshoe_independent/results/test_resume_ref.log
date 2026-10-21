@@ -1,0 +1,8 @@
+2026-10-21T19:07:02.569  AZ: M0 => M0  level 1: (b) UNDECIDED orient 0  (a) UNDECIDED  [82.9 s, images computed so far 32]
+2026-10-21T19:08:39.469  AZ: M0 => M0  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [96.9 s, images computed so far 352]
+2026-10-21T19:22:23.526  AZ: M0 => M0  level 3: (b) PASS orient 1  (a) UNDECIDED  [824.1 s, images computed so far 4704]
+2026-10-21T19:26:07.514  CHECKPOINT AZ: M0 => M0 queue 738 leaves 4353
+2026-10-21T19:31:26.774  CHECKPOINT AZ: M0 => M0 queue 982 leaves 5092
+2026-10-21T19:31:26.844  AZ: M0 => M0  refinement: CERTIFIED  leaves 6074  max depth 2  [542.9 s, images computed so far 8148]  B2 refinement: every leaf of (a) and (b) certified
+2026-10-21T19:31:27.903  DONE AZ: M0 => M0  CERTIFIED  (B2 refinement: every leaf of (a) and (b) certified)  fallback images 0
+wrote /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/../results/test_resume_ref.json

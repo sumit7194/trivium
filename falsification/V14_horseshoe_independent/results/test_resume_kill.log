@@ -1,0 +1,13 @@
+2026-10-21T19:32:25.827  AZ: M0 => M0  level 1: (b) UNDECIDED orient 0  (a) UNDECIDED  [48.5 s, images computed so far 32]
+2026-10-21T19:33:29.287  AZ: M0 => M0  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [63.4 s, images computed so far 352]
+2026-10-21T19:43:07.983  AZ: M0 => M0  level 3: (b) PASS orient 1  (a) UNDECIDED  [578.7 s, images computed so far 4704]
+2026-10-21T19:46:29.926  CHECKPOINT AZ: M0 => M0 queue 738 leaves 4353
+2026-10-21T19:47:52.281  AZ: M0 => M0  level 1: (b) UNDECIDED orient 0  (a) UNDECIDED  [47.4 s, images computed so far 32]
+2026-10-21T19:48:50.279  AZ: M0 => M0  level 2: (b) UNDECIDED orient 0  (a) UNDECIDED  [58.0 s, images computed so far 352]
+2026-10-21T19:59:10.485  AZ: M0 => M0  level 3: (b) PASS orient 1  (a) UNDECIDED  [620.2 s, images computed so far 4704]
+2026-10-21T19:59:11.350  RESUME AZ: M0 => M0 from AZ_M0_M0_dd26a40aff00befc.json (queue 738, leaves 4353)
+2026-10-21T20:02:43.562  CHECKPOINT AZ: M0 => M0 queue 737 leaves 4354
+2026-10-21T20:08:02.897  CHECKPOINT AZ: M0 => M0 queue 982 leaves 5092
+2026-10-21T20:08:02.993  AZ: M0 => M0  refinement: CERTIFIED  leaves 6074  max depth 2  [532.0 s, images computed so far 8146]  B2 refinement: every leaf of (a) and (b) certified
+2026-10-21T20:08:04.347  DONE AZ: M0 => M0  CERTIFIED  (B2 refinement: every leaf of (a) and (b) certified)  fallback images 0
+wrote /Users/sumit/Github/TheBridge/falsification/V14_horseshoe_independent/julia/../results/test_resume_kill.json

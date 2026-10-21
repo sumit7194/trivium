@@ -30,6 +30,60 @@ function image_compute(rect::NTuple{4,Rat})
     r
 end
 
+# ---- checkpoint / resume (added 2026-10-21 before launch; the user's power-loss rule: lose at most ~1 h) ----
+# The refinement is breadth-first and deterministic, so its full state is (the queue from `head` on, leaves, maxd,
+# nnew); the image cache only affects speed. A checkpoint keyed by (covering label, phase key) is written every
+# CKPT_SECONDS; on resume, refine! continues from it and returns exactly what the uninterrupted call would have.
+const CKPT_DIR = joinpath(OUTDIR, "ckpt_q2u")
+const CKPT_SECONDS = parse(Float64, get(ENV, "Q2U_CKPT_SECONDS", "3600"))
+const CUR_LABEL = Ref("")
+ckpt_key(fails, leaves0) = bytes2hex(sha256(string(CUR_LABEL[], "|", leaves0, "|", join([join(string.(c), ",") for c in fails], ";"))))[1:16]
+ckpt_file(key) = joinpath(CKPT_DIR, replace(CUR_LABEL[], r"[^A-Za-z0-9]+" => "_") * "_" * key * ".json")
+chart_str(c) = [string(numerator(v)) * "//" * string(denominator(v)) for v in c]
+chart_parse(v) = Tuple(parse(BigInt, split(s, "//")[1]) // parse(BigInt, split(s, "//")[2]) for s in v)
+function save_ckpt(file, queue, head, leaves, maxd, nnew)
+    mkpath(CKPT_DIR)
+    d = Dict("label" => CUR_LABEL[], "queue" => [Dict("c" => chart_str(c), "d" => dd) for (c, dd) in queue[head:end]],
+             "leaves" => leaves, "maxd" => maxd, "nnew" => nnew, "saved" => string(now()))
+    open(file * ".tmp", "w") do f; JSON.print(f, d); end
+    mv(file * ".tmp", file; force = true)
+end
+function refine!(fails::Vector{Chart}, st, leaves::Ref{Int}; pre = nothing)
+    file = ckpt_file(ckpt_key(fails, leaves[]))
+    queue = [(c, 0) for c in fails]; maxd = 0; nnew = 0; head = 1; fetched = 0
+    if isfile(file)
+        d = JSON.parsefile(file)
+        queue = [(Chart(chart_parse(q["c"])), Int(q["d"])) for q in d["queue"]]
+        leaves[] = d["leaves"]; maxd = d["maxd"]; nnew = d["nnew"]
+        println(now(), "  RESUME ", CUR_LABEL[], " from ", basename(file), " (queue ", length(queue), ", leaves ", leaves[], ")"); flush(stdout)
+    end
+    tlast = time()
+    while head <= length(queue)
+        if time() - tlast > CKPT_SECONDS
+            save_ckpt(file, queue, head, leaves[], maxd, nnew); tlast = time()
+            println(now(), "  CHECKPOINT ", CUR_LABEL[], " queue ", length(queue) - head + 1, " leaves ", leaves[]); flush(stdout)
+        end
+        if pre !== nothing && head > fetched
+            batch = [ch for (c, d) in queue[head:end] for ch in bisect(c)]
+            pre(batch); fetched = length(queue)
+        end
+        c, d = queue[head]; head += 1
+        d >= MAXDEPTH && return Dict("outcome" => "UNDECIDED", "reason" => "failing leaf at depth $MAXDEPTH", "leaf" => string.(c),
+                                     "max_depth" => maxd, "new_pieces" => nnew, "unrefined_in_queue" => length(queue) - head + 1)
+        leaves[] + 1 > LEAF_CAP && return Dict("outcome" => "UNDECIDED", "reason" => "leaf cap 2^16 reached", "max_depth" => maxd,
+                                              "new_pieces" => nnew, "unrefined_in_queue" => length(queue) - head + 2)
+        leaves[] += 1
+        for ch in bisect(c)
+            nnew += 1; maxd = max(maxd, d + 1)
+            s = st(ch)
+            s == :pass && continue
+            s == :fail && (push!(queue, (ch, d + 1)); continue)
+            return Dict("outcome" => "CONTRADICTION", "status" => string(s), "leaf" => string.(ch), "max_depth" => maxd, "new_pieces" => nnew)
+        end
+    end
+    return Dict("outcome" => "ALL_LEAVES_PASS", "max_depth" => maxd, "new_pieces" => nnew)
+end
+
 const QSPEC = "/Users/sumit/Github/quantum/qsim/capd/horseshoe_results"
 spec_sha(f) = bytes2hex(sha256(read(joinpath(QSPEC, f * ".spec"))))
 
@@ -71,8 +125,18 @@ function main_u(job)
     deps = Dict(string(v.name) => string(v.version) for (u, v) in Pkg.dependencies() if v.is_direct_dep)
     git = readchomp(`git -C /Users/sumit/Github/TheBridge rev-parse HEAD`)
     results = Dict{String,Any}(); t0 = time(); lastsrc = nothing
-    fn = joinpath(OUTDIR, job == "U" ? "q2u_all.json" : "q3s_all.json")
+    fn = joinpath(OUTDIR, get(ENV, "Q2U_OUTNAME", job == "U" ? "q2u_all.json" : "q3s_all.json"))
+    only_cover = get(ENV, "Q2U_ONLY", "")            # test hook: run a single covering label, e.g. "AZ: M0 => M0"
+    if isfile(fn)                                    # resume: keep every covering already finished in this file
+        prev = JSON.parsefile(fn)
+        for (lab, r) in prev["covers"]; results[lab] = r; end
+        println(now(), "  RESUME: ", length(results), " covering(s) already done in ", basename(fn)); flush(stdout)
+    end
     for (k, a, b) in items
+        lab = "$k: $a => $b"
+        (only_cover != "" && lab != only_cover) && continue
+        haskey(results, lab) && continue
+        CUR_LABEL[] = lab
         src = (k == "W1" || k == "W2") ? (k, a) : ("AZ/S", a)
         if src != lastsrc
             lock(CACHE_LOCK) do; empty!(CACHE); end
@@ -81,7 +145,10 @@ function main_u(job)
         nfb0 = NFALLBACK[]
         r = run_cover_b2(sets[k][a], sets[k][b], "$k: $a => $b")
         r["fallback_images_used"] = NFALLBACK[] - nfb0
-        results["$k: $a => $b"] = r
+        results[lab] = r
+        isdir(CKPT_DIR) && for f in readdir(CKPT_DIR; join = true)       # this covering is done: its checkpoints are no longer needed
+            occursin(replace(lab, r"[^A-Za-z0-9]+" => "_") * "_", basename(f)) && rm(f)
+        end
         out = Dict("amendment" => job == "U" ? "Q2-U" : "Q3-S (not blind)", "covers" => results, "spec_sha256" => sha,
             "tsets" => Dict(kk => Dict(n => hset_json(H) for (n, H) in v) for (kk, v) in sets),
             "map" => "P1 (iter 1), section Θ1 = {x = 0, x' > 0, H = 1/6}, coordinates (y, p_y); px from the energy (positive branch)",
@@ -90,7 +157,7 @@ function main_u(job)
             "integrator" => Dict("method" => "TaylorModels.ValidatedInteg.validated_integ3", "orderQ" => ORDER_Q,
                 "orderT" => ORDER_T, "abstol" => ABSTOL, "maxsteps" => MAXSTEPS, "midrad" => B3_MIDRAD),
             "threads" => Threads.nthreads(), "julia" => string(VERSION), "packages" => deps, "git_commit" => git,
-            "images_computed" => NCOMPUTED[], "wall_seconds" => time() - t0, "complete" => length(results) == length(items),
+            "images_computed" => NCOMPUTED[], "wall_seconds" => time() - t0, "complete" => all(haskey(results, "$k: $a => $b") for (k, a, b) in items),
             "updated" => string(now()))
         open(fn * ".tmp", "w") do f; JSON.print(f, out, 1); end
         mv(fn * ".tmp", fn; force = true)

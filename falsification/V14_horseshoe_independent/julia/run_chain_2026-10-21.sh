@@ -15,13 +15,13 @@ fi
 echo $$ > "$PIDFILE"
 CHILD=""
 trap 'echo "- $(date "+%F %T") STOPPED by signal" >> "$STATUS"; [ -n "$CHILD" ] && kill "$CHILD" 2>/dev/null; rm -f "$PIDFILE"; exit 143' TERM INT
-echo "# V14 chain status (Q2-U, then Q3-S)" > "$STATUS"
-echo "- $(date '+%F %T') chain started, pid $$, git $(git -C /Users/sumit/Github/TheBridge rev-parse --short HEAD)" >> "$STATUS"
+[ -f "$STATUS" ] || echo "# V14 chain status (Q2-U, then Q3-S)" > "$STATUS"
+echo "- $(date '+%F %T') chain (re)started, pid $$, git $(git -C /Users/sumit/Github/TheBridge rev-parse --short HEAD)" >> "$STATUS"
 
 run_job () {
   local job=$1 log=$2
   echo "- $(date '+%F %T') START $job -> $log" >> "$STATUS"
-  Q2_MAXDEPTH=10 Q2_LEAFPOW=20 nice -n 5 "$JULIA" -t 6 --heap-size-hint=8G --project=julia julia/q2u_main.jl "$job" > "$log" 2>&1 &
+  Q2_MAXDEPTH=10 Q2_LEAFPOW=20 nice -n 5 "$JULIA" -t 6 --heap-size-hint=8G --project=julia julia/q2u_main.jl "$job" >> "$log" 2>&1 &
   local pid=$!; CHILD=$pid
   echo "  julia pid $pid" >> "$STATUS"
   while kill -0 "$pid" 2>/dev/null; do
