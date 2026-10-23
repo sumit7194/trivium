@@ -18,3 +18,5 @@ __pycache__/
 
 # Outreach drafts are local-only: they include draft emails to named researchers (user decision 2026-09-27)
 outreach/
+tools/.fleet_watch.state
+tools/.fleet_watch.pid
