@@ -1,6 +1,17 @@
 {
   "_doc": "Active blinding embargoes. tools/blind_check.py must pass on every outgoing cross-session message before it is sent. Lift an embargo only when its seal arrives, and record the commit.",
-  "embargoes": [],
+  "embargoes": [
+    {
+      "id": "tabula-199b-for-V16",
+      "recipient": "*",
+      "direction": "inbound: the bridge must not open tabula's results/199b_* or notes/embargoed/, nor receive or discuss Lazutkin-invariant or lobe-area values, until V16's own are sealed (commit + sha256 sent)",
+      "until": "V16 Lazutkin invariant and lobe area sealed",
+      "opened": "2026-10-23",
+      "patterns": [
+        "(Lazutkin|homoclinic invariant|lobe area)[^.\\n]{0,60}(=|≈|~|\\d\\.\\d)"
+      ]
+    }
+  ],
   "lifted": [
     {
       "id": "tabula-C0-structure",
