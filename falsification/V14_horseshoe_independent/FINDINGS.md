@@ -224,3 +224,14 @@
   - Say "reproduces (5.1)", never "reproduces their proof": (5.2)–(5.4) and their Lemma 3 are not redone.
 - **Not replayed by V14:** quantum's HH-SECONDARY (own constructor sets; 6/6 required coverings certified, plastic
   number ρ, h_top ≥ 0.2812). That would need its own blind gate.
+
+## Q2-U and Q3-S (unattended chain, 2026-10-21 21:59 → 2026-10-22 18:38; one setting fixed in advance)
+- **Q2-U: GATE PASS.** All 7 AZ (5.1) coverings CERTIFIED and W-AZ1/W-AZ2 REJECTED, under the single pre-registered
+  setting (depth 10, cap 2²⁰, Q2-R3 fallback everywhere).
+  - Fallback images used: M0⟹M1 2, M1⟹M2 68, M2⟹M3 2, M3⟹M4 23, W1 1; none on the others.
+  - So the AZ chain is now certified with no per-covering post-hoc escalation. The setting was chosen after Q2
+    showed the difficulty; that disclosure stands (see the Q2-U amendment).
+- **Q3-S (replay of quantum's HH-SECONDARY; NOT blind):** N0⟹N0, N0⟹N3, N3⟹N4, N4⟹N5, N5⟹N6 and N6⟹N0 all
+  CERTIFIED, and N6⟹N3 REJECTED (a certified (b) failure).
+  - This matches quantum's outcome 7/7 (6 required certified; the optional N6⟹N3 an orientation failure). No FAIL.
+- Results: results/q2u_all.json, q3s_all.json, CHAIN_STATUS.md. No watchdog events and no restarts.
