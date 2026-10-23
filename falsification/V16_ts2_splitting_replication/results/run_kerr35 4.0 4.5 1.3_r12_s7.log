@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/sumit/Github/TheBridge/falsification/V16_ts2_splitting_replication/code/v16_split.py", line 80, in <module>
+    XLO = float(os.environ.get('V16_XLO', '1.3'))
+ValueError: could not convert string to float: ''
