@@ -1,17 +1,6 @@
 {
   "_doc": "Active blinding embargoes. tools/blind_check.py must pass on every outgoing cross-session message before it is sent. Lift an embargo only when its seal arrives, and record the commit.",
-  "embargoes": [
-    {
-      "id": "tabula-199b-for-V16",
-      "recipient": "*",
-      "direction": "inbound: the bridge must not open tabula's results/199b_* or notes/embargoed/, nor receive or discuss Lazutkin-invariant or lobe-area values, until V16's own are sealed (commit + sha256 sent)",
-      "until": "V16 Lazutkin invariant and lobe area sealed",
-      "opened": "2026-10-23",
-      "patterns": [
-        "(Lazutkin|homoclinic invariant|lobe area)[^.\\n]{0,60}(=|≈|~|\\d\\.\\d)"
-      ]
-    }
-  ],
+  "embargoes": [],
   "lifted": [
     {
       "id": "tabula-C0-structure",
@@ -39,6 +28,17 @@
         "(HH|H[ée]non)[^.\\n]{0,80}(certif|UNDECIDED|fail|pass|margin|covering result)"
       ],
       "lifted_at": "2026-10-20, V14 Q2 HH decisions committed at TheBridge 8e73970 (before any quantum HH result was opened)"
+    },
+    {
+      "id": "tabula-199b-for-V16",
+      "recipient": "*",
+      "direction": "inbound: the bridge must not open tabula's results/199b_* or notes/embargoed/, nor receive or discuss Lazutkin-invariant or lobe-area values, until V16's own are sealed (commit + sha256 sent)",
+      "until": "V16 Lazutkin invariant and lobe area sealed",
+      "opened": "2026-10-23",
+      "patterns": [
+        "(Lazutkin|homoclinic invariant|lobe area)[^.\\n]{0,60}(=|≈|~|\\d\\.\\d)"
+      ],
+      "lifted_at": "2026-10-23, after V16 sealed (dade806, sha a8aa47c2...) and tabula verified it; tabula's values in SpaceTime b52b767"
     }
   ]
 }

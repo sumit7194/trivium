@@ -1,0 +1,5 @@
+#!/bin/bash
+# Blinding guard for commit messages (added 2026-10-23 after a sealed value appeared in a seal-commit subject line;
+# caught by tabula, no contamination). A commit message that hits any ACTIVE embargo pattern is refused.
+python3 "$(git rev-parse --show-toplevel)/tools/blind_check.py" '*' "$1" || {
+  echo "COMMIT REFUSED by .githooks/commit-msg: the message hits an active embargo (state seals by hash only)."; exit 1; }
