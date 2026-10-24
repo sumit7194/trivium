@@ -247,3 +247,5 @@ sympy 1.14.0, mpmath 1.3.0, numpy 2.4.6), as recorded in each JSON.
   In our parametrisation the ring is therefore NOT tied to a positive quadrupole. (A positive quadrupole needs
   q < −χ², the regime of the off-equator ring pair, whose curvature is unexamined.) Manko worded it as "might"; this
   is recorded as data, not as a rebuttal.
+
+- **Regression, 2026-10-24, macOS 27.0.1 (26A434):** `code/v15_q4_komar.py` rerun (Python 3.14.5, the conjecture_machine .venv, Accelerate BLAS): output byte-identical to `results/q4_komar.txt` (pre-update, macOS 26.5).
