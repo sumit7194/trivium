@@ -18,7 +18,8 @@ Large downloads wait for a disk cleanup.
 | quantum | G3 reference worker (~4 GB each) | 1 worker later | queued until the box is lighter |
 | deepstrain | Regression; METRICS errata (bridge verifies independently); sGB note; time-slide literature check | 1 core, light | go |
 | deepstrain | Benchmark build + 6–8 GB download | needs disk | WAITS for cleanup |
-| cuspis | Upper-bound literature sweep; lower-bound firming | no compute | go |
+| cuspis | Upper-bound literature sweep | no compute | DONE (898cfcf): no published cap mechanism |
+| cuspis | Free-field lattice test of the wedge mutual-information statement (Sumit go), then write-up | 1 core, <2 GB, <200 MB, few h | cleared, prereg first |
 | spherex | Planetes fake-mover run (Sumit's, priority): 1 Python worker + local helper | 1–2 cores, <1 GB, ~170 MB disk total | running until ~23:15, then ~30 min of scoring on 1 core |
 
-Committed in core use when everything cleared is running: 2 + 2 + 3 + ~1 = 8.
+Committed in core use when everything cleared is running: ansatz 2 + tabula 2 + quantum 3 + cuspis 1 + deepstrain ~light = ~8.
