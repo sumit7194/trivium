@@ -86,3 +86,16 @@ leading non-resonant ones. Arithmetic: mpmath, 40 digits; grid N = 64 and N = 12
 
 ## Resources
 1 core at nice 10. Memory under 2 GB, disk under 20 MB. The run stops itself if free disk falls below 5 GB.
+
+## Amendment 1 (2026-11-17, before any F value is computed): which tori are feasible
+A scan of Kerr's frequency ratio Υ_r/Υ_θ over r_a showed two registered targets are infeasible. Only the frequency
+ratio was computed; no H₁, F or coefficient values.
+- **(r_p = 4M, z_max = 0.5):** the ratio climbs from 0.37 at r_a = 6M to 0.62 at r_a = 40M. 1 : 2 is reachable,
+  but 2 : 3 is not within r_a ≤ 40M.
+- **(r_p = 6M, z_max = 0.3):** the ratio is ≥ 0.63. 2 : 3 is reachable, but 1 : 2 is not.
+
+Replacement tori, picked by the same scan, with r_a set by tuning:
+- **1 : 2:** (r_p, z_max) = (4M, 0.5) at r_a ≈ 10M, and (4.5M, 0.3) at r_a ≈ 7M.
+- **2 : 3:** (6M, 0.3) at r_a ≈ 10M, and (5M, 0.5) at r_a ≈ 17M.
+
+Nothing else changes: gates, controls, thresholds and verdict rules all stay as registered.
