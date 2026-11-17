@@ -13,7 +13,7 @@ Large downloads wait for a disk cleanup.
 | ansatz | True-fractal test (TS capture edge), after its preregistration | 2 cores, <1 GB, ~12–13 h (ETA revised) | RUNNING since ~20:00 (prereg 471f76c; self-stops on disk, memory or swap limits) |
 | ansatz | Write-up of §150–§152 | none | in progress (d1c8031, 78bdbbb) |
 | ansatz | Small-deformation Killing-tensor jet test (prereg 4d7a0c3) | 1 core, <1 GB, short bursts <1 h total, nice 15 | cleared |
-| tabula | §200 tangle-seeded chaos check (zoom amendment b710291) | 2 cores, <1 GB, <50 MB, ~3–4 h | LAUNCH OK'd ~21:00. Comparison with ansatz §150 is graded "independent code, not blind" (tabula declared qualitative exposure, numeric unsure) |
+| tabula | §200 tangle-seeded chaos check (zoom amendment b710291) | 2 cores, ~1.2 GB, <50 MB, ~3–4 h | RUNNING since 19:55 (process group 78266; write-up 5423fdb). Comparison with ansatz §150 is graded "independent code, not blind" (tabula declared qualitative exposure, numeric unsure) |
 | tabula | p = 4/5 high-precision probe (30 min), then full run by request | 1 core | queued |
 | quantum | Regression, then wrapping test | 3 cores, ~1.5 GB | cleared after regression |
 | quantum | G3 reference worker (~4 GB each) | 1 worker later | queued until the box is lighter |
