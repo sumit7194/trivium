@@ -1,0 +1,4 @@
+2026-10-22 18:37:53  job S  pid 78817  rss_KB 2352256
+2026-10-22T18:28:52.801  S: N5 => N6  refinement: CERTIFIED  leaves 4422  max depth 1  [16.0 s, images computed so far 207568]  B2 refinement: every leaf of (a) and (b) certified
+2026-10-22T18:28:52.803  DONE S: N5 => N6  CERTIFIED  (B2 refinement: every leaf of (a) and (b) certified)  fallback images 1
+2026-10-22T18:37:45.751  S: N6 => N0  level 3: (b) PASS orient -1  (a) UNDECIDED  [492.0 s, images computed so far 212272]
