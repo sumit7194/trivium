@@ -95,3 +95,10 @@ The sign convention of a in V9 is fixed by gate C0: both signs are tried, and ex
 ## Resources
 
 1 core at nice 10. RSS guard 3 GB. Under 50 MB of disk. The run stops itself if free disk falls below 5 GB.
+
+## Amendment 1 (2026-11-17, before any run): the null-deformation vector field
+The bridge's V10 jet operator `build` supports a diagonal (x, y) block only: g^xx and g^yy, with no g^xy term. The
+registered ξ = (x y² + x²/3) ∂_x + (x y) ∂_y would create a g^xy term in L_ξ G₀, which `build` would silently drop.
+So C1b now uses ξ = (x³/3) ∂_x + y² ∂_y (ξ^x depends on x only and ξ^y on y only, so no cross term). The expectation
+is unchanged: S = the Kerr count. Nothing else changes. Noted for the record: the MN h is diagonal in (x, y), so the
+target is not affected by this limitation.
