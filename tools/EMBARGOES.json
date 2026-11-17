@@ -1,6 +1,35 @@
 {
   "_doc": "Active blinding embargoes. tools/blind_check.py must pass on every outgoing cross-session message before it is sent. Lift an embargo only when its seal arrives, and record the commit.",
-  "embargoes": [],
+  "embargoes": [
+    {
+      "id": "ts-chaos-numbers-to-ansatz",
+      "recipient": "ansatz-machine",
+      "until": "Sumit/bridge decide to compare; both sides sealed (commit + sha256)",
+      "opened": "2026-11-17",
+      "note": "Two-way blind between ansatz and tabula on TS chaos measures (uncertainty exponent, saddle entropy, escape rate, dimension). Never send tabula §200 numbers to ansatz-machine.",
+      "patterns": [
+        "(uncertainty[- ]exponent|\\balpha\\b|α)[^.\\n]{0,60}\\d\\.\\d",
+        "\\d\\.\\d+[^.\\n]{0,40}(uncertainty[- ]exponent|fractal dimension|box[- ]counting)",
+        "(fractal|box[- ]counting|capacity) dimension[^.\\n]{0,40}\\d\\.\\d",
+        "\\bh\\s*[=≈~]\\s*0?\\.\\d",
+        "(entropy|escape rate)[^.\\n]{0,40}\\d\\.\\d"
+      ]
+    },
+    {
+      "id": "ts-chaos-numbers-to-tabula",
+      "recipient": "tabula-geometrica",
+      "until": "Sumit/bridge decide to compare; both sides sealed (commit + sha256)",
+      "opened": "2026-11-17",
+      "note": "Two-way blind between ansatz and tabula on TS chaos measures (uncertainty exponent, saddle entropy, escape rate, dimension). Never send ansatz §150/true-fractal numbers to tabula-geometrica.",
+      "patterns": [
+        "(uncertainty[- ]exponent|\\balpha\\b|α)[^.\\n]{0,60}\\d\\.\\d",
+        "\\d\\.\\d+[^.\\n]{0,40}(uncertainty[- ]exponent|fractal dimension|box[- ]counting)",
+        "(fractal|box[- ]counting|capacity) dimension[^.\\n]{0,40}\\d\\.\\d",
+        "\\bh\\s*[=≈~]\\s*0?\\.\\d",
+        "(entropy|escape rate)[^.\\n]{0,40}\\d\\.\\d"
+      ]
+    }
+  ],
   "lifted": [
     {
       "id": "tabula-C0-structure",
