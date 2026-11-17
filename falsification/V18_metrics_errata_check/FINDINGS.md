@@ -50,7 +50,7 @@ Against the true 022 table, the bridge gets:
 - a = 0.1: 15.7% (modulus);
 - a = 0.2: 382.5% (modulus).
 
-The Re/Im split is in the runs below. These agree with DeepStrain's 16% and 383% (|ω_fit − ω_table| / |ω_table|).
+Re/Im split: 16.0% / 11.7% at a = 0.1; 381.9% / 399.6% at a = 0.2. These agree with DeepStrain's 16% and 383% (|ω_fit − ω_table| / |ω_table|).
 E3 stands as DeepStrain stated it.
 
 **Lesson recorded:** in arXiv HTML text extraction, the caption comes after the data, so pair tables by \label in the
