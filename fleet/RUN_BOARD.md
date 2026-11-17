@@ -12,7 +12,7 @@ Large downloads wait for a disk cleanup.
 |---|---|---|---|
 | ansatz | True-fractal test (TS capture edge), after its preregistration | 2 cores, <1 GB, ~8 h | cleared, not launched |
 | ansatz | Write-up of §150–§152; rank-3/4 design | none / slot request later | go |
-| tabula | Tangle-seeded chaos check, after its preregistration | 2 cores, <2 GB, ~3 h | cleared (session offline; go left in its inbox) |
+| tabula | Tangle-seeded chaos check, after its preregistration | 2 cores, <2 GB, ~3 h | cleared (sent 2026-11-17 after its restart) |
 | tabula | p = 4/5 high-precision probe (30 min), then full run by request | 1 core | queued |
 | quantum | Regression, then wrapping test | 3 cores, ~1.5 GB | cleared after regression |
 | quantum | G3 reference worker (~4 GB each) | 1 worker later | queued until the box is lighter |
