@@ -181,6 +181,9 @@ def setup(case, M, a, P, N):
     if case in ('mn', 'dM', 'da'):
         G1 = first_order_inverse(G0, series(h, P, T), T)
     elif case == 'null':        # G1 = -L_xi G0, xi = (x^3/3) d_x + y^2 d_y (no xy cross term)
+        # amendment 3: L_xi differentiates G0, so build it one order higher and truncate (a derivative of a TPS(N)
+        # loses its top order; the first run's false 'death' at r = 2 came from exactly that)
+        T = TPS(N + 1); G0 = inv_metric(series(g0, P, T), T)
         q = Q(); x = T.const(J.modq(P[0])); x[1, 0] = 1; y = ser_y(P, T)
         xi_x = mm(T, mm(T, x, x), x) * pow(3, q - 2, q) % q; xi_y = mm(T, y, y)
         dxix, dyiy = T.du(xi_x), T.dv(xi_y)
@@ -190,6 +193,8 @@ def setup(case, M, a, P, N):
             if kk == (2, 2): lie = (lie - 2 * mm(T, Gc, dxix)) % q
             if kk == (3, 3): lie = (lie - 2 * mm(T, Gc, dyiy)) % q
             G1[kk] = (-lie) % q
+        Tn = TPS(N); cut = lambda A: (A[:N + 1, :N + 1] * Tn.mask) % q
+        G0 = {k: cut(v) for k, v in G0.items()}; G1 = {k: cut(v) for k, v in G1.items()}; T = Tn
     elif case == 'sabotage':    # x*y in the tt slot only
         x = T.const(J.modq(P[0])); x[1, 0] = 1; y = ser_y(P, T)
         G1 = {kk: T.zero() for kk in G0}; G1[(0, 0)] = mm(T, x, y)
@@ -199,6 +204,12 @@ def setup(case, M, a, P, N):
 PARAMS = {'p1': (5, 3), 'p2': (13, 5)}
 POINTS = {'PA': (sp.Rational(3, 2), sp.Rational(1, 3)), 'PB': (sp.Integer(2), sp.Rational(-1, 4))}
 KERR_COUNT = {1: 2, 2: 5, 3: 8, 4: 14, 5: 20, 6: 30}
+
+def exactness_gate(case, M, a, P, N):
+    """Amendment 3 gate: the G0, G1 series used at order N equal the truncation of the order-(N+1) series."""
+    A0, A1, _ = setup(case, M, a, P, N); B0, B1, Tb = setup(case, M, a, P, N + 1)
+    cut = lambda X_: X_[:N + 1, :N + 1] * TPS(N).mask
+    return all(np.array_equal(A0[k] % Q(), cut(B0[k]) % Q()) and np.array_equal(A1[k] % Q(), cut(B1[k]) % Q()) for k in A0)
 
 def run(case, pname, ptname, r, N, qi, asign=+1):
     set_prime(PRIMES[qi]); M, a = PARAMS[pname]; P = POINTS[ptname]

@@ -120,3 +120,33 @@ Decision: use +a throughout. No control or target outcome has been seen, so noth
 - Then the target: mn, at p1 and p2, P_A and P_B, both primes, valence 1–6, N = r + 1, escalating to r + 2 and r + 3
   while S > floor.
 - The job runs detached at nice 10, with a 3 GB RSS guard and a 5 GB disk guard.
+
+## Amendment 3 (2026-11-17 ~20:45, after a control FAILURE, before any target run)
+**The failure.** Attempt 1 (log kept: results/v17_driver_attempt1.log and v17_runs_attempt1_null_fail.jsonl) stopped
+at C1b. The null deformation gave S = 4 < 5 at valence 2, with S_A = S_B, on P_A and q₁. A pure coordinate change
+cannot kill Carter, so this was a bug.
+
+What had already passed before the stop:
+- C1 (dM and da): all 48 runs, both points, both primes, valence 1–6, S = the Kerr count;
+- the C0 gate inside every run.
+
+**Root cause, measured.** G₁ = −L_ξ G₀ differentiates the series G₀. A derivative of an order-N truncated series is
+correct only to order N − 1. The jet operator then reads G₁'s order-N coefficient as zero, which adds a false
+constraint at the top order.
+
+Test (P_A, q₁): building G₀ at order N + 1 and truncating after the Lie derivative gives S = 5, 8 and 14 at valence
+2, 3 and 4, against 4, 6 and 9 without the extra order.
+
+**Fix.** In the null control only, the series is built at order N + 1 and truncated after L_ξ. Nothing else changes.
+
+**Why the target is not affected, and a new gate that proves it.**
+- In the target, h = ∂g/∂β is differentiated symbolically and then series-evaluated exactly to order N. The C1, C2
+  and target cases never take a derivative of a truncated series.
+- New gate, run before the target: for every case (dM, da, null, sabotage, mn) at both points, and mn at both parameter
+  sets, the order-7 G₀ and G₁ series must equal the truncation of the order-8 series exactly. Any failure means STOP.
+
+**Rerun.** All controls rerun from the start under this amendment. The pass/fail rules are unchanged. This is a
+post-failure fix, and it's disclosed as such.
+
+**Lesson recorded.** A wrong top-order coefficient produces a false "death", so death verdicts are sensitive to series
+exactness. That is why the exactness gate is now mandatory.

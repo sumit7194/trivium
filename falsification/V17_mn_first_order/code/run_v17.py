@@ -16,6 +16,15 @@ for case in ('dM', 'da', 'null', 'sabotage'):
                 if case == 'sabotage' and r == 2: ok = ok and d['S_A'] < d['kerr_count']
                 log(d, 'control ' + ('PASS' if ok else 'FAIL'))
                 if not ok: print('STOP: control failure', flush=True); sys.exit(2)
+# amendment 3 gate: series exactness for every case and the target, both points, at N = 7 (largest used first)
+for case in ('dM', 'da', 'null', 'sabotage', 'mn'):
+    for pn in (('p1',) if case != 'mn' else ('p1', 'p2')):
+        for pt in ('PA', 'PB'):
+            V.set_prime(V.PRIMES[0]); M, a = V.PARAMS[pn]
+            ok = V.exactness_gate(case, M, a, V.POINTS[pt], 7)
+            d = dict(case=case, params=pn, point=pt, gate='series exactness N=7 vs truncated N=8', ok=bool(ok)); d['tag'] = 'gate ' + ('PASS' if ok else 'FAIL')
+            print(json.dumps(d), flush=True); out.write(json.dumps(d) + '\n'); out.flush()
+            if not ok: print('STOP: series exactness gate failed', flush=True); sys.exit(4)
 for pn in ('p1', 'p2'):
     for pt in ('PA', 'PB'):
         for qi in (0, 1):
