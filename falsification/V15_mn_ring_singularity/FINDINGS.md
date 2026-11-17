@@ -249,3 +249,4 @@ sympy 1.14.0, mpmath 1.3.0, numpy 2.4.6), as recorded in each JSON.
   is recorded as data, not as a rebuttal.
 
 - **Regression, 2026-10-24, macOS 27.0.1 (26A434):** `code/v15_q4_komar.py` rerun (Python 3.14.5, the conjecture_machine .venv, Accelerate BLAS): output byte-identical to `results/q4_komar.txt` (pre-update, macOS 26.5).
+- **Regression, 2026-11-17, macOS 27.2 (26B123):** same script, same interpreter (Python 3.14.5, conjecture_machine .venv), 1 core at nice 10, 79 s: output byte-identical to `results/q4_komar.txt`.
