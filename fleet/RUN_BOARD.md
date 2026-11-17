@@ -25,3 +25,15 @@ Large downloads wait for a disk cleanup.
 | spherex | Planetes fake-mover run (Sumit's, priority): 1 Python worker + local helper | 1–2 cores, <1 GB, ~170 MB disk total | running until ~23:15, then ~30 min of scoring on 1 core |
 
 Committed in core use when everything cleared is running: ansatz 2 + tabula 2 + quantum 3 + cuspis 1 + deepstrain ~light = ~8.
+
+## Overnight 2026-11-17/18 (Sumit's go ~23:50)
+| Sister | Job | Slot |
+|---|---|---|
+| ansatz | True-fractal test, running | 2 cores, until ~8 AM |
+| tabula | §200 DONE and sealed (bff2c9f, local); now the p=4/5 timing probe, then a pre-registered post-result fix round; full p=4/5 run by slot request | up to 3 cores |
+| quantum | Wrapping test (after its harness and reading are committed) + ONE G3 reference worker | 3 + 1 cores, ~1.5 + ~4 GB |
+| deepstrain | Public benchmark: charter first, checkpointed and pausable, downloads ≤ 8 GB; GWOSC retries for the torch regression | ≤ 2 cores, ≤ 4 GB |
+| cuspis | One process (per Sumit), details pending | — |
+| bridge | Idle: V17 and V19 done; V18 done | — |
+
+Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 GB; nothing outward-facing.
