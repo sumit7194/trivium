@@ -6,7 +6,7 @@ The bridge allocates compute slots. Status only, never results. Update this on e
 and Sumit's SPHEREx detector session, which has priority. New disk is limited to 1 GB per job, with a stop-at-5-GB-free guard.
 Large downloads wait for a disk cleanup.
 
-## 2026-11-17: Sumit's go on all proposed items (macOS 27.2 regression: bridge, tabula, ansatz, Cuspis and Quantum identical; DeepStrain numpy identical, torch pending a GWOSC retry)
+## 2026-11-17: Sumit's go on all proposed items (macOS 27.2 regression: ALL repos pass; DeepStrain torch passed 9d80a6b after a resumable re-fetch)
 
 | Sister | Item | Slot | State |
 |---|---|---|---|
