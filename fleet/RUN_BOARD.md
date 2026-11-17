@@ -6,7 +6,7 @@ The bridge allocates compute slots. Status only, never results. Update this on e
 and Sumit's SPHEREx detector session, which has priority. New disk is limited to 1 GB per job, with a stop-at-5-GB-free guard.
 Large downloads wait for a disk cleanup.
 
-## 2026-11-17: Sumit's go on all proposed items (macOS 27.2 regression: bridge, tabula, ansatz and Cuspis identical; DeepStrain and Quantum pending)
+## 2026-11-17: Sumit's go on all proposed items (macOS 27.2 regression: bridge, tabula, ansatz, Cuspis and Quantum identical; DeepStrain numpy identical, torch pending a GWOSC retry)
 
 | Sister | Item | Slot | State |
 |---|---|---|---|
@@ -15,7 +15,7 @@ Large downloads wait for a disk cleanup.
 | ansatz | Small-deformation Killing-tensor jet test (prereg 4d7a0c3) | 1 core, <1 GB, short bursts <1 h total, nice 15 | cleared |
 | tabula | §200 tangle-seeded chaos check (zoom amendment b710291) | 2 cores, ~1.2 GB, <50 MB, ~3–4 h | RUNNING since 19:55 (process group 78266; write-up 5423fdb). Comparison with ansatz §150 is graded "independent code, not blind" (tabula declared qualitative exposure, numeric unsure) |
 | tabula | p = 4/5 high-precision probe (30 min), then full run by request | 1 core | queued |
-| quantum | Regression, then wrapping test | 3 cores, ~1.5 GB | cleared after regression |
+| quantum | macOS 27.2 regression: PASSED (0ef24f7); next, the wrapping test (harness + pass/fail reading first) | 3 cores, ~1.5 GB | slot request pending |
 | quantum | G3 reference worker (~4 GB each) | 1 worker later | queued until the box is lighter |
 | deepstrain | Regression; METRICS errata (bridge verifies independently); sGB note; time-slide literature check | 1 core, light | go |
 | deepstrain | Benchmark build + 6–8 GB download | ≤8 GB download | cleared once disk is freed (17 GB), after its literature check, with notice to the bridge first |
