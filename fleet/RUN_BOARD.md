@@ -2,7 +2,7 @@
 
 The bridge allocates compute slots. Status only, never results. Update this on every launch and finish.
 
-**Box:** 10 cores, 16 GB, disk ~8.2 GB free (2026-11-17). The fleet cap is 8 cores. The other 2 are for the system
+**Box:** 10 cores, 16 GB, disk ~8.2 GB free (2026-11-17), ~17 GB after Sumit's cleanup at 20:20. The fleet cap is 8 cores. The other 2 are for the system
 and Sumit's SPHEREx detector session, which has priority. New disk is limited to 1 GB per job, with a stop-at-5-GB-free guard.
 Large downloads wait for a disk cleanup.
 
@@ -18,7 +18,7 @@ Large downloads wait for a disk cleanup.
 | quantum | Regression, then wrapping test | 3 cores, ~1.5 GB | cleared after regression |
 | quantum | G3 reference worker (~4 GB each) | 1 worker later | queued until the box is lighter |
 | deepstrain | Regression; METRICS errata (bridge verifies independently); sGB note; time-slide literature check | 1 core, light | go |
-| deepstrain | Benchmark build + 6–8 GB download | needs disk | WAITS for cleanup |
+| deepstrain | Benchmark build + 6–8 GB download | ≤8 GB download | cleared once disk is freed (17 GB), after its literature check, with notice to the bridge first |
 | cuspis | Upper-bound literature sweep | no compute | DONE (898cfcf): no published cap mechanism |
 | cuspis | Free-field lattice test of the wedge mutual-information statement (Sumit go), then write-up | 1 core, <2 GB, <200 MB | DONE (prereg 6785173, result 06ec09f): VOID as registered (control failed to plateau at 90°); 2.894 grade unchanged; slot released; short consolidation then stop |
 | bridge | V17: independent first-order check of ansatz §153 (prereg aea5ffb, amendments 0e8de6b, 3e6557b) | 1 core, nice 10, <3 GB, <50 MB | RUNNING (pid 7778), controls first |
