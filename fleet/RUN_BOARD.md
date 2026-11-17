@@ -10,8 +10,9 @@ Large downloads wait for a disk cleanup.
 
 | Sister | Item | Slot | State |
 |---|---|---|---|
-| ansatz | True-fractal test (TS capture edge), after its preregistration | 2 cores, <1 GB, ~8 h | RUNNING since ~20:00 (prereg 471f76c; self-stops on disk, memory or swap limits) |
-| ansatz | Write-up of §150–§152; rank-3/4 design | none / slot request later | go |
+| ansatz | True-fractal test (TS capture edge), after its preregistration | 2 cores, <1 GB, ~12–13 h (ETA revised) | RUNNING since ~20:00 (prereg 471f76c; self-stops on disk, memory or swap limits) |
+| ansatz | Write-up of §150–§152 | none | in progress (d1c8031, 78bdbbb) |
+| ansatz | Small-deformation Killing-tensor jet test (prereg 4d7a0c3) | 1 core, <1 GB, short bursts <1 h total, nice 15 | cleared |
 | tabula | Tangle-seeded chaos check, after its preregistration | 2 cores, <2 GB, ~3 h | cleared (sent 2026-11-17 after its restart) |
 | tabula | p = 4/5 high-precision probe (30 min), then full run by request | 1 core | queued |
 | quantum | Regression, then wrapping test | 3 cores, ~1.5 GB | cleared after regression |
