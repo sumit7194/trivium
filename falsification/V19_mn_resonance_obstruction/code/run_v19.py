@@ -18,7 +18,10 @@ tori = {}
 for name, (rpM, zm, tgt, k, raM) in TORI.items():
     ok = {}
     for s in (+1, -1):
-        T = V.tune(M, s*a, rpM*M, mp.mpf(zm), tgt, raM*M)
+        try:
+            T = V.tune(M, s*a, rpM*M, mp.mpf(zm), tgt, raM*M)
+        except Exception as ex:
+            ok[s] = (False, None); log(dict(tag='gate sign', torus=name, asign=s, error=str(ex)[:120])); continue
         Tm = T; res = V.evaluate(Tm, G0f, lambda x, y: dict(tt=0, tp=0, pp=0, xx=0, yy=0), 8, k, check_shell=True)
         ok[s] = (res['shell'] < mp.mpf(10)**(-30), T)
         log(dict(tag='gate sign', torus=name, asign=s, shell=mp.nstr(res['shell'], 5), ra=mp.nstr(T.ra, 25),

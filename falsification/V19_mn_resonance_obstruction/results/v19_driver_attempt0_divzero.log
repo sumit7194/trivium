@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/sumit/Github/TheBridge/falsification/V19_mn_resonance_obstruction/code/run_v19.py", line 25, in <module>
+    Tm = T; res = V.evaluate(Tm, G0f, lambda x, y: dict(tt=0, tp=0, pp=0, xx=0, yy=0), 8, k, check_shell=True)
+                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sumit/Github/TheBridge/falsification/V19_mn_resonance_obstruction/code/v19.py", line 130, in evaluate
+    return dict(Fk=Fk, norm=norm, rho=abs(Fk)/norm, shell=shell)
+                                      ~~~~~~~^~~~~
+  File "<string>", line 7, in __div__
+  File "/opt/homebrew/lib/python3.15/site-packages/mpmath/libmp/libmpf.py", line 956, in mpf_div
+    if t == fzero: raise ZeroDivisionError
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+ZeroDivisionError

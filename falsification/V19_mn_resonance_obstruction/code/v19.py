@@ -127,7 +127,7 @@ def evaluate(T, G0f, G1f, N, k, check_shell=True):
                 s += F[i][j]*mp.cos(2*mp.pi*(kr*i + kt*j)/N)   # F even in each angle -> cosine coefficients
         return s/N**2
     Fk = coef(*k); norm = max(abs(coef(0, 0)), abs(coef(1, 0)), abs(coef(0, 1)))
-    return dict(Fk=Fk, norm=norm, rho=abs(Fk)/norm, shell=shell)
+    return dict(Fk=Fk, norm=norm, rho=(abs(Fk)/norm if norm != 0 else mp.mpf(0)), shell=shell)
 
 TORI = {  # name: (r_p in units of M, z_max, resonance p/q, k)
     'T1_12': (4, mp.mpf('0.5'), mp.mpf(1)/2, (2, -1)),

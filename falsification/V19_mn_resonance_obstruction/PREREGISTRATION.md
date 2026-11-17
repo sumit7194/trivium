@@ -99,3 +99,24 @@ Replacement tori, picked by the same scan, with r_a set by tuning:
 - **2 : 3:** (6M, 0.3) at r_a ≈ 10M, and (5M, 0.5) at r_a ≈ 17M.
 
 Nothing else changes: gates, controls, thresholds and verdict rules all stay as registered.
+
+## Addendum 2 (2026-11-17, AFTER the registered run, which gave MIXED): a parity follow-up, registered before running
+**Registered verdict: MIXED**, recorded as such in FINDINGS.md. The MN target was resonant-nonzero on both 2 : 3 tori
+(ρ = 2.1e−5 and 6.4e−4) but zero (≈ 1e−41) on both 1 : 2 tori. The sabotage was the reverse: nonzero on the 1 : 2
+tori, zero on the 2 : 3 tori.
+
+**Hypothesis (post hoc, which is why it is tested here):** a parity selection rule.
+- z(q_θ + π) = −z(q_θ). The MN quadrupole (and h) is reflection-symmetric under z → −z, so F contains only even k_θ.
+- So F_(2,−1) vanishes on the 1 : 2 tori by symmetry, not because a first-order integral exists.
+- The sabotage x·y is odd in y, so its F contains only odd k_θ, and F_(3,−2) vanishes.
+
+**Predictions, frozen now. Same tori, same N = 64 and 128, same thresholds:**
+- **P1:** MN F_(4,−2) on A_12 and B_12 gives ρ > 1e−6. That is the doubled resonant harmonic, which is still resonant.
+- **P2:** MN odd-k_θ coefficients F_(1,1), F_(0,1) and F_(2,1) give ρ < 1e−30 on all four tori. Parity is exact.
+- **P3:** the sabotage's even-k_θ coefficients F_(0,2) and F_(1,2) give ρ < 1e−30 on all four tori.
+- **P4:** the integrable controls (dM, da, null) give F_(4,−2) with ρ < 1e−15 on A_12 and B_12. Multiples must vanish
+  too.
+
+**Reading:** if P1–P4 all hold, the MIXED result is explained by parity, and the MN quadrupole is obstructed on all
+four resonant tori, each via its lowest parity-allowed resonant harmonic. That gets reported as "registered MIXED;
+explained and resolved by a pre-stated addendum". Any failure is reported as is.
