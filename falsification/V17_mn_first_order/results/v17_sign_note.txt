@@ -1,0 +1,5 @@
+C0 sign check, 2026-11-17 (p1 = (5,3), P_A, r = 2, N = 3, q1):
+K(+a)-K(-a) == 4a p_t p_phi : True
+broken tensor (Carter + y p_y^2) annihilated by E0 (must be False): False
+true Carter annihilated (must be True): True
+sign runs: both asign=+1 and -1 gave gate_E0_basis true, basis_rank 5, nullity_E0 5, S_A = S_B = 5 for dM.

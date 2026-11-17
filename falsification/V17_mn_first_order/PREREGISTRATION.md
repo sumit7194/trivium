@@ -102,3 +102,21 @@ registered ξ = (x y² + x²/3) ∂_x + (x y) ∂_y would create a g^xy term in 
 So C1b now uses ξ = (x³/3) ∂_x + y² ∂_y (ξ^x depends on x only and ξ^y on y only, so no cross term). The expectation
 is unchanged: S = the Kerr count. Nothing else changes. Noted for the record: the MN h is diagonal in (x, y), so the
 target is not affected by this limitation.
+
+## Amendment 2 (2026-11-17, after the C0 sign check, before any control or target run)
+The C0 sign rule ("exactly one sign of a passes") was a wrong expectation. **Both signs pass, and they must:**
+- K(+a) − K(−a) = 4a p_t p_φ, which is a trivial Killing tensor; this was verified exactly on the jets;
+- so either sign gives a valid Carter tensor, and the span of the Kerr basis is the same.
+
+The gate can still fail: a deliberately broken tensor, Carter + y p_y², is correctly rejected (E₀·jet ≠ 0), while the
+true Carter is annihilated. Both outputs are recorded in results/v17_sign_note.txt.
+
+Decision: use +a throughout. No control or target outcome has been seen, so nothing else changes.
+
+**Run plan (fixed now):**
+- Controls run first: C0 (the basis gate, inside every run), C1 dM and da, C1b null, C2 sabotage.
+  - Each at p1, at P_A and P_B, both primes, valence 1–6, N = r + 1.
+  - Any control failure stops the driver before the target.
+- Then the target: mn, at p1 and p2, P_A and P_B, both primes, valence 1–6, N = r + 1, escalating to r + 2 and r + 3
+  while S > floor.
+- The job runs detached at nice 10, with a 3 GB RSS guard and a 5 GB disk guard.
