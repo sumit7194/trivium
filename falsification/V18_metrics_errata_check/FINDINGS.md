@@ -36,14 +36,22 @@ This is a sign error in the reprint. It is cosmetic for the paper's conclusions.
   They are not close. That's expected: low-order coefficients of a high-degree least-squares fit on [0, 0.85] are not
   Taylor coefficients.
 
-## NEW (not in the draft, as far as the bridge knows): Tables 1 and 2 appear to have swapped contents or captions
-- At a = 0, "Table 1, nlm = 022" polar gives −0.8787 − 0.1150i. That matches PG's **033** value (−0.8725 − 0.1150i) and
-  METRICS's own 033P fit, w₀ = −0.8728.
-- "Table 2, nlm = 033" polar gives −0.2258 − 0.0753i. That matches PG's **022** value (−0.2250 − 0.0752i) and the 022P
-  fit, w₀ = −0.2152.
-- The axial columns show the same swap: Table 1 axial is 0.1129, against the 033A fit's 0.1097; Table 2 axial is 0.0595,
-  against the 022A fit's 0.0552.
-- PG's own labels check out independently: its l = 2 GR value is C₀ = 0.37367, the Kerr 022 frequency.
+## RETRACTED (2026-11-17, same evening): "Tables 1 and 2 appear swapped" was the bridge's misreading
+In the arXiv HTML, each table's caption sits after its data (in main.tex the \caption and \label come after the
+tabular, as DeepStrain checked). The bridge paired each caption with the following table's data, which produced
+the apparent offset.
 
-**Status:** an inference from the HTML rendering. It needs confirming in main.tex (DeepStrain holds the source) before
-it goes into the note.
+Re-checked independently from the HTML: the data block that ends just before the caption "Table 1 (022)" starts at
+a = 0.005 with polar −0.22664 − 0.07525i. That equals the 022P fit evaluated at a = 0.005 (−0.22663 − 0.07523i) and
+PG's 022 value. **There is no swap, and no fourth erratum.**
+
+**E3 numbers, corrected.** The bridge's first numbers were measured against the 021 table by the same misreading.
+Against the true 022 table, the bridge gets:
+- a = 0.1: 15.7% (modulus);
+- a = 0.2: 382.5% (modulus).
+
+The Re/Im split is in the runs below. These agree with DeepStrain's 16% and 383% (|ω_fit − ω_table| / |ω_table|).
+E3 stands as DeepStrain stated it.
+
+**Lesson recorded:** in arXiv HTML text extraction, the caption comes after the data, so pair tables by \label in the
+tex, or by the caption's position, before reading values.
