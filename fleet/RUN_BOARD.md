@@ -90,3 +90,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - The real peak was 3.59 GB, against 2.2 GB declared; the source of the spike is not yet found.
   - The Y1 slot will be declared at 3.6 GB and scheduled with nothing else heavy alongside.
   - 1/month FAR is not reachable with 27.3 d of background; the plan is being corrected.
+- **Cuspis moved to "Cuspis-personal"** (Sumit's second account; handover 3ed9b9a). The old Cuspis session no longer touches the tree.
+  - EXP-040 (978b97c): continued in dimension D, the three anchor theories' κ/C_T cross at D ≈ 2.75 / 2.85 / 2.94. So the 13% band at D = 3 is "just past the crossings", not a general D = 3 law.
+  - Partially verified (two implementations sharing the reduction route). Runs < 4 min, 0.25 GB.
