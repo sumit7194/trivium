@@ -46,3 +46,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **Step 1:** Kerr at R2, ~2 h on 2 cores, nice 10. Granted.
   - **Step 2:** TS at R2, ~12–14 h on 2 cores. Granted only if the step 1 Kerr control passes; ansatz reports the outcome to the bridge first.
 - Box at grant time: 72% memory free, 0.26 GB swap, 16 GB disk free.
+- **08:33:** step 1 (Kerr at R2) FAILED its gate, so step 2 was not launched and the slot is released (ansatz 06844c5).
+  - Post-hoc reading: the engine's precision floor (~1e-16) lies above the registered 1e-18 refinement.
+  - Decision: not parked. Ansatz drafts a redesign proposal for Sumit (higher-precision engine, or a refinement floor calibrated on Kerr).
+  - The TS embargo stays in place both ways.
