@@ -34,10 +34,21 @@
       "recipient": "tabula-geometrica",
       "until": "ansatz's tangle verdict sealed AND any blind replication sealed (commit + sha256)",
       "opened": "2026-11-18",
-      "note": "Ansatz's homoclinic-tangle test at TS p=4/5, E=0.97, L=41/8 retrograde (prereg 7c43e03). Keep its splitting angle, Lazutkin invariant and multiplier values from tabula and from any replicator. Verdict words (TRANSVERSE / NOT RESOLVED / VOID) and seals may pass.",
+      "note": "Ansatz's homoclinic-tangle test at TS p=4/5, E=0.97, L=41/8 retrograde (prereg 7c43e03). Keep its splitting angle, Lazutkin invariant and multiplier values from tabula and from any replicator. Verdict words (TRANSVERSE / NOT RESOLVED / VOID) and seals may pass. Also applies to bridge V20 numbers.",
       "patterns": [
-        "(splitting|angle|theta|θ|lazutkin|Ω|omega|multiplier|lambda_u|λ_u|eigenvalue)[^.\\n]{0,40}\\d(\\.\\d+)?(e-?\\d+)?",
-        "\\d\\.\\d+e-?\\d+[^.\\n]{0,40}(splitting|angle|lazutkin|multiplier)"
+        "\\b(splitting|angle|theta|θ|lazutkin|Ω|omega|multiplier|lambda_u|λ_u|eigenvalue|x\\*|x_h)\\b[^.\\n]{0,40}?[=≈~:]\\s*[-−]?\\d+\\.\\d+(e-?\\d+)?",
+        "\\d\\.\\d+e-?\\d+[^.\\n]{0,40}\\b(splitting|angle|lazutkin|multiplier)\\b"
+      ]
+    },
+    {
+      "id": "v20-tangle-to-ansatz",
+      "recipient": "ansatz-machine",
+      "until": "V20 sealed AND ansatz numbers read for the blind comparison",
+      "opened": "2026-11-18",
+      "note": "Bridge V20 replication numbers (x*, lambda_u, theta, Omega, homoclinic point) must not reach ansatz before both are compared. Verdict words + seals may pass.",
+      "patterns": [
+        "\\b(splitting|angle|theta|θ|lazutkin|Ω|omega|multiplier|lambda_u|λ_u|eigenvalue|x\\*|x_h)\\b[^.\\n]{0,40}?[=≈~:]\\s*[-−]?\\d+\\.\\d+(e-?\\d+)?",
+        "\\d\\.\\d+e-?\\d+[^.\\n]{0,40}\\b(splitting|angle|lazutkin|multiplier)\\b"
       ]
     }
   ],
