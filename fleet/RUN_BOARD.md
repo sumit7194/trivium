@@ -37,3 +37,12 @@ Committed in core use when everything cleared is running: ansatz 2 + tabula 2 + 
 | bridge | Idle: V17 and V19 done; V18 done | — |
 
 Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 GB; nothing outward-facing.
+
+### 2026-11-18 07:25 IST — ansatz saddle test
+- The saddle test finished at 07:10 with no guard stop. The Kerr negative control FAILED, so the registered TS verdict is **VOID**.
+- Cause: an R1 precision floor near Kerr's separatrix, where integration error decides which pass an orbit plunges on.
+- The TS R1 data are sealed and stay unread (sha256 9876f3c9…, commit 02682bb).
+- Rerun per addendum 2 (7c1e845), which carries its own verdict:
+  - **Step 1:** Kerr at R2, ~2 h on 2 cores, nice 10. Granted.
+  - **Step 2:** TS at R2, ~12–14 h on 2 cores. Granted only if the step 1 Kerr control passes; ansatz reports the outcome to the bridge first.
+- Box at grant time: 72% memory free, 0.26 GB swap, 16 GB disk free.
