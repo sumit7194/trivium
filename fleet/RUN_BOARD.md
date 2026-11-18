@@ -170,3 +170,5 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - T-SWITCH′ found no certified strand pairs; T-BANDS certified none of its edges. T-L3′ (one-way gate) stands.
   - Post-hoc diagnosis: the bisection predicate was not owned by γ. A redesign proposal is next; nothing run.
 - **Sumit's go:** ansatz edge-link redesign (a5daf8e). Steps: prereg first, then Kerr and must-fail controls, then TS. ~1 h, 1 core.
+- **23:20:** ansatz edge-link v2 (prereg 60ccf93): registered controls VOID; v2′ (fde95e2) controls all PASS (187b233).
+  - TS window run GRANTED overnight: ~3.5–4.5 h, 1 core, checkpointed.
