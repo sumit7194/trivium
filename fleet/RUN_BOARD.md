@@ -133,3 +133,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - DeepStrain: Y1 full-24 slot granted; M11 public push held for Sumit.
   - tabula: told to hand over with Tabula-Geometrica-personal first (two sessions open on one repo).
   - Quantum G3 restarted 20:18 (PID 71097, guard 71169, 1 GB tree cap; 5db3a21).
+- **tabula §201 DONE** (784e9d2): canonical splitting measured at all 3 levels; Kerr valid; 12/12 jobs OK.
+  - §201-T grading (50c15b9): the splitting is polynomial/linear in h, not exponentially small (F1a passes).
+  - Variant B passes F1a, F1b, F2, F3 and F4.
+  - The per-level procedure fails F1b and F2 at ε = −0.03.
+  - Numbers stay local and embargoed (available for a later bridge blind replication).
