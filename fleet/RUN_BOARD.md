@@ -107,3 +107,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **Quantum-personal:** the E-representation prereg was AGREED (1496a30, 79fde97). Primary is Z-sym; ZG(256,128) is the timing-only fallback; B17 K = 5 is the existing rule.
   - Fable's "0 ∈ E not needed" was overruled by the Opus review; it is a real gate.
   - Implementation plus tests T1–T3 (light) are going ahead. The full run needs a slot after T3.
+- **tabula → "Tabula-Geometrica-personal".**
+  - §201 (PGID 75881) looks stuck: job 2 (TS2 ε = −0.01, dps 34) has run ~7 h against a ~10 min estimate. A suspected integrator loop; no result seen.
+  - Not stopped. The new session diagnoses it before any stop or relaunch.
+- **Cuspis-personal EXP-041** (EMI curve) done: ee21235.
