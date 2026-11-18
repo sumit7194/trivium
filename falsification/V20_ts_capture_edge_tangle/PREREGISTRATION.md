@@ -96,3 +96,35 @@ the link between this orbit and the §150 window.
 ## Resources
 1 core, nice 10, < 1 GB, < 20 MB disk, a 5 GB disk floor. Runtime is measured on the first run and expected to be
 under 1 h in total. Logged on fleet/RUN_BOARD.md.
+
+## Amendment 1 (2026-11-18, after the first driver pass; before any TS splitting value existed)
+**What the first pass showed:**
+- **B0** passed for ts45, kerr45 and ts35.
+- **B1 and B2** passed for every run. The worst values:
+  - R0 ≤ 1e−11;
+  - closure ≤ 2e−12;
+  - |p_x*| ≤ 6e−15;
+  - |det − 1| ≤ 1.1e−11;
+  - trace ≈ 38–40.
+- **B3** passed. Kerr x* = 4.99477735872 and 4.99330466468 equal the analytic retrograde (L·a < 0) unstable spherical
+  orbits, 4.994777358724 and 4.993304664677, to about 1e−12.
+- **B4** passed (results/B4_ts35.json). It reproduced V16's sealed Ω and θ to 0.08%.
+- **TS fixed point:** the scan over [2, 30] found exactly one symmetric fixed point, hyperbolic, with trace 38.41.
+
+**Bug:** the homoclinic search found no crossing on the outward branch of any TS run, nor of the Kerr runs at
+s0 = 1e−7.
+- **Cause:** the "linear-zone" filter skipped any pair with |x − x*| < 10·s0·λⁿ. At λ ≈ 40 and n = 5 that threshold
+  is ~100, which skips everything. A debug trace (Kerr and TS, s0 = 1e−7, sign of p_x along the segment per iterate)
+  shows a clean single sign change of p_x at n = 5 on the outward branch.
+- **Fix:** skip only pairs with both |x − x*| < 1e−3. Nothing else changes. Gates, thresholds and the verdict rule
+  are as registered.
+
+**Disclosed, seen before this amendment:**
+- the Kerr floor at s0 = 1e−8 (the runs where the bug didn't bite): θ_Kerr ≈ 0.8–5e−5 and |Ω_Kerr| ≈ 0.3–2.3e−8, with
+  random signs;
+- the TS fixed point (x* ≈ 9.8046, λ ≈ 38.39), which is below the V12 inner transition at about 9.98;
+- the debug trace's TS p_x sign pattern, which shows the first crossing at n = 5 but no splitting value.
+
+**Consequence, stated now:** with float64 and n = 5 (λ⁵ ≈ 1e8 amplification), this Kerr floor means TRANSVERSE
+under the registered 1e3 rule needs θ_TS ≳ 5e−2. If TS lands below that, the registered verdict is NOT RESOLVED. Any
+precision upgrade would then be a separate, pre-registered amendment 2, and the original verdict stays.
