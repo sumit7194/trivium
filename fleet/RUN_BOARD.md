@@ -74,3 +74,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **14:03:** Quantum G3 worker restarted (PID 57519, guard 57558; 5 GB cap, stops on yellow).
   - Overnight its footprint grew ~46 MB/min (0.09 → 1.47 GB over 30 min), a second contributor to 01:23.
   - Quantum reports the growth curve after ~30 min: leak, or task size.
+- **14:32:** Quantum G3 worker stopped by its guard on yellow pressure.
+  - Task #21 grows linearly (~61 MB/min) from a fresh start and has never completed in 3 attempts.
+  - It stays STOPPED until Quantum finds whether this is a leak or a real peak, and sends a slot request.
+  - At 14:34 the box showed 59% free, swap 0.26 GB.
