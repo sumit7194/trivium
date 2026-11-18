@@ -181,3 +181,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Part A, claimed: TS δ=2 is not meromorphically integrable on the axis orbit at every E ≠ 0 (8 simple points generically; 4 simple + 2 double at E²/μ² = 1 + 1/|q|). The general f0(p, q) is checked against the Bridge transcription.
   - Part B: the axis test is blind to the twist. A third-order VE sees it, but "only Kerr" remains a programme.
   - MORNING: pre-register Bridge V22 from THEOREM_TS.md section 5 (T-a..T-d), then a fresh-Opus review.
+- **Overnight: ansatz edge-link v2′ VACUOUS** (73ac61a, §156). The vacuity guards failed (close passes to γ are rare), so no bisections ran.
+  - The ownership-slope test is validated (Kerr separatrix ½, γ 1, artefacts 0).
+  - New proposal (bisect on the 300-crossing fate, classify by slope) waits for Sumit. Nothing running.
