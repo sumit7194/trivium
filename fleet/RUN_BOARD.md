@@ -78,3 +78,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Task #21 grows linearly (~61 MB/min) from a fresh start and has never completed in 3 attempts.
   - It stays STOPPED until Quantum finds whether this is a leak or a real peak, and sends a slot request.
   - At 14:34 the box showed 59% free, swap 0.26 GB.
+- **14:35:** DeepStrain Y0 oracle done (e168e8d); GWOSC stats check passed (5ad8be8).
+  - Peak was 3.53 GB, close to the 4 GB cap. Together with Quantum's G3 at ~1.9 GB it is the likely trigger of the 14:32 yellow.
+  - DeepStrain will crop to signal windows before reuse. The Y1/Y2 memory probe (< 30 min) is OK.
