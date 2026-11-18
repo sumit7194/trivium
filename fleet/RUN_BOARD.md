@@ -119,3 +119,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **16:45:** Quantum-personal Z-sym run STARTED (PID 37679, guard 37817; 96a65dd). T4 stop/resume is byte-identical.
   - Guard re-armed by the bridge: stop on swap > 2 GB AND pressure ≥ 2, or on level 4, each sustained 600 s. Disk < 5 GB and own footprint > 300 MB stop at once.
   - Reason: the kernel pressure level read 2 at 48% free.
+- **20:20:** tabula §201-T blind theory prediction REGISTERED. Seals: d146f2c, e2332b4, 625a543 (note da5106c0…, json 773500a4…), hashes verified.
+  - Theory by Fable 5.2; review and compute by Opus.
+  - The registered per-level procedure failed its p = 3/5 validation. Variant B is post-hoc on p = 3/5 but blind to §201.
+  - §201 was paused (SIGSTOP) 19:22–20:12 for the seal, and is now on job 12/12.
+  - The embargo is NOT lifted (no ansatz verdict to compare).
