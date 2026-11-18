@@ -111,3 +111,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - §201 (PGID 75881) looks stuck: job 2 (TS2 ε = −0.01, dps 34) has run ~7 h against a ~10 min estimate. A suspected integrator loop; no result seen.
   - Not stopped. The new session diagnoses it before any stop or relaunch.
 - **Cuspis-personal EXP-041** (EMI curve) done: ee21235.
+- **16:40:** Quantum-personal Z-sym enclosure run GRANTED: 1 core, nice 10, < 250 MB, < 300 MB disk, ~39 h.
+  - T1–T3 pass (9b9fdc6, bb7aa8e); amendment A1 (b9dac75); the timing-only decision is Z-sym.
+  - Guard: disk stops at once; swap/pressure stops only if sustained 10 min. No auto-restart.
+  - G3 still held until swap is under ~1 GB.
+- **Fable task sent to ansatz-machine-personal:** is the capture edge the W^s of the §154 orbit? Reasoning first, then an Opus review and prereg.
