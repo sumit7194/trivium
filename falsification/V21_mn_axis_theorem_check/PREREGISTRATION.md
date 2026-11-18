@@ -51,3 +51,23 @@ imports nothing from quantum or from Fable's text. It was checked against ansatz
 - **VOID:** a numerical or gate problem in V21 itself.
 
 Resources: 1 core, nice 10, minutes.
+
+## Amendment 1 (2026-11-18, after C1/C2 ran and BEFORE any C3 code or number)
+**C1 and C2 results:** both PASS by wide margins. C1 maximum relative difference ≤ 4.4e−40 for f, and |ω| ≤ 3.7e−40.
+C2 ≤ 5.7e−35 on all six (p, E, μ²) rows. Output in results/c12.json.
+
+**Error found in the registered C3 criterion (my own, found by re-reading Lemma 6 before coding C3).**
+- The convergence to the model is governed by G(x, W) → G(0, W), whose error is O(x).
+- On the lattice, x_j = (2β/σ_j)^{1/3} ~ j^{−1/3}, so the deviation should fall like j^{−1/3}, not like 1/j.
+- The registered "Richardson (O(1/j)) within 0.5% and j = 80 within 2%" was mis-specified and could fail with a
+  correct theorem.
+
+**Replacement (C3b′), fixed now:**
+- Use j ∈ {10, 10², 10³, 10⁴, 10⁵, 10⁶}. Record x_j = |2β/σ_c|^{1/3} at the loop centre.
+- **PASS:**
+  - (i) |tr| − 234.769 decreases monotonically in |x_j| over the last four j;
+  - (ii) a fit of |tr| = T∞ + c₁x + c₂x² over the four smallest x gives T∞ within 0.5% of 234.769;
+  - (iii) j = 10⁶ is within 2%.
+- **C3a′ (single turning point):** |tr| at j = 10⁶ must be ≤ 2e−2, decreasing in x.
+- Everything else in C3 is unchanged: both parameter rows, the rtol checks, |tr| registered with the sign reported,
+  and C3c informational.
