@@ -124,3 +124,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - The registered per-level procedure failed its p = 3/5 validation. Variant B is post-hoc on p = 3/5 but blind to §201.
   - §201 was paused (SIGSTOP) 19:22–20:12 for the seal, and is now on job 12/12.
   - The embargo is NOT lifted (no ansatz verdict to compare).
+- **20:17:** Quantum work back in the "Quantum" session (office account; Quantum-personal closed).
+  - The Z-sym run is fast: t 176/292 after 3.5 h, 178 MB.
+  - G3 RELEASED (swap 0.4 GB, 81% free): 1 core, nice 15, sustained-600-s guard.
+- **Coordination:** sisters run on the office account with Opus; Fable only occasionally, on the personal account.
