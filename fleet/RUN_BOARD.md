@@ -152,3 +152,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - T-L6 certified at all 4 rows, rotating p1 included.
   - Fresh Opus review (6811d2d): Theorem 1 STANDS WITH CORRECTIONS (localised class; real-analytic exterior integrals not covered).
   - Phase 2 (j = 100, 1000) GRANTED: ≤ 90 min, 1 core.
+- **ansatz edge-link TS T-L3′: PASS** (4bdb161), graded a post-failure amendment, blind to TS. 67 min; slot released. Kerr T-BANDS cost is being measured next.
