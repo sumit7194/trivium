@@ -52,3 +52,26 @@ is not a blind first attempt.
 
 Environment: Python 3.14.5 (/Users/sumit/Github/conjecture_machine/.venv), numpy 2.4.6, scipy 1.18.0, sympy 1.14.0,
 numba 0.65.1, Accelerate BLAS, macOS 27.2.
+
+## Blind comparison with ansatz §154 (recorded after the V20 seal 8b7eb6f; ansatz values received by message, its embargo lift 43cde03)
+Ansatz: R2 (DD, tol 1e−28), δ = 1e−12. V20: float64, the four amendment-2 variants.
+
+| quantity | ansatz | V20 (worst variant) | relative difference | tolerance | result |
+|---|---|---|---|---|---|
+| x* | 9.804559168202628 | 9.8045591682 | ≤ 8.5e−15 | 1e−7 | **AGREE** |
+| λ_u | 38.387723771736 | 38.38772377 | ≤ 6.9e−13 | 1e−5 | **AGREE** |
+| x_h | 56.861080125941 | 56.8610801259 | ≤ 4.2e−13 | 1e−6 | **AGREE** |
+| θ | 0.011237603095 | 1.1237e−2 … 1.1247e−2 | 1.9e−5 … 8.1e−4 | 2% | **AGREE** |
+| n | 8 (δ 1e−12), 7 (δ 1e−11) | 4 (s0 1e−5, 1e−6) | not comparable as registered | exact | **n/a** (see below) |
+
+- **The index n:** as amendment 2 found, n depends on where the seed segment sits, and ansatz's δ differs from V20's
+  s0, so "n exact" can't be applied literally. This is recorded as not applicable, not as a pass. The seed-independent
+  quantity is s_h·λⁿ, the distance along the unit unstable eigenvector that maps onto the homoclinic point. It is
+  38.25054 in V20 (all four variants) and 38.25058 for ansatz at both δ, a 1e−6 relative agreement.
+- Ansatz's p_x is the canonical momentum in the ts2:4/5 chart, with σ = 1 and m = 2/p. That is the same exact chart as
+  the bridge's ts45 (the V10 loader of the same sealed component files).
+- Kerr floor: ansatz 9.7e−14 (DD) against V20's 2e−7 (float64). Both are ≥ 4 orders below the TS θ.
+- **Reading:** two independent codes (DD GBS with finite differences, against float64 DOP853 with variational
+  equations) agree on every comparable quantity, θ included, to ≤ 0.08%. The comparison is one-way blind: V20 was
+  sealed before ansatz's numbers were read. The result is a transverse symmetric homoclinic point at this level,
+  numerical and not rigorous, with the scope as stated above.

@@ -39,17 +39,6 @@
         "(?:\\b(?:splitting|angle|theta|lazutkin|omega|multiplier|lambda_u|eigenvalue|x_h)\\b|θ|Ω|λ_u|x\\*)[^.\\n]{0,40}?[=≈~:]\\s*[-−]?\\d+\\.\\d+(e-?\\d+)?",
         "\\d\\.\\d+e-?\\d+[^.\\n]{0,40}\\b(splitting|angle|lazutkin|multiplier)\\b"
       ]
-    },
-    {
-      "id": "v20-tangle-to-ansatz",
-      "recipient": "ansatz-machine",
-      "until": "V20 sealed AND ansatz numbers read for the blind comparison",
-      "opened": "2026-11-18",
-      "note": "Bridge V20 replication numbers (x*, lambda_u, theta, Omega, homoclinic point) must not reach ansatz before both are compared. Verdict words + seals may pass.",
-      "patterns": [
-        "(?:\\b(?:splitting|angle|theta|lazutkin|omega|multiplier|lambda_u|eigenvalue|x_h)\\b|θ|Ω|λ_u|x\\*)[^.\\n]{0,40}?[=≈~:]\\s*[-−]?\\d+\\.\\d+(e-?\\d+)?",
-        "\\d\\.\\d+e-?\\d+[^.\\n]{0,40}\\b(splitting|angle|lazutkin|multiplier)\\b"
-      ]
     }
   ],
   "lifted": [
@@ -90,6 +79,18 @@
         "(Lazutkin|homoclinic invariant|lobe area)[^.\\n]{0,60}(=|≈|~|\\d\\.\\d)"
       ],
       "lifted_at": "2026-10-23, after V16 sealed (dade806, sha a8aa47c2...) and tabula verified it; tabula's values in SpaceTime b52b767"
+    },
+    {
+      "id": "v20-tangle-to-ansatz",
+      "recipient": "ansatz-machine",
+      "until": "V20 sealed AND ansatz numbers read for the blind comparison",
+      "opened": "2026-11-18",
+      "note": "Bridge V20 replication numbers (x*, lambda_u, theta, Omega, homoclinic point) must not reach ansatz before both are compared. Verdict words + seals may pass.",
+      "patterns": [
+        "(?:\\b(?:splitting|angle|theta|lazutkin|omega|multiplier|lambda_u|eigenvalue|x_h)\\b|θ|Ω|λ_u|x\\*)[^.\\n]{0,40}?[=≈~:]\\s*[-−]?\\d+\\.\\d+(e-?\\d+)?",
+        "\\d\\.\\d+e-?\\d+[^.\\n]{0,40}\\b(splitting|angle|lazutkin|multiplier)\\b"
+      ],
+      "lifted": "2026-11-18: comparison recorded after V20 seal 8b7eb6f"
     }
   ]
 }
