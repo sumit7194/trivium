@@ -128,3 +128,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - The Z-sym run is fast: t 176/292 after 3.5 h, 178 MB.
   - G3 RELEASED (swap 0.4 GB, 81% free): 1 core, nice 15, sustained-600-s guard.
 - **Coordination:** sisters run on the office account with Opus; Fable only occasionally, on the personal account.
+- **20:50:** sisters back on the office account. Acks and grants sent:
+  - ansatz: edge-link prereg acked; build and run.
+  - DeepStrain: Y1 full-24 slot granted; M11 public push held for Sumit.
+  - tabula: told to hand over with Tabula-Geometrica-personal first (two sessions open on one repo).
+  - Quantum G3 restarted 20:18 (PID 71097, guard 71169, 1 GB tree cap; 5db3a21).
