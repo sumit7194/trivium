@@ -147,3 +147,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **~21:45: MN axis theorem (Fable DESIGN.md).**
   - Bridge V21 (30231db): C1/C2 PASS (1e-35..1e-40); static C3 reproduces −(4 + 2cosh π√3) to 1e-8. Registered VOID on V21's own floor-limited clause.
   - Quantum-personal (Opus) on worktree branch mn-axis-theorem: fresh-Opus review running. Certified C3/C0/L6 prereg AGREED with a vacuity guard; phase 1 at 1 core, nice 10.
+- **21:50: MN axis-theorem certified phase 1 ALL PASS** (A1, c806979).
+  - Q1–Q4 pass; T-exact holds on 22 loops; T-limit static −234.60 ± 1e-19.
+  - T-L6 certified at all 4 rows, rotating p1 included.
+  - Fresh Opus review (6811d2d): Theorem 1 STANDS WITH CORRECTIONS (localised class; real-analytic exterior integrals not covered).
+  - Phase 2 (j = 100, 1000) GRANTED: ≤ 90 min, 1 core.
