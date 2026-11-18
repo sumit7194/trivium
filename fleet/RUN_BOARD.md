@@ -138,3 +138,5 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Variant B passes F1a, F1b, F2, F3 and F4.
   - The per-level procedure fails F1b and F2 at ε = −0.03.
   - Numbers stay local and embargoed (available for a later bridge blind replication).
+- **20:20:** DeepStrain Y1 noise LAUNCHED (PID 73724). The measured pace gives ~39 h for 24 segments, then fg ~6 h. Peak 2.5 GB RSS plus 3.1 GB MPS.
+- **M11 public correction PUSHED** (4df3fc4): all 4 looks still UNINFORMATIVE after the +5-s shift. Out-of-domain CNN FARs not re-checked (stated in the addendum).
