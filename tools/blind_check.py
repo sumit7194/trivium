@@ -7,10 +7,19 @@ import sys, re, json, os
 rec, path = sys.argv[1], sys.argv[2]
 text = sys.stdin.read() if path == '-' else open(path).read()
 E = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'EMBARGOES.json')))['embargoes']
+# Recipient matching FAILS CLOSED (fix 2026-11-18): a short name ('ansatz') or a bare uds socket address
+# ('uds:/tmp/cc-socks/66386.sock') used to match no embargo, so the check passed vacuously.
+# Now: a name applies an embargo if either is a prefix of the other; a recipient that matches no known
+# sister name gets EVERY embargo applied.
+KNOWN = ['ansatz-machine', 'tabula-geometrica', 'cuspis', 'quantum', 'deepstrain', 'vestigium', 'spherex']
+def norm(x): return x.strip().lower().split(' [')[0]
+def same(a, b): a, b = norm(a), norm(b); return len(a) >= 4 and len(b) >= 4 and (a.startswith(b) or b.startswith(a))
+known = any(same(rec, k) for k in KNOWN + [e['recipient'] for e in E if e['recipient'] != '*'])
+if not known: print('NOTE: recipient', repr(rec), 'not recognised -> applying ALL embargoes (fail closed)')
 hits = []
 for e in E:
     r = e['recipient']
-    if r != '*' and not rec.strip().lower().startswith(r.lower()): continue   # also matches 'name [ref]' and uds addresses with the name
+    if r != '*' and known and not same(rec, r): continue
     for p in e['patterns']:
         for m in re.finditer(p, text, re.I):
             hits.append((e['id'], m.group(0)[:120]))

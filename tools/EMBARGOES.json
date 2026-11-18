@@ -28,6 +28,17 @@
         "\\bh\\s*[=≈~]\\s*0?\\.\\d",
         "(entropy|escape rate)[^.\\n]{0,40}\\d\\.\\d"
       ]
+    },
+    {
+      "id": "ansatz-tangle-ts-capture-edge",
+      "recipient": "tabula-geometrica",
+      "until": "ansatz's tangle verdict sealed AND any blind replication sealed (commit + sha256)",
+      "opened": "2026-11-18",
+      "note": "Ansatz's homoclinic-tangle test at TS p=4/5, E=0.97, L=41/8 retrograde (prereg 7c43e03). Keep its splitting angle, Lazutkin invariant and multiplier values from tabula and from any replicator. Verdict words (TRANSVERSE / NOT RESOLVED / VOID) and seals may pass.",
+      "patterns": [
+        "(splitting|angle|theta|θ|lazutkin|Ω|omega|multiplier|lambda_u|λ_u|eigenvalue)[^.\\n]{0,40}\\d(\\.\\d+)?(e-?\\d+)?",
+        "\\d\\.\\d+e-?\\d+[^.\\n]{0,40}(splitting|angle|lazutkin|multiplier)"
+      ]
     }
   ],
   "lifted": [
