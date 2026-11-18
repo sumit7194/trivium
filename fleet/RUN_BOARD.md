@@ -62,3 +62,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Watchdog PID 89651, nice 20. Caps: 2.5 GB memory, stops when free disk falls below 5 GB or memory pressure reaches warn. Expected peak 1.5–2 GB.
 - Box at launch: pressure level 1, 72% free, 14 GB disk free.
 - Also running: tabula §201 (PID 75884). Quantum's wrapping runner has finished, but no report yet.
+- **13:10:** cuspis EXP-039 run 2 stopped at gate V3. Cause: double-precision noise in the EXP-038 reference at s = 6440.
+  - Addendum A (dcdc7fd) adds V3′, which sums over the above-floor nodes only, plus a floor diagnostic. It is graded a post-failure amendment.
+  - Run 3: watchdog PID 99122. Run 2 peaked at 1.31 GB.
