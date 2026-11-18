@@ -160,3 +160,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **ansatz edge-link: the registered T-SWITCH is VOID** (control failures, dd7dbdc). T-SWITCH′ controls pass (df66777).
   - TS T-BANDS plus T-SWITCH′ GRANTED: ~1.3 h, 1 core.
   - Grade: two post-failure amendments, blind to TS.
+- **~22:30: MN axis theorem certified run PASS** (branch mn-axis-theorem, tip 7d5a2fa, 11 commits, not pushed).
+  - T-exact holds on 66 loops; T-limit is 19.6/j² (matches V21); T-L6 certified at all 4 rows × 3 j.
+  - Lean 12/12 (L6_gl2, standard axioms). Disclosed: Lean peaked at 2.8 GB, over the 2 GB per-task figure.
+  - Revised THEOREM.md (Opus) states the localised class; real-analytic exterior integrals are not covered.
+  - Merge into main is for office Quantum (regenerate Certs/All.lean).
+  - Personal account near its weekly limit, so the next Fable task waits until Thursday.
