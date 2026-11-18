@@ -153,3 +153,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Fresh Opus review (6811d2d): Theorem 1 STANDS WITH CORRECTIONS (localised class; real-analytic exterior integrals not covered).
   - Phase 2 (j = 100, 1000) GRANTED: ≤ 90 min, 1 core.
 - **ansatz edge-link TS T-L3′: PASS** (4bdb161), graded a post-failure amendment, blind to TS. 67 min; slot released. Kerr T-BANDS cost is being measured next.
+- **Cuspis-personal (Fable, then Opus):**
+  - EXP-042A: no interacting-CFT κ exists in print; toy base rate for the clustering registered.
+  - EXP-043: Einstein's κ/C_T curve is the Mellin transform of a profile with a sharp edge at t = π/(2e); all 4 registered predictions pass, so each curve pair crosses exactly once for D > 2.
+  - Partially verified (lemma not read at source). Light compute.
