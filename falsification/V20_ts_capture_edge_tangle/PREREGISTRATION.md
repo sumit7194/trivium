@@ -128,3 +128,36 @@ s0 = 1e−7.
 **Consequence, stated now:** with float64 and n = 5 (λ⁵ ≈ 1e8 amplification), this Kerr floor means TRANSVERSE
 under the registered 1e3 rule needs θ_TS ≳ 5e−2. If TS lands below that, the registered verdict is NOT RESOLVED. Any
 precision upgrade would then be a separate, pre-registered amendment 2, and the original verdict stays.
+
+## Registered result of the corrected pass (amendment 1 code): **VOID** (gate B6 failed)
+All four TS variants found the same symmetric homoclinic point on the outward branch: x_h agrees to about 2e−9 across
+the variants. Ω_TS and θ_TS have the same sign in all four, and both sit ~100–200× above the Kerr floor (results/).
+But:
+- **B6, index:** n = 5 at s0 = 1e−7 and n = 6 at s0 = 1e−8. B6 required the same n. (It is the same point;
+  shifting the fundamental segment relabels the index.)
+- **B6, spread:** θ_TS and Ω_TS each vary by 17% across the variants, against a required < 5%. The n = 6 runs,
+  which carry 40× more amplification, are the outliers.
+- **Verdict margin (informational, since B6 already voids it):** max θ_Kerr ≈ 5.0e−5 and max |Ω_Kerr| ≈ 2.3e−8.
+  The ratios TS/Kerr are ~190 for θ and ~100 for Ω, below the registered 1e3.
+
+So the registered V20 verdict is **VOID**. Read informally, a TS splitting is visible above the float64 floor, but it is
+not resolved to the registered standard. This stays on record whatever amendment 2 finds.
+
+## Amendment 2 (registered after the VOID, before any run under it): fewer iterates, same verdict rule. A NEW verdict
+**Diagnosis:** the floor and the spread scale with the iterate count n.
+- Kerr's θ is about the same at rtol 1e−12 and 1e−13, so integration tolerance is not the limit.
+- The n = 6 variants are worse than the n = 5 ones.
+- The tangent t_u = λ⁻ⁿDPⁿe_u loses digits to cancellation as λⁿ grows (≈ 1e8 at n = 5).
+- Seeding further out, at larger s0, needs fewer iterates. The seed's error from the linear manifold approximation is
+  O(s0²), and lies mostly along e_s, which contracts by λ⁻ⁿ, so it doesn't grow.
+
+**Changes, and only these:**
+- s0 ∈ {1e−5, 1e−6} instead of {1e−7, 1e−8}. rtol stays at {1e−12, 1e−13}. Plus one linearisation check, s0 = 1e−4
+  at rtol 1e−13, which is reported but is NOT a gate.
+- **B6′ (replaces B6):** all four variants must give the same homoclinic point, x_h agreeing to ≤ 1e−6 relative. The
+  index n may differ, because it depends on where the segment sits. The spread of θ and of Ω must still be < 5%.
+- **B5′:** the Kerr floor is re-measured with the same four variants at both Kerr partners.
+- **Verdict rule unchanged:** TRANSVERSE if |Ω_TS| > 1e3·max|Ω_Kerr| and θ_TS > 1e3·max θ_Kerr. Otherwise NOT
+  RESOLVED, or VOID if a gate fails.
+- **Fallback if this is NOT RESOLVED:** a higher-precision integrator, which would be its own amendment. Nothing is
+  averaged or rescued.
