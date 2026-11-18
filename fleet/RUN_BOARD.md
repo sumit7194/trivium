@@ -166,3 +166,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Revised THEOREM.md (Opus) states the localised class; real-analytic exterior integrals are not covered.
   - Merge into main is for office Quantum (regenerate Certs/All.lean).
   - Personal account near its weekly limit, so the next Fable task waits until Thursday.
+- **~23:45: ansatz edge-link VERDICT NOT ESTABLISHED** (dc06b20, §155).
+  - T-SWITCH′ found no certified strand pairs; T-BANDS certified none of its edges. T-L3′ (one-way gate) stands.
+  - Post-hoc diagnosis: the bisection predicate was not owned by γ. A redesign proposal is next; nothing run.
