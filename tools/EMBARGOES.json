@@ -39,6 +39,17 @@
         "(?:\\b(?:splitting|angle|theta|lazutkin|omega|multiplier|lambda_u|eigenvalue|x_h)\\b|θ|Ω|λ_u|x\\*)[^.\\n]{0,40}?[=≈~:]\\s*[-−]?\\d+\\.\\d+(e-?\\d+)?",
         "\\d\\.\\d+e-?\\d+[^.\\n]{0,40}\\b(splitting|angle|lazutkin|multiplier)\\b"
       ]
+    },
+    {
+      "id": "tabula-201-splitting-to-ansatz",
+      "recipient": "ansatz-machine",
+      "opened": "2026-11-18",
+      "until": "Sumit/bridge arrange a comparison; both sides sealed",
+      "note": "tabula §201 high-precision splitting values (p=4/5, E=0.94) kept from ansatz in case a blind comparison is wanted.",
+      "patterns": [
+        "(?:\\b(?:splitting|angle|theta|lazutkin|omega|multiplier|lambda_u|eigenvalue|x_h)\\b|θ|Ω|λ_u|x\\*)[^.\\n]{0,40}?[=≈~:]\\s*[-−]?\\d+\\.\\d+(e-?\\d+)?",
+        "\\d\\.\\d+e-?\\d+[^.\\n]{0,40}\\b(splitting|angle|lazutkin|multiplier)\\b"
+      ]
     }
   ],
   "lifted": [
