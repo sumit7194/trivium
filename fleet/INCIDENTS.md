@@ -26,3 +26,9 @@ per the user's direction. They are kept in local, uncommitted notes.
 - Fleet impact: each sister audited its own code locally. The bridge's paper code, ansatz, deepstrain and quantum are
   unaffected. Tabula moved to an alternative library build.
 - Results are not affected.
+
+## 2026-11-19 09:55 — the Bridge's own V22 check pushed swap to 3.5 GB and stopped ansatz's v3 run
+- **Cause:** V22's float monodromy code called scipy solve_ivp without t_eval=[], so it stored every accepted step. The same leak Quantum found and fixed on 11-18 (02391fb). It ran 1 h 50 min and reached 13 GB compressed.
+- **Effect:** ansatz's v3 window guard fired correctly (swap > 2 GB with pressure 2, sustained 1,035 s) and stopped it at 09:55. Checkpoint 793a4c9; nothing lost.
+- **Fix:** Bridge stopped PID 30460 (verified own) at 09:57. Swap fell and pressure returned to 1. t_eval=[] added to v22.py. V22 reruns only under a footprint cap.
+- **Lesson:** the Bridge ran a job without its own footprint guard while asking every sister to have one. From now on every Bridge compute job runs under a footprint cap (ulimit or a watcher), the same rule as the sisters'.
