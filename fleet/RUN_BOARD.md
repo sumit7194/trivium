@@ -184,3 +184,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **Overnight: ansatz edge-link v2′ VACUOUS** (73ac61a, §156). The vacuity guards failed (close passes to γ are rare), so no bisections ran.
   - The ownership-slope test is validated (Kerr separatrix ½, γ 1, artefacts 0).
   - New proposal (bisect on the 300-crossing fate, classify by slope) waits for Sumit. Nothing running.
+- **08:35:** Quantum A2 pre-tests T1r and T4r PASS; REDO amendment and A2 REGISTERED (858234f).
+  - main run at step 1460, maxE 1.2e-2, tracking the REDO-off blow-up.
+  - main_redo launches once the main run's registered outcome is recorded.
+- ansatz v3 TS window running (~3.2 h, Sumit's direct go).
+- Bridge V22: T1 and T2 PASS (exact); T4f TS T-a non-commuting. Remaining T4f and controls rerunning (PID 30460).
