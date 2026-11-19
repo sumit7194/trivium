@@ -199,3 +199,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **23:45:** Quantum G3 switched to 3 claim-based workers (PIDs 37214, 37246, 37279; guards 37219, 37251, 37291), 1 core each, nice 15, ~90 MB each.
   - Gates passed (485d857): bit-identical reruns, and a dummy-claim test.
   - 14 tasks remain; ETA ~6–10 h. G1_00_P misattribution fixed forward (6867aa0).
+- **11-20 05:03: DeepStrain LongChirp benchmark COMPLETE** (e144731).
+  - Y1 bank: 57.5 Mpc @1/day; Y2 CNN 48.4 Mpc (own var) or 25.5 (±1 s); Y0 oracle 155 Mpc.
+  - Y1/Y2 ratio 1.19 [1.10, 1.29] @1/day.
+  - Memory: y1fg peaked over its declaration (4.06 GB); the watchdog stopped it 3×. Root cause: a pycbc TaylorF2 per-length leak; fixed with short-lived children.
+  - Release/DOI and the README need Sumit.
