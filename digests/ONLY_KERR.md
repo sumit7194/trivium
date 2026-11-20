@@ -11,9 +11,10 @@ Human direction: Sumit Pal. Checks: falsification/V25_only_kerr_checks; ansatz �
   the Carter constant, comes from a hidden symmetry (a Killing tensor). Every "bumpy" deformation people have
   studied numerically (Manko–Novikov, Zipoy–Voorhees, Tomimatsu–Sato) shows chaos somewhere.
 - **The folklore is that integrability singles out Kerr.** That folklore is what makes "look for chaos in extreme-
-  mass-ratio inspirals" a test of the Kerr hypothesis for LISA. As far as we know (literature check still owed), there
-  is no theorem saying that integrability singles out Kerr in a broad class of stationary axisymmetric vacuum
-  spacetimes. Killing-tensor classifications cover only integrals polynomial in momenta.
+  mass-ratio inspirals" a test of the Kerr hypothesis for LISA. Markakis (MNRAS 441, 2974 (2014)) states it as a
+  conjecture: a stationary axisymmetric vacuum spacetime is integrable iff it is Kerr. He proves only a Newtonian,
+  polynomial-integral analogue. We found no theorem of this kind in the relativistic setting (section 11).
+  Killing-tensor work covers only integrals polynomial in momenta, and only for named metrics or static classes.
 - **What this result adds.** A proof covering a large class:
   - rational axis data whose real part has at least two distinct poles;
   - an arbitrary rational twist;
@@ -137,11 +138,50 @@ rotation would produce. Only Kerr's rotation (or its mirror image) cancels exact
 4. Small items:
    - the pole-at-infinity variant of Lemma X (a sketch);
    - writing out that κω_i(E) is non-constant;
-   - a literature check of Morales–Ramis–Simó and of prior "Kerr uniqueness by integrability" results.
+   - a full-text read of Brink III/IV and of the Morales–Ramis literature beyond MPS 2013 (first-pass literature
+     check done, section 11).
 
 ## 10. Talk test (can we explain it?)
 We can explain every step above, Fable's included.
 
-Not yet ready for outreach:
-- the literature check (item 9.4), so attribution is right;
-- an exact statement of which known results this extends.
+**Outreach status.** Ready for outreach, with the first-pass literature check done (section 11). The framing is:
+- a partial proof of Markakis's conjecture;
+- in the class of meromorphic integrals near the complexified axis;
+- for rational two-centre axis data.
+
+Before sending:
+- read Brink III/IV in full, since they are the closest in setting;
+- ask an expert in the Morales–Ramis school whether anything unpublished or obscure overlaps.
+
+## 11. Prior work (first-pass literature check, Bridge, 2026-11-20)
+**Method.**
+- Web searches.
+- A full-text or abstract read of the closest papers; the depth is stated per item.
+- INSPIRE citation lists of the four nearest works:
+  - MPS 2013: 10 citing papers;
+  - Markakis 2014: 14;
+  - Brink IV: 15;
+  - Vollmer 2017: 4.
+
+None of those citing papers is a differential-Galois classification of stationary axisymmetric vacuum spacetimes
+along the axis.
+
+| work | what it proves | class of integrals | relation |
+|---|---|---|---|
+| Markakis, MNRAS 441 (2014), arXiv:1202.5228 (intro read; rest from summary) | Newtonian: quadratic constants exist only for one family; no quartic ones for vacuum potentials. Relativistic: "integrable iff Kerr", as a **conjecture** | polynomial in momenta | **Anticipates our statement as a conjecture.** Ours is a partial proof in a different integral class |
+| Brink, Spacetime Encodings I–IV, PRD 78 (2008), 81 (2010); arXiv:0911.1589, 0911.1595 (abstracts only) | Killing tensors in SAV from the Ernst potential; type-D quadratic case; a suggested algebraic test for quartic Killing tensors | polynomial, of order 2 and 4 | Closest in setting (Ernst data). A test, not a classification. **Read in full before outreach** |
+| Vollmer, J. Geom. Phys. 115 (2017), arXiv:1602.08968; PRD 92 (2015), arXiv:1506.06926 (abstracts) | No nontrivial Killing tensors up to valence 7, 9 and 11 for TS, the C-metric and ZV; valence 3 reducible in the static Weyl class | polynomial, bounded valence | Complementary (named metrics) |
+| Kokkinos, arXiv:2608.22523 (2026; partly read) | No irreducible rank-2 Killing tensor in the static Weyl class | quadratic | Complementary (static) |
+| Maciejewski–Przybylska–Stachowiak, PRD 88 (2013), arXiv:1302.4234 (read earlier, fleet LITERATURE.md) | ZV δ = 2 non-integrable via equatorial orbits, first-order Kovacic | meromorphic | Same method on one metric. Our class (ii) needs this kind of second orbit |
+| arXiv:1111.4690, 1206.0660 (titles only) | no 6th-degree integral for ZV; non-integrability of ZV | polynomial / numerical | Complementary |
+| arXiv:gr-qc/0701065 (snippet only) | numerically, TS δ = 2 geodesics "appear integrable" | numerical | **Conflicts** with the fleet's TS δ = 2 obstructions (first-order axis count: deg f0 = 4; the V20 tangle). Worth a footnote |
+
+**Reading.** As far as this check reaches:
+- the result is new as a theorem;
+- its target statement was anticipated as a conjecture (Markakis);
+- its setting was anticipated by Brink's Ernst/Killing-tensor programme (polynomial integrals only).
+
+**Not exhaustive:**
+- no full-text read of Brink;
+- the Morales–Ramis community's own work (Maciejewski, Przybylska, Combot, Morales-Ruiz) was searched only through
+  citations of MPS 2013.
