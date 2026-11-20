@@ -281,3 +281,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   data at r = 0.1. That comes from FD-600's truncation error near the origin: S-sized, about 20× the PINN BC level.
 - §206 GO, pre-registered first: switch the BC/IC data source to FD-2400 (minimal change) and repeat the §204
   R-Adam release.
+
+### 2026-11-21 05:08 IST: tabula §206 stopped by its own side guard (pressure level 2, 42% free); resumed ~05:35
+- Cause: Chrome at about 5.9 GB (three Gemini sessions) plus the FD-2400 dense solve. tabula's job was not the cause.
+- The resume is from the cache: the heavy solve is done and the remaining stages peak around 0.9 GB. Same gates.
+- Lesson: with three Gemini Task sessions open, Chrome's footprint grows with page length. Close finished Gemini
+  tabs before heavy local jobs.
