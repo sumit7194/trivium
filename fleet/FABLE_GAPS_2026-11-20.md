@@ -139,3 +139,9 @@ will be used. Each gap is marked:*
   - V26-F verifies its first-order core against the ODE trace invariant, to 5e−7.
   - The written closed form for δc0 has a sign typo; the computations behind it are correct.
   - Status: proved, core verified. The group-theory step (Kovacic exclusion) has been read once.
+- **2026-11-21 ~06:00, K4 extended (Neon T11, V26-G).**
+  - Statement: for every Kerr spin a outside a discrete set (numerically none on (0, 3]) and every allowed k ≠ 0 on
+    U_a outside a discrete set, the lower-axis Gal is SL2.
+  - Verified: the core identities and constants (V26-G).
+  - Read only: the loop construction and U_a = (−∞, 30/7), which Neon marks CHECKED.
+  - Effect: the whole asymptotically flat invisible family is obstructed, modulo U_a. That is a large step on K4.

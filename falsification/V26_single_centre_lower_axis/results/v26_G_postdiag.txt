@@ -1,0 +1,4 @@
+POST-RESULT DIAGNOSTIC (labelled, not a registered clause): deviation of I+/(-7 pi a^3/30) from 1 vs a
+a=0.01 ratio-1 = (-0.000821058 + 0.0199824j) ; (ratio-1)/a = (-0.0821058 + 1.99824j)
+a=0.003 ratio-1 = (-7.39256e-5 + 0.00599952j) ; (ratio-1)/a = (-0.0246419 + 1.99984j)
+a=0.001 ratio-1 = (-8.21425e-6 + 0.00199998j) ; (ratio-1)/a = (-0.00821425 + 1.99998j)

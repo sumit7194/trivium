@@ -310,3 +310,37 @@ Code: code/v26_F.py. Outputs:
 - **Status of the invisible-family obstruction:** "proved (Neon T8), with the first-order core verified (V26-F) and
   the non-vanishing constant independently confirmed". It is no longer "numerical only". A second fleet reader is
   wanted for the group-theory step before outreach.
+
+## Addendum G (2026-11-21 ~06:00): Neon T11, all spins a. **G1 PASS; G2 FAIL as registered (Bridge tolerance slip), every substantive clause PASS**
+Code: code/v26_G.py. Outputs: results/v26_G.txt; results/v26_G_postdiag.txt (labelled post-result).
+
+**G1 PASS.**
+- Neon's general-a δc0, which carries the corrected sign, satisfies δc0″ = Q/(2D³c_K″) to 1e−171 for
+  a ∈ {1/10, 3/5, 1, 2}.
+- It tends to 0, with leading term 7a/(30z²).
+- (c0″)² = (8/(5a⁶(u² + 1)⁶))·B(u², k) holds identically, and disc_w B = 240k(k − 4).
+- The T8-as-written sign fails the identity (7.2), so the control fires.
+
+**G2.** By independent ray-integral quadrature:
+
+| a | I₊(a) | Neon's |I₊| |
+|---|---|---|
+| 0.1 | −6.7546e−4 − 1.3417e−4 i (abs 6.887e−4) | 6.89e−4 ✓ |
+| 0.6 | −0.0243362 + 0.0232301 i | (T8 value) |
+| 1.0 | −0.135011 + 0.240097 i (abs 0.27545) | 0.275 ✓ |
+| 2.0 | −0.565637 + 1.345780 i | — |
+
+- I₊(0.6) on |z| = √1.36 equals the T8 value on |z| = 1.35 to 3.4e−18 (contour independence).
+- Re I₊ < 0 at all four values of a.
+- **Registered clause "|I₊/(−7πa³/30) − 1| < 1% at a = 0.01": FAIL** (0.0200).
+  - Cause, the Bridge's: the tolerance ignored the O(a⁴) correction that Neon stated. This is a control-clause slip:
+    the clause was not checked against what the true asymptotic can produce.
+  - Post-result diagnostic (labelled): (ratio − 1)/a = 1.99824i, 1.99984i and 1.99998i at a = 0.01, 0.003 and
+    0.001. So I₊(a) = −(7π/30)a³(1 + 2ia + O(a²)), and Neon's leading asymptotic is confirmed. The next
+    coefficient, 2i, is new.
+- The must-fail (7π/15) gives a ratio of ≈ 0.50, so the control fires.
+
+**Reading.** T11's checkable core is confirmed for every a tested. I₊(a) ≢ 0 is then a rigorous consequence of
+analyticity plus the small-a asymptotic. Not machine-checked here:
+- the large-E loop construction in Re z > a;
+- U_a = (−∞, 30/7), which Neon only marks CHECKED.
