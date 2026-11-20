@@ -75,3 +75,21 @@ F = 1 + r1²/m1² = 1.
 - **Cancellation control:** the same f0^- with the complexified reference twist (c0 = c_ref) must give A ≈ 0 (F = 0).
 - **Exact check:** ZV δ = 2 (q = M²) from below has a double pole (f0^- = z²/(z − M)²). So it is not two-centre and
   stays undecided, as claimed.
+
+## Addendum B (2026-11-20, late evening, before code): item 2 (regularity of the lower outer axis), instead of a full exact metric
+**Why the change.**
+- B1's first aim (does the lower-axis value equal 1/e_+?) is now settled by L-src, L-proof and L-num. The series IS
+  the solution off the axis near infinity.
+- What remains open is the physical caveat: is the lower outer axis regular, with no Misner string and no conical
+  defect, for asymptotically flat twisted data?
+
+**Argument (by hand, to check).** In Weyl–Papapetrou form, ∂_θ ω = r² sin θ ∂_r χ / f², where χ = Im e. So the jump of
+ω between the two outer axis segments, along a large semicircle, tends to −2 × (the 1/r coefficient of χ), i.e. to
+the NUT parameter. With c0 = O(z⁻²) there is no jump. ω is constant along each regular axis segment, so both are
+zero. γ → 0 at infinity on both segments likewise.
+
+**Check (own series code, v26_L solver).** Take e_+ = 1 − 2/z + i b/z² (b = 1), to order 10, and compute
+Δω(R) = ∫₀^π R² sin θ ∂_r χ / f² dθ at R = 20, 40, 80.
+- **PASS:** |Δω| decreases like R^{−1} or faster, towards 0.
+- **Must-fail control:** add a NUT term (+ i n/z, n = 1/2). Δω must tend to −2n·(sign convention), i.e. a nonzero
+  limit, within 1e−2 at R = 80.

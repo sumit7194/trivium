@@ -91,3 +91,19 @@ Numerators were sometimes forced to vanish at f0's zero.
 **The physical caveat is now sharper.** The corollary needs BOTH outer axis segments regular, and integrals
 meromorphic near BOTH axis families. A twisted single-centre solution may carry a singular lower axis (a string).
 If so, it falls outside the hypotheses rather than being excluded. That needs stating explicitly in any write-up.
+
+## Addendum A (B6): static double-pole data from below. **PASS** (code/v26_B6.py, Bridge V25 return-map machinery)
+**Decomposition.** f0^- = z²/(z² − 2z + q) = 1 − m1/(z − z1) − m2/(z − z2). This is exact for:
+- q = 3/4 (real roots 3/2 and 1/2; m = −2.25 and 0.25);
+- q = 5/4 (roots 1 ± i/2; m = −1 ± 0.75i).
+
+**Static (c0 = 0).** The cubic return-map coefficients match the closed form with F = 1 at E = 0.8 and 0.6 in both
+cases:
+- the error is 3e−9 to 3e−8, at or below the floor;
+- the self-checks are ≤ 3e−10;
+- the coefficients are nonzero (|A| ≈ 0.47–3.8). So the data are OBSTRUCTED at third order.
+
+**Cancellation control** (the complexified reference twist): A ≈ 0 (≤ 3e−8), as predicted (F = 0).
+
+**ZV δ = 2 control** (q = M²): f0^- = z²/(z − M)², a double pole. Seen from below it is again single-centre, so it is
+undecided by the axis. That agrees with Fable's statement.
