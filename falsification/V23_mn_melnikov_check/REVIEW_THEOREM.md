@@ -1,0 +1,50 @@
+# V23 review: the analytic steps of Fable's THEOREM_DRAFT (mn_melnikov). Bridge, Opus 5.5, 2026-11-20
+
+Scope: `fable_work/mn_melnikov/THEOREM_DRAFT.md` §2–§4 (Theorem A, Theorem A′, Corollary B) together with SETUP.md §1–§4.
+The numbers are in V23 FINDINGS (REPRODUCED). This file covers the logic only.
+
+## Verdict: SOUND IN STRUCTURE, with three things to close before the theorem can be stated as proved
+
+**Checked and agreed:**
+1. **The Mino-time reduction is legitimate.** K_β = Σ_Kerr(H_β + ½) is analytic near cl(Γ₀) under (K4). On {K_β = 0} its
+   flow is a time change of the geodesic flow on H = −½, and the physical level stays at K = 0 for every β. At β = 0,
+   K₀ = K_r + K_θ is an exact product.
+   - This is Robinson's setting: a 4-dimensional reduced phase space; (A1) with F = K_r; (A2) with γ₀ the unstable
+     spherical orbit and Γ₀ the shared separatrix component.
+   - The periodic orbit continues into {K_β = 0}, because a hyperbolic periodic orbit of a Hamiltonian lies in a
+     one-parameter family indexed by energy.
+2. **Convergence.** dK_r = 0 on γ₀, so the Melnikov integral is absolutely convergent (Robinson's Remark 3.10).
+3. **Symmetry.** Evenness of L follows from the reversors (R₁) and from r_h(−λ) = r_h(λ), z(−ψ) = z(ψ). The even-harmonic
+   rule matches V19 and is confirmed numerically in V23 (odd harmonics ≈ 0 for MN; even ones ≈ 0 for the y-odd
+   sabotage).
+   - Lemma S (symmetric homoclinic orbits persist) holds by the transversality of Fix R_i to W^u₀ within the level.
+     The argument is standard.
+4. **Step 6 (Moser's argument).** It is correct as written: λ-lemma accumulation plus the identity theorem for
+   s^m g(u, s). It gives exclusion on any connected open U ⊃ γ_β ∪ Γ_β, in the real exterior. No complexification is
+   used.
+5. **Theorem A′'s finite-branch argument.** Correct.
+   - Near p, the zero set of a nonconstant real-analytic F − F(p) in the 2D section is a finite union of analytic
+     half-branches ending at p (Łojasiewicz).
+   - A W^u arc through Pⁿ(q) cannot lie on the W^s_loc branch. If it did, W^u and W^s would coincide near Pⁿ(q),
+     hence everywhere by analytic continuation, contradicting (N′).
+   - So some other branch meets W^s_loc at points accumulating at p, and must equal it. Contradiction.
+   - Note that it needs (N′) only, not transversality. That makes "D ≠ 0 ⟹ no real-analytic integral near the tangle"
+     the cleanest certified target: one number, sign-definite.
+6. **Corollary B.** The (E, L, μ) rescaling and the descent of F to the reduced level are fine. The uniform β₀ comes
+   from the implicit function theorem at a nondegenerate zero. Fine.
+
+**To close (none is a known gap; all three are "not yet verified by a second party"):**
+- **(i) The bracket form.** That M = ∫{K_r, K₁} dλ = Υ_θ L′(ψ₀) was checked numerically by Fable alone (its c2). V23 only
+  recomputed L. A second implementation of the bracket integral at a few ψ₀ would close it. (The boundary-term
+  argument in MELNIKOV §1 reads correctly: equal Mino phases at both ends.)
+- **(ii) Robinson 1996's exact hypotheses and conclusions** (Theorems 3.3–3.5, Remark 3.10) were read only by Fable. Someone
+  should read pp. 1–6 at source and check (A1), (A2), the smoothness class, and the sign convention.
+- **(iii) Certification of the one number.** L₂ ≠ 0 (equivalently D ≠ 0 for Theorem A′, and L″(0) ≠ 0 for Theorem A)
+  with interval arithmetic. The margin is 1e11 over the Kerr floor, so this is a formality, but it is the formality
+  that makes it a theorem.
+
+**Wording for any write-up (until (i)–(iii) close):** "for small nonzero quadrupole β, the Manko–Novikov geodesic flow
+has transverse homoclinic orbits near Kerr's inclined zoom-whirl orbits, and admits no real-analytic first integral
+(commuting with p_t and p_φ) on any region containing that tangle. This is conditional on one numerically computed,
+not yet interval-certified, Melnikov coefficient (independently reproduced, V23)". β₀ is not explicit, so β = 1/5 and
+β = −1/3 are NOT covered.
