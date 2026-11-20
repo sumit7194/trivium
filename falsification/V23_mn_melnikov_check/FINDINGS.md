@@ -30,3 +30,15 @@ numerical parameter.
 3. **The explicit β₀,** the static limit a = 0, and retrograde orbits.
 
 Environment: Python 3.14.5 (conjecture_machine .venv), numpy 2.4.6, sympy 1.14.0, mpmath 1.3.0, macOS 27.2.
+
+## Addendum A: bracket form M = ∫{K_r, K₁} dλ, directly (review item (i))
+- **Registered run: FAIL** on the Kerr control (3.0e−8 against 1e−10). Diagnosed as round-off in the finite-difference
+  step hx = 1e−6; it is not physics. The MN comparisons already agreed to 1e−6 and 1e−5.
+- **A2 (post-failure, diagnosed, all tolerances kept):** hx = 1e−4, Nchi = 16384. **PASS**:
+  - bracket vs Υ_θL′: 2.8672369681e−3 vs 2.8672372214e−3 at π/4 (8.8e−8 rel), and 2.0275063903e−3 vs
+    2.0275066876e−3 at π/8 (1.5e−7 rel);
+  - M(0) = 1.8e−11;
+  - Kerr ∂/∂M 5.5e−11 and ∂/∂a 1.3e−11 (≤ 1e−10).
+- **Review item (i) is CLOSED:** the Melnikov function equals Υ_θ L′(ψ₀), checked by a second implementation of the
+  bracket integral.
+- Items (ii) (Robinson at source) and (iii) (interval certification) remain open.

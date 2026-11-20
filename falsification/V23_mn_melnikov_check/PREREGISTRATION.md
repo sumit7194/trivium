@@ -65,3 +65,19 @@ Resources: 1 core, nice 10, a footprint watcher at 1.5 GB, minutes.
 - **Compare** with Υ_θ L′(ψ₀) from V23's harmonics: L′ = −4L₂ sin 2ψ₀ − 8L₄ sin 4ψ₀.
 - **PASS:** relative agreement ≤ 1e−4 at ψ₀ = π/4 and π/8, and |M(0)| ≤ 1e−3 × |M(π/4)| (the parity zero). The Kerr
   control ∂/∂M must give |M(π/4)| ≤ 1e−10.
+
+### Addendum A, registered result: FAIL on the Kerr-control clause. Amendment A2 (POST-FAILURE, diagnosed)
+- **Registered run** (Nchi 4096, finite-difference step hx = 1e−6):
+  - MN bracket vs Υ_θL′: 2.867240e−3 vs 2.867237e−3 at π/4 (1.0e−6 rel), and 2.027487e−3 vs 2.027507e−3 at π/8
+    (9.6e−6 rel). Both PASS.
+  - M(0) = −1.7e−9. PASS.
+  - **Kerr ∂/∂M control: 3.0e−8 > 1e−10. FAIL.** So addendum A as registered is a FAIL on its control clause.
+- **Diagnosis** (a scan, results seen):
+  - The control does not move with the θ-table resolution: 3.02e−8, 2.99e−8 and 3.06e−8 at Nchi 4096, 16384 and 65536.
+  - It falls with the finite-difference step: −1.3e−9 at hx = 1e−5, and 5.5e−11 at hx = 1e−4.
+  - So it is ROUND-OFF in the central difference ∂_x K₁ at hx = 1e−6 (K₁ is O(1–10) for h = ∂g/∂M). It is not physics
+    and not interpolation.
+  - The tolerance 1e−10 was set without checking this method's floor. That is another control-clause mis-specification
+    of mine (see the memory note "control-clause checks").
+- **A2:** rerun with hx = 1e−4 and Nchi 16384, keeping every tolerance. PASS requires the same clauses as addendum A. The
+  registered FAIL stays on record.
