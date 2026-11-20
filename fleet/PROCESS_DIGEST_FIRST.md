@@ -23,7 +23,8 @@ it is: preregistration, independent code, controls, certificates. What changes i
    - **The key idea, in plain words.**
    - **Target choice:** why this question, what the alternatives were, and what made it doable.
    - **What we learned, including the surprises and our own mistakes.**
-   - Written for a learner first. The certificates are the appendix.
+   - Written for the research community (an outside expert). The certificates are the appendix. The digest never
+     slows the work: the pace stays at the frontier by design, and Sumit gets plain-language summaries in chat.
 4. **Talk test (before any outreach).** We must be able to give a clear, correct, properly attributed explanation
    ourselves, Fable's parts included. Disclose tool use (Leiden Declaration, June 2026). Humans are the authors.
 5. **Digest before generating more.** No new results are requested (Fable or otherwise) while earlier ones have no
