@@ -1,0 +1,21 @@
+{
+ "x_star": 9.804559168202442,
+ "brake_x": 9.854403851771727,
+ "brake_y": 0.8571542069804663,
+ "brake_pu": -1.9940212675484403e-14,
+ "brake_V": 5.254140695509061e-11,
+ "t_brake": 0.15932960668279367,
+ "gamma_method": "B1 exact orbit derivatives",
+ "I3_maxC": -6.32334669979917e-05,
+ "I3_min_ratio": 0.6323346699799867,
+ "I3_worst_at": [
+  0.9999,
+  1.5707963267948966
+ ],
+ "points_outside_hill": 0,
+ "C_at_tau1_max": 5.396461055795498e-12,
+ "ratio_equator": 0.6323346699799867,
+ "ratio_near brake": 3.0415106270176264,
+ "NEG_straight_leaves_maxC": 0.9692767440578574,
+ "NEG_count_C_ge_0": 9417
+}

@@ -88,3 +88,20 @@ g_τ(v) = u₁ + τ(u_γ(v) − u₁). Then the tangency value C[g](v) = −V_u 
 
 **Not covered:** the sliver beyond the brake latitude (Fable's straight-line continuation), and a validated γ (interval
 enclosure). This addendum is a sample check, like Fable's own.
+
+### Addendum B, registered result: VOID (my own γ-fit failed its self-checks). Amendment B1 (POST-RESULT)
+- **γ: OK.** x* = 9.804559168202442 (V20: 9.804559168). Brake point (x, y) = (9.854404, 0.857154) with p_u = −2e−14 and
+  V = 5e−11 (gate ≤ 1e−9: PASS). This matches Fable's (9.85440, 0.857154).
+- **Fit gates FAILED:**
+  - Chebyshev degrees 40 and 60 agree only to 2.4e−6 (gate 1e−10);
+  - |C| at τ = 1 is 1.9e−4 (gate 1e−6).
+  - So the fit error is as large as C itself near τ → 1, and the I3 numbers can't be trusted: max C = −6e−5 < 0
+    everywhere; min −C/(1 − τ) = 0.596 at (τ = 0.9999, v = 1.5656); "equator" 2.50; "near brake" 3.04.
+  - Registered verdict: **VOID** (self-check failed).
+- **NEG (straight leaves): FIRED** (C ≥ 0 at 9417 points; max C = 0.97).
+- **B1 (implementation of γ only; leaves, grid and every tolerance unchanged):** drop the Chebyshev fit.
+  - Evaluate u_γ(v) and its derivatives EXACTLY from the orbit: invert v(t) by root-finding on the dense solution,
+    then g′ = p_u/p_v and g″ = (p_v·(−V_u) − p_u·(−V_v))/p_v³ at that point.
+  - Use v ∈ [v_b + 1e−3, π/2] (p_v → 0 at the brake makes g″ ill-conditioned; the last 1e−3 is left to the sliver
+    treatment, not covered).
+  - Rerun I3s with the same gates. |C| at τ = 1 should then be at integration-error level.

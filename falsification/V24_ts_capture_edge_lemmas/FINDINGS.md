@@ -31,3 +31,25 @@ coefficients, which are used here.
 - Fable's R3 redesign (the separatrix map).
 
 Environment: Python 3.14.5 (conjecture_machine .venv), sympy 1.14.0, mpmath 1.3.0, macOS 27.2.
+
+## Addendum B: I3 (convexity on γ-adapted leaves), sample check
+- **Registered run: VOID.** My Chebyshev fit of γ failed its self-checks: degree agreement 2.4e−6 against 1e−10, and
+  |C(τ = 1)| = 1.9e−4 against 1e−6.
+- **B1 (post-result; exact orbit derivatives replace the fit; v ≥ v_b + 1e−3):** **PASS.**
+  - γ: x* = 9.804559168202442; brake point (9.854404, 0.857154), with p_u = −2e−14 and V = 5e−11. Both match Fable and V20.
+  - Self-check |C(τ = 1)| = 5.4e−12 (γ is an orbit).
+  - **C < 0 at every sampled point** (103 τ values × 400 v values; max C = −6.3e−5). Every point lies inside Hill's region.
+  - **min −C/(1 − τ) = 0.6323, at the equator as τ → 1** (Fable: 0.63). Near the brake point: 3.04 (Fable: 3.0).
+- **Negative control (straight leaves u = const, x ∈ [9.50, 9.80]): FIRES** (C ≥ 0 at 9417 Hill points).
+- **Reading:** I3 holds on the sample, with Fable's margins reproduced by independent code. Like Fable's, this is a
+  sample check, NOT a proof. A proof needs a validated enclosure of γ plus interval arithmetic over the leaf zone. The
+  sliver beyond v_b + 1e−3 is not covered.
+
+## Status of Fable result #2 (capture-edge reduction) after V24
+- **Confirmed:** R (flat plane, exact); I1 and I2 (interval); I3 (sample, independent).
+- **Hence, with the lemma logic (to be reviewed):** Lemma F (funnel), Lemma R (returns), and Lemma G (γ's curve is a
+  global one-way gate). All have their inputs confirmed.
+- **Still open:**
+  - a review of the lemma logic (Lemmas G, Q, E and L3′; the hole lemma);
+  - the 1D lobe conditions (T, C1, C2: follow W^u for ~8 returns);
+  - Fable's separatrix-map test (R3 redesign).

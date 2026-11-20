@@ -1,0 +1,6 @@
+gamma: x* 9.804559168202442 brake (x, y) 9.854403851771727 0.8571542069804663 p_u -1.9940212675484403e-14 V 5.254140695509061e-11
+Chebyshev g/g'/g'' agreement 40 vs 60: 2.4423055197710097e-06
+I3: max C (inside Hill) -5.961e-05  min -C/(1-tau) 0.5961 at (0.9999, 1.5656348338806523)  outside-Hill pts 0  |C| at tau=1: 1.87e-04
+equator 2.500306044879439
+near brake 3.0441858095582988
+NEG straight leaves: max C 0.9692767440578574 count C>=0 9417
