@@ -32,3 +32,11 @@ per the user's direction. They are kept in local, uncommitted notes.
 - **Effect:** ansatz's v3 window guard fired correctly (swap > 2 GB with pressure 2, sustained 1,035 s) and stopped it at 09:55. Checkpoint 793a4c9; nothing lost.
 - **Fix:** Bridge stopped PID 30460 (verified own) at 09:57. Swap fell and pressure returned to 1. t_eval=[] added to v22.py. V22 reruns only under a footprint cap.
 - **Lesson:** the Bridge ran a job without its own footprint guard while asking every sister to have one. From now on every Bridge compute job runs under a footprint cap (ulimit or a watcher), the same rule as the sisters'.
+
+## 2026-11-20 — Bridge: footprint_watch.sh guarded the wrong process (no harm)
+- **What.** Jobs launched as `timeout … python …` were watched by PID of the `timeout` wrapper (~1 MB), not the
+  python child. So the memory cap was silently inactive for those runs (V24 C1/C1′ diagnostics, ~130 MB, harmless).
+- **Fix.** tools/footprint_watch.sh now sums memory over the PID and all its descendants, and TERMs the whole tree.
+  It was re-attached to the running job; committed 0f9809a.
+- **Lesson.** A guard must be tested against the actual process tree it protects. Check `pgrep -P` once after
+  attaching.
