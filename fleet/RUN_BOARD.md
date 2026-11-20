@@ -264,3 +264,12 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - New mechanism: every prereg carries a control table, and no must-fail is registered without a pre-check file.
 - The stage-B spec is in report.md for a cold resume.
 - Morning decision for Sumit: resume with Opus, or a compact Fable brief on the growth of Σ̃′ along Im α.
+
+### 2026-11-21 04:19 IST: tabula §204 DONE
+- Verdict 5 MIXED: PIN in 2/3 seeds.
+- The POSITIVE CONTROL FAILED in 3/3, so the instrument cannot tell "stable" from "stuck".
+- Secondary: frozen-set drift away from the truth, 3/3 (but Adam on fresh points drifts too).
+- Descriptive: releases lower the IC/BC terms while the field leaves the reference.
+- Bridge asked for a zero-training consistency check first: do the PINN loss and the FD reference define the same
+  problem? Pre-register, then run.
+- The box is free.
