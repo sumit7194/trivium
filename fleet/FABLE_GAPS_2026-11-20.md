@@ -64,6 +64,9 @@ will be used. Each gap is marked:*
   example.
   - **Assigned 2026-11-20 to ansatz** (Sumit offered its help): an independent re-derivation of the Kovacic count, plus a
     computational check on degree-2 controls and degree-3 examples, including the merged-zero edge case.
+  - **DONE** (ansatz §158, 5f14db2). The classification is CONFIRMED at generic E; the necessary direction is ~95%.
+    New edge case: three merging zeros can be solvable at special E, so the wording must be "generic E". K1 is
+    essentially closed for the Corollary.
 - **K2. Lemma X, critical case** (a twist pole at a critical point of f0). OPUS-TRY: a careful asymptotic argument.
 - **K3. Single-centre data** (Schwarzschild's f0 with any twist; ZV δ=2 and its twisted relatives). HARD.
   - This is the real wall between "only Kerr among two-centre data" and "only Kerr".

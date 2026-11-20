@@ -141,3 +141,23 @@ floors 1.5e−8 to 3.5e−8.
 - **Process:** two VOIDs on my own check code (the self-check factor; Richardson and ε choices) and three of my own
   bugs (sympy power simplification; SVD conjugation; sympy series speed). All were caught before verdicts and are
   recorded in PREREGISTRATION amendments A1–A3.
+
+## Gap G1 (the inherited first-order classification): independently checked by ansatz (RESULTS §158, 5f14db2; prereg 5df9e05)
+- **(a) Re-derivation.** The local exponents, the absence of log/apparent singularities (1 − ¾m² is never a rational
+  square), infinity ordinary for E² ≠ μ², and the Kovacic case-by-case bound s + 2h ≤ 4 are all CONFIRMED.
+- **New edge case.** Three merging zeros lower s + 2h by 1.
+  - Explicit example: f0 = ½ + ½((z − 1)/(z + 1))³ at E² = μ²/2 is solvable (torus) despite degree 3.
+  - So the statement holds at GENERIC E, which is all the theorem uses ("E in an interval"). Any "every E" wording
+    would be false.
+- **(b) Numerical monodromy.** 40–50 digits; 16 runs; all agree with the predictions.
+  - Solvable: Kerr, ZV δ = 2, degree 1 and a generic degree 2.
+  - Non-solvable: three degree-3 f0, plus a two-zero merge.
+  - Disclosure: the registered verdict was UNDETERMINED (over-high threshold), and a labelled post-hoc truncation
+    check settled it.
+- **(c) Confidence.**
+  - The necessary direction, d ≥ 3 ⇒ SL(2,C) at generic E, which is the one the Corollary uses: ansatz ~95%.
+  - The sufficiency direction: ansatz rates it 80–85%. The Bridge notes that for two simple poles it is proven by the
+    explicit Liouvillian solutions √Δ e^{±κu}; these were verified to solve VE_1 to ≤ 1e−9 in V25 for Kerr-type,
+    Kerr–NUT-type and real-pole data. For the double pole, the V25 P6 multipliers e^{±√2π} match the explicit local
+    solutions.
+- **Effect on the Corollary:** G1 is now independently supported. The wording is: "for E in an interval (generic E)".
