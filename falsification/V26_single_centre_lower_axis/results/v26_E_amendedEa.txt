@@ -1,0 +1,9 @@
+E1: 62 examples, all match claimed degrees: True; min degree (non-Schw/NUT) = 3; control mismatches = 60
+E1 case counts: [('k0', False, 22), ('k0', True, 6), ('k1', False, 22), ('k1', True, 10)]
+E2 Bridge r(x) for ZV delta=2: 3*(50*x**6 + 292*x**5 + 197*x**4 - 452*x**3 - 328*x**2 - 24*x + 9)/(4*x**2*(x - 1)**2*(x + 1)**2*(x + 3)**2*(3*x + 1)**2)
+E2 equals Neon r(x): True
+E2 x=0: x^2 r = 3/4 + -7 x + 11 x^2 ...; exponents [-1/2, 3/2]; obstruction -38
+E2 Kovacic case 1 (ZV2): candidate exponent sets with integer d>=0: 7 | solutions: []
+E2 control Schwarzschild delta=1 r(x): -3/(4*(x + 1)**2*(3*x + 5)**2)
+E2 control Kovacic case 1 (Schw): tried 2 | solutions: [((3/4, 1/4), 1, 0), ((1/4, 3/4), 1, 0)]
+VERDICT E1 PASS | E2 PASS

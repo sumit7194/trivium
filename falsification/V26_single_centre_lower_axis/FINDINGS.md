@@ -240,3 +240,31 @@ conjecture_machine .venv, Python 3.14.5, scipy 1.18.0.
 - Neither S statistic is a magnitude of obstruction. Both are zero/nonzero detectors only.
 - The invisible-family finding (obstructed at first order for k ≠ 0) stands. It is numerical with two independent
   codes. It is not a certificate.
+
+## Addendum E (2026-11-21 ~03:45): Neon T3's concrete claims. **E1 FAIL as registered (harness labelling), PASS under labelled amendment E-a; E2 PASS**
+Code: code/v26_E.py. Outputs:
+- results/v26_E_asregistered.txt (first run, kept);
+- results/v26_E_amendedEa.txt.
+
+**E1 (Class D degree classification).**
+- In 62 seeded exact examples, every computed reduced-denominator degree equals Neon's formula. The four structural
+  cases had 22, 6, 22 and 10 examples.
+- The registered min-degree clause failed: the minimum was 2. The cause is that the random generator produced 8
+  examples with c0 = c/z, which is Taub–NUT, and labelled them generic. The prereg text excludes NUT.
+- **Amendment E-a (post-result, labelled).** Detect c0 = c/z as NUT. After that the minimum non-Schwarzschild,
+  non-NUT degree is 3: PASS.
+- The must-fail control works: the wrong formulas mismatch on 60 of 62 examples.
+
+**E2 (ZV δ = 2 equatorial NVE1).**
+- Bridge's independent derivation of r(x) equals Neon's EXACTLY.
+- x² r = 3/4 − 7x + 11x² + …; exponents −1/2 and 3/2; Frobenius obstruction −38 ≠ 0, as Neon said.
+- Exact Kovacic Case 1 search: 7 admissible exponent sets, no polynomial solution.
+- Must-pass control, Schwarzschild δ = 1: r = −3/(4(x + 1)²(3x + 5)²). Case 1 finds solutions (d = 0), so the search
+  works.
+- Gal = SL2(C) is confirmed for the ZV δ = 2 radial equatorial NVE at E = 2. This re-derives the known result
+  (Maciejewski–Przybylska–Stachowiak 2013).
+
+**Not machine-checked here:**
+- Neon's Sibgatullin proof of e_- = 1/e_+ (the same identity V26 already established by two routes);
+- the Class C corollary;
+- the upper-axis all-orders argument (conditional on horizon holomorphicity).
