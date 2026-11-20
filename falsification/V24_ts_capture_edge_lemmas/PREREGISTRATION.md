@@ -267,3 +267,74 @@ around the brake point, plus a jet lemma at the brake point.
   That bound is the crossing-location precision.
 - **Also report:** the full root list, so any extra symmetric points show up, and the spacing.
 - **Control.** h must appear as a Fix(R)-type root at its known s.
+
+## Addendum F (2026-11-20 evening, before code): the brake cap in interval arithmetic (the Bridge's part of recipe C-I3)
+**Claim to certify.** Below the brake latitude (v < v_b) the C¹ leaves of addendum D satisfy C < 0 at every Hill
+point they pass through, except at the brake point itself, where C = 0.
+- **Leaves below v_b:** g_τ(v) = u₁ + τ(u_b + s(v − v_b) − u₁), with τ ∈ [0, 1], s = g′(v_b) and u₁ = arcosh 9.3.
+- **Tangency function:** g″ = 0 there, so C(u, v) = −V_u + τ s V_v, with τ(u, v) = (u − u₁)/(u_b − u₁ + s(v − v_b)).
+**Brake-point data are parameters, not inputs.**
+- **The box.** B = (u_b, v_b) float (V24 addendum D: 2.9784812092869313, 0.5410774904031077) ± 1e−7 in each
+  coordinate.
+- **The slope.** s is not a free parameter: s := V_u/V_v at p_b. This is the exact brake-jet relation: u − u_b and
+  v − v_b are both −½∇V t² + O(t⁴). D0 checked it in float to 1.1e−7.
+- **What the certificate says.** "For every p_b ∈ B with V(p_b) = 0, ..." A validated γ (quantum, C-I3) must later
+  give a brake-point enclosure inside B. If it doesn't, rerun with a larger B.
+**Arithmetic.** mpmath iv at 30 digits, with the V24 rational machinery:
+- V, V_x, V_y and their second derivatives are exact rationals in (x, y), from the V11 ts45 metric with E = 97/100 and
+  L = 41/8. They are Horner-evaluated, with x = cosh u and y = cos v as intervals.
+- The Hill test uses the V24 sign rule on nV/dV in (x, s = y²), with known-sign factors stripped.
+
+**F0 gates (must pass before F1/F2 count).**
+- **(a) Containment.** At 3 rational points near p_b and 2 in the cap, the degenerate-box interval values of V, V_u,
+  V_v, V_uu, V_uv and V_vv contain the 50-digit mpmath point values.
+- **(b) Identity.** The interval C(p_b; B), with τ = 1 and s = V_u/V_v over B, contains 0.
+
+**F1 (away from the brake point).** Recursively bisect the domain u ∈ [u₁, u_b + 0.004], v ∈ [0, v_b.hi].
+- A box is DISCHARGED if any of these holds:
+  - it lies wholly above v_b.hi;
+  - V > 0 on it (outside Hill);
+  - τ ∩ [0, 1] = ∅;
+  - every point of it is within ρ₀ of every point of B;
+  - C.upper < 0.
+- It is a VIOLATION if it lies inside Hill, τ ⊂ [0, 1] and C.lower > 0.
+- It is UNDECIDED at depth 40, or past 5e6 boxes.
+- **F1 PASS:** no violation and no undecided box.
+- **Report:** the box count, and the largest certified C.upper over discharged-by-C boxes (the margin).
+
+**F2 (jet lemma on the disc |p − p_b| ≤ ρ₀, by the mean-value form).**
+- **Setup.** Write d = p − p_b = r e_θ. C(p_b; p_b) = 0 identically (τ = 1 and s = V_u/V_v), so C(p) = r ∇C(ξ)·e_θ with
+  ξ in D = B ⊕ [−ρ₀, ρ₀]².
+- **The cap gives three exact homogeneous constraints on e_θ.** They use V(p_b) = 0 and a positive τ-denominator,
+  which is certified on D:
+  - d_v ≤ 0;
+  - d_u ≤ s d_v (that is, τ ≤ 1);
+  - ∇V(ξ′)·e_θ ≤ 0 for some ξ′ ∈ D (Hill).
+- **The check.** Bisect θ ∈ [π, 2π] (to depth 30). Each θ-interval is discharged by one of:
+  - (s e_v − e_u).upper < 0 over B, i.e. τ > 1;
+  - (∇V(D)·e_θ).lower > 0, i.e. outside Hill;
+  - (∇C(D)·e_θ).upper < 0.
+- **The gradient.** ∇C is taken with p_b fixed:
+  - C_u = −V_uu + s V_v/den + τ s V_uv;
+  - C_v = −V_uv − τ s² V_v/den + τ s V_vv;
+  - den = u_b − u₁ + s(v − v_b), also evaluated over D.
+- **F2 PASS:** every θ-interval discharged, and den.lower > 0 on D.
+- **Report:** max (∇C·e_θ).upper over the C-discharged intervals. This is the certified linear rate; addendum D
+  measured −C/r ≥ 52 in float.
+
+**ρ₀ ladder (fixed now).** ρ₀ ∈ {1e−5, 1e−4, 1e−3}, tried in that order. F PASSES at the first ρ₀ where F0, F1 and
+F2 all pass. All attempts are reported. Any passing ρ₀ is a complete proof on its own, so picking the first one adds
+no selection effect.
+
+**Must-fail controls (run at the passing ρ₀, or at 1e−4 if none passes).**
+- **NEG-F1.** Slope 2s in place of s. F1 must report at least one VIOLATION (addendum D: max C = +0.99 at slope 2s).
+- **NEG-F0b.** Slope 2s. Identity gate (b) must EXCLUDE 0 (C(p_b) = V_u > 0). That shows the F2 premise is really
+  tested, not assumed.
+- **NEG-F2.** F2 with the Hill constraint removed and θ extended to [0, 2π] (so directions into v > v_b are allowed)
+  must leave at least one θ-interval undischarged or proven C > 0. This is a sensitivity check that the cone
+  constraints do work. If it unexpectedly passes, report it, and the control is VOID (not a FAIL of F).
+
+**Not claimed.**
+- The region v ≥ v_b: that is the ∂C/∂τ > 0 part of C-I3, which needs the validated γ (quantum).
+- Hill points beyond the τ = 1 continuation: addendum D found none; they are outside the leaf region.
+- The certificate is conditional on the brake point lying in B.
