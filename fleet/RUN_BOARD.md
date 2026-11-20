@@ -258,3 +258,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - The test starts training from the true solution. Estimated 1–1.3 h, peak ~0.9 GB.
 - Gates: 50% free per job, abort below 35% free, 1.5 GB cap.
 - The feasibility fit reached gate O (0.0199). The oracle is not reused.
+
+### 2026-11-21 ~05:30 IST: Cuspis PAUSED at f70c92b (self-stop on slip rate)
+- Four registration slips tonight; all were caught by controls and none changed a conclusion.
+- New mechanism: every prereg carries a control table, and no must-fail is registered without a pre-check file.
+- The stage-B spec is in report.md for a cold resume.
+- Morning decision for Sumit: resume with Opus, or a compact Fable brief on the growth of Σ̃′ along Im α.
