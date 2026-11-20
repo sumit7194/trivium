@@ -136,3 +136,25 @@ zero. γ → 0 at infinity on both segments likewise.
   abelian, so it is obstructed.
 - Numerical evidence, not a certificate. Fable's own numbers are known (REPORT §8). This is a reproduction with
   independent code, and those numbers are not used as a target.
+
+## Addendum D (2026-11-21 ~03:00, before code): basis-free cross-check proposed by ansatz after unblinding
+ansatz reports tr(g_in) − 2 = −4.7845e−3·k² at E = 0.8, where g_in is the monodromy of the lower-axis NVE (invisible
+family) around the circle |z| = r, 1.3 < r < 1.9. The value is independent of basis and of any normalisation. The
+Bridge recomputes it with the V26-B8 model code (Model, kerr_funcs, base_state_kerr), unchanged.
+
+**Method.**
+- Carry c0 only, along the real axis from z_b = 4 to z = r.
+- Integrate the full system once round |z| = r, starting from the identity. Use DOP853 at rtol 1e−13, with 1e−11
+  as the floor.
+
+**D1 (PASS).**
+- At r = 1.35, for each k ∈ {1e−3, 1e−2, 1/30, 1/10}, (tr − 2)/k² agrees with −4.7845e−3 to 1% at the smallest
+  two k. At larger k, ansatz's own values set the target: k = 1/100 gives −4.79093e−7, k = 1/10 gives −4.85001e−5.
+  Agreement to 1% is required.
+- At every k, |tr(r = 1.6) − tr(r = 1.35)| ≤ 1e−9, the free-homotopy invariance check.
+- The gates hold: |det − 1| ≤ 1e−10, and c0 returns to itself within 1e−9.
+
+**D2 controls.**
+- k = 0 must give |tr − 2| ≤ 1e−9.
+- **Must-fail.** r = 2.5 is a different class: it also encloses the turning point near 1.93 and the poles 2 ± 0.6i.
+  Its tr − 2 must differ from the r = 1.35 value by more than 1e−6 at k = 1/10, or by an O(1) amount.
