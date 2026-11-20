@@ -93,3 +93,46 @@ zero. γ → 0 at infinity on both segments likewise.
 - **PASS:** |Δω| decreases like R^{−1} or faster, towards 0.
 - **Must-fail control:** add a NUT term (+ i n/z, n = 1/2). Δω must tend to −2n·(sign convention), i.e. a nonzero
   limit, within 1e−2 at R = 80.
+
+## Addendum C (2026-11-20, late evening, before code): B8, the invisible non-rational family seen from below
+**Family** (DEGREE2_FAMILIES §6; Kerr M = 1, a = 3/5; Fable's coordinates).
+- f0 = 1 − 1/(z − ia) − 1/(z + ia).
+- (c0″)² = (c_K″)² + α Q/D³, with:
+  - c_K = −2a/(z² + a²);
+  - D = z² + a²;
+  - v = (z + ia)/(z − ia);
+  - Q = v³ + v⁻³ − (3/5)(v + 1/v) − 4/5.
+- c0 is fixed by asymptotic flatness: c0, c0′ → 0 at ∞, continued from z = +∞ along the real axis. The branch of c0″
+  is continuous with c_K″.
+- **Lower axis:** f0^- = f0/(f0² + c0²), P = E² − f0^-, NVE v″ = −(3/16)(P′/P)² v.
+
+**Method (own code).**
+- Integrate (c0, c0′, c0″) and the NVE fundamental matrix together along loops from a base point z_b = 4. The ODE
+  for c0″ is c0‴ = (c0″²)′/(2c0″), which tracks the branch.
+- Use 4 loops, each around one simple singular point of the lower NVE: the two poles of f0^- near 2 ± ia, and the
+  two zeros of P on the base sheet. Locate them from the Kerr values, then refine by Newton on the continued
+  functions. Each loop stays in |z| > 1.3.
+- Integrator: DOP853 (complex) at rtol 1e−13, and repeat at rtol 1e−11 to measure the floor.
+
+**Gates per run.**
+- Each loop matrix has trace 0 (one simple point inside) to ≤ 1e−9, and determinant 1 to ≤ 1e−10.
+- c0 and c0′ return to their start values after each loop to ≤ 1e−9. This shows c0 is single-valued there.
+
+**Statistic.** S = max over pairs of commutators K = [M_i, M_j] of ‖K K′ − K′ K‖ (a non-abelian derived subgroup).
+
+**Grid.** α ∈ {0, 1/100, 1/30, 1/10} × E ∈ {0.7, 0.8, 0.9}.
+
+**PASS (obstructed)** if, for α ≠ 0:
+- S ≥ 100 × the α = 0 value and ≥ 100 × the rtol-difference floor, at every E;
+- S scales ~linearly in α for small α (fit α ∈ {1e−3, 3e−3, 1e−2} at E = 0.8; slope 1 ± 0.2 in log–log).
+
+**Controls**
+- **α = 0 (Kerr from below)** must sit at the floor.
+- **Positive control:** the rational twisted single-centre data e = 1 − 2/z + i/z², seen from below (deg f0^- = 4),
+  through the same pipeline (loops around its 8 singular points, or a subset of 4), must give S = O(1).
+
+**Reading.**
+- A non-abelian derived subgroup with elements arbitrarily close to the identity means the group is not virtually
+  abelian, so it is obstructed.
+- Numerical evidence, not a certificate. Fable's own numbers are known (REPORT §8). This is a reproduction with
+  independent code, and those numbers are not used as a target.
