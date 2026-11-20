@@ -60,3 +60,31 @@ Resources: 1 core, nice 10, a footprint watcher at 1.5 GB.
   denominator by its known factors (s − 1)^k, (x² − s)^k and (x − 1)^k(x + 1)^k, and multiply the sign by the exact,
   known sign of each removed factor on the domain (x > 1 ≥ s): (s − 1)^k has sign (−1)^k, and the others are positive.
   - Rerun I1, I2 and both negative controls. The registered I2 INCONCLUSIVE stays on record.
+
+## Addendum B (2026-11-20, before any I3 code): Fable's third inequality I3, sample-checked independently
+**Claim (L3_ANALYTIC §2).** In the flat (u, v) plane (x = cosh u, y = cos v), let u = u_γ(v) be γ's configuration curve
+(a brake orbit from the equator v = π/2 to the brake latitude v_b), and u₁ = arcosh 9.3. Take the leaves
+g_τ(v) = u₁ + τ(u_γ(v) − u₁). Then the tangency value C[g](v) = −V_u + g′V_v + 2Vg″/(1 + g′²) at (g(v), v) is < 0 for
+0 ≤ τ < 1 and v ∈ [v_b, π − v_b]. Fable's sampled margin: −C/(1 − τ) ≥ 0.63 (equator) and ≥ 3.0 (brake).
+
+**My γ.**
+- Start at the equator at x*. The value 9.804559168 is the Bridge's own (V20); its Newton fixed point is recomputed
+  here in the flat plane.
+- p_u = 0 there, with p_v from K = 0. Integrate the flat-plane equations (scipy DOP853, rtol 1e−12, t_eval at the end
+  only, no step history) until p_v = 0 (the brake point).
+- **Gate:** the brake point lies on V = 0 to ≤ 1e−9, and the orbit is periodic: integrating back reproduces the start
+  to ≤ 1e−9.
+- u_γ(v) comes from a Chebyshev fit in v on [v_b, π/2] (degree chosen by convergence: two degrees agree to ≤ 1e−10 in
+  g, g′ and g″), extended by the symmetry u_γ(π − v) = u_γ(v).
+
+**Check I3s.** Evaluate C on τ ∈ {0, 0.01, …, 0.99, 0.999, 0.9999} × 400 values of v in [v_b + 1e−6, π/2].
+- **PASS:** C < 0 everywhere, with min_τ,v(−C/(1 − τ)) reported and compared with Fable's 0.63.
+- **Also:** C at τ = 1 must be |C| ≤ 1e−6 everywhere (γ is an orbit). That is a self-check of the γ fit.
+
+**Negative control (must FIRE).**
+- Straight leaves u = const for x = cosh u ∈ [9.50, 9.80] (Fable: "a foliation by lines fails between 9.4995 and γ").
+  For a line, C = −V_u. It must be ≥ 0 at some sampled (u, v) in Hill's region.
+- Control floor measured first: I'll evaluate the control alone before running I3s.
+
+**Not covered:** the sliver beyond the brake latitude (Fable's straight-line continuation), and a validated γ (interval
+enclosure). This addendum is a sample check, like Fable's own.
