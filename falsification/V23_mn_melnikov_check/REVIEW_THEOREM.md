@@ -48,3 +48,22 @@ has transverse homoclinic orbits near Kerr's inclined zoom-whirl orbits, and adm
 (commuting with p_t and p_φ) on any region containing that tangle. This is conditional on one numerically computed,
 not yet interval-certified, Melnikov coefficient (independently reproduced, V23)". β₀ is not explicit, so β = 1/5 and
 β = −1/3 are NOT covered.
+
+## Item (ii) CLOSED (2026-11-20): Robinson 1996 read at source (pp. 1–7; file ~/Downloads/mel.pdf, downloaded with Sumit's OK)
+- **Setting:** an autonomous H^ε = H₀ + εH₁ + O(ε²) on a 4-dimensional phase space, with:
+  - (A1) X₀ completely integrable with a second independent integral F;
+  - (A2) a hyperbolic periodic orbit γ₀ with Γ₀ = comp[W^u(γ₀) \ γ₀] = comp[W^s(γ₀) \ γ₀], two-dimensional.
+- **M is defined inside the perturbed energy surface (H^ε)⁻¹(h₀), h₀ = H₀(γ₀),** as ∂_ε[F∘ζ^u − F∘ζ^s]. That matches the
+  draft's use: the physical level K = 0 is fixed for all β.
+- **Thm 3.3:** a nondegenerate zero of M(·, h₀) on Γ₀ gives a transverse homoclinic orbit for small ε ≠ 0. The proof
+  cites the implicit function theorem and ref. [10].
+- **Thm 3.4:** M = lim ∫_{−T*}^{T} (DF·Y) dt, with the end times chosen so that the limit points coincide (conditional
+  convergence in general).
+- **Remark 3.10:** if DF ≡ 0 on γ₀, the integral is an ordinary improper integral from −∞ to ∞. That holds here:
+  dK_r = 0 at (r_u, 0).
+- **Thm 3.5:** differentiation under the integral sign, given absolute convergence. **Remark 3.6:** any coordinates are
+  allowed.
+- **Conclusion:** the draft's use of Robinson (A1)–(A2), Thms 3.3–3.5 and Rem. 3.10 is accurate. The sign convention
+  (u minus s) matters only for the sign of the splitting, not for the existence of a nondegenerate zero.
+
+Only item (iii) is still open: interval certification (assigned to quantum's Arb tools).
