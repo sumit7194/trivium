@@ -138,3 +138,20 @@ step, and the inherited first-order classification.
   zero → FALSIFIED (no obstruction). Twin nonzero but a different value → value FALSIFIED, obstruction CONFIRMED.
 - **P3–P6:** per item, the same logic.
 - A failed self-check or validation → VOID for that item.
+
+### Addendum A, first P3/P4(iii) run, and amendment A1 (POST-RESULT; written after seeing the run)
+**Result as registered.** P3 and P4(iii) are VOID as run, for two reasons.
+- **(a) The VE_1 self-check failed** (relative error ~1). Cause: a coding error in the CHECK. I used d/ds = Δy d/dz;
+  the correct form is (y/Δ) d/dz, since ds = Δ du and du = dz/y.
+- **(b) 6 of the 13 cases have floor > 1e−4.** It is dominated by the Richardson difference (the residual ε⁴ term,
+  1e−4 to 3e−4). The radius difference is ≤ 2e−5 and the linear deviation ≤ 7e−11.
+- **For the record (not a verdict):** every case agreed with its prediction to ≤ 1.7e−5. Both zero-controls (λ = 1
+  Kerr; the complexified reference) gave ≤ 4e−9. Q1 gave ≤ 7e−7 and Q2 matched (−π/24, π/12).
+
+**Amendment A1.**
+1. **Self-check corrected and widened.** X± must satisfy VE_1 with d/ds = (y/Δ)d/dz to ≤ 1e−8 (central difference)
+   at 5 points on the loop: θ = 0, 0.8π, 1.6π, 2.4π, 3.2π. y and u there come from the ρ = p = 0 flow.
+2. **Two-level Richardson.** Use ε ∈ {0.02, 0.01, 0.005, 0.0025}. Level 1: R = (4A(ε/2) − A(ε))/3. Level 2:
+   RR = (16R(ε/2) − R(ε))/15. The estimate is RR from (0.01, 0.005, 0.0025); rich_diff = |RR₀ − RR₁|.
+3. **Unchanged:** the floor definition (max of the radius difference, rich_diff and the linear deviation), the
+   100× rule, VOID if floor > 1e−4, all predictions, all data, and all radii.
