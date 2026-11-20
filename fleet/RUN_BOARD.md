@@ -235,3 +235,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Cuspis EXP-044 (determinant route; G1 FAIL as registered, G1′ labelled);
   - DeepStrain real-background cascade (waiting for the box-free signal after tabula);
   - ansatz: a blind twin of V26 B8.
+- **11-20 23:16: tabula §202 done** (aee869a, local only, because of the embargo). INCONCLUSIVE as registered (no arm
+  reaches relL2 < 0.20).
+  - Demonstrated: with L-BFGS the loss went down while the field error went up, on both seeds. That retires "the wall
+    is compute".
+  - Most likely, the frozen-set loss doesn't pin the solution. That is UNTESTED: n = 2, field error not tracked during
+    training, and the loss weighting is a confound.
+  - Any follow-up needs its own prereg and Sumit's go.
