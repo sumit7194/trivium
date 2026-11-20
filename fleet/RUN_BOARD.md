@@ -287,3 +287,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - The resume is from the cache: the heavy solve is done and the remaining stages peak around 0.9 GB. Same gates.
 - Lesson: with three Gemini Task sessions open, Chrome's footprint grows with page length. Close finished Gemini
   tabs before heavy local jobs.
+
+### 2026-11-21 ~05:45 IST: tabula §206 stopped by its in-job watchdog (1,574 MB > 1.5 GB cap); launcher hole found and fixed
+- watch_footprint.sh always exited 0, so every `|| stop` behind it was dead code (silent_nulls 75). Fixed in 0c49b80,
+  with a known-fail test and an audit of every caller. §204 is unaffected: its asserts held.
+- Protocol deviation: the oracle fits ran before B0. Bridge decision: refit after B0; keep the early fits set aside,
+  labelled unused.
+- Relaunch GO, after a deliberate cap-breach dummy job confirms the stop now works.
