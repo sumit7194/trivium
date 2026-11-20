@@ -169,3 +169,15 @@ step, and the inherited first-order classification.
   ρ/|z − 1| ≤ 0.2; rtol 1e−14. Otherwise unchanged (two-level Richardson, the floor rule, VOID if floor > 1e−4).
 - **Double pole (secondary, not verdict-bearing):** linear map only, from the ε = 1e−7 runs.
 - **Schwarzschild-f0 loops:** run as registered.
+
+### Amendment A2 result and amendment A3 (POST-RESULT)
+- **A2, ZV around z = 1: VOID** (floor 9e3).
+  - An ε scan shows the ε = 0.08 runs are garbage (A ~ 1e5). ρ leaves the domain of the √ continuation.
+  - For ε ≤ 0.04, A = 0 to ≤ 1e−6 at both radii. My A2 choice of ε = 0.08 was wrong.
+- **A3 (for this loop only):** ε ∈ {0.04, 0.02, 0.01, 0.005}. Radii (0.4, 0.6) and rtol 1e−14, as in A2. Everything
+  else is unchanged.
+- **The other P6 items are final as run under A2:**
+  - ZV around infinity: identity.
+  - Double pole, secondary: multipliers 85.019695 and 0.011762 vs e^{±√2π}.
+  - Schwarzschild f0 + dipole: linear identity at z = 0 and ±3. (b) is verdict-bearing on the linear parts only, as
+    registered.
