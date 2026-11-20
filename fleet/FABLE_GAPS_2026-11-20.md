@@ -86,6 +86,14 @@ will be used. Each gap is marked:*
   - Routes: fifth-order axis equations (only for twist poles away from the centre); a second particular solution
     (equatorial orbits, as was done for ZV); or a non-monodromy obstruction.
   - This is the most natural Fable target among the three.
+  - **Fable run (2026-11-20 evening, Sumit's one-off ask):** claims CLOSED via the LOWER outer axis
+    (fable_work/only_kerr_single_centre/REPORT.md). UNVERIFIED.
+    - **The rule:** lower-axis data e_- = 1/e_+ (Meinel–Neugebauer 1995 eq. 35).
+    - **What it gives:** a twisted single-centre f0 seen from below has degree ≥ 4, so it is obstructed at first
+      order. Static double-pole data are two-centre from below, so third order applies.
+    - **Survivors:** Schwarzschild, static ZV δ = 2 (already non-integrable by MPS 2013) and Kerr.
+    - **Corollary:** needs integrals near BOTH axes and both axes regular.
+    - **Bridge to verify** (Fable's B1–B9, starting with the lower-axis rule).
 - **K4. The invisible non-rational family** (Kerr's f0, branched twist, passes the third-order test at every energy).
   It might be killed by the L ≠ 0 sector, by fifth order, or by another orbit. HARD-ish. OPUS-TRY on the L-sector
   first.
