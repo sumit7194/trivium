@@ -50,3 +50,27 @@ This file covers the arguments only.
 
 Items 2–4 are exactly what a computer-assisted horseshoe proof for TS needs anyway, so this route and B-5 share their
 remaining work.
+
+## Addendum (2026-11-20, afternoon): Lemma G at the brake latitude. A GAP in the straight-line continuation
+- **Float geometry (exploratory, scratch scripts; planning only).**
+  - Below v_b the Hill region inside γ is a cap less than 1e−3 thick in v, with u ∈ [u₁, ≤ u_b].
+  - In the cap: V_u ≥ 0.999, V_v ≈ −163.
+  - γ's slope at the brake point: g′(v_b) ≈ −0.0061.
+- **The corner sign (by hand).** τ = (u − u₁)/(g(v) − u₁) above v_b, and τ = (u − u₁)/(g(v_b) − u₁) on Fable's
+  straight continuation below.
+  - So τ_v⁺ = −τg′/(g − u₁) > 0 and τ_v⁻ = 0.
+  - For an orbit crossing v = v_b in EITHER direction, τ̇ jumps by (τ_v⁺ − τ_v⁻)|v̇| > 0. That is an upward kink, so a
+    local MINIMUM of τ is possible there.
+  - Lemma G's argument ("τ has only strict maxima") therefore does not go through as written. Fable's own list had
+    flagged "the brake ends and the sliver" for attack.
+- **Alternatives fail in the cap.** Any corner with the safe sign needs a continuation slope ≤ g′(v_b). But the
+  term g′V_v is then positive, and C in the cap becomes worse.
+- **Proposed fix (to register before checking).**
+  - Continue the leaves C¹: matching slope, g″ allowed to jump. Then τ is C^{1,1}. At a tangency on v = v_b, both
+    one-sided values of C are negative, so the maximum is still strict.
+  - Float: max C over the cap ≈ −0.0010, attained at the brake point. There C → 0 by continuity with γ, where C ≡ 0
+    on τ = 1.
+  - So the proof needs C < 0 on the cap away from the brake point (interval), plus a LOCAL analysis at the brake
+    point (Taylor jets: ∂C/∂τ ≈ 3.0 there).
+- **Status:** Lemma G is sound except at the brake latitude, where the continuation must be changed and one local
+  lemma added. This item is on the Bridge's list.

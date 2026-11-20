@@ -29,8 +29,14 @@ will be used. Each gap is marked:*
   - The sliver is the one region I could not check even as a sample.
   - OPUS-TRY: a validated ODE enclosure (Taylor model or CAPD-style) of one orbit, then interval bisection of an
     explicit C[g].
+- **C1b (found this afternoon). Lemma G has a gap at the brake latitude.**
+  - Fable continues the leaves as straight lines below v_b. That creates an upward kink in τ, which allows exactly
+    the turning-back that Lemma G must exclude.
+  - Fix: slope-matched leaves, plus a small local lemma at the brake point, where the margin → 0 by continuity.
+  - OPUS-TRY (Bridge). Details in V24/REVIEW_LOGIC.md, addendum.
 - **C2. Hypothesis N: interval-Newton fixed point and cone conditions at z*.** OPUS-OK (standard; quantum has
   Krawczyk).
+- **Plan of record with quantum:** recipes/TS_CAPTURE_EDGE_PROOF_RECIPE.md v1.1.
 - **C3. Validated lobe conditions T, C1, C2.** W^u followed for ~8 returns.
   - The W^u–S gap falls to ~1e−7 near the crossings, so the enclosures must be tighter than that.
   - OPUS-TRY. This is the heaviest numerical item, the core of a CAPD-type proof.
