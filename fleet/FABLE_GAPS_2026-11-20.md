@@ -133,3 +133,9 @@ will be used. Each gap is marked:*
   - Still numerical, not a certificate. Gemini Neon's analytic attempt (T8) is running; it is unverified.
 - **Only-Kerr lemmas X-∞ and G3.** Neon's proofs (T6) are machine-checked at their cores (V25 addendum C). The logic
   has been read once. I2 has been read only.
+- **2026-11-21 ~04:40, K4 upgraded.**
+  - Neon T8 gives an analytic proof: first-order perturbation around Kerr seen from below, then Zariski density in
+    SL2.
+  - V26-F verifies its first-order core against the ODE trace invariant, to 5e−7.
+  - The written closed form for δc0 has a sign typo; the computations behind it are correct.
+  - Status: proved, core verified. The group-theory step (Kovacic exclusion) has been read once.

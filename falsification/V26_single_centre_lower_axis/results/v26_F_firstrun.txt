@@ -1,0 +1,8 @@
+F1 delta-c0: max |ray - Neon closed form| on circle = 2.68e-01 ; no-log control = 1.20e-02
+F1 I+ (Bridge) = (-0.02433618209447682 + 0.02323006896108698j) | rel diff to Neon 8.69e-16 | |I- + conj(I+)| = 0.00e+00
+F2 symbolic: P0 == N-/D- : True ; v+- = (ND)^(1/4) e^(+-kappa u) solves NVE with kappa^2=-a^2(E^2-1): True
+F2 Neon q1: min|root| 1.9344, u returns 1.2e-15, J0 (-2.6340081916813307e-15+0.08285733987704898j), J+ (-3.1610795253080026e-15+0.0229425963721798j), J- (-3.787931340121231e-15+0.23500790172338512j), c_pred = (-0.0028426839081564202+7.586609226295855e-16j)
+F2 symbolic: P0 == N-/D- : True ; v+- = (ND)^(1/4) e^(+-kappa u) solves NVE with kappa^2=-a^2(E^2-1): True
+F2 WRONG-q1 control: min|root| 1.9344, u returns 6.6e-16, J0 (9.834488739590263e-15+0.0002720876859166625j), J+ (7.704149208235915e-15+0.00223504898573075j), J- (1.3387574265854608e-14-0.0028211173736304856j), c_pred = (-1.2305878150825036e-05-5.470463999306258e-18j)
+F2 c_pred/target - 1 = 4.06e-01 (PASS <= 1e-3) | control miss 9.97e-01 (must be > 1e-2)
+VERDICT F1 FAIL | F2 FAIL

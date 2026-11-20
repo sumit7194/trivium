@@ -268,3 +268,45 @@ Code: code/v26_E.py. Outputs:
 - Neon's Sibgatullin proof of e_- = 1/e_+ (the same identity V26 already established by two routes);
 - the Class C corollary;
 - the upper-axis all-orders argument (conditional on horizon holomorphicity).
+
+## Addendum F (2026-11-21 ~04:40): Neon T8's first-order proof of the invisible-family obstruction. **F1 FAIL as registered (write-up typo); F2 PASS, agreement 5e−7**
+Code: code/v26_F.py. Outputs:
+- results/v26_F_firstrun.txt (first run, kept);
+- results/v26_F_diagnosis.txt;
+- results/v26_F.txt.
+
+**F1.**
+- Neon's stated δc0″ = 75(4375z⁴ − 1350z² + 27)/((25z² − 3)(25z² + 9)³) is IDENTICAL to the Bridge's.
+- Neon's written closed form for δc0 does NOT integrate to it: it differs from the independent ray integrals by
+  0.235–0.269 on |z| = 1.35. **Registered verdict: FAIL.**
+- Diagnosis: one sign. With 5/(48i) changed to 5i/48, the form satisfies δc0″ exactly and matches the ray integrals
+  to 1e−32 at 3 test points.
+- I₊ by quadrature with the independent ray-integral δc0 is −0.02433618209447682 + 0.02323006896108698i. That equals
+  Neon's interval-certified value to 9e−16, and I₋ = −conj(I₊) holds exactly. Neon's computations used the correct
+  function; the error is in its write-up.
+- I₊ does not depend on constant shifts of δc0 (W₊ is holomorphic inside the circle), so Neon's E → ∞
+  non-vanishing argument is unaffected.
+
+**F2.**
+- **First run, deviation recorded.** It used Neon's written closed form, contrary to the prereg ("δP from F1"), and
+  gave c_pred = −2.84e−3: a 41% miss, caused by the typo.
+- **Run as registered.** δc0 = the ray-integral function, implemented through the sign-corrected form proven
+  identical above. The symbolic checks pass: P0 = N₋/D₋ exactly, and v± = (N₋D₋)^{1/4}e^{±κu} with
+  κ² = −a²(E² − 1) solves the k = 0 NVE exactly.
+- J0, J±, a first-order quantity, give the prediction c_pred = −(J₊J₋ − J0²)/(4κ²) = **−4.784472e−3**. The V26-D
+  direct-ODE value (two independent codes, Bridge and ansatz) is −4.78447e−3. **Relative difference 5.2e−7. PASS.**
+- The must-fail control (a wrong q1) misses by 100%.
+
+**Reading.**
+- Neon's first-order perturbation theory (δc0, q1, the k = 0 basis, the variation-of-parameters monodromy) is
+  confirmed quantitatively against the basis-free invariant that two codes measured independently.
+- The key non-vanishing constant I₊ is confirmed independently.
+- The remaining steps of T8's proof have been read by the Bridge, not machine-checked:
+  - the E → ∞ continuation;
+  - the Kovacic-classification exclusion (Borel by tr[M1, M0] ≠ 2, D∞ by nonzero traces, finite groups by tr M1);
+  - region monodromy ⊆ Gal over M(Ω).
+
+  These are standard; tr M1 ∉ T_fin needs a number.
+- **Status of the invisible-family obstruction:** "proved (Neon T8), with the first-order core verified (V26-F) and
+  the non-vanishing constant independently confirmed". It is no longer "numerical only". A second fleet reader is
+  wanted for the group-theory step before outreach.
