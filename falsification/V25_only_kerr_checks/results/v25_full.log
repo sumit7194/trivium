@@ -1,0 +1,9 @@
+twin validation: series rel err 0.00e+00, Weyl eqs 3.34e-52
+P2 Kerr exact E=0.8 (1, 0) | A [(2e-08-0j), (-2e-08+2e-08j)] | pred [0j, 0j] | err 2.26e-08 floor 2.38e-08 ve1 3.8e-10 MATCH
+P2 Kerr exact E=0.8 (0, 1) | A [(1e-08-0j), (-1e-08+1e-08j)] | pred [0j, 0j] | err 1.81e-08 floor 1.52e-08 ve1 3.8e-10 MATCH
+P2 twin exact E=0.8 (1, 0) | A [(-1.5707963-2e-08j), (3.14159263+3e-08j)] | pred [(-1.57079633+0j), (3.14159265+0j)] | err 3.26e-08 floor 3.49e-08 ve1 3.8e-10 MATCH
+P2 twin exact E=0.8 (0, 1) | A [(3.14159267+1e-08j), (-1.57079635+1e-08j)] | pred [(3.14159265+0j), (-1.57079633+0j)] | err 2.24e-08 floor 1.85e-08 ve1 3.8e-10 MATCH
+P2 twin R-trunc cross-check (1, 0) | A [(-1.57079631-1e-08j), (3.14159264+2e-08j)] | pred [(-1.57079633+0j), (3.14159265+0j)] | err 2.38e-08 floor 1.42e-07 ve1 3.8e-10 MATCH
+P2 twin R-trunc cross-check (0, 1) | A [(3.14159265+0j), (-1.57079633+1e-08j)] | pred [(3.14159265+0j), (-1.57079633+0j)] | err 1.03e-08 floor 2.60e-08 ve1 3.8e-10 MATCH
+P2 Kerr exact E=0.7 (1, 0) | A [(3e-08-1e-08j), (-3e-08+1e-08j)] | pred [0j, 0j] | err 3.43e-08 floor 3.04e-08 ve1 3.5e-10 MATCH
+P2 Kerr exact E=0.7 (0, 1) | A [(-0-1e-08j), (-1e-08+2e-08j)] | pred [0j, 0j] | err 2.01e-08 floor 1.71e-08 ve1 3.5e-10 MATCH
