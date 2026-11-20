@@ -1,0 +1,147 @@
+# Digest: "Only Kerr among two-centre data". What the symmetry axis says about hidden integrals of geodesic motion
+
+*Status: a draft digest, the first under fleet/PROCESS_DIGEST_FIRST.md. For an outside relativist or dynamicist.*
+*Provenance and tools: argument drafted by Claude Fable 5.2 (2026-11-19/20, Sumit's personal account); reviewed and
+checked by the Bridge (Claude Opus 5.5); first-order classification re-derived by ansatz-machine (Claude Opus).
+Human direction: Sumit Pal. Checks: falsification/V25_only_kerr_checks; ansatz §158.*
+
+## 1. Why it matters
+- **Kerr (with Schwarzschild as its static case) is the only known asymptotically flat vacuum black hole whose
+  geodesics are integrable.** Its fourth constant,
+  the Carter constant, comes from a hidden symmetry (a Killing tensor). Every "bumpy" deformation people have
+  studied numerically (Manko–Novikov, Zipoy–Voorhees, Tomimatsu–Sato) shows chaos somewhere.
+- **The folklore is that integrability singles out Kerr.** That folklore is what makes "look for chaos in extreme-
+  mass-ratio inspirals" a test of the Kerr hypothesis for LISA. As far as we know (literature check still owed), there
+  is no theorem saying that integrability singles out Kerr in a broad class of stationary axisymmetric vacuum
+  spacetimes. Killing-tensor classifications cover only integrals polynomial in momenta.
+- **What this result adds.** A proof covering a large class:
+  - rational axis data whose real part has at least two distinct poles;
+  - an arbitrary rational twist;
+  - integrals of any functional form, provided they are meromorphic near the complexified axis geodesics.
+  In that class, integrability forces Kerr (Kerr–NUT without asymptotic flatness). Two families are covered
+  automatically: every "static twin" (Kerr's mass profile without its rotation) and every two-rod-type solution.
+
+## 2. The result, stated carefully
+Assume the following:
+- a stationary axisymmetric vacuum metric, regular on an outer segment of the axis;
+- axis Ernst data e(z) = f0(z) + i c0(z), rational, asymptotically flat;
+- f0 has at least two distinct poles;
+- timelike axis geodesics with L = 0, over an open interval of energies.
+
+**Conclusion.** If the geodesic flow has a complete set of first integrals that are meromorphic on a complex
+neighbourhood of the (punctured) complexified axis geodesic, then the metric is Kerr.
+
+**Not claimed** (the boundary matters as much as the result):
+- **"Kerr is the only integrable one."** Two single-centre classes are not touched:
+  - Schwarzschild's f0 with any twist;
+  - a double pole, as in Zipoy–Voorhees δ = 2 and its twisted relatives.
+  At this order the axis gives no condition there, for structural reasons.
+- **Integrals that are real-analytic outside the horizon but do not continue meromorphically into the complex axis.**
+  For Kerr-type data that complex region includes the ring points z = ±ia. A physicist's "nice integral" need not
+  continue there. This is the physical-meaning caveat (section 6).
+- **Non-rational axis data.** A one-parameter family of non-rational twists on Kerr's f0 passes every test used here.
+
+## 3. How you could have found it (the motivated route)
+1. **Where to look.** A stationary axisymmetric vacuum solution is fixed by its Ernst potential on the axis, e(z). A
+   test that reads only e(z) could therefore classify all solutions at once. The axis geodesic exists in every such
+   spacetime and is explicit. So use it as the particular solution in Morales–Ramis theory:
+   - integrability implies that the differential Galois group of the variational equations along that orbit has a
+     commutative identity component;
+   - this holds at every order (Morales–Ramis–Simó).
+2. **First order sees only the mass profile.** The normal variational equation along the axis is
+   v″ + (3/16)(P′/P)² v = 0, with P = E² − μ²f0. It depends on f0 = Re e alone.
+   - Its singular points are the zeros and poles of P.
+   - Kovacic's algorithm only needs to count them: solvable iff s + 2h ≤ 4 (s simple points, h heavy ones).
+   - For rational f0 this is deg f0 ≤ 2. Every axis profile more complicated than "two centres" is out, rotating
+     Tomimatsu–Sato δ = 2 included.
+   - ansatz re-derived this independently: confirmed at generic energy, with one wording fix ("generic E").
+3. **The obstacle: the twist is invisible at first order.** Kerr's f0 with no rotation (the "static twin") passes.
+   So does Kerr's f0 with any other rotation profile. The first-order test cannot tell them apart.
+4. **The key observation: the twist enters first at third order, and only as (c0″)².**
+   - Expanding the metric near the axis, the twist appears in the ρ⁴ coefficient of the L = 0 potential.
+   - The third-order Galois condition becomes a residue condition on five explicit differentials.
+5. **The trick that makes it computable: subtract a known integrable reference.**
+   - Every f0 with two simple poles is the f0 of a (possibly complexified) Kerr–NUT solution. That solution is
+     integrable, so all its residues vanish.
+   - For any other twist with the same f0, the residue therefore comes only from the difference
+     [(c0″)² − (c_ref″)²] D³.
+   - The hard twist-free part never has to be computed.
+6. **Two local lemmas finish it.**
+   - **Lemma P (at a pole of f0).** The principal parts with zero residue form a single line. This forces the twist's
+     residues to satisfy r² = −m², i.e. c0 = ±c_KerrNUT.
+   - **Lemma X (away from the poles of f0).** A twist pole anywhere else always leaves a nonzero residue for some
+     energy. The proof continues to the energy at which a turning point reaches the twist pole, where the residue
+     blows up.
+     - **The critical case**, where two turning points merge, was closed this week. There the blow-up coefficient is
+       a Taylor coefficient of e^{c′ arsinh ξ}. It vanishes only for integer c′, and an exact identity forces
+       c′² = −w²/2 ∈ {−2, −8}.
+
+## 4. The key idea in one paragraph
+The symmetry axis is a single orbit that every stationary axisymmetric spacetime has, and the whole spacetime is
+coded in data along it. At first order that orbit sees only the mass profile, and it allows at most two "centres".
+The rotation is invisible until third order. There it must cancel, residue by residue, against what Kerr's own
+rotation would produce. Only Kerr's rotation (or its mirror image) cancels exactly.
+
+## 5. Why this target (choice reasoning)
+- **Alternatives considered:**
+  - more numerical chaos surveys: many exist; they give evidence, not proofs, and they work one solution at a time;
+  - Killing-tensor classifications: geometric, but blind to non-polynomial integrals;
+  - a second particular solution (for example equatorial circular orbits), as Maciejewski–Przybylska–Stachowiak did
+    for Zipoy–Voorhees δ = 2 (cited from memory; to check). That works one family at a time.
+- **Why the axis.** It is the one orbit that exists universally, is explicit, and is parametrised by finite data. That
+  turns "all solutions" into "all rational functions of a given degree".
+- **What made it doable.** The Ernst axis-data parametrisation, Morales–Ramis–Simó, and the reference-subtraction
+  trick (section 3, step 5).
+
+## 6. The physical-meaning check
+- **"Meromorphic near the complexified axis orbit" is the precise class of integrals excluded.**
+  - It includes the Carter constant, and every integral polynomial or rational in momenta with analytic coefficients.
+  - It does not obviously include an integral that is smooth outside the horizon but singular at complex points of
+    the axis (z = ±ia for Kerr-type data).
+  - For the physics question (chaos in inspirals), real-analytic integrals on the physical region are what matter. The
+    gap between the two classes is a real caveat, not a technicality.
+- **Only L = 0 is used.** The L ≠ 0 sector is not needed for the obstruction. It might add conditions that remove the
+  non-rational family (open).
+- **Asymptotic flatness** is used only to drop the NUT charge.
+
+## 7. What is checked, and how
+| ingredient | check |
+|---|---|
+| twist enters only as (c0″)² at ρ⁴ | V25 P1: two derivations, exact Kerr to 1e−52 |
+| reference residues vanish (Kerr, Kerr–NUT, complexified) | V25 P2: true geodesics, own code |
+| closed-form residue at a pole of f0 | V25 P3: 13/13 cases (after fixing our own derivative-factor bug; first run VOID) |
+| Lemma P identity and null space | V25 P4: exact; null space is the predicted line to pole order 12 |
+| two-rod example obstructed | V25 P5 |
+| single-centre cases NOT obstructed at third order | V25 P6 (as Fable said) |
+| first-order classification (deg ≤ 2) | ansatz §158, independent Kovacic count |
+| Lemma X, critical case | V25 addendum B: exact identity; scaling at rate σ; integer-exception control |
+| logic, step by step | V25 REVIEW_LOGIC (sound given ingredients) |
+
+## 8. What we learned, including surprises and mistakes
+- **Fable's own first version overclaimed.** On 11-19, Fable's first-order note said the axis leaves "Kerr–NUT and a
+  small degree-2 family". That forgot the twist is free at first order. Fable corrected it itself the same day, and
+  the correction is what led to third order.
+- **The closed-form residue is better grounded than the draft said.** It follows from the reference's integrability
+  plus Lemma P, not only from numerical matches.
+- **Our own errors:**
+  - a wrong derivative factor voided the first numerical run;
+  - a Richardson-extrapolation floor was too high;
+  - a pass rule was applied below the arithmetic floor.
+  Each one is recorded and fixed under a labelled amendment.
+
+## 9. Open (what would make it "only Kerr")
+1. **Single-centre data** (Schwarzschild's f0 with twist; Zipoy–Voorhees δ = 2 type). This needs a different orbit or
+   fifth order. It is the hardest part, and the real wall.
+2. **The non-rational family** on Kerr's f0: try the L ≠ 0 sector, or fifth order.
+3. **Non-rational axis data in general.**
+4. Small items:
+   - the pole-at-infinity variant of Lemma X (a sketch);
+   - writing out that κω_i(E) is non-constant;
+   - a literature check of Morales–Ramis–Simó and of prior "Kerr uniqueness by integrability" results.
+
+## 10. Talk test (can we explain it?)
+We can explain every step above, Fable's included.
+
+Not yet ready for outreach:
+- the literature check (item 9.4), so attribution is right;
+- an exact statement of which known results this extends.
