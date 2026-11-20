@@ -225,3 +225,13 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Author "Independent researcher", with ORCID and an AI-use disclosure.
   - pycbc issue gwastro/pycbc#5554 filed.
   - Name collision on Zenodo with an unrelated "ZahraZali/DeepStrain" record (Sumit's call).
+- **11-20 22:33: Quantum B15 counted run + G6 DONE** (85af9f0).
+  - Step 2 is UNRESOLVED by the registered rule.
+  - Post-result reading: all 147 accepts are robust at 1e-14 (81 with measured error, 66 extrapolated). The unresolved
+    part is rejects and red flags only.
+  - Estimates, not bounds. Steps 3-4 (rigorous coverings) come next, after Melnikov.
+- **11-20 evening, other runs:**
+  - tabula §202 (Adam→L-BFGS, CPU, ~01:15);
+  - Cuspis EXP-044 (determinant route; G1 FAIL as registered, G1′ labelled);
+  - DeepStrain real-background cascade (waiting for the box-free signal after tabula);
+  - ansatz: a blind twin of V26 B8.
