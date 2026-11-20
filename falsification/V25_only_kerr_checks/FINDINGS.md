@@ -201,3 +201,36 @@ applies only above that floor. No rerun is needed: the data are unchanged. Under
   coefficient A_m M_{m−1} ≠ 0.
 - So it cannot vanish for E in an interval.
 - The argument is written in REVIEW_LOGIC, addendum G2.
+
+## Addendum C (2026-11-21 ~02:45): Gemini Neon's Lemma X-∞ and G3. **C1 PASS, C2 PASS, C3 PASS**
+Code: code/v25_C.py, written independently; no Neon code used. Output: results/v25_C.txt. Run under nice 10, in seconds.
+
+- **C1 (exact sympy, symbolic parameters).** All four differences are identically 0: I, J, I³ − 27J², and
+  j = 256(S + 3)³/(S + 4). So Neon's quartic-invariant formulas for two-pole data are right.
+- **C2 (M ≠ 0).** The ratio to the claimed leading term, ∓binom(−1/2, m−1)(2Mμ²)^{m−1}ε^{−m+1/2}, tends to 1.
+  - Kerr-type data: |ratio − 1| = 1.3e−8 to 1.6e−8 at ε = 1e−8, falling as O(ε).
+  - Asymmetric data: |ratio − 1| = 9.8e−5 at ε = 1e−8, falling as O(ε^{1/2}).
+  - This holds for m = 1..4; m = 1 is exact.
+  - The m = 0 control returns 0. This control is **structural**: the series has no t⁻¹ term. It confirms the code
+    path, not the mathematics.
+- **C3 (M = 0 dipole).** The ratio to ε^{−m/2}·A·c^{(m−1)/2}∏(α + m − 2j)/(m − 1)! tends to 1: |ratio − 1| ≤ 2.5e−4
+  at ε = 1e−8, falling as O(ε^{1/2}).
+  - The claim does not depend on the branch of √c (the factors pair up).
+  - Must-fail control, w = i√2 (α = ±1), m = 3: the leading term vanishes. The scaled residue is 1.5e−4 against
+    1.13 for w = 2 (ratio 1.3e−4 ≤ 1e−2). The control behaves as required.
+- **I2** (reviewed by reading only, Bridge, not machine-checked). The argument is the standard Morales–Ramis–Simó one:
+  - restriction to the invariant manifold {p_t = −E, L = 0, H = −μ²/2};
+  - an algebraic 3-jet inversion inside L_full;
+  - finite base extensions leave G° unchanged;
+  - π(G_full°) = G_R°.
+
+  I found no gap. The one step that needs care is "K_R = K_full via p_z = g_zz ż0". Even if that fails, Neon's
+  fallback (a quadratic extension at worst) covers it.
+
+**Effect on the Only-Kerr gaps.** The computational cores of Lemma X-∞ and Lemma G3 are confirmed. The surrounding
+logic is
+- for X-∞: the identity theorem on an algebraic function, with an exact leading asymptotic;
+- for G3: non-constancy of j, then countability, then infinite-order diagonal monodromy.
+
+Both are standard, and they read correctly to the Bridge. Status moves from "open" to "proved (Neon), cores
+machine-checked (Bridge V25-C), logic read once". A second reader (a sister) is still wanted before any outreach.

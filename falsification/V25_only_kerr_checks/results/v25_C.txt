@@ -1,0 +1,20 @@
+C1 b0 = (E - mu)*(E + mu)
+C1 I difference -> 0
+C1 J difference -> 0
+C1 Disc difference -> 0
+C1 j difference -> 0
+C2 kerr-type m=1 |ratio-1| at eps 1e-4,1e-6,1e-8: ['0.00e+00', '0.00e+00', '0.00e+00'] True
+C2 kerr-type m=2 |ratio-1| at eps 1e-4,1e-6,1e-8: ['1.56e-04', '1.56e-06', '1.56e-08'] True
+C2 kerr-type m=3 |ratio-1| at eps 1e-4,1e-6,1e-8: ['1.37e-04', '1.37e-06', '1.37e-08'] True
+C2 kerr-type m=4 |ratio-1| at eps 1e-4,1e-6,1e-8: ['1.34e-04', '1.34e-06', '1.34e-08'] True
+C2 asym      m=1 |ratio-1| at eps 1e-4,1e-6,1e-8: ['0.00e+00', '0.00e+00', '0.00e+00'] True
+C2 asym      m=2 |ratio-1| at eps 1e-4,1e-6,1e-8: ['9.80e-03', '9.80e-04', '9.80e-05'] True
+C2 asym      m=3 |ratio-1| at eps 1e-4,1e-6,1e-8: ['9.80e-03', '9.80e-04', '9.80e-05'] True
+C2 asym      m=4 |ratio-1| at eps 1e-4,1e-6,1e-8: ['9.80e-03', '9.80e-04', '9.80e-05'] True
+C2 control m=0 residue 0.0 (structural zero)
+C3 dipole m=1 |ratio-1| at eps 1e-4,1e-6,1e-8: ['0.00e+00', '0.00e+00', '0.00e+00'] True
+C3 dipole m=2 |ratio-1| at eps 1e-4,1e-6,1e-8: ['1.22e-02', '1.22e-03', '1.22e-04'] True
+C3 dipole m=3 |ratio-1| at eps 1e-4,1e-6,1e-8: ['1.91e-02', '1.91e-03', '1.91e-04'] True
+C3 dipole m=4 |ratio-1| at eps 1e-4,1e-6,1e-8: ['2.45e-02', '2.45e-03', '2.45e-04'] True
+C3 control w=i*sqrt2, m=3: scaled residue 1.515e-04 vs w=2 1.125e+00, ratio 1.347e-04 (must be <= 1e-2)
+VERDICT C1 PASS | C2 PASS | C3 PASS
