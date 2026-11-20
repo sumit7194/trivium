@@ -242,3 +242,14 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Most likely, the frozen-set loss doesn't pin the solution. That is UNTESTED: n = 2, field error not tracked during
     training, and the loss weighting is a confound.
   - Any follow-up needs its own prereg and Sumit's go.
+
+### 2026-11-21 02:44 IST: tabula §203 DONE
+- 12/12 jobs exited 0; every gate passed.
+- Registered verdict: 2, H-coll SUPPORTED (sealed 13469fc, local).
+- The support is thin. The mechanism holds together in seed 1 only, seed 0 is a counterexample, and seed 2 does not
+  replicate.
+- Bridge asked for three things:
+  - report the limitation in the same sentence as the verdict;
+  - fix L-BFGS stall detection, with a must-fail control;
+  - pre-register, but not run, the "loss pins the solution at a residual of about 1e-5" test, for the morning.
+- The Mac stays quiet overnight: Gemini is using Chrome memory and DeepStrain is on hold.
