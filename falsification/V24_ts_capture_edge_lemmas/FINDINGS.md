@@ -100,3 +100,18 @@ code/v24_lobes_C1p.py (C1′). Results: results/v24_lobes_C1*.json and .log. The
   - validated lobe conditions (T, C1, C2) with the ~1e−7 gaps resolved;
   - rigorous transversality at h.
   These are the same items a CAPD-type horseshoe proof needs (B-5).
+
+## Independent Arb confirmation of I1/I2 (quantum, sealed to the Bridge 2026-11-20; prereg 9f6a805, amendment b2c49cf)
+- **Setup:** written from the V24 STATEMENTS, using quantum's own TS2 package and the Arb library. Outputs are in
+  quantum's gitignored scratch.
+- **I2: PASS** at registered depth 24 (0 undecided, 0 violations; certified lower bound of ∂V/∂s ≥ 1.114).
+- **I1:** registered INCONCLUSIVE at depth 24. All 9,017 undecided boxes were at the domain's corner, x ∈ [9.488,
+  9.49] and s < 0.005, and there were 0 violations. **PASS** after a post-result depth amendment (24 → 40): 0
+  undecided, 0 violations; certified lower bound 9.9e−7 > 0.
+- **Negative controls:** both fire.
+- **Agreement:** with V24, both inequalities hold, by independent code, library and metric package.
+- **CORRECTION to the V24 table above.** The I1 "float sample: min 0.0075" was a coarse sample that missed the corner.
+  - Exact evaluation (sympy, 20 digits) gives ∂V/∂x = 3.3626e−3 at (x, y) = (9.49, 0), inside Hill (V = −35.3). That
+    agrees with quantum's float minimum of 3.4e−3.
+  - The true margin of I1 at its end x = 9.49 is therefore 3.4e−3, consistent with Fable's ridge at 9.4995.
+  - The verdict does not change (my interval run was rigorous); only the quoted float margin was wrong.
