@@ -91,6 +91,12 @@ supplies the exact inequalities and the float previews, and reviews each certifi
     - C¹ slope-matched linear continuation has no corner, but max C = −0.0010 over 6e6 samples: too thin.
     - **Design choice to make:** a continuation with g″ > 0 (the 2Vg″ term is ≤ 0 in Hill), or the straight one plus
       a corner lemma. Bridge to decide and register before checking.
+  - **DECIDED (V24 addendum D, PASS on a sample).** Use the C¹ linear continuation. Fable's straight continuation has
+    the wrong corner sign (REVIEW_LOGIC addendum).
+    - On the cap: C < 0 (max −0.0096 over 592k points), with −C ≥ 52·r, where r = distance to the brake point.
+    - **Certificate:** interval C < 0 on the cap minus a disc of radius ρ₀ around the brake point, plus a jet lemma
+      inside the disc. The jet lemma uses quantum's brake-point jets and needs V_v(brake) ≠ 0 (already certified
+      for #4).
 - **Status:** feasible. Parallel with C-N, independent.
 
 ### C-L: one validated curve (F-b′, U1, C1, C2)

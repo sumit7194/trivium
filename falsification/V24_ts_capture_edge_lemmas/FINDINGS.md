@@ -115,3 +115,20 @@ code/v24_lobes_C1p.py (C1′). Results: results/v24_lobes_C1*.json and .log. The
     agrees with quantum's float minimum of 3.4e−3.
   - The true margin of I1 at its end x = 9.49 is therefore 3.4e−3, consistent with Fable's ridge at 9.4995.
   - The verdict does not change (my interval run was rigorous); only the quoted float margin was wrong.
+
+## Addendum D: C¹ leaf continuation in the brake cap. PASS (float sample)
+Code: code/v24_capD.py. Result: results/v24_capD.json.
+- **D0:** γ's slope at the brake point, from the orbit (g′ = −0.00610607), equals the jet relation V_u/V_v there to
+  1.1e−7 relative.
+- **D1:** with the C¹ continuation g_τ(v) = g_τ(v_b) + g_τ′(v_b)(v − v_b) below v_b, C < 0 at all 592,076 cap points
+  of Z (v ∈ [v_b − 2e−3, v_b), Hill, τ ∈ [0, 1]). The max is −0.0096. The cap has no Hill points beyond τ = 1, so the
+  leaves cover it.
+- **D2:** min of −C/r = 52.3 > 0, with r the distance to the brake point. So C → 0 only at the brake point, at most
+  linearly.
+- **Must-fail:** slope 2g′(v_b) gives max C = +0.99 (it fires).
+- **Corner sanity:** Fable's straight continuation has a positive τ_v jump (0.018 to 0.096) at all 5 points. This
+  reproduces the gap.
+- **Reading:** the fix works on the sample. Lemma G holds with C¹ leaves.
+  - What a proof still needs: interval arithmetic for C < 0 on the cap outside a small disc around the brake point,
+    plus a jet lemma inside the disc (C ≈ −52r or better).
+  - Both are now in recipe C-I3.

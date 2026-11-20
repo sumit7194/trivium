@@ -34,6 +34,8 @@ will be used. Each gap is marked:*
     the turning-back that Lemma G must exclude.
   - Fix: slope-matched leaves, plus a small local lemma at the brake point, where the margin → 0 by continuity.
   - OPUS-TRY (Bridge). Details in V24/REVIEW_LOGIC.md, addendum.
+  - **Update.** The fix was checked on a sample (V24 addendum D, PASS): C < 0 on the whole cap, vanishing only
+    linearly at the brake point. What remains is the interval version plus a jet lemma, which is engineering.
 - **C2. Hypothesis N: interval-Newton fixed point and cone conditions at z*.** OPUS-OK (standard; quantum has
   Krawczyk).
 - **Plan of record with quantum:** recipes/TS_CAPTURE_EDGE_PROOF_RECIPE.md v1.1.
