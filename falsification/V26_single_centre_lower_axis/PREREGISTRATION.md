@@ -54,3 +54,24 @@ deg f0^- ≤ 2.
 - B1 (an exact twisted single-centre metric off the axis);
 - B3/B7 (certified lower-axis monodromy);
 - the first-order classification, which is inherited from ansatz §158.
+
+## Addendum A (2026-11-20, late evening, before code): B6, static double-pole data seen from below
+**Claim.** Static class C, f0 = (z² − 2Mz + q)/z² with q ≠ 0 and q ≠ M² (distinct zeros). Seen from below,
+f0^- = 1/f0 = z²/(z² − 2Mz + q) = 1 − m1/(z − z1) − m2/(z − z2), where:
+- z1, z2 are the roots of z² − 2Mz + q;
+- m1 = −z1²/(z1 − z2) and m2 = −z2²/(z2 − z1), both ≠ 0;
+- c0^- = 0.
+
+This is two-centre data with zero twist. Theorem 1 (V25) then obstructs it at third order: closed form
+F = 1 + r1²/m1² = 1.
+
+**Check.** Bridge V25 code (v25_rmap.py return map on the truncated system R; V25 P3 machinery), applied to f0^-:
+- **(i)** real roots: M = 1, q = 3/4 (z = 3/2, 1/2), at E = 0.8 and 0.6;
+- **(ii)** complex roots: M = 1, q = 5/4 (z = 1 ± i/2), at E = 0.8 and 0.6.
+- **PASS:** the cubic return-map coefficients A match the closed form with F = 1, by the V25 P3 rule (error
+  ≤ max(100·floor, 1e−6·scale)), and are nonzero, with no VOID.
+
+**Controls**
+- **Cancellation control:** the same f0^- with the complexified reference twist (c0 = c_ref) must give A ≈ 0 (F = 0).
+- **Exact check:** ZV δ = 2 (q = M²) from below has a double pole (f0^- = z²/(z − M)²). So it is not two-centre and
+  stays undecided, as claimed.
