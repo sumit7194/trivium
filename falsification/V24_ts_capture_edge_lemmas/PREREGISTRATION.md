@@ -131,3 +131,21 @@ must-pass. The must-fail control: points placed strictly INSIDE D (10 interior p
 straight in; at least one must return to D.
 **Disclosure:** Fable reports j₀ = 2, a W^u–S gap of 2e−6 to 1e−5, and 273/273 and 245/245 splitting-sign tests (c10).
 This is a sample check, not a validated proof.
+
+### Addendum C, registered result, and amendment C1 (POST-RESULT, diagnosed: my test applied to the wrong arc)
+**Registered results:**
+- U: 1915 points; x_h ≈ 56.859; min p_x on the interior of U = 6.0e−5 > 0 (F-b′ OK). 0 seeds lost before h (U1 OK).
+- Beyond h: 400/400 return at every step (C1a OK). 223 went in through the gate.
+- **C1b: 200/400 "entered D" (FAIL as registered).**
+- Controls: inward branch 30/30 plunge (OK); interior points returning to D 10/10 (the must-fail fires).
+
+**Diagnosis.** C1/C2 in L3_ANALYTIC concern ONLY the arc W^u[h, m] between h and the next primary homoclinic point m:
+the arc that bounds the exterior lobe O₁. My registered test used every seed image beyond h, i.e. a full fundamental
+domain W^u[h, P(h)]. Past m that arc legitimately lies inside D (it crosses S at m), so "entered D" for about half the
+points is expected geometry, not a failure of C1. The test was mis-specified.
+
+**C1 (fixed now; rule otherwise unchanged).** Classify the beyond-h points by their FIRST image below ℓ: outside cl(D),
+meaning |p_x| > U(x) + 1e−9 or x ≥ x_h, marks the W^u[h, m] arc; inside marks the [m, P(h)] part. Apply C1b and C2 to the
+[h, m] arc only.
+- **PASS:** none of its points ever lies strictly inside D in the next 6 returns, and all of them go in through the gate.
+- Report the arc's point count, and the count from [m, P(h)] that re-enter.
