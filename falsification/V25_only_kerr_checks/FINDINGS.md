@@ -69,3 +69,75 @@ v25_p3_A1.json (amendment A1), v25_p4.json.
   - The invisible family really is invisible at L = 0 third order. The non-admissible perturbation really is
     obstructed.
 - **Not tested by P3/P4:** the reduction from the true geodesic flow. That is P2 (running), with the exact metrics.
+
+## Addendum A: P2, P5, P6 with true geodesics (R-full: exact metrics, complexified), 2026-11-20
+Code: code/v25_full.py, v25_p6.py, v25_p6_A3.py. Results: results/v25_full.json and .log, v25_p6.json and .log,
+v25_p6_A3.json.
+
+**Validation first:**
+- The static twin and the two-rod Weyl sums: ρ² and ρ⁴ coefficients of F1 and F2 equal my own static series to
+  ≤ 1e−16 relative, at z = 3 and 5 (mpmath Taylor, 50 digits).
+- The Weyl equations for γ hold to ≤ 5e−52.
+- **First attempt (my own issue):** a sympy symbolic series of the 16-factor product did not finish in 12 min. I
+  stopped my own job (PID 14995) and switched to the mpmath Taylor method for the same registered test.
+
+### P2: the Kerr control and the static twin. CONFIRMED
+Prolate units, M = 5/4, a = 3/4; loop twice around z1 = −M + ia; radii 0.35 and 0.5; VE_1 self-check ≤ 3.8e−10;
+floors 1.5e−8 to 3.5e−8.
+
+| metric (exact) | E | A from start (1, 0) | A from start (0, 1) | prediction |
+|---|---|---|---|---|
+| Kerr | 0.8 | (2e−8, 3e−8) | (1e−8, 1e−8) | (0, 0) |
+| Kerr | 0.7 | (3e−8, 3e−8) | (1e−8, 2e−8) | (0, 0) |
+| static twin | 0.8 | (−1.5707963, 3.1415926) | (3.1415927, −1.5707964) | (−π/2, π) and (π, −π/2) |
+| static twin | 0.7 | (−1.5707963, 3.1415926) | (3.1415926, −1.5707963) | the same (E-independent) |
+| twin through R-trunc (cross-check) | 0.8 | (−1.5707963, 3.1415926) | (3.1415927, −1.5707963) | equals R-full |
+
+**Reading:**
+- On the true L = 0 geodesic flow of the exact metrics, the cubic return map around the complex ring puncture
+  vanishes for Kerr. It is exactly (−3πM/(10a), 3πM/(5a)) for the static twin, at two energies.
+- This tests the reduction to system R, the near-axis series and the residue calculus all at once, with no
+  truncation.
+
+### P5: the real two-rod static metric. CONFIRMED
+- Exact Weyl sum; loop twice around z1 = 1; E = 3/5.
+- A = (−0.6283185i, 1.2566371i), vs the prediction (−0.6283185i, 1.2566371i); err 1.5e−8, floor 1.3e−8.
+- So real two-pole data are obstructed, here on the exact metric.
+
+### P6: the negative claims. CONFIRMED as far as tested
+(ρ, p) coordinates; the linear map is from ε = 1e−7 runs.
+- **(a) ZV δ = 2 (exact metric, E = 4/5):**
+  - **Around infinity** (|z| = 15, 25): linear deviation from I 6.3e−13; cubic ≤ 1.5e−7 (floor 2.5e−7). **Identity,
+    as predicted.**
+  - **Around the zero of f0** (z = 1): VOID under A1 and under A2 (my ε choices; see the PREREGISTRATION amendments).
+    Under A3: linear deviation 1.8e−10; cubic ≤ 9.2e−6 with floor 7.4e−5. **Identity, as predicted,** but the floor is
+    weak, just under the VOID line: the cubic is zero only at the ~1e−5 level.
+  - **Around the double pole (secondary):** linear multipliers 85.019695 and 0.011762, vs e^{±√2π} = 85.0196952 and
+    0.0117620. They agree to all printed digits, so the first-order torus at the double pole is as Fable describes.
+  - So on the ZV δ=2 axis the only non-identity loop is the double pole. Its group is cyclic, hence commutative: no
+    axis obstruction at third order, as Fable claims (family C "not excluded").
+- **(b) f0 = 1 − 2/z with c0 = 0.3/(z − 3) − 0.3/(z + 3) (R-trunc, E = 4/5):**
+  - The linear return maps around z = 0 (2 turns), z = +3 and z = −3 are the identity (deviation ≤ 2.9e−10, at the
+    floor). So there is no first-order torus, as predicted, and no third-order obstruction is possible.
+  - The cubic parts at the twist poles are nonzero and depend on the base point. That is expected in (ρ, p)
+    coordinates, and it is not verdict-bearing, as registered.
+
+## Status of Fable result #3 ("only Kerr") after V25
+- **Checks:**
+  - P1: CONFIRMED.
+  - P2: CONFIRMED (true geodesics, exact Kerr and exact static twin).
+  - P3: CONFIRMED (13/13).
+  - P4: CONFIRMED (identity exact; null space to pole order 12; invisible family zero).
+  - P5: CONFIRMED (exact two-rod).
+  - P6: CONFIRMED as tested (ZV and Schwarzschild-f0 loops; one weak floor).
+- **Logic (REVIEW_LOGIC.md):** Theorem 1 is sound given its ingredients.
+- **Supported claim:** among two-centre rational axis data, only Kerr–NUT, so only Kerr under asymptotic flatness, is
+  meromorphically integrable near the complexified axis orbits. Conditional on:
+  - G2 (Lemma X, critical case) and G3 (a minor point);
+  - the literature theorem (MRRS).
+- The Corollary additionally needs G1, the inherited first-order classification.
+- **Not supported, and not claimed by Fable:** "only Kerr" in full. Single-centre data (G5) and the invisible
+  non-rational family (G6) are open.
+- **Process:** two VOIDs on my own check code (the self-check factor; Richardson and ε choices) and three of my own
+  bugs (sympy power simplification; SVD conjugation; sympy series speed). All were caught before verdicts and are
+  recorded in PREREGISTRATION amendments A1–A3.

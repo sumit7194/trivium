@@ -1,0 +1,9 @@
+/Users/sumit/Github/conjecture_machine/.venv/lib/python3.14/site-packages/scipy/integrate/_ivp/rk.py:668: UserWarning: At least one element of `rtol` is too small. Setting `rtol = np.maximum(rtol, 2.220446049250313e-14)`.
+  super().__init__(fun, t0, y0, t_bound, max_step, rtol, atol,
+ZV exact: loop around z=1 (zero of f0) [A2] | lin dev 1.82e-10 (floor 1.5e-09) | eig [(1-0j), (1+0j)] | cubic max 2.29e-06 (floor 9.0e+03) VOID
+ZV exact: loop around infinity (|z| = 15, 25) | lin dev 6.29e-13 (floor 1.1e-12) | eig [(1+0j), (1-0j)] | cubic max 1.54e-07 (floor 2.5e-07) IDENTITY (pred holds)
+ZV exact: loop around double pole z=-1 (secondary) | lin dev 6.76e+01 (floor 1.9e+01) | eig [(85.019695-0j), (0.011762-0j)] | cubic max 0.00e+00 (floor 0.0e+00) 
+   secondary prediction e^{+-sqrt2 pi} = [85.01969522320721, 0.011761980531389124]
+Schw f0 + twist dipole: loop around z=0 (pole of f0, branch, 2 turns) | lin dev 1.19e-10 (floor 1.2e-10) | eig [(1-0j), (1+0j)] | cubic max 2.51e-05 (floor 2.5e-05) IDENTITY (pred holds)
+Schw f0 + twist dipole: loop around z=+3 (twist pole) | lin dev 2.87e-10 (floor 2.8e-10) | eig [(1-0j), (1-0j)] | cubic max 1.06e-01 (floor 9.6e-02) VOID
+Schw f0 + twist dipole: loop around z=-3 (twist pole) | lin dev 4.15e-14 (floor 1.0e-12) | eig [(1-0j), (1+0j)] | cubic max 4.49e-02 (floor 8.3e-03) VOID
