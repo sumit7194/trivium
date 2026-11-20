@@ -198,3 +198,20 @@ there as written. Proposed fix: for v < v_b, g_τ(v) = g_τ(v_b) + g_τ′(v_b)(
   v = v_b.
 **Not claimed:** this is a sample. The rigorous version is interval arithmetic on the cap away from a small disc
 around the brake point, plus a jet lemma at the brake point.
+
+## Addendum E (2026-11-20, before code): are the 4 W^u–S crossings per fundamental domain symmetric points? (float; recipe C-T)
+- **Reversibility.** R(x, p_x) = (x, −p_x) and P⁻¹ = RPR. Both R and PR are involutions.
+- **A homoclinic orbit is symmetric iff it meets Fix(R) = ℓ or Fix(PR).**
+- **Method.**
+  - Locate each crossing c by root-finding the signed exact gap (V24 C1′ machinery, with exact U) in the seed
+    parameter, between the two seeds of each class change (C1′: seeds 14/15, 114/115, 214/215, 314/315).
+  - For k = −3..3, compute d_R(k) = |p_x(P^k c)| and d_PR(k) = |P(R P^k c) − P^k c|.
+- **Reading:**
+  - an orbit is called symmetric if min over k of d_R or d_PR is ≤ 1e−8. The root-finding precision is ~1e−12, so
+    1e−8 allows for map error;
+  - it is called non-symmetric if both are ≥ 1e−4;
+  - otherwise unresolved.
+- Also report: the parameter spacing of the 4 crossings in log s, and which pairs are R-images of each other
+  (non-symmetric orbits come in R-pairs).
+- **Control.** h (on ℓ by construction) must come out symmetric with d_R ≤ 1e−8. Every point of the orbit of z* is
+  trivially symmetric, so that orbit is excluded.
