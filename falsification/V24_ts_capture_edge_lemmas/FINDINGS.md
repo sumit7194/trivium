@@ -53,3 +53,50 @@ Environment: Python 3.14.5 (conjecture_machine .venv), sympy 1.14.0, mpmath 1.3.
   - a review of the lemma logic (Lemmas G, Q, E and L3′; the hole lemma);
   - the 1D lobe conditions (T, C1, C2: follow W^u for ~8 returns);
   - Fable's separatrix-map test (R3 redesign).
+
+## Addendum C (1D lobe conditions, sample): registered, amended twice, final C1′ PASS
+Code: code/v24_lobes.py (C, C1); code/v24_lobes_diag.py and v24_lobes_diag2.py (diagnostics, post-result);
+code/v24_lobes_C1p.py (C1′). Results: results/v24_lobes_C1*.json and .log. The section map is the Bridge's V20
+(ts45, E = 97/100, L = 41/8).
+
+- **U1/F-b′:**
+  - W^u_out from z* (x* = 9.8045591682) reaches h at x_h ≈ 56.86.
+  - 1915 points; min p_x on the interior of U is 6.0e−5 > 0; 0 seeds lost before h.
+  - **OK.**
+- **C1a:** every point beyond h returns at every step (400/400). **OK.**
+- **C1b as first registered (a full fundamental domain beyond h): 200/400 "entered D". FAIL, mis-specified.** The
+  arc in L3_ANALYTIC is W^u[h, m] only, and W^u past m lies inside D by geometry.
+- **Amendment C1 (classification by first image, threshold 1e−9): 5/205 arc points "entered D". FAIL as registered.**
+  - **Diagnosis:** all 5 sit next to a class change, within 5e−7 of S. U computed exactly there (seed root-finding,
+    no interpolation) puts all 5 INSIDE cl(D), with exact gaps −7e−8 to −8e−7. They were misclassified.
+  - **Root cause:** linear interpolation of U undershoots the concave curve. The 1e−9 threshold was set without
+    measuring the interpolation floor, which turned out to be 6.5e−5. That is the same type of mistake as in V21–V23
+    (control-clause rule).
+- **Amendment C1′ (floor measured first; exact U wherever |gap| < δ = 6.5e−4): PASS.**
+  - Interpolation floor: max 6.5e−5 at 30 points (median 9.9e−7).
+  - In seed order W^u[h, P(h)) changes class 4 times (seeds 15, 115, 215, 315). So it crosses S 4 times per
+    fundamental domain, and the outside part is two pieces of 100 seeds each.
+  - **Outside points: 200. Exact D-hits within 6 returns: 0. All 200 go in through the gate.**
+  - Inside points ([m, P(h)] and the second inside piece): 200, all re-enter D, as expected.
+  - Reclassified: exactly the 5 diagnosed points, and no others. The smallest exact outside gap is 9.3e−8, at a
+    crossing.
+  - Controls (unchanged): the inward branch plunges 30/30; interior points return to D 10/10 (the must-fail fires).
+- **Observation, not explained:** the four class changes are exactly a quarter of the fundamental domain apart in
+  log s. A reversibility-related structure is a guess; it is not checked.
+- **Reading:** C1 and C2 hold on this float64 sample of the outside arc (both pieces), for 6 returns. T (transversal
+  corners) was not separately tested.
+  - **Caveat:** close to the crossings the W^u–S gap falls to ~1e−7. There, a validated computation must resolve U
+    exactly, which is what amendment C1′ did numerically.
+  - This is a sample, not a proof.
+
+## Status of Fable result #2 after V24 (updated)
+- **Confirmed:**
+  - R (exact); I1 and I2 (interval); I3 (sample, independent).
+  - The lemma logic (REVIEW_LOGIC.md: sound, with the sliver unverified).
+  - The lobe conditions C1 and C2 (sample, independent, with an exact boundary near the crossings).
+- **Open for a proof:**
+  - validated γ/I3 including the sliver;
+  - hypothesis N (interval-Newton fixed point + cones);
+  - validated lobe conditions (T, C1, C2) with the ~1e−7 gaps resolved;
+  - rigorous transversality at h.
+  These are the same items a CAPD-type horseshoe proof needs (B-5).

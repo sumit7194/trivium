@@ -1,0 +1,12 @@
+interp floor max 6.534e-05 (median 9.880e-07) -> delta 6.534e-04
+floor 6.53443989827255e-05
+delta 0.000653443989827255
+n_first 400
+class_changes_at_seed [15, 115, 215, 315]
+outside 200
+outside_with_exact_hit 0
+outside_went_in 200
+rest 200
+rest_reenter 200
+reclassified [(15, True, False, 4.2684342083099125e-07, -6.940249905329487e-08), (16, True, False, 2.701152952977459e-07, -2.3001195184613188e-07), (17, True, False, 1.1051708700970941e-07, -3.972961285236831e-07), (113, True, False, 1.9635823272912134e-08, -7.877724063354297e-07), (114, True, False, 5.12591594059586e-07, -2.9074895641079124e-07)]
+min_outside_gap 9.316298879569196e-08

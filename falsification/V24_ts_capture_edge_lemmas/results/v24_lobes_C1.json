@@ -1,0 +1,18 @@
+{
+ "x_star": 9.804559168202596,
+ "lam": 38.3877237717236,
+ "closure": 1.6004975122996257e-12,
+ "branch": -1.0,
+ "U_points": 1915,
+ "x_h_est": 56.85947360807554,
+ "lost_before_h": 0,
+ "U_min_px_interior": 5.978654170052314e-05,
+ "U_graph_monotone_x": true,
+ "C1_arc_points": 205,
+ "C1b_arc_entered_D": 5,
+ "C2_arc_went_in": 200,
+ "rest_points": 195,
+ "rest_inside_D": 195,
+ "CTRL_inward_plunge": "30/30",
+ "NEGCTRL_interior_returns_to_D": "10/10"
+}

@@ -30,24 +30,24 @@ xh = float(np.max(U[:, 0])); out.update(U_points=len(U), x_h_est=xh, lost_before
 print('gamma x*', xs, 'lam', lam, '| U pts', len(U), 'x_h~', xh, 'min p_x (interior)', out['U_min_px_interior'], 'lost', lost_before_h, flush=True)
 Uf = lambda x: np.interp(x, U[:, 0], U[:, 1])
 def inside_D(p, margin=1e-7): return xs < p[0] < xh and abs(p[1]) < Uf(p[0]) - margin
-# beyond h: the crossed points, 6 more returns
-c1a = c1b = 0; gate_in = 0; plunged_after = 0; n = 0; records = []
+# beyond h (amendment C1): classify by the FIRST image below the symmetry line
+arc_n = arc_bad = arc_in = 0; rest_n = rest_reenter = 0
 for i, p in enumerate(cur):
     if p is None or not crossed[i]: continue
-    n += 1; q = p; went_in = False; inD = False; ok = True
+    on_arc = (p[0] >= xh) or (abs(p[1]) > Uf(p[0]) + 1e-9)       # outside cl(D): the W^u[h, m] arc
+    q = p; went_in = False; inD = False
     for r in range(7):
         if q[0] < xs and q[1] < 0: went_in = True; break
-        if r > 0 and inside_D(q): inD = True
+        if inside_D(q): inD = True
         q2 = v20.P(FJ, fH, q, RT)[0]
-        if q2 is None:
-            ok = (v20.P.last == 'plunge'); went_in = ok; break
+        if q2 is None: went_in = (v20.P.last == 'plunge'); break
         q = q2
-    if not ok: c1a += 1
-    if inD: c1b += 1
-    if went_in: gate_in += 1
-    records.append(dict(went_in=went_in, entered_D=inD))
-out.update(beyond_h_points=n, C1a_failures=c1a, C1b_entered_D=c1b, C2_went_in=gate_in)
-print('beyond h: points', n, 'C1a fail', c1a, 'entered D', c1b, 'went in through gate', gate_in, flush=True)
+    if on_arc:
+        arc_n += 1; arc_bad += inD; arc_in += went_in
+    else:
+        rest_n += 1; rest_reenter += inD
+out.update(C1_arc_points=arc_n, C1b_arc_entered_D=arc_bad, C2_arc_went_in=arc_in, rest_points=rest_n, rest_inside_D=rest_reenter)
+print('C1: arc [h,m] points', arc_n, 'entered D', arc_bad, 'went in', arc_in, '| [m,P(h)] points', rest_n, 'inside D', rest_reenter, flush=True)
 # controls
 inward = [z - sgn*s*eu for s in np.geomspace(s0, s0*lam, 30, endpoint=False)]
 inw_plunge = 0
@@ -68,4 +68,4 @@ for x in np.linspace(xs + 2, xh - 2, 10):
     interior_return += back
 out['NEGCTRL_interior_returns_to_D'] = f'{interior_return}/10'
 print('CTRL inward plunge', out['CTRL_inward_plunge'], '| NEG interior points returning to D', out['NEGCTRL_interior_returns_to_D'], flush=True)
-json.dump(out, open(os.path.join(HERE, '../results/v24_lobes.json'), 'w'), indent=1, default=str)
+json.dump(out, open(os.path.join(HERE, '../results/v24_lobes_C1.json'), 'w'), indent=1, default=str)
