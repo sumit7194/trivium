@@ -220,3 +220,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   cap; nice 10). L₄ is already certified (cabccc9). The C bound uses the Cauchy–Schwarz route S2-A2, with the Bridge's
   4 conditions. Order: known-value control, 2 must-fail points, then 16 grid points → T3.json. ETA ~04:00–05:00 on
   11-21. CERTIFIED-NONDEGENERATE if any counted point closes.
+- **11-20 evening: DeepStrain LongChirp v1.0.0 PUBLISHED** (Sumit approved).
+  - Tag longchirp-v1.0.0; DOI 10.5281/zenodo.24399603 (concept DOI 10.5281/zenodo.24399602).
+  - Author "Independent researcher", with ORCID and an AI-use disclosure.
+  - pycbc issue gwastro/pycbc#5554 filed.
+  - Name collision on Zenodo with an unrelated "ZahraZali/DeepStrain" record (Sumit's call).
