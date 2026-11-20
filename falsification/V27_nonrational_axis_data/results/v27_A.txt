@@ -1,0 +1,5 @@
+A2: tr h1 = -tau**2 - 2 | tr h2 = -2*(2*tau**2 + 1) | tr[h1,h2]-2 = -4*tau**6
+A2 control (diag M0): tr[h1,h2]-2 = -u**2*(lam - 1)**6*(lam + 1)**6*(lam**2 + 1)**2*(u**2 + 1)**2/lam**8
+A3: max residual D_inf example 1.2e-30 ; reducible example 4.1e-31 ; control (sqrt3 -> 1.7) min residual 2.75e-02
+{'A1_eq': True, 'A1_exp_inf': True, 'A1_exp_at': True, 'A1_curzon': True, 'A2_param': True, 'A2_traces': True, 'A2_control_diag_gives_2_FIRES_if_False': False, 'A3_Dinf': True, 'A3_red': True, 'A3_control_fires': True}
+VERDICT V27-A FAIL

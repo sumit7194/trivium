@@ -1,0 +1,2 @@
+POST-RESULT DIAGNOSTIC (labelled): the correctly specified D_inf control = diagonal M0 AND antidiagonal M_a (u = 0)
+tr[h1,h2] - 2 = 0 (must be 0: D_inf -> commuting torus elements)
