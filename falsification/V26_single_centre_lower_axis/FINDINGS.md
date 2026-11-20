@@ -344,3 +344,5 @@ Code: code/v26_G.py. Outputs: results/v26_G.txt; results/v26_G_postdiag.txt (lab
 analyticity plus the small-a asymptotic. Not machine-checked here:
 - the large-E loop construction in Re z > a;
 - U_a = (−∞, 30/7), which Neon only marks CHECKED.
+
+- **Timestamp correction (appended 2026-11-21 04:10 IST, system clock).** The '~hh:mm' times written by the Bridge in tonight's addenda (V25 C; V26 D–G) were estimated and run about 1.5–2 h FAST. The commit timestamps in git are authoritative.

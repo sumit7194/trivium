@@ -234,3 +234,5 @@ logic is
 
 Both are standard, and they read correctly to the Bridge. Status moves from "open" to "proved (Neon), cores
 machine-checked (Bridge V25-C), logic read once". A second reader (a sister) is still wanted before any outreach.
+
+- **Timestamp correction (appended 2026-11-21 04:10 IST, system clock).** The '~hh:mm' times written by the Bridge in tonight's addenda (V25 C; V26 D–G) were estimated and run about 1.5–2 h FAST. The commit timestamps in git are authoritative.
