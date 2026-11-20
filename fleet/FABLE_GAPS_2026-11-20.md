@@ -9,8 +9,9 @@ will be used. Each gap is marked:*
 ## 1. MN Melnikov (physical-class non-integrability for Manko–Novikov)
 - **State.** Reproduced (V23); logic reviewed (sound); Robinson's theorem read at source. Everything rests on one
   number: certification is quantum's Arb run (relaunched 13:33 after its own nan bug; ~2.5 h).
-- **M1. Certify L₂ ≠ 0 (Theorem A′) and L″(0) ≠ 0 with a bound on the higher harmonics (Theorem A).** OPUS-OK
-  (running).
+- **M1. Certify L₂ ≠ 0 (Theorem A′) and L″(0) ≠ 0 with a bound on the higher harmonics (Theorem A).** OPUS-OK.
+  - **Stage 1 CERTIFIED** (quantum d338e00, 16:05): Theorem A′ is now unconditional for small β.
+  - Stage 2 (Theorem A) is next.
 - **M2. β₀ is not explicit.** The theorem covers only "small enough" quadrupole β. The physical-looking values
   β = 1/5 and β = −1/3 are NOT covered. Fixing this needs either:
   - an explicit β₀ (a quantitative implicit-function bound: OPUS-TRY, heavy interval work); or
@@ -43,7 +44,7 @@ will be used. Each gap is marked:*
   - The W^u–S gap falls to ~1e−7 near the crossings, so the enclosures must be tighter than that.
   - OPUS-TRY. This is the heaviest numerical item, the core of a CAPD-type proof.
 - **C4. Rigorous transversality at h.** OPUS-TRY (the same machinery as C3).
-- **C5 (new today). Observation to understand.** Today's W^u crosses S 4 times per fundamental domain, exactly a quarter period
+- **C5 (new today). Observation to understand. ANSWERED (V24 E2): all four crossings are symmetric homoclinic points (brake/Fix(R) alternating). C-T reduces to 1D scalar zeros.** Today's W^u crosses S 4 times per fundamental domain, exactly a quarter period
   apart. Is it a symmetry? It affects how many lobes a proof must handle. OPUS-OK to investigate.
 - **Merge with B-5 (the CAPD chaos-proof moonshot).** C2–C4 are exactly B-5's steps. This is the "proof recipe" to try
   writing on Opus after the reviews.

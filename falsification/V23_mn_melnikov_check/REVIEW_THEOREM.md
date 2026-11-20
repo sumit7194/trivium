@@ -67,3 +67,20 @@ not yet interval-certified, Melnikov coefficient (independently reproduced, V23)
   (u minus s) matters only for the sign of the splitting, not for the existence of a nondegenerate zero.
 
 Only item (iii) is still open: interval certification (assigned to quantum's Arb tools).
+
+## Item (iii), stage 1: CERTIFIED (quantum, d338e00, qsim/mn_melnikov/RESULT.md; 2026-11-20 16:05)
+- **L₂ = [−4.77482114974644e−5 ± 6.81e−20],** Cauchy tail (≤ 4.0e−30) included. It EXCLUDES 0.
+  - The midpoint agrees with V23 to 5.3e−11 relative.
+- **Gates:**
+  - Krawczyk radius 1.6e−35, containing V23;
+  - parity L₁ contains 0;
+  - Kerr controls (∂M, ∂a) contain 0, at ≤ 4.2e−23;
+  - the sabotage L₁ = 210.18566494 excludes 0;
+  - G5 run as written after a disclosed post-run finding: 10 points, 5 of them complex, worst 1.5e−38.
+- **Consequence: Theorem A′ is no longer conditional on a numerical coefficient.** For small nonzero quadrupole β,
+  the MN geodesic flow has no real-analytic first integral (commuting with p_t, p_φ) on any region containing the
+  zoom-whirl tangle.
+  - It now rests on: the certified L₂; Robinson's theorem (read at source); and the reviewed argument.
+- **Still open:**
+  - stage 2, L″(0) ≠ 0 with the higher-harmonic bound (T3), for Theorem A (transversality and horseshoe);
+  - an explicit β₀. β = 1/5 and −1/3 are still NOT covered.
