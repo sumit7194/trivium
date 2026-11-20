@@ -158,3 +158,37 @@ Bridge recomputes it with the V26-B8 model code (Model, kerr_funcs, base_state_k
 - k = 0 must give |tr − 2| ≤ 1e−9.
 - **Must-fail.** r = 2.5 is a different class: it also encloses the turning point near 1.93 and the poles 2 ± 0.6i.
   Its tr − 2 must differ from the r = 1.35 value by more than 1e−6 at k = 1/10, or by an O(1) amount.
+
+## Addendum E (2026-11-21 ~03:30, before code): checking Gemini Neon T3's concrete claims
+Neon's output: /Users/sumit/Github/neon_work/onlykerr/T3_REPORT_SUMMARY.md. It is UNVERIFIED until this check.
+
+**E1 (Theorem 1, degree classification).** With z1 = 0, f0 = 1 − 2M/z, c0 = P/Q (deg P < deg Q = d, gcd 1, real
+coefficients) and f_- = f0/(f0² + c0²), the claimed degree of the reduced denominator is:
+
+| Case | Claimed degree |
+|---|---|
+| c0 = 0 | 1 |
+| c0 = −2n/z | 2 |
+| Q(0) ≠ 0 | 2(d + 1), or 2d + 1 when P(2M) = 0 |
+| Q = z^k·Q̃, k ≥ 1 | 2d, or 2d − 1 when P(2M) = 0 |
+
+The last two rows cover every other case, and all of them have degree ≥ 3.
+
+- **Test.** sympy, exact: 60 seeded random examples spread over the four structural cases, with M = 1 and small
+  integer or rational coefficients. Cases with P(2M) = 0 are built by construction.
+- **PASS:** every computed degree equals the claimed one, and every non-Schwarzschild, non-NUT case has degree ≥ 3.
+- **Must-fail control:** the claimed formula applied with k and Q̃ swapped, or without the P(2M) correction, must
+  mismatch on at least one example.
+
+**E2 (Theorem 2, ZV δ = 2).** Bridge's own derivation of the equatorial NVE1 from
+2H = −E²/f + f e^{−2γ}(x² − y²)⁻¹[(x² − 1)p_x² + (1 − y²)p_y²], with f = ((x − 1)/(x + 1))², e^{2γ} = ((x² − 1)/(x² − y²))⁴,
+L = 0, μ = 1, E = 2.
+- Linearise in (y, p_y) at y = 0, use x as the independent variable, and take the Liouville normal form u″ = r(x)u.
+- **PASS:**
+  - r(x) equals Neon's r exactly (sympy simplify of the difference gives 0);
+  - the Frobenius obstruction at x = 0 for the smaller exponent is nonzero (Neon: −38);
+  - an exact Kovacic Case 1 search (all exponent choices; polynomial solvability) finds no solution.
+- **Must-pass control:** Schwarzschild, δ = 1, f = (x − 1)/(x + 1), e^{2γ} = (x² − 1)/(x² − y²). Neon says q ≡ 0 there,
+  so a Case 1 solution must exist. If the search finds none, the search code is wrong.
+- **Literature note:** ZV non-integrability is known (Maciejewski–Przybylska–Stachowiak, PRD 88, 064003, 2013; it
+  was cited in the T3 prompt). E2 tests Neon's re-derivation, not novelty.
