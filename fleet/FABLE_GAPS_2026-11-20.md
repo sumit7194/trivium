@@ -76,6 +76,10 @@ will be used. Each gap is marked:*
     New edge case: three merging zeros can be solvable at special E, so the wording must be "generic E". K1 is
     essentially closed for the Corollary.
 - **K2. Lemma X, critical case** (a twist pole at a critical point of f0). OPUS-TRY: a careful asymptotic argument.
+  - **CLOSED 2026-11-20 evening (Bridge, Opus).** Proof by uniform scaling, with an exact identity
+    κ²(E*) = μ²f0″(p)D(p)²/4, so c′² = −w²/2 is never an integer square. Checked in V25 addendum B: the identity holds
+    exactly; the scaling converges at rate σ in 20/20 rows (24/24 under labelled amendment B2′); both controls pass.
+  - **Left:** the pole-at-∞ variant (a sketch, not critical-case).
 - **K3. Single-centre data** (Schwarzschild's f0 with any twist; ZV δ=2 and its twisted relatives). HARD.
   - This is the real wall between "only Kerr among two-centre data" and "only Kerr".
   - Here the axis orbit gives commuting monodromy at third order for structural reasons.

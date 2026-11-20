@@ -80,3 +80,44 @@ not claimed, and the draft says so correctly.
 ## What is established, if P2–P6 pass
 - **Theorem 1:** a full proof modulo G2–G4, the MRRS theorem (literature) and the L = 0 reduction (sound).
 - **Theorem 2 / Corollary:** additionally modulo G1.
+
+## Addendum G2 (2026-11-20 evening): Lemma X, critical case. CLOSED (argument by hand; checks V25 addendum B)
+**Setting.**
+- p is finite, with D(p) ≠ 0, and Q = Σ_{k=1}^m A_k (z − p)^{−k} + (regular), with A_m ≠ 0. The A_k do not depend
+  on E.
+- φ := E² − μ² f0, so y = D√φ; and u − u_p = ∫_p^z dz/y.
+- The residue of Q e^{wκu} du at a point over p is e^{wκu_p} R(E), with
+  - R(E) = Σ_k A_k h_{k−1}(E);
+  - h_j the Taylor coefficients at p of h := e^{wκ(u−u_p)}/y.
+
+**Step 1 (continuation).** h_j is a polynomial in κ, y(p)^{±1} and the Taylor coefficients of φ and D at p, and
+κ² is affine in E². So R is an algebraic function of E. If R vanishes on a real interval, all its branches vanish.
+In particular its Puiseux expansion at ε := E² − E*² = 0 vanishes, where E*² = μ² f0(p).
+
+**Step 2 (scaling).** Let a = μ² f0″(p)/2, σ² = −ε/a and t = z − p = σξ.
+- **Uniform convergence.**
+  - On |ξ| ≤ ½ we have φ = ε(1 + ξ²) + O(σ³), D = D_p + O(σ) and κ(E) = κ(E*) + O(ε).
+  - The turning points sit at ξ ≈ ±i, outside the disc.
+  - So σh(p + σξ) → M(ξ) := e^{c′ arsinh ξ}/(D_p√(−a)√(1 + ξ²)) uniformly, with c′ = wκ(E*)/(D_p√(−a)).
+- **Hence** h_j σ^{j+1} → M_j by Cauchy's estimates, and R = A_m σ^{−m}(M_{m−1} + o(1)) + O(σ^{1−m}).
+
+**Step 3 (nonvanishing).**
+- M = (1/(c′D_p√(−a))) d/dξ e^{c′ arsinh ξ}, so M_{m−1} = m T_m/(c′D_p√(−a)).
+- The coefficients T_n of e^{c′ arsinh ξ} satisfy (1 + ξ²)f″ + ξf′ − c′²f = 0. Hence:
+  - T_{n+2} = (c′² − n²)T_n/((n+1)(n+2)), with T_0 = 1 and T_1 = c′;
+  - T_m = 0 only if c′² = l² for an integer 0 ≤ l < m.
+- **The identity** κ²(E*) = μ² f0″(p)D(p)²/4 holds exactly (V25 B1, both degree-2 families). So c′² = −w²/2. That is
+  −2 or −8 for w = ±2, ±4, never an integer square.
+- So M_{m−1} ≠ 0, R → ∞ as ε → 0, and R is not identically zero. **QED.**
+
+**Remarks**
+- **Non-degeneracy.** f0″(p) ≠ 0 holds at every finite critical point of a degree-2 f0: f0 − f0(p) has at most 2
+  zeros. B1(c) confirms it, up to degree-drop loci.
+- **The generic case** (f0′(p) ≠ 0) is the same argument with t = (ε/φ′(p))ξ. There the exponential tends to 1, so
+  M ∝ (1 + ξ)^{−1/2}, whose binomial coefficients are all nonzero, and R ~ ε^{1/2−m}. (Controls: slopes −(m − ½).)
+- **Physically,** at E = E* two turning points merge at p, and c′ is the local exponent of the merged (hyperbolic)
+  point in units of the scaling. The identity says that this local exponent is fixed by κ.
+- **Fable's sketch was right,** including c′² = −w²/2. What was missing: the uniform-scaling justification, the
+  recursion showing that only integer c′ kills a coefficient, and the identity, which is now checked exactly.
+- **Not covered here:** the pole at z = ∞, which needs the same argument with a turning point going to infinity.
+  It is still a sketch, but it is not on the critical-case list.

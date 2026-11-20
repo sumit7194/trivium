@@ -161,3 +161,43 @@ floors 1.5e−8 to 3.5e−8.
     Kerr–NUT-type and real-pole data. For the double pole, the V25 P6 multipliers e^{±√2π} match the explicit local
     solutions.
 - **Effect on the Corollary:** G1 is now independently supported. The wording is: "for E in an interval (generic E)".
+
+## Addendum B: Lemma X, critical case (gap G2). B1 PASS. B2 FAIL as registered, on an exactness artifact; PASS under amendment B2′. Controls PASS. (prereg b2c57b0; Bridge, 2026-11-20 evening)
+Code: code/v25_B.py. Results: results/v25_B.json.
+Environment: Python 3.14.5, sympy 1.14.0, mpmath 1.3.0 (60 digits), macOS 27.0.1 arm64.
+
+**B1 (exact) PASS**
+- **(a)** For two simple poles, κ²(E*) − μ² f0″(p)D(p)²/4 ≡ 0 modulo num f0′(p) (remainder 0).
+- **(b)** The same for a double pole (remainder 0).
+- **(c)** The resultants are 4m1²m2²(m1 + m2)(z1 − z2)⁶ and −2(b + 2z1)(z1² + bz1 + c). They vanish only on
+  degree-drop loci:
+  - m1 + m2 = 0, where num f0′ loses its p² term and a critical point moves to ∞;
+  - Δ(z1) = 0 (the pole cancels) or b = −2z1.
+  - At every finite critical point of a genuine degree-2 f0, f0″(p) ≠ 0. This also follows from the degree count.
+- **Hence c′² = −w²/2 ∈ {−2, −8}.** This is never the square of a real integer, so every Taylor coefficient of
+  e^{c′ arsinh ξ} is nonzero.
+
+**B2 as registered: FAIL**
+- In all 24 (case, w, m) rows, dev ≤ 1e−3 at ε = 1e−10.
+- The 4 rows with m = 1 fail the "non-increasing" clause:
+  - their dev is 1e−55 to 7e−52, which is rounding;
+  - h₀σ = σ/(D_p√ε) = 1/(D_p√(−a)) = M₀ exactly, for every ε;
+  - so the monotonicity clause was applied below the arithmetic floor. It should have been floor-first (the
+    control-clause rule).
+- **The other 20 rows** decrease by a factor √10 per decade of ε, i.e. dev ∝ σ, as predicted. At ε = 1e−10, dev is
+  between 3.9e−6 and 7.4e−5.
+
+**Amendment B2′ (POST-RESULT).** A row whose dev is below 1e−40 at every ε counts as exact. The monotonicity clause
+applies only above that floor. No rerun is needed: the data are unchanged. Under B2′, B2 PASSES (24/24).
+
+**Controls PASS**
+- **Generic p** (non-critical, both cases): slopes −0.5, −1.5, ..., −5.5 for m = 1..6, all within 1e−4 of −(m − ½).
+- **Integer exception** (κ forced so that c′ = 1): the scaled m = 3 and m = 5 coefficients are 1.6e−5 and 1.4e−5 for
+  Kerr, and 3.4e−5 and 2.8e−5 for the rods. That is O(σ), so the leading term vanishes, as predicted. m = 2 stays at
+  1.0000. So the check does see the integer exception.
+
+**Conclusion.**
+- The critical-point case of Lemma X holds. Its residue grows like σ^{−m} ∝ |E² − E*²|^{−m/2}, with leading
+  coefficient A_m M_{m−1} ≠ 0.
+- So it cannot vanish for E in an interval.
+- The argument is written in REVIEW_LOGIC, addendum G2.
