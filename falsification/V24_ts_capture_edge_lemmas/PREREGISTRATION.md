@@ -105,3 +105,29 @@ enclosure). This addendum is a sample check, like Fable's own.
   - Use v ∈ [v_b + 1e−3, π/2] (p_v → 0 at the brake makes g″ ill-conditioned; the last 1e−3 is left to the sliver
     treatment, not covered).
   - Rerun I3s with the same gates. |C| at τ = 1 should then be at integration-error level.
+
+## Addendum C (2026-11-20, before any lobe-tracing code): sample check of the 1D lobe conditions (U1, F-b′, C1, C2)
+Tracing uses the Bridge's own V20 section map (ts45, E = 97/100, L = 41/8; DOP853 with variational equations; rtol
+1e−12). I have not read Fable's c04, c05 or c10 code or outputs.
+1. **γ and U.**
+   - Fixed point z* on p_x = 0 near 9.8046 (V20 scan plus polish); unstable direction e_u and λ.
+   - Seeds z* + s e_u for 400 values of s, geometric in [s₀, s₀λ] with s₀ = 1e−6, on the outward branch.
+   - Iterate until each seed's image first reaches p_x ≤ 0 (the crossing h). The union of the pre-crossing images
+     forms U.
+   - **F-b′/U1 check:** every point of U has p_x > 0 (except near the ends); every seed returns at every iterate up
+     to h; U is a graph over x.
+   - D := {x* < x < x_h, |p_x| < U(x)}, with U interpolated (the reversor gives S = R(U)).
+2. **Beyond h (the first exit-lobe arc, C1/C2).** Keep iterating the seed images that have crossed below ℓ, for 6
+   further returns. Record:
+   - (C1a) every point returns at every step;
+   - (C1b) no point lies strictly inside D at any step, where "inside" means |p_x| < U(x) − 1e−7, a margin above
+     the gap floor;
+   - (C2) every point eventually reaches x < x* with p_x < 0 (moving inward through the gate) within the 6 returns,
+     and then plunges (x < 1.5) without a further return to Σ.
+
+**PASS:** U1/F-b′ hold; C1a, C1b and C2 hold for all seeds.
+**Control:** seeds on the INWARD branch W^u_in must all plunge within 2 returns (A2; Fable checked 60/60). That's a
+must-pass. The must-fail control: points placed strictly INSIDE D (10 interior points, e.g. (x, ½U(x))) must NOT go
+straight in; at least one must return to D.
+**Disclosure:** Fable reports j₀ = 2, a W^u–S gap of 2e−6 to 1e−5, and 273/273 and 245/245 splitting-sign tests (c10).
+This is a sample check, not a validated proof.
