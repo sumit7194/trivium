@@ -253,3 +253,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - fix L-BFGS stall detection, with a must-fail control;
   - pre-register, but not run, the "loss pins the solution at a residual of about 1e-5" test, for the morning.
 - The Mac stays quiet overnight: Gemini is using Chrome memory and DeepStrain is on hold.
+
+### 2026-11-21 ~03:15 IST: tabula §204 full run GO
+- The test starts training from the true solution. Estimated 1–1.3 h, peak ~0.9 GB.
+- Gates: 50% free per job, abort below 35% free, 1.5 GB cap.
+- The feasibility fit reached gate O (0.0199). The oracle is not reused.
