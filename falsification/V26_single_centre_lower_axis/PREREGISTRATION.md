@@ -211,3 +211,24 @@ Neon's output: neon_work/onlykerr/T8_INVISIBLE_FAMILY_SUMMARY.md.
 - **PASS:** |c_pred/c − 1| ≤ 1e−3.
 - **Must-fail:** the same computation with q1 replaced by (3/16)(δP/P0)′² (a wrong first-order variation) must miss
   by more than 1%.
+
+## Addendum G (2026-11-21 ~05:40, before code): checking Neon T11 (all spins a)
+**G1 (sympy, exact).**
+- Neon's general-a δc0 satisfies δc0″ = Q/(2D³c_K″) identically, with symbolic a. Check at 3 rational points for each
+  a ∈ {1/10, 3/5, 1, 2}, to exact 0.
+- It tends to 0 at +∞, with leading term 7a/(30z²).
+- (c0″)² equals (8/(5a⁶(u² + 1)⁶))·B(u², k) identically.
+- disc_w B = 240k(k − 4).
+- **Must-fail:** the T8-as-written sign must fail the δc0″ identity.
+
+**G2 (independent quadrature).**
+- Compute I₊(a) = ∮_{|z|=√(1+a²)} (f0^-)′(δP)′(z − 2 − ia)² dz, with δc0 and δc0′ from ray integrals of δc0″ (not
+  Neon's closed form), for a ∈ {0.1, 0.6, 1.0, 2.0}, at 20 digits.
+- **PASS:**
+  - |I₊| matches Neon's 6.89e−4 (a = 0.1) and 0.275 (a = 1) to its 3 quoted figures;
+  - I₊(0.6) on |z| = √1.36 equals the T8 value on |z| = 1.35 (contour independence) to 1e−12;
+  - Re I₊ < 0 at all four values of a;
+  - I₊(a)/(−7πa³/30) at a = 0.01 lies within 1% of 1.
+- **Must-fail:** the asymptotic with 7π/30 replaced by 7π/15 must miss by more than 40% at a = 0.01.
+
+Not checked here: the U_a separation claim, and the large-E loop construction (both read only).
