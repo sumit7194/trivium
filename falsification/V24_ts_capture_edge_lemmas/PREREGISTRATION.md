@@ -44,3 +44,19 @@ from Fable's checks/.
 Those come next, separately.
 
 Resources: 1 core, nice 10, a footprint watcher at 1.5 GB.
+
+## Registered results and Amendment A1 (POST-RESULT, implementation only)
+- **R1: PASS (exact).** The conformal condition and the Hamiltonian identity both cancel to 0.
+- **I1: PASS.** 2067 boxes, 0 undecided, 0 violations, 1.0 s.
+- **NEG-I1 (extended to 9.6): FIRES.** 1230 boxes with a proven wrong sign near x ≈ 9.599, consistent with Fable's ridge at
+  9.4995.
+- **NEG-I2 (reversed): FIRES** (39742 proven violations).
+- **I2: INCONCLUSIVE** as registered: 11165 undecided and 0 violations. Every undecided box sits at s ∈ [0.99988, 1],
+  i.e. against the AXIS (y² → 1).
+  - **Diagnosis:** the denominators of V and ∂V/∂s carry factors (s − 1) and (s − 1)². On a box touching s = 1 those
+    straddle 0 in interval arithmetic, so the sign test can never decide, whatever the depth.
+  - This is an implementation limitation of V24, not a property of V.
+- **A1 (implementation only; no tolerance, domain or rule changes):** before the interval sign test, divide every
+  denominator by its known factors (s − 1)^k, (x² − s)^k and (x − 1)^k(x + 1)^k, and multiply the sign by the exact,
+  known sign of each removed factor on the domain (x > 1 ≥ s): (s − 1)^k has sign (−1)^k, and the others are positive.
+  - Rerun I1, I2 and both negative controls. The registered I2 INCONCLUSIVE stays on record.
