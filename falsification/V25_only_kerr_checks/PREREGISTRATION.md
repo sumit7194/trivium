@@ -181,3 +181,44 @@ step, and the inherited first-order classification.
   - Double pole, secondary: multipliers 85.019695 and 0.011762 vs e^{±√2π}.
   - Schwarzschild f0 + dipole: linear identity at z = 0 and ±3. (b) is verdict-bearing on the linear parts only, as
     registered.
+
+## Addendum B (2026-11-20 evening, before code): gap G2, Lemma X in the critical case (a twist pole at a critical point of f0)
+**The Bridge's argument (by hand; written up in REVIEW_LOGIC after the checks).**
+- **The residue.** At a point over p, with D(p) ≠ 0 and Q = Σ_{k≤m} A_k (z − p)^{−k}, the residue is
+  e^{wκu_p} R(E), where R = Σ_k A_k h_{k−1} and h_j are the Taylor coefficients at p of h = e^{wκ(u−u_p)}/y.
+- **Algebraic continuation.** R is algebraic in E. So if it vanishes on an interval it vanishes identically, and
+  it can be continued to ε := E² − E*² → 0, where E*² = μ² f0(p).
+- **Write** φ = E² − μ² f0 (so y = D√φ) and a = μ² f0″(p)/2.
+- **Critical case** (f0′(p) = 0). Then f0″(p) ≠ 0, because f0 − f0(p) has a double zero and degree ≤ 2. Scale
+  t = z − p = σξ with σ² = −ε/a. Then σh(p + σξ) → M(ξ) uniformly on |ξ| ≤ ½, where
+  - M(ξ) = e^{c′ arsinh ξ}/(D_p √(−a) √(1 + ξ²)), with c′ = wκ(E*)/(D_p √(−a));
+  - so h_j σ^{j+1} → M_j, and R ~ A_m σ^{−m} M_{m−1}.
+  - M is proportional to d/dξ e^{c′ arsinh ξ}. Its Taylor coefficients satisfy T_{n+2} = (c′² − n²)T_n/((n+1)(n+2)), so
+    they vanish only if c′ is a real integer.
+  - **Claimed identity:** κ²(E*) = μ² f0″(p) D(p)²/4. That gives c′² = −w²/2 ∉ {0, 1, 4, ...}. So R is unbounded and
+    G2 closes.
+- **Generic case** (f0′(p) ≠ 0). The same scaling with t = (ε/φ′)ξ gives M ∝ (1 + ξ)^{−1/2}, and R ~ ε^{1/2−m}.
+
+**B1 (exact, sympy).**
+- **(a)** For f0 = 1 − m1/(z − z1) − m2/(z − z2), with D = (z − z1)(z − z2) and Fable's κ², the difference
+  κ²(E*) − μ² f0″(p)D(p)²/4 reduces to 0 modulo the numerator of f0′(p). Use polynomial remainder in p with symbolic
+  m1, m2, z1, z2, μ.
+- **(b)** The same for the double pole: f0 = Δ/(z − z1)² with Δ monic quadratic, and κ² = μ²Δ(z1)/2.
+- **(c)** The resultant in p of num(f0′) and num(f0″) is not identically 0 (the critical point is nondegenerate).
+- **PASS:** all three.
+
+**B2 (numerical, mpmath, 60 digits; power-series arithmetic for h at p).**
+- **Data.** Kerr-type f0 (M = 1, a = 3/5, μ = 1; poles ±ia) and a real two-pole f0 (z1 = 1, z2 = −1, m1 = 3/10,
+  m2 = 1/2). At one critical point p of each, take w ∈ {2, 4}, m ∈ {1, ..., 6} and ε ∈ {10^{−2}, ..., 10^{−10}}.
+- **Quantity.** dev(ε) = |h_{m−1} σ^m / M_{m−1} − 1|.
+- **PASS:** for every (case, w, m), dev ≤ 1e−3 at ε = 1e−10, and dev is non-increasing over the last four ε.
+
+**Controls**
+- **Generic.** At a non-critical p (0.3 + 0.2i, both cases): the local slope of log|h_{m−1}| against log ε, between
+  the two smallest ε, is −(m − ½) ± 0.05.
+- **Must-show-vanishing.** Replace κ by κ_int, chosen so that c′ = 1. The model then predicts M_2 = M_4 = 0, so
+  |h_{m−1}σ^m| ≤ 1e−2 at ε = 1e−10 for m = 3 and m = 5, while m = 2 stays O(1). This shows the check can see the
+  integer exception.
+
+**Not claimed.** The pole at z = ∞ and family C's other uses of Lemma X; this addendum covers only the critical-point
+case at finite p.
