@@ -1,0 +1,56 @@
+TS T-d single (-3.732050807568877+4.3076785281044854e-08j) (-85.03145720391242-1.4136602999315073e-10j) 0.0 s
+TS T-d single (-0.26794919243112264-3.0927740332945125e-09j) (-85.03145720380768-1.2992273923373432e-10j) 0.0 s
+TS T-d single (-2.218245836551854-1.7182458365518543j) (1.1706413616252576e-11-6.002753849543296e-12j) 0.0 s
+TS T-d single (-2.218245836551854+1.7182458365518543j) (-4.07562872339895e-12-2.184030734042608e-12j) 0.0 s
+TS T-d single (-0.2817541634481458-0.21824583655185423j) (4.744871162642994e-12+2.8756996783840805e-12j) 0.0 s
+TS T-d single (-0.2817541634481458+0.21824583655185423j) (1.4646506230064915e-11+1.013633621482768e-12j) 0.0 s
+TS T-d lollipop (-3.732050807568877+4.3076785281044854e-08j) 0.0 s
+TS T-d lollipop (-0.26794919243112264-3.0927740332945125e-09j) 0.0 s
+TS T-d lollipop (-2.218245836551854-1.7182458365518543j) 0.0 s
+TS T-d lollipop (-2.218245836551854+1.7182458365518543j) 0.0 s
+TS T-d lollipop (-0.2817541634481458-0.21824583655185423j) 0.1 s
+TS T-d lollipop (-0.2817541634481458+0.21824583655185423j) 0.0 s
+TS T-d n_lox_noncomm 66 max|tr[G,H]-2| 1.552e+18
+Kerr T-a single (-1.1428571428571428+0j) (5.08175446167769e-12-1.1457501614131615e-12j) 0.0 s
+Kerr T-a single (3.9999999999999987+0j) (8.441553012161762e-12-1.1901590823981678e-13j) 0.0 s
+Kerr T-a single (-1.25-0.75j) (2.7625901566352695e-11+2.3565593920693573e-12j) 0.0 s
+Kerr T-a single (-1.25+0.75j) (1.3862244685469705e-11-7.850831096334332e-12j) 0.0 s
+Kerr T-a lollipop (-1.1428571428571428+0j) 0.0 s
+Kerr T-a lollipop (3.9999999999999987+0j) 0.0 s
+Kerr T-a lollipop (-1.25-0.75j) 0.0 s
+Kerr T-a lollipop (-1.25+0.75j) 0.0 s
+Kerr T-a n_lox_noncomm 0 max|tr[G,H]-2| 5.244e-07
+Traceback (most recent call last):
+  File "/Users/sumit/Github/conjecture_machine/.venv/lib/python3.14/site-packages/sympy/polys/polytools.py", line 3729, in nroots
+    roots = mpmath.polyroots(coeffs, maxsteps=maxsteps,
+            cleanup=cleanup, error=False, extraprec=f.degree()*10)
+  File "/Users/sumit/Github/conjecture_machine/.venv/lib/python3.14/site-packages/mpmath/calculus/polynomials.py", line 196, in polyroots
+    raise ctx.NoConvergence("Didn't converge in maxsteps=%d steps." \
+            % maxsteps)
+mpmath.libmp.libhyper.NoConvergence: Didn't converge in maxsteps=50 steps.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sumit/Github/conjecture_machine/.venv/lib/python3.14/site-packages/sympy/polys/polytools.py", line 3739, in nroots
+    roots = mpmath.polyroots(coeffs, maxsteps=maxsteps,
+        cleanup=cleanup, error=False, extraprec=f.degree()*15)
+  File "/Users/sumit/Github/conjecture_machine/.venv/lib/python3.14/site-packages/mpmath/calculus/polynomials.py", line 196, in polyroots
+    raise ctx.NoConvergence("Didn't converge in maxsteps=%d steps." \
+            % maxsteps)
+mpmath.libmp.libhyper.NoConvergence: Didn't converge in maxsteps=50 steps.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sumit/Github/TheBridge/falsification/V22_ts_axis_theorem_check/code/v22_t4b.py", line 13, in <module>
+    zs, ps, _, _ = singular_points(f0, math.sqrt(lam), 1.0)
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sumit/Github/TheBridge/falsification/V22_ts_axis_theorem_check/code/v22.py", line 70, in singular_points
+    zs = [complex(z) for z in sp.Poly(n, X).nroots(n=30)]; ps = [complex(z) for z in sp.Poly(d, X).nroots(n=30)]
+                                                                                     ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/sumit/Github/conjecture_machine/.venv/lib/python3.14/site-packages/sympy/polys/polytools.py", line 3744, in nroots
+    raise NoConvergence(
+        'convergence to root failed; try n < %s or maxsteps > %s' % (
+        n, maxsteps))
+mpmath.libmp.libhyper.NoConvergence: convergence to root failed; try n < 30 or maxsteps > 50

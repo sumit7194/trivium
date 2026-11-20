@@ -52,7 +52,7 @@ def transport(rf, path, rtol):
             x = z(t); d = dz(t); return [d*Yv[1], d*rf(x)*Yv[0]]
         cols = []
         for k in range(2):
-            sol = solve_ivp(rhs, (t0, t1), list(Mt[:, k]), method='DOP853', rtol=rtol, atol=rtol*1e-8, t_eval=[])  # t_eval=[]: no dense history (09:57 leak)
+            sol = solve_ivp(rhs, (t0, t1), list(Mt[:, k]), method='DOP853', rtol=rtol, atol=rtol*1e-8, t_eval=[t1])  # final point only: no step history (09:57 leak); t_eval=[] returned no y
             cols.append(sol.y[:, -1])
         Mt = np.array(cols).T
     return Mt
@@ -74,7 +74,7 @@ def monodromies(f0, Ev, m2, rtol, base=complex(0.37, 9.1)):
     rf = make_r(f0, Ev, m2); zs, ps, _, _ = singular_points(f0, Ev, m2)
     pts = []
     for z in zs + ps:
-        if not any(abs(z - w) < 1e-9 for w in pts): pts.append(z)
+        if not any(abs(z - w) < 1e-5 for w in pts): pts.append(z)   # 1e-5: numerical double roots split by ~1e-8 (root cause of the 11-19/20 stalls)
     out = []
     for c in pts:
         dmin = min(abs(c - w) for w in pts if w is not c)
