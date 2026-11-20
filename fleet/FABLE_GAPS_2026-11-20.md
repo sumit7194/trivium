@@ -38,6 +38,12 @@ will be used. Each gap is marked:*
   - OPUS-TRY (Bridge). Details in V24/REVIEW_LOGIC.md, addendum.
   - **Update.** The fix was checked on a sample (V24 addendum D, PASS): C < 0 on the whole cap, vanishing only
     linearly at the brake point. What remains is the interval version plus a jet lemma, which is engineering.
+  - **Update 2 (evening). Now RIGOROUS (V24 addendum F, PASS):**
+    - interval C < 0 on the cap outside a 1e−4 disc;
+    - a mean-value jet lemma inside the disc (C ≤ −26.9 r);
+    - uniform over a ±1e−7 brake-point box;
+    - all three must-fail controls fired.
+  - **Remaining:** a validated brake-point enclosure inside that box, from quantum's validated γ.
 - **C2. Hypothesis N: interval-Newton fixed point and cone conditions at z*.** OPUS-OK (standard; quantum has
   Krawczyk).
 - **Plan of record with quantum:** recipes/TS_CAPTURE_EDGE_PROOF_RECIPE.md v1.1.

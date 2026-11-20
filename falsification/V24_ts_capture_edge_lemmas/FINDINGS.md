@@ -164,3 +164,54 @@ in PREREGISTRATION.
 - **Consequence for the proof recipe (C-T and C-L).** Each crossing can be certified as a simple zero of ONE scalar
   function of the W^u parameter: p_x at a fixed mid-excursion event. Certifying that requires no comparison of U with
   S near the crossing.
+
+## Addendum F: the brake cap in interval arithmetic. **PASS at ρ₀ = 1e−4** (prereg 2e1daf6; Bridge, 2026-11-20 evening)
+Code: code/v24_capF.py. Results: results/v24_capF.json and v24_capF.log.
+Environment: Python 3.14.5 (conjecture_machine .venv), mpmath 1.3.0 (iv, 30 digits), sympy 1.14.0, macOS 27.0.1 arm64.
+
+**Gates**
+- **F0a (containment) PASS.** At 5 rational points, the degenerate-box values of V, V_u, V_v, V_uu, V_uv and V_vv
+  contain the 50-digit values from direct sympy differentiation. This is an independent route from the
+  quotient-rule code.
+- **F0b (identity) PASS.** C(p_b; B) = [−7.38e−4, +7.38e−4] contains 0. The width comes from the slope interval
+  s = V_u/V_v over B (±1e−7), which is [−0.0061083, −0.0061038].
+
+**The ρ₀ ladder** (rungs in registered order)
+- **ρ₀ = 1e−5: F2 OK, F1 FAIL.** F1 left 20 boxes undecided at depth 40, all within ~1.3e−5 of p_b. There the
+  parameter width (~7e−4 in C) beats the true margin (~52 r).
+- **ρ₀ = 1e−4: F2 OK, F1 OK → F PASS.**
+  - **F1:** 1145 boxes; no violation, no undecided box.
+    - Discharged by: 361 outside Hill, 205 by C < 0, 2 by τ ∉ [0, 1], 5 inside the disc.
+    - Largest certified C.upper is −5.06e−5.
+  - **F2:**
+    - den ≥ 0.0582 on D;
+    - ∇C over D is C_u ∈ [46.97, 57.67], C_v ∈ [−8.94, 3.17];
+    - the θ-intervals were discharged by Hill (2) and by C (1);
+    - the certified linear rate is ∇C·e ≤ −26.9 on the cap cone. Addendum D's float value was −C/r ≥ 52.
+
+**Must-fail controls (all fired)**
+- **NEG-F1 (slope 2s):** 104,249 proven VIOLATIONS (C.lower up to ~0.99), as addendum D predicted.
+- **NEG-F0b (slope 2s):** C(p_b) = [0.9972, 0.9994], which excludes 0.
+- **NEG-F2 (no Hill constraint, θ ∈ [0, 2π]) at ρ₀ = 1e−4:** FAIL as required, with 1000 undecided θ-intervals near
+  θ = 3π/2.
+  - **Caveat:** that firing is by indeterminacy, because C_v's enclosure contains 0 at this radius.
+  - **Supplementary, post-result, not registered:** the same control at ρ₀ = 1e−5 PROVES C > 0 on
+    θ ∈ [3π/2, 7π/4] (∇C·e ≥ 1.61). So the Hill constraint does the real work in F2.
+
+**Amendment F-a (POST-RESULT; implementation only)**
+- As registered, NEG-F2 kept bisecting a band of θ where the enclosure straddles 0. It would have taken many hours.
+- I killed my own PID 254 after the main results and NEG-F1 were saved, and reran NEG-F0b and NEG-F2 with an
+  early stop: at the first proven-positive interval, or after 1000 depth-limited ones. The registered reading
+  ("fails") is unchanged.
+- Also before the registered run, found in a non-counted smoke test: a proven-positive θ-interval now ends that branch
+  of the bisection. Previously it was split further, a bug.
+
+**What this establishes.**
+- For every brake point p_b in the box B (±1e−7 around the float value) with V(p_b) = 0, the C¹ slope-matched leaves
+  below the brake latitude satisfy C < 0 at every Hill point they cover, except at p_b itself:
+  - by direct enclosure for |p − p_b| ≥ 1e−4;
+  - by the mean-value form for |p − p_b| < 1e−4, with C ≤ −26.9 r.
+- So the cap part of C-I3 (gap C1b) is closed rigorously, modulo two items:
+  - a validated brake-point enclosure inside B (from quantum's validated γ);
+  - the brake-jet relation s = V_u/V_v. This is exact; D0 checked it in float.
+- **Still open in C-I3:** ∂C/∂τ > 0 above v_b on the validated γ (quantum).
