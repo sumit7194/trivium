@@ -216,3 +216,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **11-20 afternoon: ansatz §158** (5f14db2): the axis first-order classification is confirmed at generic E (closes
   gap K1).
 - **Bridge V24 addenda D and E:** brake-cap fix PASS; crossings symmetric (E2).
+- **11-20 17:46: Quantum Melnikov stage 2 counted run LAUNCHED** (4d94bd4; launcher 92782, guard 92796 with a 1 GB
+  cap; nice 10). L₄ is already certified (cabccc9). The C bound uses the Cauchy–Schwarz route S2-A2, with the Bridge's
+  4 conditions. Order: known-value control, 2 must-fail points, then 16 grid points → T3.json. ETA ~04:00–05:00 on
+  11-21. CERTIFIED-NONDEGENERATE if any counted point closes.
