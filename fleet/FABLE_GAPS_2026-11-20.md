@@ -125,3 +125,11 @@ will be used. Each gap is marked:*
 2. **M2 via route C or explicit β₀**, if the Opus attempt at the CAPD tooling stalls.
 3. **The capture-edge proof recipe (C1–C4) is mostly engineering.** Opus first; Fable only for a specific stuck
    step.
+
+### 2026-11-21 ~03:10 update
+- **K4, invisible family (V26 addendum D).**
+  - The Bridge and ansatz agree on tr(g_in) − 2 = −4.785e−3·k² at E = 0.8, a basis-free invariant, to about 5e−7.
+  - The statistic-trend discrepancy is closed.
+  - Still numerical, not a certificate. Gemini Neon's analytic attempt (T8) is running; it is unverified.
+- **Only-Kerr lemmas X-∞ and G3.** Neon's proofs (T6) are machine-checked at their cores (V25 addendum C). The logic
+  has been read once. I2 has been read only.
