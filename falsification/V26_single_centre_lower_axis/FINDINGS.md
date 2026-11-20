@@ -157,3 +157,40 @@ Only the direction the theorem uses is checked: deg f0 ≥ 3 ⇒ the identity co
   - the inherited literature theorems (Morales–Ramis–Simó, Kovacic);
   - ZV δ = 2, whose non-integrability rests on MPS 2013 (an equatorial orbit), since both its axes are single-centre.
 - **Not done (optional extra rigour):** certified lower-axis monodromy (B3) and true-geodesic return maps (B7).
+
+## Addendum C (B8): the invisible non-rational family seen from below. **PASS (obstructed at first order; numerical, not a certificate)** (code/v26_B8.py)
+**Self-test.** The hand-coded f0, f0′, (c0″)² and its derivative agree with sympy to 7e−16.
+
+**Gates** (every run): loop traces ≤ 1.4e−12; det − 1 ≤ 1e−10; c0 and c0′ return to their start values to ≤ 1e−13,
+so c0 is single-valued on the loops in |z| > 1.3.
+
+**Statistic.** S is the registered quantity: max ‖KK′ − K′K‖ over commutator pairs. The floor is |S(rtol 1e−13) −
+S(rtol 1e−11)|.
+
+| E | k = 0 (Kerr from below) | k = 1/100 | k = 1/30 | k = 1/10 |
+|---|---|---|---|---|
+| 0.8 | 1.1e−8 (floor 1.2e−6) | 10.31 | 34.41 | 103.4 |
+| 0.7 | 1.6e−8 (floor 1.3e−6) | 56.63 | 188.6 | 564.5 |
+| 0.9 | 6.4e−9 (floor 1.1e−6) | 1.354 | 4.533 | 13.76 |
+
+- For k ≠ 0, the floors are ≤ 5e−7. Every k ≠ 0 entry exceeds 100 × (the k = 0 value) and 100 × its floor, by
+  factors of 10⁶ or more.
+- **Linearity in k** (E = 0.8; k = 1e−3, 3e−3, 1e−2): S = 1.031, 3.094, 10.32. The log–log slope is 1.0001
+  (registered: 1 ± 0.2).
+- **Positive control** (rational twisted single-centre data from below): S = 1.5e5 at E = 0.8 and 2.1e6 at E = 0.7.
+- **Extra, not registered:** the normalised statistic S/(‖K‖‖K′‖) is 4e−11 to 1.4e−10 at k = 0, and 9e−5 to 6e−2 for
+  k ≠ 0. (These values come from the rtol 1e−11 pass.)
+
+**Reading.**
+- For every k ≠ 0 tested, the lower-axis first-order monodromy has a non-abelian derived subgroup.
+- It contains elements arbitrarily close to the identity as k → 0, by linearity. So it is not finite.
+- So the group is not virtually abelian, and **the invisible family is obstructed at first order on the lower
+  axis**, as Fable's exploratory run indicated.
+
+**Status: numerical, in double precision, with independent Bridge code.**
+
+**Still needed for a theorem:**
+- a certified (interval or high-precision) monodromy. ansatz has been asked for a blind 40–50-digit second
+  implementation;
+- convergence of the lower-axis rule for non-rational data that are analytic at infinity. The series proof covers
+  analytic asymptotically flat data, but convergence is assumed.

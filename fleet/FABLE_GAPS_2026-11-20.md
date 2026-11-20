@@ -114,6 +114,10 @@ will be used. Each gap is marked:*
 - **K4. The invisible non-rational family** (Kerr's f0, branched twist, passes the third-order test at every energy).
   It might be killed by the L ≠ 0 sector, by fifth order, or by another orbit. HARD-ish. OPUS-TRY on the L-sector
   first.
+  - **2026-11-20 late (Bridge V26 addendum C):** obstructed at FIRST order on the LOWER axis. Numerically (double
+    precision, own code): at E = 0.7, 0.8 and 0.9, the derived-subgroup statistic is at least 1e6 × the Kerr floor
+    and linear in the parameter (slope 1.0001), and the controls pass. A certified version needs high precision:
+    ansatz has been asked for a blind second implementation.
 - **K5. Non-rational axis data in general** (first order for arbitrary analytic f0). HARD (open research).
 
 ## Where Fable would add the most (Bridge's view, to discuss)

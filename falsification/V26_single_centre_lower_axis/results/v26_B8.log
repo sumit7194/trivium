@@ -1,0 +1,19 @@
+hand-coded vs sympy max rel err 7.27319478611961e-16
+E 0.8 alpha 0 | S 1.133e-08 (rtol1e-11: 1.252e-06, floor 1.2e-06) gates True | S_norm 3.77e-11 | max trace 3.2e-13 c0ret 8.1e-14
+E 0.8 alpha 0.01 | S 1.031e+01 (rtol1e-11: 1.031e+01, floor 4.4e-07) gates True | S_norm 3.17e-04 | max trace 2.5e-13 c0ret 7.7e-14
+E 0.8 alpha 0.03333 | S 3.441e+01 (rtol1e-11: 3.441e+01, floor 4.3e-07) gates True | S_norm 1.06e-03 | max trace 2.5e-13 c0ret 8.0e-14
+E 0.8 alpha 0.1 | S 1.034e+02 (rtol1e-11: 1.034e+02, floor 4.1e-07) gates True | S_norm 3.20e-03 | max trace 3.2e-13 c0ret 7.6e-14
+E 0.7 alpha 0 | S 1.567e-08 (rtol1e-11: 1.318e-06, floor 1.3e-06) gates True | S_norm 1.40e-10 | max trace 2.1e-13 c0ret 9.3e-14
+E 0.7 alpha 0.01 | S 5.663e+01 (rtol1e-11: 5.663e+01, floor 5.1e-07) gates True | S_norm 5.84e-03 | max trace 2.3e-13 c0ret 8.6e-14
+E 0.7 alpha 0.03333 | S 1.886e+02 (rtol1e-11: 1.886e+02, floor 5.0e-07) gates True | S_norm 1.95e-02 | max trace 2.0e-13 c0ret 9.0e-14
+E 0.7 alpha 0.1 | S 5.645e+02 (rtol1e-11: 5.645e+02, floor 4.8e-07) gates True | S_norm 5.82e-02 | max trace 2.1e-13 c0ret 8.4e-14
+E 0.9 alpha 0 | S 6.421e-09 (rtol1e-11: 1.116e-06, floor 1.1e-06) gates True | S_norm 7.17e-11 | max trace 1.4e-12 c0ret 8.0e-14
+E 0.9 alpha 0.01 | S 1.354e+00 (rtol1e-11: 1.354e+00, floor 1.4e-07) gates True | S_norm 8.67e-05 | max trace 6.7e-13 c0ret 7.7e-14
+E 0.9 alpha 0.03333 | S 4.533e+00 (rtol1e-11: 4.533e+00, floor 1.3e-07) gates True | S_norm 2.90e-04 | max trace 1.0e-12 c0ret 7.6e-14
+E 0.9 alpha 0.1 | S 1.376e+01 (rtol1e-11: 1.376e+01, floor 1.4e-07) gates True | S_norm 8.78e-04 | max trace 1.4e-12 c0ret 7.2e-14
+scaling alpha 0.001 S 1.0312e+00
+scaling alpha 0.003 S 3.0938e+00
+scaling alpha 0.01 S 1.0315e+01
+log-log slope 1.0001165874280038
+CONTROL e=1-2/z+i/z^2 E 0.8 | S 1.486e+05 | traces ['9.0e-14', '2.8e-13', '3.9e-13', '2.3e-13']
+CONTROL e=1-2/z+i/z^2 E 0.7 | S 2.091e+06 | traces ['1.0e-13', '3.3e-13', '1.7e-13', '1.2e-13']
