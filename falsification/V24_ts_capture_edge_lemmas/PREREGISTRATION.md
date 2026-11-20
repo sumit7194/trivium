@@ -238,3 +238,32 @@ around the brake point, plus a jet lemma at the brake point.
 - Same thresholds as E (symmetric if ≤ 1e−8; non-symmetric if ≥ 1e−4).
 - **Prediction (from the reversible-map structure):** all four are symmetric, alternating between Fix(R)-type and
   Fix(HR)-type.
+
+### Amendment E1 result and amendment E2 (POST-RESULT)
+**E1 result as registered.**
+- Control H² = P: ≤ 1.2e−11. **PASS.**
+- h: SYMMETRIC (Fix(R)).
+- Crossing 114/115: UNRESOLVED (d_R = 9.7e−7).
+- Crossings 14/15 and 214/215: NON-SYMMETRIC by threshold (d_HR = 9.5e−4 and 1.9e−3).
+
+**Diagnosis: the thresholds don't fit the method.**
+- The lobes are ~1e−5 thin, so W^u meets S at a tiny angle. A crossing located by "gap = 0" is then known only to
+  ~(gap error)/(angle), roughly 1e−6 along the curve.
+- H iterates amplify that, so 1e−8 was unreachable and ~1e−3 is not evidence of asymmetry.
+
+**E2 (method changed; fixed before the run).** Find the symmetric points directly in the flow.
+- **Two kinds of symmetric orbit.** The flow is reversible under time reversal T (p → −p) and under the equatorial
+  reflection composed with T.
+  - **Fix(R) type:** a perpendicular equator crossing (y = 0, p_x = 0).
+  - **Brake type:** p_x = p_y = 0 at a latitude turning point (p_y = 0).
+- **Method.**
+  - Along the fundamental domain of seeds (the V24 C setup, 400 seeds), integrate each seed's orbit through its
+    first-crossing return plus one.
+  - Record p_x at each equator event and at each p_y = 0 event, in order.
+  - Find the roots, in seed parameter s, of each event's p_x: brackets between adjacent seeds with the same event
+    sequence, then brentq.
+  - Report each root's type and log s, and compare with the crossing parameters from E.
+- **Pass reading ("crossings are symmetric").** Each of the 3 crossings from E has a root within |Δ log s| ≤ 1e−4.
+  That bound is the crossing-location precision.
+- **Also report:** the full root list, so any extra symmetric points show up, and the spacing.
+- **Control.** h must appear as a Fix(R)-type root at its known s.
