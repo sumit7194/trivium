@@ -127,9 +127,17 @@ supplies the exact inequalities and the float previews, and reviews each certifi
   U's tangent at h.
 - **At the other crossings** (m, and the two further crossings found in V24): a certified sign change of the gap
   with a nonzero derivative (from C-L end pieces).
-- **Open question (Bridge, cheap):** are the 4 crossings per fundamental domain symmetric points on Fix(R) and
-  Fix(P∘R)? Their spacing is exactly a quarter period in log s (V24). If so, every crossing is a symmetric homoclinic
-  point, and each T reduces to the h-type check.
+- **ANSWERED (V24 addendum E2, float).** All 4 crossings per fundamental domain are SYMMETRIC homoclinic points. In
+  order they are brake, Fix(R), brake, Fix(R) = h. They alternate a quarter period apart, as the half-map H (H² = P,
+  the equatorial reflection) predicts.
+  - **Certificate form for every crossing:** a simple zero, in the W^u arc parameter s, of ONE scalar: p_x at a fixed
+    mid-excursion flow event. The event is an equator crossing for the Fix(R) type, and a p_y = 0 turning point for
+    the brake type (events 16–18 in the float run).
+  - That is a 1D interval-Newton problem on a validated C¹ flow. It removes the need to compare U with R(U) near the
+    crossings. Only the core pieces of C-L still need the gap.
+  - Transversality of W^u and S at a symmetric point: certify a nonzero derivative of that scalar in s, plus the
+    tangent of W^u not lying in the fixed line's tangent. The latter is the standard symmetric-point argument; to be
+    written out in C-T's prereg.
 - **Status:** feasible once C-L exists.
 
 ### C-I1/I2 (already interval-checked by the Bridge, V24)

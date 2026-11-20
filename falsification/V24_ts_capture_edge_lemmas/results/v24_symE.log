@@ -1,0 +1,8 @@
+n changes at seeds [315]
+h control: [ 5.68610801e+01 -9.65802369e-10] min dR 9.66e-10  min dPR 6.58e-04
+class changes at seeds [15, 115, 215, 315]
+crossing seeds 14/15: c = [32.19651188 -0.15229214]  min dR 8.01e-07 (k=3)  min dPR 1.64e-03 (k=-3)  -> UNRESOLVED
+crossing seeds 114/115: c = [17.17947318 -0.16732597]  min dR 1.69e-05 (k=3)  min dPR 8.08e-05 (k=0)  -> UNRESOLVED
+crossing seeds 214/215: c = [12.47266467 -0.10557737]  min dR 1.05e-04 (k=2)  min dPR 4.74e-03 (k=3)  -> NON-SYMMETRIC
+  seed pair 314 315 spans an n change; skipped
+log-s spacing / log(lambda): [0.249988, 0.249997]

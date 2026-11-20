@@ -1,0 +1,5 @@
+control |H(H(z)) - P(z)|: ['2.9e-12', '1.2e-11', '1.9e-12', '1.3e-12', '2.4e-12']
+CONTROL h                c=[56.86108 -0.     ]  min dR 9.66e-10  min dHR 8.66e-01  -> SYMMETRIC (Fix(R))
+crossing [14, 15]        c=[32.196512 -0.152292]  min dR 1.06e-01  min dHR 9.52e-04  -> NON-SYMMETRIC (Fix(HR))
+crossing [114, 115]      c=[17.179473 -0.167326]  min dR 9.72e-07  min dHR 6.35e+00  -> UNRESOLVED (Fix(R))
+crossing [214, 215]      c=[12.472665 -0.105577]  min dR 1.06e-01  min dHR 1.89e-03  -> NON-SYMMETRIC (Fix(HR))

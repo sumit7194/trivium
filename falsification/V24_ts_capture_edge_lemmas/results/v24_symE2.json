@@ -1,0 +1,5787 @@
+{
+ "roots": [
+  {
+   "type": "brake",
+   "event": 18,
+   "seed": 14,
+   "log_s": -13.68256594411426,
+   "dist_to_nearest_crossing_logs": 1.7229843633614905e-05
+  },
+  {
+   "type": "Fix(R)",
+   "event": 29,
+   "seed": 14,
+   "log_s": -13.681867544303913,
+   "dist_to_nearest_crossing_logs": 0.0006811699667146343
+  },
+  {
+   "type": "brake",
+   "event": 30,
+   "seed": 14,
+   "log_s": -13.682453346288067,
+   "dist_to_nearest_crossing_logs": 9.536798255993517e-05
+  },
+  {
+   "type": "Fix(R)",
+   "event": 31,
+   "seed": 14,
+   "log_s": -13.682547881247705,
+   "dist_to_nearest_crossing_logs": 8.330229217534679e-07
+  },
+  {
+   "type": "brake",
+   "event": 32,
+   "seed": 14,
+   "log_s": -13.68256324286455,
+   "dist_to_nearest_crossing_logs": 1.4528593922591426e-05
+  },
+  {
+   "type": "Fix(R)",
+   "event": 33,
+   "seed": 14,
+   "log_s": -13.68256566538122,
+   "dist_to_nearest_crossing_logs": 1.695111059341059e-05
+  },
+  {
+   "type": "brake",
+   "event": 34,
+   "seed": 14,
+   "log_s": -13.682566058254771,
+   "dist_to_nearest_crossing_logs": 1.734398414399152e-05
+  },
+  {
+   "type": "Fix(R)",
+   "event": 35,
+   "seed": 14,
+   "log_s": -13.682566121818295,
+   "dist_to_nearest_crossing_logs": 1.7407547668213397e-05
+  },
+  {
+   "type": "brake",
+   "event": 36,
+   "seed": 14,
+   "log_s": -13.682565994449247,
+   "dist_to_nearest_crossing_logs": 1.7280178619571984e-05
+  },
+  {
+   "type": "brake",
+   "event": 28,
+   "seed": 15,
+   "log_s": -13.678268468698006,
+   "dist_to_nearest_crossing_logs": 0.004280245572621411
+  },
+  {
+   "type": "Fix(R)",
+   "event": 37,
+   "seed": 15,
+   "log_s": -13.671889255744171,
+   "dist_to_nearest_crossing_logs": 0.010659458526456334
+  },
+  {
+   "type": "brake",
+   "event": 38,
+   "seed": 15,
+   "log_s": -13.678250094718619,
+   "dist_to_nearest_crossing_logs": 0.004298619552008276
+  },
+  {
+   "type": "Fix(R)",
+   "event": 27,
+   "seed": 17,
+   "log_s": -13.657015054775648,
+   "dist_to_nearest_crossing_logs": 0.025533659494978878
+  },
+  {
+   "type": "brake",
+   "event": 36,
+   "seed": 17,
+   "log_s": -13.656368989694586,
+   "dist_to_nearest_crossing_logs": 0.026179724576040897
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 17,
+   "log_s": -13.6534685600218,
+   "dist_to_nearest_crossing_logs": 0.029080154248827483
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 17,
+   "log_s": -13.65635250369642,
+   "dist_to_nearest_crossing_logs": 0.026196210574207512
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 17,
+   "log_s": -13.656904386390853,
+   "dist_to_nearest_crossing_logs": 0.025644327879774664
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 17,
+   "log_s": -13.656997165908603,
+   "dist_to_nearest_crossing_logs": 0.025551548362024334
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 17,
+   "log_s": -13.657012261338911,
+   "dist_to_nearest_crossing_logs": 0.025536452931715914
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 17,
+   "log_s": -13.65701464994403,
+   "dist_to_nearest_crossing_logs": 0.025534064326597772
+  },
+  {
+   "type": "brake",
+   "event": 50,
+   "seed": 17,
+   "log_s": -13.657015054214112,
+   "dist_to_nearest_crossing_logs": 0.025533660056515473
+  },
+  {
+   "type": "Fix(R)",
+   "event": 51,
+   "seed": 17,
+   "log_s": -13.657015061192757,
+   "dist_to_nearest_crossing_logs": 0.025533653077870255
+  },
+  {
+   "type": "Fix(R)",
+   "event": 51,
+   "seed": 18,
+   "log_s": -13.646516761493183,
+   "dist_to_nearest_crossing_logs": 0.036031952777443976
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 18,
+   "log_s": -13.651245678827104,
+   "dist_to_nearest_crossing_logs": 0.031303035443523086
+  },
+  {
+   "type": "Fix(R)",
+   "event": 67,
+   "seed": 18,
+   "log_s": -13.642299869527092,
+   "dist_to_nearest_crossing_logs": 0.04024884474353563
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 18,
+   "log_s": -13.646638495828755,
+   "dist_to_nearest_crossing_logs": 0.03591021844187203
+  },
+  {
+   "type": "E",
+   "event": 83,
+   "seed": 18,
+   "error": "The function value at x=1.186560739187579e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "E",
+   "event": 91,
+   "seed": 18,
+   "error": "The function value at x=1.1868907947997502e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 18,
+   "log_s": -13.65127064530691,
+   "dist_to_nearest_crossing_logs": 0.031278068963716876
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 18,
+   "log_s": -13.651276374200842,
+   "dist_to_nearest_crossing_logs": 0.03127234006978519
+  },
+  {
+   "type": "brake",
+   "event": 94,
+   "seed": 18,
+   "log_s": -13.651277423424514,
+   "dist_to_nearest_crossing_logs": 0.031271290846113686
+  },
+  {
+   "type": "Fix(R)",
+   "event": 95,
+   "seed": 18,
+   "log_s": -13.65127758976336,
+   "dist_to_nearest_crossing_logs": 0.03127112450726699
+  },
+  {
+   "type": "brake",
+   "event": 96,
+   "seed": 18,
+   "log_s": -13.648779006939543,
+   "dist_to_nearest_crossing_logs": 0.033769707331083865
+  },
+  {
+   "type": "E",
+   "event": 97,
+   "seed": 18,
+   "error": "The function value at x=1.1866215058836707e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 19,
+   "log_s": -13.640048806605996,
+   "dist_to_nearest_crossing_logs": 0.042499907664630854
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 19,
+   "log_s": -13.641878910887957,
+   "dist_to_nearest_crossing_logs": 0.04066980338267001
+  },
+  {
+   "type": "Fix(R)",
+   "event": 51,
+   "seed": 20,
+   "log_s": -13.627392859935743,
+   "dist_to_nearest_crossing_logs": 0.05515585433488468
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 20,
+   "log_s": -13.628447976059903,
+   "dist_to_nearest_crossing_logs": 0.054100738210724586
+  },
+  {
+   "type": "Fix(R)",
+   "event": 67,
+   "seed": 20,
+   "log_s": -13.6281402285895,
+   "dist_to_nearest_crossing_logs": 0.05440848568112777
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 20,
+   "log_s": -13.624532669904156,
+   "dist_to_nearest_crossing_logs": 0.058016044366471675
+  },
+  {
+   "type": "E",
+   "event": 99,
+   "seed": 20,
+   "error": "The function value at x=1.2082674277221477e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "Fix(R)",
+   "event": 35,
+   "seed": 21,
+   "log_s": -13.619316513341847,
+   "dist_to_nearest_crossing_logs": 0.06323220092878046
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 21,
+   "log_s": -13.616820756807352,
+   "dist_to_nearest_crossing_logs": 0.06572795746327564
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 21,
+   "log_s": -13.615381698027628,
+   "dist_to_nearest_crossing_logs": 0.06716701624299937
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 21,
+   "log_s": -13.615156294526166,
+   "dist_to_nearest_crossing_logs": 0.06739241974446131
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 21,
+   "log_s": -13.615120123869383,
+   "dist_to_nearest_crossing_logs": 0.06742859040124394
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 21,
+   "log_s": -13.615114277484949,
+   "dist_to_nearest_crossing_logs": 0.06743443678567829
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 21,
+   "log_s": -13.615113372399122,
+   "dist_to_nearest_crossing_logs": 0.06743534187150502
+  },
+  {
+   "type": "brake",
+   "event": 50,
+   "seed": 21,
+   "log_s": -13.615113093343924,
+   "dist_to_nearest_crossing_logs": 0.06743562092670352
+  },
+  {
+   "type": "Fix(R)",
+   "event": 51,
+   "seed": 21,
+   "log_s": -13.615113139017588,
+   "dist_to_nearest_crossing_logs": 0.06743557525303956
+  },
+  {
+   "type": "brake",
+   "event": 26,
+   "seed": 29,
+   "log_s": -13.550310694978258,
+   "dist_to_nearest_crossing_logs": 0.13223801929236956
+  },
+  {
+   "type": "Fix(R)",
+   "event": 43,
+   "seed": 29,
+   "log_s": -13.546293400887347,
+   "dist_to_nearest_crossing_logs": 0.13625531338328045
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 29,
+   "log_s": -13.549623097421287,
+   "dist_to_nearest_crossing_logs": 0.1329256168493398
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 29,
+   "log_s": -13.550198477249177,
+   "dist_to_nearest_crossing_logs": 0.1323502370214502
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 29,
+   "log_s": -13.55029248907758,
+   "dist_to_nearest_crossing_logs": 0.13225622519304636
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 29,
+   "log_s": -13.5503076521776,
+   "dist_to_nearest_crossing_logs": 0.1322410620930281
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 29,
+   "log_s": -13.55031011798794,
+   "dist_to_nearest_crossing_logs": 0.13223859628268642
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 29,
+   "log_s": -13.550310537138587,
+   "dist_to_nearest_crossing_logs": 0.13223817713203978
+  },
+  {
+   "type": "brake",
+   "event": 50,
+   "seed": 29,
+   "log_s": -13.550310623488048,
+   "dist_to_nearest_crossing_logs": 0.13223809078257887
+  },
+  {
+   "type": "Fix(R)",
+   "event": 51,
+   "seed": 29,
+   "log_s": -13.550310692512003,
+   "dist_to_nearest_crossing_logs": 0.1322380217586243
+  },
+  {
+   "type": "Fix(R)",
+   "event": 51,
+   "seed": 30,
+   "log_s": -13.541619474046808,
+   "dist_to_nearest_crossing_logs": 0.14092924022381936
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 30,
+   "log_s": -13.541196610574383,
+   "dist_to_nearest_crossing_logs": 0.14135210369624396
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 30,
+   "log_s": -13.541001757799565,
+   "dist_to_nearest_crossing_logs": 0.1415469564710623
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 30,
+   "log_s": -13.540971150352197,
+   "dist_to_nearest_crossing_logs": 0.14157756391843002
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 30,
+   "log_s": -13.540966455526908,
+   "dist_to_nearest_crossing_logs": 0.14158225874371944
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 30,
+   "log_s": -13.540965540425775,
+   "dist_to_nearest_crossing_logs": 0.14158317384485208
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 30,
+   "log_s": -13.540965440565714,
+   "dist_to_nearest_crossing_logs": 0.14158327370491364
+  },
+  {
+   "type": "B",
+   "event": 66,
+   "seed": 30,
+   "error": "The function value at x=1.3241269536807955e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "E",
+   "event": 67,
+   "seed": 30,
+   "error": "The function value at x=1.3194493762025154e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "brake",
+   "event": 34,
+   "seed": 31,
+   "log_s": -13.532751771777908,
+   "dist_to_nearest_crossing_logs": 0.1497969424927188
+  },
+  {
+   "type": "brake",
+   "event": 42,
+   "seed": 31,
+   "log_s": -13.530476888747186,
+   "dist_to_nearest_crossing_logs": 0.152071825523441
+  },
+  {
+   "type": "brake",
+   "event": 50,
+   "seed": 31,
+   "log_s": -13.530187047735179,
+   "dist_to_nearest_crossing_logs": 0.15236166653544814
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 31,
+   "log_s": -13.530150132903874,
+   "dist_to_nearest_crossing_logs": 0.15239858136675366
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 31,
+   "log_s": -13.532214279019893,
+   "dist_to_nearest_crossing_logs": 0.1503344352507341
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 31,
+   "log_s": -13.532659246436353,
+   "dist_to_nearest_crossing_logs": 0.14988946783427437
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 31,
+   "log_s": -13.532736670334508,
+   "dist_to_nearest_crossing_logs": 0.14981204393611947
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 31,
+   "log_s": -13.532749180324398,
+   "dist_to_nearest_crossing_logs": 0.14979953394622925
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 31,
+   "log_s": -13.532751309215955,
+   "dist_to_nearest_crossing_logs": 0.14979740505467198
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 31,
+   "log_s": -13.532751648146455,
+   "dist_to_nearest_crossing_logs": 0.14979706612417232
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 32,
+   "log_s": -13.522302802904402,
+   "dist_to_nearest_crossing_logs": 0.1602459113662249
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 32,
+   "log_s": -13.520974776942541,
+   "dist_to_nearest_crossing_logs": 0.161573937328086
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 32,
+   "log_s": -13.515870497362382,
+   "dist_to_nearest_crossing_logs": 0.16667821690824525
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 32,
+   "log_s": -13.522042272812042,
+   "dist_to_nearest_crossing_logs": 0.16050644145858506
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 32,
+   "log_s": -13.520790071269825,
+   "dist_to_nearest_crossing_logs": 0.16175864300080178
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 32,
+   "log_s": -13.522207617163467,
+   "dist_to_nearest_crossing_logs": 0.16034109710716038
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 32,
+   "log_s": -13.522694386811825,
+   "dist_to_nearest_crossing_logs": 0.15985432745880246
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 32,
+   "log_s": -13.522821698467228,
+   "dist_to_nearest_crossing_logs": 0.15972701580339965
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 32,
+   "log_s": -13.522845385299128,
+   "dist_to_nearest_crossing_logs": 0.1597033289714993
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 32,
+   "log_s": -13.522849209331735,
+   "dist_to_nearest_crossing_logs": 0.1596995049388923
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 32,
+   "log_s": -13.52284982060947,
+   "dist_to_nearest_crossing_logs": 0.15969889366115808
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 33,
+   "log_s": -13.512247971906607,
+   "dist_to_nearest_crossing_logs": 0.17030074236402015
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 33,
+   "log_s": -13.506088994606628,
+   "dist_to_nearest_crossing_logs": 0.17645971966399898
+  },
+  {
+   "type": "brake",
+   "event": 94,
+   "seed": 33,
+   "log_s": -13.507660187826957,
+   "dist_to_nearest_crossing_logs": 0.17488852644367014
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 34,
+   "log_s": -13.503497257206881,
+   "dist_to_nearest_crossing_logs": 0.17905145706374626
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 34,
+   "log_s": -13.505028855916846,
+   "dist_to_nearest_crossing_logs": 0.17751985835378115
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 34,
+   "log_s": -13.499978468071998,
+   "dist_to_nearest_crossing_logs": 0.1825702461986296
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 34,
+   "log_s": -13.49857601776407,
+   "dist_to_nearest_crossing_logs": 0.183972696506558
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 34,
+   "log_s": -13.498299250056869,
+   "dist_to_nearest_crossing_logs": 0.18424946421375843
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 34,
+   "log_s": -13.49825260066964,
+   "dist_to_nearest_crossing_logs": 0.18429611360098797
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 34,
+   "log_s": -13.498244984008762,
+   "dist_to_nearest_crossing_logs": 0.18430373026186508
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 34,
+   "log_s": -13.49824387260661,
+   "dist_to_nearest_crossing_logs": 0.18430484166401762
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 34,
+   "log_s": -13.498243721243048,
+   "dist_to_nearest_crossing_logs": 0.1843049930275793
+  },
+  {
+   "type": "Fix(R)",
+   "event": 41,
+   "seed": 38,
+   "log_s": -13.466280444607326,
+   "dist_to_nearest_crossing_logs": 0.21626826966330093
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 38,
+   "log_s": -13.460153977355297,
+   "dist_to_nearest_crossing_logs": 0.22239473691533007
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 38,
+   "log_s": -13.464858183892499,
+   "dist_to_nearest_crossing_logs": 0.21769053037812824
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 38,
+   "log_s": -13.466024434857179,
+   "dist_to_nearest_crossing_logs": 0.21652427941344854
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 38,
+   "log_s": -13.466238398215069,
+   "dist_to_nearest_crossing_logs": 0.21631031605555862
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 38,
+   "log_s": -13.466273650886569,
+   "dist_to_nearest_crossing_logs": 0.21627506338405844
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 38,
+   "log_s": -13.466279383646343,
+   "dist_to_nearest_crossing_logs": 0.216269330624284
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 38,
+   "log_s": -13.46628039357549,
+   "dist_to_nearest_crossing_logs": 0.21626832069513746
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 38,
+   "log_s": -13.466280556258198,
+   "dist_to_nearest_crossing_logs": 0.21626815801242927
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 39,
+   "log_s": -13.45858671298127,
+   "dist_to_nearest_crossing_logs": 0.2239620012893564
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 39,
+   "log_s": -13.453794075854553,
+   "dist_to_nearest_crossing_logs": 0.22875463841607413
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 39,
+   "log_s": -13.45839521073198,
+   "dist_to_nearest_crossing_logs": 0.2241535035386466
+  },
+  {
+   "type": "brake",
+   "event": 56,
+   "seed": 40,
+   "log_s": -13.447489726600288,
+   "dist_to_nearest_crossing_logs": 0.23505898767033884
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 40,
+   "log_s": -13.444066790548598,
+   "dist_to_nearest_crossing_logs": 0.2384819237220288
+  },
+  {
+   "type": "brake",
+   "event": 86,
+   "seed": 40,
+   "log_s": -13.443607168554422,
+   "dist_to_nearest_crossing_logs": 0.23894154571620518
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 41,
+   "log_s": -13.437524779254051,
+   "dist_to_nearest_crossing_logs": 0.24502393501657593
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 42,
+   "log_s": -13.427831771695253,
+   "dist_to_nearest_crossing_logs": 0.25471694257537436
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 46,
+   "log_s": -13.394828458530442,
+   "dist_to_nearest_crossing_logs": 0.2877202557401848
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 47,
+   "log_s": -13.382917296501411,
+   "dist_to_nearest_crossing_logs": 0.2996314177692163
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 48,
+   "log_s": -13.373549835783354,
+   "dist_to_nearest_crossing_logs": 0.30899887848727303
+  },
+  {
+   "type": "brake",
+   "event": 86,
+   "seed": 48,
+   "log_s": -13.374809800093105,
+   "dist_to_nearest_crossing_logs": 0.30773891417752175
+  },
+  {
+   "type": "brake",
+   "event": 56,
+   "seed": 49,
+   "log_s": -13.363575956605743,
+   "dist_to_nearest_crossing_logs": 0.3189727576648842
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 49,
+   "log_s": -13.36128967430772,
+   "dist_to_nearest_crossing_logs": 0.32125903996290717
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 50,
+   "log_s": -13.354314747064867,
+   "dist_to_nearest_crossing_logs": 0.3282339672057599
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 50,
+   "log_s": -13.35320042009505,
+   "dist_to_nearest_crossing_logs": 0.32934829417557765
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 50,
+   "log_s": -13.353059197825667,
+   "dist_to_nearest_crossing_logs": 0.3294895164449603
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 50,
+   "log_s": -13.355486755967137,
+   "dist_to_nearest_crossing_logs": 0.3270619583034904
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 50,
+   "log_s": -13.353041286985727,
+   "dist_to_nearest_crossing_logs": 0.32950742728490034
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 50,
+   "log_s": -13.352381018860376,
+   "dist_to_nearest_crossing_logs": 0.3301676954102515
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 50,
+   "log_s": -13.352237131969863,
+   "dist_to_nearest_crossing_logs": 0.3303115823007641
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 50,
+   "log_s": -13.352211954868391,
+   "dist_to_nearest_crossing_logs": 0.33033675940223617
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 50,
+   "log_s": -13.352207840521084,
+   "dist_to_nearest_crossing_logs": 0.33034087374954346
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 50,
+   "log_s": -13.352207179496528,
+   "dist_to_nearest_crossing_logs": 0.33034153477409944
+  },
+  {
+   "type": "brake",
+   "event": 94,
+   "seed": 50,
+   "log_s": -13.352207118158427,
+   "dist_to_nearest_crossing_logs": 0.33034159611220026
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 51,
+   "log_s": -13.347858989243168,
+   "dist_to_nearest_crossing_logs": 0.3346897250274594
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 51,
+   "log_s": -13.346666173858273,
+   "dist_to_nearest_crossing_logs": 0.33588254041235466
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 51,
+   "log_s": -13.346455519613317,
+   "dist_to_nearest_crossing_logs": 0.3360931946573107
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 51,
+   "log_s": -13.346420958163401,
+   "dist_to_nearest_crossing_logs": 0.336127756107226
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 51,
+   "log_s": -13.346415269339314,
+   "dist_to_nearest_crossing_logs": 0.33613344493131336
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 51,
+   "log_s": -13.346414425538258,
+   "dist_to_nearest_crossing_logs": 0.33613428873236906
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 51,
+   "log_s": -13.346414300839472,
+   "dist_to_nearest_crossing_logs": 0.33613441343115547
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 53,
+   "log_s": -13.324910986653324,
+   "dist_to_nearest_crossing_logs": 0.3576377276173037
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 53,
+   "log_s": -13.326559310673698,
+   "dist_to_nearest_crossing_logs": 0.3559894035969293
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 53,
+   "log_s": -13.327090755176592,
+   "dist_to_nearest_crossing_logs": 0.35545795909403566
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 53,
+   "log_s": -13.327174375202569,
+   "dist_to_nearest_crossing_logs": 0.3553743390680584
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 53,
+   "log_s": -13.327187890473962,
+   "dist_to_nearest_crossing_logs": 0.35536082379666567
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 53,
+   "log_s": -13.327189930279811,
+   "dist_to_nearest_crossing_logs": 0.3553587839908161
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 53,
+   "log_s": -13.327190322272001,
+   "dist_to_nearest_crossing_logs": 0.3553583919986263
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 54,
+   "log_s": -13.314289048161056,
+   "dist_to_nearest_crossing_logs": 0.36825966610957117
+  },
+  {
+   "type": "brake",
+   "event": 66,
+   "seed": 55,
+   "log_s": -13.310190805559003,
+   "dist_to_nearest_crossing_logs": 0.3723579087116242
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 55,
+   "log_s": -13.311330284623805,
+   "dist_to_nearest_crossing_logs": 0.37121842964682195
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 55,
+   "log_s": -13.31008043947586,
+   "dist_to_nearest_crossing_logs": 0.37246827479476785
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 55,
+   "log_s": -13.309836205353053,
+   "dist_to_nearest_crossing_logs": 0.3727125089175747
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 55,
+   "log_s": -13.309794982041373,
+   "dist_to_nearest_crossing_logs": 0.37275373222925445
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 55,
+   "log_s": -13.309788283683684,
+   "dist_to_nearest_crossing_logs": 0.3727604305869434
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 55,
+   "log_s": -13.309787221131087,
+   "dist_to_nearest_crossing_logs": 0.37276149313954043
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 55,
+   "log_s": -13.30978700179788,
+   "dist_to_nearest_crossing_logs": 0.37276171247274803
+  },
+  {
+   "type": "Fix(R)",
+   "event": 33,
+   "seed": 56,
+   "log_s": -13.297173028693038,
+   "dist_to_nearest_crossing_logs": 0.38537568557758917
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 56,
+   "log_s": -13.300626999525822,
+   "dist_to_nearest_crossing_logs": 0.38192171474480574
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 56,
+   "log_s": -13.297760510073156,
+   "dist_to_nearest_crossing_logs": 0.38478820419747173
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 56,
+   "log_s": -13.29726869241532,
+   "dist_to_nearest_crossing_logs": 0.38528002185530674
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 56,
+   "log_s": -13.297188622770273,
+   "dist_to_nearest_crossing_logs": 0.38536009150035433
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 56,
+   "log_s": -13.2971754636716,
+   "dist_to_nearest_crossing_logs": 0.3853732505990273
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 56,
+   "log_s": -13.297173394394639,
+   "dist_to_nearest_crossing_logs": 0.3853753198759886
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 56,
+   "log_s": -13.297173099102366,
+   "dist_to_nearest_crossing_logs": 0.385375615168261
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 56,
+   "log_s": -13.297173025852864,
+   "dist_to_nearest_crossing_logs": 0.3853756884177635
+  },
+  {
+   "type": "brake",
+   "event": 66,
+   "seed": 56,
+   "log_s": -13.297173053635934,
+   "dist_to_nearest_crossing_logs": 0.3853756606346934
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 65,
+   "log_s": -13.21398386410882,
+   "dist_to_nearest_crossing_logs": 0.4433273251245655
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 65,
+   "log_s": -13.214172809619173,
+   "dist_to_nearest_crossing_logs": 0.44351627063491783
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 65,
+   "log_s": -13.214203281533582,
+   "dist_to_nearest_crossing_logs": 0.44354674254932647
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 65,
+   "log_s": -13.214208216768789,
+   "dist_to_nearest_crossing_logs": 0.44355167778453364
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 65,
+   "log_s": -13.214209006052716,
+   "dist_to_nearest_crossing_logs": 0.44355246706846074
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 65,
+   "log_s": -13.214209114617905,
+   "dist_to_nearest_crossing_logs": 0.4435525756336496
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 66,
+   "log_s": -13.205435473951788,
+   "dist_to_nearest_crossing_logs": 0.4347789349675324
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 66,
+   "log_s": -13.212811610619628,
+   "dist_to_nearest_crossing_logs": 0.4421550716353728
+  },
+  {
+   "type": "brake",
+   "event": 68,
+   "seed": 66,
+   "log_s": -13.210029353626844,
+   "dist_to_nearest_crossing_logs": 0.4393728146425886
+  },
+  {
+   "type": "Fix(R)",
+   "event": 69,
+   "seed": 66,
+   "log_s": -13.212520362504886,
+   "dist_to_nearest_crossing_logs": 0.4418638235206309
+  },
+  {
+   "type": "brake",
+   "event": 70,
+   "seed": 66,
+   "log_s": -13.213528832160232,
+   "dist_to_nearest_crossing_logs": 0.4428722931759772
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 66,
+   "log_s": -13.209485194073231,
+   "dist_to_nearest_crossing_logs": 0.43882865508897595
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 66,
+   "log_s": -13.209959118713094,
+   "dist_to_nearest_crossing_logs": 0.4393025797288388
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 66,
+   "log_s": -13.210048349233789,
+   "dist_to_nearest_crossing_logs": 0.4393918102495338
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 66,
+   "log_s": -13.210063315177688,
+   "dist_to_nearest_crossing_logs": 0.43940677619343305
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 66,
+   "log_s": -13.213526927035558,
+   "dist_to_nearest_crossing_logs": 0.4428703880513023
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 66,
+   "log_s": -13.210066128435944,
+   "dist_to_nearest_crossing_logs": 0.43940958945168873
+  },
+  {
+   "type": "brake",
+   "event": 82,
+   "seed": 66,
+   "log_s": -13.210066184979574,
+   "dist_to_nearest_crossing_logs": 0.43940964599531895
+  },
+  {
+   "type": "Fix(R)",
+   "event": 83,
+   "seed": 66,
+   "log_s": -13.210066218783462,
+   "dist_to_nearest_crossing_logs": 0.43940967979920664
+  },
+  {
+   "type": "Fix(R)",
+   "event": 67,
+   "seed": 67,
+   "log_s": -13.203900502620131,
+   "dist_to_nearest_crossing_logs": 0.43324396363587603
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 67,
+   "log_s": -13.203943635487539,
+   "dist_to_nearest_crossing_logs": 0.43328709650328356
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 67,
+   "log_s": -13.203702185122285,
+   "dist_to_nearest_crossing_logs": 0.4330456461380301
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 67,
+   "log_s": -13.203664598437372,
+   "dist_to_nearest_crossing_logs": 0.43300805945311716
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 67,
+   "log_s": -13.203658583485888,
+   "dist_to_nearest_crossing_logs": 0.4330020445016327
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 67,
+   "log_s": -13.203657590439915,
+   "dist_to_nearest_crossing_logs": 0.43300105145566015
+  },
+  {
+   "type": "brake",
+   "event": 66,
+   "seed": 68,
+   "log_s": -13.188464071628362,
+   "dist_to_nearest_crossing_logs": 0.4178075326441064
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 68,
+   "log_s": -13.18629455196847,
+   "dist_to_nearest_crossing_logs": 0.4156380129842141
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 68,
+   "log_s": -13.189245927892717,
+   "dist_to_nearest_crossing_logs": 0.41858938890846176
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 68,
+   "log_s": -13.189817976617956,
+   "dist_to_nearest_crossing_logs": 0.41916143763370073
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 68,
+   "log_s": -13.189914520800052,
+   "dist_to_nearest_crossing_logs": 0.41925798181579665
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 68,
+   "log_s": -13.189930274818837,
+   "dist_to_nearest_crossing_logs": 0.4192737358345813
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 68,
+   "log_s": -13.189932797904616,
+   "dist_to_nearest_crossing_logs": 0.4192762589203607
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 68,
+   "log_s": -13.189933230278216,
+   "dist_to_nearest_crossing_logs": 0.4192766912939607
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 69,
+   "log_s": -13.179865221597863,
+   "dist_to_nearest_crossing_logs": 0.4092086826136079
+  },
+  {
+   "type": "brake",
+   "event": 82,
+   "seed": 69,
+   "log_s": -13.186008984070684,
+   "dist_to_nearest_crossing_logs": 0.41535244508642855
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 69,
+   "log_s": -13.184260721426504,
+   "dist_to_nearest_crossing_logs": 0.41360418244224917
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 69,
+   "log_s": -13.185972350441613,
+   "dist_to_nearest_crossing_logs": 0.41531581145735785
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 70,
+   "log_s": -13.170674584765385,
+   "dist_to_nearest_crossing_logs": 0.4000180457811293
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 71,
+   "log_s": -13.160540565526965,
+   "dist_to_nearest_crossing_logs": 0.3898840265427097
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 72,
+   "log_s": -13.151236236163992,
+   "dist_to_nearest_crossing_logs": 0.38057969717973705
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 72,
+   "log_s": -13.153684312190567,
+   "dist_to_nearest_crossing_logs": 0.38302777320631165
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 72,
+   "log_s": -13.15176863878313,
+   "dist_to_nearest_crossing_logs": 0.38111209979887484
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 72,
+   "log_s": -13.151329816144512,
+   "dist_to_nearest_crossing_logs": 0.38067327716025723
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 72,
+   "log_s": -13.151251572870725,
+   "dist_to_nearest_crossing_logs": 0.3805950338864701
+  },
+  {
+   "type": "brake",
+   "event": 94,
+   "seed": 72,
+   "log_s": -13.151238725234242,
+   "dist_to_nearest_crossing_logs": 0.3805821862499865
+  },
+  {
+   "type": "Fix(R)",
+   "event": 95,
+   "seed": 72,
+   "log_s": -13.15123662280412,
+   "dist_to_nearest_crossing_logs": 0.38058008381986497
+  },
+  {
+   "type": "brake",
+   "event": 96,
+   "seed": 72,
+   "log_s": -13.151236303194556,
+   "dist_to_nearest_crossing_logs": 0.38057976421030126
+  },
+  {
+   "type": "Fix(R)",
+   "event": 97,
+   "seed": 72,
+   "log_s": -13.151236270903109,
+   "dist_to_nearest_crossing_logs": 0.3805797319188535
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 73,
+   "log_s": -13.143337286946528,
+   "dist_to_nearest_crossing_logs": 0.37268074796227246
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 73,
+   "log_s": -13.145595239652575,
+   "dist_to_nearest_crossing_logs": 0.37493870066832
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 73,
+   "log_s": -13.146086208997103,
+   "dist_to_nearest_crossing_logs": 0.37542967001284744
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 73,
+   "log_s": -13.146172677393842,
+   "dist_to_nearest_crossing_logs": 0.3755161384095871
+  },
+  {
+   "type": "brake",
+   "event": 94,
+   "seed": 73,
+   "log_s": -13.146186904985493,
+   "dist_to_nearest_crossing_logs": 0.3755303660012377
+  },
+  {
+   "type": "Fix(R)",
+   "event": 95,
+   "seed": 73,
+   "log_s": -13.146189151700467,
+   "dist_to_nearest_crossing_logs": 0.37553261271621174
+  },
+  {
+   "type": "brake",
+   "event": 96,
+   "seed": 73,
+   "log_s": -13.146189503997315,
+   "dist_to_nearest_crossing_logs": 0.37553296501305944
+  },
+  {
+   "type": "Fix(R)",
+   "event": 97,
+   "seed": 73,
+   "log_s": -13.146189629128758,
+   "dist_to_nearest_crossing_logs": 0.3755330901445024
+  },
+  {
+   "type": "brake",
+   "event": 98,
+   "seed": 73,
+   "log_s": -13.146189567602333,
+   "dist_to_nearest_crossing_logs": 0.3755330286180776
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 74,
+   "log_s": -13.134231464523838,
+   "dist_to_nearest_crossing_logs": 0.3635749255395826
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 74,
+   "log_s": -13.132223800516433,
+   "dist_to_nearest_crossing_logs": 0.3615672615321781
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 74,
+   "log_s": -13.132770928752526,
+   "dist_to_nearest_crossing_logs": 0.36211438976827104
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 74,
+   "log_s": -13.132625573551353,
+   "dist_to_nearest_crossing_logs": 0.36196903456709784
+  },
+  {
+   "type": "Fix(R)",
+   "event": 97,
+   "seed": 74,
+   "log_s": -13.132664556306311,
+   "dist_to_nearest_crossing_logs": 0.3620080173220561
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 75,
+   "log_s": -13.126078019807858,
+   "dist_to_nearest_crossing_logs": 0.3554214808236029
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 80,
+   "log_s": -13.07934314472763,
+   "dist_to_nearest_crossing_logs": 0.30868660574337525
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 81,
+   "log_s": -13.07359420367901,
+   "dist_to_nearest_crossing_logs": 0.30293766469475436
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 81,
+   "log_s": -13.074969065897013,
+   "dist_to_nearest_crossing_logs": 0.30431252691275823
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 81,
+   "log_s": -13.074592029082046,
+   "dist_to_nearest_crossing_logs": 0.30393549009779086
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 81,
+   "log_s": -13.074692100616561,
+   "dist_to_nearest_crossing_logs": 0.30403556163230583
+  },
+  {
+   "type": "Fix(R)",
+   "event": 97,
+   "seed": 81,
+   "log_s": -13.074665276695248,
+   "dist_to_nearest_crossing_logs": 0.30400873771099235
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 82,
+   "log_s": -13.062870868951071,
+   "dist_to_nearest_crossing_logs": 0.29221432996681607
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 82,
+   "log_s": -13.065391770914145,
+   "dist_to_nearest_crossing_logs": 0.2947352319298897
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 82,
+   "log_s": -13.063411884035391,
+   "dist_to_nearest_crossing_logs": 0.29275534505113576
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 83,
+   "log_s": -13.05109628790065,
+   "dist_to_nearest_crossing_logs": 0.280439748916395
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 83,
+   "log_s": -13.056883643622356,
+   "dist_to_nearest_crossing_logs": 0.2862271046381011
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 83,
+   "log_s": -13.05854822552858,
+   "dist_to_nearest_crossing_logs": 0.2878916865443255
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 84,
+   "log_s": -13.04320470710435,
+   "dist_to_nearest_crossing_logs": 0.2725481681200943
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 85,
+   "log_s": -13.03575443436015,
+   "dist_to_nearest_crossing_logs": 0.2650978953758951
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 85,
+   "log_s": -13.032191868508054,
+   "dist_to_nearest_crossing_logs": 0.26153532952379877
+  },
+  {
+   "type": "brake",
+   "event": 66,
+   "seed": 86,
+   "log_s": -13.028751374948317,
+   "dist_to_nearest_crossing_logs": 0.25809483596406224
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 86,
+   "log_s": -13.030537426138388,
+   "dist_to_nearest_crossing_logs": 0.25988088715413227
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 86,
+   "log_s": -13.02813760898579,
+   "dist_to_nearest_crossing_logs": 0.25748107000153553
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 86,
+   "log_s": -13.027671337429856,
+   "dist_to_nearest_crossing_logs": 0.25701479844560104
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 86,
+   "log_s": -13.027592530329978,
+   "dist_to_nearest_crossing_logs": 0.2569359913457223
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 86,
+   "log_s": -13.027579715595982,
+   "dist_to_nearest_crossing_logs": 0.2569231766117266
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 86,
+   "log_s": -13.027577604815718,
+   "dist_to_nearest_crossing_logs": 0.2569210658314631
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 86,
+   "log_s": -13.027577263455456,
+   "dist_to_nearest_crossing_logs": 0.2569207244712004
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 87,
+   "log_s": -13.014265445712331,
+   "dist_to_nearest_crossing_logs": 0.24360890672807578
+  },
+  {
+   "type": "Fix(R)",
+   "event": 67,
+   "seed": 87,
+   "log_s": -13.01585149481251,
+   "dist_to_nearest_crossing_logs": 0.24519495582825535
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 87,
+   "log_s": -13.015807513463352,
+   "dist_to_nearest_crossing_logs": 0.24515097447909717
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 87,
+   "log_s": -13.016017701206259,
+   "dist_to_nearest_crossing_logs": 0.24536116222200377
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 87,
+   "log_s": -13.016050354802116,
+   "dist_to_nearest_crossing_logs": 0.24539381581786124
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 87,
+   "log_s": -13.016055511453688,
+   "dist_to_nearest_crossing_logs": 0.24539897246943276
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 87,
+   "log_s": -13.016056344861592,
+   "dist_to_nearest_crossing_logs": 0.24539980587733723
+  },
+  {
+   "type": "Fix(R)",
+   "event": 33,
+   "seed": 88,
+   "log_s": -13.006334806674479,
+   "dist_to_nearest_crossing_logs": 0.23567826769022382
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 88,
+   "log_s": -13.007661051736418,
+   "dist_to_nearest_crossing_logs": 0.23700451275216317
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 88,
+   "log_s": -13.006550818891181,
+   "dist_to_nearest_crossing_logs": 0.23589427990692613
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 88,
+   "log_s": -13.006369715456712,
+   "dist_to_nearest_crossing_logs": 0.2357131764724567
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 88,
+   "log_s": -13.006340465172347,
+   "dist_to_nearest_crossing_logs": 0.23568392618809142
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 88,
+   "log_s": -13.006335777837046,
+   "dist_to_nearest_crossing_logs": 0.23567923885279107
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 88,
+   "log_s": -13.00633498774181,
+   "dist_to_nearest_crossing_logs": 0.23567844875755561
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 88,
+   "log_s": -13.006334875575249,
+   "dist_to_nearest_crossing_logs": 0.23567833659099335
+  },
+  {
+   "type": "brake",
+   "event": 66,
+   "seed": 88,
+   "log_s": -13.006334817964351,
+   "dist_to_nearest_crossing_logs": 0.23567827898009597
+  },
+  {
+   "type": "Fix(R)",
+   "event": 67,
+   "seed": 88,
+   "log_s": -13.00633484780392,
+   "dist_to_nearest_crossing_logs": 0.235678308819665
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 93,
+   "log_s": -12.961288215461783,
+   "dist_to_nearest_crossing_logs": 0.190631676477528
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 93,
+   "log_s": -12.965089329966377,
+   "dist_to_nearest_crossing_logs": 0.19443279098212152
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 93,
+   "log_s": -12.965781624600746,
+   "dist_to_nearest_crossing_logs": 0.19512508561649078
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 93,
+   "log_s": -12.965895995040277,
+   "dist_to_nearest_crossing_logs": 0.19523945605602222
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 93,
+   "log_s": -12.965914596194636,
+   "dist_to_nearest_crossing_logs": 0.19525805721038125
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 93,
+   "log_s": -12.965917575587259,
+   "dist_to_nearest_crossing_logs": 0.19526103660300365
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 93,
+   "log_s": -12.965918101305311,
+   "dist_to_nearest_crossing_logs": 0.19526156232105585
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 93,
+   "log_s": -12.965918123569589,
+   "dist_to_nearest_crossing_logs": 0.19526158458533338
+  },
+  {
+   "type": "brake",
+   "event": 66,
+   "seed": 93,
+   "log_s": -12.965918188822908,
+   "dist_to_nearest_crossing_logs": 0.19526164983865257
+  },
+  {
+   "type": "brake",
+   "event": 66,
+   "seed": 94,
+   "log_s": -12.950615511779692,
+   "dist_to_nearest_crossing_logs": 0.17995897279543627
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 94,
+   "log_s": -12.949350755399932,
+   "dist_to_nearest_crossing_logs": 0.17869421641567662
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 94,
+   "log_s": -12.95077188309806,
+   "dist_to_nearest_crossing_logs": 0.1801153441138048
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 94,
+   "log_s": -12.951049344020683,
+   "dist_to_nearest_crossing_logs": 0.18039280503642807
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 94,
+   "log_s": -12.951096317012237,
+   "dist_to_nearest_crossing_logs": 0.1804397780279814
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 94,
+   "log_s": -12.951103844899103,
+   "dist_to_nearest_crossing_logs": 0.18044730591484814
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 94,
+   "log_s": -12.951105114879779,
+   "dist_to_nearest_crossing_logs": 0.18044857589552343
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 94,
+   "log_s": -12.951105287313755,
+   "dist_to_nearest_crossing_logs": 0.18044874832949986
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 94,
+   "log_s": -12.95110535846536,
+   "dist_to_nearest_crossing_logs": 0.18044881948110536
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 95,
+   "log_s": -12.94477216172038,
+   "dist_to_nearest_crossing_logs": 0.17411562273612446
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 95,
+   "log_s": -12.941598190558844,
+   "dist_to_nearest_crossing_logs": 0.17094165157458896
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 95,
+   "log_s": -12.946181808504203,
+   "dist_to_nearest_crossing_logs": 0.17552526951994807
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 95,
+   "log_s": -12.949160567924613,
+   "dist_to_nearest_crossing_logs": 0.17850402894035788
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 96,
+   "log_s": -12.931968521431118,
+   "dist_to_nearest_crossing_logs": 0.16131198244686296
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 96,
+   "log_s": -12.93641796370541,
+   "dist_to_nearest_crossing_logs": 0.16576142472115407
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 96,
+   "log_s": -12.93509901882425,
+   "dist_to_nearest_crossing_logs": 0.1644424798399946
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 96,
+   "log_s": -12.930955385668527,
+   "dist_to_nearest_crossing_logs": 0.16029884668427208
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 97,
+   "log_s": -12.928862912117369,
+   "dist_to_nearest_crossing_logs": 0.1582063731331136
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 97,
+   "log_s": -12.927880202099937,
+   "dist_to_nearest_crossing_logs": 0.1572236631156816
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 97,
+   "log_s": -12.927720773111805,
+   "dist_to_nearest_crossing_logs": 0.15706423412754944
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 97,
+   "log_s": -12.927695008985609,
+   "dist_to_nearest_crossing_logs": 0.1570384700013534
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 97,
+   "log_s": -12.92769084242437,
+   "dist_to_nearest_crossing_logs": 0.15703430344011515
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 97,
+   "log_s": -12.927690128263551,
+   "dist_to_nearest_crossing_logs": 0.15703358927929578
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 97,
+   "log_s": -12.927690041792324,
+   "dist_to_nearest_crossing_logs": 0.15703350280806916
+  },
+  {
+   "type": "Fix(R)",
+   "event": 41,
+   "seed": 101,
+   "log_s": -12.894304245248652,
+   "dist_to_nearest_crossing_logs": 0.12364770626439636
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 101,
+   "log_s": -12.892451820263052,
+   "dist_to_nearest_crossing_logs": 0.12179528127879635
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 101,
+   "log_s": -12.894021664752092,
+   "dist_to_nearest_crossing_logs": 0.12336512576783676
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 101,
+   "log_s": -12.894258953550015,
+   "dist_to_nearest_crossing_logs": 0.12360241456575949
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 101,
+   "log_s": -12.894296922157615,
+   "dist_to_nearest_crossing_logs": 0.12364038317335968
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 101,
+   "log_s": -12.894303038299185,
+   "dist_to_nearest_crossing_logs": 0.12364649931492977
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 101,
+   "log_s": -12.894304072803903,
+   "dist_to_nearest_crossing_logs": 0.1236475338196481
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 101,
+   "log_s": -12.894304250685684,
+   "dist_to_nearest_crossing_logs": 0.12364771170142852
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 101,
+   "log_s": -12.894304249938537,
+   "dist_to_nearest_crossing_logs": 0.12364771095428218
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 102,
+   "log_s": -12.88054914206174,
+   "dist_to_nearest_crossing_logs": 0.10989260307748516
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 102,
+   "log_s": -12.879528489600641,
+   "dist_to_nearest_crossing_logs": 0.10887195061638621
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 102,
+   "log_s": -12.879381004827186,
+   "dist_to_nearest_crossing_logs": 0.10872446584293094
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 102,
+   "log_s": -12.879357505929717,
+   "dist_to_nearest_crossing_logs": 0.10870096694546127
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 102,
+   "log_s": -12.879353720002655,
+   "dist_to_nearest_crossing_logs": 0.10869718101839965
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 102,
+   "log_s": -12.87935315896789,
+   "dist_to_nearest_crossing_logs": 0.10869661998363433
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 102,
+   "log_s": -12.879352999309065,
+   "dist_to_nearest_crossing_logs": 0.10869646032480951
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 103,
+   "log_s": -12.867745489723104,
+   "dist_to_nearest_crossing_logs": 0.09708895073884882
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 103,
+   "log_s": -12.868729742840458,
+   "dist_to_nearest_crossing_logs": 0.09807320385620244
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 103,
+   "log_s": -12.86970813446116,
+   "dist_to_nearest_crossing_logs": 0.09905159547690445
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 103,
+   "log_s": -12.869903624079338,
+   "dist_to_nearest_crossing_logs": 0.09924708509508307
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 103,
+   "log_s": -12.869936671121758,
+   "dist_to_nearest_crossing_logs": 0.09928013213750297
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 103,
+   "log_s": -12.869942118223937,
+   "dist_to_nearest_crossing_logs": 0.09928557923968206
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 103,
+   "log_s": -12.869942912198796,
+   "dist_to_nearest_crossing_logs": 0.09928637321454126
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 103,
+   "log_s": -12.869943083183088,
+   "dist_to_nearest_crossing_logs": 0.09928654419883287
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 103,
+   "log_s": -12.869943109561897,
+   "dist_to_nearest_crossing_logs": 0.09928657057764134
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 104,
+   "log_s": -12.865153034500505,
+   "dist_to_nearest_crossing_logs": 0.09449649551624972
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 104,
+   "log_s": -12.8657364560454,
+   "dist_to_nearest_crossing_logs": 0.09507991706114538
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 104,
+   "log_s": -12.864418570047512,
+   "dist_to_nearest_crossing_logs": 0.09376203106325676
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 104,
+   "log_s": -12.865808646801066,
+   "dist_to_nearest_crossing_logs": 0.09515210781681027
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 104,
+   "log_s": -12.86619500262178,
+   "dist_to_nearest_crossing_logs": 0.09553846363752427
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 104,
+   "log_s": -12.86628177614463,
+   "dist_to_nearest_crossing_logs": 0.09562523716037497
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 104,
+   "log_s": -12.866297078676865,
+   "dist_to_nearest_crossing_logs": 0.0956405396926101
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 104,
+   "log_s": -12.866299613209051,
+   "dist_to_nearest_crossing_logs": 0.09564307422479601
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 104,
+   "log_s": -12.866299995027896,
+   "dist_to_nearest_crossing_logs": 0.095643456043641
+  },
+  {
+   "type": "brake",
+   "event": 42,
+   "seed": 105,
+   "log_s": -12.849020156287054,
+   "dist_to_nearest_crossing_logs": 0.07836361730279862
+  },
+  {
+   "type": "brake",
+   "event": 50,
+   "seed": 105,
+   "log_s": -12.849766476545177,
+   "dist_to_nearest_crossing_logs": 0.0791099375609221
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 105,
+   "log_s": -12.854901698317526,
+   "dist_to_nearest_crossing_logs": 0.08424515933327115
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 105,
+   "log_s": -12.849861837816706,
+   "dist_to_nearest_crossing_logs": 0.07920529883245031
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 105,
+   "log_s": -12.851971852204503,
+   "dist_to_nearest_crossing_logs": 0.08131531322024799
+  },
+  {
+   "type": "brake",
+   "event": 66,
+   "seed": 105,
+   "log_s": -12.849873938552834,
+   "dist_to_nearest_crossing_logs": 0.07921739956857898
+  },
+  {
+   "type": "Fix(R)",
+   "event": 67,
+   "seed": 105,
+   "log_s": -12.848967615643696,
+   "dist_to_nearest_crossing_logs": 0.07831107665944081
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 105,
+   "log_s": -12.855992014297348,
+   "dist_to_nearest_crossing_logs": 0.0853354753130926
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 105,
+   "log_s": -12.850493943089827,
+   "dist_to_nearest_crossing_logs": 0.07983740410557161
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 105,
+   "log_s": -12.849875556955999,
+   "dist_to_nearest_crossing_logs": 0.07921901797174336
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 105,
+   "log_s": -12.849712066491563,
+   "dist_to_nearest_crossing_logs": 0.07905552750730749
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 105,
+   "log_s": -12.855238710959618,
+   "dist_to_nearest_crossing_logs": 0.084582171975363
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 105,
+   "log_s": -12.849020171519328,
+   "dist_to_nearest_crossing_logs": 0.07836363253507272
+  },
+  {
+   "type": "brake",
+   "event": 82,
+   "seed": 105,
+   "log_s": -12.84987574151539,
+   "dist_to_nearest_crossing_logs": 0.07921920253113512
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 105,
+   "log_s": -12.85615608709523,
+   "dist_to_nearest_crossing_logs": 0.08549954811097393
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 105,
+   "log_s": -12.85512587611639,
+   "dist_to_nearest_crossing_logs": 0.08446933713213411
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 105,
+   "log_s": -12.849953702090454,
+   "dist_to_nearest_crossing_logs": 0.07929716310619916
+  },
+  {
+   "type": "B",
+   "event": 90,
+   "seed": 105,
+   "error": "The function value at x=2.6279651358244734e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 105,
+   "log_s": -12.848878343853286,
+   "dist_to_nearest_crossing_logs": 0.07822180486903108
+  },
+  {
+   "type": "brake",
+   "event": 94,
+   "seed": 105,
+   "log_s": -12.856899943804441,
+   "dist_to_nearest_crossing_logs": 0.08624340482018589
+  },
+  {
+   "type": "brake",
+   "event": 34,
+   "seed": 106,
+   "log_s": -12.84330010201324,
+   "dist_to_nearest_crossing_logs": 0.07264356302898456
+  },
+  {
+   "type": "Fix(R)",
+   "event": 43,
+   "seed": 106,
+   "log_s": -12.84018036820066,
+   "dist_to_nearest_crossing_logs": 0.06952382921640421
+  },
+  {
+   "type": "Fix(R)",
+   "event": 51,
+   "seed": 106,
+   "log_s": -12.842948330511119,
+   "dist_to_nearest_crossing_logs": 0.07229179152686349
+  },
+  {
+   "type": "brake",
+   "event": 52,
+   "seed": 106,
+   "log_s": -12.840100967310336,
+   "dist_to_nearest_crossing_logs": 0.06944442832608111
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 106,
+   "log_s": -12.848598360660555,
+   "dist_to_nearest_crossing_logs": 0.07794182167629948
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 106,
+   "log_s": -12.848330462788693,
+   "dist_to_nearest_crossing_logs": 0.07767392380443816
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 106,
+   "log_s": -12.840098959442429,
+   "dist_to_nearest_crossing_logs": 0.06944242045817361
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 106,
+   "log_s": -12.840056821350998,
+   "dist_to_nearest_crossing_logs": 0.06940028236674323
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 106,
+   "log_s": -12.840049813262286,
+   "dist_to_nearest_crossing_logs": 0.06939327427803121
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 106,
+   "log_s": -12.840048635843873,
+   "dist_to_nearest_crossing_logs": 0.06939209685961778
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 106,
+   "log_s": -12.84827497601741,
+   "dist_to_nearest_crossing_logs": 0.07761843703315563
+  },
+  {
+   "type": "B",
+   "event": 66,
+   "seed": 106,
+   "error": "The function value at x=2.633885681532678e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 107,
+   "log_s": -12.83846032679624,
+   "dist_to_nearest_crossing_logs": 0.06780378781198415
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 107,
+   "log_s": -12.838169508137923,
+   "dist_to_nearest_crossing_logs": 0.06751296915366822
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 107,
+   "log_s": -12.838122185802467,
+   "dist_to_nearest_crossing_logs": 0.06746564681821177
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 107,
+   "log_s": -12.838114553913158,
+   "dist_to_nearest_crossing_logs": 0.0674580149289028
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 107,
+   "log_s": -12.838113377565211,
+   "dist_to_nearest_crossing_logs": 0.06745683858095575
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 107,
+   "log_s": -12.838113134253291,
+   "dist_to_nearest_crossing_logs": 0.0674565952690358
+  },
+  {
+   "type": "brake",
+   "event": 26,
+   "seed": 111,
+   "log_s": -12.799134534734414,
+   "dist_to_nearest_crossing_logs": 0.028477995750158414
+  },
+  {
+   "type": "Fix(R)",
+   "event": 35,
+   "seed": 111,
+   "log_s": -12.798309877994724,
+   "dist_to_nearest_crossing_logs": 0.027653339010468514
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 111,
+   "log_s": -12.798333259260986,
+   "dist_to_nearest_crossing_logs": 0.027676720276730293
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 111,
+   "log_s": -12.799009200947953,
+   "dist_to_nearest_crossing_logs": 0.02835266196369801
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 111,
+   "log_s": -12.799114402923495,
+   "dist_to_nearest_crossing_logs": 0.028457863939239658
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 111,
+   "log_s": -12.799131329344547,
+   "dist_to_nearest_crossing_logs": 0.02847479036029199
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 111,
+   "log_s": -12.79913406489052,
+   "dist_to_nearest_crossing_logs": 0.028477525906264844
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 111,
+   "log_s": -12.799134419119984,
+   "dist_to_nearest_crossing_logs": 0.028477880135728384
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 112,
+   "log_s": -12.785502119452106,
+   "dist_to_nearest_crossing_logs": 0.014845580467850894
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 112,
+   "log_s": -12.792634227962443,
+   "dist_to_nearest_crossing_logs": 0.02197768897818797
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 112,
+   "log_s": -12.793360186706881,
+   "dist_to_nearest_crossing_logs": 0.022703647722625675
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 112,
+   "log_s": -12.793475345880033,
+   "dist_to_nearest_crossing_logs": 0.022818806895777755
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 112,
+   "log_s": -12.793495606333169,
+   "dist_to_nearest_crossing_logs": 0.02283906734891339
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 112,
+   "log_s": -12.793498980998546,
+   "dist_to_nearest_crossing_logs": 0.022842442014290754
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 112,
+   "log_s": -12.793499433416802,
+   "dist_to_nearest_crossing_logs": 0.0228428944325465
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 112,
+   "log_s": -12.793499575107118,
+   "dist_to_nearest_crossing_logs": 0.02284303612286287
+  },
+  {
+   "type": "brake",
+   "event": 36,
+   "seed": 113,
+   "log_s": -12.781571001385844,
+   "dist_to_nearest_crossing_logs": 0.010914462401588665
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 113,
+   "log_s": -12.783000634506902,
+   "dist_to_nearest_crossing_logs": 0.01234409552264637
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 113,
+   "log_s": -12.781737665112718,
+   "dist_to_nearest_crossing_logs": 0.011081126128463126
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 113,
+   "log_s": -12.781500076894584,
+   "dist_to_nearest_crossing_logs": 0.010843537910329104
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 113,
+   "log_s": -12.781460207795318,
+   "dist_to_nearest_crossing_logs": 0.01080366881106265
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 113,
+   "log_s": -12.781453733409403,
+   "dist_to_nearest_crossing_logs": 0.010797194425148149
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 113,
+   "log_s": -12.781452651532035,
+   "dist_to_nearest_crossing_logs": 0.010796112547780012
+  },
+  {
+   "type": "brake",
+   "event": 50,
+   "seed": 113,
+   "log_s": -12.781452496499526,
+   "dist_to_nearest_crossing_logs": 0.010795957515270516
+  },
+  {
+   "type": "Fix(R)",
+   "event": 51,
+   "seed": 113,
+   "log_s": -12.781452508962005,
+   "dist_to_nearest_crossing_logs": 0.010795969977749564
+  },
+  {
+   "type": "Fix(R)",
+   "event": 17,
+   "seed": 114,
+   "log_s": -12.770661250081686,
+   "dist_to_nearest_crossing_logs": 4.711097430387667e-06
+  },
+  {
+   "type": "Fix(R)",
+   "event": 27,
+   "seed": 114,
+   "log_s": -12.775033735151682,
+   "dist_to_nearest_crossing_logs": 0.004377196167427044
+  },
+  {
+   "type": "brake",
+   "event": 28,
+   "seed": 114,
+   "log_s": -12.7713617820017,
+   "dist_to_nearest_crossing_logs": 0.0007052430174443458
+  },
+  {
+   "type": "Fix(R)",
+   "event": 29,
+   "seed": 114,
+   "log_s": -12.770774185278697,
+   "dist_to_nearest_crossing_logs": 0.00011764629444144248
+  },
+  {
+   "type": "brake",
+   "event": 30,
+   "seed": 114,
+   "log_s": -12.77067949826809,
+   "dist_to_nearest_crossing_logs": 2.2959283834111943e-05
+  },
+  {
+   "type": "Fix(R)",
+   "event": 31,
+   "seed": 114,
+   "log_s": -12.770664197294778,
+   "dist_to_nearest_crossing_logs": 7.658310522629108e-06
+  },
+  {
+   "type": "brake",
+   "event": 32,
+   "seed": 114,
+   "log_s": -12.77066181440445,
+   "dist_to_nearest_crossing_logs": 5.275420194905678e-06
+  },
+  {
+   "type": "Fix(R)",
+   "event": 33,
+   "seed": 114,
+   "log_s": -12.77066132270815,
+   "dist_to_nearest_crossing_logs": 4.783723895229741e-06
+  },
+  {
+   "type": "brake",
+   "event": 34,
+   "seed": 114,
+   "log_s": -12.770661309018205,
+   "dist_to_nearest_crossing_logs": 4.770033950052266e-06
+  },
+  {
+   "type": "Fix(R)",
+   "event": 35,
+   "seed": 114,
+   "log_s": -12.770661250691623,
+   "dist_to_nearest_crossing_logs": 4.711707367377471e-06
+  },
+  {
+   "type": "brake",
+   "event": 16,
+   "seed": 214,
+   "log_s": -11.85869744828075,
+   "dist_to_nearest_crossing_logs": 3.446026374476219e-05
+  },
+  {
+   "type": "Fix(R)",
+   "event": 27,
+   "seed": 214,
+   "log_s": -11.85799884398936,
+   "dist_to_nearest_crossing_logs": 0.000733064555134888
+  },
+  {
+   "type": "brake",
+   "event": 28,
+   "seed": 214,
+   "log_s": -11.858584554260359,
+   "dist_to_nearest_crossing_logs": 0.00014735428413636953
+  },
+  {
+   "type": "Fix(R)",
+   "event": 29,
+   "seed": 214,
+   "log_s": -11.858679219464204,
+   "dist_to_nearest_crossing_logs": 5.2689080291656865e-05
+  },
+  {
+   "type": "brake",
+   "event": 30,
+   "seed": 214,
+   "log_s": -11.858694483580408,
+   "dist_to_nearest_crossing_logs": 3.742496408776219e-05
+  },
+  {
+   "type": "Fix(R)",
+   "event": 31,
+   "seed": 214,
+   "log_s": -11.85869699093858,
+   "dist_to_nearest_crossing_logs": 3.491760591600723e-05
+  },
+  {
+   "type": "brake",
+   "event": 32,
+   "seed": 214,
+   "log_s": -11.858697367098674,
+   "dist_to_nearest_crossing_logs": 3.454144582093477e-05
+  },
+  {
+   "type": "Fix(R)",
+   "event": 33,
+   "seed": 214,
+   "log_s": -11.85869744626373,
+   "dist_to_nearest_crossing_logs": 3.44622807659789e-05
+  },
+  {
+   "type": "brake",
+   "event": 34,
+   "seed": 214,
+   "log_s": -11.85869745385204,
+   "dist_to_nearest_crossing_logs": 3.4454692455554436e-05
+  },
+  {
+   "type": "brake",
+   "event": 26,
+   "seed": 215,
+   "log_s": -11.854399938923141,
+   "dist_to_nearest_crossing_logs": 0.0043319696213544034
+  },
+  {
+   "type": "Fix(R)",
+   "event": 35,
+   "seed": 215,
+   "log_s": -11.848020745432772,
+   "dist_to_nearest_crossing_logs": 0.01071116311172382
+  },
+  {
+   "type": "brake",
+   "event": 36,
+   "seed": 215,
+   "log_s": -11.854381476597808,
+   "dist_to_nearest_crossing_logs": 0.004350431946686939
+  },
+  {
+   "type": "Fix(R)",
+   "event": 25,
+   "seed": 217,
+   "log_s": -11.833146456835259,
+   "dist_to_nearest_crossing_logs": 0.02558545170923665
+  },
+  {
+   "type": "brake",
+   "event": 34,
+   "seed": 217,
+   "log_s": -11.832500344139431,
+   "dist_to_nearest_crossing_logs": 0.026231564405064134
+  },
+  {
+   "type": "brake",
+   "event": 42,
+   "seed": 217,
+   "log_s": -11.82959991288835,
+   "dist_to_nearest_crossing_logs": 0.02913199565614555
+  },
+  {
+   "type": "Fix(R)",
+   "event": 43,
+   "seed": 217,
+   "log_s": -11.832483891589703,
+   "dist_to_nearest_crossing_logs": 0.026248016954792064
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 217,
+   "log_s": -11.833035679078538,
+   "dist_to_nearest_crossing_logs": 0.025696229465957288
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 217,
+   "log_s": -11.83312848103845,
+   "dist_to_nearest_crossing_logs": 0.02560342750604505
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 217,
+   "log_s": -11.833143547738251,
+   "dist_to_nearest_crossing_logs": 0.02558836080624438
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 217,
+   "log_s": -11.833145987701403,
+   "dist_to_nearest_crossing_logs": 0.02558592084309197
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 217,
+   "log_s": -11.833146408454347,
+   "dist_to_nearest_crossing_logs": 0.025585500090148372
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 217,
+   "log_s": -11.833146462132651,
+   "dist_to_nearest_crossing_logs": 0.025585446411843904
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 218,
+   "log_s": -11.822648174877791,
+   "dist_to_nearest_crossing_logs": 0.03608373366670392
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 218,
+   "log_s": -11.827377104671955,
+   "dist_to_nearest_crossing_logs": 0.031354803872540415
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 218,
+   "log_s": -11.818431219287158,
+   "dist_to_nearest_crossing_logs": 0.04030068925733765
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 218,
+   "log_s": -11.822769923341413,
+   "dist_to_nearest_crossing_logs": 0.035961985203082136
+  },
+  {
+   "type": "E",
+   "event": 81,
+   "seed": 218,
+   "error": "The function value at x=7.3516878698025e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "E",
+   "event": 89,
+   "seed": 218,
+   "error": "The function value at x=7.353713843385673e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 218,
+   "log_s": -11.827402027121439,
+   "dist_to_nearest_crossing_logs": 0.031329881423056705
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 218,
+   "log_s": -11.827407845885626,
+   "dist_to_nearest_crossing_logs": 0.03132406265886978
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 218,
+   "log_s": -11.827408798599969,
+   "dist_to_nearest_crossing_logs": 0.031323109944526806
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 218,
+   "log_s": -11.827408966991177,
+   "dist_to_nearest_crossing_logs": 0.03132294155331827
+  },
+  {
+   "type": "brake",
+   "event": 94,
+   "seed": 218,
+   "log_s": -11.824910442891877,
+   "dist_to_nearest_crossing_logs": 0.03382146565261834
+  },
+  {
+   "type": "E",
+   "event": 95,
+   "seed": 218,
+   "error": "The function value at x=7.3520268987832785e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 219,
+   "log_s": -11.816180276981697,
+   "dist_to_nearest_crossing_logs": 0.042551631562798065
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 219,
+   "log_s": -11.81801031498662,
+   "dist_to_nearest_crossing_logs": 0.04072159355787619
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 220,
+   "log_s": -11.803524152442268,
+   "dist_to_nearest_crossing_logs": 0.05520775610222728
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 220,
+   "log_s": -11.804579270478245,
+   "dist_to_nearest_crossing_logs": 0.0541526380662507
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 220,
+   "log_s": -11.804271470743904,
+   "dist_to_nearest_crossing_logs": 0.054460437800591066
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 220,
+   "log_s": -11.800664039498427,
+   "dist_to_nearest_crossing_logs": 0.05806786904606831
+  },
+  {
+   "type": "E",
+   "event": 97,
+   "seed": 220,
+   "error": "The function value at x=7.4859617427053645e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "Fix(R)",
+   "event": 33,
+   "seed": 221,
+   "log_s": -11.79544787739326,
+   "dist_to_nearest_crossing_logs": 0.06328403115123571
+  },
+  {
+   "type": "brake",
+   "event": 42,
+   "seed": 221,
+   "log_s": -11.792952254402225,
+   "dist_to_nearest_crossing_logs": 0.06577965414227016
+  },
+  {
+   "type": "Fix(R)",
+   "event": 43,
+   "seed": 221,
+   "log_s": -11.79151310824726,
+   "dist_to_nearest_crossing_logs": 0.06721880029723515
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 221,
+   "log_s": -11.791287728319952,
+   "dist_to_nearest_crossing_logs": 0.0674441802245429
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 221,
+   "log_s": -11.791251490701297,
+   "dist_to_nearest_crossing_logs": 0.06748041784319803
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 221,
+   "log_s": -11.79124566682633,
+   "dist_to_nearest_crossing_logs": 0.06748624171816608
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 221,
+   "log_s": -11.791244699871712,
+   "dist_to_nearest_crossing_logs": 0.0674872086727838
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 221,
+   "log_s": -11.791244564408515,
+   "dist_to_nearest_crossing_logs": 0.06748734413598001
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 221,
+   "log_s": -11.791244535988481,
+   "dist_to_nearest_crossing_logs": 0.06748737255601434
+  },
+  {
+   "type": "brake",
+   "event": 24,
+   "seed": 229,
+   "log_s": -11.726442055114568,
+   "dist_to_nearest_crossing_logs": 0.13228985342992772
+  },
+  {
+   "type": "Fix(R)",
+   "event": 41,
+   "seed": 229,
+   "log_s": -11.722424858829106,
+   "dist_to_nearest_crossing_logs": 0.13630704971538954
+  },
+  {
+   "type": "brake",
+   "event": 42,
+   "seed": 229,
+   "log_s": -11.725754449741768,
+   "dist_to_nearest_crossing_logs": 0.1329774588027277
+  },
+  {
+   "type": "Fix(R)",
+   "event": 43,
+   "seed": 229,
+   "log_s": -11.726329886048804,
+   "dist_to_nearest_crossing_logs": 0.13240202249569144
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 229,
+   "log_s": -11.726423938080682,
+   "dist_to_nearest_crossing_logs": 0.13230797046381326
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 229,
+   "log_s": -11.72643913784441,
+   "dist_to_nearest_crossing_logs": 0.13229277070008472
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 229,
+   "log_s": -11.726441583273676,
+   "dist_to_nearest_crossing_logs": 0.1322903252708194
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 229,
+   "log_s": -11.726441995849834,
+   "dist_to_nearest_crossing_logs": 0.13228991269466128
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 229,
+   "log_s": -11.726442047870266,
+   "dist_to_nearest_crossing_logs": 0.13228986067422888
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 229,
+   "log_s": -11.726442051696294,
+   "dist_to_nearest_crossing_logs": 0.13228985684820138
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 230,
+   "log_s": -11.717751015426344,
+   "dist_to_nearest_crossing_logs": 0.14098089311815087
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 230,
+   "log_s": -11.717328110987753,
+   "dist_to_nearest_crossing_logs": 0.14140379755674282
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 230,
+   "log_s": -11.717133321915894,
+   "dist_to_nearest_crossing_logs": 0.1415985866286018
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 230,
+   "log_s": -11.717102746998977,
+   "dist_to_nearest_crossing_logs": 0.1416291615455183
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 230,
+   "log_s": -11.717097837452169,
+   "dist_to_nearest_crossing_logs": 0.1416340710923265
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 230,
+   "log_s": -11.717097034521066,
+   "dist_to_nearest_crossing_logs": 0.14163487402342945
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 230,
+   "log_s": -11.7170969088049,
+   "dist_to_nearest_crossing_logs": 0.1416349997395958
+  },
+  {
+   "type": "B",
+   "event": 64,
+   "seed": 230,
+   "error": "The function value at x=8.204075768418484e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "E",
+   "event": 65,
+   "seed": 230,
+   "error": "The function value at x=8.175155954792544e-06 is NaN; solver cannot continue."
+  },
+  {
+   "type": "brake",
+   "event": 32,
+   "seed": 231,
+   "log_s": -11.70888313316301,
+   "dist_to_nearest_crossing_logs": 0.14984877538148567
+  },
+  {
+   "type": "brake",
+   "event": 40,
+   "seed": 231,
+   "log_s": -11.706608284180023,
+   "dist_to_nearest_crossing_logs": 0.15212362436447258
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 231,
+   "log_s": -11.706318429441838,
+   "dist_to_nearest_crossing_logs": 0.15241347910265723
+  },
+  {
+   "type": "brake",
+   "event": 56,
+   "seed": 231,
+   "log_s": -11.706281612142426,
+   "dist_to_nearest_crossing_logs": 0.15245029640206909
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 231,
+   "log_s": -11.70834563618303,
+   "dist_to_nearest_crossing_logs": 0.15038627236146596
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 231,
+   "log_s": -11.708790561432641,
+   "dist_to_nearest_crossing_logs": 0.14994134711185403
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 231,
+   "log_s": -11.708867994618654,
+   "dist_to_nearest_crossing_logs": 0.14986391392584153
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 231,
+   "log_s": -11.7088806884508,
+   "dist_to_nearest_crossing_logs": 0.1498512200936961
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 231,
+   "log_s": -11.708882729467286,
+   "dist_to_nearest_crossing_logs": 0.14984917907720963
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 231,
+   "log_s": -11.708883077921183,
+   "dist_to_nearest_crossing_logs": 0.14984883062331278
+  },
+  {
+   "type": "Fix(R)",
+   "event": 55,
+   "seed": 232,
+   "log_s": -11.698434146712467,
+   "dist_to_nearest_crossing_logs": 0.16029776183202848
+  },
+  {
+   "type": "brake",
+   "event": 70,
+   "seed": 232,
+   "log_s": -11.697106209063431,
+   "dist_to_nearest_crossing_logs": 0.1616256994810641
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 232,
+   "log_s": -11.692002030059117,
+   "dist_to_nearest_crossing_logs": 0.1667298784853788
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 232,
+   "log_s": -11.698173796369144,
+   "dist_to_nearest_crossing_logs": 0.16055811217535165
+  },
+  {
+   "type": "Fix(R)",
+   "event": 85,
+   "seed": 232,
+   "log_s": -11.696921555225023,
+   "dist_to_nearest_crossing_logs": 0.16181035331947236
+  },
+  {
+   "type": "brake",
+   "event": 86,
+   "seed": 232,
+   "log_s": -11.698338983012459,
+   "dist_to_nearest_crossing_logs": 0.16039292553203666
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 232,
+   "log_s": -11.698825845246855,
+   "dist_to_nearest_crossing_logs": 0.15990606329764034
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 232,
+   "log_s": -11.698953057085667,
+   "dist_to_nearest_crossing_logs": 0.1597788514588281
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 232,
+   "log_s": -11.698976765758397,
+   "dist_to_nearest_crossing_logs": 0.15975514278609815
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 232,
+   "log_s": -11.698980691390018,
+   "dist_to_nearest_crossing_logs": 0.1597512171544775
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 232,
+   "log_s": -11.698981325769706,
+   "dist_to_nearest_crossing_logs": 0.15975058277478915
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 233,
+   "log_s": -11.688379516542438,
+   "dist_to_nearest_crossing_logs": 0.17035239200205687
+  },
+  {
+   "type": "Fix(R)",
+   "event": 85,
+   "seed": 233,
+   "log_s": -11.682220338975329,
+   "dist_to_nearest_crossing_logs": 0.17651156956916658
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 233,
+   "log_s": -11.6837916006156,
+   "dist_to_nearest_crossing_logs": 0.17494030792889603
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 234,
+   "log_s": -11.67962859594699,
+   "dist_to_nearest_crossing_logs": 0.17910331259750478
+  },
+  {
+   "type": "brake",
+   "event": 70,
+   "seed": 234,
+   "log_s": -11.68116021849315,
+   "dist_to_nearest_crossing_logs": 0.1775716900513462
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 234,
+   "log_s": -11.676109892766508,
+   "dist_to_nearest_crossing_logs": 0.1826220157779872
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 234,
+   "log_s": -11.674707443318349,
+   "dist_to_nearest_crossing_logs": 0.18402446522614646
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 234,
+   "log_s": -11.674430657207749,
+   "dist_to_nearest_crossing_logs": 0.18430125133674657
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 234,
+   "log_s": -11.674384055258589,
+   "dist_to_nearest_crossing_logs": 0.18434785328590664
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 234,
+   "log_s": -11.674376513279496,
+   "dist_to_nearest_crossing_logs": 0.18435539526499944
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 234,
+   "log_s": -11.674375283202563,
+   "dist_to_nearest_crossing_logs": 0.1843566253419322
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 234,
+   "log_s": -11.67437508367161,
+   "dist_to_nearest_crossing_logs": 0.18435682487288574
+  },
+  {
+   "type": "Fix(R)",
+   "event": 39,
+   "seed": 238,
+   "log_s": -11.642412005655219,
+   "dist_to_nearest_crossing_logs": 0.2163199028892766
+  },
+  {
+   "type": "brake",
+   "event": 70,
+   "seed": 238,
+   "log_s": -11.636285525371928,
+   "dist_to_nearest_crossing_logs": 0.22244638317256715
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 238,
+   "log_s": -11.640989740173207,
+   "dist_to_nearest_crossing_logs": 0.2177421683712879
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 238,
+   "log_s": -11.642155885612262,
+   "dist_to_nearest_crossing_logs": 0.21657602293223377
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 238,
+   "log_s": -11.642369797265863,
+   "dist_to_nearest_crossing_logs": 0.2163621112786327
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 238,
+   "log_s": -11.642405172697618,
+   "dist_to_nearest_crossing_logs": 0.21632673584687723
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 238,
+   "log_s": -11.642410882673545,
+   "dist_to_nearest_crossing_logs": 0.21632102587095048
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 238,
+   "log_s": -11.64241183185868,
+   "dist_to_nearest_crossing_logs": 0.21632007668581466
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 238,
+   "log_s": -11.642411976063261,
+   "dist_to_nearest_crossing_logs": 0.21631993248123393
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 239,
+   "log_s": -11.634717965581352,
+   "dist_to_nearest_crossing_logs": 0.22401394296314336
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 239,
+   "log_s": -11.629925424739577,
+   "dist_to_nearest_crossing_logs": 0.22880648380491841
+  },
+  {
+   "type": "Fix(R)",
+   "event": 85,
+   "seed": 239,
+   "log_s": -11.634526588983682,
+   "dist_to_nearest_crossing_logs": 0.2242053195608129
+  },
+  {
+   "type": "brake",
+   "event": 54,
+   "seed": 240,
+   "log_s": -11.623621187687087,
+   "dist_to_nearest_crossing_logs": 0.23511072085740814
+  },
+  {
+   "type": "Fix(R)",
+   "event": 69,
+   "seed": 240,
+   "log_s": -11.620198270911251,
+   "dist_to_nearest_crossing_logs": 0.2385336376332443
+  },
+  {
+   "type": "brake",
+   "event": 84,
+   "seed": 240,
+   "log_s": -11.619738662166814,
+   "dist_to_nearest_crossing_logs": 0.2389932463776816
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 241,
+   "log_s": -11.613656427900352,
+   "dist_to_nearest_crossing_logs": 0.24507548064414308
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 242,
+   "log_s": -11.603963261590495,
+   "dist_to_nearest_crossing_logs": 0.25476864695400003
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 246,
+   "log_s": -11.570960075037858,
+   "dist_to_nearest_crossing_logs": 0.28777183350663726
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 247,
+   "log_s": -11.559048822239177,
+   "dist_to_nearest_crossing_logs": 0.29968308630531837
+  },
+  {
+   "type": "Fix(R)",
+   "event": 69,
+   "seed": 248,
+   "log_s": -11.549681448652112,
+   "dist_to_nearest_crossing_logs": 0.3090504598923829
+  },
+  {
+   "type": "brake",
+   "event": 84,
+   "seed": 248,
+   "log_s": -11.5509413500436,
+   "dist_to_nearest_crossing_logs": 0.307790558500896
+  },
+  {
+   "type": "brake",
+   "event": 54,
+   "seed": 249,
+   "log_s": -11.539707484269362,
+   "dist_to_nearest_crossing_logs": 0.319024424275133
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 249,
+   "log_s": -11.537421157047111,
+   "dist_to_nearest_crossing_logs": 0.32131075149738386
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 250,
+   "log_s": -11.530446219601295,
+   "dist_to_nearest_crossing_logs": 0.3282856889432004
+  },
+  {
+   "type": "brake",
+   "event": 70,
+   "seed": 250,
+   "log_s": -11.52933194692029,
+   "dist_to_nearest_crossing_logs": 0.3293999616242047
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 250,
+   "log_s": -11.529190814029896,
+   "dist_to_nearest_crossing_logs": 0.32954109451459956
+  },
+  {
+   "type": "Fix(R)",
+   "event": 85,
+   "seed": 250,
+   "log_s": -11.531618321628287,
+   "dist_to_nearest_crossing_logs": 0.32711358691620873
+  },
+  {
+   "type": "brake",
+   "event": 86,
+   "seed": 250,
+   "log_s": -11.529172928436935,
+   "dist_to_nearest_crossing_logs": 0.32955898010756
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 250,
+   "log_s": -11.528512586110613,
+   "dist_to_nearest_crossing_logs": 0.33021932243388186
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 250,
+   "log_s": -11.528368663534899,
+   "dist_to_nearest_crossing_logs": 0.3303632450095968
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 250,
+   "log_s": -11.528343536794205,
+   "dist_to_nearest_crossing_logs": 0.33038837175029023
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 250,
+   "log_s": -11.52833939990487,
+   "dist_to_nearest_crossing_logs": 0.33039250863962444
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 250,
+   "log_s": -11.528338749725561,
+   "dist_to_nearest_crossing_logs": 0.33039315881893394
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 250,
+   "log_s": -11.528338647924397,
+   "dist_to_nearest_crossing_logs": 0.33039326062009877
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 251,
+   "log_s": -11.523990484732272,
+   "dist_to_nearest_crossing_logs": 0.3347414238122237
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 251,
+   "log_s": -11.522797526457444,
+   "dist_to_nearest_crossing_logs": 0.33593438208705173
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 251,
+   "log_s": -11.522586949270348,
+   "dist_to_nearest_crossing_logs": 0.3361449592741472
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 251,
+   "log_s": -11.522552394154886,
+   "dist_to_nearest_crossing_logs": 0.3361795143896096
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 251,
+   "log_s": -11.522546792878801,
+   "dist_to_nearest_crossing_logs": 0.3361851156656943
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 251,
+   "log_s": -11.522545892273593,
+   "dist_to_nearest_crossing_logs": 0.3361860162709025
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 251,
+   "log_s": -11.522545754955049,
+   "dist_to_nearest_crossing_logs": 0.3361861535894466
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 253,
+   "log_s": -11.501042561454728,
+   "dist_to_nearest_crossing_logs": 0.3576893470897673
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 253,
+   "log_s": -11.50269074928057,
+   "dist_to_nearest_crossing_logs": 0.3560411592639259
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 253,
+   "log_s": -11.503222264924606,
+   "dist_to_nearest_crossing_logs": 0.35550964361988946
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 253,
+   "log_s": -11.503305826124919,
+   "dist_to_nearest_crossing_logs": 0.3554260824195765
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 253,
+   "log_s": -11.503319255944305,
+   "dist_to_nearest_crossing_logs": 0.35541265260019017
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 253,
+   "log_s": -11.50332143363444,
+   "dist_to_nearest_crossing_logs": 0.3554104749100553
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 253,
+   "log_s": -11.503321785220502,
+   "dist_to_nearest_crossing_logs": 0.3554101233239937
+  },
+  {
+   "type": "Fix(R)",
+   "event": 55,
+   "seed": 254,
+   "log_s": -11.490420611447888,
+   "dist_to_nearest_crossing_logs": 0.36831129709660715
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 255,
+   "log_s": -11.486322366334408,
+   "dist_to_nearest_crossing_logs": 0.3724095422100877
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 255,
+   "log_s": -11.48746172127834,
+   "dist_to_nearest_crossing_logs": 0.37127018726615546
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 255,
+   "log_s": -11.486211958727354,
+   "dist_to_nearest_crossing_logs": 0.372519949817141
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 255,
+   "log_s": -11.48596776681416,
+   "dist_to_nearest_crossing_logs": 0.372764141730336
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 255,
+   "log_s": -11.485926516012686,
+   "dist_to_nearest_crossing_logs": 0.37280539253180933
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 255,
+   "log_s": -11.485919805674202,
+   "dist_to_nearest_crossing_logs": 0.3728121028702933
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 255,
+   "log_s": -11.485918705106645,
+   "dist_to_nearest_crossing_logs": 0.3728132034378504
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 255,
+   "log_s": -11.485918533799804,
+   "dist_to_nearest_crossing_logs": 0.3728133747446911
+  },
+  {
+   "type": "Fix(R)",
+   "event": 31,
+   "seed": 256,
+   "log_s": -11.473304613493562,
+   "dist_to_nearest_crossing_logs": 0.385427295050933
+  },
+  {
+   "type": "brake",
+   "event": 56,
+   "seed": 256,
+   "log_s": -11.476758516678887,
+   "dist_to_nearest_crossing_logs": 0.38197339186560875
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 256,
+   "log_s": -11.473892110554624,
+   "dist_to_nearest_crossing_logs": 0.384839797989871
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 256,
+   "log_s": -11.47340031611321,
+   "dist_to_nearest_crossing_logs": 0.38533159243128523
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 256,
+   "log_s": -11.473320093037156,
+   "dist_to_nearest_crossing_logs": 0.3854118155073394
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 256,
+   "log_s": -11.473307112852638,
+   "dist_to_nearest_crossing_logs": 0.3854247956918577
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 256,
+   "log_s": -11.473305018083876,
+   "dist_to_nearest_crossing_logs": 0.38542689046061973
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 256,
+   "log_s": -11.47330466132204,
+   "dist_to_nearest_crossing_logs": 0.3854272472224558
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 256,
+   "log_s": -11.473304627842793,
+   "dist_to_nearest_crossing_logs": 0.38542728070170185
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 256,
+   "log_s": -11.473304616696966,
+   "dist_to_nearest_crossing_logs": 0.3854272918475292
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 265,
+   "log_s": -11.390115395388912,
+   "dist_to_nearest_crossing_logs": 0.46861651315558284
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 265,
+   "log_s": -11.3903043353913,
+   "dist_to_nearest_crossing_logs": 0.46842757315319616
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 265,
+   "log_s": -11.390334813899148,
+   "dist_to_nearest_crossing_logs": 0.46839709464534707
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 265,
+   "log_s": -11.390339755404677,
+   "dist_to_nearest_crossing_logs": 0.46839215313981875
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 265,
+   "log_s": -11.390340539642759,
+   "dist_to_nearest_crossing_logs": 0.46839136890173627
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 265,
+   "log_s": -11.390340688383997,
+   "dist_to_nearest_crossing_logs": 0.4683912201604983
+  },
+  {
+   "type": "brake",
+   "event": 56,
+   "seed": 266,
+   "log_s": -11.381567066592256,
+   "dist_to_nearest_crossing_logs": 0.4771648419522396
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 266,
+   "log_s": -11.388943163649875,
+   "dist_to_nearest_crossing_logs": 0.4697887448946201
+  },
+  {
+   "type": "brake",
+   "event": 66,
+   "seed": 266,
+   "log_s": -11.386160917218684,
+   "dist_to_nearest_crossing_logs": 0.4725709913258118
+  },
+  {
+   "type": "Fix(R)",
+   "event": 67,
+   "seed": 266,
+   "log_s": -11.38865195447926,
+   "dist_to_nearest_crossing_logs": 0.47007995406523584
+  },
+  {
+   "type": "brake",
+   "event": 68,
+   "seed": 266,
+   "log_s": -11.389660410151997,
+   "dist_to_nearest_crossing_logs": 0.4690714983924984
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 266,
+   "log_s": -11.3856168157734,
+   "dist_to_nearest_crossing_logs": 0.47311509277109565
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 266,
+   "log_s": -11.386090672547317,
+   "dist_to_nearest_crossing_logs": 0.47264123599717855
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 266,
+   "log_s": -11.386179932468451,
+   "dist_to_nearest_crossing_logs": 0.47255197607604416
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 266,
+   "log_s": -11.386194878728473,
+   "dist_to_nearest_crossing_logs": 0.4725370298160225
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 266,
+   "log_s": -11.389658468852522,
+   "dist_to_nearest_crossing_logs": 0.46907343969197335
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 266,
+   "log_s": -11.38619771832485,
+   "dist_to_nearest_crossing_logs": 0.4725341902196458
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 266,
+   "log_s": -11.386197779220637,
+   "dist_to_nearest_crossing_logs": 0.47253412932385785
+  },
+  {
+   "type": "Fix(R)",
+   "event": 81,
+   "seed": 266,
+   "log_s": -11.386197781952777,
+   "dist_to_nearest_crossing_logs": 0.472534126591718
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 267,
+   "log_s": -11.380032135200175,
+   "dist_to_nearest_crossing_logs": 0.4786997733443208
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 267,
+   "log_s": -11.380075314090723,
+   "dist_to_nearest_crossing_logs": 0.4786565944537724
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 267,
+   "log_s": -11.379833773182849,
+   "dist_to_nearest_crossing_logs": 0.4788981353616464
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 267,
+   "log_s": -11.379796260168428,
+   "dist_to_nearest_crossing_logs": 0.4789356483760674
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 267,
+   "log_s": -11.379790229376114,
+   "dist_to_nearest_crossing_logs": 0.47894167916838093
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 267,
+   "log_s": -11.379789261644916,
+   "dist_to_nearest_crossing_logs": 0.4789426468995792
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 268,
+   "log_s": -11.364595801002661,
+   "dist_to_nearest_crossing_logs": 0.49413610754183424
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 268,
+   "log_s": -11.362426193325765,
+   "dist_to_nearest_crossing_logs": 0.49630571521873
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 268,
+   "log_s": -11.365377516959864,
+   "dist_to_nearest_crossing_logs": 0.49335439158463146
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 268,
+   "log_s": -11.36594963773173,
+   "dist_to_nearest_crossing_logs": 0.49278227081276604
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 268,
+   "log_s": -11.366046233430113,
+   "dist_to_nearest_crossing_logs": 0.492685675114382
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 268,
+   "log_s": -11.366061946626052,
+   "dist_to_nearest_crossing_logs": 0.4926699619184429
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 268,
+   "log_s": -11.36606445915536,
+   "dist_to_nearest_crossing_logs": 0.49266744938913476
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 268,
+   "log_s": -11.366064898678959,
+   "dist_to_nearest_crossing_logs": 0.4926670098655368
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 269,
+   "log_s": -11.355996795239957,
+   "dist_to_nearest_crossing_logs": 0.5027351133045386
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 269,
+   "log_s": -11.36214062034934,
+   "dist_to_nearest_crossing_logs": 0.4965912881951553
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 269,
+   "log_s": -11.360392300342479,
+   "dist_to_nearest_crossing_logs": 0.4983396082020164
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 269,
+   "log_s": -11.362104046229385,
+   "dist_to_nearest_crossing_logs": 0.49662786231511014
+  },
+  {
+   "type": "E",
+   "event": 95,
+   "seed": 269,
+   "error": "The function value at x=1.1704920870169927e-05 is NaN; solver cannot continue."
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 270,
+   "log_s": -11.346806143442919,
+   "dist_to_nearest_crossing_logs": 0.5119257651015765
+  },
+  {
+   "type": "Fix(R)",
+   "event": 95,
+   "seed": 270,
+   "log_s": -11.350463619362204,
+   "dist_to_nearest_crossing_logs": 0.5082682891822916
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 271,
+   "log_s": -11.336672255565993,
+   "dist_to_nearest_crossing_logs": 0.522059652978502
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 272,
+   "log_s": -11.32736789481121,
+   "dist_to_nearest_crossing_logs": 0.5313640137332847
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 272,
+   "log_s": -11.329815900027766,
+   "dist_to_nearest_crossing_logs": 0.5289160085167293
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 272,
+   "log_s": -11.327900250152473,
+   "dist_to_nearest_crossing_logs": 0.5308316583920227
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 272,
+   "log_s": -11.327461463124564,
+   "dist_to_nearest_crossing_logs": 0.5312704454199313
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 272,
+   "log_s": -11.327383243928573,
+   "dist_to_nearest_crossing_logs": 0.5313486646159227
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 272,
+   "log_s": -11.327370390995538,
+   "dist_to_nearest_crossing_logs": 0.531361517548957
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 272,
+   "log_s": -11.327368299608349,
+   "dist_to_nearest_crossing_logs": 0.5313636089361466
+  },
+  {
+   "type": "brake",
+   "event": 94,
+   "seed": 272,
+   "log_s": -11.32736796603213,
+   "dist_to_nearest_crossing_logs": 0.5313639425123657
+  },
+  {
+   "type": "Fix(R)",
+   "event": 95,
+   "seed": 272,
+   "log_s": -11.327367908684733,
+   "dist_to_nearest_crossing_logs": 0.5313639998597619
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 273,
+   "log_s": -11.319468882130689,
+   "dist_to_nearest_crossing_logs": 0.5392630264138063
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 273,
+   "log_s": -11.321726959473022,
+   "dist_to_nearest_crossing_logs": 0.5370049490714734
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 273,
+   "log_s": -11.322217807283211,
+   "dist_to_nearest_crossing_logs": 0.5365141012612842
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 273,
+   "log_s": -11.322304366850615,
+   "dist_to_nearest_crossing_logs": 0.5364275416938806
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 273,
+   "log_s": -11.322318556299857,
+   "dist_to_nearest_crossing_logs": 0.5364133522446384
+  },
+  {
+   "type": "Fix(R)",
+   "event": 93,
+   "seed": 273,
+   "log_s": -11.322320860261941,
+   "dist_to_nearest_crossing_logs": 0.5364110482825541
+  },
+  {
+   "type": "brake",
+   "event": 94,
+   "seed": 273,
+   "log_s": -11.32232123360612,
+   "dist_to_nearest_crossing_logs": 0.5364106749383755
+  },
+  {
+   "type": "Fix(R)",
+   "event": 95,
+   "seed": 273,
+   "log_s": -11.32232130400051,
+   "dist_to_nearest_crossing_logs": 0.5364106045439847
+  },
+  {
+   "type": "brake",
+   "event": 96,
+   "seed": 273,
+   "log_s": -11.322321296096458,
+   "dist_to_nearest_crossing_logs": 0.5364106124480372
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 274,
+   "log_s": -11.310363108387538,
+   "dist_to_nearest_crossing_logs": 0.5483688001569575
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 274,
+   "log_s": -11.308355584984145,
+   "dist_to_nearest_crossing_logs": 0.55037632356035
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 274,
+   "log_s": -11.30890267897347,
+   "dist_to_nearest_crossing_logs": 0.5498292295710261
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 274,
+   "log_s": -11.308757294080275,
+   "dist_to_nearest_crossing_logs": 0.5499746144642206
+  },
+  {
+   "type": "Fix(R)",
+   "event": 95,
+   "seed": 274,
+   "log_s": -11.30879619885074,
+   "dist_to_nearest_crossing_logs": 0.5499357096937558
+  },
+  {
+   "type": "Fix(R)",
+   "event": 55,
+   "seed": 275,
+   "log_s": -11.302209666302142,
+   "dist_to_nearest_crossing_logs": 0.5565222422423535
+  },
+  {
+   "type": "Fix(R)",
+   "event": 55,
+   "seed": 280,
+   "log_s": -11.255474770769222,
+   "dist_to_nearest_crossing_logs": 0.6032571377752731
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 281,
+   "log_s": -11.249725927009523,
+   "dist_to_nearest_crossing_logs": 0.6090059815349722
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 281,
+   "log_s": -11.251100784380109,
+   "dist_to_nearest_crossing_logs": 0.6076311241643868
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 281,
+   "log_s": -11.250723785413816,
+   "dist_to_nearest_crossing_logs": 0.6080081231306789
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 281,
+   "log_s": -11.250823807564876,
+   "dist_to_nearest_crossing_logs": 0.6079081009796194
+  },
+  {
+   "type": "Fix(R)",
+   "event": 95,
+   "seed": 281,
+   "log_s": -11.250797025871117,
+   "dist_to_nearest_crossing_logs": 0.6079348826733781
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 282,
+   "log_s": -11.239002604428915,
+   "dist_to_nearest_crossing_logs": 0.6197293041155802
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 282,
+   "log_s": -11.241523560634757,
+   "dist_to_nearest_crossing_logs": 0.6172083479097381
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 282,
+   "log_s": -11.23954357682888,
+   "dist_to_nearest_crossing_logs": 0.6191883317156162
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 283,
+   "log_s": -11.22722811213202,
+   "dist_to_nearest_crossing_logs": 0.6315037964124759
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 283,
+   "log_s": -11.233015311895691,
+   "dist_to_nearest_crossing_logs": 0.6257165966488039
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 283,
+   "log_s": -11.234679867326216,
+   "dist_to_nearest_crossing_logs": 0.6240520412182793
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 284,
+   "log_s": -11.219336396634537,
+   "dist_to_nearest_crossing_logs": 0.6393955119099584
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 285,
+   "log_s": -11.211886185615663,
+   "dist_to_nearest_crossing_logs": 0.6468457229288322
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 285,
+   "log_s": -11.208323630142175,
+   "dist_to_nearest_crossing_logs": 0.6504082784023204
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 286,
+   "log_s": -11.204883036273259,
+   "dist_to_nearest_crossing_logs": 0.6538488722712366
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 286,
+   "log_s": -11.20666911536713,
+   "dist_to_nearest_crossing_logs": 0.6520627931773646
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 286,
+   "log_s": -11.204269278463773,
+   "dist_to_nearest_crossing_logs": 0.6544626300807224
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 286,
+   "log_s": -11.203802958380109,
+   "dist_to_nearest_crossing_logs": 0.6549289501643862
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 286,
+   "log_s": -11.203724204092408,
+   "dist_to_nearest_crossing_logs": 0.6550077044520872
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 286,
+   "log_s": -11.203711392572023,
+   "dist_to_nearest_crossing_logs": 0.6550205159724722
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 286,
+   "log_s": -11.203709323497334,
+   "dist_to_nearest_crossing_logs": 0.6550225850471616
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 286,
+   "log_s": -11.203708988781472,
+   "dist_to_nearest_crossing_logs": 0.6550229197630237
+  },
+  {
+   "type": "brake",
+   "event": 56,
+   "seed": 287,
+   "log_s": -11.190397132074603,
+   "dist_to_nearest_crossing_logs": 0.6683347764698926
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 287,
+   "log_s": -11.19198316550667,
+   "dist_to_nearest_crossing_logs": 0.6667487430378252
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 287,
+   "log_s": -11.191939178559938,
+   "dist_to_nearest_crossing_logs": 0.6667927299845573
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 287,
+   "log_s": -11.19214939122787,
+   "dist_to_nearest_crossing_logs": 0.6665825173166251
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 287,
+   "log_s": -11.192182017661416,
+   "dist_to_nearest_crossing_logs": 0.6665498908830791
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 287,
+   "log_s": -11.192187237429579,
+   "dist_to_nearest_crossing_logs": 0.6665446711149166
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 287,
+   "log_s": -11.192188078622173,
+   "dist_to_nearest_crossing_logs": 0.6665438299223219
+  },
+  {
+   "type": "Fix(R)",
+   "event": 31,
+   "seed": 288,
+   "log_s": -11.182466550975999,
+   "dist_to_nearest_crossing_logs": 0.6762653575684965
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 288,
+   "log_s": -11.183792756957455,
+   "dist_to_nearest_crossing_logs": 0.67493915158704
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 288,
+   "log_s": -11.18268251067777,
+   "dist_to_nearest_crossing_logs": 0.6760493978667252
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 288,
+   "log_s": -11.182501473460402,
+   "dist_to_nearest_crossing_logs": 0.6762304350840935
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 288,
+   "log_s": -11.182472192706296,
+   "dist_to_nearest_crossing_logs": 0.6762597158381993
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 288,
+   "log_s": -11.182467462381984,
+   "dist_to_nearest_crossing_logs": 0.6762644461625111
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 288,
+   "log_s": -11.182466698944491,
+   "dist_to_nearest_crossing_logs": 0.6762652096000039
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 288,
+   "log_s": -11.182466579902599,
+   "dist_to_nearest_crossing_logs": 0.6762653286418967
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 288,
+   "log_s": -11.182466563543207,
+   "dist_to_nearest_crossing_logs": 0.6762653450012888
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 288,
+   "log_s": -11.182466550977145,
+   "dist_to_nearest_crossing_logs": 0.6762653575673507
+  },
+  {
+   "type": "brake",
+   "event": 56,
+   "seed": 293,
+   "log_s": -11.137419944102648,
+   "dist_to_nearest_crossing_logs": 0.7213119644418473
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 293,
+   "log_s": -11.141221061998403,
+   "dist_to_nearest_crossing_logs": 0.7175108465460927
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 293,
+   "log_s": -11.141913377211518,
+   "dist_to_nearest_crossing_logs": 0.7168185313329776
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 293,
+   "log_s": -11.14202780685971,
+   "dist_to_nearest_crossing_logs": 0.716704101684785
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 293,
+   "log_s": -11.142046347620223,
+   "dist_to_nearest_crossing_logs": 0.7166855609242724
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 293,
+   "log_s": -11.142049340293708,
+   "dist_to_nearest_crossing_logs": 0.7166825682507874
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 293,
+   "log_s": -11.142049829651803,
+   "dist_to_nearest_crossing_logs": 0.716682078892692
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 293,
+   "log_s": -11.142049903362235,
+   "dist_to_nearest_crossing_logs": 0.7166820051822604
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 293,
+   "log_s": -11.14204991321612,
+   "dist_to_nearest_crossing_logs": 0.7166819953283756
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 294,
+   "log_s": -11.126747349866866,
+   "dist_to_nearest_crossing_logs": 0.7319845586776292
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 294,
+   "log_s": -11.125482490993875,
+   "dist_to_nearest_crossing_logs": 0.7332494175506206
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 294,
+   "log_s": -11.126903655018282,
+   "dist_to_nearest_crossing_logs": 0.7318282535262135
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 294,
+   "log_s": -11.127181102057886,
+   "dist_to_nearest_crossing_logs": 0.7315508064866094
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 294,
+   "log_s": -11.127227963475601,
+   "dist_to_nearest_crossing_logs": 0.7315039450688943
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 294,
+   "log_s": -11.127235586024087,
+   "dist_to_nearest_crossing_logs": 0.7314963225204085
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 294,
+   "log_s": -11.127236812652164,
+   "dist_to_nearest_crossing_logs": 0.7314950958923312
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 294,
+   "log_s": -11.12723701095439,
+   "dist_to_nearest_crossing_logs": 0.731494897590105
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 294,
+   "log_s": -11.127237060718944,
+   "dist_to_nearest_crossing_logs": 0.7314948478255516
+  },
+  {
+   "type": "Fix(R)",
+   "event": 55,
+   "seed": 295,
+   "log_s": -11.120904051383159,
+   "dist_to_nearest_crossing_logs": 0.7378278571613368
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 295,
+   "log_s": -11.117729978966738,
+   "dist_to_nearest_crossing_logs": 0.7410019295777577
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 295,
+   "log_s": -11.122313618507865,
+   "dist_to_nearest_crossing_logs": 0.7364182900366298
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 295,
+   "log_s": -11.125292328765374,
+   "dist_to_nearest_crossing_logs": 0.7334395797791213
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 296,
+   "log_s": -11.108100248213146,
+   "dist_to_nearest_crossing_logs": 0.750631660331349
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 296,
+   "log_s": -11.112549795851429,
+   "dist_to_nearest_crossing_logs": 0.7461821126930666
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 296,
+   "log_s": -11.111230758880257,
+   "dist_to_nearest_crossing_logs": 0.7475011496642381
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 296,
+   "log_s": -11.107087181576361,
+   "dist_to_nearest_crossing_logs": 0.7516447269681343
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 297,
+   "log_s": -11.104994705640344,
+   "dist_to_nearest_crossing_logs": 0.7537372029041514
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 297,
+   "log_s": -11.104011997311343,
+   "dist_to_nearest_crossing_logs": 0.7547199112331526
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 297,
+   "log_s": -11.103852622421236,
+   "dist_to_nearest_crossing_logs": 0.7548792861232592
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 297,
+   "log_s": -11.103826872515622,
+   "dist_to_nearest_crossing_logs": 0.7549050360288732
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 297,
+   "log_s": -11.10382270354371,
+   "dist_to_nearest_crossing_logs": 0.7549092050007857
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 297,
+   "log_s": -11.103822036672588,
+   "dist_to_nearest_crossing_logs": 0.7549098718719076
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 297,
+   "log_s": -11.103821919356777,
+   "dist_to_nearest_crossing_logs": 0.754909989187718
+  },
+  {
+   "type": "Fix(R)",
+   "event": 39,
+   "seed": 301,
+   "log_s": -11.070436010681272,
+   "dist_to_nearest_crossing_logs": 0.7882958978632235
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 301,
+   "log_s": -11.068583569190496,
+   "dist_to_nearest_crossing_logs": 0.7901483393539994
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 301,
+   "log_s": -11.070153474645192,
+   "dist_to_nearest_crossing_logs": 0.7885784338993034
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 301,
+   "log_s": -11.07039074688004,
+   "dist_to_nearest_crossing_logs": 0.7883411616644551
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 301,
+   "log_s": -11.070428720161658,
+   "dist_to_nearest_crossing_logs": 0.7883031883828373
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 301,
+   "log_s": -11.07043483693545,
+   "dist_to_nearest_crossing_logs": 0.7882970716090458
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 301,
+   "log_s": -11.070435823546516,
+   "dist_to_nearest_crossing_logs": 0.7882960849979792
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 301,
+   "log_s": -11.07043598178094,
+   "dist_to_nearest_crossing_logs": 0.7882959267635545
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 301,
+   "log_s": -11.070436007076763,
+   "dist_to_nearest_crossing_logs": 0.7882959014677322
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 302,
+   "log_s": -11.056681018396675,
+   "dist_to_nearest_crossing_logs": 0.8020508901478198
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 302,
+   "log_s": -11.055660377933096,
+   "dist_to_nearest_crossing_logs": 0.8030715306113994
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 302,
+   "log_s": -11.05551286951583,
+   "dist_to_nearest_crossing_logs": 0.8032190390286651
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 302,
+   "log_s": -11.055489407657422,
+   "dist_to_nearest_crossing_logs": 0.8032425008870732
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 302,
+   "log_s": -11.055485633040343,
+   "dist_to_nearest_crossing_logs": 0.8032462755041525
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 302,
+   "log_s": -11.055485015327735,
+   "dist_to_nearest_crossing_logs": 0.8032468932167607
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 302,
+   "log_s": -11.055484922667283,
+   "dist_to_nearest_crossing_logs": 0.8032469858772124
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 303,
+   "log_s": -11.043877314353697,
+   "dist_to_nearest_crossing_logs": 0.8148545941907983
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 303,
+   "log_s": -11.044861606719579,
+   "dist_to_nearest_crossing_logs": 0.8138703018249167
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 303,
+   "log_s": -11.045839951467514,
+   "dist_to_nearest_crossing_logs": 0.8128919570769817
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 303,
+   "log_s": -11.046035444457662,
+   "dist_to_nearest_crossing_logs": 0.8126964640868337
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 303,
+   "log_s": -11.046068481821301,
+   "dist_to_nearest_crossing_logs": 0.8126634267231942
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 303,
+   "log_s": -11.046073848652794,
+   "dist_to_nearest_crossing_logs": 0.8126580598917013
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 303,
+   "log_s": -11.046074716934662,
+   "dist_to_nearest_crossing_logs": 0.8126571916098335
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 303,
+   "log_s": -11.046074858408407,
+   "dist_to_nearest_crossing_logs": 0.8126570501360888
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 303,
+   "log_s": -11.046074883757864,
+   "dist_to_nearest_crossing_logs": 0.8126570247866312
+  },
+  {
+   "type": "brake",
+   "event": 70,
+   "seed": 304,
+   "log_s": -11.041284876771194,
+   "dist_to_nearest_crossing_logs": 0.8174470317733018
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 304,
+   "log_s": -11.04186830999506,
+   "dist_to_nearest_crossing_logs": 0.8168635985494355
+  },
+  {
+   "type": "Fix(R)",
+   "event": 85,
+   "seed": 304,
+   "log_s": -11.040550453572532,
+   "dist_to_nearest_crossing_logs": 0.8181814549719633
+  },
+  {
+   "type": "brake",
+   "event": 86,
+   "seed": 304,
+   "log_s": -11.04194053512828,
+   "dist_to_nearest_crossing_logs": 0.8167913734162155
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 304,
+   "log_s": -11.04232685535529,
+   "dist_to_nearest_crossing_logs": 0.8164050531892055
+  },
+  {
+   "type": "brake",
+   "event": 88,
+   "seed": 304,
+   "log_s": -11.042413624313756,
+   "dist_to_nearest_crossing_logs": 0.8163182842307393
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 304,
+   "log_s": -11.042428933899199,
+   "dist_to_nearest_crossing_logs": 0.8163029746452963
+  },
+  {
+   "type": "brake",
+   "event": 90,
+   "seed": 304,
+   "log_s": -11.042431452114904,
+   "dist_to_nearest_crossing_logs": 0.816300456429591
+  },
+  {
+   "type": "Fix(R)",
+   "event": 91,
+   "seed": 304,
+   "log_s": -11.04243186088163,
+   "dist_to_nearest_crossing_logs": 0.8163000476628657
+  },
+  {
+   "type": "brake",
+   "event": 40,
+   "seed": 305,
+   "log_s": -11.025151982751606,
+   "dist_to_nearest_crossing_logs": 0.8335799257928898
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 305,
+   "log_s": -11.025898380704108,
+   "dist_to_nearest_crossing_logs": 0.8328335278403873
+  },
+  {
+   "type": "Fix(R)",
+   "event": 55,
+   "seed": 305,
+   "log_s": -11.031033552158862,
+   "dist_to_nearest_crossing_logs": 0.8276983563856337
+  },
+  {
+   "type": "brake",
+   "event": 56,
+   "seed": 305,
+   "log_s": -11.025993740662177,
+   "dist_to_nearest_crossing_logs": 0.8327381678823187
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 305,
+   "log_s": -11.028103726600275,
+   "dist_to_nearest_crossing_logs": 0.8306281819442205
+  },
+  {
+   "type": "brake",
+   "event": 64,
+   "seed": 305,
+   "log_s": -11.026005851657363,
+   "dist_to_nearest_crossing_logs": 0.8327260568871324
+  },
+  {
+   "type": "Fix(R)",
+   "event": 65,
+   "seed": 305,
+   "log_s": -11.02509946954462,
+   "dist_to_nearest_crossing_logs": 0.8336324389998762
+  },
+  {
+   "type": "brake",
+   "event": 70,
+   "seed": 305,
+   "log_s": -11.032123816404933,
+   "dist_to_nearest_crossing_logs": 0.826608092139562
+  },
+  {
+   "type": "Fix(R)",
+   "event": 71,
+   "seed": 305,
+   "log_s": -11.026625868722995,
+   "dist_to_nearest_crossing_logs": 0.8321060398215003
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 305,
+   "log_s": -11.026007403649754,
+   "dist_to_nearest_crossing_logs": 0.8327245048947418
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 305,
+   "log_s": -11.025843990309106,
+   "dist_to_nearest_crossing_logs": 0.8328879182353894
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 305,
+   "log_s": -11.031370494056125,
+   "dist_to_nearest_crossing_logs": 0.8273614144883705
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 305,
+   "log_s": -11.025151984755052,
+   "dist_to_nearest_crossing_logs": 0.8335799237894435
+  },
+  {
+   "type": "brake",
+   "event": 80,
+   "seed": 305,
+   "log_s": -11.026007610173206,
+   "dist_to_nearest_crossing_logs": 0.8327242983712893
+  },
+  {
+   "type": "Fix(R)",
+   "event": 85,
+   "seed": 305,
+   "log_s": -11.032287929419448,
+   "dist_to_nearest_crossing_logs": 0.8264439791250471
+  },
+  {
+   "type": "brake",
+   "event": 86,
+   "seed": 305,
+   "log_s": -11.031257710939899,
+   "dist_to_nearest_crossing_logs": 0.8274741976045963
+  },
+  {
+   "type": "Fix(R)",
+   "event": 87,
+   "seed": 305,
+   "log_s": -11.02608560116691,
+   "dist_to_nearest_crossing_logs": 0.8326463073775852
+  },
+  {
+   "type": "B",
+   "event": 88,
+   "seed": 305,
+   "error": "The function value at x=1.628230931735031e-05 is NaN; solver cannot continue."
+  },
+  {
+   "type": "Fix(R)",
+   "event": 89,
+   "seed": 305,
+   "log_s": -11.025010161078118,
+   "dist_to_nearest_crossing_logs": 0.8337217474663774
+  },
+  {
+   "type": "brake",
+   "event": 92,
+   "seed": 305,
+   "log_s": -11.03303188768596,
+   "dist_to_nearest_crossing_logs": 0.8257000208585357
+  },
+  {
+   "type": "brake",
+   "event": 32,
+   "seed": 306,
+   "log_s": -11.01943199415224,
+   "dist_to_nearest_crossing_logs": 0.8392999143922548
+  },
+  {
+   "type": "Fix(R)",
+   "event": 41,
+   "seed": 306,
+   "log_s": -11.01631220365251,
+   "dist_to_nearest_crossing_logs": 0.8424197048919861
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 306,
+   "log_s": -11.019080229838453,
+   "dist_to_nearest_crossing_logs": 0.8396516787060424
+  },
+  {
+   "type": "brake",
+   "event": 50,
+   "seed": 306,
+   "log_s": -11.016232823575645,
+   "dist_to_nearest_crossing_logs": 0.8424990849688498
+  },
+  {
+   "type": "Fix(R)",
+   "event": 57,
+   "seed": 306,
+   "log_s": -11.02473016993939,
+   "dist_to_nearest_crossing_logs": 0.8340017386051048
+  },
+  {
+   "type": "brake",
+   "event": 58,
+   "seed": 306,
+   "log_s": -11.024462233427432,
+   "dist_to_nearest_crossing_logs": 0.8342696751170635
+  },
+  {
+   "type": "Fix(R)",
+   "event": 59,
+   "seed": 306,
+   "log_s": -11.016230787394703,
+   "dist_to_nearest_crossing_logs": 0.8425011211497928
+  },
+  {
+   "type": "brake",
+   "event": 60,
+   "seed": 306,
+   "log_s": -11.01618870361761,
+   "dist_to_nearest_crossing_logs": 0.8425432049268853
+  },
+  {
+   "type": "Fix(R)",
+   "event": 61,
+   "seed": 306,
+   "log_s": -11.016181617978207,
+   "dist_to_nearest_crossing_logs": 0.8425502905662885
+  },
+  {
+   "type": "brake",
+   "event": 62,
+   "seed": 306,
+   "log_s": -11.016180464277038,
+   "dist_to_nearest_crossing_logs": 0.8425514442674569
+  },
+  {
+   "type": "Fix(R)",
+   "event": 63,
+   "seed": 306,
+   "log_s": -11.02440677600058,
+   "dist_to_nearest_crossing_logs": 0.8343251325439152
+  },
+  {
+   "type": "B",
+   "event": 64,
+   "seed": 306,
+   "error": "The function value at x=1.6318920470040512e-05 is NaN; solver cannot continue."
+  },
+  {
+   "type": "brake",
+   "event": 42,
+   "seed": 307,
+   "log_s": -11.01459219195591,
+   "dist_to_nearest_crossing_logs": 0.844139716588586
+  },
+  {
+   "type": "Fix(R)",
+   "event": 43,
+   "seed": 307,
+   "log_s": -11.014301389435339,
+   "dist_to_nearest_crossing_logs": 0.8444305191091566
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 307,
+   "log_s": -11.01425406989557,
+   "dist_to_nearest_crossing_logs": 0.8444778386489258
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 307,
+   "log_s": -11.014246432983283,
+   "dist_to_nearest_crossing_logs": 0.8444854755612123
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 307,
+   "log_s": -11.014245203797094,
+   "dist_to_nearest_crossing_logs": 0.8444867047474016
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 307,
+   "log_s": -11.014244999194577,
+   "dist_to_nearest_crossing_logs": 0.8444869093499179
+  },
+  {
+   "type": "brake",
+   "event": 24,
+   "seed": 311,
+   "log_s": -10.975266429104344,
+   "dist_to_nearest_crossing_logs": 0.8834654794401509
+  },
+  {
+   "type": "Fix(R)",
+   "event": 33,
+   "seed": 311,
+   "log_s": -10.974441769182395,
+   "dist_to_nearest_crossing_logs": 0.8842901393621005
+  },
+  {
+   "type": "brake",
+   "event": 42,
+   "seed": 311,
+   "log_s": -10.974465185894957,
+   "dist_to_nearest_crossing_logs": 0.8842667226495387
+  },
+  {
+   "type": "Fix(R)",
+   "event": 43,
+   "seed": 311,
+   "log_s": -10.975141105785868,
+   "dist_to_nearest_crossing_logs": 0.8835908027586274
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 311,
+   "log_s": -10.975246281020024,
+   "dist_to_nearest_crossing_logs": 0.8834856275244718
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 311,
+   "log_s": -10.975263179179988,
+   "dist_to_nearest_crossing_logs": 0.8834687293645072
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 311,
+   "log_s": -10.975265901198089,
+   "dist_to_nearest_crossing_logs": 0.8834660073464065
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 311,
+   "log_s": -10.975266338685548,
+   "dist_to_nearest_crossing_logs": 0.8834655698589469
+  },
+  {
+   "type": "brake",
+   "event": 72,
+   "seed": 312,
+   "log_s": -10.961634015434374,
+   "dist_to_nearest_crossing_logs": 0.8970978931101214
+  },
+  {
+   "type": "Fix(R)",
+   "event": 73,
+   "seed": 312,
+   "log_s": -10.968766172819356,
+   "dist_to_nearest_crossing_logs": 0.8899657357251396
+  },
+  {
+   "type": "brake",
+   "event": 74,
+   "seed": 312,
+   "log_s": -10.969492015573097,
+   "dist_to_nearest_crossing_logs": 0.889239892971398
+  },
+  {
+   "type": "Fix(R)",
+   "event": 75,
+   "seed": 312,
+   "log_s": -10.969607213068807,
+   "dist_to_nearest_crossing_logs": 0.8891246954756884
+  },
+  {
+   "type": "brake",
+   "event": 76,
+   "seed": 312,
+   "log_s": -10.969627475266456,
+   "dist_to_nearest_crossing_logs": 0.8891044332780389
+  },
+  {
+   "type": "Fix(R)",
+   "event": 77,
+   "seed": 312,
+   "log_s": -10.969630815044088,
+   "dist_to_nearest_crossing_logs": 0.8891010935004076
+  },
+  {
+   "type": "brake",
+   "event": 78,
+   "seed": 312,
+   "log_s": -10.969631358150501,
+   "dist_to_nearest_crossing_logs": 0.8891005503939944
+  },
+  {
+   "type": "Fix(R)",
+   "event": 79,
+   "seed": 312,
+   "log_s": -10.969631445419097,
+   "dist_to_nearest_crossing_logs": 0.8891004631253985
+  },
+  {
+   "type": "brake",
+   "event": 34,
+   "seed": 313,
+   "log_s": -10.957702802052196,
+   "dist_to_nearest_crossing_logs": 0.9010291064922988
+  },
+  {
+   "type": "brake",
+   "event": 42,
+   "seed": 313,
+   "log_s": -10.95913262314396,
+   "dist_to_nearest_crossing_logs": 0.8995992854005355
+  },
+  {
+   "type": "Fix(R)",
+   "event": 43,
+   "seed": 313,
+   "log_s": -10.957869562583532,
+   "dist_to_nearest_crossing_logs": 0.900862345960963
+  },
+  {
+   "type": "brake",
+   "event": 44,
+   "seed": 313,
+   "log_s": -10.957631914151861,
+   "dist_to_nearest_crossing_logs": 0.9010999943926343
+  },
+  {
+   "type": "Fix(R)",
+   "event": 45,
+   "seed": 313,
+   "log_s": -10.957592096164364,
+   "dist_to_nearest_crossing_logs": 0.9011398123801317
+  },
+  {
+   "type": "brake",
+   "event": 46,
+   "seed": 313,
+   "log_s": -10.957585631352186,
+   "dist_to_nearest_crossing_logs": 0.9011462771923089
+  },
+  {
+   "type": "Fix(R)",
+   "event": 47,
+   "seed": 313,
+   "log_s": -10.957584576906644,
+   "dist_to_nearest_crossing_logs": 0.9011473316378513
+  },
+  {
+   "type": "brake",
+   "event": 48,
+   "seed": 313,
+   "log_s": -10.957584413727279,
+   "dist_to_nearest_crossing_logs": 0.9011474948172165
+  },
+  {
+   "type": "Fix(R)",
+   "event": 49,
+   "seed": 313,
+   "log_s": -10.957584389250622,
+   "dist_to_nearest_crossing_logs": 0.9011475192938736
+  },
+  {
+   "type": "Fix(R)",
+   "event": 15,
+   "seed": 314,
+   "log_s": -10.946793224098245,
+   "dist_to_nearest_crossing_logs": 0.91193868444625
+  },
+  {
+   "type": "Fix(R)",
+   "event": 25,
+   "seed": 314,
+   "log_s": -10.951165625253795,
+   "dist_to_nearest_crossing_logs": 0.9075662832907003
+  },
+  {
+   "type": "brake",
+   "event": 26,
+   "seed": 314,
+   "log_s": -10.947493733211875,
+   "dist_to_nearest_crossing_logs": 0.9112381753326204
+  },
+  {
+   "type": "Fix(R)",
+   "event": 27,
+   "seed": 314,
+   "log_s": -10.946906143351761,
+   "dist_to_nearest_crossing_logs": 0.9118257651927344
+  },
+  {
+   "type": "brake",
+   "event": 28,
+   "seed": 314,
+   "log_s": -10.946811456201923,
+   "dist_to_nearest_crossing_logs": 0.9119204523425726
+  },
+  {
+   "type": "Fix(R)",
+   "event": 29,
+   "seed": 314,
+   "log_s": -10.946796169776984,
+   "dist_to_nearest_crossing_logs": 0.9119357387675109
+  },
+  {
+   "type": "brake",
+   "event": 30,
+   "seed": 314,
+   "log_s": -10.946793704513283,
+   "dist_to_nearest_crossing_logs": 0.9119382040312125
+  },
+  {
+   "type": "Fix(R)",
+   "event": 31,
+   "seed": 314,
+   "log_s": -10.946793307586866,
+   "dist_to_nearest_crossing_logs": 0.9119386009576296
+  },
+  {
+   "type": "brake",
+   "event": 32,
+   "seed": 314,
+   "log_s": -10.946793239790678,
+   "dist_to_nearest_crossing_logs": 0.9119386687538178
+  },
+  {
+   "type": "Fix(R)",
+   "event": 33,
+   "seed": 314,
+   "log_s": -10.946793250233027,
+   "dist_to_nearest_crossing_logs": 0.9119386583114686
+  }
+ ],
+ "matched": [
+  {
+   "cross_log_s": -13.682548714270627,
+   "best_dlog": 8.330229217534679e-07,
+   "type": "Fix(R)"
+  },
+  {
+   "cross_log_s": -12.770656538984255,
+   "best_dlog": 4.711097430387667e-06,
+   "type": "Fix(R)"
+  },
+  {
+   "cross_log_s": -11.858731908544495,
+   "best_dlog": 3.4454692455554436e-05,
+   "type": "brake"
+  }
+ ],
+ "period": 3.64773771503614
+}

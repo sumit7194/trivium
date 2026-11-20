@@ -132,3 +132,35 @@ Code: code/v24_capD.py. Result: results/v24_capD.json.
   - What a proof still needs: interval arithmetic for C < 0 on the cap outside a small disc around the brake point,
     plus a jet lemma inside the disc (C ≈ −52r or better).
   - Both are now in recipe C-I3.
+
+## Addendum E (symmetry of the W^u–S crossings): E and E1 inconclusive, E2 PASS
+Code: code/v24_symE.py, v24_symE1.py, v24_symE2.py. Results: results/v24_symE*.json and .log. Two amendments are
+in PREREGISTRATION.
+- **E (Fix(R), Fix(PR) distances at the gap-located crossings).**
+  - Control h: symmetric (d_R = 9.7e−10). x_h = 56.86108, matching the fleet value; Fable's 56.8606 was off.
+  - The 4th class change is h itself.
+  - The 3 crossings: 2 UNRESOLVED and 1 NON-SYMMETRIC as registered.
+  - Diagnosed: near z* the d_R values are confounded, and the half-map H was omitted.
+- **E1 (half-map H, Fix(HR)).**
+  - Control H² = P: ≤ 1.2e−11. **PASS.**
+  - The verdicts are still not usable. Thin-angle crossings are located only to ~1e−6 along W^u, and H iterates
+    amplify that.
+- **E2 (symmetric points found directly in the flow: p_x = 0 at an equator event (Fix(R) type) or at a p_y = 0
+  turning event (brake type); 400 seeds; 809 roots, 17 root-finding failures at forbidden points).**
+  - **Registered reading: PASS.** Each crossing has a symmetric root within |Δ log s| ≤ 1e−4: 8.3e−7, 4.7e−6 and
+    3.4e−5.
+  - **Confound, noted after the result.** Late events of orbits shadowing γ, a brake orbit, give roots that pile up
+    toward ANY homoclinic point. So "a root nearby" alone is not decisive.
+  - **Discriminator, applied after the result (labelled).**
+    - Each crossing has an EARLY root, from a mid-excursion event: event 18 (brake), event 17 (Fix(R)) and event 16
+      (brake) respectively.
+    - Each early root coincides, to the digits shown (better than 1e−7 in log s), with the limit that the late pile-up
+      converges to. That limit is the true homoclinic point; it sits 5e−6 to 3e−5 from my gap-located crossing, the
+      location error diagnosed in E1.
+    - A non-symmetric homoclinic point has no early root at the pile-up limit.
+- **Reading.** All four W^u–S crossings per fundamental domain are symmetric homoclinic points. In order of s they
+  are brake, Fix(R), brake, Fix(R) (= h). They alternate, a quarter period apart, as the reversible half-map H
+  predicts (H² = P; the symmetric families sit half an H-period apart). This explains the quarter spacing seen in C1′.
+- **Consequence for the proof recipe (C-T and C-L).** Each crossing can be certified as a simple zero of ONE scalar
+  function of the W^u parameter: p_x at a fixed mid-excursion event. Certifying that requires no comparison of U with
+  S near the crossing.
