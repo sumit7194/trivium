@@ -149,3 +149,34 @@ meaning |p_x| > U(x) + 1e−9 or x ≥ x_h, marks the W^u[h, m] arc; inside mark
 [h, m] arc only.
 - **PASS:** none of its points ever lies strictly inside D in the next 6 returns, and all of them go in through the gate.
 - Report the arc's point count, and the count from [m, P(h)] that re-enter.
+
+### Amendment C1 result, and amendment C1′ (POST-RESULT: written after seeing the C1 FAIL and diagnosing it)
+**Registered C1 result:**
+- Arc points: 205. Entered D: 5. Went in: 200. So **C1 FAILS as registered.**
+- [m, P(h)] points: 195, all inside D. The controls were unchanged (30/30 and 10/10).
+
+**Diagnosis** (results/v24_lobes_C1diag*.json, code/v24_lobes_diag*.py).
+- All 5 flagged points are seeds 15–17 and 113–114. Each sits next to a class change in seed order, which means each
+  is near a W^u ∩ S crossing.
+- Their interpolated first-image gaps are 2e−8 to 5e−7. Over those stretches U is linearly interpolated across steps
+  of 0.08 to 0.25 in x.
+- U computed exactly at those x values, by root-finding the seed parameter with no interpolation, gives gaps of
+  −7e−8 to −8e−7 for all 5. They are inside cl(D), so they belong to [m, P(h)] and were misclassified.
+- Their later D-hit margins (4.5e−6 to 4.2e−5) agree between the exact and interpolated U to within 2e−8.
+- Root cause: the 1e−9 classification threshold was set without measuring the interpolation floor. This is the
+  same type of mistake as in V21–V23 (control-clause rule).
+- Also seen: in seed order W^u[h, P(h)) changes class 4 times, not 2. So it crosses S at h, m and two further
+  points. Its outside part is two pieces, [h, m] and one more (secondary) arc.
+
+**C1′ (fixed before the rerun).**
+1. **Floor.** Measure the interpolation floor first: |U_interp − U_exact| at 30 x values spread over (x*, x_h). Use
+   δ = 10 × the max observed.
+2. **Reclassification.** Classify every beyond-h first image whose interpolated gap satisfies |gap| < δ again, with
+   exact U.
+3. **Re-check hits.** For every point classified outside, re-check each D-hit with interpolated margin < δ against
+   exact U.
+4. **PASS:** no outside point has an exact D-hit within 6 returns, and all outside points go in through the gate. As
+   in C1, both outside pieces are tested together; the counts are reported per piece.
+5. **Also report:** every point whose class changed, and the [m, P(h)] re-entry count.
+
+This is still a float64 sample check, not a validated proof.
