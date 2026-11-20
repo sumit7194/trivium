@@ -62,6 +62,8 @@ will be used. Each gap is marked:*
 - **K1. I10: the inherited first-order classification (deg f0 ≤ 2).** The Corollary needs it. Only a hand derivation
   exists, and only one instance is checked. OPUS-TRY: re-derive the Kovacic count independently and test a degree-3
   example.
+  - **Assigned 2026-11-20 to ansatz** (Sumit offered its help): an independent re-derivation of the Kovacic count, plus a
+    computational check on degree-2 controls and degree-3 examples, including the merged-zero edge case.
 - **K2. Lemma X, critical case** (a twist pole at a critical point of f0). OPUS-TRY: a careful asymptotic argument.
 - **K3. Single-centre data** (Schwarzschild's f0 with any twist; ZV δ=2 and its twisted relatives). HARD.
   - This is the real wall between "only Kerr among two-centre data" and "only Kerr".
