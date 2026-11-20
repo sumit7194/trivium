@@ -207,3 +207,36 @@ S(rtol 1e−11)|.
   - The two are different statistics. ansatz will compute the Bridge's statistic from its 50-digit matrices
     (post-unblinding, labelled), plus a k → 0 scan, to locate the difference. The verdict doesn't depend on this, but
     the record stays open until it's explained.
+
+## Addendum D (2026-11-21 ~03:05): basis-free trace cross-check with ansatz. **PASS**. The statistic-trend discrepancy is CLOSED
+Code: code/v26_D.py, reusing the B8 model unchanged. Output: results/v26_D.txt and .json. Interpreter:
+conjecture_machine .venv, Python 3.14.5, scipy 1.18.0.
+
+**Result.** tr(g_in) − 2 on |z| = 1.35 at E = 0.8, against ansatz's 50-digit values:
+
+| k | Bridge (tr − 2) | Relative difference from ansatz |
+|---|---|---|
+| 1e−3 | −4.785118e−9 | 4.9e−7 |
+| 1e−2 | −4.790928e−7 | 3.4e−7 |
+| 1/30 | −5.340084e−6 | not reported by ansatz |
+| 1/10 | −4.850010e−5 | 6.1e−8 |
+
+- The coefficient is −4.785e−3·k² plus a higher-order term.
+- The integration floor is ≤ 3.2e−14.
+- Free-homotopy invariance: |tr(r = 1.6) − tr(r = 1.35)| ≤ 5e−15.
+- Gates: |det − 1| ≤ 3e−15; c0 returns to itself within 7e−13.
+
+**Controls.**
+- k = 0 gives tr − 2 = −9e−16.
+- Must-fail: r = 2.5 is a different class (it encloses the turning point and the poles 2 ± 0.6i). There tr = 0.000,
+  versus 2 − 4.85e−5 at r = 1.35. The control fires.
+
+**Reading.**
+- Two independent implementations agree on a basis-free, path-free invariant to about 5e−7. So the monodromy itself
+  is cross-validated.
+- The earlier statistic-trend discrepancy came from ansatz's statistic: commutators against large-norm generators
+  amplify ||g_in − I|| ≈ 80k by about 1e7, so the statistic saturates. ansatz's S_B, computed from its own
+  generators, is linear in k (slope 1.0002), matching the Bridge's 1.0001.
+- Neither S statistic is a magnitude of obstruction. Both are zero/nonzero detectors only.
+- The invisible-family finding (obstructed at first order for k ≠ 0) stands. It is numerical with two independent
+  codes. It is not a certificate.

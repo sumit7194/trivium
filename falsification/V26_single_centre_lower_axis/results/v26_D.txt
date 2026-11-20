@@ -1,0 +1,7 @@
+k 0 | tr-2 -8.881784e-16+1.1e-17i (floor 3.0e-14) | coef nan | rel to ansatz nan | |tr(1.6)-tr(1.35)| 2.8e-16 | det 8.9e-16 c0ret 4.3e-13 | True
+k 0.001 | tr-2 -4.785118e-09+3.4e-17i (floor 3.1e-14) | coef -4.785118e-03 | rel to ansatz 4.94e-07 | |tr(1.6)-tr(1.35)| 4.4e-16 | det 4.5e-16 c0ret 4.0e-13 | True
+k 0.01 | tr-2 -4.790928e-07+2.2e-16i (floor 3.2e-14) | coef -4.790928e-03 | rel to ansatz 3.44e-07 | |tr(1.6)-tr(1.35)| 4.9e-15 | det 2.6e-15 c0ret 5.5e-13 | True
+k 0.03333 | tr-2 -5.340084e-06+3.4e-16i (floor 3.0e-14) | coef -4.806076e-03 | rel to ansatz nan | |tr(1.6)-tr(1.35)| 1.1e-15 | det 9.5e-16 c0ret 6.4e-13 | True
+k 0.1 | tr-2 -4.850010e-05+7.7e-16i (floor 3.2e-14) | coef -4.850010e-03 | rel to ansatz 6.09e-08 | |tr(1.6)-tr(1.35)| 4.0e-16 | det 7.5e-16 c0ret 4.6e-13 | True
+CONTROL r=2.5, k=0.1: tr-2 = (-1.9999999999999913+1.3322676295501878e-15j), differs from r=1.35 by 2.000e+00 -> control fires: True (det 9.3e-15, c0ret 9.0e-15)
+VERDICT D PASS
