@@ -103,8 +103,14 @@ will be used. Each gap is marked:*
       - an end-to-end exact metric;
       - certified lower-axis monodromy;
       - the inherited first-order classification;
-      - CAVEAT: the lower axis must be regular (twisted single-centre solutions may carry a string there, and would
-        then fall outside the theorem, not be excluded).
+      - CAVEAT RESOLVED (V26 addendum B): asymptotically flat data without NUT have no ω jump between the outer axis
+        segments, so the far lower axis is automatically regular.
+    - **Late evening:**
+      - static class C from below: PASS (third-order obstruction, controls OK);
+      - first-order classification direction: re-checked by hand (Kovacic, s + 2h ≤ 4).
+    - **K3 is CONFIRMED by the Bridge.** Rational, asymptotically flat axis data with integrals meromorphic near both
+      outer axis orbits force Kerr, Schwarzschild or static ZV δ = 2; ZV δ = 2 is excluded by MPS 2013.
+    - **Optional extra rigour:** certified lower-axis monodromy (B3/B7).
 - **K4. The invisible non-rational family** (Kerr's f0, branched twist, passes the third-order test at every energy).
   It might be killed by the L ≠ 0 sector, by fifth order, or by another orbit. HARD-ish. OPUS-TRY on the L-sector
   first.

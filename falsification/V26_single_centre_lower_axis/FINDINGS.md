@@ -107,3 +107,53 @@ cases:
 
 **ZV δ = 2 control** (q = M²): f0^- = z²/(z − M)², a double pole. Seen from below it is again single-centre, so it is
 undecided by the axis. That agrees with Fable's statement.
+
+## Addendum B: lower outer axis regularity (no Misner string). **PASS** (code/v26_omega.py)
+**Hand argument.** ∂_θ ω = r² sin θ ∂_r χ / f². So the ω jump between the outer axis segments along a semicircle is
+−2 × (the 1/r coefficient of χ), the NUT parameter. The form is closed, so the value is independent of R.
+
+**Numerics** (own Ernst series to order 10):
+- **AF twisted data** e_+ = 1 − 2/z + i/z²: Δω = −5.7e−16, −7.9e−20 and 4.6e−22 at R = 20, 40, 80. That is zero up to
+  series truncation.
+- **NUT control** (+ i/(2z)): Δω = −1.0000000000 at every R, exactly −2n.
+
+**Consequence.**
+- For asymptotically flat data without NUT, ω is constant on each regular axis segment and has no jump between the
+  outer segments, so ω = 0 on both. γ → 0 at infinity on both.
+- So the far lower axis is automatically regular, with no string and no conical defect. **The regularity caveat in
+  the verdict above is REMOVED for the outer segments at large |z|.**
+- What remains assumed is analyticity of the fields near infinity, which is standard for asymptotically flat
+  solutions. Struts or strings between source components lie in the finite region and do not affect the outer axis
+  orbits used.
+
+## Item 3: the inherited first-order classification, re-checked by hand (Bridge)
+Only the direction the theorem uses is checked: deg f0 ≥ 3 ⇒ the identity component is SL(2) at generic E.
+- **The normal form.** The NVE v″ = r v with r = −(3/16)(P′/P)² is already in normal form.
+- **Local exponents.**
+  - At a point where P has order m: r ~ b/(z − p)², with b = −3m²/16. So √(1 + 4b) = √(1 − 3m²/4): 1/2 for |m| = 1,
+    and non-real for |m| ≥ 2.
+  - Infinity is ordinary when f0(∞) = 1 and E² ≠ μ² (r = O(z⁻⁴)).
+- **Kovacic's necessary conditions** (standard sets E_c, E_∞):
+  - **Case 1:** Σ Re α_c ≤ α_∞ ≤ 1 with Re α_c ≥ 1/4 (simple) or 1/2 (heavy), which needs s/4 + h/2 ≤ 1.
+  - **Case 2:** E_c = {1, 2, 3} for simple points and {2} for heavy ones, with E_∞ = {0, 2, 4}. A nonnegative integer
+    d needs s + 2h ≤ 4.
+  - **Case 3:** E_c ⊂ {3, ..., 9} for simple points and {6} for heavy ones, with e_∞ ≤ 12. This needs
+    3s + 6h ≤ 12.
+  - All three reduce to s + 2h ≤ 4. If no case holds, the group is SL(2) (Kovacic).
+- **Counting at generic E.**
+  - f0 = E²/μ² has deg f0 simple roots, so s ≥ deg f0.
+  - The poles of f0 add total order deg f0. All simple poles give s = 2 deg f0. Any multiple pole adds h ≥ 1. Either
+    way, s + 2h ≥ deg f0 + 2 ≥ 5 when deg f0 ≥ 3.
+  - **Hence SL(2). CONFIRMED by hand.**
+  - This agrees with Fable's NOTES §2 and with ansatz §158 (numerical monodromy).
+- **Inherited and not re-done here:** passing from the time parameter to z (a finite cover; MPS 2013 and
+  Morales–Ramis), and the Fuchsian/global setting. Both were reviewed in V21/V25.
+
+## Verdict (updated)
+- **Fable's single-centre result is CONFIRMED** at the level of every step checked: (L), (N), static class C (B6),
+  outer-axis regularity, and the first-order classification direction used.
+- **Theorem SC + Corollary hold**, modulo:
+  - the analyticity of asymptotically flat fields near infinity (standard);
+  - the inherited literature theorems (Morales–Ramis–Simó, Kovacic);
+  - ZV δ = 2, whose non-integrability rests on MPS 2013 (an equatorial orbit), since both its axes are single-centre.
+- **Not done (optional extra rigour):** certified lower-axis monodromy (B3) and true-geodesic return maps (B7).
