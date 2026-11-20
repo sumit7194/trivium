@@ -1,0 +1,4 @@
+seed 1 complex | rule L all orders: True | mirror guess all: False | conj guess all: False
+seed 2 complex | rule L all orders: True | mirror guess all: False | conj guess all: False
+seed 3 complex | rule L all orders: True | mirror guess all: False | conj guess all: False
+seed 4 real | rule L all orders: True | mirror guess all: False | conj guess all: False

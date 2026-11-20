@@ -93,7 +93,18 @@ will be used. Each gap is marked:*
       order. Static double-pole data are two-centre from below, so third order applies.
     - **Survivors:** Schwarzschild, static ZV δ = 2 (already non-integrable by MPS 2013) and Kerr.
     - **Corollary:** needs integrals near BOTH axes and both axes regular.
-    - **Bridge to verify** (Fable's B1–B9, starting with the lower-axis rule).
+    - **Bridge V26 (same evening):**
+      - the lower-axis rule is CONFIRMED: read in the 1995 source, own parity proof, own series code exact to
+        order 10, exact controls;
+      - the degree lemma is CONFIRMED: degree count, plus an adversarial search with no counterexample and must-find
+        controls firing.
+    - **Still open:**
+      - the static class-C third-order step;
+      - an end-to-end exact metric;
+      - certified lower-axis monodromy;
+      - the inherited first-order classification;
+      - CAVEAT: the lower axis must be regular (twisted single-centre solutions may carry a string there, and would
+        then fall outside the theorem, not be excluded).
 - **K4. The invisible non-rational family** (Kerr's f0, branched twist, passes the third-order test at every energy).
   It might be killed by the L ≠ 0 sector, by fifth order, or by another orbit. HARD-ish. OPUS-TRY on the L-sector
   first.

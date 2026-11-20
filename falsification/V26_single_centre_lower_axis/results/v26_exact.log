@@ -1,0 +1,4 @@
+Schwarzschild (xi = x)                        rule L: True | mirror guess: True
+Kerr (xi = p x + i q y)                       rule L: True | mirror guess: False
+Kerr-NUT (xi = e^{i alpha}(p x + i q y))      rule L: True | mirror guess: False
+Tomimatsu-Sato delta=2                        rule L: True | mirror guess: False
