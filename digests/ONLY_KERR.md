@@ -185,3 +185,21 @@ along the axis.
 - no full-text read of Brink;
 - the Morales–Ramis community's own work (Maciejewski, Przybylska, Combot, Morales-Ruiz) was searched only through
   citations of MPS 2013.
+
+## 12. Update (2026-11-20, late evening): single-centre data closed via the LOWER axis
+- **The idea** (Fable 5.2, one-off run; checked by the Bridge in V26). An asymptotically flat solution has a second
+  outer axis segment. There the axis data are 1/e_+:
+  - Meinel–Neugebauer, CQG 12 (1995) 2045, eq. (35), read in the original;
+  - the Bridge's own parity proof, and its own Ernst series to order 10.
+- **What the lower axis shows.**
+  - A twisted single-centre profile has f0^- of degree ≥ 4. It is obstructed at FIRST order (V26 N-count; an
+    adversarial search found no counterexample).
+  - Static double-pole data look two-centre from below and are obstructed at THIRD order (V26 B6).
+  - The far lower axis is automatically regular for asymptotically flat data without NUT (V26 addendum B).
+- **Resulting statement.** Among asymptotically flat stationary axisymmetric vacuum metrics with rational axis data,
+  integrals meromorphic near BOTH outer axis families force Kerr, Schwarzschild or static ZV δ = 2. ZV δ = 2 is
+  non-integrable by MPS 2013, through an equatorial orbit. So, with that citation, **Kerr (and Schwarzschild) is the
+  only one in this class.**
+- Sections 2 and 9 above are superseded on this point. What remains open:
+  - non-rational axis data (including the "invisible" family; Fable has numerical first-order evidence from below);
+  - the physical-meaning caveat on the class of integrals (section 6).
