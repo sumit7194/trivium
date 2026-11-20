@@ -222,3 +222,28 @@ step, and the inherited first-order classification.
 
 **Not claimed.** The pole at z = ∞ and family C's other uses of Lemma X; this addendum covers only the critical-point
 case at finite p.
+
+## Addendum C (2026-11-21 ~02:30, before code): checking Gemini Neon's proofs of Lemma X-∞ and Lemma G3 (output UNVERIFIED; /Users/sumit/Github/neon_work/onlykerr/)
+**C1 (exact, sympy).** For f0 = 1 − m1/(z − z1) − m2/(z − z2), D = (z − z1)(z − z2), N = E²D − μ²Δ and P4 = N·D, with
+X = (E² − μ²)(z1 − z2) − μ²(m1 − m2) and S = X²/(μ⁴m1m2), the claim is:
+- I = (z1 − z2)²(X² + 3μ⁴m1m2)/12;
+- J = −(z1 − z2)³X(2X² + 9μ⁴m1m2)/432;
+- I³ − 27J² = μ⁸m1²m2²(z1 − z2)⁶(X² + 4μ⁴m1m2)/256;
+- j = 256(S + 3)³/(S + 4).
+
+Classical binary-quartic invariants, with symbolic parameters. **PASS:** all four differences simplify to 0.
+
+**C2 (numerical, mpmath, 50 digits; exact series in t = 1/z).** Lemma X-∞, case M = (m1 + m2)/2 ≠ 0. With
+Q = z^m + z^{m−1}, ε = E² − μ², the claim is
+R(ε) = Res_{t=0}[Q(1/t) e^{wκs(t)} (ds/dt) dt] ~ ∓(−1/2 choose m−1)(2Mμ²)^{m−1} ε^{−m+1/2}.
+- Cases: Kerr-type (m1 = m2 = 1, z1,2 = ±0.6i) and asymmetric (m1 = 3/4, m2 = 1/2, z1,2 = 1, −1/2); m = 1..4;
+  w = 2; ε = 1e−4, 1e−6, 1e−8.
+- **PASS:** |ratio − 1| ≤ 1e−2 at ε = 1e−8 in every case, decreasing as ε → 0.
+- **Must-fail control:** m = 0 (Q regular at ∞) gives a residue of 0 to 1e−40.
+
+**C3.** Lemma X-∞, case M = 0 (m2 = −m1). The claimed leading coefficient is A·(polynomial in α), with α² = −w²/2.
+Check the ratio to the claim at m = 1..4 (w = 2).
+- **Must-fail control:** imaginary w = i√2, giving α = ±1. Then the leading coefficient must vanish at m = 3: the
+  scaled residue is ≤ 1e−2 relative to the w = 2 value.
+
+The I2 argument is reviewed by reading only. No code.
