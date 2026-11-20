@@ -11,7 +11,8 @@ will be used. Each gap is marked:*
   number: certification is quantum's Arb run (relaunched 13:33 after its own nan bug; ~2.5 h).
 - **M1. Certify L₂ ≠ 0 (Theorem A′) and L″(0) ≠ 0 with a bound on the higher harmonics (Theorem A).** OPUS-OK.
   - **Stage 1 CERTIFIED** (quantum d338e00, 16:05): Theorem A′ is now unconditional for small β.
-  - Stage 2 (Theorem A) is next.
+  - Stage 2 (Theorem A) in progress. L₄ certified (agrees with V23 to 6.8e−7), and the must-fail controls pass.
+    The bound on C moved to a Cauchy–Schwarz route (amendment S2-A2, approved with four conditions). 16 points, ~11 h.
 - **M2. β₀ is not explicit.** The theorem covers only "small enough" quadrupole β. The physical-looking values
   β = 1/5 and β = −1/3 are NOT covered. Fixing this needs either:
   - an explicit β₀ (a quantitative implicit-function bound: OPUS-TRY, heavy interval work); or

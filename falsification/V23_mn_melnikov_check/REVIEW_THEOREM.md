@@ -84,3 +84,26 @@ Only item (iii) is still open: interval certification (assigned to quantum's Arb
 - **Still open:**
   - stage 2, L″(0) ≠ 0 with the higher-harmonic bound (T3), for Theorem A (transversality and horseshoe);
   - an explicit β₀. β = 1/5 and −1/3 are still NOT covered.
+
+## Item (iii), stage 2: in progress (quantum; S2-A1 cabccc9; 2026-11-20 evening)
+- **L₄ = [−5.31274262510e−10 ± 7.4e−22]** (Arb, gates included). V23's floats: N_χ 256 gives −5.3127361e−10
+  (1.2e−6 relative off) and N_χ 512 gives −5.3127390e−10 (6.8e−7 off). So V23 converges towards the certified value,
+  inside the registered 1e−6 rule. No FINDING.
+- **Must-fail holomorphy controls PASS** (both INVALID-POINT):
+  - (σ, τ) = (0.17, 0.6) fails at Re λ 0.050, Im λ 0.170, near the r_h pole;
+  - (0.07, 1.35) fails at Im χ −1.316, where z_m cosh τ = 1.
+- **Amendment S2-A2 (pre-count; labelled as after L₄ and after the debug runs at the off-grid point (0.02, 0.1)).**
+  - **Why.** Plain interval evaluation of the integrand has a dependency factor of ~5000, from quadrupole cancellations.
+    So the registered box rule for C is infeasible.
+  - **New route.** C ≤ √(2 I2h/κ) by Cauchy–Schwarz with weight sech(κλ). The integrand of I2h is |G|² cosh(κλ), with
+    |G|² = G(w)G(w̄) holomorphic. It is enclosed with nested acb.integral on [0, 2] × [0, π], plus an analytic tail.
+    The Bridge checked the constant and the tail by hand.
+  - Grid, b, tube, gates, pass rule and controls are unchanged. T3 is monotone in C, so any rigorous C̄ ≥ C keeps the
+    pass rule rigorous.
+  - **Bridge conditions (approved with these):**
+    1. the second factor is evaluated at (λ − iσ, χ + iτ), never as conj(·);
+    2. branch-checking (analytic) evaluation everywhere in the integrand, whatever flag is passed in;
+    3. a real-analyticity gate, G(w̄) ∋ conj G(w), at random tube points;
+    4. a known-value control of the nested-integral mechanism, with a pole 0.02 off the λ segment.
+  - **Debug only (not counted).** At (0.02, 0.1): C ≈ 9.1, T3 ≈ 24, so it does not close there, as expected with
+    q = 0.45. At the far corner it closes if C < ~880.
