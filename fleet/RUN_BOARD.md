@@ -273,3 +273,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Bridge asked for a zero-training consistency check first: do the PINN loss and the FD reference define the same
   problem? Pre-register, then run.
 - The box is free.
+
+### 2026-11-21 ~04:55 IST: tabula §205 DONE; §206 GO
+- §205 verdict INSTRUMENT FAIL: the relative clauses assumed small baselines (one of them was the Bridge's
+  suggestion).
+- Descriptive finding: the PINN loss and the FD reference agree on PDE and IC, and DISAGREE on the inner boundary
+  data at r = 0.1. That comes from FD-600's truncation error near the origin: S-sized, about 20× the PINN BC level.
+- §206 GO, pre-registered first: switch the BC/IC data source to FD-2400 (minimal change) and repeat the §204
+  R-Adam release.
