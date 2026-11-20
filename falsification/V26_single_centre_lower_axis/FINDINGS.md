@@ -194,3 +194,16 @@ S(rtol 1e−11)|.
   implementation;
 - convergence of the lower-axis rule for non-rational data that are analytic at infinity. The series proof covers
   analytic asymptotically flat data, but convergence is assumed.
+
+## Addendum C, independent twin (ansatz §159, sealed 5c1b456; unblinded 2026-11-21 ~02:40)
+- **Implementation:** 50-digit power-series monodromy; c0 by its Laurent series at ∞ (no logs, ρ_c = 0.600);
+  argument-principle location of the singular points.
+- **Verdict: OBSTRUCTED (non-virtually-abelian)** at all 9 (k, E). Kerr (k = 0) is VA at the 1e−23 to 1e−37 level, and
+  its degree-3 control is NON-VA. **This AGREES with the Bridge's verdict.**
+- **Singular-point locations** agree with the Bridge's refined loops.
+- **OPEN DISCREPANCY in the statistic's trend.**
+  - ansatz's statistic DECREASES with k at fixed E (E = 0.8: 2.0e−4, 4.4e−5, 5.4e−6 for k = 1/100, 1/30, 1/10).
+  - The Bridge's normalised commutator statistic INCREASES linearly (3.2e−4, 1.06e−3, 3.2e−3; slope 1.0001).
+  - The two are different statistics. ansatz will compute the Bridge's statistic from its 50-digit matrices
+    (post-unblinding, labelled), plus a k → 0 scan, to locate the difference. The verdict doesn't depend on this, but
+    the record stays open until it's explained.
