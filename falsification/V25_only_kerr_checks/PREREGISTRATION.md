@@ -43,3 +43,98 @@ code or outputs. I do NOT use Fable's F1₄^static.
 
 **Not covered here:** P2–P6 (return maps; residues; Lemma P; the two-rod example; ZV and Schwarzschild), the Galois
 step, and the inherited first-order classification.
+
+---
+
+## Addendum A (2026-11-20, before any P2–P6 code): Fable's checks P2–P6, Bridge constructions only
+
+**Disclosure.**
+- I have now read CHECKS_PROPOSED, DEGREE2_FAMILIES, KERR_CONTROL and VE_DERIVATION in full.
+- I have NOT read any of Fable's check code or outputs (checks/*.py, *.out), and I will not.
+- The predictions below are Fable's, copied from CHECKS_PROPOSED.
+
+**Common machinery (own code).**
+- **R-full.** At L = 0 the geodesic flow on H = −μ²/2 is exactly system R. The independent variable is z; the
+  variables are (ρ, p); p_z = √(2U(ρ², z) − p²); dρ/dz = p/p_z; dp/dz = ∂_ρU/p_z; U = (E²F2 − μ²)/(2F1).
+  - F1 and F2 come from an EXACT metric, continued complexly with R_i = (z − b_i)√(1 + ρ²/(z − b_i)²) (principal
+    root).
+  - p_z is continued from q0 = y/Δ by p_z = q0√(1 + (2(U − U0) − p²)/q0²).
+- **R-trunc.** The same, but with U built from F1 and F2 through ρ⁴:
+  - my own static-Weyl series (V25 P1, sympy), plus the twist terms −(c0″)²/(64f0) and −(c0″)²/(64f0³) confirmed
+    in P1;
+  - U is then re-expanded through ρ⁴.
+  - It needs only f0 and (c0″)². Fable's h_4 formula is NOT used.
+- **Loop.** z = z_c + r e^{iθ}, θ ∈ [0, 4π]: twice around a puncture that is a branch point of y² = ND, and once
+  around an unbranched one.
+  - Integration: solve_ivp DOP853, rtol 1e−13, t_eval = [end].
+  - y and u (du = dz/y) are integrated along the loop.
+  - u − u_P is obtained from a radial segment in t = √(z − z1).
+- **Basis.** X± = e^{±κ(u − u_P)}(√Δ, (Δ′y/(2Δ) ± κ)/√Δ), with κ² from the two-pole formula.
+  - Self-check before use: X± satisfy VE_1 (dρ/ds = p, dp/ds = 2U₂ρ, ds = Δdu) to ≤ 1e−10 at 5 points.
+- **Return map.** Start at ε(c₊X₊ + c₋X₋) and read the end point in the X± basis.
+  - A(ε) = (c_end − c)/ε², at ε ∈ {0.02, 0.01, 0.005}.
+  - A = Richardson (4A(ε/2) − A(ε))/3, using both pairs.
+- **FLOOR FIRST (control-clause rule).** Measured before any verdict, for every case:
+  - the linear return map's deviation from I (ε = 1e−7 run, divided by ε);
+  - |A(r₁) − A(r₂)| for two loop radii;
+  - |A from (0.02, 0.01)| − |A from (0.01, 0.005)|.
+  - floor = the max of these. "Zero" means |A| ≤ 100·floor. "Matches" means |A − pred| ≤ max(100·floor, 1e−6|pred|).
+  - A case with floor > 1e−4 is VOID.
+
+### P2. The Kerr control and the static twin with TRUE geodesics (R-full)
+- **Data.** Prolate units σ = 1. M = 5/4, a = 3/4 (Fable's M = 1, a = 3/5). Puncture z1 = −M + ia. E = 4/5 and also
+  E = 7/10; μ = 1.
+- **(a) Kerr.** The V11 kerr45 metric.
+- **(b) The static twin.** Own implementation of the Weyl formula in CHECKS_PROPOSED P2, with b shifted to prolate z
+  (b = (1, −1, −M + ia, −M − ia), ε = (+1, +1, −1, −1)).
+  - **Validated first:** its ρ² and ρ⁴ coefficients equal my own static series to ≤ 1e−12.
+  - **Validated first:** the Weyl equation γ_z = 2ρψ_ρψ_z holds at 3 real points (finite difference, ≤ 1e−8).
+- **Predictions.**
+  - Kerr: A = (0, 0), from either start.
+  - Twin: from (1, 0), A = (−π/2, π); from (0, 1), A = (π, −π/2). Both independent of E.
+- **Must-pass cross-check.** R-trunc on the twin's (f0, c0 = 0) gives the same A as R-full (within the floor).
+
+### P3. The closed-form residue swept (R-trunc, Fable's coordinates)
+- **Prediction** for start (1, 0) at puncture z1: A = (−3πi m2 F/(5δ), 6πi m2 F/(5δ)), with δ = z1 − z2 and
+  F = 1 + r1²/m1².
+- **Sets:**
+  - Kerr M = 1, a = 3/5, E = 4/5, twist λ c_ref with λ ∈ {0, ½, 1, 3/2}, so F = 1 − λ²;
+  - the same at E = 7/10 (λ = 0);
+  - Kerr M = 1, a = 4/5, E = 13/10 (unbound, λ = 0);
+  - Kerr–NUT-type z1,2 = ±i/2, m1 = 1 − 0.4i, m2 = conj, E = 7/10, with λ ∈ {0, 0.7};
+  - real poles z1 = 1, z2 = −½, m1 = ¾, m2 = ½, E = 3/5, with c0 = 0 (F = 1), with c0 = ½/(z − 1) − ½/(z + ½)
+    (F = 13/9), and with the complexified reference twist (F = 0).
+- **Falsified if** any value disagrees, or if a twist with r1 ≠ ±i m1 gives zero.
+
+### P4. Lemma P
+- **(i)** The three-term identity for (d_u² − w²κ²)v^k: exact sympy, for general symbols (k symbolic, w ∈ {2, 4}).
+- **(ii)** Own residues from local series. With t = √(z − z1), du = 2dt/g(t) and g = √(N(z)(z − z2)), compute the
+  residue of (z − z1)^{−k} e^{wκu} du for k ≤ 12, w ∈ {2, 4}, at 20 energies, for the Kerr-type, Kerr–NUT-type and
+  real-pole parameters (mpmath, 60 digits).
+  - Find the null space of the E-independent principal parts, by SVD with a gap ≥ 1e20.
+  - **Prediction:** dimension 1, spanned by the principal part of v³ − (3m2/(5m1))v.
+- **(iii)** R-trunc return maps for Kerr's f0 (M = 1, a = 3/5, E = 4/5) with (c0″)² = (c_K″)² + Q/D³.
+  - **Prediction:** Q1 = (1/3)[v³ + v⁻³ − (3/5)(v + v⁻¹) − 4/5] gives (0, 0), and Q2 = (1/3)(v³ + v⁻³) gives
+    (−π/24, π/12).
+
+### P5. A real two-rod-type example (R-full)
+- **Data.** The static Weyl solution with f0 = 1 − (3/4)/(z − 1) − (1/2)/(z + 1/2), built as in P2 with real b. Loop
+  around z1 = 1, E = 3/5.
+- **Prediction:** A = (−0.6283i, 1.2566i), i.e. −3πi m2/(5δ) and its partner.
+- The twisted version and the reference control are in P3 (R-trunc).
+
+### P6. The negative claims (R-full on ZV δ = 2; R-trunc on Schwarzschild's f0)
+- **(a) ZV δ = 2** (the V11 zv metric; f0 = ((z − 1)/(z + 1))²).
+  - **Prediction:** around the point over z = 1 (the zero of f0) and around a large circle (the point at infinity),
+    the linear return map is I and the cubic part is zero, in (ρ, p) coordinates. Sheet: the one with y continued
+    from the start.
+  - **Secondary, not verdict-bearing:** the multipliers of the linear map around the double pole vs e^{±√2π}.
+- **(b) f0 = 1 − 2/z**, with c0 = b/(z − p) − b/(z + p), b = 0.3, p = 3.
+  - **Prediction:** the linear return maps around z = 0 and z = ±p are I. No torus, so cubic terms then commute
+    automatically through ε³. So (b) tests only the linear parts. The cubic parts are recorded.
+
+### Verdicts
+- **P2:** Kerr zero AND twin matches → CONFIRMED. Kerr nonzero → FALSIFIED (criterion or reduction wrong). Twin
+  zero → FALSIFIED (no obstruction). Twin nonzero but a different value → value FALSIFIED, obstruction CONFIRMED.
+- **P3–P6:** per item, the same logic.
+- A failed self-check or validation → VOID for that item.
