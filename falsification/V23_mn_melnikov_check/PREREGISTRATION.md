@@ -55,3 +55,13 @@ So this is a check of stated numbers, not a blind measurement.
 mpmath iv), the theorem's analytic steps (to the Opus review), the explicit β₀, and the static limit.
 
 Resources: 1 core, nice 10, a footprint watcher at 1.5 GB, minutes.
+
+## Addendum A (2026-11-20, after V23 REPRODUCED; before any bracket-form code): close review item (i)
+- **Check B:** compute M(ψ₀) = ∫{K_r, K₁} dλ DIRECTLY along the homoclinic orbit, at the base point, for the MN
+  perturbation.
+  - The bracket is taken in (x, p_x), with p_x = k Δ⁻¹ dr_h/dλ (signed), using the full phase-space K₁ = Σ·½G₁^{ab}p_a p_b.
+  - ∂_x K₁ is by central differences at fixed momenta; p_y² = Z/(1 − z²)²; z(ψ₀ + Υ_θλ) comes from the V23 θ-table,
+    inverted.
+- **Compare** with Υ_θ L′(ψ₀) from V23's harmonics: L′ = −4L₂ sin 2ψ₀ − 8L₄ sin 4ψ₀.
+- **PASS:** relative agreement ≤ 1e−4 at ψ₀ = π/4 and π/8, and |M(0)| ≤ 1e−3 × |M(π/4)| (the parity zero). The Kerr
+  control ∂/∂M must give |M(π/4)| ≤ 1e−10.
