@@ -11,6 +11,30 @@ V24/REVIEW_LOGIC.md) into a theorem:
 supplies the exact inequalities and the float previews, and reviews each certificate against this file.
 
 **Independence rule (kept).** TS outputs go to the Bridge only, not to tabula or others.
+- **Storage (decided 2026-11-20, Bridge, option b).** Certificate code is committed to quantum. Certificate OUTPUTS go
+  to quantum's gitignored qsim/scratch/ and are sent to the Bridge, because the quantum repo is public.
+- **Note:** TheBridge repo is also public, and V20/V24 float values (λ, x_h, …) are already in its history. The
+  tabula blind therefore rests on tabula not reading other repos. This is flagged to Sumit; it is not new exposure.
+
+## v1.1 changes (quantum's review, 2026-11-20)
+1. **Preregistration per certificate.** C-N, C-I3, C-L and C-T each get their own prereg before code, with pass rules
+   and a control; use a Kerr-type or known-hyperbolic toy where one exists.
+2. **Codegen gates.**
+   - (i) K_flat ≡ geodesic H at random rational points, by quantum's own sympy route; V24 is the comparison only.
+   - (ii) The interval enclosure contains exact rational evaluations of the field.
+   - (iii) Section transversality: p_v < 0 is certified at every Σ crossing used. Time is flat-plane fictitious time
+     (K = 0), not proper time.
+3. **The brake point.** BOTH momenta vanish there, so the g″ formula is 0/0 (my v1 wording, "p_v → 0, reparametrise",
+   was incomplete).
+   - Fix: γ is even in t about the brake time. So u is analytic in v near v_b if V_v(brake) ≠ 0.
+   - g′ → V_u/V_v there, and g″ comes from the t⁴ jet coefficients.
+   - Certify V_v ≠ 0 at the brake point. This also gives the transversality of the shooting event (dp_v/dt = −V_v).
+4. **C-L gap.** U is not a graph over x near its fold. So compare U(s) with R(U)(s′) by the signed distance along a
+   certified transversal, in arc parameters.
+5. **Wording corrected.** What makes C-L work is that FORWARD iteration contracts deviations transverse to W^u.
+   Area preservation alone does not give that; it gives it together with the tangential growth.
+6. **C-I1/I2 under Arb (quantum).** Implemented from the statements in V24/PREREGISTRATION.md, not from the Bridge
+   code, for independence.
 
 ## 0. Fixed data (every certificate must state these)
 - **Metric:** the Bridge TS2 metric, V11 loader, ts45. σ = 1 (prolate units).
@@ -60,6 +84,13 @@ supplies the exact inequalities and the float previews, and reviews each certifi
   - **Corner condition at v = v_b.** γ's slope there is g′ ≈ −0.006 (float), so the corner between the curved leaf
     and its straight continuation is small. Lemma G needs the corner to be "convex inward". To do: state it exactly
     and check it. **This is an open logic item, Bridge.**
+  - **Exploratory float geometry (2026-11-20; planning, not a test).**
+    - Below v_b, the Hill region inside γ is a thin CAP, ending within 1e−3 in v. Its u-range is [u₁, ≤ u_b].
+    - In the cap, min V_u = 0.999 and max |V_v| = 163.5.
+    - Straight continuation (g′ = 0) gives C = −V_u ≤ −0.999, but has a corner.
+    - C¹ slope-matched linear continuation has no corner, but max C = −0.0010 over 6e6 samples: too thin.
+    - **Design choice to make:** a continuation with g″ > 0 (the 2Vg″ term is ≤ 0 in Hill), or the straight one plus
+      a corner lemma. Bridge to decide and register before checking.
 - **Status:** feasible. Parallel with C-N, independent.
 
 ### C-L: one validated curve (F-b′, U1, C1, C2)
