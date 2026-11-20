@@ -180,3 +180,21 @@ meaning |p_x| > U(x) + 1e−9 or x ≥ x_h, marks the W^u[h, m] arc; inside mark
 5. **Also report:** every point whose class changed, and the [m, P(h)] re-entry count.
 
 This is still a float64 sample check, not a validated proof.
+
+## Addendum D (2026-11-20, before code): the C¹ leaf continuation in the brake cap (float sample; the recipe's C-I3 design)
+**Context.** REVIEW_LOGIC addendum: Fable's straight continuation below v_b gives an upward τ-kink, so Lemma G fails
+there as written. Proposed fix: for v < v_b, g_τ(v) = g_τ(v_b) + g_τ′(v_b)(v − v_b) (C¹; g″ = 0 below).
+**Checks (float64, the V24 B1 exact-orbit machinery):**
+- **D0.** g′(v_b), from the orbit (the limit of p_u/p_v), equals V_u/V_v at the brake point to ≤ 1e−6 relative.
+  This is quantum's jet relation, used as an independent consistency check.
+- **D1.** On the cap (Hill points with v ∈ [v_b − 2e−3, v_b), u ≥ u₁; grid 2001 × 2001), for every τ ∈ [0, 1] whose
+  leaf passes through the point (τ is solved from u), C < 0.
+- **D2.** The margin profile near the brake point: report min of −C/r, where r = |(u, v) − (u_b, v_b)|, on the cap.
+  - PASS if min −C/r > 0 with no sign change. That shows C → 0 only at the brake point, and at most linearly, which
+    is what a local lemma can handle.
+- **Must-fail control.** A continuation with slope 2g′(v_b) must give C > 0 somewhere in the cap. This shows the check
+  is sensitive to the slope.
+- **Corner check (sanity).** Reproduce the sign of τ_v⁺ − τ_v⁻ > 0 for Fable's straight continuation at 5 points on
+  v = v_b.
+**Not claimed:** this is a sample. The rigorous version is interval arithmetic on the cap away from a small disc
+around the brake point, plus a jet lemma at the brake point.
