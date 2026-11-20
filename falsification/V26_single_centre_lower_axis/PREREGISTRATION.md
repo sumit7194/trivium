@@ -192,3 +192,22 @@ L = 0, μ = 1, E = 2.
   so a Case 1 solution must exist. If the search finds none, the search code is wrong.
 - **Literature note:** ZV non-integrability is known (Maciejewski–Przybylska–Stachowiak, PRD 88, 064003, 2013; it
   was cited in the T3 prompt). E2 tests Neon's re-derivation, not novelty.
+
+## Addendum F (2026-11-21 ~04:25, before code): checking Neon T8's first-order proof of the invisible-family obstruction
+Neon's output: neon_work/onlykerr/T8_INVISIBLE_FAMILY_SUMMARY.md.
+
+**F1 (δc0 and I₊, independent route).**
+- Compute δc0 and δc0′ on |z| = 1.35 by ray integration of δc0″ = Q/(2D³c_K″) from z to ∞ along z·s, s ∈ [1, ∞)
+  (mpmath, 30 digits). Neon's closed form is NOT used for this.
+- Compare with Neon's closed form at 8 points on the circle. **PASS:** agreement within 1e−15.
+- Compute I₊ by quadrature on the circle. **PASS:** |I₊ − Neon| ≤ 1e−10·|I₊|, and I₋ = −conj(I₊) within 1e−12.
+- **Must-fail:** Neon's closed form with its two log-ratio terms dropped must disagree by more than 1e−3.
+
+**F2 (first-order theory against the V26-D ODE invariant).**
+- At E = 0.8, from Neon's formulas (v±, u, κ, q1, with δP from F1), compute J±, J0 on |z| = 1.35 (base point 1.35).
+- Predicted coefficient: c_pred = −det(Δ) = −(J₊J₋ − J0²)/(4κ²), with tr(g_in) − 2 = c·k² + O(k³).
+- V26-D target: c = −4.78447e−3. This is the k → 0 linear extrapolation from k = 1e−3 and 1e−2; the k = 1e−3 value
+  alone is −4.78512e−3.
+- **PASS:** |c_pred/c − 1| ≤ 1e−3.
+- **Must-fail:** the same computation with q1 replaced by (3/16)(δP/P0)′² (a wrong first-order variation) must miss
+  by more than 1%.
