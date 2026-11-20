@@ -155,3 +155,17 @@ step, and the inherited first-order classification.
    RR = (16R(ε/2) − R(ε))/15. The estimate is RR from (0.01, 0.005, 0.0025); rich_diff = |RR₀ − RR₁|.
 3. **Unchanged:** the floor definition (max of the radius difference, rich_diff and the linear deviation), the
    100× rule, VOID if floor > 1e−4, all predictions, all data, and all radii.
+
+### P2/P5/P6 first run, and amendment A2 (POST-RESULT; written after seeing the P6 run)
+- **P2 and P5 ran as registered (amendment A1 machinery).** All match; see FINDINGS.
+- **P6 as run:**
+  - **ZV around z = 1: VOID.** The cubic floor is 3.3e−3. The linear deviation from I is 1.9e−9.
+  - **ZV around infinity:** identity, as predicted.
+  - **Double pole (secondary):** the integration failed. The linear growth e^{√2π} ≈ 85 at ε = 0.02 pushes ρ past the
+    radius of the √ continuation.
+- **Diagnosis (ε scan at r = 0.3).** A(ε) grows like 1/ε²: 1e−6 at ε = 0.02, 1e−3 at ε = 0.00125. That is
+  integration noise of ~1e−9 near the rod end (q0 is large there) divided by ε². It is not a cubic term.
+- **Amendment A2 (for the ZV z = 1 loop only):** radii (0.4, 0.6); ε ∈ {0.08, 0.04, 0.02, 0.01}, which keeps
+  ρ/|z − 1| ≤ 0.2; rtol 1e−14. Otherwise unchanged (two-level Richardson, the floor rule, VOID if floor > 1e−4).
+- **Double pole (secondary, not verdict-bearing):** linear map only, from the ε = 1e−7 runs.
+- **Schwarzschild-f0 loops:** run as registered.
