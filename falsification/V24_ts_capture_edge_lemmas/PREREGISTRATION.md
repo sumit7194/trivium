@@ -215,3 +215,26 @@ around the brake point, plus a jet lemma at the brake point.
   (non-symmetric orbits come in R-pairs).
 - **Control.** h (on ℓ by construction) must come out symmetric with d_R ≤ 1e−8. Every point of the orbit of z* is
   trivially symmetric, so that orbit is excluded.
+
+### Addendum E result and amendment E1 (POST-RESULT)
+**Registered E result:**
+- **Control h:** symmetric (d_R = 9.7e−10). x_h = 56.86108, matching the fleet value.
+- **The 4th class change is h itself.** So the crossings in W^u[h, P(h)) are h plus 3 more.
+- **The 3 crossings:** two UNRESOLVED (min d 8e−7 and 1.7e−5, both at k = 3) and one NON-SYMMETRIC with respect to
+  Fix(R) and Fix(PR).
+- **Spacing:** the four points are 0.249988 and 0.249997 of a log λ period apart.
+
+**Diagnosis: the design had two flaws.**
+1. The small d_R values at k = 3 are confounded. Iterates approach z*, which is on ℓ, so p_x → 0 trivially.
+2. The design omits the half-return map. V is even in y, so H = (next equator crossing, then reflect y → −y)
+   satisfies H² = P, and R also reverses H. In that case the primary symmetric homoclinic points alternate between
+   Fix(R) and Fix(HR), half an H-period apart, which is a quarter of a P-period. That is exactly the measured spacing.
+
+**E1 (fixed before the rerun).**
+- Build H from the V20 machinery: the same flow, the first y = 0 crossing downward, then reflect.
+- **Must-pass control:** |H(H(z)) − P(z)| ≤ 1e−9 at 5 points of U.
+- For each crossing c and for h, test d_R and d_HR = |H(R w) − w| over w ∈ {H^k c : k = −2..2}, with
+  H⁻¹ = R H R. Exclude any w within 0.5 in x of x*, which removes the confound.
+- Same thresholds as E (symmetric if ≤ 1e−8; non-symmetric if ≥ 1e−4).
+- **Prediction (from the reversible-map structure):** all four are symmetric, alternating between Fix(R)-type and
+  Fix(HR)-type.
