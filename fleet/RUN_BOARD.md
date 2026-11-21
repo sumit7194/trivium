@@ -430,3 +430,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **Night r = 8 run:** Sumit chose launch variant (b): no memory cap, a 2 GB disk floor only. It starts after the daytime EXP-081a production finishes (~00:00–01:00). **PENDING: Sumit picks the night.** Launch command in Cuspis 8021ab2 (run from corner_function/scripts).
 - **18:39 Quantum B15c COMPLETE (73230b5):** B15 prediction NOT TESTED (no chain reached hs_cover; 147 candidates = 13 distinct refinement paths). Control 3 passed on the sealed hh_swap. FINDING: the B14 frames are numerically singular on Kerr (sin∠(U,S) down to 6e-11, i.e. W^u = W^s).
 - **18:39 B15d approved** (3a2e55b), plus a required frame-recipe POSITIVE control on HH (the same (U, U⊥) recipe must still certify HH, or a Kerr CERTIFIED-FAIL counts only as soundness). Slot: 2 hs_cover now, 4 after Cuspis's production ends. On the r = 8 night, Quantum STOPS its hs_cover runs first (A3 may continue).
+- **19:04 Only Kerr, T38 gaps 1d (the k = 30/7 endpoint) and 2a (G1⁰ = C*) are CLOSED by two independent routes:** ansatz §161/49ade38 and Neon T41. ansatz confirmed the κ² match algebraically: (μ²−E²)β² − μ²c/2, giving a²(1−E²) for Kerr. Remaining:
+  - the sliver (30/7 − 1e-12, 30/7), with T48 running for an explicit δ0;
+  - spin coverage, with ansatz running a = 0.3, 0.8, 0.9;
+  - an E = 1.5 point for §161, queued with its own prereg;
+  - the write-up items (MRS punctures, integrability-class framing, citations).
