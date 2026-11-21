@@ -458,3 +458,14 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Merge 081c with the P = 16 night-run redesign if they are the same computation. The draft comes to the Bridge before any compute.
 - **Physical-meaning flag sent:** a positive correction of about +2.4 is surprising next to the negative ones for C_T (−0.45) and F (about −0.24), and against the T46 prototype (−0.2 ± 0.5). The 081c design must be able to see a narrow-strip lattice term.
 - **Night r = 8 run:** still on hold, pending the 081c draft.
+- **00:49: EXP-081c draft (Cuspis d50f6de) APPROVED with five edits.** The edits:
+  - A: a planted must-fire decides whether the run is void. Woodbury's margin at W8 is only about 2×.
+  - B: Step 0's high-precision reference is extended to every checkpoint node, plus one g-level comparison.
+  - C: an N4c prediction check at ≤ 1e-4.
+  - D: ρ ≤ 0.10 is labelled "resolution-stable under one doubling", not "continuum-ready". The Richardson value is reported as descriptive.
+  - E: the λ argument for K's excess is regraded, since the sign of the free refinement shift is opposite.
+  - **Prerequisites:**
+    - N4 was a mis-specified tolerance; the true remainder is ΔR ≈ 2e-5.
+    - 081b's W8 "N1 failure" measured both methods' errors.
+    - Dry run: about 4 h in the daytime, < 1 GB.
+  - **No merge with the night run.** 081c is a resolution test; the P = 16 run tests volume. The P = 16 night run stays on hold, since R(P) is flat for P = 8–12.
