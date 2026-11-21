@@ -330,3 +330,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   closed the Gemini tabs (67% free) and gave GO for (a). **Run 4 launched** (process group 22210, side guard on, 68%
   free): pre-check and eqcheck, then the 3 matched-step-size releases (2.5 GB cap), then the registered analysis.
   Gemini rule from now on: close each tab after sending its Task, and keep at most one open while heavy jobs run.
+- **~11:50, Quantum Melnikov stage 2: still running.** PID 92792, up 17 h; 12 of 16 points COUNTED, none closing yet.
+  The best column is tau = 0.6, where the deficit falls ~17x per +0.03 in sigma. An extrapolation (not a result)
+  says sigma = 0.13 might close narrowly. New ETA ~17:00. If nothing closes, the verdict is OPEN; any amendment
+  (larger LAM_I or the sigma range) is decided after the verdict, labelled.
