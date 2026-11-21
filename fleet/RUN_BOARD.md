@@ -370,3 +370,5 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **ansatz gap B:** prereg 98b54e9; the registered run is going (PID 94001); controls C0, C3a/b, C1 and the guards
   pass.
 - **tabula §211, launch 2:** running (group 24603), amendment 569bec1.
+- **Cuspis:** the blind test MATCHED, so Cuspis moves to stage C (registered C+ growth along 1/2+iy via the CH05
+  route). Neon T25 does the direct BIE referee; Cuspis builds its own BIE only if T25 is ambiguous.
