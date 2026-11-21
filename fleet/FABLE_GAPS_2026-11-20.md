@@ -148,3 +148,9 @@ will be used. Each gap is marked:*
 - **2026-11-21 ~05:50, K4.** ansatz confirms T8's group step at 50 digits, basis-free. The first-order prediction
   matches 50-digit c(E) to about 1e−11 at E = 0.7, 0.8 and 0.9 (V26 addendum H). Remaining: the U_a certificate (T14)
   and a second reader of the T11 loop construction.
+- **2026-11-21 ~06:00, ansatz's review of T11.**
+  - The algebra and the half-plane choice are confirmed.
+  - Gap A: k = 4 (a perfect-square B, c0″ rational) is a special point not covered by continuation; an explicit test
+    is running.
+  - Gap B: the exceptional sets are "not covered", not "artefacts". Fix: an argument-principle zero count.
+  - Gap C: state the E > 1 to E < 1 coverage.
