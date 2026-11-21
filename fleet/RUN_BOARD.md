@@ -301,3 +301,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - The oracles start about 1000× above the truth's loss (mostly IC misfit).
 - §207 GO (prereg first): a representation test. Can hybrid oracles (value plus physics terms) sit near the truth
   at low loss? Then release from them.
+
+### 2026-11-21 06:50 IST: tabula §207 DONE, verdict 1: REPRESENTATION LIMIT (scoped: upper bound, ladder not flattened)
+- Near-truth hybrid points have loss 20–34× the truth's (gate 10×).
+- Descriptive: they are 3–50× LOWER in loss and 6× closer to the truth than where the §206 releases ended. So the
+  drift is a path effect, not the loss preferring a far solution (a reading, not registered).
+- §208 GO (prereg first): release from the hybrid points with §206's exact settings, plus a descriptive arm at 10× lower lr.
