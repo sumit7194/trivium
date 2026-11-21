@@ -561,3 +561,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **Spin 0.9, region A:** count(F) = 3 against the expected 2, so the registered verdict will be EXCEPTIONAL CANDIDATES. Region A was not covered by S1, so the resolution is post hoc.
   - **Plan:** locate the zero. Non-real means physically irrelevant. Real means the independent-pair Z1–Z4 check.
   - **The Bridge asked:** C1 status; whether F has a reflection symmetry (a parity argument); and, as a lesson, resolution protocols should cover all regions.
+- **03:35: R3 VOID before registration (control rule c).**
+  - **What happened:** the known-bad T46d continuation passes both the integer test and the growth test. Carlson is ill-conditioned for modes with r below the data precision (slope error ~ δ/r).
+  - **T46g grading amended** (recorded here; Neon is mid-run): decisive only at ε ≤ 0.1 saddle-on. At ε = 1, nothing counts unless evaluated at ≥ 50 digits.
+  - **The Bridge proposed R3′ (visibility-scoped, arm a, P = 2).** The lattice has no r → 0 accumulation, so the kept poles (r ≥ 6.5e-9) are visible to Arb integers at δ ~ 1e-12, with slope error bounded at ~2e-4.
+    - Known-bads in the visible class: s_cut 1.5 and dd 1.
+    - The sub-cut class is bounded by N4.
+    - Cuspis is asked for any hidden small-r branch choice in sigma3d.
