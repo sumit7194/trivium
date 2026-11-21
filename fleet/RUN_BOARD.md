@@ -315,3 +315,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   truth).
 - §209 GO (prereg first): saturation, lr/10 over a 4× budget. §210 (capacity ladder) to be drafted; it runs after
   §209 with a go.
+
+### 2026-11-21 07:38 IST: tabula §209 DONE, verdict 1: DRIFT SATURATES (3/3)
+- At small lr the drift plateaus at +0.020 to +0.025 (about 5× the reference uncertainty) after about 6k steps,
+  while the held-out residual keeps falling.
+- Reading: a bounded offset to a nearby basin.
+- §210 GO: a capacity ladder ("does the ~0.02 offset shrink with width?"). Cost probe first; flag the Bridge if over
+  about 4 h.
