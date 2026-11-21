@@ -375,3 +375,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **12:10, δκ first-order normalisation, effectively settled.** At twist 1/2, Cuspis's symmetry-fixed absolute CH05
   values equal the Bridge's T23 implementation to 1e-7 (linear = (4/pi) x Born; resummed -0.00599707). Born is
   excluded there by 27%. T23 is released to Cuspis. Stage C proceeds; the T25 BIE stays as the direct referee at 0.3.
+- **12:20, ansatz gap B PASS** (prereg 98b54e9, result e0bb4d0; post-hoc labelled finite-subgroup exclusion fdf16d5).
+  K*(0.6) has no points in [-10.5, 4.05] (50-digit argument principle). The theorem stays "all k except a discrete set
+  K*(spin)". Gap B is evidence, with caveats: floating point, one spin, nothing below -10.5, first-order lower-axis
+  NVE. No further runs. **All Only-Kerr pre-outreach checks are now done.**
