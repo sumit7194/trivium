@@ -556,3 +556,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **τ accuracy:** 6.6e-39.
   - **Obstruction vs spin:** τ = −(tr Y)² at all spins (Bridge re-checked); |tr Y| ∝ a^7–a^8, so the obstruction weakens fast toward low spin.
   - **Sign change of tr Y** between spins 0.8 and 0.9, outside the tested spins. The Bridge asked for the one-line reason for τ = −(tr Y)², and an optional registered check at a_c.
+- **02:56: ansatz.**
+  - **τ identity derived** (0d6e021): single-point loops have M² = −I, so τ(A, B) = −(tr M2M1M3)². The Bridge re-derived it.
+  - **Spin 0.9, region A:** count(F) = 3 against the expected 2, so the registered verdict will be EXCEPTIONAL CANDIDATES. Region A was not covered by S1, so the resolution is post hoc.
+  - **Plan:** locate the zero. Non-real means physically irrelevant. Real means the independent-pair Z1–Z4 check.
+  - **The Bridge asked:** C1 status; whether F has a reflection symmetry (a parity argument); and, as a lesson, resolution protocols should cover all regions.
