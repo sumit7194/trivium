@@ -56,3 +56,11 @@ per the user's direction. They are kept in local, uncommitted notes.
   dry run. Declared now: W = 2, r = 6 ≈ 2.0 GB and W = 3, r = 4 ≈ 2.1 GB, staggered.
 - Pattern: this is the third overshoot from modelled rather than measured peaks today. The watchdog at the cap made
   each one harmless.
+
+## 2026-11-21 ~21:3x: Cuspis EXP-081b, P = 12 worker over its memory envelope (contained)
+- The watchdog stopped W2 P12 at 2.25 GB tree footprint (1.90 resident + 0.35 compressed) against the 2.2 GB cap; the
+  registered estimate was ~1.4 GB. No R value was computed or seen. It resumes from the worker checkpoint (48 of 53
+  nodes done) with the cap raised to 3.2 GB; the box was ~62% free. The killed run is kept on record.
+- Pattern: the FOURTH modelled-vs-measured memory miss on this line today. Compressed memory grows over long runs, so a
+  short dry run under-reads the peak. Lesson: dry runs must last long enough to reach steady compressed growth, or the
+  declared peak should carry a ×1.5 margin.
