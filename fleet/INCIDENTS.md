@@ -48,3 +48,11 @@ per the user's direction. They are kept in local, uncommitted notes.
 - **Fix:** preallocated arrays plus a row-blocked FFT convolution; the peak is to be MEASURED on a short dry run under a 1.5 GB cap before anything is declared.
 - **Lesson:** declare peaks from a measured dry run, not from a model. A watchdog set at the declared peak is what made this harmless.
 - **Disk (checked 17:59):** 11 GB free on /. Quantum's A3 has a < 5 GB disk stop; its lines are expected to write < 2 GB in total. Candidate for freeing space, with Sumit's OK only: quantum b15_g6.json (931 MB, old, gitignored).
+
+## 2026-11-21 evening: Cuspis's third memory overshoot (contained)
+- The P1 σ probe at W = 2, r = 6, N_y = 96 reached 2.74 GB, and the watchdog killed it at its 2.2 GB cap. The earlier
+  "~1.8 GB at r = 6" declaration was not computed from the measured scaling.
+- Fix: every declaration now comes from the MEASURED law, ≈ 0.89 GB × (N_y/16) × (N₂D/720)², then a 1-minute measured
+  dry run. Declared now: W = 2, r = 6 ≈ 2.0 GB and W = 3, r = 4 ≈ 2.1 GB, staggered.
+- Pattern: this is the third overshoot from modelled rather than measured peaks today. The watchdog at the cap made
+  each one harmless.
