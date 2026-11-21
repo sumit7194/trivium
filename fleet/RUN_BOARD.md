@@ -539,3 +539,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - the P = 4 pencil as a diagnostic;
     - P = 2 completeness (≤ 1e-3) as a STOP gate;
     - a disclosure that the honest Q′ are known and the comparison has not been formed, so the tolerance is mechanical.
+- **01:59: EXP-083 P = 2 gate STOPPED as registered (a9d6f8c).**
+  - **Why:** the float64 pencil can't see the small bases, and the adequate fit models disagree at ~0.02.
+  - **Also:** a watchdog kill at 1.90 GB against a < 1 GB estimate (resource slip, recorded).
+  - **R2 approved:** high-precision honest data by the sector decomposition.
+    - The Bridge directed Arb (python-flint acb_mat; libflint 24 is on the box) instead of mpmath, aiming to reach P = 4, i.e. 081b's own geometries.
+    - The sector decomposition must be validated against the direct n-sheet Q(n).
+    - Memory is measured by dry run.
+    - Consequences made explicit: a P = 2-only pass is code validation only; any fail suspends the +2.4.
