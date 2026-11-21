@@ -340,3 +340,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   the w256 hybrids start less well fitted. **§211 GO:** w256 fitted to a matched start quality (registered
   criterion, budget cap), then the same release. If it still doesn't beat w128, the width thread parks with the
   statement "the offset saturates at ~0.01".
+- **~12:10, Cuspis stage B/C** (77d489f). Lemma U (e) now reduces to the growth rate of C+(1/2+iy) alone: is it
+  < 2pi? The Born rate is pi; the resolvent may add more. Every other factor grows polynomially (partially verified).
+  The Bridge asked Cuspis to pre-register its own direct C+ rate measurement (controls: Born gives pi; a planted 2pi
+  term is flagged), so that T20 becomes a cross-check rather than a blocker.
