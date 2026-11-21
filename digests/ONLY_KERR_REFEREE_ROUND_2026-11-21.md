@@ -68,7 +68,10 @@ The owner (ansatz) graded every point (data/nve/T38_GRADING.md, d153394, plus ad
      tr(M1Γ) = tr M1 · tr Γ identically (Fricke), so the two "independent" traces were not independent.
    - **Resolved post hoc (labelled):** at the common zero k* = 4.00816, an independent circle pair passes Z1–Z4. So
      there is no exceptional k (floating point).
-   - Sliver certificates at 0.3, 0.8 and 0.9 requested from ansatz, using its patched T48b code.
+   - **Sliver certificates (2026-11-22):** interval-certified at spins 0.6, 0.8 and 0.9 (E = 0.8), with spins 0.8 and
+     0.9 under a post-failure amendment the Bridge checked as sound. Spin 0.3 FAILS for a real reason: the endpoint
+     group is near-degenerate (τ ≈ −4.5e-10), so the sliver there is floating point only, pending a registered S4.
+     Open question for the claim sentence: does the obstruction weaken as the spin goes to 0?
 3. Write-up items: the MRS section (T49 draft, then ansatz's check), points 2b, 4, 5, 6, and the 1a wording.
 4. One claim sentence carrying every scope qualifier (spin, floating point vs interval, the sliver, first order on
    the lower axis), so outreach text cannot drift from it.

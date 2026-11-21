@@ -498,3 +498,13 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - the 0.9 resolution protocol committed before 0.9's counts are read;
     - the patched T48b sliver certificate run by ansatz itself at spins 0.3, 0.8 and 0.9, so the planned Gemini sliver task is dropped;
     - the floating-point qualifier carried for k*.
+- **01:36: ansatz interval sliver certificates (835ead3, 91fe428).**
+  - **Results:** PASS at spin 0.6 (δ0 1.33e-11, under S2), 0.8 (2.41e-10, under S3) and 0.9 (3.63e-10, under S3). FAIL at 0.3.
+  - **The 0.3 failure is real:** the endpoint group is near-degenerate there (τ = −4.46e-10 by the 50-digit walker).
+  - **The Bridge checked the S3 diff:** zeroing C3/C4 is unused by the VE1 certificate (other scope), and Z2 via Fricke τ on inflated traces is sound. S3 is labelled post-failure.
+  - **The Bridge asked for:**
+    - an S4 rescue of spin 0.3, registered first, with failure final;
+    - τ's accuracy at 0.3;
+    - |τ| vs spin, for the claim sentence ("weakens toward low spin?").
+    - It also noted that τ being identical across pairs is automatic (ABC = I).
+  - **S1** (the 0.9 resolution protocol) was committed before any 0.9 output.
