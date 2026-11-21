@@ -1,0 +1,7 @@
+a=0.3 legs=RL: max/min |k| = 1.000439, tol 1+4.7e-03 -> PASS
+a=0.3 legs=v0: max/min |k| = 1.133333, tol 1+4.7e-03 -> FAIL
+a=0.2 legs=RL: max/min |k| = 1.000067, tol 1+1.0e-03 -> PASS
+a=0.2 legs=v0: max/min |k| = 1.074313, tol 1+1.0e-03 -> FAIL
+a=0.4 legs=RL: max/min |k| = 1.000083, tol 1+1.9e-03 -> PASS
+a=0.4 legs=v0: max/min |k| = 1.567241, tol 1+1.9e-03 -> FAIL
+DECISION (registered text rule, corrected harness): RL (T23) SUPPORTED

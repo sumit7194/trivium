@@ -63,3 +63,32 @@ The relative differences are 2e-7 (linear) and 1e-7 (resummed). Results: results
 - Caveat: Cuspis's absolute chain (the k_y measure, the CH05 b normalisation) has not been audited separately. The
   exact agreement with an independently derived closed form is strong evidence that it is right.
 - Neon's BIE (T25) remains the direct referee at twist 0.3.
+
+## Addendum B (12:31): per-slice shape test, Neon T25's blind BIE vs the two leg candidates
+**As run: INCONCLUSIVE.** The registered harness tested abs(max(k)/min(k)) <= 1 + tol; for NEGATIVE k this is always
+<= 1, so every row printed PASS. That is a Bridge harness defect: the sign of k was not exercised by any pre-check.
+The as-run output is kept: results/v28_B_shape.txt.
+
+**Labelled correction (the registered text rule applied to |k|, same data): RL (T23) SUPPORTED, v0 EXCLUDED** (results/v28_B_shape_corrected.txt).
+| twist | T23 legs: max/min of k over w | symmetric v0: max/min | tolerance |
+|---|---|---|---|
+| 0.2 | 1.000067 | 1.0743 | 1 + 1.0e-3 |
+| 0.3 | 1.000439 | 1.1333 | 1 + 4.7e-3 |
+| 0.4 | 1.000083 | 1.5672 | 1 + 1.9e-3 |
+
+**Absolute normalisation (descriptive, and striking):** k_RL x 4pi/lambda = -0.99985 / -0.99997 / -0.99984 at twists
+0.3 / 0.2 / 0.4. So the BIE gives Delta C = -(lambda/(4pi)) B_RL(u) to about 1.5e-4: exactly T20's stated
+single-tip normalisation, with T23's legs, slice by slice, from w = 1 down to w = 0.01.
+
+**Reading.** A direct boundary-integral solution of the twisted-cut Green function was built blind: no candidate
+formulas, and only Cuspis's spec. Slice by slice and in absolute value, it reproduces T23's leg structure at three
+twists and five separations. The symmetric-v0 resummation is excluded by 7-57%. Combined with the three-construction
+blind ratio match and the absolute match at twist 1/2, the same-tip coefficient is now settled by four routes:
+- Cuspis's CH05;
+- T23's derivation;
+- the Bridge's re-implementation;
+- T25's direct BIE.
+The BIE itself is Neon output (UNVERIFIED by itself). Its code is to be read and re-run by Cuspis.
+
+**Process:** this is the seventh registration slip today (a sign case not pre-checked). The memory rule on code-path
+pre-checks applies, extended: pre-check the decision function on inputs of BOTH signs.
