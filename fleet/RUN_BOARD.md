@@ -568,3 +568,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - Known-bads in the visible class: s_cut 1.5 and dd 1.
     - The sub-cut class is bounded by N4.
     - Cuspis is asked for any hidden small-r branch choice in sigma3d.
+- **03:37: R3′ REGISTERED (Cuspis), with four holes fixed.**
+  1. The δ/r bound is per mechanism, not adversarial.
+  2. P = 2 makes s_cut a no-op, so P = 4 (081b's W2P4 and W4P4) was added, with Arb n ≤ 12.
+  3. The route (ii) port must reach δ ≤ 1e-11, or the claim is scaled.
+  4. A route (ii) ⇄ route_b FD link per geometry.
+  - **Every threshold-keyed branch in sigma3d now has its own control:** the QEP filters, the cluster merge, the residue radius, the β0 merge, the s_max truncation, and dd = 1.
+  - **Scope:** arm a only. **T_sad carries the +2.4's sign** (saddle-off R = −48.5), so a pass does NOT validate the +2.4.
+  - Runs after the 081c posctl, one job at a time.
