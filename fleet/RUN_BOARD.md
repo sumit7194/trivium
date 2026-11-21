@@ -590,3 +590,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **a_c REPRODUCED (34c6540):** 0.85844619879171725346309 vs T50's …067, so 22 digits agree. At a_c the circle pair passes Z1–Z4: Zariski dense (50-digit floating point). Two implementations.
   - **Spin 0.9 registered verdict:** EXCEPTIONAL CANDIDATES, only because count(F) = 3 in region A. Region B is clean, and the endpoint and sliver are non-VA.
   - **C1 passed,** so the extra zero is outside |k| < 0.3 (not a Kerr split). The post-hoc locator is running (~30 min), then the claim sentence.
+- **04:30: Cuspis arm (b) built and registered (4ee07fe). C1 at P = 2 and 4 PASSES (fb91521).**
+  - **Result:** production T_sad equals an independent FD of the continued replica saddle to ≤ 3e-9 relative (τ = 1e-6).
+  - **All plants fire:** sign flip, off, σ̇/2, and the k-index patch (1e5–2e6 × τ).
+  - **Grade:** verified for the T_sad ASSEMBLY (the 081a class) at small P. It shares the QEP poles and the Poisson kernel, so it is NOT a validation of the +2.4.
+  - **Solver amendment:** stagnation stop below 1e-12.
+  - **Queued after 07:30:** heavy C1 (12 geometries up to P12 and W8P8), C2, and the Arb P4 arm (b) at ~3 GB.
