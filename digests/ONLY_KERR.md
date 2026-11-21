@@ -280,3 +280,9 @@ Open, stated plainly:
 - non-rational axis data in general (narrowed to the residual class above);
 - the physical-meaning caveat on the class of integrals (section 6);
 - a certified (interval) version of the exceptional-k count.
+
+## 14. Pointer (2026-11-21 evening)
+- The referee round (Neon T38, graded by ansatz) and its closures: see digests/ONLY_KERR_REFEREE_ROUND_2026-11-21.md.
+- The non-rational axis data branch (K5) is closed with a summary in digests/K5_NONRATIONAL_AXIS_DATA_CLOSING.md.
+- Correction to keep in view: MPS 2013 settled ZV δ = 2 with the FIRST-order NVE along an equatorial radial orbit
+  (two independent full-text reads). §12's "through an equatorial orbit" is correct as written.
