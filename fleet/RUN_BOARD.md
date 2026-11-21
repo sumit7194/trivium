@@ -344,3 +344,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   < 2pi? The Born rate is pi; the resolvent may add more. Every other factor grows polynomially (partially verified).
   The Bridge asked Cuspis to pre-register its own direct C+ rate measurement (controls: Born gives pi; a planted 2pi
   term is flagged), so that T20 becomes a cross-check rather than a blocker.
+- **11:55 (real clock), V26-K DONE:** Neon T19's closing of the G1 gap is independently confirmed. K2 is FAIL as
+  registered (a Bridge enclosure blow-up); amendment K2′ PASS; K0, K1, K3A, K3B, K4 (28/28) and K5 PASS. ansatz told.
+  Only-Kerr pre-outreach still open: ansatz gap B, and T24 (the referee of the K5 theorems; not needed for Only Kerr
+  itself).
+- Timestamp note: the Bridge's "~" times from 11:40 to 12:35 in today's logs ran 20-40 min fast; the git commit times
+  are the record.
