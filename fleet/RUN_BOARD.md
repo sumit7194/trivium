@@ -586,3 +586,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **Slots stay 2:** load is 10.9 on 10 cores. 4 after tabula §213 finishes, if the load drops.
 - **04:15: Quantum B15d-2 REGISTERED (7e81cf0).** The twin runs edges first. The merged-COVER rule has a positive control (byte-identical to GB), and a vacuous edge chunk is never classified alone. The old twin (a) PIDs are paused (SIGSTOP), keeping 4.5 h and 9 h of in-flight work in memory; runner PID 30241. Recipe stays unchunked; edges-first for Kerr is optional with its own amendment. **Restart note:** the paused pieces must reach a checkpoint before any Mac restart.
 - **04:17: Quantum B15d-3 REGISTERED (356d4c9):** Kerr edges first (KERR-EARLY reading, then (a)). The runner now adopts live hs_cover children on start (restart-safe); runner PID 34523. No Mac restart is planned (Sumit: later, when quiet); the paused pieces stay paused until the twin (a) phase.
+- **04:26: ansatz.**
+  - **a_c REPRODUCED (34c6540):** 0.85844619879171725346309 vs T50's …067, so 22 digits agree. At a_c the circle pair passes Z1–Z4: Zariski dense (50-digit floating point). Two implementations.
+  - **Spin 0.9 registered verdict:** EXCEPTIONAL CANDIDATES, only because count(F) = 3 in region A. Region B is clean, and the endpoint and sliver are non-VA.
+  - **C1 passed,** so the extra zero is outside |k| < 0.3 (not a Kerr split). The post-hoc locator is running (~30 min), then the claim sentence.
