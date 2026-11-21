@@ -44,3 +44,22 @@ T20-v0 (symmetric legs) is excluded at every twist (1.1180 / 1.1409 / 1.1362).
 **Still open:** the ABSOLUTE first-order normalisation. Is the linear term the Born form (the l = 0 multipole only),
 or T23's Gamma(3a+1/2)Gamma(3/2-a) form? Cuspis's BIE referee measures it absolutely. The growth on Re a = 1/2
 follows the linear term times this O(1) resummation, and both candidate linear terms grow at rate <= pi < 2pi.
+
+## Absolute comparison at twist 1/2 (12:09 real clock; Cuspis's numbers were sent before the Bridge computed these)
+At twist 1/2 Cuspis's CH05 scale is fixed by the a -> 1-a reflection (b = c = sqrt(h)), NOT by the first-order
+amplitude, so its ABSOLUTE C+ there is independent of both candidate linear terms. Only the overall sign is chosen.
+| quantity | Cuspis CH05 | Bridge T23 (v_R, v_L) | Born |
+|---|---|---|---|
+| linear | -0.00513299 | -0.00513299 (closed form = (4/pi) x Born exactly, since 1/Gamma(3/2)^2 = 4/pi) | -0.00403144 = -1/(8 pi^3) |
+| resummed | -0.00599707 | -0.00599707 | n/a |
+| ratio | 1.168338 | 1.168338 | n/a |
+The relative differences are 2e-7 (linear) and 1e-7 (resummed). Results: results/v28_half_compare.txt.
+
+**Reading.**
+- Cuspis flagged its 4/pi as a probable convention factor and graded it UNVERIFIED. In fact it is exactly T23's
+  multipole correction at twist 1/2, which was predicted by a closed form sealed earlier (V28 prereg, b93cb63).
+- That makes this an independent absolute determination agreeing with T23's first-order term, and disagreeing with
+  the Born (l = 0) form by 27% at twist 1/2.
+- Caveat: Cuspis's absolute chain (the k_y measure, the CH05 b normalisation) has not been audited separately. The
+  exact agreement with an independently derived closed form is strong evidence that it is right.
+- Neon's BIE (T25) remains the direct referee at twist 0.3.

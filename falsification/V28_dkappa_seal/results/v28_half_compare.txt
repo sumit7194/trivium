@@ -1,0 +1,5 @@
+Born(1/2) = -0.00403144  (-1/(8 pi^3) = -0.00403144)
+T23 m0 closed (1/2) = -0.00513299 ; ratio to Born = 1.27323954 ; 4/pi = 1.27323954
+Bridge T23 (vR,vL): m0 -0.00513299 | resummed -0.00599707 (ext grid -0.00599707) | ratio 1.168338
+Cuspis CH05 absolute: lin -0.00513299 | full -0.00599707 | ratio 1.168338
+rel diff lin 2.2e-07 | full 1.2e-07
