@@ -70,6 +70,12 @@ waits until EXP-081b passes.
 - **Next:** EXP-081c, a new registration (081b stays on the record), re-measures σ_W with numerics that pass the
   reliability rule. It may merge with the P = 16 night run.
 
+- **Later, 2026-11-22: a deeper check.**
+  - Cuspis showed (EXP-082) that a continuation can match every integer-n value and still have the wrong n → 1 slope.
+  - The lattice engine's σ-side continuation, including the saddle term, has never been compared with honest
+    integer-n data.
+  - EXP-083 does that at small P. If it disagrees, the +2.4 is suspended, whatever σ_W turns out to be.
+
 ## Open
 - The δκ sign: EXP-081c (σ_W re-measured) and the infinite-volume route (T46d) as the independent check.
 - T46c: a consistent discretisation, then a converged infinite-volume value.

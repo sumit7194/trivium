@@ -516,3 +516,18 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - an honest integer-n Q(n; ε) reference NOW, by Cuspis itself, registered briefly with the prediction "integer Q(n) = O(ε²) ⇒ the continuation is at fault";
     - a code-level answer on whether sigma3d's σ-side continuation has an analogous near-confluence issue. If yes, an honest integer-n σ-side control is a missing control for 081b's +2.4.
   - T46e will be graded only against the integer-n reference.
+- **01:50: Cuspis EXP-082 DONE (e09178d / 8d670e6), honest integer-n referee on the ε pure-gauge family.**
+  - **Result, reading (ii):** the threshold continuation matches every integer but has the WRONG n → 1 slope (+0.4…0.9 against a true −0.3…−8e-5 that → 0).
+  - **Cross-check:** two implementations agree on the integers to 9 digits.
+  - **A run-1 must-pass fired on Cuspis's own double-gluing bug.** It was fixed, and run 1 is kept.
+- **01:50: lattice question answered "partially yes".**
+  - The production Strip3D σ continuation (QEP poles, s_cut, y-convolution, T_sad) has NEVER been checked against honest integer-n data.
+  - So this is a missing control for 081b's +2.4.
+- **EXP-083 draft APPROVED with five edits:**
+  - referee bases independent of production poles (own solve and/or a base-free arm);
+  - discriminating power stated (the tolerance must be < half the gap between R = 2.26 and R = −0.45 at P = 4, or the test is non-discriminating);
+  - the saddle correspondence argued in writing;
+  - a saddle-off must-fire;
+  - s_cut 1.5 relabelled as a diagnostic.
+  - Runs in parallel with 081c, < 1 GB.
+  - **The lattice sign now waits on EXP-083 as well as σ_W.**
