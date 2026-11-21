@@ -322,3 +322,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Reading: a bounded offset to a nearby basin.
 - §210 GO: a capacity ladder ("does the ~0.02 offset shrink with width?"). Cost probe first; flag the Bridge if over
   about 4 h.
+- **~07:50, §210 cost probe.** Every rung fits the enforced footprint cap (≤ 1.12 GB). In-process maxrss reads up to
+  1.86 GB at w256. Bridge decision: option A (full ladder, footprint cap, maxrss recorded), about 2.8 h. Running
+  ~08:00–10:50.
