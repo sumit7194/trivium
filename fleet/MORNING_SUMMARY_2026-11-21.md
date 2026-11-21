@@ -50,7 +50,7 @@
 ## Still pending
 - Quantum's Melnikov stage-2 verdict (~10:00).
 - ansatz's k = 4 test: DONE, not an exception (E = 0.8, spin 0.6).
-- Neon T17 (C₊ normalisation and multiple-reflection growth, for Cuspis).
+- Neon T17: DONE. The normalisation is fixed, and every reflection order grows at rate π < 2π (no log), PROVIDED the continuum resummation and q-sum behave. Waiting for Cuspis.
 - tabula §206.
 
 ## Notes
