@@ -442,3 +442,41 @@ not used. Outputs: results/v26_J_precheck.txt, results/v26_J.txt.
   - the tail bounds hold on a grid (V26-I);
   - the analytic tail proof has been read once.
   - This pre-outreach item is DONE.
+
+---
+## Addendum K (2026-11-21, runs ~11:45-11:54 real clock; the "~12:20" in the prereg header was a mis-estimate, the commit times are the record): the Bridge's independent check of Neon T19 (G1 gap)
+**VERDICT:** K2 is FAIL as registered (a Bridge enclosure defect). Every other clause PASSES, and the labelled
+amendment K2′ PASSES. Together, every piece of T19's proof that the Bridge set out to check is independently confirmed.
+Environment: CPython 3.14.5 (conjecture_machine/.venv), mpmath iv at dps 20, numpy as in ENVIRONMENT.
+
+| Clause | Region (Neon's own) | Result |
+|---|---|---|
+| K0 E-elimination identity | exact | PASS (sympy) |
+| K1 Re(H~^2) > 0 | theta [0, 7/37], eta [0, 10] | PASS: 251 boxes, min certified margin 0.0354 |
+| K2 theta^-1/2 \|Im H~\| < 1 | theta [7/37, 1], eta [0, 5] | **FAIL as registered**: stuck at theta ~ 1, eta ~ 5 (enclosure blow-up) |
+| **K2′** (amendment: tight enclosure) | same | **PASS**: 538 boxes, min certified margin 6.3e-4 (so the maximum is <= 0.99937; Neon's bound was 0.99844) |
+| K3A Re H~ - \|Im H~\| > 0, left edge | theta [7/37, 1], eta [0, 1] | PASS: 2,389 boxes, min certified margin 6.6e-5 (374 s) |
+| K3B the same, top edge | theta [7/37, 1], x0 [1, 5] | PASS: 749 boxes, min certified margin 4.2e-5 |
+| K4 end-to-end winding = 2 | 24 random + 4 edge (a, k, E) | PASS: 28/28 give exactly 2.0000 |
+| K5 tail sanity (float, not rigorous) | eta >= 10 / >= 5; x0 >= 5 | PASS: grid minimums 0.757 / 0.916 / 1.45e-3 |
+
+**Notes:**
+- K3A′ was not needed (K3A passed as registered). It was started early, as a precaution, and killed unread.
+- K2′'s certified margin of 6.3e-4 is thin, as Neon's was. The bound that Case 2a needs (< 1) holds.
+- K4 coverage is skewed: of the 24 random draws only 1 has k in (0, 30/7), because k was uniform on (-30, 4.28).
+  That range is covered by the certificates and by the edge cases (k = 4.27 and 4.2857).
+- The K3 tail grid minimum (1.45e-3, top edge for x0 >= 5) is small but positive, consistent with Neon's
+  argument-angle bound. The tail arguments themselves were read by hand, not certified.
+
+**Reading.** T19's closing of the G1 gap holds under an independent implementation:
+- the exact E-elimination;
+- all four interval certificates;
+- an end-to-end zero count.
+Together with V26-J (T14's U_a), the general-spin loop argument for the invisible family has no open numerical step.
+The remaining caveat is that the tails and the inherited holomorphy (from U_a) were read by hand, not machine-checked.
+
+**Process record:**
+- The first pre-run caught three Bridge harness errors.
+- A K5 control was found to be target-dependent and replaced (disclosed).
+- K2's registered failure was an untested tightness property: a new rule in memory requires width checks at the
+  domain corners.

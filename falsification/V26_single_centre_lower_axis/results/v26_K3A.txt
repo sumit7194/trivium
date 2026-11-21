@@ -1,0 +1,2 @@
+K3A: certified = True | boxes 2389 | evals 4777 | min certified margin 6.64931e-5 | stop None | 374 s
+VERDICT K3A PASS
