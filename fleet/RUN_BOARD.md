@@ -379,3 +379,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   K*(0.6) has no points in [-10.5, 4.05] (50-digit argument principle). The theorem stays "all k except a discrete set
   K*(spin)". Gap B is evidence, with caveats: floating point, one spin, nothing below -10.5, first-order lower-axis
   NVE. No further runs. **All Only-Kerr pre-outreach checks are now done.**
+- **12:34 Cuspis EXP-066 (8e5f336):** T25 code read in full and rerun (identical). Shape test vs CH05: constant to 2-4e-5. NEW absolute cross-coefficient test: 12 slices to ~2e-4. Real-twist C+ VERIFIED (four routes). Line growth partially verified (y <= 5); the all-y bound is open (T26). Next: the Lemma U write-up.
