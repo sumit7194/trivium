@@ -1,0 +1,5 @@
+a=0.05 q-range (-16.0, 4.0): rel(v0 vs Born) 2.8e-05 | rel(RL vs T23 closed) 1.9e-05
+a=0.05 q-range (-40.0, 4.0): rel(v0 vs Born) 2.6e-05 | rel(RL vs T23 closed) 1.8e-05
+a=0.05 q-range (-80.0, 4.0): rel(v0 vs Born) 2.6e-05 | rel(RL vs T23 closed) 1.8e-05
+a=0.05 P=24 Np=320 q=(-40,4): rel(v0 vs Born) 6.3e-11 | rel(RL vs T23 closed) 3.6e-11
+a=0.05 P=40 Np=600 q=(-40,4): rel(v0 vs Born) 1.4e-14 | rel(RL vs T23 closed) 1.4e-14
