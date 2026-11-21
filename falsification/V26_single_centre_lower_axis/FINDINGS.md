@@ -423,3 +423,22 @@ Code: code/v26_I.py. Outputs: results/v26_I_precheck.txt, v26_I.txt, v26_I_postd
   or on the imaginary axis, so the integrand is holomorphic on Re u ≥ 1.
 - **Status of U_a = (−∞, 30/7) for all a ∈ (0, 1):** proved (Neon T14), with the representation verified, the
   bounds consistent, and the wall independently confirmed. Interval certificate not re-run.
+
+## Addendum J (2026-11-21 ~09:40): INDEPENDENT interval certificate of Neon T14. **PASS**
+Code: code/v26_J.py. This is the Bridge's own complex-interval arithmetic on mpmath.iv (20 digits); Neon's code was
+not used. Outputs: results/v26_J_precheck.txt, results/v26_J.txt.
+- Re H̃_θ(1 + iη) > 0 is certified on all of [0, 1] × [0, 10]: **449 boxes, minimum certified lower bound 6.04e−6**.
+  Neon independently reported 935 boxes with minimum ≥ 7.0e−5; the bounds differ because the box sizes differ, as
+  expected.
+- Controls (pre-checked):
+  - the enclosure is valid at 6 random points;
+  - the must-fail Re H̃ − 0.01 is refused at (θ, η) ≈ (1, 10).
+- Development note, honest: the first three runs crashed on interval-arithmetic implementation issues (operator
+  order, endpoint conversion, dependency in |u²| and in R + X). These were fixed by exact identities (|u|² = 1 + η²;
+  R + X ≥ 2X, and R + X = Y²/(R − X)) BEFORE the target run. The pre-checks were re-run after each fix.
+- **Status of U_a = (−∞, 30/7) for all a ∈ (0, 1):**
+  - the compact region is certified twice, independently (Neon and the Bridge);
+  - the ray representation is independently confirmed (V26-I);
+  - the tail bounds hold on a grid (V26-I);
+  - the analytic tail proof has been read once.
+  - This pre-outreach item is DONE.
