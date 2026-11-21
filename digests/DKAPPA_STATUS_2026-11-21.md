@@ -57,8 +57,21 @@ waits until EXP-081b passes.
 - EXP-081 has had several amendments (a, b, N1′, N1″, N1‴, N2′), all registered before any R was seen. The final
   write-up must tabulate them.
 
+## Update 2026-11-22: EXP-081b verdict
+- **INCONCLUSIVE as registered** (Cuspis 62ab26f; the Bridge checked it against the analyzer output).
+  - The only cause is the width nuisance σ_W = 30. Its W = 8 geometry failed the reliability rule at its first
+    checkpoint, so that number measures a truncated calculation, not the nuisance.
+  - Every W = 2/4 geometry is reliable to s = 6. Controls K, N2′, N_y and s-quad pass; N4 (s_cut) fails at 1.6e-4.
+  - One production bug (the pole-merge tolerance) was found by the N_y control and fixed. The verdict is unchanged.
+- **Descriptive only (σ_W left out, which the registration forbids):** R∞ = 2.41 ± 0.29, i.e. positive. It must not
+  be quoted.
+  - It is surprising next to the negative O(N⁰) corrections of C_T (−0.45) and F, and against the T46 prototype.
+  - The W = 2 strip is narrow, so a lattice term that does not cancel is a live suspect.
+- **Next:** EXP-081c, a new registration (081b stays on the record), re-measures σ_W with numerics that pass the
+  reliability rule. It may merge with the P = 16 night run.
+
 ## Open
-- The EXP-081b verdict (sign of δκ/κ_free vs −0.450, with measured uncertainty).
+- The δκ sign: EXP-081c (σ_W re-measured) and the infinite-volume route (T46d) as the independent check.
 - T46c: a consistent discretisation, then a converged infinite-volume value.
 - The growth bound for q > 0.
 - The r = 8 night run (on hold).

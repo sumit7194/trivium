@@ -444,3 +444,17 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **21:03 tabula §213 (45084dd): INSTRUMENT FAIL (C0).** The Kerr control orbits got only 1–2 polar sign changes, because the half-period was estimated from short arcs. Descriptively, ρ_C ≈ 0.97/0.97/0.55, so C is "not orbit-constant" (no verdict). One fix round APPROVED at low priority (why it matters: it turns the C-anomaly question into a registered verdict cheaply). It uses a Kerr-only half-period pre-check for NSTEP, a must-fail short-orbit C0 check, nice ≥ 15, < 1 GB, and yields to the r = 8 night.
 - **ansatz spin 0.3:** no exceptional k in (0, 30/7 − 1e-12]; endpoint non-VA. Spins 0.8 and 0.9 are running.
 - **tabula §213 fix round LAUNCHED 21:26** (amendment 2, 0ffe859; PGID 48091, nice 20, 1 GB cap; ~10–15 h). **On the r = 8 night:** touch `/Users/sumit/Github/SpaceTime/curvature/results/213b_STOP` for a clean checkpoint and exit (≤ 5 min); relaunching resumes bit-identically.
+
+### 2026-11-22 00:39 IST: Cuspis EXP-081b verdict INCONCLUSIVE (62ab26f); the Bridge's call
+- **Result:** INCONCLUSIVE under both rules, as registered. The Bridge read report.md and the analyzer output, and the numbers match.
+  - **Sole cause:** σ_W = 30.07. The W8P8 box8 geometry failed reliability at its first checkpoint (cum 2.0e-7 > 1e-7), so its 𝒞 term was dropped and R48 = 32.7. The nuisance was never actually measured.
+  - **Passed:** K, N2′, N_y (after the bug fix) and s-quad. **Failed:** N4 (s_cut 1.6e-4 against ≤ 1e-6; no consequence was registered).
+  - **Production bug** found by N_y: the pole-merge tolerance 1e-9 sat below the QEP accuracy. It is fixed (1e-7). A replay of every merge decision shows only W4P6c3 changed. The verdict is the same either way.
+  - **Descriptive only:** R∞ = 2.41 ± 0.29 without σ_W. Never quote it as a result.
+- **The Bridge's call:** 081b stays INCONCLUSIVE, with no amendment.
+  - The nuisance is re-measured as a NEW registration, EXP-081c. It discloses the seen value, and σ_W enters whatever it is.
+  - New numerics must first reproduce reliable geometries on the production path. If W8P8 fails again, the verdict is INCONCLUSIVE with no rescue.
+  - Find N4's root cause first. Measure resources on a dry run.
+  - Merge 081c with the P = 16 night-run redesign if they are the same computation. The draft comes to the Bridge before any compute.
+- **Physical-meaning flag sent:** a positive correction of about +2.4 is surprising next to the negative ones for C_T (−0.45) and F (about −0.24), and against the T46 prototype (−0.2 ± 0.5). The 081c design must be able to see a narrow-strip lattice term.
+- **Night r = 8 run:** still on hold, pending the 081c draft.
