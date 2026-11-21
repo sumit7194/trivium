@@ -1,0 +1,4 @@
+K4 control k=0 a=0.6 E=1.50 Re z>2.5: winding 1.0000 expected 1 | min|G1| on line 3.597e-02
+K4 control k=0 a=0.6 E=1.63 Re z>2.5: winding 2.0000 expected 2 | min|G1| on line 1.624e-03
+K4 control k=0 a=0.6 E=2.00 Re z>2.5: winding -0.0000 expected 0 | min|G1| on line 7.328e-02
+K4 control k=0 a=0.6 E=1.50 Re z>1.0: winding 2.0000 expected 2 | min|G1| on line 1.251e+00

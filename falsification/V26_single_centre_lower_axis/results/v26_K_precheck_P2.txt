@@ -1,0 +1,6 @@
+P2 must-fail K1: shift = value at (0.1, 1, 5.0) (8.4090e-01) + 1e-3 -> certified = False (must be False) | stop ('stuck', [0.18845016891891894, 0.1891891891891892, 1.0, 1.0, 9.990234375, 10.0])
+P2 must-fail K2: shift = value at (0.5, 1, 2.0) (9.8483e-01) + 1e-3 -> certified = False (must be False) | stop ('stuck', [0.9992081925675675, 1.0, 1.0, 1.0, 4.990234375, 5.0])
+P2 must-fail K3A: shift = value at (0.6, 1, 0.5) (6.0960e-01) + 1e-3 -> certified = False (must be False) | stop ('stuck', [0.9992081925675675, 1.0, 1.0, 1.0, 0.9921875, 1.0])
+P2 must-fail K3B: shift = value at (0.6, 2.0, 1.0) (6.0825e-01) + 1e-3 -> certified = False (must be False) | stop ('stuck', [0.9992081925675675, 1.0, 4.99609375, 5.0, 1.0, 1.0])
+PRECHECK OK
+$PY code/v26_K_precheck.py  5.26s user 0.02s system 99% cpu 5.289 total

@@ -279,3 +279,52 @@ Code: code/v26_J.py. This is the Bridge's own complex-interval arithmetic on mpm
 | Must-fail: certify Re H̃ − 0.01 > 0 | must NOT certify | refused at (θ, η) ≈ (1, 10), where Re H̃ ≈ 4.3e−3 (V26-I grid) | FIRES ✓ |
 
 **Scope.** The analytic tail for η ≥ 10 is not re-proved here; it was read, and checked on a grid in V26-I.
+
+---
+## Addendum K (2026-11-21 ~12:20, before any target run): the Bridge's INDEPENDENT check of Neon T19 (G1 gap)
+Source: /Users/sumit/Github/neon_work/onlykerr/T19_summary.md (UNVERIFIED). The claim: for every a in (0,1), k < 30/7
+and E > 1, G1(1+iy) != 0, and exactly 2 zeros of G1 lie in Re z > 1. Code is the Bridge's own; Neon's scripts are not
+used. Interpreter: conjecture_machine/.venv (CPython 3.14.5).
+
+**Method (K1-K3B).** code/v26_K_lib.py, code/v26_K.py.
+- A complex-interval enclosure of H~_theta(u) over a parameter box.
+- x-integration: midpoint rule plus a rigorous second-order remainder (h^3/12) * hull(f''/2), with f''/2 enclosed by
+  order-2 Taylor jets. Cells that touch the sqrt cut fall back to a modulus disk.
+- Adaptive bisection; M in {16, 32, 64, 128} by box size; a box is "stuck" below width 1e-5.
+- H~_theta is the same function V26-J certified. The map H = a theta^{-1/2} H~_theta(z/a) follows algebraically from
+  the ray representation (c4 = 21s, c2 = 120/7 - 18s, c0 = 40/7 + s with s = (1-theta)/theta), and that
+  representation was validated against the B8 ODE in V26-I1.
+
+**Clauses: each on Neon's OWN stated region and decision, as the proof uses them.**
+- **K1:** Re(H~_theta(1+i eta)^2) > 0 on theta in [0, 7/37], eta in [0, 10] (Case 1). Certified when
+  lo(Re H)^2 - max|Im H|^2 > 0 with lo(Re H) > 0.
+- **K2:** theta^{-1/2} |Im H~_theta(1+i eta)| < 1 on theta in [7/37, 1], eta in [0, 5]. Case 2a; the harmonic maximum
+  principle needs the WHOLE line, so [0, 5] including eta < 1.
+- **K3A:** Re H~ - |Im H~| > 0 on theta in [7/37, 1], u = 1 + i eta, eta in [0, 1]. Left edge of the Case 2b strip.
+- **K3B:** the same on theta in [7/37, 1], u = x0 + i, x0 in [1, 5]. Top edge.
+- PASS for each = every box certified, with a positive minimum certified margin. The margins are not compared to
+  Neon's (only positivity matters).
+- **K0:** the E-elimination identity D^2 G1/E^2 = (1-t)S^2 + 2tS + H^2 + 2iytS holds exactly (sympy).
+- **K4:** the end-to-end winding of G1 around Re z > 1 (D-contour, adaptive) is 2 within 0.01 at 24 seeded random
+  (a, k, E) plus 4 edge cases (a = 0.95 or 0.05, k = 4.27 or 4.2857 or -30, E = 1.02 or 6). Independent of the
+  certificates.
+- **K5 (sanity, NOT rigorous):** a float grid of the analytic tails is positive: K1 for eta in [10, 300], K2 for
+  eta in [5, 300], K3 top edge for x0 in [5, 300]. The tails themselves were read by hand.
+
+**Controls, PRE-RUN alone:**
+| Control | Expect | Pre-run |
+|---|---|---|
+| P1: enclosure contains the mpmath float value at 11 tiny boxes. Covers all four domains, the off-line u of K3B, the theta = 1 cut-fallback cells, and theta = 0, eta = 0 | 11/11 contained | 11/11 (results/v26_K_precheck_P1.txt) |
+| P2: per check, shift = float value at one fixed in-domain point + 1e-3, a known-false target by construction | must NOT certify | all 4 refused (results/v26_K_precheck_P2.txt) |
+| K4 controls at k = 0, a = 0.6, from the exact r+-: Re z > 2.5 at E = 1.5 / 1.63 / 2.0 gives 1 / 2 / 0; Re z > 1 at E = 1.5 gives 2 | exact counts | 1 / 2 / 0 / 2 (results/v26_K4_precheck.txt) |
+| K5: numpy Gauss-Legendre vs mpmath quad at 5 tail points | < 1e-9 | 2.4e-14 |
+| K5 must-fail, shift 10 (target-independent) | all negative | see results/v26_K5_precheck.txt |
+
+**Pre-check history (disclosed):**
+- The first pre-run exposed three Bridge errors: a wide-box ZeroDivision crash (now split), a clockwise contour sign,
+  and a wrong control expectation (E = 1.5 gives 1, not 2). All three were fixed before registration.
+- A first K5 must-fail used shift 0.05, which depends on the target. It incidentally revealed that the K1 and K2 tail
+  grid minimums exceed 0.05 and the K3 tail minimum does not. It was replaced by shift 10. K5 is a sanity clause only.
+
+**Scope.** The holomorphy of H~_theta on Re u >= 1 is inherited from the T14/U_a result (V26-I/J), not re-proved
+here. The tails are hand-read, not certified.

@@ -1,0 +1,57 @@
+P1 theta=0.4524 x0=1.000 eta=5.598 float H=(0.71340933 - 0.00056115703j) | encl re [0.71340877,0.71340982] im [-0.00056131202,-0.00056100232] width 1.0e-06 : True
+P1 theta=0.9242 x0=1.000 eta=4.657 float H=(0.24963917 - 0.0078907169j) | encl re [0.24963838,0.24963977] im [-0.0078910412,-0.0078903995] width 1.4e-06 : True
+P1 theta=0.5078 x0=1.000 eta=5.874 float H=(0.67598298 - 0.00062395154j) | encl re [0.6759825,0.67598339] im [-0.00062407302,-0.0006238303] width 9.0e-07 : True
+P1 theta=0.1847 x0=1.000 eta=5.119 float H=(0.87236878 + 1.0200929e-5j) | encl re [0.87236796,0.87236955] im [9.9243783e-6,1.0477089e-5] width 1.6e-06 : True
+P1 theta=0.6299 x0=1.000 eta=7.930 float H=(0.5861354 - 0.00041392225j) | encl re [0.58613512,0.5861356] im [-0.00041396424,-0.00041388037] width 4.9e-07 : True
+P1 theta=0.2753 x0=2.214 eta=1.000 float H=(0.82408493 - 0.0018266384j) | encl re [0.82408093,0.82408886] im [-0.0018301977,-0.0018231886] width 7.9e-06 : True
+P1 theta=0.2725 x0=4.239 eta=1.000 float H=(0.82466346 - 0.00033217689j) | encl re [0.82466246,0.8246644] im [-0.00033258148,-0.00033177349] width 1.9e-06 : True
+P1 theta=0.7548 x0=1.168 eta=1.000 float H=(0.49889178 - 0.064417396j) | encl re [0.49887246,0.49891044] im [-0.064437722,-0.064398175] width 3.8e-05 : True
+P1 theta=1.0000 x0=1.000 eta=0.700 float H=(0.2955175 - 0.17601815j) | encl re [0.29457799,0.29606938] im [-0.17672476,-0.17524173] width 1.5e-03 : True
+P1 theta=1.0000 x0=3.000 eta=1.000 float H=(0.12988305 - 0.042186777j) | encl re [0.12980163,0.12992968] im [-0.042256475,-0.042126606] width 1.3e-04 : True
+P1 theta=0.0000 x0=1.000 eta=0.000 float H=(0.93927958 + 0.0j) | encl re [0.93923538,0.93932827] im [-9.5062347e-8,1.0062659e-7] width 9.3e-05 : True
+Traceback (most recent call last):
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_lib.py", line 97, in H_enclose
+    fm = f_point(xm, th, X, E); jet = f_jet(xc, th, X, E)
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_lib.py", line 74, in f_point
+    Phi = (ui2 + 1)*((t + 1)*(t + 1)*(t + 1)).inv()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_lib.py", line 25, in inv
+    if not d.a > 0: raise ZeroDivisionError
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+ZeroDivisionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_lib.py", line 102, in H_enclose
+    fz = f_point(xc, th, X, E); cell = fz*h
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_lib.py", line 74, in f_point
+    Phi = (ui2 + 1)*((t + 1)*(t + 1)*(t + 1)).inv()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_lib.py", line 25, in inv
+    if not d.a > 0: raise ZeroDivisionError
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+ZeroDivisionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_precheck.py", line 27, in <module>
+    r = certify(name, shift=v + mp.mpf('1e-3'), max_boxes=3000, minw=1e-3)
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K.py", line 32, in certify
+    lb = dec(H_enclose(th, X, E, M), th) - shift; evals += 1
+             ~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_lib.py", line 104, in H_enclose
+    B = f_modbound(xc, th, X, E)*h; cell = C(iv.mpf([-B, B]), iv.mpf([-B, B]))
+        ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_lib.py", line 88, in f_modbound
+    Phi = (ui2 + 1)*((t + 1)*(t + 1)*(t + 1)).inv()
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sumit/Github/TheBridge/falsification/V26_single_centre_lower_axis/code/v26_K_lib.py", line 25, in inv
+    if not d.a > 0: raise ZeroDivisionError
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+ZeroDivisionError
+$PY code/v26_K_precheck.py  1.33s user 0.02s system 95% cpu 1.401 total
+K4 control k=0 a=0.6 E=1.50 Re z>2.5: winding -1.0000 expected 2 | min|G1| on line 3.597e-02
+K4 control k=0 a=0.6 E=2.00 Re z>2.5: winding 0.0000 expected 0 | min|G1| on line 7.328e-02
+K4 control k=0 a=0.6 E=1.50 Re z>1.0: winding -2.0000 expected 2 | min|G1| on line 1.251e+00
