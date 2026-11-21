@@ -27,3 +27,20 @@ for the direct referee.
 Cuspis), which matches T23's 1.16274. Cuspis's own T20-v0 re-implementation gave 1.141, which matches the Bridge's
 1.140946. So the CH05 route and T23's leg structure appear to be the SAME resummation. The ratios at 0.2 and 0.4
 stay sealed, for a blind comparison with Cuspis's CH05 values.
+
+## Blind comparison (~12:35 real clock; Cuspis's values sent without sight of the sealed ones, Cuspis file scripts/exp064_blind_ratio_output.txt)
+| twist | Cuspis CH05 rho (converged in t1) | Bridge sealed T23 ratio (b93cb63) | difference |
+|---|---|---|---|
+| 0.2 | 1.12449 (1.1244859) | 1.124486 | < 1e-6 |
+| 0.3 | 1.16274 | 1.162740 | < 1e-5 |
+| 0.4 | 1.17592 (1.1759179) | 1.175918 | < 1e-6 |
+
+**Reading.** Three independent constructions give the same resummation at every twist tested, to 5-6 digits:
+- Cuspis's CH05 Painleve route;
+- Neon T23's first-principles outer legs;
+- the Bridge's own re-implementation of those legs.
+T20-v0 (symmetric legs) is excluded at every twist (1.1180 / 1.1409 / 1.1362).
+
+**Still open:** the ABSOLUTE first-order normalisation. Is the linear term the Born form (the l = 0 multipole only),
+or T23's Gamma(3a+1/2)Gamma(3/2-a) form? Cuspis's BIE referee measures it absolutely. The growth on Re a = 1/2
+follows the linear term times this O(1) resummation, and both candidate linear terms grow at rate <= pi < 2pi.
