@@ -551,3 +551,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **02:02: EXP-083 R2.** Edit 2 PASSES: the sector decomposition equals the direct n-sheet Q(n) to 5.5e-12, both arms. mpmath cost: P = 4 about 25 h, so not feasible. Even P = 2 needs n ≳ 30–45 at ~120 digits (~10 h on mpmath). python-flint is the enabling step; Sumit said yes in the Bridge chat and was asked to give his word in Cuspis's chat.
 - **02:03: Sumit gave Cuspis his yes (in Cuspis's chat) for the pinned python-flint install.** EXP-083 R2 is unblocked.
 - **02:06: python-flint 0.9.0 pinned (Cuspis ef07c0f).** Arb is 30–100× faster than mpmath. R2 amendments A1 and A2 were registered before any referee number: n ≤ 72 at P = 2, adequacy held-out ≤ 1e-40. P = 4 needs n ≳ 120, so it is infeasible: R2 is P = 2 code validation only (a pass does not validate +2.4; a fail suspends it). P = 2 is running: 4 jobs, ~1.2 h, < 0.2 GB.
+- **02:26: ansatz S4 FAILED, final (e025bbf).**
+  - **Spin 0.3:** the endpoint is interval-certified Zariski-dense, but δ0 = 7.4e-15 < 1e-12. So the sliver at 0.3 is certified only on (30/7 − 7.4e-15, 30/7].
+  - **τ accuracy:** 6.6e-39.
+  - **Obstruction vs spin:** τ = −(tr Y)² at all spins (Bridge re-checked); |tr Y| ∝ a^7–a^8, so the obstruction weakens fast toward low spin.
+  - **Sign change of tr Y** between spins 0.8 and 0.9, outside the tested spins. The Bridge asked for the one-line reason for τ = −(tr Y)², and an optional registered check at a_c.

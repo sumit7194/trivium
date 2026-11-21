@@ -70,8 +70,10 @@ The owner (ansatz) graded every point (data/nve/T38_GRADING.md, d153394, plus ad
      there is no exceptional k (floating point).
    - **Sliver certificates (2026-11-22):** interval-certified at spins 0.6, 0.8 and 0.9 (E = 0.8), with spins 0.8 and
      0.9 under a post-failure amendment the Bridge checked as sound. Spin 0.3 FAILS for a real reason: the endpoint
-     group is near-degenerate (τ ≈ −4.5e-10), so the sliver there is floating point only, pending a registered S4.
-     Open question for the claim sentence: does the obstruction weaken as the spin goes to 0?
+     group is near-degenerate (τ ≈ −4.5e-10), so the sliver there is floating point only, and a registered S4 failed (certified only within 7.4e-15 of the
+     endpoint).
+   - **Answer for the claim sentence:** the endpoint obstruction weakens fast toward low spin (|tr Y| ∝ a^7–a^8).
+     Spins below 0.3 are not tested.
 3. Write-up items: the MRS section (T49 draft, then ansatz's check), points 2b, 4, 5, 6, and the 1a wording.
 4. One claim sentence carrying every scope qualifier (spin, floating point vs interval, the sliver, first order on
    the lower axis), so outreach text cannot drift from it.
