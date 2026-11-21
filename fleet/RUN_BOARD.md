@@ -411,3 +411,12 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **16:02:** T36 sent (/u/2): Cuspis's correct n -> 1 sector-continuation brief (7.9k characters arrived). T37 sent (/u/0): the consolidated K5 write-up. T33 DONE (/u/1): beta* = -0.206224720 +- 3e-9 and a homoclinic pitchfork window; consistent with Quantum's finding; forwarded to Quantum with the downloaded code. /u/1 free. **Quantum main_redo (E_REP A2) PASS** (7d56c34; reported ~11 h late because of a watcher hang). Next checkpoints to be planned with Quantum.
 - **16:11 Quantum:** main_redo section-5 diagnostic done (a87eea3). GO for the continuous registered run R1-R4 (~62 h, 1 core; checkpoints at 295.9, 581.8 (deferred), 793-805 (second swing), and the return at 1018.7), after the Melnikov counted run ends. Amendment A3 to be drafted with stop conditions (harness error, guard, per-step cost > 2x).
 - **16:15:** Quantum A3 (68b94bc) AGREED, now registered (5 time checkpoints judged; sections deferred; launch after the Melnikov verdict). Cuspis is checking T36 (E1-E6); the Bridge transcribed T36 verbatim to neon_work/dkappa/T36_full.md. Neon /u/2 asked for the T36 code and the straddle question (A).
+
+### 17:24 updates (2026-11-21 evening)
+- **Sumit: no cost constraint for the fleet** (he tracks the limits himself). Broadcast to all 5 research sisters. Still in force: no Fable, the box RAM guards, and the new-directions hold.
+- **tabula §212** sealed (cdae910): C MIXED, non-discriminating. The PINN chain §202–§212 is PARKED.
+- **tabula §213 GO** (C anomaly, queue item 1; prereg 271e0bb, amendment 1bd97c1): ~2 h, 1 core, cap 1.5 GB; first, one full-length integration to check how RSS scales.
+  - FINDING: §191 M1/§191b and leg 6 used sub-polar-period arcs (window 6 units vs a 22–30 unit half-period). So "C varies 40.8× less" is a short-arc statement and must carry that qualifier.
+- **Quantum B15c REGISTERED** (a126a6b): the Kerr negative control for steps 3–4 (T1 #4155, T2 the 80 measured accepts, T3 the 66 extrapolated; vacuous-pass guard; a discriminating HH-based planted reject). Runs after the Melnikov verdict and the A3 launch.
+- **DeepStrain:** doc fixes 0ef19d0; idle (everything else is a new direction).
+- **Cuspis:** a 120-digit honest Q(n) to n = 90, to split the P5 gap between the q = 0 and q ≠ 0 sectors; T40b is on Neon.
