@@ -51,7 +51,7 @@
 - Quantum's Melnikov stage-2 verdict (~10:00).
 - ansatz's k = 4 test: DONE, not an exception (E = 0.8, spin 0.6).
 - Neon T17: DONE. The normalisation is fixed, and every reflection order grows at rate π < 2π (no log), PROVIDED the continuum resummation and q-sum behave. Waiting for Cuspis.
-- tabula §206: DONE. The boundary data did NOT cause the drift. The drift comes from starting fits that sit about 1000× above the truth's loss. §207: the network CAN sit near the truth with a much lower loss than where training drifts (20–34× the truth's loss, gate 10×), so the drift looks like a path or optimiser effect. §208 (approved) tests that directly.
+- tabula §206: DONE. The boundary data did NOT cause the drift. The drift comes from starting fits that sit about 1000× above the truth's loss. §207: the network CAN sit near the truth with a much lower loss than where training drifts (20–34× the truth's loss, gate 10×), so the drift looks like a path or optimiser effect. §208: even with small steps, training steadily moves AWAY from the truth while every error measure improves. The loss, as this network can represent it, tilts away from the truth. §209 (saturation) is approved; §210 (does a bigger network fix it?) is drafted, for your or my go.
 
 ## Notes
 - The Mac stayed within its limits. One guard stop at 05:08 was caused by Chrome (Gemini pages ~6 GB), not by

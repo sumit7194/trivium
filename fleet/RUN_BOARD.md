@@ -307,3 +307,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Descriptive: they are 3–50× LOWER in loss and 6× closer to the truth than where the §206 releases ended. So the
   drift is a path effect, not the loss preferring a far solution (a reading, not registered).
 - §208 GO (prereg first): release from the hybrid points with §206's exact settings, plus a descriptive arm at 10× lower lr.
+
+### 2026-11-21 07:11 IST: tabula §208 DONE, verdict C MIXED (PIN 1/3)
+- Descriptive, and informative: at lr/10 the loss falls, the held-out residual falls and IC/BC fall in all 3 seeds,
+  yet the field drifts smoothly away from the truth (0.017 → 0.035–0.038). That is the §203-seed-0 pattern, now 3/3.
+- Reading (not registered): there is a step-size walk PLUS a tilt (descent within this network moves away from the
+  truth).
+- §209 GO (prereg first): saturation, lr/10 over a 4× budget. §210 (capacity ladder) to be drafted; it runs after
+  §209 with a go.
