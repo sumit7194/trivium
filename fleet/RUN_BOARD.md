@@ -435,3 +435,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - spin coverage, with ansatz running a = 0.3, 0.8, 0.9;
   - an E = 1.5 point for §161, queued with its own prereg;
   - the write-up items (MRS punctures, integrability-class framing, citations).
+- **19:08 Cuspis EXP-081a HALTED, no verdict:**
+  - (A) The watchdog killed it at W = 2, r = 6 (1.94 GB, memory accumulating across geometries).
+  - (B) A precision defect: the edge-to-wall cut makes G^(½+is) grow like e^{2πs}, so the edge g(s) is numerically destroyed beyond s ≈ 2, and a spurious pole near s = 4 appears at r = 4. The edge-saddle R values seen are erratic (1.82, 3.62, −237, 21.5). Integer-n checks pass, because they never probe large Im α.
+  - Next: EXP-081b (a pole cutoff, registered 𝒞 truncation with a reliability criterion, a fresh process per geometry). The Bridge added: analytic angle-scaling balancing, an extended-precision referee control at s = 2–4, and a sign decision only if the truncation variants agree.
+  - **The night r = 8 run is postponed until EXP-081b passes.**
