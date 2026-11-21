@@ -110,3 +110,29 @@ def H_float(theta, X, E, dps=25):
     a, b, g = 21*(1 - theta), mp.mpf(120)/7*theta - 18*(1 - theta), 1 + mp.mpf(33)/7*theta
     f = lambda x: x*(1 - x)*(1 + u**-2)/(1 + x*x/u**2)**3*mp.sqrt(a + b*x*x/u**2 + g*(x*x/u**2)**2)
     return mp.sqrt(mp.mpf(8)/5)*mp.quad(f, [0, 0.5, 1])
+
+# --- Addendum K' (labelled amendment, 2026-11-21): per-cell INTERSECTION of the two rigorous enclosures ---
+def _meet(a, b):
+    re = iv.mpf([max(lo(a.re), lo(b.re)), min(hi(a.re), hi(b.re))]); im = iv.mpf([max(lo(a.im), lo(b.im)), min(hi(a.im), hi(b.im))])
+    return C(re, im)
+def H_enclose_tight(th, X, E, M):
+    """as H_enclose, but each cell uses the intersection of (midpoint + 2nd-order remainder) and (h * hull of f over
+    the cell); both contain the cell integral, so the intersection does too. Fixes the blow-up of the jet remainder
+    where sqrt(Q) is near 0 (theta -> 1, small x)."""
+    re = iv.mpf(0); im = iv.mpf(0); h = mp.mpf(1)/M
+    for i in range(M):
+        x0, x1 = mp.mpf(i)/M, mp.mpf(i + 1)/M; xc = iv.mpf([x0, x1]); xm = (x0 + x1)/2
+        cands = []
+        try:
+            fm = f_point(xm, th, X, E); jet = f_jet(xc, th, X, E); cands.append(fm*h + jet.c[2]*(h**3/12))
+        except (CutError, ZeroDivisionError): pass
+        try: cands.append(f_point(xc, th, X, E)*h)
+        except (CutError, ZeroDivisionError): pass
+        if not cands:
+            B = f_modbound(xc, th, X, E)*h; cell = C(iv.mpf([-B, B]), iv.mpf([-B, B]))
+        else:
+            cell = cands[0]
+            for c2 in cands[1:]: cell = _meet(cell, c2)
+        re += cell.re; im += cell.im
+    s = iv.sqrt(iv.mpf(8)/5)
+    return C(s*re, s*im)

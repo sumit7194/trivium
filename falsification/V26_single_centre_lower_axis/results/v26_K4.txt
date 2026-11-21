@@ -1,0 +1,29 @@
+K4 a=0.623 k=  3.0963 E=4.046 : winding 2.0000 | min|G1| on Re z=1: 7.478e+00 
+K4 a=0.916 k=-11.4079 E=1.141 : winding 2.0000 | min|G1| on Re z=1: 3.023e-01 
+K4 a=0.527 k=-10.1047 E=1.668 : winding 2.0000 | min|G1| on Re z=1: 1.784e+00 
+K4 a=0.509 k=-12.8301 E=1.238 : winding 2.0000 | min|G1| on Re z=1: 5.335e-01 
+K4 a=0.778 k=-14.9146 E=1.336 : winding 2.0000 | min|G1| on Re z=1: 7.852e-01 
+K4 a=0.140 k=-15.2840 E=1.616 : winding 2.0000 | min|G1| on Re z=1: 1.612e+00 
+K4 a=0.904 k=-29.6495 E=2.003 : winding 2.0000 | min|G1| on Re z=1: 3.011e+00 
+K4 a=0.859 k=-10.1316 E=3.332 : winding 2.0000 | min|G1| on Re z=1: 1.010e+01 
+K4 a=0.386 k=-25.0861 E=3.278 : winding 2.0000 | min|G1| on Re z=1: 9.747e+00 
+K4 a=0.242 k= -0.6606 E=4.542 : winding 2.0000 | min|G1| on Re z=1: 1.963e+01 
+K4 a=0.133 k= -0.8748 E=1.945 : winding 2.0000 | min|G1| on Re z=1: 2.785e+00 
+K4 a=0.729 k=-25.3410 E=1.854 : winding 2.0000 | min|G1| on Re z=1: 2.439e+00 
+K4 a=0.689 k=-28.5994 E=1.497 : winding 2.0000 | min|G1| on Re z=1: 1.243e+00 
+K4 a=0.310 k=-12.1195 E=1.964 : winding 2.0000 | min|G1| on Re z=1: 2.857e+00 
+K4 a=0.658 k= -5.9708 E=1.891 : winding 2.0000 | min|G1| on Re z=1: 2.576e+00 
+K4 a=0.277 k=-24.6124 E=1.630 : winding 2.0000 | min|G1| on Re z=1: 1.656e+00 
+K4 a=0.853 k= -4.1094 E=4.052 : winding 2.0000 | min|G1| on Re z=1: 1.542e+01 
+K4 a=0.217 k= -9.7680 E=1.811 : winding 2.0000 | min|G1| on Re z=1: 2.282e+00 
+K4 a=0.806 k=-14.0627 E=3.313 : winding 2.0000 | min|G1| on Re z=1: 9.977e+00 
+K4 a=0.196 k= -5.4890 E=1.278 : winding 2.0000 | min|G1| on Re z=1: 6.352e-01 
+K4 a=0.269 k=-11.9964 E=5.655 : winding 2.0000 | min|G1| on Re z=1: 3.099e+01 
+K4 a=0.269 k=-22.1737 E=1.104 : winding 2.0000 | min|G1| on Re z=1: 2.189e-01 
+K4 a=0.470 k=-26.5376 E=2.834 : winding 2.0000 | min|G1| on Re z=1: 7.032e+00 
+K4 a=0.736 k=-15.6650 E=1.392 : winding 2.0000 | min|G1| on Re z=1: 9.377e-01 
+K4 a=0.950 k=  4.2700 E=1.020 : winding 2.0000 | min|G1| on Re z=1: 4.045e-02 
+K4 a=0.050 k=  4.2700 E=6.000 : winding 2.0000 | min|G1| on Re z=1: 3.500e+01 
+K4 a=0.950 k=-30.0000 E=1.020 : winding 2.0000 | min|G1| on Re z=1: 4.045e-02 
+K4 a=0.500 k=  4.2857 E=1.300 : winding 2.0000 | min|G1| on Re z=1: 6.914e-01 
+VERDICT K4 PASS

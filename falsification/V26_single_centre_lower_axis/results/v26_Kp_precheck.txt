@@ -1,0 +1,22 @@
+P1' contain theta=0.4524 x0=1.00 eta=5.598 : True (width 1.0e-06)
+P1' contain theta=0.9242 x0=1.00 eta=4.657 : True (width 1.4e-06)
+P1' contain theta=0.5078 x0=1.00 eta=5.874 : True (width 9.0e-07)
+P1' contain theta=0.1847 x0=1.00 eta=5.119 : True (width 1.6e-06)
+P1' contain theta=0.6299 x0=1.00 eta=7.930 : True (width 4.9e-07)
+P1' contain theta=0.2753 x0=2.21 eta=1.000 : True (width 7.9e-06)
+P1' contain theta=0.2725 x0=4.24 eta=1.000 : True (width 1.9e-06)
+P1' contain theta=0.7548 x0=1.17 eta=1.000 : True (width 3.8e-05)
+P1' contain theta=1.0000 x0=1.00 eta=0.700 : True (width 4.9e-04)
+P1' contain theta=1.0000 x0=3.00 eta=1.000 : True (width 6.6e-05)
+P1' contain theta=0.0000 x0=1.00 eta=0.000 : True (width 9.3e-05)
+P1w' width at theta-corner box ((0.9999938, 1.0), (1, 1), (4.99992, 5.0)) M=128: 7.683e-04 (must be < 0.05 and must not grow with M) : True
+P1w' width at theta-corner box ((0.9999938, 1.0), (1, 1), (4.99992, 5.0)) M=512: 6.412e-04 (must be < 0.05 and must not grow with M) : True
+P1w' width at theta-corner box ((0.999, 1.0), (1, 1), (0.99, 1.0)) M=128: 4.918e-02 (must be < 0.05 and must not grow with M) : True
+P1w' width at theta-corner box ((0.999, 1.0), (1, 1), (0.99, 1.0)) M=512: 4.906e-02 (must be < 0.05 and must not grow with M) : True
+P1w' width at theta-corner box ((0.999, 1.0), (4.99, 5.0), (1, 1)) M=128: 7.462e-03 (must be < 0.05 and must not grow with M) : True
+P1w' width at theta-corner box ((0.999, 1.0), (4.99, 5.0), (1, 1)) M=512: 7.410e-03 (must be < 0.05 and must not grow with M) : True
+P2' must-fail K1 (tight): certified = False (must be False)
+P2' must-fail K2 (tight): certified = False (must be False)
+P2' must-fail K3A (tight): certified = False (must be False)
+P2' must-fail K3B (tight): certified = False (must be False)
+PRECHECK K' OK

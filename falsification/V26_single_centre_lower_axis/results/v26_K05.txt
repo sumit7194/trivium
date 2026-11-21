@@ -1,0 +1,5 @@
+K0 identity holds exactly: True
+K5 K1 tail Re H^2 (eta>=10): grid min 7.5676e-01
+K5 K2 tail 1 - th^-1/2|Im H| (eta>=5): grid min 9.1570e-01
+K5 K3 top-edge tail Re H - |Im H| (x0>=5): grid min 1.4499e-03
+VERDICT K0 PASS | K5 PASS

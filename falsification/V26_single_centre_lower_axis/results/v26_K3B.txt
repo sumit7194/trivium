@@ -1,0 +1,2 @@
+K3B: certified = True | boxes 749 | evals 1497 | min certified margin 4.20714e-5 | stop None | 100 s
+VERDICT K3B PASS

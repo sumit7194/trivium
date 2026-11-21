@@ -328,3 +328,25 @@ used. Interpreter: conjecture_machine/.venv (CPython 3.14.5).
 
 **Scope.** The holomorphy of H~_theta on Re u >= 1 is inherited from the T14/U_a result (V26-I/J), not re-proved
 here. The tails are hand-read, not certified.
+
+### Addendum K′ (labelled amendment, registered AFTER K2's registered FAIL and BEFORE any K′ run)
+**Why.** The registered K2 FAILED (stuck at theta ~ 1, eta ~ 5, before any box was certified). A labelled post-run
+diagnostic (results/v26_K2_postdiag.txt) found the cause in the Bridge's enclosure, not in Neon's claim:
+- The float value there is theta^{-1/2}|Im H| ~ 0.08, far below 1.
+- The jet remainder blows up where sqrt(Q) -> 0 (theta -> 1, alpha = 21(1-theta) -> 0, small x), and it WORSENS
+  with M: Im width ~12 at M = 128, ~4.7e3 at M = 512, ~1.7e7 at M = 2048.
+- My P1 controls checked containment only, not tightness. That is the gap in the pre-check.
+
+**Change (code/v26_K_lib.py: H_enclose_tight).** Each cell uses the INTERSECTION of the two rigorous enclosures
+(midpoint + remainder, and h * hull of f over the cell). Nothing else changes: same decisions, domains, box rules and
+PASS criteria.
+
+**K2′:** the K2 clause as registered, on the tight path. **K3A′:** the same, run ONLY if the registered K3A (still
+running) FAILS or is still unfinished at 2 h; otherwise the registered K3A verdict stands. K1 and K3B keep their
+registered PASS.
+
+**Controls, PRE-RUN on the tight path (results/v26_Kp_precheck.txt):**
+- P1′: containment at the 11 boxes, 11/11.
+- P1w′ (NEW): width at three theta-corner boxes is < 0.05 and does not grow with M (7.7e-4 / 6.4e-4; 4.9e-2 / 4.9e-2;
+  7.5e-3 / 7.4e-3).
+- P2′: all 4 known-false must-fails refuse.

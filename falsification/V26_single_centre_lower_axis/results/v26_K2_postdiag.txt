@@ -1,0 +1,21 @@
+float theta^-1/2 |Im H| near the stuck corner:
+  theta 0.900 eta 3.0 : 0.024527
+  theta 0.900 eta 4.0 : 0.010659
+  theta 0.900 eta 4.5 : 0.007521
+  theta 0.900 eta 5.0 : 0.005497
+  theta 0.990 eta 3.0 : 0.099694
+  theta 0.990 eta 4.0 : 0.063206
+  theta 0.990 eta 4.5 : 0.049864
+  theta 0.990 eta 5.0 : 0.039002
+  theta 0.999 eta 3.0 : 0.127785
+  theta 0.999 eta 4.0 : 0.097706
+  theta 0.999 eta 4.5 : 0.086607
+  theta 0.999 eta 5.0 : 0.077340
+  theta 1.000 eta 3.0 : 0.131974
+  theta 1.000 eta 4.0 : 0.103312
+  theta 1.000 eta 4.5 : 0.092897
+  theta 1.000 eta 5.0 : 0.084297
+enclosure width at the stuck box vs M:
+  M 128: Im in [-2.0649772, 9.9691654]
+  M 512: Im in [-970.6306, 3776.0808]
+  M 2048: Im in [-3562609.1, 13488131.0]

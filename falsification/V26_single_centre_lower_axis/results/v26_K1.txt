@@ -1,0 +1,2 @@
+K1: certified = True | boxes 251 | evals 501 | min certified margin 0.0354077 | stop None | 27 s
+VERDICT K1 PASS

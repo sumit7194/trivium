@@ -1,0 +1,2 @@
+K2: certified = False | boxes 0 | evals 34 | min certified margin +inf | stop ('stuck', [0.9999938140044341, 1.0, 1.0, 1.0, 4.9999237060546875, 5.0]) | 5 s
+VERDICT K2 FAIL
