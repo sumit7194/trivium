@@ -28,3 +28,44 @@ v_xx + v_x/x + (3/16)/(x − ã)² v = 0.
 
 **Literature (to check after the computation):** whether axis-geodesic first-order non-integrability for
 Curzon–Chazy is new relative to Georgiev 2019 (equatorial / periodic-orbit method).
+
+---
+## Addendum B (2026-11-21 ~11:20, before the target run): check of Neon T21 Theorem 1 on its own worked example
+Source: /Users/sumit/Github/neon_work/onlykerr/T21_summary.md (UNVERIFIED). Theorem 1 is the annulus winding-number
+obstruction. Its hypotheses on a circle: all zeros and poles of P_a inside are simple, |m| >= 2, N_in + P_in >= 3,
+and ||eta|| <= 1/15. Conclusion: SL2. The Bridge re-derived the proof steps by hand (see the summary). This addendum
+checks numerically the quantities the proof uses, on Neon's example. Scope: one example, so this is NOT a proof check
+of Theorem 2.
+
+**Target:**
+- f0 = prod_{k=1..8} (1 - z/2^{k^2}); the factors for k >= 9 differ from 1 by < 2^{-68} on the circle.
+- a = 0.7, circle |z| = R = 2^{12.5}.
+- P_a = a - f0, so P_a'/P_a = f0'/(f0 - a).
+- Code: code/v27_B_lib.py (DOP853, rtol 1e-12) and code/v27_B.py.
+- Interpreter: conjecture_machine/.venv (CPython 3.14.5).
+
+**Clauses, each on the claim's own circle and example:**
+- **B1 (counts).**
+  - The winding of P_a around the circle is 3 (|raw - 3| < 1e-3). f0 is entire, so P_in = 0; hence m = 3 and
+    N_in + P_in = 3.
+  - Simplicity: Newton from 2, 16, 512 finds the three a-points inside, all with |f0'| > 1e-6 there.
+  - The three a-points are distinct, which accounts for all of the winding.
+- **B2 (eta).**
+  - max |eta| on 2^16 points is < 1/15.
+  - The 2^16-point and 2^14-point maxima agree to 1e-6.
+  - Neon's stated value: |max eta - 0.06045| <= 1e-4.
+- **B3 (trace).**
+  - |tr M - (-1869.187)| <= 0.01, which is Neon's stated value at its stated 3 decimals, with margin.
+  - |tr M| > 27, the proof's own bound.
+- **B4 (det).** |det M - 1| <= 1e-6, i.e. 100 x the pre-run C3 floor of 6.9e-9.
+- **B5 (D-infinity step).** The winding of v+ v- (the Floquet eigen-solutions) around the circle is 1, with
+  |raw - 1| < 0.01. That gives a winding of 2 for Y, as the proof states.
+
+**Controls, PRE-RUN alone (results/v27_B_controls_prerun.txt):**
+| Control | Expect | Pre-run |
+|---|---|---|
+| C3 Euler P = z^3 at the same R (integrator floor) | tr = -2cosh(pi sqrt23/2) | relerr 1.3e-13, det-1 6.9e-9 |
+| C1 must-escape (z-1)(z-2), \|z\| = 20 | tr = -2cosh(pi sqrt2), winding(v+v-) = 1, N + P = 2 < 3 | relerr 2.3e-13, winding 1.0000, m = 2 |
+| C2 must-fail hypothesis: same f0 at R = 2^9.3 | max\|eta\| > 1/15 is flagged | 1.448 (flagged) |
+
+**PASS** = B1-B5 all hold. A FAIL on any clause is recorded as registered.
