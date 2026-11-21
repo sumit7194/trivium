@@ -21,7 +21,7 @@
 | Three remaining Only-Kerr lemmas | Neon T6 | Bridge V25-C exact |
 | Single-centre case from scratch (lower-axis trick plus classification) | Neon T3 + T9 | Bridge V26-E; matches our V26 |
 | Invisible family: proof of non-integrability | Neon T8 | Bridge V26-F; ansatz 50-digit (V26-H): agreement ~1e−11 at 3 energies; group step basis-free |
-| The same for every Kerr spin a | Neon T11 | Bridge V26-G exact; ansatz review (one gap: k = 4, being tested) |
+| The same for every Kerr spin a | Neon T11 | Bridge V26-G exact; ansatz review; k = 4 tested: not an exception (E = 0.8, spin 0.6) |
 | Allowed k-range (−∞, 30/7) proved for all spins | Neon T14 | Bridge V26-I: representation matches to 1e−15; wall crossing independently confirmed |
 | Curzon–Chazy: SL2 at every energy (hypergeometric) | Neon T16 | Bridge V27-A exact |
 | Literature map (16 papers) | Neon T18 | all arXiv IDs verified; one new prior-art paper (Kokkinos 2026) |
