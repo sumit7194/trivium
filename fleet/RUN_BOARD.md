@@ -469,3 +469,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - 081b's W8 "N1 failure" measured both methods' errors.
     - Dry run: about 4 h in the daytime, < 1 GB.
   - **No merge with the night run.** 081c is a resolution test; the P = 16 run tests volume. The P = 16 night run stays on hold, since R(P) is flat for P = 8–12.
+- **00:50: 081c edit B was swapped by agreement.**
+  - **Why:** a 40-digit g-level arm at W8 would take about 8–13 days, so it isn't feasible.
+  - **Replaced by:**
+    - B2a: an independent H(α) build compared entrywise, written blind to the production code, with a must-fire that flips one twist link;
+    - B2b: one refinement step vs two at the g level.
+  - **Already confirmed:** A's planted must-fire arithmetic gives an impact of 1.02e-6, 10× the threshold.
+  - **Next:** Cuspis registers and runs in the daytime.
