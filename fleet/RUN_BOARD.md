@@ -584,3 +584,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - Merge rule with a positive control on an hh2-classified covering.
     - No cap changes; (a) checkpoints resumed.
   - **Slots stay 2:** load is 10.9 on 10 cores. 4 after tabula §213 finishes, if the load drops.
+- **04:15: Quantum B15d-2 REGISTERED (7e81cf0).** The twin runs edges first. The merged-COVER rule has a positive control (byte-identical to GB), and a vacuous edge chunk is never classified alone. The old twin (a) PIDs are paused (SIGSTOP), keeping 4.5 h and 9 h of in-flight work in memory; runner PID 30241. Recipe stays unchunked; edges-first for Kerr is optional with its own amendment. **Restart note:** the paused pieces must reach a checkpoint before any Mac restart.
