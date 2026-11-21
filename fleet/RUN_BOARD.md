@@ -508,3 +508,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - |τ| vs spin, for the claim sentence ("weakens toward low spin?").
     - It also noted that τ being identical across pairs is automatic (ABC = I).
   - **S1** (the 0.9 resolution protocol) was committed before any 0.9 output.
+- **01:44: Cuspis check (c) FAILED its own prescription (a5bf055).**
+  - **The test:** a pure-gauge ε-family, where the exact answer is 0.
+  - **Results:** the threshold code grows like 0.06·ln(1/ε), then jumps to 0. P1 + P2 gives 11–17, and 12.3 at the gauge point.
+  - **Downgraded:** "T0 resolved" is now unverified, and sealed P3 is unsupported.
+  - **The Bridge asked for:**
+    - an honest integer-n Q(n; ε) reference NOW, by Cuspis itself, registered briefly with the prediction "integer Q(n) = O(ε²) ⇒ the continuation is at fault";
+    - a code-level answer on whether sigma3d's σ-side continuation has an analogous near-confluence issue. If yes, an honest integer-n σ-side control is a missing control for 081b's +2.4.
+  - T46e will be graded only against the integer-n reference.
