@@ -382,3 +382,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **12:34 Cuspis EXP-066 (8e5f336):** T25 code read in full and rerun (identical). Shape test vs CH05: constant to 2-4e-5. NEW absolute cross-coefficient test: 12 slices to ~2e-4. Real-twist C+ VERIFIED (four routes). Line growth partially verified (y <= 5); the all-y bound is open (T26). Next: the Lemma U write-up.
 - **12:37 HOLD (Sumit):** no new starts until Sumit has discussed ~/Downloads/FLEET_IDEAS_2026-11-21.md with the Bridge. Running: tabula §211 and Quantum Melnikov (monitor only). Cuspis holds (T26 check only); DeepStrain and ansatz idle; all Gemini accounts idle.
 - **12:39 CLARIFIED (Sumit):** the hold is ONLY on NEW directions. Current threads continue, with Gemini: Only-Kerr finish, Cuspis delta-kappa, K5 write-up, MN Melnikov, §211, the existing drafts.
+- **12:47 current-thread progress:**
+  - **Cuspis:** Route A withdrawn (a two-branch-line flaw); SC is now primary. Gates adopted. Bridge GO to source
+    reading, with three points (measure the "scaleless" saddle; a planted Abel-Plana failure; final-error wording).
+  - **ansatz:** both drafts at v1 (a03e1da). The Bridge read the rank-3 note and its cover: five points; pre-send
+    condition = a RESULTS entry for cg_recheck. The TS/MN paper is still to be read in place (embargo).
+  - **ONLY_KERR digest:** section 13 added (today's results and provenance).
+  - **Quantum:** the embargo flag was a false regex match; no change.
