@@ -256,3 +256,26 @@ c0 = −(√(8/5)/a)∫₀¹ x(1 − x)u⁻²(1 + x²u⁻²)⁻³√(c4 + c2x²u
 | Wall crossing (Neon's k_wall = −22.5906090375, z_wall = −0.36260544 + 1.10838499i), via B8 continuation | must give ≈ 0 | \|f0² + c0²\| = 9.4e−8 vs \|f0\|² = 7.67 | ✓ |
 
 The wall control independently confirms Neon's wall location to the precision of the digits given.
+
+## Addendum J (2026-11-21 ~09:30, before the target run; controls pre-checked): the Bridge's INDEPENDENT re-run of Neon T14's interval certificate (one of the pre-outreach checks Sumit asked for)
+Code: code/v26_J.py. This is the Bridge's own complex-interval arithmetic on mpmath.iv; Neon's script was not used.
+
+**Claim re-certified.** Re H̃_θ(1 + iη) > 0 for all (θ, η) ∈ [0, 1] × [0, 10].
+
+**Method.**
+- Lower bound for Re∫f dx = Σ_i (1/M)·min(Re f over x-cell × box).
+- 1/u² is taken from the exact |u|² = 1 + η².
+- The principal-sqrt enclosure uses the exact lower bounds of R + X; cells that touch the branch cut fall back to the
+  rigorous bound Re f ≥ −|f|.
+- Adaptive bisection in (θ, η), with M = 24, 48 or 96 x-cells by box size.
+
+**PASS:** every box is certified, with a positive minimum certified lower bound.
+
+**Control table (pre-checked; results/v26_J_precheck.txt).**
+
+| Control | Type | Pre-check result | Status |
+|---|---|---|---|
+| Enclosure validity at 6 random tiny boxes (M = 400) | must-pass: lower ≤ float value | gaps 5.6e−4 to 9.2e−3 | ✓ |
+| Must-fail: certify Re H̃ − 0.01 > 0 | must NOT certify | refused at (θ, η) ≈ (1, 10), where Re H̃ ≈ 4.3e−3 (V26-I grid) | FIRES ✓ |
+
+**Scope.** The analytic tail for η ≥ 10 is not re-proved here; it was read, and checked on a grid in V26-I.

@@ -1,0 +1,7 @@
+PRECHECK enclosure: theta 0.238 eta 5.442  lower 8.364545e-01  <= float 8.430967e-01 : True  (gap 6.6e-03)
+PRECHECK enclosure: theta 0.370 eta 6.039  lower 7.600185e-01  <= float 7.659967e-01 : True  (gap 6.0e-03)
+PRECHECK enclosure: theta 0.626 eta 0.655  lower 6.171774e-01  <= float 6.264206e-01 : True  (gap 9.2e-03)
+PRECHECK enclosure: theta 0.013 eta 8.375  lower 9.527080e-01  <= float 9.600636e-01 : True  (gap 7.4e-03)
+PRECHECK enclosure: theta 0.259 eta 2.343  lower 8.224802e-01  <= float 8.301619e-01 : True  (gap 7.7e-03)
+PRECHECK enclosure: theta 0.996 eta 4.703  lower 3.441675e-02  <= float 3.498095e-02 : True  (gap 5.6e-04)
+PRECHECK must-fail (Re H - 0.01 > 0 must NOT certify): certified = False | boxes 0 | stop: ((0.99993896484375, 1.0), (9.998779296875, 9.9993896484375))
