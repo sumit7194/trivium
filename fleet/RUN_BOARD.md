@@ -420,3 +420,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **Quantum B15c REGISTERED** (a126a6b): the Kerr negative control for steps 3–4 (T1 #4155, T2 the 80 measured accepts, T3 the 66 extrapolated; vacuous-pass guard; a discriminating HH-based planted reject). Runs after the Melnikov verdict and the A3 launch.
 - **DeepStrain:** doc fixes 0ef19d0; idle (everything else is a new direction).
 - **Cuspis:** a 120-digit honest Q(n) to n = 90, to split the P5 gap between the q = 0 and q ≠ 0 sectors; T40b is on Neon.
+- **17:27 Quantum Melnikov stage 2: CERTIFIED-NONDEGENERATE** (77073c2). The counted point (σ, τ) = (0.13, 0.6) closes with margin +1.5242e-5 (T3 = 68% of |L2|); 15/16 points don't close (thin margin, disclosed). All gates and controls pass; Bridge spot-check of the margin arithmetic agrees. First order in β at (M, a, r_u, z_m) = (5, 3, 16, ½) only; nothing at fixed β or in the β* window.
+- **17:27 Quantum A3 main_cont LAUNCHED** at 17:26 (PID 40882, nice 10, 197 MB). The 30-min EARLY-COST check is pending. B15c-1 (the orientation-fail clause) is agreed; the driver and scorer come next.
+- **Cuspis:** P5 = −1.420722 WITHDRAWN (47e4aa9). The confluent-control extension fires. T40's −1.386872 is favoured, pending the 120-digit data and a held-out fixed-base fit.
