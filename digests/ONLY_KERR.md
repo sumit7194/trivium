@@ -212,3 +212,71 @@ along the axis.
 - Sections 2 and 9 above are superseded on this point. What remains open:
   - non-rational axis data (including the "invisible" family; Fable has numerical first-order evidence from below);
   - the physical-meaning caveat on the class of integrals (section 6).
+
+## 13. Update (2026-11-21 12:46): what changed on 2026-11-21 (all claims checked as listed; Gemini "Neon" outputs are UNVERIFIED until a fleet check, which is cited)
+**Provenance.** Several steps below were first produced by Google's Gemini 3 ("Neon") on Sumit's accounts and then
+checked independently by the Bridge or a sister session. Outreach must say so plainly: name which steps came from
+which tool and how each was checked.
+
+### 13.1 The remaining Only-Kerr lemmas and the single-centre case
+- **Lemmas X-infinity and G3** (Neon T6): checked exactly at their cores (V25 addendum C).
+- **The single-centre case from scratch** (Neon T3 + T9: lower-axis trick plus classification): matches V26 (V26-E,
+  degree counts; the ZV delta = 2 control).
+
+### 13.2 The "invisible" non-rational family is now covered
+This is Kerr's f0 with a branched twist, (c0'')^2 = (8/(5a^6(u^2+1)^6)) B(u^2, k). It passes the third-order test.
+- **First-order non-integrability** (Neon T8 for one spin, T11 for every spin a in (0, 1)):
+  - Bridge exact checks V26-F/G;
+  - ansatz's independent 50-digit monodromy V26-H, agreeing to ~1e-11 at three energies;
+  - k = 4 is not an exception (ansatz).
+- **The allowed parameter range k < 30/7 for every spin** (Neon T14, the U_a separation): the Bridge re-implemented
+  the interval certificate independently (V26-J, 449 boxes, PASS).
+- **The "G1 gap" found by ansatz's second reading** (zeros of P must also stay in Re z > a): closed by Neon T19.
+  Independent Bridge certificate V26-K:
+  - exact E-elimination (sympy);
+  - four interval certificates (one after a labelled fix to the Bridge's own enclosure; the registered FAIL is kept
+    on record);
+  - an end-to-end winding of exactly 2 at 28 parameter points.
+- **Exceptional parameters (ansatz gap B):** the theorem holds for all k in (-infinity, 30/7) except a discrete,
+  possibly empty set K*(a). At spin 0.6, K* is empty on [-10.5, 4.05] by a 50-digit argument-principle count
+  (registered; PASS).
+  - Caveats: floating point, not interval; one spin; nothing below -10.5; first-order lower-axis NVE only.
+  - One energy per k suffices for Morales-Ramis, so the single spin, not the single energy, is the limitation.
+
+### 13.3 Non-rational axis data in general (K5): much narrowed, not closed
+- **Curzon-Chazy** (f0 = e^{-2M/z}): the axis NVE reduces to a hypergeometric equation, giving SL2 at every energy
+  (Neon T16; Bridge exact check V27-A). We found no prior differential-Galois proof: Dolan 2019 calls one open, and
+  Georgiev 2019 uses a different route.
+- **Theorem 1, the annulus winding-number obstruction** (Neon T21): a circle with |m| >= 2, N + P >= 3 and a small
+  eta forces SL2.
+  - Bridge hand re-derivation plus V27-B on Neon's example (B2-B5 PASS; B1 registered FAIL from a Bridge harness
+    bug, with a labelled diagnostic).
+- **Theorem 2:** every transcendental entire f0 of order 0 with log n(r) = o(sqrt(log r)) gives SL2 (Neon T21/T22).
+  It includes all functions of finite logarithmic order.
+- **An independent referee pass** (Neon T24, a separate session): both theorems TRUE, with five minor repairs. One
+  real numeric slip: e^{3pi alpha_2/2} = 27.9988, not "> 28"; "> 27" suffices, and the Bridge confirmed the value. A
+  corrected write-up is in progress (Neon T28).
+- **Residual open class:** transcendental meromorphic data that is "balanced" (|m| <= 1 on all large circles)
+  without a small-tail rational approximant of degree >= 3, and fast-growing entire data with no degree >= 3
+  rescaling limit and no Theorem 1 circle.
+
+### 13.4 Literature (Bridge novelty search, digests/NOVELTY_SEARCH_2026-11-21.md)
+- We found no prior work on:
+  - the axis-NVE route for Curzon-Chazy;
+  - the lower-axis use for integrability;
+  - an "only Kerr" theorem for meromorphic integrals.
+- New prior art to cite: Kokkinos 2026 (arXiv:2608.22523), which rules out irreducible rank-2 Killing tensors. That
+  is a different, polynomial-integral statement.
+- **Still to do before sending** (section 10): a full read of Brink III/IV, and the question to a Morales-Ramis expert.
+
+### 13.5 Current statement, for outreach
+Among asymptotically flat stationary axisymmetric vacuum metrics, geodesic integrability by integrals meromorphic near
+both outer axis families forces Kerr or Schwarzschild in either of two settings:
+- rational axis data (ZV delta = 2 excluded via MPS 2013);
+- Kerr's own mass profile with the invisible branched-twist family, except possibly a discrete set of k for each spin
+  (none found where tested).
+
+Open, stated plainly:
+- non-rational axis data in general (narrowed to the residual class above);
+- the physical-meaning caveat on the class of integrals (section 6);
+- a certified (interval) version of the exceptional-k count.
