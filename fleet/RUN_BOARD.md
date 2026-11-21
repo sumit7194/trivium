@@ -325,3 +325,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **~07:50, §210 cost probe.** Every rung fits the enforced footprint cap (≤ 1.12 GB). In-process maxrss reads up to
   1.86 GB at w256. Bridge decision: option A (full ladder, footprint cap, maxrss recorded), about 2.8 h. Running
   ~08:00–10:50.
+- **~10:57, §210 relaunch-2 stopped by the side guard** (level 2, 48% free) during the first matched-step-size release.
+  All 9 primary releases had finished. Cause: three Gemini Task tabs open in Chrome plus the w256 peak. The Bridge
+  closed the Gemini tabs (67% free) and gave GO for (a). **Run 4 launched** (process group 22210, side guard on, 68%
+  free): pre-check and eqcheck, then the 3 matched-step-size releases (2.5 GB cap), then the registered analysis.
+  Gemini rule from now on: close each tab after sending its Task, and keep at most one open while heavy jobs run.
