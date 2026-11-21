@@ -38,13 +38,13 @@
   proven with a deliberate test.
 
 ## Decisions for you
-1. **Cuspis: Fable or not?** The last δκ question (growth of Σ̃′ along Im α) is compact. Cuspis can resume with Opus
+1. **Cuspis: DECIDED, resume with Opus (Sumit, ~09:10).** Was: Fable or not? The last δκ question (growth of Σ̃′ along Im α) is compact. Cuspis can resume with Opus
    from its written spec, or you can approve a Fable brief. Neon's lead (T15/T17) is waiting for Cuspis.
 2. **Only Kerr outreach.** Remaining before any outside contact:
    - ansatz's k = 4 test (DONE: not an exception at E = 0.8, spin 0.6);
-   - a second reader of the T11 loop construction;
-   - re-running T14's interval certificate;
-   - our own novelty search.
+   - a second reader of the T11 loop construction (asked of ansatz, ~09:15);
+   - re-running T14's interval certificate (DONE, V26-J PASS: independent code, 449 boxes);
+   - our own novelty search (DONE: digests/NOVELTY_SEARCH_2026-11-21.md; no prior work found on the main points).
 3. **tabula:** §206 ruled out the boundary data. §207 (a representation test) is approved and running after its prereg. No decision is needed unless it surprises.
 
 ## Still pending
