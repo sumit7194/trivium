@@ -393,3 +393,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **13:13 Cuspis EXP-070 (091b3db):** checked T30 numerically, plus Steps 2-3 by hand. The Bridge line-checked T26's contour-shift Bessel bound (an analytic chain, spot-checked to ratio 0.976). Remaining before VERIFIED: a second line-check of T30 Step 4 (asked of Cuspis). EXP-069 (complex-a BIE validation) is registered and running.
 - **13:14 Lemma U (e) VERIFIED for all y** (Cuspis 66940fb): |C+(1/2+iy)| <= C(1+|y|)^2(1+ln(1+|y|))^3, from Neon T26+T27+T30, each step line-checked by Cuspis and the Bridge plus numerics. Still open on Lemma U: (a), (b), (d) and the family choice (argued); (c) partially verified; Sigma' all-y. EXP-069 running.
 - **13:27 Lean pass requested** (Sumit; credential-independent trust): Quantum to build an Only-Kerr glue file. Contents: the E-elimination identity, the Curzon traces, the T19 case-split logic with the certificates as hypotheses, and optionally the K5 constants. Limit 2 cores / ~3 GB. DeepStrain asked what it had queued (GO if <= 2 cores / 2 GB). Box at that time: load ~4.7/10, 69% free.
+- **13:35 Quantum Lean glue DONE** (a62e717): lean/ZiglinCert/OnlyKerr. 16 theorems, no sorry, standard axioms only:
+  - the E-elimination identity;
+  - the Curzon traces (with the inverses checked);
+  - the T19 case-split glue down to G1 != 0, with the certificates as named hypotheses and rescaling lemmas;
+  - the K5 constants (exp bound > 46).
+  The README lists what is NOT checked. 2.66 GB RSS. ansatz told that the rank-3 cover is obsolete (the Galajinsky exchange was Oct 16-20).
