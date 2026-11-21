@@ -154,3 +154,5 @@ will be used. Each gap is marked:*
     is running.
   - Gap B: the exceptional sets are "not covered", not "artefacts". Fix: an argument-principle zero count.
   - Gap C: state the E > 1 to E < 1 coverage.
+- **2026-11-21 ~05:55, ansatz k = 4 test.** NON-VA at k = 4 and 3.9 (E = 0.8, spin 0.6; registered pipeline, all
+  gates). Not a structural exception at that (E, spin). Gap B (an argument-principle zero count) remains for later.

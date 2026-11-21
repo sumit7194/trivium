@@ -41,7 +41,7 @@
 1. **Cuspis: Fable or not?** The last δκ question (growth of Σ̃′ along Im α) is compact. Cuspis can resume with Opus
    from its written spec, or you can approve a Fable brief. Neon's lead (T15/T17) is waiting for Cuspis.
 2. **Only Kerr outreach.** Remaining before any outside contact:
-   - ansatz's k = 4 test;
+   - ansatz's k = 4 test (DONE: not an exception at E = 0.8, spin 0.6);
    - a second reader of the T11 loop construction;
    - re-running T14's interval certificate;
    - our own novelty search.
@@ -49,7 +49,7 @@
 
 ## Still pending
 - Quantum's Melnikov stage-2 verdict (~10:00).
-- ansatz's k = 4 test.
+- ansatz's k = 4 test: DONE, not an exception (E = 0.8, spin 0.6).
 - Neon T17 (C₊ normalisation and multiple-reflection growth, for Cuspis).
 - tabula §206.
 
