@@ -350,3 +350,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   itself).
 - Timestamp note: the Bridge's "~" times from 11:40 to 12:35 in today's logs ran 20-40 min fast; the git commit times
   are the record.
+- **Cuspis, CH05 Painleve route** (a5c8abd, pre-checks only, NOT registered because of a discrepancy).
+  - The route gives a resummation ratio of O(1) on the line, so C+ would grow at pi and (e) would be log-free.
+  - It agrees with T20-v0 at first order (0.08% at alpha = 0.1) but differs at higher orders (1.8% in C+ at
+    alpha = 0.3).
+  - One step is argued, not proven.
+  - The Bridge gave GO for a third, direct method (2D same-tip coefficient at alpha = 0.3, <= 0.5%), with known-answer
+    controls and a must-resolve control. T23 is still held from Cuspis.
