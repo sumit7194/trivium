@@ -78,5 +78,8 @@ The owner (ansatz) graded every point (data/nve/T38_GRADING.md, d153394, plus ad
      all four spins (ansatz grade AGREE, f118158). Wording: "two independent implementations of the same loop invariants".
      T50 also located the degenerate spin a_c = 0.858446…, where an independent pair is Zariski dense; ansatz will reproduce it.
 3. Write-up items: the MRS section (T49 draft, then ansatz's check), points 2b, 4, 5, 6, and the 1a wording.
-4. One claim sentence carrying every scope qualifier (spin, floating point vs interval, the sliver, first order on
-   the lower axis), so outreach text cannot drift from it.
+4. ~~One claim sentence carrying every scope qualifier~~ DONE 2026-11-22. The reference text is
+   conjecture_machine/data/nve/CLAIM_FAMILY_II.md (eed501f), with a per-number source table. Any outreach text must
+   quote it, not paraphrase it.
+5. Still open before the talk test: citations checked at source (MRS 2007, Casale 2009, Beig–Simon,
+   Fodor–Hoenselaers–Perjés; ansatz is checking now), then the MRS section (T49 draft plus ansatz's check).

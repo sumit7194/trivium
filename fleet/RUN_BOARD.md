@@ -605,3 +605,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - It will then be committed as its own reference file.
   - **Remaining before the talk test:** the MRS section (T49 plus check) and the citations at source.
 - **04:35: Quantum B15d-2 merge control (MC) PASS (eb9d86a):** the split and merged line is byte-identical to the unchunked GB line (CERTIFIED). The 12 twin edge chunks started 04:35; TWIN-EARLY to follow.
+- **04:36: ONLY KERR CLAIM REFERENCE TEXT COMMITTED** (conjecture_machine eed501f, data/nve/CLAIM_FAMILY_II.md). All four Bridge edits are in, with a per-number source table. ansatz is now checking the citations at source, then the MRS section.
