@@ -386,3 +386,40 @@ first-order prediction c_pred = −(J₊J₋ − J0²)/(4κ²), against ansatz's
 - What remains:
   - U_a = (−∞, 30/7) is CHECKED, not proved (Neon T14 is attempting interval certification);
   - the large-E loop construction in T11 has been read, not machine-checked.
+
+## Addendum I (2026-11-21 ~06:30): Neon T14, U_a certificate. **I1 PASS; I2 FAIL as registered (Bridge clause slip); every Neon bound consistent**
+Code: code/v26_I.py. Outputs: results/v26_I_precheck.txt, v26_I.txt, v26_I_postdiag.txt (labelled).
+
+**I1 PASS.** Neon's finite-interval ray representation of c0 matches the INDEPENDENT B8 ODE continuation to
+≤ 6.7e−15 at 12 points. These cover k ∈ {−5, 0.1, 4.2}, including 4 < k < 30/7, and points on Re z = 1 and beyond.
+
+**Controls (pre-checked).**
+- The x²(1 − x) variant fires (0.42).
+- At Neon's wall, k_wall = −22.5906090375, the B8 continuation gives |f0² + c0²| = 9.4e−8. That independently
+  confirms the wall location.
+
+**I2 FAIL as registered.**
+- The clause compared the whole grid (η up to 200) with Neon's certified bound 7.006e−5, which only covers
+  η ∈ [0, 10]. For η ≥ 10 Neon claims analytic tail bounds instead.
+- The grid minimum, 1.09e−5 at (θ = 1, η = 200), is BELOW 7.006e−5 but above the regime-B tail bound
+  0.062/(1 + η²) = 1.55e−6.
+- This is a Bridge clause slip, the fourth tonight: the clause was not matched to the region of the claim. The
+  pre-check rule covers controls, not target clauses. Extension: target clauses must also be matched to the
+  claim's stated domain.
+
+**Post-result diagnostic (labelled).**
+- η ∈ [0, 10]: minimum 4.34e−3, consistent with the certified bound.
+- η ∈ [10, 200], regime A: Re H̃ − 0.445 ≥ 0.036.
+- η ∈ [10, 200], regime B: Re H̃ − 0.062/(1 + η²) ≥ 9.4e−6.
+- Every bound Neon claims holds on the grid.
+
+**Reading.**
+- The representation is independently confirmed.
+- The float grid is consistent with the certificate and with both analytic tail bounds.
+- The inequality chain (|1 + w²| ≥ Re w for Re w > 0; c0/f0 = H/(y² + 1 − a²) on Re z = 1) and the θ-reparametrisation
+  of B were checked by hand.
+- The 935-box interval certificate itself has not been re-run by the Bridge.
+- The minimum-principle step is standard. Branch points of the integrand lie at u = x·u_root, which is inside |u| < 1
+  or on the imaginary axis, so the integrand is holomorphic on Re u ≥ 1.
+- **Status of U_a = (−∞, 30/7) for all a ∈ (0, 1):** proved (Neon T14), with the representation verified, the
+  bounds consistent, and the wall independently confirmed. Interval certificate not re-run.
