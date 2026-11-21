@@ -390,3 +390,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **ONLY_KERR digest:** section 13 added (today's results and provenance).
   - **Quantum:** the embargo flag was a false regex match; no change.
 - **12:52 Cuspis:** delta-kappa step 2 (source reading, d6d2918): Petkou C_T 1/N = -40/(9pi^2); Sigma normalisation anchored to MZJ eta_1. T27 gap (I) VERIFIED (EXP-068); Cuspis's B(4) = 6.78e-2 withdrawn as a float artifact, and T27's 6.871e-2 stands. GO for step 3 (prereg first).
+- **13:13 Cuspis EXP-070 (091b3db):** checked T30 numerically, plus Steps 2-3 by hand. The Bridge line-checked T26's contour-shift Bessel bound (an analytic chain, spot-checked to ratio 0.976). Remaining before VERIFIED: a second line-check of T30 Step 4 (asked of Cuspis). EXP-069 (complex-a BIE validation) is registered and running.
