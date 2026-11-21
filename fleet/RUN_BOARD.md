@@ -531,3 +531,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - s_cut 1.5 relabelled as a diagnostic.
   - Runs in parallel with 081c, < 1 GB.
   - **The lattice sign now waits on EXP-083 as well as σ_W.**
+- **01:55: EXP-083 Tier-1 NON-DISCRIMINATING (423719f), so it goes to redesign, not a verdict.**
+  - **What passed:** pure gauge, and the own-pole scan matches the QEP.
+  - **The fits:** fixed bases + confluent terms are tight, but the base-free pencil differs by 0.29 at W4P4, above the 0.191 half-gap.
+  - **Redesign OK'd with four edits:**
+    - higher-confluence model variants, an interior held-out block, and n-range drift;
+    - the P = 4 pencil as a diagnostic;
+    - P = 2 completeness (≤ 1e-3) as a STOP gate;
+    - a disclosure that the honest Q′ are known and the comparison has not been formed, so the tolerance is mechanical.
