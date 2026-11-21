@@ -62,7 +62,7 @@ The owner (ansatz) graded every point (data/nve/T38_GRADING.md, d153394, plus ad
   segments.
 
 ## Open items before the talk test (no outreach until these are done)
-1. ~~The sliver near 30/7~~ CLOSED (2026-11-21 evening): Neon T48b's interval certificate (Zariski density Z1–Z4 over [30/7 − δ0, 30/7], δ0 = 1.37e-11 at E = 0.8 and 2.04e-10 at E = 1.5). ansatz read the code, reproduced it and cross-checked it with its own 50-digit walker (3c2d29c). Two minor items remain: carry S as an interval, and drop the redundant Z1b. **Net at spin 0.6: no exceptional k in (0, 30/7]** (the sliver is interval-certified; the rest is 50-digit floating point).
+1. ~~The sliver near 30/7~~ CLOSED (2026-11-21 evening): Neon T48b's interval certificate (Zariski density Z1–Z4 over [30/7 − δ0, 30/7], δ0 = 1.37e-11 at E = 0.8 and 2.04e-10 at E = 1.5). ansatz read the code, reproduced it and cross-checked it with its own 50-digit walker (3c2d29c). Both minor items are fixed in ansatz's patched copy (5f1b291, data/nve/t48b_fixed/; δ0 = 1.37e-11 at E = 0.8 and 1.90e-9 at E = 1.5), which is the copy to cite. **Net at spin 0.6: no exceptional k in (0, 30/7]** (the sliver is interval-certified; the rest is 50-digit floating point).
 2. Spin coverage beyond 0.6 (ansatz runs at 0.3, 0.8, 0.9), and the E = 1.5 point for §161.
 3. Write-up items: the MRS section (T49 draft, then ansatz's check), points 2b, 4, 5, 6, and the 1a wording.
 4. One claim sentence carrying every scope qualifier (spin, floating point vs interval, the sliver, first order on
