@@ -51,3 +51,26 @@ going to fall". Treat this as a remark, not a claim with evidence.
 
 ## Log
 - **2026-11-21 00:30:** note read; status recorded above.
+- **2026-11-21 06:40 IST: update.**
+  - **Read at source:** the README and STATUS of an independent repo (github.com/Hertaspace/alpoge-rh-lean-verification).
+    - The main theorem's type is `RiemannHypothesis`, **Mathlib's own definition** (`Mathlib/NumberTheory/LSeries/RiemannZeta.lean`):
+      ∀ s, ζ(s) = 0 → s not a trivial zero → s ≠ 1 → Re s = 1/2. The project does not define it. This bears directly
+      on settle-step 2 for RH: the statement is the community's definition, not the author's. The four Dirichlet-L
+      statements are defined in the project's `Statements.lean`, which imports only Mathlib. Those still need an
+      expert read.
+    - Its source scan PASSED: no sorry, axiom, native_decide, implemented_by, extern or IO in 175,187 files.
+    - Its own build was at 76,464/183,903 jobs at 00:59 UTC, with one failure. That failure is an infrastructure
+      read error on a cached Mathlib `.ir` file, not a proof error.
+    - Its axiom check is pending; the comparator and clean-room statement checks are planned.
+  - **Secondary (NOT read at source):** news reports of Sutherland's MIT page (updated 20 Nov 19:45 UTC). They say:
+    - the rebuild has zero errors;
+    - `#print axioms` shows only the three standard axioms;
+    - leanchecker accepts all 175,187 files;
+    - an independent kernel (nanoda) also accepts.
+    Scientific American's headline: "almost certainly true, independent mathematicians attest".
+  - **Status in plain words:** the formal checks are converging positively (compiles; standard axioms, per
+    secondary reports; the statement is Mathlib's RH definition). Still missing:
+    - a source-read of the axiom output;
+    - the comparator/clean-room statement check;
+    - human understanding.
+  - No preprint or journal submission is reported yet.
