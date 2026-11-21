@@ -576,3 +576,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **Every threshold-keyed branch in sigma3d now has its own control:** the QEP filters, the cluster merge, the residue radius, the β0 merge, the s_max truncation, and dd = 1.
   - **Scope:** arm a only. **T_sad carries the +2.4's sign** (saddle-off R = −48.5), so a pass does NOT validate the +2.4.
   - Runs after the 081c posctl, one job at a time.
+- **03:50: R3′ step 1:** the port converges at n = 2…6 (δ 1e-13 to 2e-10), but Q_cont(1) has a 3.6e-9 floor from production's QEP pole precision. The claim is scaled as registered: it covers modes with r ≳ 2e-6 (s ≲ 2.0), and kept poles at s ∈ (2, 3] join the internally controlled class. The chain (~15 h, < 1 GB, one job beside 081c) is running.
