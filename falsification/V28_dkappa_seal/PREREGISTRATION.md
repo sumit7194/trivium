@@ -25,3 +25,20 @@ Leg placement follows Neon's written formula.
 
 The controls S1/S2 test the code paths. They are not pre-run separately, because they ARE the claims being checked
 and the seal values are not compared to anything yet.
+
+## Addendum B (12:30, before computing anything against T25): per-slice shape test, T25 BIE vs the two leg candidates
+Data: Neon T25's direct BIE Delta C(w, a) (neon_work/dkappa/T25_summary.md; UNVERIFIED; the code was built blind from
+Cuspis's spec, with no candidate formulas). In 2D at m = 1, a slice at separation w is the u = w slice of the
+k_y-integrated problem. So the Bridge's per-slice bilinear B_X(u) = v_l^T (1 - lambda^2 R^T R)^{-1} R^T v_r
+(V28 code) must be proportional to Delta C(w = u, a) with a factor that depends on a only, if candidate X is right.
+- **Test:** k_X(w) = Delta C_BIE(w)/B_X(w) for X in {RL (T23), v0 (T20 symmetric)}:
+  - at a = 0.3, w in {1, 0.3, 0.1, 0.03, 0.01} (w = 3 is excluded: its BIE relative error is 6%);
+  - at a = 0.2 and 0.4, w in {0.3, 0.1, 0.03, 0.01}.
+- **PASS for X:** at every twist, the max/min ratio of k_X over w is within 1 + max(3 x the largest BIE relative
+  error in that set, 1e-3).
+- **Decision:** RL is supported if RL passes AND v0 fails at every twist. v0 is supported if the reverse holds.
+  Anything else is inconclusive.
+- **Descriptive:** whether k_RL is a simple constant (e.g. related to -lambda/(4pi), giving an absolute
+  cross-check).
+- **Pre-check:** both B_X are computed by the V28 code paths that already reproduced their closed forms to 1e-14.
+  The comparison arithmetic is trivial.
