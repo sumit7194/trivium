@@ -389,3 +389,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     condition = a RESULTS entry for cg_recheck. The TS/MN paper is still to be read in place (embargo).
   - **ONLY_KERR digest:** section 13 added (today's results and provenance).
   - **Quantum:** the embargo flag was a false regex match; no change.
+- **12:52 Cuspis:** delta-kappa step 2 (source reading, d6d2918): Petkou C_T 1/N = -40/(9pi^2); Sigma normalisation anchored to MZJ eta_1. T27 gap (I) VERIFIED (EXP-068); Cuspis's B(4) = 6.78e-2 withdrawn as a float artifact, and T27's 6.871e-2 stands. GO for step 3 (prereg first).
