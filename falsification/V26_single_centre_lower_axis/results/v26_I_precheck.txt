@@ -1,0 +1,2 @@
+PRECHECK control x^2(1-x) vs correct at z=1+0.5i,k=0.1: |diff| = 4.214e-01
+PRECHECK wall control via B8: |f0^2+c0^2| at z_wall,k_wall = 9.429e-08 (|f0|^2 = 7.672)

@@ -232,3 +232,27 @@ Neon's output: neon_work/onlykerr/T8_INVISIBLE_FAMILY_SUMMARY.md.
 - **Must-fail:** the asymptotic with 7π/30 replaced by 7π/15 must miss by more than 40% at a = 0.01.
 
 Not checked here: the U_a separation claim, and the large-E loop construction (both read only).
+
+## Addendum I (2026-11-21 ~06:20, before the target run; controls pre-checked per the new rule): checking Neon T14 (U_a = (−∞, 30/7) for all a)
+Code: code/v26_I.py. Neon's output: neon_work/onlykerr/T14_UA_SUMMARY.md (to be written).
+
+**I1.** Neon's finite-interval ray representation of c0(z; k) is
+c0 = −(√(8/5)/a)∫₀¹ x(1 − x)u⁻²(1 + x²u⁻²)⁻³√(c4 + c2x²u⁻² + c0′x⁴u⁻⁴) dx.
+- Compare it with the INDEPENDENT V26-B8 ODE continuation of c0 (path 4 → 4 + i·Im z → z, rtol 1e−12, a = 0.6).
+- Values: k ∈ {−5, 0.1, 4.2}; z ∈ {1 + 0.5i, 1 + 3i, 1 − 2i, 2.5 + i}.
+- **PASS:** max difference ≤ 1e−8.
+
+**I2.** A dense float grid of Re H̃_θ(1 + iη):
+- θ ∈ [0, 1], 201 points;
+- η ∈ [0, 10] with 401 points, plus η ∈ [10, 200] with 191 points.
+- **PASS:** the grid minimum is ≥ 7.006e−5, Neon's certified lower bound (a certificate lower bound must not exceed the
+  true minimum), and is > 0.
+
+**Control table (pre-checked; results/v26_I_precheck.txt).**
+
+| Control | Type | Pre-check result | Status |
+|---|---|---|---|
+| x²(1 − x) instead of x(1 − x) at z = 1 + 0.5i, k = 0.1 | must disagree, > 1e−3 | 4.2e−1 | FIRES ✓ |
+| Wall crossing (Neon's k_wall = −22.5906090375, z_wall = −0.36260544 + 1.10838499i), via B8 continuation | must give ≈ 0 | \|f0² + c0²\| = 9.4e−8 vs \|f0\|² = 7.67 | ✓ |
+
+The wall control independently confirms Neon's wall location to the precision of the digits given.
