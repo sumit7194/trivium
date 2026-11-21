@@ -476,3 +476,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - B2b: one refinement step vs two at the g level.
   - **Already confirmed:** A's planted must-fire arithmetic gives an impact of 1.02e-6, 10× the threshold.
   - **Next:** Cuspis registers and runs in the daytime.
+- **00:53: EXP-081c REGISTERED (Cuspis 8fcfb84) and running in the daytime.**
+  - Declared 1.1 GB peak, cap 1.5 GB, one job, nice 12.
+  - The B2a arm is written by a blind sub-agent.
+  - Step 0 is tiered by node.
+  - Mirror slices are aliased; the positive controls must confirm the aliasing against 081b's un-aliased values.
+  - Run order: Step 0 and B2a, then the positive controls, W2P8 b8, W8P8, and N4c.
