@@ -346,3 +346,43 @@ analyticity plus the small-a asymptotic. Not machine-checked here:
 - U_a = (−∞, 30/7), which Neon only marks CHECKED.
 
 - **Timestamp correction (appended 2026-11-21 04:10 IST, system clock).** The '~hh:mm' times written by the Bridge in tonight's addenda (V25 C; V26 D–G) were estimated and run about 1.5–2 h FAST. The commit timestamps in git are authoritative.
+
+## Addendum H (2026-11-21 ~05:50, received from ansatz plus a labelled Bridge extension): the group step of Neon T8 confirmed at 50 digits
+**ansatz, blind to Neon's file (f67ae8f, 22969bd).**
+- The k² coefficient of tr(g_in) − 2 is:
+  - c(0.7) = −1.928286675e−2;
+  - c(0.8) = −4.784472498e−3;
+  - c(0.9) = −1.262102689e−3.
+  These come from an exact cubic in k; the radius and step controls agree.
+- Two-loop commutator at E = 0.8.
+  - Loops: M0 is |z| = 1.35; M1 is a rectangle around {1.934, 2 + 0.6i} with a real-segment tail.
+  - tr M1 = −0.98431 + 2.77728i at k = 0, varying slowly with k, so it matches Neon.
+  - tr[M1, M0] − 2 = 1.94e−5 + 9.88e−6i at k = 1/100 (modulus 2.18e−5) and modulus 2.21e−3 at k = 1/10.
+    Neon's numbers are these moduli.
+  - k = 0 gives ≤ 3e−40.
+  - Must-fail: a loop around the other class gives a different, real trace.
+- **Basis-free group step.**
+  - tr[M1, M0] ≠ 2, so the pair is irreducible.
+  - tr M1 ≠ 0 and tr M0 ≠ 0, so it is not imprimitive.
+  - tr M1 is non-real, so the group is not finite.
+  - Hence the Zariski closure is SL2 at k ∈ {1e−2, 1/30, 1/10} and E = 0.8.
+- **Caution (ansatz).** tr[M1, M0] depends on the based class of the pair, i.e. M1's tail. Only the modulus is
+  comparable with Neon unless the tails match.
+
+**Bridge extension (post-registration, labelled, descriptive; results/v26_F_extension_E.txt).** The V26-F
+first-order prediction c_pred = −(J₊J₋ − J0²)/(4κ²), against ansatz's 50-digit c(E):
+
+| E | Relative difference |
+|---|---|
+| 0.7 | 8e−12 |
+| 0.8 | 6e−11 |
+| 0.9 | 4e−10 |
+
+**Status of the invisible-family obstruction (K4).**
+- Neon's analytic proof (T8, T11) has its first-order core verified to about 1e−11 at three energies, against an
+  independent 50-digit direct computation.
+- The group-theory step is confirmed numerically and basis-free by ansatz.
+- The general-a identities are exact (V26-G).
+- What remains:
+  - U_a = (−∞, 30/7) is CHECKED, not proved (Neon T14 is attempting interval certification);
+  - the large-E loop construction in T11 has been read, not machine-checked.

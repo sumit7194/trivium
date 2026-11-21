@@ -145,3 +145,6 @@ will be used. Each gap is marked:*
   - Verified: the core identities and constants (V26-G).
   - Read only: the loop construction and U_a = (−∞, 30/7), which Neon marks CHECKED.
   - Effect: the whole asymptotically flat invisible family is obstructed, modulo U_a. That is a large step on K4.
+- **2026-11-21 ~05:50, K4.** ansatz confirms T8's group step at 50 digits, basis-free. The first-order prediction
+  matches 50-digit c(E) to about 1e−11 at E = 0.7, 0.8 and 0.9 (V26 addendum H). Remaining: the U_a certificate (T14)
+  and a second reader of the T11 loop construction.

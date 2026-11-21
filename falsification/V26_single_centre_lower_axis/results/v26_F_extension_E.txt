@@ -1,0 +1,10 @@
+POST-REGISTRATION EXTENSION (labelled, descriptive): Neon first-order c_pred vs ansatz 50-digit c(E)
+F2 symbolic: P0 == N-/D- : True ; v+- = (ND)^(1/4) e^(+-kappa u) solves NVE with kappa^2=-a^2(E^2-1): True
+F2 Neon q1: min|root| 1.8275, u returns 4.0e-15, J0 (6.963884763983019e-15+0.23983458445960026j), J+ (3.3658023064616835e-15+0.05519612348163402j), J- (1.5443179233239762e-14+0.7855495608495721j), c_pred = (-0.01928286675015357-2.1248275390188282e-16j)
+E=0.7  c_pred=-1.9282866750e-02  ansatz=-1.9282866750e-02  rel diff=7.96e-12
+F2 symbolic: P0 == N-/D- : True ; v+- = (ND)^(1/4) e^(+-kappa u) solves NVE with kappa^2=-a^2(E^2-1): True
+F2 Neon q1: min|root| 1.9344, u returns 7.3e-15, J0 (-3.5370334048809293e-15+0.10871317537098553j), J+ (-6.8932218873912765e-16+0.030618190084941786j), J- (-1.2444133722609718e-14+0.3049913770386107j), c_pred = (-0.004784472497697381-3.429592792198975e-16j)
+E=0.8  c_pred=-4.7844724977e-03  ansatz=-4.7844724980e-03  rel diff=6.33e-11
+F2 symbolic: P0 == N-/D- : True ; v+- = (ND)^(1/4) e^(+-kappa u) solves NVE with kappa^2=-a^2(E^2-1): True
+F2 Neon q1: min|root| 1.9657, u returns 2.7e-15, J0 (-3.955700614885049e-15+0.0484641249038312j), J+ (-2.307463437987642e-15+0.01878125220328485j), J- (-6.6293228434435685e-15+0.10667340415600153j), c_pred = (-0.001262102689537109-4.6663644768048713e-17j)
+E=0.9  c_pred=-1.2621026895e-03  ansatz=-1.2621026890e-03  rel diff=4.26e-10
