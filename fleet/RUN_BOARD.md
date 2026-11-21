@@ -548,3 +548,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - Memory is measured by dry run.
     - Consequences made explicit: a P = 2-only pass is code validation only; any fail suspends the +2.4.
 - **02:00: EXP-083 R2 REGISTERED (f5b9e71).** Blocker: python-flint is not installed (only the Homebrew C library libflint 3.6.0; the Bridge's '24' was the dylib soname). Cuspis needs Sumit's own word in its chat to pip-install it, and the Bridge has asked Sumit. Meanwhile: float64 decomposition validation and mpmath cost/RSS dry runs.
+- **02:02: EXP-083 R2.** Edit 2 PASSES: the sector decomposition equals the direct n-sheet Q(n) to 5.5e-12, both arms. mpmath cost: P = 4 about 25 h, so not feasible. Even P = 2 needs n ≳ 30–45 at ~120 digits (~10 h on mpmath). python-flint is the enabling step; Sumit said yes in the Bridge chat and was asked to give his word in Cuspis's chat.
