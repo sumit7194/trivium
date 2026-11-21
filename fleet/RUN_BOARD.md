@@ -360,3 +360,13 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **tabula §211, launch 1 stopped** by the 1.5 GB fit cap (w256 seed-0 hybrid at 1,563 MB; ops log 4061d6d). The
   pre-check had passed in full. Bridge GO for a labelled operations amendment: w256 hybrid fits get the 2.5 GB cap;
   the rest is unchanged; resume skips the finished work. New cost estimate 4-10 h.
+- **V28 SEAL (b93cb63).** The Bridge re-implemented T20-v0 and T23. At twist 0.3, Cuspis's CH05-route ratio 1.162
+  matches T23's 1.16274, and Cuspis's T20-v0 1.141 matches the Bridge's 1.140946. So the CH05 route and T23 look like
+  the SAME resummation.
+  - Twists 0.2 and 0.4 stay sealed for a blind comparison.
+  - T23's corrected first-order closed form follows from its legs (confirmed to 1e-14).
+  - Cuspis was warned that "Born at u = 3" is contested, so not a must-pass. BIE referee GO; Neon to build a second
+    BIE blind from Cuspis's spec.
+- **ansatz gap B:** prereg 98b54e9; the registered run is going (PID 94001); controls C0, C3a/b, C1 and the guards
+  pass.
+- **tabula §211, launch 2:** running (group 24603), amendment 569bec1.
