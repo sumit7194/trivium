@@ -606,3 +606,12 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **Remaining before the talk test:** the MRS section (T49 plus check) and the citations at source.
 - **04:35: Quantum B15d-2 merge control (MC) PASS (eb9d86a):** the split and merged line is byte-identical to the unchunked GB line (CERTIFIED). The 12 twin edge chunks started 04:35; TWIN-EARLY to follow.
 - **04:36: ONLY KERR CLAIM REFERENCE TEXT COMMITTED** (conjecture_machine eed501f, data/nve/CLAIM_FAMILY_II.md). All four Bridge edits are in, with a per-number source table. ansatz is now checking the citations at source, then the MRS section.
+- **04:40: ansatz MRS section v1 (bdbcc30, 83aa2f5) read by the Bridge.**
+  - **Citations checked at source:**
+    - MRS 2007 VERIFIED (open Γ is covered);
+    - Casale 2009 is NOT supported for open Γ, so dropped;
+    - Beig–Simon 1981 VERIFIED (1980 is not for analyticity);
+    - FHP 1989 VERIFIED;
+    - the Prop. 2 citations are pending.
+  - **The Bridge checked** Prop. 1's proof and the u = 1 crossing.
+  - **One required addition:** a lemma (citation checked at source) that the Galois identity component is invariant under the finite cover Γ_E and the algebraic v-gauge, linking u-plane Zariski density to the NVE's (G)⁰.
