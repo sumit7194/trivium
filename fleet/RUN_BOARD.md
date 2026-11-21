@@ -357,3 +357,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - One step is argued, not proven.
   - The Bridge gave GO for a third, direct method (2D same-tip coefficient at alpha = 0.3, <= 0.5%), with known-answer
     controls and a must-resolve control. T23 is still held from Cuspis.
+- **tabula §211, launch 1 stopped** by the 1.5 GB fit cap (w256 seed-0 hybrid at 1,563 MB; ops log 4061d6d). The
+  pre-check had passed in full. Bridge GO for a labelled operations amendment: w256 hybrid fits get the 2.5 GB cap;
+  the rest is unchanged; resume skips the finished work. New cost estimate 4-10 h.
