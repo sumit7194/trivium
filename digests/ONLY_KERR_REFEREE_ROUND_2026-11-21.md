@@ -81,5 +81,9 @@ The owner (ansatz) graded every point (data/nve/T38_GRADING.md, d153394, plus ad
 4. ~~One claim sentence carrying every scope qualifier~~ DONE 2026-11-22. The reference text is
    conjecture_machine/data/nve/CLAIM_FAMILY_II.md (eed501f), with a per-number source table. Any outreach text must
    quote it, not paraphrase it.
-5. Still open before the talk test: citations checked at source (MRS 2007, Casale 2009, Beig–Simon,
-   Fodor–Hoenselaers–Perjés; ansatz is checking now), then the MRS section (T49 draft plus ansatz's check).
+5. ~~Citations and the MRS section~~ DONE 2026-11-22: conjecture_machine/data/nve/MRS_SECTION.md.
+   - Verified at source: MRS 2007, Beig–Simon 1981 and FHP 1989. Casale 2009 is dropped (it doesn't cover open Γ).
+   - The Bridge-requested Lemma C (the covering and the algebraic gauge preserve G⁰) is added, sourced via Audin 2003,
+     Combot and Singer.
+   - Prop. 2 (single-valued off-axis metric) is labelled citation-pending.
+   - **READY FOR THE TALK TEST.**
