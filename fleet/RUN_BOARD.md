@@ -399,3 +399,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - the T19 case-split glue down to G1 != 0, with the certificates as named hypotheses and rescaling lemmas;
   - the K5 constants (exp bound > 46).
   The README lists what is NOT checked. 2.66 GB RSS. ansatz told that the rank-3 cover is obsolete (the Galajinsky exchange was Oct 16-20).
+- **14:02 Cuspis EXP-069 PASS** (8db9026): the complex-twist BIE is validated against two separate anchors (Fredholm E_pred at 5 points; CH05 shape to 0.07%); the planted 2% is caught at 7 sigma. The y = 2 point is the hardest (Im leak 5.5e-3). GO for step 4, K-free (registered; tolerance from a measured ladder; counting-factor must-fail; full SC code-path coverage).
