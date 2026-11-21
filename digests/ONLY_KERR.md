@@ -186,6 +186,15 @@ along the axis.
 - the Morales–Ramis community's own work (Maciejewski, Przybylska, Combot, Morales-Ruiz) was searched only through
   citations of MPS 2013.
 
+
+**Addendum (2026-11-21, novelty search; see digests/NOVELTY_SEARCH_2026-11-21.md).**
+- New prior art: Kokkinos 2026, "Killing tensors of Weyl's class" (arXiv:2608.22523). It shows that no
+  two-Killing-vector member of Weyl's class admits an irreducible rank-2 Killing tensor. That is a different
+  integral class from ours (meromorphic).
+- Dolan 2019 (read at source) calls a differential-Galois proof for Curzon–Chazy open.
+- We found no prior "only Kerr" geodesic-integrability theorem, and no prior integrability use of the lower-axis
+  relation.
+
 ## 12. Update (2026-11-20, late evening): single-centre data closed via the LOWER axis
 - **The idea** (Fable 5.2, one-off run; checked by the Bridge in V26). An asymptotically flat solution has a second
   outer axis segment. There the axis data are 1/e_+:
