@@ -491,3 +491,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - the amendment is committed before the rerun;
     - the report gives step counts and wall time.
   - No production quantity had been computed when this was decided.
+- **01:06: ansatz spin 0.8 (8241c9b).**
+  - **Registered verdict:** EXCEPTIONAL CANDIDATES, caused by a classifier design flaw. T1Γ = T1·TΓ identically (Fricke; M1Γ⁻¹ is a single-point loop).
+  - **Post-hoc resolution (labelled):** at the common zero k* = 4.00816, the circle pair is Zariski-dense. The Bridge checked Z1–Z4 there (tr M0M1 = 3.90 + 3.19i ≠ 0). So there is no exceptional k at spin 0.8 (floating point).
+  - **The Bridge asked for:**
+    - the 0.9 resolution protocol committed before 0.9's counts are read;
+    - the patched T48b sliver certificate run by ansatz itself at spins 0.3, 0.8 and 0.9, so the planned Gemini sliver task is dropped;
+    - the floating-point qualifier carried for k*.
