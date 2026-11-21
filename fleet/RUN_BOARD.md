@@ -372,3 +372,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **tabula §211, launch 2:** running (group 24603), amendment 569bec1.
 - **Cuspis:** the blind test MATCHED, so Cuspis moves to stage C (registered C+ growth along 1/2+iy via the CH05
   route). Neon T25 does the direct BIE referee; Cuspis builds its own BIE only if T25 is ambiguous.
+- **12:10, δκ first-order normalisation, effectively settled.** At twist 1/2, Cuspis's symmetry-fixed absolute CH05
+  values equal the Bridge's T23 implementation to 1e-7 (linear = (4/pi) x Born; resummed -0.00599707). Born is
+  excluded there by 27%. T23 is released to Cuspis. Stage C proceeds; the T25 BIE stays as the direct referee at 0.3.
