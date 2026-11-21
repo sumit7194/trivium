@@ -596,3 +596,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **Grade:** verified for the T_sad ASSEMBLY (the 081a class) at small P. It shares the QEP poles and the Poisson kernel, so it is NOT a validation of the +2.4.
   - **Solver amendment:** stagnation stop below 1e-12.
   - **Queued after 07:30:** heavy C1 (12 geometries up to P12 and W8P8), C2, and the Arb P4 arm (b) at ~3 GB.
+- **04:35: ansatz spin 0.9 RESOLVED post hoc (3f2e41a):** the extra zero of F is at k = 0.1101 + 0.3415i, non-real, so physically irrelevant. There is no reflection symmetry. §163 committed.
+  - **CLAIM SENTENCE drafted.** The Bridge sent four edits:
+    - put spin 0.9's post-hoc zero in the sentence;
+    - make the energy scope exact (E = 1.5 checked at the endpoint at spin 0.6);
+    - "in involution";
+    - one δ0 source.
+  - It will then be committed as its own reference file.
+  - **Remaining before the talk test:** the MRS section (T49 plus check) and the citations at source.
