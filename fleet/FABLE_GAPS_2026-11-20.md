@@ -156,3 +156,10 @@ will be used. Each gap is marked:*
   - Gap C: state the E > 1 to E < 1 coverage.
 - **2026-11-21 ~05:55, ansatz k = 4 test.** NON-VA at k = 4 and 3.9 (E = 0.8, spin 0.6; registered pipeline, all
   gates). Not a structural exception at that (E, spin). Gap B (an argument-principle zero count) remains for later.
+- **2026-11-21 ~09:50, ansatz second reading of T11.**
+  - The loop step is sound for E > 1, with a HOLE: the zeros of P must stay in the half-plane, which needs a
+    (k, E) certificate (numerically OK at spin 0.6).
+  - Gap C is closable down to E_min ≈ 0.625.
+  - The group step needs its trace conditions stated.
+  - E < 1 at large |k| remains open.
+  - Next: Neon T19 (G1 certificate, Bridge to verify); ansatz gap B (argument-principle count; go given).
