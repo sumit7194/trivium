@@ -40,3 +40,11 @@ per the user's direction. They are kept in local, uncommitted notes.
   It was re-attached to the running job; committed 0f9809a.
 - **Lesson.** A guard must be tested against the actual process tree it protects. Check `pgrep -P` once after
   attaching.
+
+## 2026-11-21 ~17:5x: Cuspis P1 pre-check memory overrun (contained)
+- **What:** the P1 pre-check went to 3.3 GB RSS + 1.1 GB compressed (4.4 GB) against a declared ≤ 2 GB peak. Its own watchdog (2 GB cap) killed it within ~18 s. System free memory afterwards was 53%.
+- **Cause:** the memory model missed the FFT-convolution copies (stacked arrays, FFT/IFFT outputs, Python lists of full matrices) at W = 6.
+- **Effect on others:** none. Quantum's A3 (PID 40882) is alive. tabula's §213 first launch did crash at about the same time, but from its OWN KeyError (amendment-1 control print vs control dict; peak 362 MB); its guard log shows free memory at 67–68% throughout. Fixed in 22fd2b7 and relaunched at 17:58, before any result was printed.
+- **Fix:** preallocated arrays plus a row-blocked FFT convolution; the peak is to be MEASURED on a short dry run under a 1.5 GB cap before anything is declared.
+- **Lesson:** declare peaks from a measured dry run, not from a model. A watchdog set at the declared peak is what made this harmless.
+- **Disk (checked 17:59):** 11 GB free on /. Quantum's A3 has a < 5 GB disk stop; its lines are expected to write < 2 GB in total. Candidate for freeing space, with Sumit's OK only: quantum b15_g6.json (931 MB, old, gitignored).
