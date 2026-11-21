@@ -45,13 +45,13 @@
    - a second reader of the T11 loop construction;
    - re-running T14's interval certificate;
    - our own novelty search.
-3. **tabula §206** (fixing the loss's boundary data): results due this morning; then decide on the weighting test.
+3. **tabula:** §206 ruled out the boundary data. §207 (a representation test) is approved and running after its prereg. No decision is needed unless it surprises.
 
 ## Still pending
 - Quantum's Melnikov stage-2 verdict (~10:00).
 - ansatz's k = 4 test: DONE, not an exception (E = 0.8, spin 0.6).
 - Neon T17: DONE. The normalisation is fixed, and every reflection order grows at rate π < 2π (no log), PROVIDED the continuum resummation and q-sum behave. Waiting for Cuspis.
-- tabula §206.
+- tabula §206: DONE. The boundary data did NOT cause the drift. The drift comes from starting fits that sit about 1000× above the truth's loss. Next, §207 (approved, pre-registered first): can the network sit at the truth with a low loss at all?
 
 ## Notes
 - The Mac stayed within its limits. One guard stop at 05:08 was caused by Chrome (Gemini pages ~6 GB), not by

@@ -294,3 +294,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Protocol deviation: the oracle fits ran before B0. Bridge decision: refit after B0; keep the early fits set aside,
   labelled unused.
 - Relaunch GO, after a deliberate cap-breach dummy job confirms the stop now works.
+
+### 2026-11-21 06:12 IST: tabula §206 DONE, verdict 2: BC data did NOT drive the drift (UNCHANGED 3/3)
+- The corrected loss scores the truth at L = 3.4e−7, at PINN level.
+- Releases from the value-fit oracles still walk to 110–1000× higher-loss basins, about 0.1 away in field error.
+- The oracles start about 1000× above the truth's loss (mostly IC misfit).
+- §207 GO (prereg first): a representation test. Can hybrid oracles (value plus physics terms) sit near the truth
+  at low loss? Then release from them.
