@@ -334,3 +334,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   The best column is tau = 0.6, where the deficit falls ~17x per +0.03 in sigma. An extrapolation (not a result)
   says sigma = 0.13 might close narrowly. New ETA ~17:00. If nothing closes, the verdict is OPEN; any amendment
   (larger LAM_I or the sigma range) is decided after the verdict, labelled.
+- **~12:00, tabula §210 DONE** (edadf1a / 904a54d). Verdict C MIXED, per seed NONE / NONE / SHRINKS. Going from w64
+  to w128 halves the offset (~0.02 to ~0.01) in every seed; w256 adds nothing, and depth helps about as much as width.
+  Release step size was ruled out by the lr-match arm. tabula's floor prediction was wrong (0/3). Confound found:
+  the w256 hybrids start less well fitted. **§211 GO:** w256 fitted to a matched start quality (registered
+  criterion, budget cap), then the same release. If it still doesn't beat w128, the width thread parks with the
+  statement "the offset saturates at ~0.01".
