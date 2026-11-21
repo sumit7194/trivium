@@ -35,3 +35,32 @@ Code: code/v27_A.py. Outputs: results/v27_A.txt; results/v27_A_postdiag.txt (lab
 
 **Literature:** whether the axis-geodesic proof for Curzon–Chazy is new relative to Georgiev 2019 (an equatorial
 equilibrium plus a period-function argument) is still to check.
+
+---
+## Addendum B (2026-11-21 ~11:30): Neon T21 Theorem 1 on its lacunary example
+**VERDICT V27-B: FAIL as registered**, on B1 only, from a defect in the Bridge's harness. B2-B5 PASS.
+Environment: CPython 3.14.5 (conjecture_machine/.venv), numpy/scipy as in ENVIRONMENT/bridge_env.json, DOP853 rtol 1e-12.
+
+| Clause | Result | Registered |
+|---|---|---|
+| B1 counts and simplicity | winding 3.000000; Newton returned NaN | **FAIL** (harness) |
+| B2 eta | max\|eta\| = 0.060467 (2^14 grid identical) < 1/15; Neon 0.06045 | PASS |
+| B3 trace | tr = -1869.186881 (Neon -1869.187); \|tr\| > 27 | PASS |
+| B4 det | \|det - 1\| = 3.2e-9 | PASS |
+| B5 D-infinity step | winding(v+ v-) = 1.00000, so the winding of Y is 2, as the proof states | PASS |
+
+**Cause of the B1 fail.** The harness computed f0' as f0 * sum 1/(z - c_k). The registered Newton start points
+2, 16 and 512 are exact zeros of f0, so the formula gives 0 * inf = NaN. No pre-run control exercised that code path.
+
+**Labelled post-run diagnostic B1′ (not the verdict).** It uses a division-free derivative
+(code/v27_B_postdiag.py, results/v27_B_postdiag.txt). It finds three distinct, simple a-points inside the circle:
+0.5487, 17.497 and 511.954, with |f0'| = 0.53, 0.51 and 15.3. Together with the registered winding of 3, this
+accounts for the count.
+
+**Reading.** On Neon's own example, every quantity Theorem 1's proof uses checks out:
+- the hypotheses (m = 3, N + P = 3, eta < 1/15);
+- the multiplier, about 1869, far above the proof's floor of 28;
+- the exact winding 2 in the D-infinity step.
+Together with the Bridge's hand re-derivation of the proof steps (neon_work/onlykerr/T21_summary.md), Theorem 1
+looks right. It still needs a second reader before it is cited. Theorem 2 (all slow-growth entire functions) is
+only a sketch from Neon and has NOT been checked here.

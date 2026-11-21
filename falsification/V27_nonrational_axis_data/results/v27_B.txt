@@ -1,0 +1,6 @@
+B1: winding 3.000000 | a-points ['(nan+nanj)', '(nan+nanj)', '(nan+nanj)'] | |f0'| ['nan', 'nan', 'nan']
+B2: max|eta| 0.060467 (2^14: 0.060467) vs 1/15 = 0.066667; Neon 0.06045
+B3: tr -1869.186881-5.91e-12i (Neon -1869.187) | B4: |det-1| 3.21e-09
+B5: winding(v+ v-) 1.00000 | multipliers ['1869', '0.000535']
+{'B1': False, 'B2': np.True_, 'B3': np.True_, 'B4': np.True_, 'B5': np.True_}
+VERDICT V27-B FAIL

@@ -1,0 +1,3 @@
+a-points [(0.5487148817405384+0j), (17.49698678195875+0j), (511.9542956389766+0j)]
+|f0-a| ['0.0e+00', '5.6e-16', '1.9e-13'] |f0'| ['0.529', '0.511', '15.3']
+B1-prime (diagnostic) simplicity + distinctness: True | registered winding 3.000000 unchanged
