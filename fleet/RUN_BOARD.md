@@ -482,3 +482,12 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Step 0 is tiered by node.
   - Mirror slices are aliased; the positive controls must confirm the aliasing against 081b's un-aliased values.
   - Run order: Step 0 and B2a, then the positive controls, W2P8 b8, W8P8, and N4c.
+- **00:58: 081c Step 0 STOPPED as registered (Cuspis be7f9cf).**
+  - **Result:** one refinement step reaches only 2.7e-12 at s ≈ 1.97, against the 1e-12 tolerance. The residual code itself was verified to 2.6e-18.
+  - **The Bridge OK'd an amendment:**
+    - adaptive refinement (correction ≤ 1e-15, at most 8 steps), with a divergence guard;
+    - the 40-digit reference stays the referee;
+    - the STOP stays on record;
+    - the amendment is committed before the rerun;
+    - the report gives step counts and wall time.
+  - No production quantity had been computed when this was decided.
