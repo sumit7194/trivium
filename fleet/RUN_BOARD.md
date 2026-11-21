@@ -547,3 +547,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
     - The sector decomposition must be validated against the direct n-sheet Q(n).
     - Memory is measured by dry run.
     - Consequences made explicit: a P = 2-only pass is code validation only; any fail suspends the +2.4.
+- **02:00: EXP-083 R2 REGISTERED (f5b9e71).** Blocker: python-flint is not installed (only the Homebrew C library libflint 3.6.0; the Bridge's '24' was the dylib soname). Cuspis needs Sumit's own word in its chat to pip-install it, and the Bridge has asked Sumit. Meanwhile: float64 decomposition validation and mpmath cost/RSS dry runs.
