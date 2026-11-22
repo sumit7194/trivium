@@ -670,3 +670,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **Kerr edge chunks started 11:47:** kerr_e/N0N0 (54961) and N0N1 (54963). The rot90 slots (90952/90954, ~16.8 h) continue.
   - No Kerr covering result yet. Next: KERR-EARLY after all 8 edge chunks.
   - A3 (40882) is unaffected. The note "Cuspis night: SIGTERM 15193" stays a contingency only; no Cuspis night is scheduled.
+- **12:02: Cuspis post-hoc check (1b8cf34): aliasing is NOT the whole cause.** On the unaliased path, dev_b(2) at W4P4 is 4.43e-10 (σ fixed) or 5.42e-10 (σ re-solved), against arm (a)'s 1.04e-10. That is 4.3–5.2×, above the registered 3×.
+  - Cuspis WITHDREW its "passes on own path" reading (struck through, pointer kept). The headline is unchanged: arm (b) UNVALIDATED as registered. The cause is unidentified; s_cut, npt and aliasing are falsified. dev_b is σ-sensitive (a Δσ of 3e-14 moves it by 1e-10).
+  - Slip-15 mechanisms are built and tested: alias=False is the default, and tools/tol_ref checks the reference path.
+  - **Bridge approved a ~20 min one-variable post-hoc sweep** (Mt, npt0, n·Δld1), with a written pre-statement first, 1.5 GB cap, nice 12. It stops at "unidentified" if nothing explains the excess.
