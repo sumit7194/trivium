@@ -64,3 +64,4 @@ per the user's direction. They are kept in local, uncommitted notes.
 - Pattern: the FOURTH modelled-vs-measured memory miss on this line today. Compressed memory grows over long runs, so a
   short dry run under-reads the peak. Lesson: dry runs must last long enough to reach steady compressed growth, or the
   declared peak should carry a ×1.5 margin.
+- **06:35:** ansatz's Prop. 2 control script ran away to 10 GB with no RSS guard and caused pressure kills in two other sisters' runs. The Bridge's request didn't specify a memory bound; it should have.
