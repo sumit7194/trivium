@@ -662,3 +662,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **The +2.4 is still not validated** (081c ρ 1.86).
   - **Bridge asked for:** (1) a cheap labelled check, arm (b) n = 2 on the un-aliased path; (2) a tolerance-path guard in the harness, with the aliasing removed or made opt-in, before 081d.
   - Lanes idle. 081d held for Sumit.
+- **11:52: Quantum B15d RECIPE-POSITIVE (bd27a4a, run.log 11:47:05). Bridge read all 7 .out files.**
+  - The 6 required coverings are COVERS=1 with edges=yes, fail_a = fail_b = 0.
+  - The optional N6N3 is CERTIFIED-FAIL: 24/25 b-edge fail pieces are certified, plus an orientation certified-fail.
+  - The chain is [3,4,5,6].
+  - **B15e twin gate PASS** (the swap variant: all 6 CERTIFIED-FAIL).
+  - **Kerr edge chunks started 11:47:** kerr_e/N0N0 (54961) and N0N1 (54963). The rot90 slots (90952/90954, ~16.8 h) continue.
+  - No Kerr covering result yet. Next: KERR-EARLY after all 8 edge chunks.
+  - A3 (40882) is unaffected. The note "Cuspis night: SIGTERM 15193" stays a contingency only; no Cuspis night is scheduled.
