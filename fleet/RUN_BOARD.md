@@ -688,3 +688,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Candidates Mx/tmax and Arb-reference correctness are held for Sumit with 081d.
   - **Cuspis: stopped for today.**
 - **19:02: Email reply received (Sumit's Gmail, 12:21) from Loukes-Gerakopoulos on TS δ=2.** He suggests a Poincaré section near the main unstable periodic orbit and would not be surprised by chaos. A possible sharper version of tabula §198 is held for Sumit's ideas discussion. **Box check before the app restart:** every compute job is detached (parent = launchd): Quantum runner 15193 with 2 Kerr edge chunks, rot90 twins 90952/90954, A3 40882. Cuspis/tabula/ansatz idle.
+- **19:15: Quantum F12 HARNESS: all 16 Kerr specs lack `param level`** (the mn lift hard-codes H = −1/2, but S9 checks SYS.level). So every Kerr piece threw an S9 BUG: kerr_e N0N0/N0N1 had 34 S9-BUG lines each, 0 COVER, ~7.5 h void. Quantum PAUSED them (SIGSTOP).
+  - The Bridge independently confirmed it (16/16 specs; hs_cover.cpp L139–142, L426, L200; both processes in state T).
+  - **Approved B15e A1:** fix the specs; add a runner gate (a known-answer: a no-level spec must be REFUSED); run a NOT-COUNTED S9 smoke plus a must-fail wrong-level twin; move the void outputs to kerr_e_void_nolevel/; swap the runner; rerun kerr_e from scratch.
+  - Slip 16, shared (the Bridge approved the B15c header): the recipe and twin gates ran on hh, so the mn path was never smoke-tested.
