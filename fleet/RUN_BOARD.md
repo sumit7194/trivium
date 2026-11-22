@@ -683,3 +683,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - §8: first-order σ sensitivity is intrinsic at O(N⁰). The Bridge agrees.
   - §9: the new candidate for the −4.4e-10 is σ₂'s distance from the exact saddle.
   - **The Bridge approved that test only if it costs ≤ 1 h** (pre-statement first, 1.5 GB cap); otherwise it is held for Sumit with 081d.
+- **13:00: Cuspis exact-saddle test (pre-statement d025d51, result b3500cf): cause NOT found.** At the Arb saddle, dev_b(2) = +4.74e-10. The σ₂ error (−9.2e-10) is co-equal, but the +4.7e-10 evaluation excess on the σ ≠ 0 strip remains. Post hoc, labelled.
+  - S₁ revised to 2.6e4 (direction-dependent), so plain float64 σ_n is hopeless for the validation arm at k ≥ 1. This strengthens option (a) for production.
+  - Candidates Mx/tmax and Arb-reference correctness are held for Sumit with 081d.
+  - **Cuspis: stopped for today.**
