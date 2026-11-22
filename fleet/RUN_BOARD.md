@@ -641,3 +641,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **07:40: TS reminder ADDED** (Sumit's calendar, all-day 10 Dec): 'TS δ=2: check for reply from Lukes-Gerakopoulos'. The TS email was SENT by Sumit.
 - **07:41: tabula wide C never ran.** The launcher's ABSOLUTE swap gate (1.5 GB) held it while swap was stale (1.8–2.1 GB at 84% free); the side guard wrote STOP at launch before any compute. A waiter process-group bug was found and fixed. **Bridge:** switch to swap GROWTH > 0.5 GB over the launch baseline (gate and side guard alike); other guards unchanged; launch when free ≥ 50% and pressure level 1. Cuspis's 3 GB run goes after.
 - **07:41: tabula wide C RUNNING** (launched 07:41:44, PGID 48757, ETA ~08:40). Swap baseline 1822.69 MB, trip at +512 MB. The amendment was committed before launch (2bf2c1d).
+- **07:47: Cuspis 081c W8P8 done.**
+  - **Registered verdict: INCONCLUSIVE.** The residue clause failed at 8.7e-7 against 1e-8, but the threshold sat inside the unrefined arm's known error (slip 13). Production residues are converged to 6e-26.
+  - **Next (Bridge):** census, N4c and the analysis run now, and σ_W, ρ and Richardson are reported POST HOC with impact grading, labelled.
+  - **Schedule:** C2 P = 2 and the Arb 3 GB run after tabula (~08:40). R3′ P = 4 ports ETA ~10:00–10:30. Heavy C1 ETA ~13:00–16:00 (a guess).
