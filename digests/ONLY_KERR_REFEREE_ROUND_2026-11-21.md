@@ -87,3 +87,22 @@ The owner (ansatz) graded every point (data/nve/T38_GRADING.md, d153394, plus ad
      Combot and Singer.
    - Prop. 2 (single-valued off-axis metric) is labelled citation-pending.
    - **READY FOR THE TALK TEST.**
+
+## Second referee read, T51 (2026-11-22, at Sumit's request)
+Neon T51 gave a hostile read of claim v1. ansatz graded it in conjecture_machine/data/nve/T51_GRADING.md (d067545), and the
+Bridge agrees.
+- **Its "strongest objection" was WRONG:** e₋ = 1/e₊ is general for asymptotically flat data. The conformally rescaled
+  potential is analytic at spatial infinity, which gives ξ₋ = −ξ₊.
+  - Exact checks: Kerr, and two unequal Curzon masses with NO reflection plane.
+  - Now written out in MRS_SECTION §5a.
+- **RIGHT, and it changes the framing:** by Kerr uniqueness, no k > 0 member is a regular black hole. Members are
+  stationary axisymmetric vacuum fields, and nothing off the axis is checked. Plain-language text must not say
+  "black holes".
+- **Fixed:**
+  - the NVE is stated in regular Cartesian coordinates;
+  - F = O(k²) at k = 0 structurally, so no split zeros near Kerr;
+  - the coordinate conventions are stated;
+  - the claim is now status-first.
+- **Claim v2 (same numbers, status first) is the reference.** Prior-art checks (Markakis 2014, Kruglikov–Matveev 2016,
+  Kordas/MN) are pending.
+

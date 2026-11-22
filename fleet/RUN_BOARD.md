@@ -616,3 +616,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **The Bridge checked** Prop. 1's proof and the u = 1 crossing.
   - **One required addition:** a lemma (citation checked at source) that the Galois identity component is invariant under the finite cover Γ_E and the algebraic v-gauge, linking u-plane Zariski density to the NVE's (G)⁰.
 - **04:49: Only Kerr READY FOR THE TALK TEST.** The reference claim is in eed501f. The MRS section has Lemma C (5167814 + sources); the Bridge checked the gauge and the proof. Prop. 2 is citation-pending (labelled). ansatz is idle (the new-directions hold stands).
+- **05:55: T51 graded by ansatz (d067545).** e₋ = 1/e₊ is general (a two-Curzon asymmetric counterexample to the objection). Claim v2 is status-first, with conventions stated and "not black holes". F = O(k²) at Kerr. Prior-art checks pending.
