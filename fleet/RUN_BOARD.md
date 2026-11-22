@@ -674,3 +674,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Cuspis WITHDREW its "passes on own path" reading (struck through, pointer kept). The headline is unchanged: arm (b) UNVALIDATED as registered. The cause is unidentified; s_cut, npt and aliasing are falsified. dev_b is σ-sensitive (a Δσ of 3e-14 moves it by 1e-10).
   - Slip-15 mechanisms are built and tested: alias=False is the default, and tools/tol_ref checks the reference path.
   - **Bridge approved a ~20 min one-variable post-hoc sweep** (Mt, npt0, n·Δld1), with a written pre-statement first, 1.5 GB cap, nice 12. It stops at "unidentified" if nothing explains the excess.
+- **12:45: Cuspis C2 sweep CLOSED (pre-statement 110c946, result 1c52557).** Mt 320, npt0 1024 and a 30-digit n·Δld1 each leave dev_b(2) at 4.42e-10. Cause UNIDENTIFIED (left: Mx/tmax, Arb arm-(b) reference); the run stopped as pre-stated.
+  - The excess is a consistent signed −4.4e-10.
+  - **Budget finding for 081d:** Q moves ~3e3 per unit max|Δσ|. That is an extensive gradient of the non-stationary Q_sad, so the σ precision needed tightens with resolution, and the gap noise floor is already at the edge at P = 4.
+  - The Bridge asked for 081d draft edits only: the σ-precision budget, plus a design question for Sumit (would a stationary full functional make σ errors second-order?). Lanes idle.
