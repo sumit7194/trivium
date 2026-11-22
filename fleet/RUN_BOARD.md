@@ -678,3 +678,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - The excess is a consistent signed −4.4e-10.
   - **Budget finding for 081d:** Q moves ~3e3 per unit max|Δσ|. That is an extensive gradient of the non-stationary Q_sad, so the σ precision needed tightens with resolution, and the gap noise floor is already at the edge at P = 4.
   - The Bridge asked for 081d draft edits only: the σ-precision budget, plus a design question for Sumit (would a stationary full functional make σ errors second-order?). Lanes idle.
+- **12:47: Cuspis 081d draft edits (01a61fc), text only.**
+  - §5b σ-precision budget: S₁ = 3.3e3, S(k) ∝ k³. The measured floor exceeds the requirement at every k, but this bites only the integer-VALIDATION arm. Production T_sad takes σ̇ from one dense solve (the Bridge checked sigma3d.saddle_term), and is bounded by a C1 check at each k.
+  - §8: first-order σ sensitivity is intrinsic at O(N⁰). The Bridge agrees.
+  - §9: the new candidate for the −4.4e-10 is σ₂'s distance from the exact saddle.
+  - **The Bridge approved that test only if it costs ≤ 1 h** (pre-statement first, 1.5 GB cap); otherwise it is held for Sumit with 081d.
