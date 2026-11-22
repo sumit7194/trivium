@@ -638,3 +638,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **07:26: Only Kerr email to Maciejewski cc Przybylska PREFILLED in Gmail** via a compose URL (no keystrokes in the compose window). Both addresses were verified by the Bridge on the official pages (staff page; institute conference page). Both links resolve (200). The compose tab is left open for Sumit to read and send himself.
 - **07:28: Only Kerr email SENT by Sumit** (Maciejewski cc Przybylska). Wait; don't chase.
 - **07:38: TS δ=2 expert email to Lukes-Gerakopoulos PREFILLED** in Gmail (draft v2 at outreach/paper_ts_mn/EMAIL_DRAFT_expert_v2.txt). The address gglukes@gmail.com was verified on his arXiv:2511.08057 and 2605.02084. The SUMMARY.md link resolves (200). No keystrokes; the tab is left open for Sumit.
+- **07:40: TS reminder ADDED** (Sumit's calendar, all-day 10 Dec): 'TS δ=2: check for reply from Lukes-Gerakopoulos'. The TS email was SENT by Sumit.
