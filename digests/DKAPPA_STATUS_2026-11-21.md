@@ -81,3 +81,19 @@ waits until EXP-081b passes.
 - T46c: a consistent discretisation, then a converged infinite-volume value.
 - The growth bound for q > 0.
 - The r = 8 night run (on hold).
+
+## 2026-11-22 morning: the lattice value is not resolution-stable
+- EXP-081c is INCONCLUSIVE as registered (a residue clause whose tolerance sat inside the reference arm's own error;
+  control-clause slip 13).
+- **Post hoc, labelled, with the residue error graded by impact:**
+  - one doubling of the lattice resolution at fixed physical geometry moves R from ~2.65 to 6.44 (ρ = 1.86);
+  - box-width effect +0.009; resolution effect +3.79;
+  - R∞ + 0.4503 = 2.86 ± 3.81, so the sign is undecided even post hoc.
+- **Robustness:** R48 is reproduced by an independent S sum and by 081b's own numerics, so it is not a numerical
+  artefact.
+- **Reading:** the (2,4) lattice value (+2.4) is NOT a continuum number. The free side is stable (+0.47%), so the growth
+  is in the σ sector, possibly an uncancelled UV (log) piece; to be tested by a component decomposition and a ≥ 3-point
+  refinement series (drafted, not run).
+- **The infinite-volume route** (T46e–g): saddle-off validated on a stand-in; saddle-on consistent at ε ≤ 0.1. The lattice
+  T_sad ASSEMBLY is verified at small P (C1). The continuation question stays open.
+

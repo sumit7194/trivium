@@ -646,3 +646,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **Next (Bridge):** census, N4c and the analysis run now, and σ_W, ρ and Richardson are reported POST HOC with impact grading, labelled.
   - **Schedule:** C2 P = 2 and the Arb 3 GB run after tabula (~08:40). R3′ P = 4 ports ETA ~10:00–10:30. Heavy C1 ETA ~13:00–16:00 (a guess).
 - **07:49: Sumit is going to sleep.** The ideas discussion is set for this afternoon or early evening. Until then the Bridge monitors and decides routine calls only; no new directions.
+- **07:57: Cuspis 081c post hoc:** ρ = 1.86. R goes 2.65 → 6.44 under one doubling (resolution effect +3.79, box +0.009); R48 reproduced two ways; sign undecided even post hoc. So **+2.4 is not a continuum number.** The Bridge asked for a ρ decomposition by component and a log-vs-power check (existing data), and for a refinement series DRAFT (not run).
