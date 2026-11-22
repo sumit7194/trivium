@@ -106,3 +106,17 @@ Bridge agrees.
 - **Claim v2 (same numbers, status first) is the reference.** Prior-art checks (Markakis 2014, Kruglikov–Matveev 2016,
   Kordas/MN) are pending.
 
+## Applicability chain complete (2026-11-22 morning)
+- **Prop. 2 (single-valued off-axis metric) is CLOSED by our own majorant proof** (conjecture_machine b30d5c3, MRS §4b).
+  - It uses Nagumo norms and the Cauchy–Kovalevskaya majorant, and needs only f0 ≠ 0.
+  - Kerr control at 30 digits: truncation errors track (t/R)^13 at the true radius. The must-fail control fires.
+  - Baouendi–Goulaouic is the supporting reference.
+- **Necessary direction of the first-order classification (deg f0 ≥ 3 ⇒ SL₂ at generic E): CHECKED.** Kovacic case 3
+  is excluded both by Kovacic's original condition (1986 scan) and by an independent argument. Sufficiency is NOT
+  claimed.
+- **Related result,** quoted only from CLAIM_FAMILY_II.md's separate section: within rational axis data, equatorially
+  symmetric non-Kerr fields with deg f0 ≥ 3 are obstructed at first order at generic E. This speaks to Markakis's
+  conjecture.
+- **Status:** every link is checked or cited at source except V21 Lemma 1–2 (Bridge-verified). Ready for Sumit's
+  outreach decision.
+
