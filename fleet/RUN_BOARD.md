@@ -645,3 +645,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **Registered verdict: INCONCLUSIVE.** The residue clause failed at 8.7e-7 against 1e-8, but the threshold sat inside the unrefined arm's known error (slip 13). Production residues are converged to 6e-26.
   - **Next (Bridge):** census, N4c and the analysis run now, and σ_W, ρ and Richardson are reported POST HOC with impact grading, labelled.
   - **Schedule:** C2 P = 2 and the Arb 3 GB run after tabula (~08:40). R3′ P = 4 ports ETA ~10:00–10:30. Heavy C1 ETA ~13:00–16:00 (a guess).
+- **07:49: Sumit is going to sleep.** The ideas discussion is set for this afternoon or early evening. Until then the Bridge monitors and decides routine calls only; no new directions.
