@@ -694,3 +694,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Slip 16, shared (the Bridge approved the B15c header): the recipe and twin gates ran on hh, so the mn path was never smoke-tested.
 - **19:16: Sumit APPROVED 081d (refinement series k = 1–3) for tonight.** Cuspis was woken via session message. Order: registration commit (plant_guard and tol_ref mandatory, C1 check per k, σ budget, r-statistic decision rule pre-written), then Bridge control-clause review and GO, then run (4 cores, nice 12, declared cap ~4 GB, pressure-stop on). Quantum is NOT stopped; it co-runs.
 - **19:19: Quantum B15e A1 registered (852b9f9) and fixed (4c66dab). Bridge spot-check:** 0 Kerr specs lack the level line; gate known-answer REFUSED, 0 launches (run.log L107). S9 smoke S+/S− (level −1/2 vs −499/1000) running as PIDs 4433/4439. Counted kerr_e restarts only after the smoke PASSes.
+- **20:16: Cuspis 081d REGISTERED (963c8f5); no new-k number exists.**
+  - Bridge review: the control table is good. ONE CLAUSE NAMED: the §B decision bands leave gaps. p = 1 convergence (r = 0.667) and p = 1 growth (1.5) are always INCONCLUSIVE, and slow power |p| ≤ 0.55 reads as "log-like". Fix to be committed before launch (R(1.5) enters r).
+  - **k = 3 cost CORRECTED by Cuspis:** ~3.1 GB per process, ≈ 47 core-h, NOT one night.
+  - Stage 1 (k = 1.5, 2.5; ≤ 4 GB, ~9 h) is approved in principle and starts on GO. Stage 2 (k = 3) options go to Sumit.
