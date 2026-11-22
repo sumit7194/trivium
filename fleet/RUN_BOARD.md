@@ -699,3 +699,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - **k = 3 cost CORRECTED by Cuspis:** ~3.1 GB per process, ≈ 47 core-h, NOT one night.
   - Stage 1 (k = 1.5, 2.5; ≤ 4 GB, ~9 h) is approved in principle and starts on GO. Stage 2 (k = 3) options go to Sumit.
 - **20:17: 081d amendment 1 (361febf), committed before launch.** Bands: converging ≤ 0.75, 'log-like or slow power' 0.87–1.15, power ≥ 1.33; 16/16 planted tests pass. **Bridge GO for Stage 1** (k = 1.5, 2.5; ≤ 4 GB, ~9 h). **Sumit chose Stage 2 option (i):** 3 parallel processes, ~9.3 GB, ~16 h. It starts after Stage 1 passes, at a quiet time agreed with Sumit, with the memory cap taken from a measured k = 3 probe.
+- **20:18: 081d Stage 1 LAUNCHED 20:17** (lanes 14172/14331/14342, watchdogs 14494/14503/14512; declared ≤ 4 GB). Next report: STOP, void k, or Stage 1 end.
