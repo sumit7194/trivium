@@ -687,3 +687,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - S₁ revised to 2.6e4 (direction-dependent), so plain float64 σ_n is hopeless for the validation arm at k ≥ 1. This strengthens option (a) for production.
   - Candidates Mx/tmax and Arb-reference correctness are held for Sumit with 081d.
   - **Cuspis: stopped for today.**
+- **19:02: Email reply received (Sumit's Gmail, 12:21) from Loukes-Gerakopoulos on TS δ=2.** He suggests a Poincaré section near the main unstable periodic orbit and would not be surprised by chaos. A possible sharper version of tabula §198 is held for Sumit's ideas discussion. **Box check before the app restart:** every compute job is detached (parent = launchd): Quantum runner 15193 with 2 Kerr edge chunks, rot90 twins 90952/90954, A3 40882. Cuspis/tabula/ansatz idle.
