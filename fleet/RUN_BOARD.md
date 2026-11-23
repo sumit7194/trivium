@@ -816,3 +816,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Bitwise identical at both cutoffs. At integer n the dropped terms are weighted ~4e-17 (below one ulp), so the change could not reach the result. That is a registration slip by Cuspis, approved by the Bridge (slip 22). It is now Cuspis's lesson L3: bound the variable's reach before registering.
 - What it does show: the cutoff is EXCLUDED as the cause of the exactness residual at integer n (W = Wbox family, ≤ 1.1e-9). That residual stays UNEXPLAINED but bounded. The cutoff fix matters only for the n = 1 derivative quantities.
 - 085c tier 1 (the torus check) started 00:34.
+
+### 2026-11-24 01:42 — Cuspis: 085c (box-consistent correction) READ
+- Registered reading: the curvature row FAILS, so no slope reading, as registered. All controls passed (zero exact, must-fail in its own band, two routes agree to 1e-12). The largest shapes took ~5 min and ≤ 1.44 GB each.
+- Descriptive and post-hoc: the box value approaches the bulk value as c_A/c ≈ 1 − 2/P. A linear + 1/k model fits the correction ~3× better than a quadratic, and implies the box recipe's asymptotic slope ≈ −1.26, the same ~30% overshoot as bulk. So the box recipe's near-flattening at small boxes looks like a finite-size effect that fades.
+- Bridge slip 23: a false premise (raw R has no k²) plus a row model that couldn't separate k² from 1/k. Cuspis caught the premise.
+- State of T54: every recipe tested overshoots asymptotically by ~30%. What remains is a second, opposite-sign contribution or c's normalisation. Next step held for Sumit. Routes stay on HOLD; part 8 (W4P8) continues.
