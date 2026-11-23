@@ -775,3 +775,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - k=2.5 would take tens of hours per n, so the registered fallback applies (amendment 2, 3bfb065, committed before any result): k = 1, 1.5, 2 at n = 2. k=2.5 and n=3,4 are supplementary and need a separate go.
 - The Bridge re-derived the projection independently (~13–14 h for the three remaining points) and it matches. No veto. One early check is asked: if the second-largest point runs past 1.5× its estimate, report before starting the last one.
 - Queue: 085 geometry builds (started 20:50, alone) → 084c remaining points (one at a time, nice 12) → READ → HOLD. Routes stay on hold until the Bridge reads the 085 result.
+
+### 2026-11-23 20:57 — Cuspis: 085 geometry builds crashed at start, fixed, rerunning
+- They crashed after 5 s on a data-format mismatch (stored values are nested one level deeper than the code expected), before any number was produced. Fixed in 29c26d3 and checked with a planted test. Relaunched alone at 20:56 (5cd4953).
+- Fault found: the next job was chained on the previous job's process ending, not on it succeeding, so the crash nearly started it early (only the memory gate held it). The Bridge asked Cuspis to chain on a clean-finish marker and test it with a planted failure. A second ask: the end-to-end test should run every phase on the real stored files.
