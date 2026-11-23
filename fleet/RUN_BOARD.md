@@ -827,3 +827,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Running: Quantum's 7 Kerr chunks and A3; Cuspis's 084c part 8 (W4P8, then W8P8, then READ); DeepStrain's pSEOBNR prior-sensitivity re-run (~25 min, one core).
 - Held for Sumit: the T54 next step (a second contribution, or c's normalisation); routes; DeepStrain's line choice; AWS (GPU quota pending, unused).
 - Bridge overnight: event-only. Grade incoming results; start no new work.
+
+### 2026-11-24 02:34 — DeepStrain: pSEOBNR prior-sensitivity test (A2, non-blind), graded
+- Frozen-rule verdict: PRIOR-SENSITIVE. LVK's joint 2-D GR quantile goes from 98.4% (reproducing LVK's 98.1%) to 88.6% under a volumetric spin prior. The other nuisance-prior variants, including the distance (Kyutoku amplitude) channel, barely move it. DeepStrain's pre-registered prediction (ROBUST) was wrong, and it says so.
+- Descriptive: the sensitivity sits in the FREQUENCY deviation (+1.34σ → −0.10σ). The damping-time offset (~+2σ, median 0.06–0.07) is robust to every prior tried.
+- Validity (Bridge ask): importance-sampling ESS for the volumetric variant is ≥ 1,670 per event (none under 200); max Pareto k̂ is 0.18. Not an artefact.
+- Scope: the joint method only. Waiting for Sumit: a hierarchical check, a prior-art search, and any public note.
