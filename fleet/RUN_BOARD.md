@@ -805,3 +805,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ### 2026-11-23 23:47 — Cuspis: 085w2a (cutoff raised to 6 at W4P4)
 - Registered predictions FAIL by ×1.8, as in 085w. All controls pass (including two independent tail implementations agreeing to 8.8e-18, and the plant).
 - Descriptive: raising the cutoff removes 99.8% and 99.6% of the two mismatches. Both now sit at the SAME ~1.26e-11 floor (≈5e-10 of |d|), cause unidentified. The tolerance stands. W4P4 stays BOUNDED. This supports the production cutoff change (descriptively). 2b is running.
+
+### 2026-11-23 23:49 — Cloud survey (AWS, sumit.research): all 5 research sisters answered
+- GPU (one T4): nobody's CURRENT work benefits; the only GPU-shaped work is DeepStrain's (matched-filter bank), which is a new direction awaiting Sumit.
+- Many-core CPU: (1) Cuspis's held routes plus the 084c k=2.5 runs, ~30 h side by side instead of 80–100 h, ~$21, once the hold lifts; (2) Quantum's later Kerr chunks, 2–4 days off the final readings, ~$35, needs a registration amendment (different binary) and checkpointing for spot machines; (3) tabula's integrations, a minor convenience; (4) ansatz-machine: only if its scope is extended (a new direction).
+- Every sister needs a platform-change step first: rerun stored cases on Linux to stated tolerances, because bitwise checks won't survive a different maths library.
+- Bridge's recommendation: no spend today. GPU limit requests stay pending (free). Revisit once the credits show and Cuspis's routes are cleared.
