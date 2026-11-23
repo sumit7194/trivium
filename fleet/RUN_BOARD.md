@@ -822,3 +822,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Descriptive and post-hoc: the box value approaches the bulk value as c_A/c ≈ 1 − 2/P. A linear + 1/k model fits the correction ~3× better than a quadratic, and implies the box recipe's asymptotic slope ≈ −1.26, the same ~30% overshoot as bulk. So the box recipe's near-flattening at small boxes looks like a finite-size effect that fades.
 - Bridge slip 23: a false premise (raw R has no k²) plus a row model that couldn't separate k² from 1/k. Cuspis caught the premise.
 - State of T54: every recipe tested overshoots asymptotically by ~30%. What remains is a second, opposite-sign contribution or c's normalisation. Next step held for Sumit. Routes stay on HOLD; part 8 (W4P8) continues.
+
+### 2026-11-24 02:11 — Overnight (Sumit asleep)
+- Running: Quantum's 7 Kerr chunks and A3; Cuspis's 084c part 8 (W4P8, then W8P8, then READ); DeepStrain's pSEOBNR prior-sensitivity re-run (~25 min, one core).
+- Held for Sumit: the T54 next step (a second contribution, or c's normalisation); routes; DeepStrain's line choice; AWS (GPU quota pending, unused).
+- Bridge overnight: event-only. Grade incoming results; start no new work.
