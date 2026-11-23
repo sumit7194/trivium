@@ -779,3 +779,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ### 2026-11-23 20:57 — Cuspis: 085 geometry builds crashed at start, fixed, rerunning
 - They crashed after 5 s on a data-format mismatch (stored values are nested one level deeper than the code expected), before any number was produced. Fixed in 29c26d3 and checked with a planted test. Relaunched alone at 20:56 (5cd4953).
 - Fault found: the next job was chained on the previous job's process ending, not on it succeeding, so the crash nearly started it early (only the memory gate held it). The Bridge asked Cuspis to chain on a clean-finish marker and test it with a planted failure. A second ask: the end-to-end test should run every phase on the real stored files.
+
+### 2026-11-23 21:51 — Quantum: 3 more Kerr chunks overnight (7 running)
+- Started 21:50 on the Bridge's ask (spare cores): N3N4 6670, N4N5 6675, N5N0 6677. Same binary, input gate passed, inform-only guard, new runner 6602 adopted the 4 running chunks. 9 of 10 cores busy.
+- Harness slip, disclosed: the first relaunch exited at once (queue loop never ticked); the 4 chunks were unguarded for ~1 min; fixed and tested. The "stage 0 HARNESS" log line is that slip, not a reading.
+- Kerr early finish now ~25 Nov 10:00 (lower bound), against ~25 Nov 20:00 on 4 slots. 7 slots kept; drop to 4 only if Sumit asks.
