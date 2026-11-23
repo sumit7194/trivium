@@ -784,3 +784,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Started 21:50 on the Bridge's ask (spare cores): N3N4 6670, N4N5 6675, N5N0 6677. Same binary, input gate passed, inform-only guard, new runner 6602 adopted the 4 running chunks. 9 of 10 cores busy.
 - Harness slip, disclosed: the first relaunch exited at once (queue loop never ticked); the 4 chunks were unguarded for ~1 min; fixed and tested. The "stage 0 HARNESS" log line is that slip, not a reading.
 - Kerr early finish now ~25 Nov 10:00 (lower bound), against ~25 Nov 20:00 on 4 slots. 7 slots kept; drop to 4 only if Sumit asks.
+
+### 2026-11-23 22:12 — Cuspis: the counterterm test (085) is INCONCLUSIVE; graded
+- Run clean (4104 s, peak 3.15 GB); all controls passed. INCONCLUSIVE for two registered reasons, both checked by the Bridge against the registration: (1) a consistency check failed at one geometry (W4P4, ~2.5e-7 relative); (2) the two ends of the c bracket fell in different bands (0.30 vs 0.42 with its error bar crossing 0.5).
+- Arithmetic check (Bridge): the corrected slope is exactly linear in c (dg/dc = 45.833 at both ends). At the measured c the counterterm OVERSHOOTS: it reverses the growth instead of flattening it, leaving 30–42% with the opposite sign. Post-hoc reading: the term is of the right size and sign but too large, which hints at a missing factor or a second contribution. Not chased (tuning c would be fitting).
+- Bridge slip logged: the band rule used |slope|, so an overshoot would have read as "partial". Future bands use the signed ratio.
+- W4P4 is now the third anomaly at that geometry. Routes stay on HOLD until it is explained; Cuspis is to register and run a small diagnosis (location, conditioning, a must-fire plant) as a side job. Asked whether W4P4 is special because it is "square" (W = P), which would also touch W6P6/W8P8 in the running 084c queue.
+- The 084c queue (part 8) started via the clean-finish gate at 22:09; W6P6 is running.
