@@ -30,3 +30,10 @@ Status: the Lean runs (vacuity instances V1–V7, re-running #print axioms) are 
 ## Vacuity instances to run later (V1–V7)
 In the reader's report (Bridge transcript, 2026-11-23). Key ones: V1 (DD never 0), V3 (a Case-2a-only instance), V4 (CertCases not trivially true), V5 (G1 = 0 exactly where CertCases fails: the hypothesis does real work), V6 (hτ needed).
 Full snippets are saved alongside in OnlyKerr_vacuity_snippets.lean.
+
+## Author resolution (17:03, Quantum; accepted by the Bridge)
+- Case 2a: the certified quantity is θ^(-1/2)|Im H~_θ| = |Im(H/a)|, so c = a and the transfer HOLDS (algebra checked by the Bridge). Trust item: the identity H = a√(1+s)H~_θ (from T19; implemented in Bridge V26-K).
+- Coverage: the domain is k < 30/7 (the theorem's range). Case 1 covers k ≤ 0 and Cases 2a/2b cover 0 < k < 30/7. NO GAP; the README wording is to be fixed.
+- Provenance: Neon T19 (/u/1, 2026-11-21), fleet-verified by Bridge V26 Addendum K (mpmath iv). K2 FAILED as registered and K2′ PASSED (margin 0.99937); tails and holomorphy were read by hand.
+- README/Axioms fixes (5 housekeeping items + 3 wording fixes) are held until the ZiglinCert read finishes.
+**Net: FAITHFUL WITH CAVEATS once the README is reworded. No change to the Only-Kerr argument.**
