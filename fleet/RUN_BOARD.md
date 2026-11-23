@@ -801,3 +801,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - 085w W2P4: all controls pass, the planted error is caught, and the family prediction holds (no dropped terms in that shape, matching its clean check). Overall: the suspect FAILS narrowly at W4P4, the family pattern holds, and W4P4 is BOUNDED.
 - 085c (the next correction test) is registered (f3fa752) with the Bridge's changes: one primary recipe argued in advance, signed bands, a guard tied to the slope (whole interval ≤ 0.057), two independent routes, and a descriptive box-vs-bulk map. Nothing computed yet.
 - 085w2 (raising the cutoff everywhere) started 23:21. 085c code is being written; it runs after 085w2, one side job at a time.
+
+### 2026-11-23 23:47 — Cuspis: 085w2a (cutoff raised to 6 at W4P4)
+- Registered predictions FAIL by ×1.8, as in 085w. All controls pass (including two independent tail implementations agreeing to 8.8e-18, and the plant).
+- Descriptive: raising the cutoff removes 99.8% and 99.6% of the two mismatches. Both now sit at the SAME ~1.26e-11 floor (≈5e-10 of |d|), cause unidentified. The tolerance stands. W4P4 stays BOUNDED. This supports the production cutoff change (descriptively). 2b is running.
