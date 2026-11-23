@@ -811,3 +811,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Many-core CPU: (1) Cuspis's held routes plus the 084c k=2.5 runs, ~30 h side by side instead of 80–100 h, ~$21, once the hold lifts; (2) Quantum's later Kerr chunks, 2–4 days off the final readings, ~$35, needs a registration amendment (different binary) and checkpointing for spot machines; (3) tabula's integrations, a minor convenience; (4) ansatz-machine: only if its scope is extended (a new direction).
 - Every sister needs a platform-change step first: rerun stored cases on Linux to stated tolerances, because bitwise checks won't survive a different maths library.
 - Bridge's recommendation: no spend today. GPU limit requests stay pending (free). Revisit once the credits show and Cuspis's routes are cleared.
+
+### 2026-11-24 00:36 — Cuspis: 085w2b (raised cutoff in the integer-n route) had no effect
+- Bitwise identical at both cutoffs. At integer n the dropped terms are weighted ~4e-17 (below one ulp), so the change could not reach the result. That is a registration slip by Cuspis, approved by the Bridge (slip 22). It is now Cuspis's lesson L3: bound the variable's reach before registering.
+- What it does show: the cutoff is EXCLUDED as the cause of the exactness residual at integer n (W = Wbox family, ≤ 1.1e-9). That residual stays UNEXPLAINED but bounded. The cutoff fix matters only for the n = 1 derivative quantities.
+- 085c tier 1 (the torus check) started 00:34.
