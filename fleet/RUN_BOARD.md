@@ -843,3 +843,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ### 2026-11-24 11:26 — Sumit: start nothing new; let the cores free up (office work)
 - Nothing running is stopped. When a job finishes, no new job starts: Quantum holds new launches (N5N1, twin(a), kerr(a)) via slots.txt; Cuspis's W12 + GEOM go is withdrawn until Sumit says. Part 8 / READ continue; EXP-086 (seconds, stored data) may run after READ.
 - Sumit may ask to pause pausable runs if he needs cores. Nobody pauses on their own.
+
+### 2026-11-24 11:30 — Cuspis/T54: branch B (c's value) EXCLUDED by a verified outside source
+- Hasenbusch 2112.03783 (Monte Carlo, simple-cubic O(N), N = 4–12, verified verbatim) gives c_eff(N) monotone to −0.103 at N = 12 and c∞ ≈ −0.117 to −0.121, inside Cuspis's bracket [−0.1246, −0.1141]. The "flattening" value −0.0877 is excluded. Our c is independently confirmed.
+- So the ~30% overshoot is NOT c's value. The open branch is a mismatch inside Cuspis's Q′(1) computation (the continuation, or an O(1) factor). Next free test: EXP-086 (n = 2), after W8P8 and READ.
