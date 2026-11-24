@@ -839,3 +839,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Revised: W4P8 ends ~09:00–10:00; W8P8 takes ~10 h+ and ends ~20:00 or later; READ follows.
 - Bridge: let W8P8 run. It is part of the registered core set approved before Sumit's "no NEW long jobs" rule; one core, < 0.5 GB, 80% of memory free. The timing watch is re-armed at 15 h. Lesson for Cuspis: single-step cost projections carry an explicit upper bracket.
 - Morning summary for Sumit: the Maciejewski reply was sent at 04:00 (to Andrzej; Sumit chose not to add Maria).
+
+### 2026-11-24 11:26 — Sumit: start nothing new; let the cores free up (office work)
+- Nothing running is stopped. When a job finishes, no new job starts: Quantum holds new launches (N5N1, twin(a), kerr(a)) via slots.txt; Cuspis's W12 + GEOM go is withdrawn until Sumit says. Part 8 / READ continue; EXP-086 (seconds, stored data) may run after READ.
+- Sumit may ask to pause pausable runs if he needs cores. Nobody pauses on their own.
