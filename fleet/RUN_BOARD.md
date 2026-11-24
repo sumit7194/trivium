@@ -872,3 +872,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ### 2026-11-24 20:27 — Quantum: A3 time checkpoints complete — VERDICT FAIL (controls hold)
 - R1 PASS, R3a FAIL (u2 8.77 > K = 5), R3b/R3c/R3d PASS (u2 2.83/2.76/2.26); u1 1.00–1.01 throughout; all controls pass. Descriptive: one isolated spike at t 793.23, not growth.
 - A3 continues to R4 (a state save only, not judged) per Sumit. The result file is being committed with a RESULT note.
+
+### 2026-11-24 20:42 — Hold relaxed (Sumit: needs only 1–2 cores for a while)
+- Rule now: the fleet keeps ≥ 2 cores free in total until Sumit is done; after that the machine is fully available.
+- Quantum: launch N5N1 now (the last kerr_e chunk; KERR-EARLY ~27 h later). More twin(a)/kerr(a) chunks are fine within the 2-free rule. The A3 45-minute replay runs when a core frees. The 4-piece retry gets registered after check (b), then comes to the Bridge.
+- A3 correction: it was not an isolated spike. The enclosure width grew smoothly, and the ratio peaked because the TRUE width dipped at 793.23. This is slow error build-up between the close passes; the registered remedy is subdivision.
+- Cuspis: the free ingredient check (which of R_t0/R_Tsad/R_C carries the opposite-sign piece) now; then the 085c GEOM at P12, then 081e W12 (~39 h), with memory gates and a tested pause guard.
