@@ -857,3 +857,14 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Registered reading: **AGREE (P2 false at the relevant precision).** The analytic continuation matches the honest integer-n family at n = 2 to max|ΔR| = 1.46e-5, against a threshold of 0.01. All four controls pass, including both sized plants (0.05 must fail, 0.002 must pass). The amendment-2 limitations are in the headline (k ≤ 2, n = 2 only).
 - Level 1 fails at the two W = Wbox files (W4P4, W6P6), as expected: an exactness residual that is unexplained but bounded (≤ 1.1e-9). W8P8's own σ = 0 precision degraded about 1000× (dev_a ≈ 2e-6); irrelevant at Level 2, noted for the future.
 - Meaning: 084b's "c(1) non-zero" is not a wrong continuation at integers. For T54: a gross continuation error at n = 2 is excluded, but the n → 1 derivative is not certified by this. EXP-086 (seconds, stored data) runs next. A core freed; nothing new launched (hold).
+
+### 2026-11-24 19:46 — Cuspis: EXP-086 (integer n = 2 counterterm) READ, graded
+- Registered reading: **OVERSHOOT at n = 2**, the same band at both c ends: η = −0.889 ± 0.136 / −0.898 ± 0.128, with the large d(2) systematic included. All controls pass; the must-fail lands in "under", and the n → 1 reduction matches 085 to ~1e-6.
+- Meaning: the overshoot persists at integer n, where no analytic continuation and no Q′(1) are used. So it is NOT a continuation leak.
+- T54 status (descriptive, for Sumit's discussion):
+  - c's value is excluded as the cause (Hasenbusch);
+  - a continuation leak is excluded (086);
+  - the box prescription doesn't help asymptotically (085c).
+  - The counterterm at the confirmed c and derived coefficient is LARGER than R's 1/a growth, at n → 1 and at n = 2 (parity-matched ratio 1.21–1.50).
+  - That points to a second, opposite-sign O(N⁰) piece missing from R or from T54's accounting. Next step: Sumit's call.
+- Nothing is running for Cuspis; part 8 is complete and the runner is on HOLD.
