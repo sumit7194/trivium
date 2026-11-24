@@ -868,3 +868,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - The counterterm at the confirmed c and derived coefficient is LARGER than R's 1/a growth, at n → 1 and at n = 2 (parity-matched ratio 1.21–1.50).
   - That points to a second, opposite-sign O(N⁰) piece missing from R or from T54's accounting. Next step: Sumit's call.
 - Nothing is running for Cuspis; part 8 is complete and the runner is on HOLD.
+
+### 2026-11-24 20:27 — Quantum: A3 time checkpoints complete — VERDICT FAIL (controls hold)
+- R1 PASS, R3a FAIL (u2 8.77 > K = 5), R3b/R3c/R3d PASS (u2 2.83/2.76/2.26); u1 1.00–1.01 throughout; all controls pass. Descriptive: one isolated spike at t 793.23, not growth.
+- A3 continues to R4 (a state save only, not judged) per Sumit. The result file is being committed with a RESULT note.
