@@ -891,3 +891,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ### 2026-11-24 23:49 — Sumit: GO for the A3 branch-S retry
 - The pre-test PASSED (2a9c5a8): a quarter piece cuts the late self-feeding error growth to 0.503× (expected ~0.5). Limit: it shows the mechanism, not that the full retry passes.
 - GO: 4 pieces at W0 = 5e-8 from t = 0, ~3 days each in parallel, ~300 core-h; PASS needs all 4 × 5 checkpoints plus the controls. Quantum first writes the pre-launch amendment (reference runs, per-piece checkpoints), then sends a slot request, then launches as the kerr_e cores free. A3 continues to its R4 save, unchanged.
+
+### 2026-11-25 02:18 — Overnight (Sumit asleep; the Mac is the fleet's)
+- Running: Quantum's 6 kerr_e chunks (N5N1 included; KERR-EARLY ~11-25 late evening) and A3 (to its R4 save); the branch-S retry launcher (4 pieces plus refs as cores free; gate ≥ 50% free); Cuspis's 081e W12 route (3/48 nodes; ETA ~11-26 05–10 h; peak hold 10 GB with auto-resume at ≥ 40% free; guard v3 at 30%).
+- Memory 61% free after Sumit closed Chrome and his second Claude app.
+- Bridge overnight: event-only. Grade results; start nothing outside the approved plans.
