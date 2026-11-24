@@ -887,3 +887,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ### 2026-11-24 22:16 — Quantum: A3 replay read (d21fa6b) — BRANCH S; Cuspis k = 3 series running
 - Replay: I1 identical bytes, I2 OK, M2 must-fire PASS. u2 shares at 793.23: dDe 0.99, p2 0.01, so branch S (subdivide from t = 0). Limit: the window's new error is ~2% of the inherited, so S describes the late injection mix. Next: register the S retry with a 1 h scaling pre-test as a gate (approved). The full retry (~300 core-h) needs Sumit's go.
 - Cuspis: GEOM W6P12 PASS (6.03 GB) and W12P12 PASS (9.34 GB), both with two-route T_sad agreement ~1e-15. The 081e W12 route launched at 21:27 (3.5 GB at 30 min; projected 7–10 GB; 10 GB peak hold and 30%-free guard armed, PID-scoped).
+
+### 2026-11-24 23:49 — Sumit: GO for the A3 branch-S retry
+- The pre-test PASSED (2a9c5a8): a quarter piece cuts the late self-feeding error growth to 0.503× (expected ~0.5). Limit: it shows the mechanism, not that the full retry passes.
+- GO: 4 pieces at W0 = 5e-8 from t = 0, ~3 days each in parallel, ~300 core-h; PASS needs all 4 × 5 checkpoints plus the controls. Quantum first writes the pre-launch amendment (reference runs, per-piece checkpoints), then sends a slot request, then launches as the kerr_e cores free. A3 continues to its R4 save, unchanged.
