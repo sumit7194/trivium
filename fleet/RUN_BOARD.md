@@ -847,3 +847,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ### 2026-11-24 11:30 — Cuspis/T54: branch B (c's value) EXCLUDED by a verified outside source
 - Hasenbusch 2112.03783 (Monte Carlo, simple-cubic O(N), N = 4–12, verified verbatim) gives c_eff(N) monotone to −0.103 at N = 12 and c∞ ≈ −0.117 to −0.121, inside Cuspis's bracket [−0.1246, −0.1141]. The "flattening" value −0.0877 is excluded. Our c is independently confirmed.
 - So the ~30% overshoot is NOT c's value. The open branch is a mismatch inside Cuspis's Q′(1) computation (the continuation, or an O(1) factor). Next free test: EXP-086 (n = 2), after W8P8 and READ.
+
+### 2026-11-24 12:26 — Quantum: A3 checkpoint R3a FAIL (controls hold); Kerr chunks 1–2 done
+- kerr_e N0N1 (12:05) and N0N0 (12:14) finished clean: COVERS=1, 0 failed pieces. These are raw lines, not a reading. About 27 h per chunk. The hold held: nothing launched.
+- A3 R3a (t 793.23): u2 = 8.77 > K = 5 → FAIL; u1 and fake are within K; all controls hold. A3's overall registered verdict is now FAIL (PASS needs all five checkpoints). Per §6 the run continues to the remaining checkpoints (diagnostic). Nothing changed. Whether to stop A3 to free a core is Sumit's call.
+- Disclosed: Quantum's first reader call under bash printed a garbage INVALID (empty path); rerun under zsh. Nothing was written.
