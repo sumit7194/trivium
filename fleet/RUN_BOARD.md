@@ -852,3 +852,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - kerr_e N0N1 (12:05) and N0N0 (12:14) finished clean: COVERS=1, 0 failed pieces. These are raw lines, not a reading. About 27 h per chunk. The hold held: nothing launched.
 - A3 R3a (t 793.23): u2 = 8.77 > K = 5 → FAIL; u1 and fake are within K; all controls hold. A3's overall registered verdict is now FAIL (PASS needs all five checkpoints). Per §6 the run continues to the remaining checkpoints (diagnostic). Nothing changed. Whether to stop A3 to free a core is Sumit's call.
 - Disclosed: Quantum's first reader call under bash printed a garbage INVALID (empty path); rerun under zsh. Nothing was written.
+
+### 2026-11-24 19:45 — Cuspis: EXP-084c READ (19:44), graded
+- Registered reading: **AGREE (P2 false at the relevant precision).** The analytic continuation matches the honest integer-n family at n = 2 to max|ΔR| = 1.46e-5, against a threshold of 0.01. All four controls pass, including both sized plants (0.05 must fail, 0.002 must pass). The amendment-2 limitations are in the headline (k ≤ 2, n = 2 only).
+- Level 1 fails at the two W = Wbox files (W4P4, W6P6), as expected: an exactness residual that is unexplained but bounded (≤ 1.1e-9). W8P8's own σ = 0 precision degraded about 1000× (dev_a ≈ 2e-6); irrelevant at Level 2, noted for the future.
+- Meaning: 084b's "c(1) non-zero" is not a wrong continuation at integers. For T54: a gross continuation error at n = 2 is excluded, but the n → 1 derivative is not certified by this. EXP-086 (seconds, stored data) runs next. A core freed; nothing new launched (hold).
