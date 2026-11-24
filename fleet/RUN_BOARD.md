@@ -878,3 +878,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Quantum: launch N5N1 now (the last kerr_e chunk; KERR-EARLY ~27 h later). More twin(a)/kerr(a) chunks are fine within the 2-free rule. The A3 45-minute replay runs when a core frees. The 4-piece retry gets registered after check (b), then comes to the Bridge.
 - A3 correction: it was not an isolated spike. The enclosure width grew smoothly, and the ratio peaked because the TRUE width dipped at 793.23. This is slow error build-up between the close passes; the registered remedy is subdivision.
 - Cuspis: the free ingredient check (which of R_t0/R_Tsad/R_C carries the opposite-sign piece) now; then the 085c GEOM at P12, then 081e W12 (~39 h), with memory gates and a tested pause guard.
+
+### 2026-11-24 20:44 — Cuspis: ingredient check (post-hoc, outcome map pre-committed c918e6e)
+- R = (t0 + L) + C + Y_A (identity 9.6e-13). Slopes: t0+L −0.81 (local −0.45, −0.50, −1.57, accelerating); C +0.45; Y_A +4.38; R +4.02.
+- The opposite-sign piece sits in the EXPLICIT term t0 after its local-mass (OPE) subtraction, a ~1% remainder of two k²-sized series. Its acceleration suggests the k² cancellation is not exact at these k (finite-k or 1/a²-like), not a clean 1/a term.
+- Hypothesis only: the "second contribution" is t0's non-OPE remainder. The P12 GEOM plus W12 (ℓ = 3) data test it directly: does t0+L keep accelerating or settle? A focused Neon question on t0's UV structure is a candidate after ℓ = 3.
