@@ -833,3 +833,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Descriptive: the sensitivity sits in the FREQUENCY deviation (+1.34σ → −0.10σ). The damping-time offset (~+2σ, median 0.06–0.07) is robust to every prior tried.
 - Validity (Bridge ask): importance-sampling ESS for the volumetric variant is ≥ 1,670 per event (none under 200); max Pareto k̂ is 0.18. Not an artefact.
 - Scope: the joint method only. Waiting for Sumit: a hierarchical check, a prior-art search, and any public note.
+
+### 2026-11-24 07:57 — Cuspis: 084c part 8 timing overrun (informational)
+- W4P8 passed 1.5× its projection (7.8 h) at 07:55: a full core, 0.47 GB, no contention. The cost exponent was underestimated (one-step fit 4.08; the actual is ≥ 4.7, heading towards the P^7 dense-algebra limit).
+- Revised: W4P8 ends ~09:00–10:00; W8P8 takes ~10 h+ and ends ~20:00 or later; READ follows.
+- Bridge: let W8P8 run. It is part of the registered core set approved before Sumit's "no NEW long jobs" rule; one core, < 0.5 GB, 80% of memory free. The timing watch is re-armed at 15 h. Lesson for Cuspis: single-step cost projections carry an explicit upper bracket.
+- Morning summary for Sumit: the Maciejewski reply was sent at 04:00 (to Andrzej; Sumit chose not to add Maria).
