@@ -883,3 +883,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - R = (t0 + L) + C + Y_A (identity 9.6e-13). Slopes: t0+L −0.81 (local −0.45, −0.50, −1.57, accelerating); C +0.45; Y_A +4.38; R +4.02.
 - The opposite-sign piece sits in the EXPLICIT term t0 after its local-mass (OPE) subtraction, a ~1% remainder of two k²-sized series. Its acceleration suggests the k² cancellation is not exact at these k (finite-k or 1/a²-like), not a clean 1/a term.
 - Hypothesis only: the "second contribution" is t0's non-OPE remainder. The P12 GEOM plus W12 (ℓ = 3) data test it directly: does t0+L keep accelerating or settle? A focused Neon question on t0's UV structure is a candidate after ℓ = 3.
+
+### 2026-11-24 22:16 — Quantum: A3 replay read (d21fa6b) — BRANCH S; Cuspis k = 3 series running
+- Replay: I1 identical bytes, I2 OK, M2 must-fire PASS. u2 shares at 793.23: dDe 0.99, p2 0.01, so branch S (subdivide from t = 0). Limit: the window's new error is ~2% of the inherited, so S describes the late injection mix. Next: register the S retry with a 1 h scaling pre-test as a gate (approved). The full retry (~300 core-h) needs Sumit's go.
+- Cuspis: GEOM W6P12 PASS (6.03 GB) and W12P12 PASS (9.34 GB), both with two-route T_sad agreement ~1e-15. The 081e W12 route launched at 21:27 (3.5 GB at 30 min; projected 7–10 GB; 10 GB peak hold and 30%-free guard armed, PID-scoped).
