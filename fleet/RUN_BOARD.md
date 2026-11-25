@@ -1048,3 +1048,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - 02:05 Sumit: the last START time for any Fable round moves from 04:30 to 05:00. No Fable after the 05:30 weekly reset.
 - 03:21 START: N5N1 (93687) paused at 03:21:29 for a reserved core. Sent: ansatz-machine-personal route-(i) segment brief f6988c8 (hand over by ~05:15); Quantum-personal Kerr sealed-prediction brief 74b5f2e. Cuspis A-vs-bulk brief a0b6042 is next (by 04:15; addendum only after the seal sha).
 - 03:31 Quantum-personal Kerr prediction SEALED: fd22a7f (sha256 99e33cd0…604d; the Bridge verified it without reading). Disclosure: knew N1N2/N2N3 timed out (no outcome); ruling: keep them in the edge column, footnoted. 03:3x Cuspis-personal brief a0b6042 SENT; the addendum goes only after its seal sha.
+
+## 2026-11-26 ~04:00 — Cuspis EXP-091: Fable's A-vs-bulk seals graded (c515d58; amendment C3′ ae5b046 before the rerun)
+- Interior c_A/c at P = 12: sealed 0.826 ± 0.003, measured 0.82628, PASS (1σ).
+- Raw g_b(3) 0.2735 ± 0.003 vs 0.27652 and y_A(3) 0.7654 vs 0.76238: both ~1.0σ off, PASS on the inferred ±2σ band (labelled inferred).
+- Δ_bb(3) hi = −4.031 (the Bridge checked it: 0.27652 × 14.5792). Fable's −3.89 ± 0.08 is 1.8σ off; not graded because norm(3) = 14.579 fell outside Fable's guessed range.
+- S-a ("Δ_bb → const") is not tested: deceleration is slow (increments −0.485, −0.474, −0.306, −0.275). Its fail clauses did not fire, which verifies nothing. It stays ARGUED.
+- Exposure: Y_A(3) = 11.115 is now known, so the k = 3 A reading is blind only in R(3).
+- Slip 26 logged (C3 tolerance below the typed precision; the proposed fix used the wrong c).
