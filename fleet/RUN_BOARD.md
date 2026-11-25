@@ -1058,3 +1058,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Slip 26 logged (C3 tolerance below the typed precision; the proposed fix used the wrong c).
 - 03:47 (clock): Cuspis-personal's A-vs-bulk round is finished (head 6ed6a44). Fable RETRACTS its sealed S-a after the seal: a log in c_A, c_A∞ = −0.1183. Sent to Cuspis for checks (a)–(e). Note: the two preceding run-board headings said '~04:00', but the clock read 03:3x–03:4x.
 - 03:49 Deepstrain-personal: step-T blind prediction brief d01cb8d SENT (sits beside DeepStrain's own sealed 1.12/35%; redacted registration provided). ansatz route-(i) round still running.
+
+## 03:56 — Cuspis office checks of Fable A-vs-bulk (6adc53b; EXP-092 a48bde4)
+- S-a graded "author-retracted after the seal".
+- Third c_A implementation, P = 16/20: H-log SUPPORTED. y1 = 32/(3π²) VERIFIED at source (Moshe & Zinn-Justin hep-th/0306133 §3.2, Eqs. 3.28/3.33).
+- Free gL = 0.070–0.074, 15–20% above y1·h0 = 0.0611, so the coefficient is NOT confirmed. c∞ = −0.1166 … −0.1188 by fit form.
+- Grade: argued, structurally supported, coefficient unconfirmed.
+- P-1 (wall step to P = 8) and P-2 (n = 2 wall test) to be registered; the G_b(8) GEOM may run now. The long routes queue on Cuspis's core after the W12 chain.
+- Cores: Cuspis 1 (route), so Quantum's a4_mycap goes back to 8. Fleet ≤ 9 (93687 paused for ansatz Fable).
