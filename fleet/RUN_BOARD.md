@@ -940,3 +940,12 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - N5N1 93687: 90132 s.
   - All four were back in state R at about 80% CPU. Computation untouched, binary unchanged.
 - About 140 core-hours saved tonight, plus N5N1's ~23 h. Reruns are now needed only for N1N2/N2N3 (already lost), after the A4 identity checks pass. One interim slip there: the GB check reloaded an old checkpoint. Quantum re-running with a fresh checkpoint path.
+
+## 2026-11-25 20:05 — Cuspis: W8P8 referee confirms the t0 fix; EXP-086b; Fable n = 2 consultation
+- **W8P8 referee (19:44).** The fix agrees with the rad-1e-6 truth to 9.2e-7. The true correction is +0.020684, against the artifact model's +0.020126 (the model under-counts by 2.7%). ΔR(2) = +0.1457, measured. The Bridge re-derived all of these from the raw values.
+- **EXP-086b** (descriptive; registered first, be5a3c8). At n = 2, the counterterm/R₂-growth ratio is 1.371/1.497 with bulk c and 0.982 with box c_A. That sharpens the n = 2 tension but does not settle it.
+- **Fable consultation.**
+  - The brief (91595d1) was sent by the Bridge directly to Cuspis-personal on Sumit's instruction. Answer a3a385f; seal bcdb69f (seal committed first, verified).
+  - Fable's claims, ALL UNVERIFIED: the first-order counterterm is complete at integer n; c_A is valid at every n; R₂'s ℓ² growth is a slow 1/r² tail of σ₂, not a 1/a² term; T54 + box prescription is the whole story to ~2%.
+  - SEALED: R₂ + ΔR₂^A at ℓ = 2.5 = 0.182 ± 0.020, outer band [0.14, 0.23].
+  - Cuspis is asked for checks (a)–(f): seal grading, a script rerun, a finite-difference test of Q1, the σ̇ profile, saddle dominance, and a non-author read of Q2.
