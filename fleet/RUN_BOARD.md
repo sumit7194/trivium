@@ -1045,3 +1045,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - **f = +0.212**, inside PRIMARY [−0.3, 0.3]: "A not wrong", and Fable's seal (7c846a1) PASSES. The Bridge re-derived f = 0.226/1.066.
 - Partially verified: one P step, an argued premise. Second n = 1 reading favouring A (with EXP-090); the derivation question stays open.
 - For the overnight Cuspis-personal round, the Bridge will send the addendum ONLY after Fable reports its S-a/S-c seal sha.
+- 02:05 Sumit: the last START time for any Fable round moves from 04:30 to 05:00. No Fable after the 05:30 weekly reset.
