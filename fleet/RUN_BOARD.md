@@ -1038,3 +1038,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - 02:20 update to the overnight plan:
   - Quantum kerr brief 74b5f2e is ready (scratchpad/qk_msg.txt) and goes to Quantum-personal at 03:21 in parallel with ansatz.
   - Cuspis brief a457622 (A vs bulk; S-a, S-b, S-c) goes to Cuspis-personal once EXP-089 is graded (with an addendum), or at 04:15 as is.
+
+## 2026-11-26 01:17 (graded 02:05) — Cuspis EXP-089 wall test (960d2b8)
+- Strips fixed at (2, 4); walls P = 4 → 6. Controls pass.
+- ρ_A 0.2735 → 0.0472 (Δ −0.226); ρ_bulk −2.218 → −1.378 (Δ +0.840); G_b drop 1.066.
+- **f = +0.212**, inside PRIMARY [−0.3, 0.3]: "A not wrong", and Fable's seal (7c846a1) PASSES. The Bridge re-derived f = 0.226/1.066.
+- Partially verified: one P step, an argued premise. Second n = 1 reading favouring A (with EXP-090); the derivation question stays open.
+- For the overnight Cuspis-personal round, the Bridge will send the addendum ONLY after Fable reports its S-a/S-c seal sha.
