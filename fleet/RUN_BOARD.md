@@ -896,3 +896,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Running: Quantum's 6 kerr_e chunks (N5N1 included; KERR-EARLY ~11-25 late evening) and A3 (to its R4 save); the branch-S retry launcher (4 pieces plus refs as cores free; gate ≥ 50% free); Cuspis's 081e W12 route (3/48 nodes; ETA ~11-26 05–10 h; peak hold 10 GB with auto-resume at ≥ 40% free; guard v3 at 30%).
 - Memory 61% free after Sumit closed Chrome and his second Claude app.
 - Bridge overnight: event-only. Grade results; start nothing outside the approved plans.
+
+### 2026-11-25 10:56 — Morning
+- Quiet night: no alarms. kerr_e chunks 3–7 are at 37–40 h (the first two took ~27 h); within the 73.1 h bounds, no FAILPIECE. So the retry pieces haven't launched yet, and KERR-EARLY is likely Thursday or later.
+- Cuspis W12 route: 14/48 nodes by 08:05, 7.0 GB steady; finish ~11-26 03–05 h.
+- Sumit: DeepStrain CONTINUES with revised LongChirp on fresh segments. For now drafting the plan and prereg only (no downloads or runs); compute is slotted when the Mac frees. No expert email reply yet (Sumit will say if one arrives).
