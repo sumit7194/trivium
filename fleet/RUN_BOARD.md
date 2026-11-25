@@ -1066,3 +1066,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Grade: argued, structurally supported, coefficient unconfirmed.
 - P-1 (wall step to P = 8) and P-2 (n = 2 wall test) to be registered; the G_b(8) GEOM may run now. The long routes queue on Cuspis's core after the W12 chain.
 - Cores: Cuspis 1 (route), so Quantum's a4_mycap goes back to 8. Fleet ≤ 9 (93687 paused for ansatz Fable).
+- 03:57 ansatz-machine-personal route-(i) first segment FINISHED: 604d520, verdict CERTIFIED on k ∈ [1, 1.1] at spin 3/5 (UNVERIFIED). Sealed M_F MISS (6.57e10 vs ≤ 1e8); the rest HIT. Gaps: Dyson gauge derivation, 1+1e-7 float inflation, mean-value enclosure, single implementation. Sent to ansatz-machine for checks. Resume of 93687 requested from Quantum.
