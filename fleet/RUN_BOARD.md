@@ -905,3 +905,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ### 2026-11-25 11:34 — DeepStrain G0 projection; office-hours core reserve
 - DeepStrain (715a0b3 frozen; 06c0866): the cost clause forces one-per-hour, whose idealised upper bound (1.169) leaves 1.6% headroom over G0's 1.15 bar, so G0 is expected to fail. Sumit chose option (c), a redesign to make one-per-minute affordable, to be explored TONIGHT with Fable on his personal account. Recorded as pending; no compute; fresh segments unopened. DeepStrain is writing a short redesign brief.
 - Sumit at office work: keep 1–2 cores free as they free NATURALLY; stop nothing. Fleet total ≤ 8 cores; launches only replace finished jobs.
+
+### 2026-11-25 17:14 — Cuspis-personal (Fable): a possible production defect in t0 (UNVERIFIED)
+- Claim (branch fable/2026-11-25-t0L-largek, 6156a51): inner_beta0's two-tag branch (contour radius 1e-5) DOUBLE-COUNTS near-degenerate same-slice pole doublets with gaps in (1e-7, 1e-5). These appear for W ≥ 7, and a residue may be dropped for gaps < 1e-7. Tiny-box test: t0 shifts −0.017677, matching a code-logic prediction. If true, t0 at W8P8, W10P10 and W12P12 is wrong, so R(2), R(2.5) and R(3) are biased low; that may explain the "accelerating" t0 + L and so the overshoot.
+- Fable stopped early (usage limit). Its sealed prediction: R(t0+L)(3) = −1.55 [−2.0, −1.1] for production as-is.
+- Sent to office Cuspis to verify: cheap checks first; recomputes slotted under the ≤ 8 cap; the W12 route is not stopped.
