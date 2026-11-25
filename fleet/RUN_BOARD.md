@@ -1010,3 +1010,13 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Memory: RSS hid MPS. The stored T-cost run was ~5–6 GB real. Fable had 2 small overshoots (2.33/2.15 GB). DeepStrain switched job_guard to phys_footprint.
   - Shared-tree accident: office commit 104c69c landed on Fable's branch; cherry-picked to main.
 - N5N1 (93687) was paused 23:40:10 → 00:27:20 (47 min, nothing lost) for Fable's core; resumed, state R.
+
+## 2026-11-26 ~01:30 — DeepStrain: redesign (c) VERIFIED (except the MPS re-time); step T REGISTERED (PREREG §12 Amendment T1)
+- Whole-box brute force on 6 grids / 7,178 templates matches to ≤ 5e-6. The cost is 17.8/22.3 h; overheads were re-derived (only H1+L1 combine missing, +5–20%).
+- D1–D5 accepted with measured numbers. D5 uses a uniform 2.20% box (the code ran at the pooled 2.15%; re-check in the build list).
+- Step T: PyCBC 2.10.0 statistic imported (newsnr_sgveto_psdvar w/o the SG term, Allen χ² at the top 5).
+  - Sealed: R_tune 1.12 [0.85, 1.40], P(G0) ≈ 35%.
+  - Memory plan: footprint guard, pause-only, start gate free ≥ 50% & pressure 1.
+  - Fresh segments unopened.
+- **Pending Bridge slot go:** the MPS re-time plus ~18 h + ~22 h passes, AFTER Cuspis's big-memory jobs (W12 route, then W12P12 t0, 5–6.5 GB). Short build/gate runs are allowed now under the start gate.
+- Fable rounds out: Quantum-personal (sealed blind retry prediction, brief 4bc659f) sent 01:1x. The ansatz route-(i) segment brief f6988c8 waits for Sumit's go at the 03:20 window.
