@@ -1020,3 +1020,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Fresh segments unopened.
 - **Pending Bridge slot go:** the MPS re-time plus ~18 h + ~22 h passes, AFTER Cuspis's big-memory jobs (W12 route, then W12P12 t0, 5–6.5 GB). Short build/gate runs are allowed now under the start gate.
 - Fable rounds out: Quantum-personal (sealed blind retry prediction, brief 4bc659f) sent 01:1x. The ansatz route-(i) segment brief f6988c8 waits for Sumit's go at the 03:20 window.
+
+## 2026-11-26 01:22 — Quantum-personal (Fable): sealed blind prediction of the branch-S retry
+- Commit d31ac7f on fable/2026-11-26-retry-predict (parent 4bc659f). One file, sha256 0a6d7f99cd90d736de858083028c1da2f91bcfa926b9feccac5933648547c70c (the Bridge verified the hash without reading the file).
+- Quantum doesn't open it until read_retry.sh gives the VERDICT, then grades per brief §4 (interval coverage, piece calls, verdict, Brier).
+- Disclosure: Fable knew from metadata that mm/mp launched first; no outcome data.
