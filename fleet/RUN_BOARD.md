@@ -994,3 +994,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Brief v1.1, a8c3d44 (house rules, reserved core, MPS under 2 GB, fresh segments untouched). Sent by the Bridge at Sumit's request.
 - Core reserved: Quantum PAUSED kerr_e/N5N1, PID 93687 (optional chunk; alarm already cancelled), at 23:40:10. It's still counted in Quantum's limit. **Resume on the Bridge's word when the round ends** (~4–6 h).
 - Caveat: kerr_guard's disk-resume could SIGCONT it. Quantum re-pauses if that happens.
+
+## 2026-11-26 — ansatz-machine: CLAIM v3.1, Statement A with explicit certified ε_a (ddcbd53; merge bd74e05)
+- ε_a = 2.79e−3, 1.92e−3, 8.39e−4, 1.06e−4 at spins 3/10, 3/5, 4/5, 9/10: the corrected-code r rounded down. The Bridge checked the rounding against 2.799955e−3 / 1.925557e−3 / 8.398961e−4.
+- Lineage: Fable Part A 75957fd → office verification e10f274 (slip: |m|² upper bound used where a lower one was needed) → fix run 9d0ee9f → merge. Part B prototype checked (bcd9292); route (i) input in docs/ROUTE1_REGISTRATION_INPUT.md (nothing launches).
+- No release / Zenodo version: v1.2 is Sumit's decision, raised with him.
