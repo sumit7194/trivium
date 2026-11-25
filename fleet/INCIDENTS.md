@@ -66,3 +66,7 @@ per the user's direction. They are kept in local, uncommitted notes.
   declared peak should carry a ×1.5 margin.
 - **06:35:** ansatz's Prop. 2 control script ran away to 10 GB with no RSS guard and caused pressure kills in two other sisters' runs. The Bridge's request didn't specify a memory bound; it should have.
 - 16:58 Bridge slip: the Cuspis correction message was sent BEFORE blind_check; checked after the fact, clean.
+
+## 2026-11-25 17:57 — a message misrouted by name (Bridge)
+- I sent "ansatz-machine" a verification request meant for the OFFICE session. The office session wasn't running, so the name resolved to the running "ansatz-machine-personal" (the Fable session that wrote the work), which was told to verify itself. Caught immediately from the delivery result; a retraction was sent, and the request was re-sent to the office session by its session id. No harm: nothing had been acted on.
+- Rule: now that personal twins exist (X and X-personal), address office sisters by session id (or by the [ref] from ListAgents) whenever the twin is running, and check the delivery target in the result.
