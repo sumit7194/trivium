@@ -999,3 +999,14 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - ε_a = 2.79e−3, 1.92e−3, 8.39e−4, 1.06e−4 at spins 3/10, 3/5, 4/5, 9/10: the corrected-code r rounded down. The Bridge checked the rounding against 2.799955e−3 / 1.925557e−3 / 8.398961e−4.
 - Lineage: Fable Part A 75957fd → office verification e10f274 (slip: |m|² upper bound used where a lower one was needed) → fix run 9d0ee9f → merge. Part B prototype checked (bcd9292); route (i) input in docs/ROUTE1_REGISTRATION_INPUT.md (nothing launches).
 - No release / Zenodo version: v1.2 is Sumit's decision, raised with him.
+
+## 2026-11-26 00:30 — DeepStrain Fable round done computing; N5N1 resumed
+- Fable redesign (c), UNVERIFIED (branch fable/2026-11-26-coh2c, c1f197e/ec5dd31/a019eba):
+  - local engine 14.1 µs/template (sealed 25 µs HIT, 239× the stored 3.36 ms);
+  - stage-2 total 9–16 h at one per minute (sealed ≤ 20 h HIT), or 14–22 h with constructed grids;
+  - exact E3 χ² gate matches brute force;
+  - MISSES: decimation and the grid ratio.
+  - Real-noise headroom ≥ 1.15× NOT tested (step T).
+  - Memory: RSS hid MPS. The stored T-cost run was ~5–6 GB real. Fable had 2 small overshoots (2.33/2.15 GB). DeepStrain switched job_guard to phys_footprint.
+  - Shared-tree accident: office commit 104c69c landed on Fable's branch; cherry-picked to main.
+- N5N1 (93687) was paused 23:40:10 → 00:27:20 (47 min, nothing lost) for Fable's core; resumed, state R.
