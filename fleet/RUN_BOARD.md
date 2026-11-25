@@ -1057,3 +1057,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Exposure: Y_A(3) = 11.115 is now known, so the k = 3 A reading is blind only in R(3).
 - Slip 26 logged (C3 tolerance below the typed precision; the proposed fix used the wrong c).
 - 03:47 (clock): Cuspis-personal's A-vs-bulk round is finished (head 6ed6a44). Fable RETRACTS its sealed S-a after the seal: a log in c_A, c_A∞ = −0.1183. Sent to Cuspis for checks (a)–(e). Note: the two preceding run-board headings said '~04:00', but the clock read 03:3x–03:4x.
+- 03:49 Deepstrain-personal: step-T blind prediction brief d01cb8d SENT (sits beside DeepStrain's own sealed 1.12/35%; redacted registration provided). ansatz route-(i) round still running.
