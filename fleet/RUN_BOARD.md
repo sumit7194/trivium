@@ -965,3 +965,10 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Zenodo descriptions edited (metadata only; same DOIs, no new versions) and read back: 24533026 (ansatz v1.1.0) and 24399603 (DeepStrain/LongChirp; names Claude only, since the snapshot predates any Gemini use, which the Bridge verified in git).
 - Chrome: the only connected browser at first was another Google profile ("software-consultant"). Nothing was done there; the edits were made after Sumit connected his own profile, which was checked first (new rule: chrome-profile-check-first).
 - Pending: DeepStrain's GitHub release body (longchirp-v1.0.0) needs Sumit's word.
+
+## 2026-11-25 22:50 — Cuspis W10P10 t0 recompute (84f5783); fleet core sequencing
+- **W10P10.** KA PASS (3.4e-13). Correction +0.121780 (the Bridge re-derived it), ΔR(2.5) = +0.8715. The code-logic model agrees to 8.2e-5, but that is code against code.
+  - There is no truth referee at W10P10: the doublet gaps (~9e-8) are below the contour floor. **PARTIALLY VERIFIED.**
+  - Fable's W10P10 prediction (−0.1218) matches to 2e-5.
+- **Order after the W12 route** (Bridge): C1 W12 first, as registered in run_k3. Then the W12P12 t0 recompute, one for one. The new re-read registrations (R(k), 085/085c, the ingredient split) are to be drafted now, with Fable's k = 3 seals in the header.
+- **Fleet.** 10 long jobs on 10 cores at 22:35. Quantum's own limit is lowered to 7 (a4_mycap.txt); Cuspis swaps jobs one for one only (run_089 replaced W10P10 at 22:49). The ansatz-machine-personal Fable round runs short nice-12 jobs. Raise Quantum's limit back to 8 when Cuspis drops to 1 job.
