@@ -901,3 +901,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Quiet night: no alarms. kerr_e chunks 3–7 are at 37–40 h (the first two took ~27 h); within the 73.1 h bounds, no FAILPIECE. So the retry pieces haven't launched yet, and KERR-EARLY is likely Thursday or later.
 - Cuspis W12 route: 14/48 nodes by 08:05, 7.0 GB steady; finish ~11-26 03–05 h.
 - Sumit: DeepStrain CONTINUES with revised LongChirp on fresh segments. For now drafting the plan and prereg only (no downloads or runs); compute is slotted when the Mac frees. No expert email reply yet (Sumit will say if one arrives).
+
+### 2026-11-25 11:34 — DeepStrain G0 projection; office-hours core reserve
+- DeepStrain (715a0b3 frozen; 06c0866): the cost clause forces one-per-hour, whose idealised upper bound (1.169) leaves 1.6% headroom over G0's 1.15 bar, so G0 is expected to fail. Sumit chose option (c), a redesign to make one-per-minute affordable, to be explored TONIGHT with Fable on his personal account. Recorded as pending; no compute; fresh segments unopened. DeepStrain is writing a short redesign brief.
+- Sumit at office work: keep 1–2 cores free as they free NATURALLY; stop nothing. Fleet total ≤ 8 cores; launches only replace finished jobs.
