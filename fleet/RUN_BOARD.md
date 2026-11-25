@@ -920,3 +920,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Fable side-session (fable/2026-11-25-c2-analytic): a closed-form c2 (k² coefficient of tr[M1,M0] − 2 at Kerr) and an interval certificate of its inputs at all 4 spins. Office ansatz-machine VERIFIED (a)–(i) (c3766aa): algebra, 11/11 sympy checks, 12-digit agreement with the independent engine at 7 spins, certificate reread and rerun, Trefethen–Weideman Thm 3.2 checked at source. a* ≈ 0.908 (c2 = 0) is confirmed, which explains the spin-9/10 extra zero.
 - Main: cherry-picks 66873a2/29d2555; Lemma K (b1137da); CLAIM v3 Statement A with 4 conditions (7486dbb); JOURNAL faa5df8. Still "a careful numerical result, not a theorem".
 - Open for Sumit: mint Zenodo v1.1? (v1.0.0 predates this week's corrections and claim v3.)
+
+### 2026-11-25 18:58 — ansatz-machine v1.1.0 released (Sumit approved)
+- GitHub release v1.1.0 (tag 6d1d66e) → Zenodo version DOI 10.5281/zenodo.24533026 (concept DOI 10.5281/zenodo.24431694 now resolves to it).
+- Credit fix (Gemini, not Claude, did the referee reads): RELEASE_NOTES, ONLY_KERR, ONE_PAGER and CITATION corrected (9c8183c); the GitHub release body edited. The Zenodo DESCRIPTION was edited by the Bridge in Sumit's Chrome (verified as his account) and republished as a metadata edit; the new sentence "The hostile referee reads were by Google's Gemini." is live. The archived zip at 6d1d66e keeps the old wording (immutable; a v1.1.1 isn't judged worth it).
+- Note: Sumit told ansatz-machine directly to take the Bridge's relayed yeses as his (settings, hooks, permissions and CLAUDE.md excepted).
