@@ -1025,3 +1025,13 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Commit d31ac7f on fable/2026-11-26-retry-predict (parent 4bc659f). One file, sha256 0a6d7f99cd90d736de858083028c1da2f91bcfa926b9feccac5933648547c70c (the Bridge verified the hash without reading the file).
 - Quantum doesn't open it until read_retry.sh gives the VERDICT, then grades per brief §4 (interval coverage, piece calls, verdict, Brier).
 - Disclosure: Fable knew from metadata that mm/mp launched first; no outcome data.
+
+## 2026-11-26 02:05 — OVERNIGHT FABLE PLAN (Sumit asleep; the Bridge runs it)
+- 03:21 timer (bg task) → ask Quantum to PAUSE 93687 (N5N1) → send the ansatz route-(i) segment brief f6988c8 to ansatz-machine-personal (pre-checked: scratchpad/ap_route1_msg.txt; pause note q_pause2.txt).
+- Spare rounds in the 03:20–05:30 window, each STARTING by 04:30 at the latest; none after:
+  - (a) Quantum-personal: a sealed blind kerr_e prediction (compute-free; may run in PARALLEL with ansatz). Brief requested from Quantum by 03:00.
+  - (b) Cuspis-personal: only if Cuspis says it's ripe (wall test / A-vs-bulk). Brief by 03:00.
+  - (c) A second ansatz round if the first ends early with a clear next step.
+- After the ansatz round: resume 93687; hand to ansatz-machine for verification.
+- No Fable after 05:30 (weekly reset); Sumit decides next week.
+- Do NOT leak the sealed retry prediction's content (Sumit's screenshot showed it) to Quantum.
