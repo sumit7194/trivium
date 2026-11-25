@@ -1035,3 +1035,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - After the ansatz round: resume 93687; hand to ansatz-machine for verification.
 - No Fable after 05:30 (weekly reset); Sumit decides next week.
 - Do NOT leak the sealed retry prediction's content (Sumit's screenshot showed it) to Quantum.
+- 02:20 update to the overnight plan:
+  - Quantum kerr brief 74b5f2e is ready (scratchpad/qk_msg.txt) and goes to Quantum-personal at 03:21 in parallel with ansatz.
+  - Cuspis brief a457622 (A vs bulk; S-a, S-b, S-c) goes to Cuspis-personal once EXP-089 is graded (with an addendum), or at 04:15 as is.
