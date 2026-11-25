@@ -980,3 +980,12 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Fable S-4 PASS (0.4322 vs 0.428; 0.3710 vs 0.371).
 - Ingredient map: none of (a)–(d). The old "opposite-sign piece in t0" was mostly the inner_beta0 defect.
 - Caveats: finite-k only (Y's 1/a² row still fails); conditional on A-vs-bulk at n = 1 (the EXP-089 wall test runs tonight); EXP-086 n = 2 bulk overshoot stands; partially verified (no truth referee at W10P10). k = 3 waits on its four gates.
+
+## 2026-11-25/26 — ansatz-machine-personal (Fable) eps round finished: 75957fd (Part A), 4bc7b37 (Part B). UNVERIFIED
+- **Part A.** Interval-certified r_a at all 4 spins (a few ×1e-3; ~1e-4 at 9/10). The three controls pass per Fable. Limiting factors: the lasso remainder and the circle's 2nd-order term, about equally.
+- **Part B.** A validated point evaluator (Arb, using Quantum's venv read-only) that agrees with the engine at 3 points.
+  - **k-as-ball FAILS** (×1e7 wrapping), which changes the route (i) design.
+  - Chebyshev plus Bernstein-ellipse was demonstrated with a sampled M; a proved M is designed but not built.
+  - The "real k suffices" simplification is to be checked against the claim and registration.
+  - Cost estimate: a few to 20 core-h per spin. A self-caught acos/sub-ball bug is fixed.
+- The office ansatz-machine verifies A then B (B1–B4: ATAP Thm 8.2 at source; scope of "real k"). Nothing launches.
