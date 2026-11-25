@@ -949,3 +949,13 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Fable's claims, ALL UNVERIFIED: the first-order counterterm is complete at integer n; c_A is valid at every n; R₂'s ℓ² growth is a slow 1/r² tail of σ₂, not a 1/a² term; T54 + box prescription is the whole story to ~2%.
   - SEALED: R₂ + ΔR₂^A at ℓ = 2.5 = 0.182 ± 0.020, outer band [0.14, 0.23].
   - Cuspis is asked for checks (a)–(f): seal grading, a script rerun, a finite-difference test of Q1, the σ̇ profile, saddle dominance, and a non-author read of Q2.
+
+## 2026-11-25 20:40 — Cuspis EXP-088: Fable's n = 2 answer checked (b1ada3f)
+- **E PASS.** H₂ + σ₂ is positive definite at all 6 geometries (λ_min 0.041–0.161). Strict concavity then makes the stored saddle the unique RS stationary point, so Q1's premise holds.
+- **C registered FAIL (Cuspis's slip).** The 1e-6 tolerance ignored the central-difference truncation (control-clause slip 25).
+  - Post-hoc, cause SHOWN: the error is pure O(ε²) (×100 per decade). Richardson agrees with the first-order form to ≤5e-9 on 2 boxes × 3 directions, and the n = 1 control goes to 0. **Q1 VERIFIED, post-hoc.**
+- **D FAIL for Fable.** Its "σ̇ is a contact term, no 1/r² tail" doesn't hold: σ̇'s tail is as extended as σ₂'s and ~2× larger. Q3's MECHANISM is unsupported. (Q3's conclusion, no 1/a² term, is untested by this.)
+- **A, SEAL.** S₂(2.5) = 0.161872 (the Bridge re-derived 4.316952 − 4.155079).
+  - PRIMARY [0.162, 0.202]: FAIL, by 1.3e-4 (1.006σ). SECONDARY [0.14, 0.23]: inside. Risk values 0.27/0.35: not hit.
+  - Bulk local ratio 1.2125/1.3237, predicted 1.27/1.39 ± 0.03: FAIL. Right direction, falls faster than predicted.
+- **Net.** Q1 is supported. Q2 follows but moves A-vs-bulk to n = 1 (open item). The Q3 mechanism is undercut. The seal is a near-miss.
