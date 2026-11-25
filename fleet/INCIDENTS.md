@@ -70,3 +70,8 @@ per the user's direction. They are kept in local, uncommitted notes.
 ## 2026-11-25 17:57 — a message misrouted by name (Bridge)
 - I sent "ansatz-machine" a verification request meant for the OFFICE session. The office session wasn't running, so the name resolved to the running "ansatz-machine-personal" (the Fable session that wrote the work), which was told to verify itself. Caught immediately from the delivery result; a retraction was sent, and the request was re-sent to the office session by its session id. No harm: nothing had been acted on.
 - Rule: now that personal twins exist (X and X-personal), address office sisters by session id (or by the [ref] from ListAgents) whenever the twin is running, and check the delivery target in the result.
+
+## 2026-11-25 20:5x — the Bridge sent a message to DeepStrain without the blind check first
+- What: a 4-line AI-credit addendum was sent in parallel with other sends, and blind_check.py was skipped. A check run afterwards found no embargo hits, so there was no harm.
+- Cause: it was batched in the same tool round as another message, with no draft file written for it.
+- Fix: every message to a sister is written to a scratch file and checked in an EARLIER tool round than the send. Never send in the same round as an unchecked draft.
