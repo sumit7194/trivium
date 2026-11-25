@@ -989,3 +989,8 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - The "real k suffices" simplification is to be checked against the claim and registration.
   - Cost estimate: a few to 20 core-h per spin. A self-caught acos/sub-ball bug is fixed.
 - The office ansatz-machine verifies A then B (B1–B4: ATAP Thm 8.2 at source; scope of "real k"). Nothing launches.
+
+## 2026-11-25 23:45 — Deepstrain-personal (Fable) round: coherent2 redesign (c)
+- Brief v1.1, a8c3d44 (house rules, reserved core, MPS under 2 GB, fresh segments untouched). Sent by the Bridge at Sumit's request.
+- Core reserved: Quantum PAUSED kerr_e/N5N1, PID 93687 (optional chunk; alarm already cancelled), at 23:40:10. It's still counted in Quantum's limit. **Resume on the Bridge's word when the round ends** (~4–6 h).
+- Caveat: kerr_guard's disk-resume could SIGCONT it. Quantum re-pauses if that happens.
