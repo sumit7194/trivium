@@ -972,3 +972,11 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - Fable's W10P10 prediction (−0.1218) matches to 2e-5.
 - **Order after the W12 route** (Bridge): C1 W12 first, as registered in run_k3. Then the W12P12 t0 recompute, one for one. The new re-read registrations (R(k), 085/085c, the ingredient split) are to be drafted now, with Fable's k = 3 seals in the header.
 - **Fleet.** 10 long jobs on 10 cores at 22:35. Quantum's own limit is lowered to 7 (a4_mycap.txt); Cuspis swaps jobs one for one only (run_089 replaced W10P10 at 22:49). The ansatz-machine-personal Fable round runs short nice-12 jobs. Raise Quantum's limit back to 8 when Cuspis drops to 1 job.
+
+## 2026-11-25 ~23:10 — Cuspis EXP-090, k ≤ 2.5 re-read with the corrected t0 (f7d6313; script ae2e3c6 committed first)
+- Controls K1–K6 all pass, run first. This part is confirmation, not blind.
+- Corrected R(2), R(2.5) = 6.5877, 9.0902 (the Bridge checked them: stored + 0.1457 and stored + 0.8715). g_raw goes from 4.020 to 4.572.
+- **A: ρ_s = +0.0429 ± 0.0020, SUPPORTED (robust).** Bulk hi/lo: −0.144/−0.249, OVERSHOOT at both ends.
+- Fable S-4 PASS (0.4322 vs 0.428; 0.3710 vs 0.371).
+- Ingredient map: none of (a)–(d). The old "opposite-sign piece in t0" was mostly the inner_beta0 defect.
+- Caveats: finite-k only (Y's 1/a² row still fails); conditional on A-vs-bulk at n = 1 (the EXP-089 wall test runs tonight); EXP-086 n = 2 bulk overshoot stands; partially verified (no truth referee at W10P10). k = 3 waits on its four gates.
