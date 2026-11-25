@@ -959,3 +959,9 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
   - PRIMARY [0.162, 0.202]: FAIL, by 1.3e-4 (1.006σ). SECONDARY [0.14, 0.23]: inside. Risk values 0.27/0.35: not hit.
   - Bulk local ratio 1.2125/1.3237, predicted 1.27/1.39 ± 0.03: FAIL. Right direction, falls faster than predicted.
 - **Net.** Q1 is supported. Q2 follows but moves A-vs-bulk to n = 1 (open item). The Q3 mechanism is undercut. The seal is a near-miss.
+
+## 2026-11-25 ~21:10 — Neutral AI credit live on both Zenodo records (Sumit's rule)
+- ansatz-machine d9fd9e0 and DeepStrain 7205bba/a211b4f: headline surfaces say "AI-assisted"; one neutral disclosure paragraph uses the "every result reported as established" form.
+- Zenodo descriptions edited (metadata only; same DOIs, no new versions) and read back: 24533026 (ansatz v1.1.0) and 24399603 (DeepStrain/LongChirp; names Claude only, since the snapshot predates any Gemini use, which the Bridge verified in git).
+- Chrome: the only connected browser at first was another Google profile ("software-consultant"). Nothing was done there; the edits were made after Sumit connected his own profile, which was checked first (new rule: chrome-profile-check-first).
+- Pending: DeepStrain's GitHub release body (longchirp-v1.0.0) needs Sumit's word.
