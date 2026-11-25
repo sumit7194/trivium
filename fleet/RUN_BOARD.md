@@ -1046,3 +1046,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - Partially verified: one P step, an argued premise. Second n = 1 reading favouring A (with EXP-090); the derivation question stays open.
 - For the overnight Cuspis-personal round, the Bridge will send the addendum ONLY after Fable reports its S-a/S-c seal sha.
 - 02:05 Sumit: the last START time for any Fable round moves from 04:30 to 05:00. No Fable after the 05:30 weekly reset.
+- 03:21 START: N5N1 (93687) paused at 03:21:29 for a reserved core. Sent: ansatz-machine-personal route-(i) segment brief f6988c8 (hand over by ~05:15); Quantum-personal Kerr sealed-prediction brief 74b5f2e. Cuspis A-vs-bulk brief a0b6042 is next (by 04:15; addendum only after the seal sha).
