@@ -929,3 +929,14 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ### 2026-11-25 19:11 — Quantum: kerr_e chunks hitting the binary's hard 48 h WATCHDOG (fail closed)
 - N1N2/N2N3 timed out at 19:05 (48 h, no result, 0 FAILPIECE). N3N4/N4N5/N5N0 will time out at 21:50; N5N1 at 11-26 20:43 unless it finishes first. Cause: the loaded box (load 10–13, swap up to 4.5 GB) pushed per-chunk time past 48 h; N0N0/N0N1 took 27 h earlier. The registration slip (48 h watchdog not listed) is logged as Bridge slip 24.
 - Decision (Bridge): option B, an env-var watchdog with the default 48 h unchanged, identity-checked plus a must-fire, registered in a B15e amendment before rerunning the 5 chunks at ~120 h. Freed cores go to the kerr_e reruns first, then branch-S pm/pp/refs (mm/mp already running since 19:06). Quantum paused its own launcher (verified PID).
+
+## 2026-11-25 19:41 — kerr_e: 48 h timer cancelled in the four running chunks (Sumit's go)
+- Quantum found there's no progress counter and no checkpoint, so a timed-out chunk loses everything. Its proposal: cancel the pending alarm() in each live process with lldb.
+- Dry run first, on a dummy with the same signal+alarm setup. alarm(0) returned 275. The dummy survived past its old fire time and exited 0. **Catch:** lldb `detach` left the process STOPPED (state T). The procedure therefore adds `kill -CONT` and a state check.
+- Real run (fleet/kerr_e_timer_rescue_2026-11-25.sh; log in fleet/kerr_e_timer_rescue_2026-11-25.log). Each step checks the PID's args against the expected spec. Results:
+  - N3N4 6670: 7740 s left;
+  - N4N5 6675: 7738 s;
+  - N5N0 6677: 7737 s;
+  - N5N1 93687: 90132 s.
+  - All four were back in state R at about 80% CPU. Computation untouched, binary unchanged.
+- About 140 core-hours saved tonight, plus N5N1's ~23 h. Reruns are now needed only for N1N2/N2N3 (already lost), after the A4 identity checks pass. One interim slip there: the GB check reloaded an old checkpoint. Quantum re-running with a fresh checkpoint path.

@@ -1,0 +1,4 @@
+2026-11-25 19:41:00 pid 6670 N3N4: timer had 7740 s left, alarm(0) called, detached, resumed; state now 'RNs '; computation untouched
+2026-11-25 19:41:02 pid 6675 N4N5: timer had 7738 s left, alarm(0) called, detached, resumed; state now 'RNs '; computation untouched
+2026-11-25 19:41:03 pid 6677 N5N0: timer had 7737 s left, alarm(0) called, detached, resumed; state now 'RNs '; computation untouched
+2026-11-25 19:41:05 pid 93687 N5N1: timer had 90132 s left, alarm(0) called, detached, resumed; state now 'RNs '; computation untouched
