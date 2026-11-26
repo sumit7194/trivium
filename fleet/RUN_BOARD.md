@@ -1153,3 +1153,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - 23:43 ansatz: p3d HIT (9/10 at 39/10: Laurent stop as sealed); probe (a): the derivative-bound stop is in (3.7, 3.8), spin-independent (acb.sqrt enclosure inflation). v5.2 (C1, fail-closed n) read: APPROVED with B2 (safe float in rejected rows + T5d). TOL_F: production follows §5.3 (relative) in the P4 build; certified segments are unaffected.
 - 23:45 ansatz: B2 + T5d (7653efa), manifest 049aed7; tests52 running on the Air from 23:45 (~55 min). ansatz corrected my B2 premise: float(arb) returns inf/nan, it doesn't raise; B2 kept for standard JSON.
 - 23:49 DeepStrain check (i) controls PASS at n=216: null within 3·SE in all 4 cells (|z| ≤ 0.76; SE 0.047–0.051%, under 0.054% before the must-fire was read); must-fire FIRES in all 4 (z 4.4–5.4); mean |z|² = 2.000 (χ²₂ normalisation confirmed). Running now: pycbc_v3 (the binding gate), then pycbc_orig (readout), ~1.5–2 h.
+
+## 2026-11-27 00:25 — Quantum kerr_e projection (decision point, 6966fe3)
+- After 7 edge records (128 pieces per chunk): N1N2 (Mac mini) ~21 d; N4N5 (Air) ~29–32 d; N5N0/N5N1 ~44 d; N2N3/N3N4 >61 d. The 30-day watchdog (12-26) would end the Air chunks first. The records cover only s ∈ [−1, −0.906] of side 0.
+- Bridge: nothing changes tonight. To Sumit: run length (his expectation was 'a few days'), the timer raise (needs him at the Air with sudo / lldb; date ~12-06), and possibly moving one Air chunk to the Mac mini (4a, plan only). No to the subset (2); no to re-ordering (3) for now; 4b parked.
