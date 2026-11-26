@@ -90,3 +90,8 @@ per the user's direction. They are kept in local, uncommitted notes.
 
 ## 2026-11-26 ~17:2x — Cuspis-personal used a pattern pkill (signal 0) in an Air hold test (declared by the sister)
 - `pkill -0 -f nothing` sent signal 0 (no effect), but it breaks the PID-only rule (memory: no-pattern-pkill). Declared voluntarily; no process affected. Rule restated; nothing else needed.
+
+## 2026-11-26 19:01 — Quantum-personal: a trigger matched an OLD "STOP" line (second time today; declared by the sister)
+- The T2-SA7 start trigger matched the pre-resume "STOP" line still in results.txt, so SA7 started early. At 19:01:26 it SIGSTOPped the main A8 run (75997 + its b15e5 child 79460, case sa_depth1) and ran SA7 on the same core; it SIGCONTs both when done. Same bug class as Quantum's earlier watcher.
+- Effect: none expected (separate folders/journals, the same reference, no wall-time dependence). Open check: SIGSTOP doesn't stop wall-clock timers, so sa_depth1 must show its exit came from the planned SIGTERM at the logged record, not from a watchdog or loop timeout.
+- Mechanism (repeated mistake → tooling): triggers match only lines written after their own start (tail from the byte offset at launch, or a run id/timestamp later than launch). Quantum is to apply it to all live watchers/triggers and confirm. Candidate for FLEET_PRACTICES once confirmed.
