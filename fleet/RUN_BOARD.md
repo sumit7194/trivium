@@ -1096,3 +1096,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - SphereXVision moved ~36 GB to the Air (checksum-verified; Sumit approved the delete): Mac mini 43 GB free, Air 36 GB.
 - The Air is reached over the USB link while the VPN is on (~/.ssh/config: no forced IPv4; HostKeyAlias).
 - 17:27 ansatz: exact repro IDENTICAL under Python 3.13.18 (f0710a4); P1 CERTIFIED with 10/10 sealed hits (bfcbcfa); v5 7f96efc diff read by the Bridge (two v4 diagnostics restored, identical expression); T1–T4 running on the Air, then P2/P3, then the cost redo → Sumit. Cuspis: EXP-093 P-1 all 3 PASS (4d13f1f); EXP-095 registered 83566e3 with a SEALED READ (outputs sha-only until a blind prediction is sealed next week, or read descriptive-only); W2P10 on the Air from 17:26, W4P10 may run as the 8th Air core if its peak is ≤ 2.5 GB. W12P12 t0 on the Mac mini under a 9-GB pause-only hold. Quantum: A8 correction 1 (cb7afa0, b15e5), tests restarted 16:52.
+
+## 2026-11-26 17:34 — ansatz v5.1 read
+- Bridge non-author read of v5.1 (fa7859f, moves only the proof-stage segment for the cost pilot P3): APPROVED with B1. B1: refuse R1_HALF/R1_FLOATS when R1_KC is unset. Read: fleet/reads/ansatz_v5.1_read_2026-11-26.md.
+- Order: T1–T4 on 7f96efc → P2 → install v5.1+B1 (new manifest) → T1 again (same machine and Python) and T2–T4 → seal P3 → run P3. The P1–P3 cost redo then goes to Sumit for the production decision.
