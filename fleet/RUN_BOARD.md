@@ -1104,3 +1104,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ## 2026-11-26 17:45 — Quantum A8 on b15e5
 - T7 (watchdog: unset 48 h, 1e8 clamp, off = none, 60 s must-fire exit 124, 7 bad values FATAL) and T0 (6/6 BYTE-IDENTICAL): PASS (147404c). Next: T1, T2 (SA+SE), T4, T5/T5b.
 - ansatz: B1 folded in (b64a43c), approved; P3 sealed (4a7bb55) with the 3.9 rejection predicted at P=95%; runners 76f2715.
+
+## 2026-11-26 18:19 — ansatz T1 on 7f96efc FAILED (diagnostic only), fix approved
+- T1 differed in one field (stats) in all 4 rows. v5 had dropped v4's K-point z-control, and the proof JSON was also missing norder and point_constants. No bound affected.
+- Fix 4bc2ebd (v4's code restored, T1 extended to the whole proof JSON and shown able to fail): APPROVED. P2 runs on v4 per its seal's own condition (amended before any P2 computation). Next: v5.1 install → tests51 → P3.
