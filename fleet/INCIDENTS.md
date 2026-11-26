@@ -81,3 +81,9 @@ per the user's direction. They are kept in local, uncommitted notes.
 - Running at the time: Quantum's kerr_e N3N4/N4N5/N5N0 (~52 h each, NO checkpoint), N5N1 (~27 h, no checkpoint), N1N2 rerun (~10 h), A3 mn_so_erep, and the two retry pieces; Cuspis's W12 route (per-node checkpoints); the ansatz k-Taylor work.
 - Known-lost without checkpoints: the kerr_e chunks, roughly 190+ core-h. The sisters were asked (08:5x) for an inventory, checkpoint-integrity checks and a relaunch plan. Checkpointed jobs may resume at once; zero-restarts wait for the Bridge.
 - Lessons: (1) every multi-hour job needs a checkpoint/resume (kerr_e had none; Quantum's design is ~1 day of work); (2) suggest Sumit enables auto-restart after power failure and considers a UPS.
+- Recovery (08:50–09:10):
+  - Quantum: A3, mm and mp RESUMED from verified state files (~40 min lost). kerr_e lost ~214 core-h; checkpointing gets built first, then relaunch on the Bridge's word. pm/pp/refs launch now (Quantum ≤ 7).
+  - Cuspis: W12 route RESUMED from an atomic checkpoint (47/48 nodes, sha-pinned; ~0.6 core-h lost).
+  - DeepStrain: nothing running, nothing lost; stale worktrees pruned.
+  - ansatz: the v4 proof work was lost with /private/tmp. Code restored from the transcript; reruns (a)–(c) must reproduce the logged numbers; finer checkpointing before (d).
+- The UPS isn't connected to the Mac by data cable (pmset sees only AC power), so macOS couldn't shut down gracefully or know about the outage. Suggest connecting its USB cable, plus autorestart.
