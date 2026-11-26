@@ -75,3 +75,9 @@ per the user's direction. They are kept in local, uncommitted notes.
 - What: a 4-line AI-credit addendum was sent in parallel with other sends, and blind_check.py was skipped. A check run afterwards found no embargo hits, so there was no harm.
 - Cause: it was batched in the same tool round as another message, with no draft file written for it.
 - Fix: every message to a sister is written to a scratch file and checked in an EARLIER tool round than the send. Never send in the same round as an unchecked draft.
+
+## 2026-11-26 ~06:52 — the Mac lost power (or hard-crashed); every fleet job died
+- Evidence: last file writes 06:51:33–06:52:01; no clean shutdown in `last`; no panic report; reboot 08:45:03 (Sumit powered it on). pmset autorestart = 0, so it stayed off.
+- Running at the time: Quantum's kerr_e N3N4/N4N5/N5N0 (~52 h each, NO checkpoint), N5N1 (~27 h, no checkpoint), N1N2 rerun (~10 h), A3 mn_so_erep, and the two retry pieces; Cuspis's W12 route (per-node checkpoints); the ansatz k-Taylor work.
+- Known-lost without checkpoints: the kerr_e chunks, roughly 190+ core-h. The sisters were asked (08:5x) for an inventory, checkpoint-integrity checks and a relaunch plan. Checkpointed jobs may resume at once; zero-restarts wait for the Bridge.
+- Lessons: (1) every multi-hour job needs a checkpoint/resume (kerr_e had none; Quantum's design is ~1 day of work); (2) suggest Sumit enables auto-restart after power failure and considers a UPS.
