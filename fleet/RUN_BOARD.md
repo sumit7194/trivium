@@ -1108,3 +1108,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ## 2026-11-26 18:19 — ansatz T1 on 7f96efc FAILED (diagnostic only), fix approved
 - T1 differed in one field (stats) in all 4 rows. v5 had dropped v4's K-point z-control, and the proof JSON was also missing norder and point_constants. No bound affected.
 - Fix 4bc2ebd (v4's code restored, T1 extended to the whole proof JSON and shown able to fail): APPROVED. P2 runs on v4 per its seal's own condition (amended before any P2 computation). Next: v5.1 install → tests51 → P3.
+- 18:21 ansatz: the P2 manifest was committed 54 s after launch (slip recorded in 1f3d3d7). The Bridge checked all 3 manifest hashes against the files at 4bc2ebd (committed 11 s BEFORE launch): equal, so P2's record holds. v5.1 is installed (b7e17c4); tests51 is chained on P2 rc 0; P3 waits for the tests51 read.
