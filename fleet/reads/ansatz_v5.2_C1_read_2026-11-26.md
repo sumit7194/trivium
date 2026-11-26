@@ -29,3 +29,8 @@ read and T-tests, as ansatz proposes.
 Probe (a) result accepted (577bdcc): the derivative-bound stop for segment centres is in (3.7, 3.8), and it's spin-independent.
 The cause is acb.sqrt's enclosure inflation (the ball for s reaches 0 though 1−kφ's ball contains neither 0 nor the cut). The misses are reported.
 For C2: smaller arcs or a centred evaluation of φ; a branch-aware sqrt isn't needed below ~3.85.
+
+**Correction to B2's premise (ansatz, measured on the Air, python-flint 0.9.0):** float(arb) does NOT raise past the double
+range. It returns inf, or nan for a non-finite ball. In P3 it was math.ceil(inf) that raised. My stated reason was wrong. B2 is
+still kept: without it, a rejected row would write non-standard Infinity/NaN JSON, and with it the row writes null. T5d can fail only
+through its "c0_per_k is None" condition. Folded in at 7653efa; manifest 049aed7; tests52 started 23:45:07 on the Air.
