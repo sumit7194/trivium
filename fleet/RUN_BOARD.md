@@ -1100,3 +1100,7 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ## 2026-11-26 17:34 — ansatz v5.1 read
 - Bridge non-author read of v5.1 (fa7859f, moves only the proof-stage segment for the cost pilot P3): APPROVED with B1. B1: refuse R1_HALF/R1_FLOATS when R1_KC is unset. Read: fleet/reads/ansatz_v5.1_read_2026-11-26.md.
 - Order: T1–T4 on 7f96efc → P2 → install v5.1+B1 (new manifest) → T1 again (same machine and Python) and T2–T4 → seal P3 → run P3. The P1–P3 cost redo then goes to Sumit for the production decision.
+
+## 2026-11-26 17:45 — Quantum A8 on b15e5
+- T7 (watchdog: unset 48 h, 1e8 clamp, off = none, 60 s must-fire exit 124, 7 bad values FATAL) and T0 (6/6 BYTE-IDENTICAL): PASS (147404c). Next: T1, T2 (SA+SE), T4, T5/T5b.
+- ansatz: B1 folded in (b64a43c), approved; P3 sealed (4a7bb55) with the 3.9 rejection predicted at P=95%; runners 76f2715.
