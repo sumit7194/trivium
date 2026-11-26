@@ -1126,3 +1126,4 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 ## 2026-11-26 20:54 — Sumit: office work done
 - Resumes requested: Cuspis exp087_t0 31961 (release keeper 11269, then SIGCONT); Quantum ref 47206 + W2 waiter 38321 (SIGCONT, verified). Deepstrain-personal session is up → go on its serial queue on the Mac mini's 1 free core (plan re-run → prepseries → vseries → k1precheck → 2-box MPS pilot), status first. Mac mini about 9/10 cores busy after resumes; memory 67% free. The Air link is USB, so the VPN doesn't matter.
 - 20:54 Cuspis exp087_t0 31961 RESUMED 20:54:25 (paused 2682 s; keeper exited cleanly; no re-pauses). bd0d0a5.
+- 20:55 Quantum refs resumed 20:54:34; the W2 waiter started a new ref 27732, which put Quantum at 8 (over its cap of 7). Bridge: pause 27732 until A8 ends, so the fleet stays at the Mac mini limit of 9 (Quantum 7 + Cuspis 1 + DeepStrain 1).
