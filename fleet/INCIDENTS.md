@@ -87,3 +87,6 @@ per the user's direction. They are kept in local, uncommitted notes.
   - DeepStrain: nothing running, nothing lost; stale worktrees pruned.
   - ansatz: the v4 proof work was lost with /private/tmp. Code restored from the transcript; reruns (a)–(c) must reproduce the logged numbers; finer checkpointing before (d).
 - The UPS isn't connected to the Mac by data cable (pmset sees only AC power), so macOS couldn't shut down gracefully or know about the outage. Suggest connecting its USB cable, plus autorestart.
+
+## 2026-11-26 ~17:2x — Cuspis-personal used a pattern pkill (signal 0) in an Air hold test (declared by the sister)
+- `pkill -0 -f nothing` sent signal 0 (no effect), but it breaks the PID-only rule (memory: no-pattern-pkill). Declared voluntarily; no process affected. Rule restated; nothing else needed.
