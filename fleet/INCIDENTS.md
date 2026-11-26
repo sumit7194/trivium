@@ -96,3 +96,7 @@ per the user's direction. They are kept in local, uncommitted notes.
 - Effect: none expected (separate folders/journals, the same reference, no wall-time dependence). Open check: SIGSTOP doesn't stop wall-clock timers, so sa_depth1 must show its exit came from the planned SIGTERM at the logged record, not from a watchdog or loop timeout.
 - Mechanism (repeated mistake → tooling): triggers match only lines written after their own start (tail from the byte offset at launch, or a run id/timestamp later than launch). Quantum is to apply it to all live watchers/triggers and confirm. Candidate for FLEET_PRACTICES once confirmed.
 - CLOSED 19:04: Quantum tools/watch_new.sh (64584a3; byte-offset baseline, complete lines only, self-tested) applied to every line watcher; timers checked (48 h watchdog, kill_at has no timeout). Rule added to FLEET_PRACTICES.
+
+## 2026-11-26 21:59 — Bridge ruling error: C19 rule (A) assumed the allowed q-set grows with chirp mass
+- I approved "q range at the box's UPPER edge" for DeepStrain's out-of-population boxes, reasoning only from the light edge (m ≥ 0.2). At the heavy edge (m ≤ 1, Mc* above 0.8706) the set shrinks as Mc grows, so the rule was wrong for tids 3233–3234. DeepStrain's c19check crashed on it; nothing ran on wrong grids.
+- Lesson: when ruling on a population boundary, check BOTH ends of the parameter space, and prefer the always-correct form (union over the box) when it's cheap. My fallback in the same message was the correct rule.
