@@ -1122,3 +1122,6 @@ Rules: nice ≥ 10; stop at 5 GB free disk, yellow memory pressure, or swap > 2 
 - 20:18 ansatz: tests51 on v5.1 all PASS (0022784): T1 rows and the whole proof JSON identical to v4 (same machine and Python); T2–T4 plus B1 14/14. P3 launched (p3.sh 76f2715, seal 4a7bb55, manifest 1f3d3d7). Next: the P1–P3 cost redo → Sumit's production decision.
 - 20:47 Quantum A8 T2: all 11 interrupt cases (6 SA, 4 SE, SA7) resume BYTE-IDENTICAL (daf38cc); T4 must-fire PASS at 20:46. Running: the rest of T4, then T5/T5b, then T3 (Kerr, ~2.6 h). Asked for a sha256 manifest of the uncommitted case folders.
 - 20:48 Quantum A8: case-folder manifest committed (5ba6c37; 159 files: T7/T0/T1/T2 plus both superseded folders, all rechecked). T4/T5/T3 to go in a second manifest at the end.
+
+## 2026-11-26 20:54 — Sumit: office work done
+- Resumes requested: Cuspis exp087_t0 31961 (release keeper 11269, then SIGCONT); Quantum ref 47206 + W2 waiter 38321 (SIGCONT, verified). Deepstrain-personal session is up → go on its serial queue on the Mac mini's 1 free core (plan re-run → prepseries → vseries → k1precheck → 2-box MPS pilot), status first. Mac mini about 9/10 cores busy after resumes; memory 67% free. The Air link is USB, so the VPN doesn't matter.
